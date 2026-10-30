@@ -1,13 +1,15 @@
 # Data pipeline: refreshing the bundled database and talent data
 
-Players never run any of this. The released add-on already contains the generated files.
+Players never run any of this. The released add-on already contains the generated files.
+
+> **Phase 1 status.** Every command takes `-Target` and writes into that target's folder. The importers themselves still read QuestieDB's **TBC** files and the `wow_anniversary` client tables pinned in `tools/upstream.json`, so only the TBC fixture can be imported today. Phase 2 makes them read each target's files (Classic Era: QuestieDB `data/Classic`, client product `wow_classic_era` 1.15.9.70576) and adds the `src`/`v` fields of docs/DATA_POLICY.md. Do not run `import-questie` or `import-client` for ClassicEra before then.
 
 ```
-tools/upstream.json  --fetch-->  .cache/  --import-questie-->  TBCGuide/Database/QuestieTBC/*.lua
-                                          --import-client--->  TBCGuide/Talents/Data/TalentTrees.lua
-                                                               TBCGuide/Classes/TrainingData.lua
-                                                               TBCGuide/Database/RaceClass.lua
-guides-src/*.guide  --guides (uses the generated DB)-->  TBCGuide/Guides/Compiled/*.lua
+tools/upstream.json  --fetch-->  .cache/  --import-questie-->  targets/<Target>/addon/Database/Questie/*.lua
+                                          --import-client--->  targets/<Target>/addon/Talents/Data/TalentTrees.lua
+                                                               targets/<Target>/addon/Classes/TrainingData.lua
+                                                               targets/<Target>/addon/Database/RaceClass.lua
+targets/<Target>/guides-src/*.guide  --guides (uses the generated DB)-->  targets/<Target>/addon/Guides/Compiled/*.lua
 ```
 
 ## 1. Pin the upstream version
@@ -37,7 +39,7 @@ powershell -ExecutionPolicy Bypass -File tools/build.ps1 import-client
 
 - parses the upstream Lua data with a literal-only reader. **No upstream code is executed.**
 - applies `tbcQuestFixes.lua` with a restricted static evaluator. It accepts literals, enum constants, `l10n("...")` and `+`/`-`; anything runtime-dependent is skipped and logged.
-- writes the trimmed data and `docs/generated/questie-import.log`, which has record counts, applied and skipped corrections, and dangling references.
+- writes the trimmed data and `docs/generated/<Target>/questie-import.log`, which has record counts, applied and skipped corrections, and dangling references.
 
 `import-client` writes the talent trees (positions, ranks, prerequisites and spell ids per rank) and the race/class table.
 
@@ -51,7 +53,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 
 ## 5. Licence housekeeping when updating
 
-- Copy the upstream `LICENSE.md` and `PROVENANCE.md` into `TBCGuide/Database/QuestieTBC/UPSTREAM_*.md` again. `fetch` puts them in `.cache/upstream/questiedb/`.
+- Copy the upstream `LICENSE.md` and `PROVENANCE.md` into `targets/<Target>/addon/Database/Questie/UPSTREAM_*.md` again. `fetch` puts them in `.cache/upstream/questiedb/`.
 - Update the commit, version and checksum in `THIRD_PARTY_LICENSES.md` and `NOTICE.md`.
 - Re-read the upstream licence for changes before releasing.
 
@@ -59,9 +61,9 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 
 | File | Source | Generator |
 |---|---|---|
-| `Database/QuestieTBC/Quests.lua` | QuestieDB `data/TBC/tbcQuestDB.lua` + `tbcQuestFixes.lua` | `QuestieImport.cs`, `QuestieCorrections.cs` |
-| `Database/QuestieTBC/Npcs.lua`, `Objects.lua`, `Items.lua` | QuestieDB TBC entity tables | `QuestieImport.cs` |
-| `Database/QuestieTBC/Zones.lua` | QuestieDB `support/Zones/*` | `QuestieImport.cs` |
+| `Database/Questie/Quests.lua` | QuestieDB `data/TBC/tbcQuestDB.lua` + `tbcQuestFixes.lua` | `QuestieImport.cs`, `QuestieCorrections.cs` |
+| `Database/Questie/Npcs.lua`, `Objects.lua`, `Items.lua` | QuestieDB TBC entity tables | `QuestieImport.cs` |
+| `Database/Questie/Zones.lua` | QuestieDB `support/Zones/*` | `QuestieImport.cs` |
 | `Talents/Data/TalentTrees.lua` | client DB2 `Talent`, `TalentTab`, `SpellName` | `ClientTables.cs` |
 | `Classes/TrainingData.lua` | client DB2 `SkillLine`, `SkillRaceClassInfo`, `SkillLineAbility`, `SpellLevels`, `Spell`, `SpellName`, `Talent` | `TrainingTables.cs` (rules: docs/TRAINER.md) |
 | `Database/RaceClass.lua` | client DB2 `CharBaseInfo`, `ChrRaces` | `ClientTables.cs` |

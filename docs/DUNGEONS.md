@@ -6,7 +6,7 @@ A step belongs to a dungeon when it carries `dungeon=<instance>`. That comes fro
 
 - **From data:** when the bundled QuestieDB data puts **every** objective of a quest inside one dungeon or raid, the compiler tags its accept, complete and turn-in steps itself. Objectives here are kill targets, objects, and the NPCs or objects that drop quest items.
 - **By hand:** `[dungeon=...]` in the guide source wins, for quests the data cannot place (objectives without spawn data).
-- **Not tagged:** quests with only some objectives inside an instance. These are listed for review in `docs/generated/dungeon-mixed.csv`. Breadcrumbs that only send you to an entrance are not tagged either.
+- **Not tagged:** quests with only some objectives inside an instance. These are listed for review in `docs/generated/<Target>/dungeon-mixed.csv`. Breadcrumbs that only send you to an entrance are not tagged either.
 
 Raids count as instances for this purpose, so a raid-only quest is tagged and left out with the dungeons.
 
@@ -25,7 +25,7 @@ The route audit's XP model (`tools/src/RouteAnalyzer.cs`) gives **no XP for dung
 | What | Count | Source |
 |---|---|---|
 | Dungeon quests on the routes | 1 (*Amongst the Ruins*, Blackfathom Deeps, Horde Ashenvale; 3 steps) | hand tag |
-| Untagged route quests whose data puts every objective inside an instance | 0 | `docs/generated/dungeon-quests.csv` (empty) |
-| Route quests with some objectives inside an instance | 2: *Bartolo's Yeti Fur Cloak* (565), *Grimtotem Spying* (5064). Both can be finished outdoors; not tagged. | `docs/generated/dungeon-mixed.csv` |
+| Untagged route quests whose data puts every objective inside an instance | 0 | `docs/generated/<Target>/dungeon-quests.csv` (empty) |
+| Route quests with some objectives inside an instance | 2: *Bartolo's Yeti Fur Cloak* (565), *Grimtotem Spying* (5064). Both can be finished outdoors; not tagged. | `docs/generated/<Target>/dungeon-mixed.csv` |
 
-The 1-30 routes are built for solo questing, so they contain almost no dungeon quests. The 31-60 numbers are in `docs/LEVELS_31_60.md`.
+The 1-30 routes are built for solo questing, so they contain almost no dungeon quests. The 31-60 numbers are in `docs/tbcguide/LEVELS_31_60.md` (TBCGuide).

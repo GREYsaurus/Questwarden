@@ -1,6 +1,8 @@
-# Writing guides (`guides-src/*.guide`)
+# Writing guides (`targets/<Target>/guides-src/*.guide`)
 
-Guides are plain text, one step per line. `tools/build.ps1 guides` compiles them into `TBCGuide/Guides/Compiled/*.lua` and checks them against the bundled quest database. **Never edit the compiled files.**
+Guides are plain text, one step per line. `tools/build.ps1 guides` compiles them into `targets/<Target>/addon/Guides/Compiled/*.lua` and checks them against the bundled quest database. **Never edit the compiled files.**
+
+Each target has its own sources (`targets/ClassicEra/guides-src/`, ...): quest ids, NPCs and coordinates differ between game versions, so a guide is never shared between targets.
 
 Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, then file name). That order matters for the route checks: a turn-in in a later file can match an accept in an earlier one.
 
@@ -12,14 +14,22 @@ Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, 
 @faction Alliance                  Alliance | Horde | Both
 @races Human,Dwarf                 optional; Night Elf / NightElf, Undead / Scourge, Blood Elf / BloodElf accepted
 @classes Warrior                   optional; usually omitted
-@levels 10-16                      intended level range
+@levels 10-16                      intended level range (up to the target's level cap)
 @zone Westfall                     zone name exactly as in the bundled zone table
-@chapter Azeroth                   Azeroth | Outland
+@chapter Azeroth                   one of the target's chapters (Classic Era: Azeroth)
 @start                             marks a racial starting guide (requires @races)
 @desc Free text, can repeat to continue.
 @next A_Redridge                   next guide; repeatable, first match wins
 @next H_Feralas [faction=Horde]    conditions: [race=..] [class=..] [faction=..]
 ```
+
+## Text: the add-on's name
+
+Never write the add-on's name or slash command in a note: write `{name}` and `{slash}`. They are filled in when the guide loads (`{name} skips it` → *ClassicGuide skips it*, `/{slash} talents` → */cg talents*), so a rename needs no guide edits. The lint gate rejects the spelled-out name.
+
+## Hardcore route flavor (Phase 2)
+
+Each zone has one guide source. Hardcore characters (Settings → Guide Routing → *Hardcore character*) follow the same file with marks that leave risky steps out or add a warning; the build checks both routes. The step flags are defined with the first Classic Era guides and documented here then.
 
 ## Steps
 
@@ -37,7 +47,7 @@ Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, 
 | `train` | - (expands to one step per class, with that class's trainer from the database) | trainer window closed |
 | `fp` | place name | "New flight path discovered" or taxi map opened |
 | `fly` / `hs` / `travel` | destination zone/subzone name | zone change to the destination, or manual |
-| `bind` | inn location name, plus required `[area=<id>,...]` | `GetBindLocation()` equals one of the areas' names in the client's language, or a bind TBCGuide verified at this step's innkeeper |
+| `bind` | inn location name, plus required `[area=<id>,...]` | `GetBindLocation()` equals one of the areas' names in the client's language, or a bind ClassicGuide verified at this step's innkeeper |
 | `level` | level | player level reached |
 | `grind` | `<level> <Mob>[, <Mob>...] [@ location]` | player level reached (same as `level`). Each mob must exist in the database and spawn in the step's zone, or the build fails. The arrow points at the spawn nearest the previous step unless `[at=x,y]` is given. Example: `grind 10 Riverpaw Outrunner, Riverpaw Runt @ south of Westbrook Garrison [at=27.8,81.2] \| note` |
 | `note` / `buy` / `use` / `collect` | text | manual (`buy` also completes on closing a vendor) |
@@ -55,7 +65,7 @@ If a name is ambiguous (e.g. the three "Rite of Vision" quests), the compiler st
 
 `[optional]`, `[elite]`, `[group]` or `[group=3]`, `[dungeon=Shadowfang Keep]`, `[class=Warrior,Paladin]`, `[race=Human]`, `[faction=Horde]` (in a `Both` guide: the step is for that faction only, and quest names resolve as in that faction's guides), `[zone=Orgrimmar]`, `[at=x,y]` (explicit coordinates; marked unverified), `[obj=2]`, `[unverified]`, `[mark=skull]` / `[mark=cross:Lieutenant Benedict]` / `[mark=star:1234]` (raid marker; see docs/RAID_MARKERS.md). Separate several flags with `;` inside one bracket: `[elite; group=3; optional]`.
 
-**Dungeon quests:** tag every step (accept, complete, turn-in) of a quest that can only be done inside an instance with `[dungeon=<instance>]`. The *Include Dungeon Quests* setting leaves tagged steps out of the route. Follow-up quests that need an excluded dungeon quest are skipped automatically, so don't tag those. Don't tag an outdoor quest that only sends you towards a dungeon (a breadcrumb, or objectives at the entrance). You rarely need to write the tag: the compiler tags a quest's steps itself when the bundled data puts every objective inside one dungeon or raid (the one authoritative mapping; audit in `docs/generated/dungeon-quests.csv`). A hand-written tag wins, for quests the data cannot place. Quests with only some objectives inside are listed in `docs/generated/dungeon-mixed.csv` and are not tagged.
+**Dungeon quests:** tag every step (accept, complete, turn-in) of a quest that can only be done inside an instance with `[dungeon=<instance>]`. The *Include Dungeon Quests* setting leaves tagged steps out of the route. Follow-up quests that need an excluded dungeon quest are skipped automatically, so don't tag those. Don't tag an outdoor quest that only sends you towards a dungeon (a breadcrumb, or objectives at the entrance). You rarely need to write the tag: the compiler tags a quest's steps itself when the bundled data puts every objective inside one dungeon or raid (the one authoritative mapping; audit in `docs/generated/<Target>/dungeon-quests.csv`). A hand-written tag wins, for quests the data cannot place. Quests with only some objectives inside are listed in `docs/generated/<Target>/dungeon-mixed.csv` and are not tagged.
 
 ### What the compiler adds for you
 
@@ -67,13 +77,13 @@ If a name is ambiguous (e.g. the three "Rite of Vision" quests), the compiler st
 
 Errors (the build fails): unknown or ambiguous quests, quests not available to the guide's faction or races, class quests without `[class=]`, unknown zones or guides, malformed lines.
 
-Warnings (`docs/generated/guide-warnings.log`): prerequisites not turned in anywhere on the route, turn-ins without an accept, quests whose required level is above the guide's range, repeatable quests, and complete-steps with no objective location in the data.
+Warnings (`docs/generated/<Target>/guide-warnings.log`): prerequisites not turned in anywhere on the route, turn-ins without an accept, quests whose required level is above the guide's range, repeatable quests, and complete-steps with no objective location in the data.
 
 Write notes only when you are sure of them. For complete-steps, the add-on already shows the quest log objectives and the database objective text.
 
 ## Route checks (`tools/build.ps1 routes`)
 
-After compiling, every race/class route is walked step by step (docs/ROUTE_OPTIMIZATION.md). The build fails if a quest is accepted before one of its prerequisites is turned in on that route, if a complete-step comes before its accept, or if the quest log would exceed 25. Accept a quest after the turn-in that unlocks it, and give every pickup a turn-in somewhere on the route.
+After compiling, every race/class route is walked step by step (docs/ROUTE_OPTIMIZATION.md). The build fails if a quest is accepted before one of its prerequisites is turned in on that route, if a complete-step comes before its accept, or if the quest log would exceed the target's size (Classic Era 20). Accept a quest after the turn-in that unlocks it, and give every pickup a turn-in somewhere on the route.
 
 An `[optional]` turn-in of a quest accepted in an **earlier** guide (a breadcrumb) is skipped automatically for players who do not have it in their log. A non-optional one is never auto-skipped.
 
@@ -86,4 +96,4 @@ An `[optional]` turn-in of a quest accepted in an **earlier** guide (a breadcrum
 
 ### Roaming hunting routes
 
-Routes for kill and kill-for-drop objectives live in `guides-src/routes/*.routes`, not in the guide files: they attach to a quest and its quest-log objective index, so guide steps, ids and saved progress do not change. Format, compiler checks and the research method: docs/ROAMING.md.
+Routes for kill and kill-for-drop objectives live in `targets/<Target>/guides-src/routes/*.routes`, not in the guide files: they attach to a quest and its quest-log objective index, so guide steps, ids and saved progress do not change. Format, compiler checks and the research method: docs/ROAMING.md.

@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.1.0 (in development)
+
+ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), forked from TBCGuide 0.9.5, and designed to target **WoW: Forever** later. Phase 1 of 3 builds the multi-target foundation; there are no Classic Era guides or data yet.
+
+### Phase 1: fork and multi-target scaffolding
+
+- **Fork.** TBCGuide's full history is kept. The engine, interface, compatibility layer, tests and build tools are shared code in `addon/`.
+- **Targets.** Everything that differs between game versions lives in `targets/<Target>/`: game rules (`Target.<Target>.lua`, shipped as `Config/Target.lua`), data, guide sources and the TOC interface line. `tools/build.ps1 <command> -Target ClassicEra|Forever|TBC` stages the add-on for one target in `build/<Target>/`, and every check runs on that staged copy.
+  - **ClassicEra:** level cap 60, 51 talent points, quest log 20, Azeroth only, interface 11509 (confirmed from the wago.tools build list, Questie's release.json and Blizzard's 1.15.9 UI source). Empty data, ready for Phase 2.
+  - **Forever:** skeleton with unverified rules (interface 16001, build 1.60.1) and empty data. Marked unverified, so it never loads guides, and it is never packaged.
+  - **TBC:** TBCGuide 0.9.5's data and guides, kept only as the engine's test fixture. Never packaged; removed in Phase 2.
+- **One name, one place.** The name (`ClassicGuide`) and slash command (`/cg`, also `/classicguide` and `/cggear`) are set only in `tools/addon.json`. The build writes the TOC, bindings and SavedVariables (`ClassicGuideDB`, `ClassicGuideCharDB`) from it, the Lua code derives every global name at runtime, and the lint gate fails on a hard-coded name. `tools/build.ps1 rename <Name> [<slash>]` changes it; renaming was tested end to end.
+- **Wrong-client detection.** A build loaded on a different game version (checked from the client's interface number and version) says so at login and loads no guides, because their quests and coordinates would be wrong. Unverified targets refuse guides too.
+- **Hardcore character** setting (Settings → Guide Routing), saved per character, for the Phase 2 Hardcore route flavor.
+- **Target rules everywhere.** Talent points, level cap, quest-log size, guide chapters and level ranges come from the target in the add-on, the guide compiler, the validator and the route audit (which now warns at 3 below the target's quest-log cap). The validator's coverage checks are switched on per target (`target.json` `require`).
+- **Guide and talent-build text** may say `{name}` and `{slash}` instead of the add-on's name.
+- **API audit.** `tools/research/api_audit.py` checks every allowlisted API against Blizzard's UI source for a client and reports protected and restricted functions (docs/COMPATIBILITY.md). On 1.15.9 only `SetRaidTarget` and `DeleteCursorItem` are restricted, and both were already handled. `TargetUnit` is not used. The audit also found 32 APIs the code reaches by name through `Compat.has` that were never on the allowlist (inherited from TBCGuide); lint now warns about each, pending review.
+- **Tests.** `tools/build.ps1 test` runs the build-tool self-test, then the full suite (TBC fixture) or the new smoke suite (`tests/run_smoke.lua`: boot with empty data, target rules, detection, commands without data). `tools/lua51.py` runs them without a Lua binary.
+- **Docs.** New: docs/DATA_POLICY.md (allowed sources, the reference-file rules, the cross-check process), docs/DATA_GAPS.md. Rewritten: README.md, INSTALL.md, docs/DEVELOPER.md, docs/COMPATIBILITY.md, docs/KNOWN_LIMITATIONS.md. TBCGuide's TBC-specific research and reports moved to docs/tbcguide/.
+
+### Tested
+
+- **Offline (all passing):** `tools/build.ps1 all` for ClassicEra, Forever and TBC (lint 0 errors and 39 warnings for the by-name APIs; validation 0 errors; TBC route audit 52 routes, 0 errors, 31 warnings, the same as TBCGuide 0.9.5); build-tool self-test 21/21; TBC engine suite 4,420/4,420; Classic Era smoke 33/33; Forever smoke 29/29.
+- **In the game client:** nothing yet.
+
+---
+
+# TBCGuide history (the add-on ClassicGuide was forked from)
+
 ## 0.9.5
 
 ### Added

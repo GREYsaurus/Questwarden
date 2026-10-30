@@ -1,6 +1,6 @@
 # Automatic upgrades, BoE markers and equip notifications
 
-Opt-in. TBCGuide can equip better gear from your bags for the spec you choose, tell you on screen when it did, and mark Bind-on-Equip upgrades it will not equip for you.
+Opt-in. ClassicGuide can equip better gear from your bags for the spec you choose, tell you on screen when it did, and mark Bind-on-Equip upgrades it will not equip for you.
 
 **Not yet tested in the game client.** Offline checks pass (lint, and 1,399 headless tests under Lua 5.1). The in-game checklist is at the end.
 
@@ -29,7 +29,7 @@ Rules, applied in this order:
 - **Asks first:** switching the feature on asks for confirmation and says what will happen.
 
 **Each change:**
-- **One at a time:** one item, then TBCGuide waits until the game shows it in the slot, then looks again.
+- **One at a time:** one item, then ClassicGuide waits until the game shows it in the slot, then looks again.
 - **Notification:** you get one notification per confirmed change.
 - **Failures:** an attempt that fails isn't retried this session, and doesn't produce a message.
 - **Replaced items stay in your bags.** Nothing is sold, deleted or disenchanted, and nothing is taken from the bank, mail or auction house.
@@ -37,7 +37,7 @@ Rules, applied in this order:
 **Binding:**
 - **What is checked:** this copy's own binding state. The bag API reports whether a copy is bound; if it doesn't, the tooltip's *Soulbound* / *Binds when equipped* line is used. The item's template type is never enough.
 - **Unknown state:** if neither source answers, the item is skipped.
-- **Bind confirmation:** if the game still asks to confirm binding, TBCGuide cancels, puts the item back in its bag slot and doesn't try it again. It never confirms a bind.
+- **Bind confirmation:** if the game still asks to confirm binding, ClassicGuide cancels, puts the item back in its bag slot and doesn't try it again. It never confirms a bind.
 
 **Login:** the first check waits 3 seconds after login or a loading screen, and bag event bursts are grouped.
 
@@ -45,7 +45,7 @@ Rules, applied in this order:
 
 ## How "upgrade" is decided
 
-One evaluator (`TBCGuide/Gear/Upgrade.lua`) is used for automatic equipping, bag markers, bag tooltips and notifications.
+One evaluator (`addon/Gear/Upgrade.lua`) is used for automatic equipping, bag markers, bag tooltips and notifications.
 
 **Whole configurations are compared.** The slots an item would change are scored before and after:
 - **Two-hander:** compared with main hand + off hand together.
@@ -80,13 +80,13 @@ Choose one under **Tips → Item Upgrade → Spec profile**. It's saved for this
 - **Starred entries (\*)** are estimated from a stat priority.
 
 **Two kinds of scoring basis:**
-- **Published numbers** come from wowsims/tbc (MIT, commit 3301fca) or from Icy Veins' own EP tables. Details are in [GEAR_RESEARCH.md](GEAR_RESEARCH.md).
-- **Estimated from priority** is TBCGuide's own heuristic, not endorsed by any source. Icy Veins and Wowhead publish only an order of stats for these specs. Each stat gets:
+- **Published numbers** come from wowsims/tbc (MIT, commit 3301fca) or from Icy Veins' own EP tables. Details are in [GEAR_RESEARCH.md](tbcguide/GEAR_RESEARCH.md).
+- **Estimated from priority** is ClassicGuide's own heuristic, not endorsed by any source. Icy Veins and Wowhead publish only an order of stats for these specs. Each stat gets:
   - **budget:** its approximate cost compared with one point of a primary stat (TBC itemisation rule of thumb);
   - **rank factor:** 1.0 for the first listed stat, falling to 0.4 for the last.
 
   Stats that aren't listed count 0. Every one of these estimates is labelled *Estimate* in the bag tooltip.
-- **Where to edit:** all heuristic values are in one table, `ns.GearProfiles.heuristic` in `TBCGuide/Gear/Profiles.lua`.
+- **Where to edit:** all heuristic values are in one table, `ns.GearProfiles.heuristic` in `addon/Gear/Profiles.lua`.
 
 | Class | Spec | Profile | Scoring basis | Caps (level 70 only) | Confidence | Sources | Assumptions and limits |
 |---|---|---|---|---|---|---|---|
@@ -155,7 +155,7 @@ Non-BoE upgrades show the same lines without the BoE note. The lines appear whil
 
 **Bag support:**
 - **Supported:** the default bag frames (`ContainerFrame1`–`13`).
-- **Not supported:** bag replacement add-ons (Bagnon, AdiBags, ArkInventory, Baganator and others) use their own buttons, so they get no markers. Tooltips over their buttons don't get the upgrade lines either. TBCGuide had no bag add-on integrations before this.
+- **Not supported:** bag replacement add-ons (Bagnon, AdiBags, ArkInventory, Baganator and others) use their own buttons, so they get no markers. Tooltips over their buttons don't get the upgrade lines either. ClassicGuide had no bag add-on integrations before this.
 
 ## Notifications
 
@@ -181,12 +181,12 @@ All of these are under **Tips → Item Upgrade / Automatic Upgrades / Protected 
 | Copy equip messages to chat | off | |
 | Mark Bind-on-Equip upgrades in bags | on | |
 | Protected slots | none | Per character; never changed automatically |
-| Clear excluded items | | Undoes `/tbcg gear exclude` |
+| Clear excluded items | | Undoes `/cg gear exclude` |
 
 **Commands:**
-- `/tbcg gear auto`: status and the last problem.
-- `/tbcg gear exclude <item link or id>`: keep an item out of automatic upgrades. It's never equipped or replaced, and its tooltip says so.
-- `/tbcg gear include <item link or id>`: allow it again.
+- `/cg gear auto`: status and the last problem.
+- `/cg gear exclude <item link or id>`: keep an item out of automatic upgrades. It's never equipped or replaced, and its tooltip says so.
+- `/cg gear include <item link or id>`: allow it again.
 
 ## Client limits
 
@@ -195,7 +195,7 @@ All of these are under **Tips → Item Upgrade / Automatic Upgrades / Protected 
   - unique-equipped limits (treated as uncertain);
   - whether a weapon skill is trained (only class rules and the red tooltip text);
   - gems, sockets, enchantments, resilience and weapon speed.
-- **`/tbcg debug api`** shows whether the client has the functions this needs: `EquipCursorItem`, `C_Container.PickupContainerItem`, `GetInventoryItemID`, `IsEquippableItem` and the free-slot counter.
+- **`/cg debug api`** shows whether the client has the functions this needs: `EquipCursorItem`, `C_Container.PickupContainerItem`, `GetInventoryItemID`, `IsEquippableItem` and the free-slot counter.
 
 ## In-game test checklist
 
@@ -216,4 +216,4 @@ All of these are under **Tips → Item Upgrade / Automatic Upgrades / Protected 
 9. **Spec change:** switch spec in the dropdown. Markers and tooltips should update straight away.
 10. **Login:** log out and back in with several upgrades in your bags. Messages should be few and readable, and nothing should repeat.
 11. **Reload:** after `/reload`, the settings, profile, protected slots and exclusions should be unchanged.
-12. **Diagnostics:** run `/tbcg debug api` and report anything missing.
+12. **Diagnostics:** run `/cg debug api` and report anything missing.

@@ -1,6 +1,6 @@
 # Auction house: Upgrades tab
 
-TBCGuide adds an **Upgrades** tab to the auction house window. It lists gear for sale that is an upgrade for your chosen spec profile, grouped by equipment slot. It is TBCGuide's own feature and is unrelated to the add-on called *Auctioneer*. It works next to such add-ons and needs none.
+ClassicGuide adds an **Upgrades** tab to the auction house window. It lists gear for sale that is an upgrade for your chosen spec profile, grouped by equipment slot. It is ClassicGuide's own feature and is unrelated to the add-on called *Auctioneer*. It works next to such add-ons and needs none.
 
 Turn it on or off with **Tips → Item Upgrade → Enable Auctioneer** (on by default). When it is off, the tab is hidden and the native auction window is untouched.
 
@@ -12,7 +12,7 @@ Scans start only when you press **Scan auction house** on the Upgrades tab, with
 
 **Client API:**
 - TBC Classic Anniversary has the legacy auction interface: `QueryAuctionItems`, answered by `AUCTION_ITEM_LIST_UPDATE`, 50 listings per page, throttled by `CanSendAuctionQuery()`.
-- TBCGuide does not use the `getAll` full scan. Its cooldown and size on a big auction house can disconnect players, and gear needs far less.
+- ClassicGuide does not use the `getAll` full scan. Its cooldown and size on a big auction house can disconnect players, and gear needs far less.
 
 **What is scanned:** each page asks for the gear you could use:
 - weapons and armor (the class filter; older clients ignore it);
@@ -32,13 +32,13 @@ Scans start only when you press **Scan auction house** on the Upgrades tab, with
 **Interruptions:** the scan stops, and keeps what it found as **partial** data, when:
 - you close the auction house;
 - the server doesn't answer a page within 15 seconds;
-- you, or another add-on, start a different search. TBCGuide notices any `QueryAuctionItems` call it didn't make and stops, rather than reading someone else's results.
+- you, or another add-on, start a different search. ClassicGuide notices any `QueryAuctionItems` call it didn't make and stops, rather than reading someone else's results.
 
 **Pages still loading:** a page whose item details are still loading is read again once, after a short wait.
 
 ## What is stored
 
-Saved account-wide in `TBCGuideDB.auctionScans`, per realm and faction:
+Saved account-wide in `ClassicGuideDB.auctionScans`, per realm and faction:
 - the scan time;
 - complete or partial, and the number of listings;
 - per item, the **cheapest buyout seen**:
@@ -95,13 +95,13 @@ The two can't disagree.
 
 **Clicking a row** searches the Browse tab for that item, so you see the live listings. Buying is always your own action through the normal auction window, at whatever the price is now.
 
-**Never automatic:** TBCGuide never bids, buys or cancels anything. Bind-on-Equip items are never equipped automatically after you buy them either; automatic upgrades only mark them.
+**Never automatic:** ClassicGuide never bids, buys or cancels anything. Bind-on-Equip items are never equipped automatically after you buy them either; automatic upgrades only mark them.
 
 ## Client functions used
 
 `QueryAuctionItems`, `CanSendAuctionQuery`, `GetNumAuctionItems`, `GetAuctionItemInfo`, `GetAuctionItemLink`, and `AuctionFrameTab_OnClick` / `PanelTemplates_SetNumTabs` (for the tab). Browsing a result also uses `AuctionFrameBrowse_Search` / `BrowseName`.
 
-`/tbcg debug api` lists which of these the client has. Without them the tab doesn't appear, or the scan says why it can't run.
+`/cg debug api` lists which of these the client has. Without them the tab doesn't appear, or the scan says why it can't run.
 
 ## Known limits
 
