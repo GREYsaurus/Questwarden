@@ -40,6 +40,7 @@ ns.Guides:Register({
     {"complete",q=1439,title="Search for Tyranis",text="Tyranis Malem inside the fortress.",v=1},
     {"complete",q=5741,title="Sceptre of Light",text="Burning Blade Seers in Thunder Axe Fortress; the Sceptre drops from the one at the top of the tower.",v=1},
     {"turnin",q=1439,title="Search for Tyranis",npc="Dalinda Malem",z=405,x=54.9,y=26.1,v=1},
+    {"note",text="The next quest, Return to Vahlarriel, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
     {"accept",q=1440,title="Return to Vahlarriel",npc="Dalinda Malem",z=405,x=54.9,y=26.1,text="Escort quest: Dalinda walks you out of the fortress.",v=1},
     {"complete",q=1440,title="Return to Vahlarriel",v=1},
     {"complete",q=1459,obj=1,title="Reagents for Reclaimers Inc.",text="Scorpashi Venom from Scorpashi in the north.",v=1},

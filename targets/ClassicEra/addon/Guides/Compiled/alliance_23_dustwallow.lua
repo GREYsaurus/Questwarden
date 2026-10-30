@@ -24,6 +24,7 @@ ns.Guides:Register({
     {"accept",q=1177,title="Hungry!",npc="Mudcrush Durtfeet",z=15,x=35.2,y=38.3,text="Mudcrush Durtfeet, the friendly giant in the north.",v=1},
     {"complete",q=1177,title="Hungry!",text="Mirefin murlocs on the northern coast.",v=1},
     {"turnin",q=1177,title="Hungry!",npc="Mudcrush Durtfeet",z=15,x=35.2,y=38.3,v=1},
+    {"note",text=" - The next quest, Stinky's Escape, is an escort: pick it up only when you are ready to follow the NPC.",optional=true,v=1},
     {"accept",q=1222,title="Stinky's Escape",npc="\"Stinky\" Ignatz",z=15,x=46.9,y=17.5,text="\"Stinky\" Ignatz, north of the road. Escort: start it only when you are ready to follow.",optional=true,v=1},
     {"complete",q=1222,title="Stinky's Escape",text="Stay close; it fails if he dies.",optional=true,v=1},
     {"note",text=" - Hardcore: Stinky's escort draws murlocs and crocolisks in waves. Leave it out unless you are 37 or higher and at full health.",hcOnly=true,v=1},

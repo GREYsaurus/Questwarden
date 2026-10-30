@@ -27,6 +27,7 @@ ns.Guides:Register({
     {"accept",q=425,title="Ivar the Foul",npc="Rane Yorick",z=130,x=53.5,y=13.4,v=1},
     {"complete",q=425,title="Ivar the Foul",v=1},
     {"turnin",q=425,title="Ivar the Foul",npc="Rane Yorick",z=130,x=53.5,y=13.4,v=1},
+    {"note",text=" - The next quest, Escorting Erland, is an escort: pick it up only when you are ready to follow the NPC.",group=2,v=1},
     {"accept",q=435,title="Escorting Erland",npc="Deathstalker Erland",z=130,x=56.2,y=9.2,text="Deathstalker Erland at the hut.",group=2,v=1},
     {"complete",q=435,title="Escorting Erland",group=2,v=1},
     {"turnin",q=435,title="Escorting Erland",npc="Rane Yorick",z=130,x=53.5,y=13.4,v=1},

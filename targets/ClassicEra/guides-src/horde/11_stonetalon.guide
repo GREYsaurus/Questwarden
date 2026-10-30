@@ -22,6 +22,7 @@ turnin 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead] | Turned in at 
 accept 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead]
 turnin 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead] | Turned in at The Barrens.
 accept 1512 Love's Gift [class=Warlock; race=Orc,Undead]
+note [class=Shaman; race=Orc,Tauren,Troll] | The next quest, Vorsha the Lasher, is an escort: pick it up only when you are ready to follow the NPC.
 accept 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort quest: start it when you are ready to follow.
 complete 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort: stay close; it fails if the NPC dies.
 turnin 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Ashenvale.

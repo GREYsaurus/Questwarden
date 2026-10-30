@@ -12,6 +12,7 @@
 
 accept Between a Rock and a Thistlefur | Karang Amakkar.
 accept 6462 Troll Charm
+note [group=2] | The next quest, Torek's Assault, is an escort: pick it up only when you are ready to follow the NPC.
 accept Torek's Assault [group=2] | Torek.
 accept The Lost Pages | Gurda Ragescar.
 accept Ashenvale Outrunners | Kuray'bin.
@@ -31,6 +32,7 @@ turnin Ashenvale Outrunners
 turnin The Lost Pages
 complete Satyr Horns | Satyrs at Satyrnaar.
 complete Between a Rock and a Thistlefur | Thistlefur furbolgs at Thistlefur Village.
+note The next quest, Freedom to Ruul, is an escort: pick it up only when you are ready to follow the NPC.
 accept 6482 Freedom to Ruul | Escort quest: start it when you are ready to follow.
 complete 6462 Troll Charm
 complete 6482 Freedom to Ruul | Escort: stay close; it fails if the NPC dies.

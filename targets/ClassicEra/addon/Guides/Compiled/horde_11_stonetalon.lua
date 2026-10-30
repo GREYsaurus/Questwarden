@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"accept",q=1515,title="Dogran's Captivity",npc="Grunt Logmar",z=17,x=44.6,y=59.3,classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
     {"turnin",q=1515,title="Dogran's Captivity",npc="Grunt Dogran",z=17,x=43.3,y=47.9,text="Turned in at The Barrens.",classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
     {"accept",q=1512,title="Love's Gift",npc="Grunt Dogran",z=17,x=43.3,y=47.9,classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
+    {"note",text=" - The next quest, Vorsha the Lasher, is an escort: pick it up only when you are ready to follow the NPC.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
     {"accept",q=6641,title="Vorsha the Lasher",npc="Muglash",z=331,x=12.1,y=34.6,text="Escort quest: start it when you are ready to follow.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
     {"complete",q=6641,title="Vorsha the Lasher",text="Escort: stay close; it fails if the NPC dies.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
     {"turnin",q=6641,title="Vorsha the Lasher",npc="Warsong Runner",z=331,x=12.2,y=34.2,text="Turned in at Ashenvale.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},

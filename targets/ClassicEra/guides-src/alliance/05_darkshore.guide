@@ -126,6 +126,7 @@ accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
 complete Buzzbox 525
 turnin Buzzbox 525
+note [group=2] | The next quest, The Absent Minded Prospector, is an escort: pick it up only when you are ready to follow the NPC.
 accept 731 The Absent Minded Prospector [group=2] | Escort quest.
 accept 951 Mathystra Relics
 accept 4731 Beached Sea Turtle
@@ -197,8 +198,11 @@ turnin 1138 Fruit of the Sea [optional]
 turnin 993 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 993 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 993 A Lost Master [race=Dwarf,Night Elf; optional]
+note [class=Warrior,Rogue,Mage; race=Gnome; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
 accept 994 Escape Through Force [class=Warrior,Rogue,Mage; race=Gnome; optional] | Escort quest: start it when you are ready to follow.
+note [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
 accept 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Escort quest: start it when you are ready to follow.
+note [race=Dwarf,Night Elf; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
 accept 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Escort quest: start it when you are ready to follow.
 complete 994 Escape Through Force [class=Warrior,Rogue,Mage; race=Gnome; optional] | Escort: stay close; it fails if the NPC dies.
 complete 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Escort: stay close; it fails if the NPC dies.

@@ -42,6 +42,7 @@ accept Search for Tyranis
 complete Search for Tyranis | Tyranis Malem inside the fortress.
 complete Sceptre of Light | Burning Blade Seers in Thunder Axe Fortress; the Sceptre drops from the one at the top of the tower.
 turnin Search for Tyranis
+note The next quest, Return to Vahlarriel, is an escort: pick it up only when you are ready to follow the NPC.
 accept Return to Vahlarriel | Escort quest: Dalinda walks you out of the fortress.
 complete Return to Vahlarriel
 complete 1459 Reagents for Reclaimers Inc. [obj=1] | Scorpashi Venom from Scorpashi in the north.

@@ -208,6 +208,7 @@ complete 821 Chen's Empty Keg | Savannah Lion Tusk drops from Savannah Highmane,
 turnin Lost in Battle
 turnin Consumed by Hatred
 turnin Altered Beings
+note [optional] | The next quest, The Escape, is an escort: pick it up only when you are ready to follow the NPC.
 accept 863 The Escape [optional] | Escort quest: start it when you are ready to follow.
 complete 863 The Escape [optional] | Escort: stay close; it fails if the NPC dies.
 turnin Raptor Horns
@@ -238,6 +239,7 @@ accept Hezrul Bloodmark
 turnin 1061 The Spirits of Stonetalon
 accept 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
 accept 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
+note [class=Shaman; race=Orc,Tauren,Troll; optional] | The next quest, Protect Kaya, is an escort: pick it up only when you are ready to follow the NPC.
 accept 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escort quest: start it when you are ready to follow.
 complete 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escort: stay close; it fails if the NPC dies.
 accept 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll]

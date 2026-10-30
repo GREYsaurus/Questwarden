@@ -49,8 +49,10 @@ complete 1149 Test of Faith
 turnin 1149 Test of Faith
 accept 1150 Test of Endurance [optional]
 complete 5147 Wanted - Arnak Grimtotem [optional] | Arnak's Hoof drops from Arnak Grimtotem.
+note [optional] | The next quest, Free at Last, is an escort: pick it up only when you are ready to follow the NPC.
 accept 4904 Free at Last [optional] | Escort quest: start it when you are ready to follow.
 complete Wind Rider | Highperch Wyvern Egg: loot Highperch Wyvern Egg.
+note [optional] | The next quest, Homeward Bound, is an escort: pick it up only when you are ready to follow the NPC.
 accept 4770 Homeward Bound [optional] | Escort quest: start it when you are ready to follow.
 accept Hypercapacitor Gizmo | Wizlo Bearingshiner.
 complete Hypercapacitor Gizmo | Hypercapacitor Gizmo drops from Enraged Panther.
@@ -63,6 +65,7 @@ turnin Serpent Wild
 accept Sacred Fire | Motega Firemane.
 turnin 4770 Homeward Bound [optional]
 turnin 4881 Assassination Plot [optional]
+note [optional] | The next quest, Protect Kanati Greycloud, is an escort: pick it up only when you are ready to follow the NPC.
 accept 4966 Protect Kanati Greycloud [optional] | Escort quest: start it when you are ready to follow.
 turnin 1131 Steelsnap | Turned in at Thunder Bluff.
 turnin 6561 Blackfathom Villainy [dungeon=Blackfathom Deeps; optional]

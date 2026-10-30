@@ -10,6 +10,7 @@ ns.Guides:Register({
   steps={
     {"accept",q=216,title="Between a Rock and a Thistlefur",npc="Karang Amakkar",z=331,x=11.9,y=34.5,text="Karang Amakkar.",v=1},
     {"accept",q=6462,title="Troll Charm",npc="Mitsuwa",z=331,x=11.6,y=34.8,v=1},
+    {"note",text=" - The next quest, Torek's Assault, is an escort: pick it up only when you are ready to follow the NPC.",group=2,v=1},
     {"accept",q=6544,title="Torek's Assault",npc="Torek",z=331,x=68.3,y=75.3,text="Torek.",group=2,v=1},
     {"accept",q=6504,title="The Lost Pages",npc="Gurda Ragescar",z=331,x=70,y=71.2,text="Gurda Ragescar.",v=1},
     {"accept",q=6503,title="Ashenvale Outrunners",npc="Kuray'bin",z=331,x=71.1,y=68.1,text="Kuray'bin.",v=1},
@@ -29,6 +30,7 @@ ns.Guides:Register({
     {"turnin",q=6504,title="The Lost Pages",npc="Gurda Ragescar",z=331,x=70,y=71.2,v=1},
     {"complete",q=6441,title="Satyr Horns",text="Satyrs at Satyrnaar.",v=1},
     {"complete",q=216,title="Between a Rock and a Thistlefur",text="Thistlefur furbolgs at Thistlefur Village.",v=1},
+    {"note",text="The next quest, Freedom to Ruul, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
     {"accept",q=6482,title="Freedom to Ruul",npc="Ruul Snowhoof",z=331,x=41.5,y=34.5,text="Escort quest: start it when you are ready to follow.",v=1},
     {"complete",q=6462,title="Troll Charm",v=1},
     {"complete",q=6482,title="Freedom to Ruul",text="Escort: stay close; it fails if the NPC dies.",v=1},

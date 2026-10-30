@@ -29,6 +29,7 @@ turnin Return to Quinn
 accept Ivar the Foul
 complete Ivar the Foul
 turnin Ivar the Foul
+note [group=2] | The next quest, Escorting Erland, is an escort: pick it up only when you are ready to follow the NPC.
 accept Escorting Erland [group=2] | Deathstalker Erland at the hut.
 complete Escorting Erland [group=2]
 turnin Escorting Erland

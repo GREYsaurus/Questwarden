@@ -28,10 +28,10 @@ No baseline file found.
 | A_Ashenvale_Late | 27 | 9 | 304 | 304 | 6 | 0 | 4 | 0 | 1 | 0 |
 | A_Badlands | 56 | 17 | 128 | 228 | 5 | 0 | 0 | 0 | 0 | 0 |
 | A_BurningSteppes | 77 | 26 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 29 |
-| A_Darkshore | 203 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 2 |
-| A_Desolace | 84 | 25 | 482 | 507 | 8 | 0 | 1 | 0 | 4 | 0 |
+| A_Darkshore | 207 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 3 |
+| A_Desolace | 85 | 25 | 482 | 507 | 8 | 0 | 1 | 0 | 4 | 0 |
 | A_Duskwood | 188 | 65 | 593 | 1057 | 26 | 0 | 1 | 0 | 1 | 11 |
-| A_Dustwallow | 57 | 17 | 231 | 229 | 5 | 0 | 0 | 0 | 1 | 3 |
+| A_Dustwallow | 58 | 17 | 231 | 229 | 5 | 0 | 0 | 0 | 1 | 3 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 433 | 17 | 0 | 3 | 0 | 0 | 0 |
 | A_Felwood | 41 | 11 | 430 | 376 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_Feralas | 72 | 23 | 372 | 372 | 10 | 0 | 0 | 0 | 2 | 2 |
@@ -52,9 +52,9 @@ No baseline file found.
 | Both_UngoroCrater | 68 | 19 | 497 | 493 | 10 | 0 | 0 | 0 | 3 | 1 |
 | Both_Winterspring | 61 | 20 | 245 | 193 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_Arathi | 56 | 15 | 215 | 172 | 3 | 0 | 0 | 0 | 0 | 3 |
-| H_Ashenvale | 60 | 18 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 7 |
+| H_Ashenvale | 62 | 18 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 8 |
 | H_Badlands | 40 | 8 | 167 | 167 | 5 | 0 | 0 | 0 | 0 | 0 |
-| H_Barrens | 319 | 106 | 595 | 850 | 34 | 5 | 0 | 0 | 3 | 7 |
+| H_Barrens | 321 | 106 | 595 | 850 | 34 | 5 | 0 | 0 | 3 | 7 |
 | H_Desolace | 54 | 14 | 282 | 282 | 6 | 0 | 0 | 0 | 2 | 0 |
 | H_Dustwallow | 54 | 16 | 68 | 118 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Felwood | 44 | 12 | 223 | 223 | 3 | 0 | 0 | 0 | 1 | 0 |
@@ -62,13 +62,13 @@ No baseline file found.
 | H_Hillsbrad | 53 | 14 | 176 | 176 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Hinterlands | 63 | 17 | 66 | 66 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 224 | 71 | 458 | 536 | 16 | 0 | 0 | 0 | 1 | 6 |
-| H_Silverpine | 83 | 30 | 322 | 472 | 9 | 0 | 0 | 0 | 1 | 5 |
-| H_Stonetalon | 73 | 28 | 296 | 375 | 14 | 0 | 0 | 0 | 2 | 0 |
+| H_Silverpine | 84 | 30 | 322 | 472 | 9 | 0 | 0 | 0 | 1 | 6 |
+| H_Stonetalon | 74 | 28 | 296 | 375 | 14 | 0 | 0 | 0 | 2 | 0 |
 | H_Stranglethorn | 137 | 44 | 853 | 810 | 21 | 5 | 0 | 0 | 0 | 0 |
 | H_Stranglethorn_Late | 19 | 6 | 205 | 205 | 3 | 0 | 0 | 0 | 0 | 0 |
 | H_SwampOfSorrows | 42 | 10 | 319 | 297 | 4 | 0 | 0 | 0 | 1 | 0 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |
-| H_ThousandNeedles | 130 | 41 | 330 | 659 | 12 | 0 | 0 | 0 | 4 | 7 |
+| H_ThousandNeedles | 133 | 41 | 330 | 659 | 12 | 0 | 0 | 0 | 4 | 7 |
 | H_Undead_Tirisfal | 132 | 44 | 166 | 222 | 11 | 0 | 0 | 0 | 0 | 0 |
 | H_WesternPlaguelands | 69 | 23 | 73 | 298 | 5 | 0 | 0 | 0 | 1 | 3 |
 
@@ -261,7 +261,7 @@ None.
 - A_Ashenvale_Late: level-gated pickup: The Branch of Cenarius (1031) needs 26, model level 24.6 (quests only: 24) [alliance/06_ashenvale_late.guide:36, NightElf/WARRIOR]
 - A_Ashenvale_Late: level-gated pickup: The Howling Vale (1022) needs 25, model level 24.0 (quests only: 24) [alliance/06_ashenvale_late.guide:18, NightElf/WARRIOR]
 - A_Ashenvale_Late: level-gated pickup: Vile Satyr! Dryads in Danger! (1021) needs 26, model level 24.0 (quests only: 24) [alliance/06_ashenvale_late.guide:19, NightElf/WARRIOR]
-- A_Desolace: level-gated pickup: Get Me Out of Here! (6132) needs 34, model level 33.8 (quests only: 33) [alliance/21b_desolace.guide:62, Human/WARRIOR]
+- A_Desolace: level-gated pickup: Get Me Out of Here! (6132) needs 34, model level 33.8 (quests only: 33) [alliance/21b_desolace.guide:63, Human/WARRIOR]
 - A_Duskwood: level-gated pickup: The Legend of Stalvan (67) needs 22, model level 21.7 (quests only: 21) [alliance/13_duskwood.guide:87, Human/WARRIOR]
 - A_DwarfGnome_DunMorogh: level-gated pickup: Operation Recombobulation (412) needs 7, model level 7.0 (quests only: 5) [alliance/01_dwarf_gnome_dunmorogh.guide:99, Dwarf/WARRIOR]
 - A_DwarfGnome_DunMorogh: level-gated pickup: Rejold's New Brew (415) needs 8, model level 7.9 (quests only: 6) [alliance/01_dwarf_gnome_dunmorogh.guide:115, Dwarf/WARRIOR]
