@@ -1,12 +1,11 @@
 {
-  "_comment": "Pinned upstream inputs for the TBCGuide data pipeline. Change these deliberately, never to 'latest'. See docs/DATA_PIPELINE.md.",
+  "_comment": "Pinned upstream inputs for the data pipeline. Change these deliberately, never to 'latest'. Which QuestieDB files and client build each target uses is in targets/<Target>/target.json (questie, clientTables). See docs/DATA_PIPELINE.md.",
   "questiedb": {
     "repository": "https://github.com/Questie/QuestieDB",
     "commit": "7901fee2753cecb577a72c2e4b7126198e05baec",
     "release": "QuestieDB v1.0.9 (shipped in Questie bundle/v12.3.1+v1.0.9, published 2026-10-26)",
     "archiveUrl": "https://codeload.github.com/Questie/QuestieDB/zip/7901fee2753cecb577a72c2e4b7126198e05baec",
     "archiveSha256": "CB2330486A9BA5E041C8ADEE1B1A185B12C6BEE8FE4D0D2C94BF5BECB1100437",
-    "flavor": "TBC",
     "files": [
       "data/TBC/tbcQuestDB.lua",
       "data/TBC/tbcNpcDB.lua",
@@ -23,14 +22,36 @@
       "src/corrections/enum/professions.lua",
       "LICENSE.md",
       "PROVENANCE.md",
-      "gpl-3.0.md"
+      "gpl-3.0.md",
+      "data/Classic/classicQuestDB.lua",
+      "data/Classic/classicNpcDB.lua",
+      "data/Classic/classicObjectDB.lua",
+      "data/Classic/classicItemDB.lua",
+      "support/QuestXP/xpDB-classic.lua",
+      "src/corrections/Era/classicQuestFixes.lua"
     ]
   },
   "clientTables": {
     "source": "https://wago.tools (DB2 CSV exports of the game client)",
-    "product": "wow_anniversary",
-    "build": "2.5.6.70577",
-    "tables": ["Talent", "TalentTab", "SpellName", "Spell", "CharBaseInfo", "ChrRaces", "ChrClasses", "SkillLine", "SkillLineAbility", "SpellLevels", "SkillRaceClassInfo", "CreatureFamily", "SpellEffect", "ItemEffect", "ItemSparse", "UiMapAssignment"],
-    "urlTemplate": "https://wago.tools/db2/{table}/csv?build={build}"
+    "tables": [
+      "Talent",
+      "TalentTab",
+      "SpellName",
+      "Spell",
+      "CharBaseInfo",
+      "ChrRaces",
+      "ChrClasses",
+      "SkillLine",
+      "SkillLineAbility",
+      "SpellLevels",
+      "SkillRaceClassInfo",
+      "CreatureFamily",
+      "SpellEffect",
+      "ItemEffect",
+      "ItemSparse",
+      "UiMapAssignment"
+    ],
+    "urlTemplate": "https://wago.tools/db2/{table}/csv?build={build}",
+    "_comment": "Product and build per target: targets/<Target>/target.json clientTables. Tables are cached per build in .cache/upstream/db2/<build>/."
   }
 }

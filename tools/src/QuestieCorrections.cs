@@ -43,8 +43,8 @@ namespace GuideTools
         public static CorrectionResult Apply(QuestieData d, string qdbRoot)
         {
             var res = new CorrectionResult();
-            string fixes = Path.Combine(qdbRoot, "src", "corrections", "Tbc", "tbcQuestFixes.lua");
-            if (!File.Exists(fixes)) { res.Skipped.Add("tbcQuestFixes.lua not present; no corrections applied"); return res; }
+            string fixes = Path.Combine(qdbRoot, Ctx.QuestieFixes.Replace('/', Path.DirectorySeparatorChar));
+            if (!File.Exists(fixes)) { res.Skipped.Add(Ctx.QuestieFixes + " not present; no corrections applied"); return res; }
             var c = new QuestieCorrections();
             c.LoadEnums(qdbRoot);
             c.t = LuaLexer.Lex(File.ReadAllText(fixes, Encoding.UTF8));
@@ -114,14 +114,14 @@ namespace GuideTools
 
         void ApplyMainTable(QuestieData d, CorrectionResult res)
         {
-            // Locate `function QuestieTBCQuestFixes:Load()` then its `return {`.
+            // Locate `function <module>:Load()` (QuestieQuestFixes for Classic, QuestieTBCQuestFixes for TBC), then its `return {`.
             int start = -1;
             for (int k = 0; k + 3 < t.Count; k++)
             {
-                if (t[k].Text == "function" && t[k + 1].Text == "QuestieTBCQuestFixes" && t[k + 2].Text == ":" && t[k + 3].Text == "Load")
+                if (t[k].Text == "function" && t[k + 1].Text == Ctx.QuestieFixesModule && t[k + 2].Text == ":" && t[k + 3].Text == "Load")
                 { start = k; break; }
             }
-            if (start < 0) { res.Skipped.Add("could not locate QuestieTBCQuestFixes:Load"); return; }
+            if (start < 0) { res.Skipped.Add("could not locate " + Ctx.QuestieFixesModule + ":Load"); return; }
             int r = start;
             while (r < t.Count && !(t[r].Text == "return" && t[r + 1].Text == "{")) r++;
             if (r >= t.Count) { res.Skipped.Add("could not locate Load() return table"); return; }

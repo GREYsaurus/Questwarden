@@ -8,7 +8,7 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 
 | Check | Result |
 |---|---|
-| Routes walked | 0 |
+| Routes walked | 40 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
 | Warnings | 0 |
 | Peak quest log (worst route) | 0 / 20 |
@@ -28,6 +28,21 @@ No baseline file found.
 
 | Route | Peak | At |
 |---|---|---|
+| Dwarf/HUNTER | 0 |  |
+| Dwarf/PALADIN | 0 |  |
+| Dwarf/PRIEST | 0 |  |
+| Dwarf/ROGUE | 0 |  |
+| Dwarf/WARRIOR | 0 |  |
+| Gnome/MAGE | 0 |  |
+| Gnome/ROGUE | 0 |  |
+| Gnome/WARLOCK | 0 |  |
+| Gnome/WARRIOR | 0 |  |
+| Human/MAGE | 0 |  |
+| Human/PALADIN | 0 |  |
+| Human/PRIEST | 0 |  |
+| Human/ROGUE | 0 |  |
+| Human/WARLOCK | 0 |  |
+| Human/WARRIOR | 0 |  |
 
 ## Errors
 

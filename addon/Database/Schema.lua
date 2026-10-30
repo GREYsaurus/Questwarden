@@ -47,7 +47,9 @@ ns.QDB.CLASS_BITS = {
     WARRIOR = 1, PALADIN = 2, HUNTER = 4, ROGUE = 8, PRIEST = 16, SHAMAN = 64, MAGE = 128,
     WARLOCK = 256, DRUID = 1024,
 }
-ns.QDB.NPC_FLAGS = { QUEST_GIVER = 2, TRAINER = 16, VENDOR = 128, FLIGHT_MASTER = 8192, INNKEEPER = 65536 }
+-- NPC flag bits differ between data flavors (vanilla: flight master 8, innkeeper 128; TBC: 8192, 65536).
+-- The generated Database/Questie/Npcs.lua sets ns.QDB.NPC_FLAGS for its flavor; empty until then.
+ns.QDB.NPC_FLAGS = {}
 -- questFlags / specialFlags bits used by the escort guard (see Database/EscortQuests.lua).
 ns.QDB.QUEST_FLAG_PARTY_ACCEPT = 2
 ns.QDB.SPECIAL_FLAG_REPEATABLE = 1

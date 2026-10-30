@@ -68,12 +68,30 @@ function Load-Tools {
     [GuideTools.Ctx]::RequireDatabase = [bool]$req.database
     [GuideTools.Ctx]::RequireTalents = [bool]$req.talents
     [GuideTools.Ctx]::RequireRoutes = [bool]$req.routes
+    $q = $TargetInfo.questie
+    if ($q) {
+        [GuideTools.Ctx]::QuestieFlavor = $q.flavor; [GuideTools.Ctx]::QuestieDataDir = $q.dataDir
+        [GuideTools.Ctx]::QuestiePrefix = $q.prefix; [GuideTools.Ctx]::QuestieFixes = $q.fixes
+        [GuideTools.Ctx]::QuestieFixesModule = $q.fixesModule; [GuideTools.Ctx]::QuestieXp = $q.xp
+        $f = $q.npcFlags
+        [GuideTools.Ctx]::FlagQuestGiver = $f.QUEST_GIVER; [GuideTools.Ctx]::FlagVendor = $f.VENDOR
+        [GuideTools.Ctx]::FlagFlight = $f.FLIGHT_MASTER; [GuideTools.Ctx]::FlagTrainer = $f.TRAINER; [GuideTools.Ctx]::FlagInn = $f.INNKEEPER
+    }
+    if ($TargetInfo.clientTables) {
+        [GuideTools.Ctx]::ClientProduct = $TargetInfo.clientTables.product
+        [GuideTools.Ctx]::ClientTablesBuild = $TargetInfo.clientTables.build
+        if ($TargetInfo.clientTables.excludeSpellIdsFrom) { [GuideTools.Ctx]::ExcludeSpellIdsFrom = [int]$TargetInfo.clientTables.excludeSpellIdsFrom }
+    }
     New-Item -ItemType Directory -Force $Reports | Out-Null
     if (-not $script:ToolsAnnounced) { Write-Host "info  $info"; $script:ToolsAnnounced = $true }
 }
 
 function Get-QdbRoot { Join-Path $Cache "upstream\questiedb" }
-function Get-Db2Root { Join-Path $Cache "upstream\db2" }
+# Client tables are cached per build: .cache/upstream/db2/<build>/
+function Get-Db2Root {
+    if (-not $TargetInfo.clientTables) { throw "Target $Target has no clientTables in target.json." }
+    Join-Path $Cache ("upstream\db2\" + $TargetInfo.clientTables.build)
+}
 
 function Write-Text([string]$path, [string[]]$lines) {
     New-Item -ItemType Directory -Force (Split-Path $path) | Out-Null
@@ -163,13 +181,14 @@ function Invoke-Fetch {
         if (-not (Test-Path (Join-Path $dest $f))) { throw "Expected upstream file missing from archive: $f" }
     }
     $c = $Upstream.clientTables
+    if (-not $TargetInfo.clientTables) { Write-Host "No client tables for $Target."; return }
     $dd = Get-Db2Root
     New-Item -ItemType Directory -Force $dd | Out-Null
     foreach ($t in $c.tables) {
         $out = Join-Path $dd "$t.csv"
         if (-not (Test-Path $out)) {
-            $url = $c.urlTemplate.Replace("{table}", $t).Replace("{build}", $c.build)
-            Write-Host "Downloading $t ($($c.build))"
+            $url = $c.urlTemplate.Replace("{table}", $t).Replace("{build}", $TargetInfo.clientTables.build)
+            Write-Host "Downloading $t ($($TargetInfo.clientTables.build))"
             Invoke-WebRequest $url -OutFile $out -UseBasicParsing
         }
     }
@@ -178,9 +197,10 @@ function Invoke-Fetch {
 
 function Invoke-ImportQuestie {
     Load-Tools
+    if (-not $TargetInfo.questie) { throw "Target $Target has no questie inputs in target.json." }
     $qdb = Get-QdbRoot
     if (-not (Test-Path $qdb)) { throw "Run 'fetch' first." }
-    $prov = "QuestieDB commit $($Upstream.questiedb.commit) ($($Upstream.questiedb.release))."
+    $prov = "QuestieDB commit $($Upstream.questiedb.commit) ($($Upstream.questiedb.release)), flavor $($TargetInfo.questie.flavor)."
     Write-Host "Parsing upstream tables..."
     $data = [GuideTools.QuestieData]::Load($qdb)
     $corr = [GuideTools.QuestieCorrections]::Apply($data, $qdb)
@@ -203,8 +223,11 @@ function Invoke-ImportClient {
     Load-Tools
     $dd = Get-Db2Root
     if (-not (Test-Path $dd)) { throw "Run 'fetch' first." }
-    $r = [GuideTools.ClientTables]::Export($dd, $Overlay, $Upstream.clientTables.build)
+    $r = [GuideTools.ClientTables]::Export($dd, $Overlay, $TargetInfo.clientTables.build)
     Write-Host $r
+    $ex = Join-Path $Reports "client-excluded-spells.csv"
+    (@("table,spell,name") + @([GuideTools.Ctx]::ExcludedSpells)) | Set-Content $ex -Encoding UTF8
+    Write-Host ("left out (spell id >= {0}): {1} (list: docs/generated/{2}/client-excluded-spells.csv)" -f [GuideTools.Ctx]::ExcludeSpellIdsFrom, [GuideTools.Ctx]::ExcludedSpells.Count, $Target)
 }
 
 function Write-Csv([string]$path, [string]$header, $rows) {

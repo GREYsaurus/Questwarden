@@ -30,7 +30,7 @@ namespace GuideTools
     public static class PetTables
     {
         static readonly Regex Skip = new Regex(@"\(DND\)|Scaling|Effect$|^Pet (Hardiness|Aggression|Recovery|Resistance)$|^Intercept Stun$");
-        static readonly int[] DemonFamilies = { 23, 16, 17, 15, 29 }; // Imp, Voidwalker, Succubus, Felhunter, Felguard
+        static readonly int[] DemonFamilies = { 23, 16, 17, 15, 29 }; // Imp, Voidwalker, Succubus, Felhunter, Felguard (TBC only; skipped where absent)
 
         public static string Export(string db2Dir, string addOnDir, string build)
         {
@@ -50,7 +50,10 @@ namespace GuideTools
             {
                 List<int> l; int sk = Csv.I(r, "SkillLine");
                 if (!byLine.TryGetValue(sk, out l)) byLine[sk] = l = new List<int>();
-                l.Add(Csv.I(r, "Spell"));
+                int psp = Csv.I(r, "Spell");
+                string pn; name.TryGetValue(psp, out pn);
+                if (Ctx.Excluded(psp, pn, "pets")) continue; // seasonal spells
+                l.Add(psp);
             }
             // Grimoires: item -> teaching spell -> learned demon spell (SpellEffect 36 = learn spell).
             var learns = new Dictionary<int, int>();
@@ -101,7 +104,8 @@ namespace GuideTools
             int demonSkills = 0, grimoires = 0;
             foreach (int id in DemonFamilies)
             {
-                var f = fams.First(x => Csv.I(x, "ID") == id);
+                var f = fams.FirstOrDefault(x => Csv.I(x, "ID") == id);
+                if (f == null) continue; // a demon this client does not have (Felguard on Classic Era)
                 List<int> l; byLine.TryGetValue(Csv.I(f, "SkillLine_0"), out l);
                 var own = (l ?? new List<int>()).Where(keep).Distinct().OrderBy(x => name[x]).ThenBy(rankOf).ToList();
                 sb.Append("    [" + id + "] = { name = " + LuaWriter.Str(f["Name_lang"]) + ", skills = {\n");

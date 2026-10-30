@@ -6,9 +6,32 @@
   "shipped": true,
   "require": {
     "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
-    "database": false,
+    "database": true,
     "talents": false,
     "routes": false
+  },
+  "questie": {
+    "_comment": "QuestieDB inputs for this target (pinned commit in tools/upstream.json). npcFlags: the NPC flag values of this data flavor (vanilla numbering: src/corrections/enum/expansions.lua; checked against Dungar Longdrink 11 and Innkeeper Farley 135).",
+    "flavor": "Classic",
+    "dataDir": "data/Classic",
+    "prefix": "classic",
+    "fixes": "src/corrections/Era/classicQuestFixes.lua",
+    "fixesModule": "QuestieQuestFixes",
+    "xp": "support/QuestXP/xpDB-classic.lua",
+    "npcFlags": {
+      "QUEST_GIVER": 2,
+      "VENDOR": 4,
+      "FLIGHT_MASTER": 8,
+      "TRAINER": 16,
+      "INNKEEPER": 128
+    }
+  },
+  "clientTables": {
+    "source": "https://wago.tools",
+    "product": "wow_classic_era",
+    "build": "1.15.9.70576",
+    "excludeSpellIdsFrom": 400000,
+    "_comment": "The 1.15 client tables are shared with Season of Discovery and seasonal realms and carry their spells too, with no marker; all of those have ids of 400000 or more. Spells from 400000 are left out of trainer and pet data and listed in docs/generated/ClassicEra/client-excluded-spells.csv. Talent trees are not filtered."
   },
   "tocExtra": [],
   "install": "World of Warcraft\\_classic_era_\\Interface\\AddOns\\",

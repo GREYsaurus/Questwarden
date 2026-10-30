@@ -67,7 +67,8 @@ function B:InnkeeperFor(s, npcId)
     if not npcId then return false, "no NPC id" end
     if npcId == s.npcId then return true end
     local n = ns.DB.GetNPCByID(npcId)
-    if not n or math.floor((n.flags or 0) / 65536) % 2 == 0 then return false, "not an innkeeper" end
+    local inn = ns.QDB.NPC_FLAGS.INNKEEPER
+    if not n or not inn or math.floor((n.flags or 0) / inn) % 2 == 0 then return false, "not an innkeeper" end
     for _, p in ipairs((s.z and n.spawns[s.z]) or {}) do
         if s.x and ((p[1] - s.x) ^ 2 + (p[2] - s.y) ^ 2) <= 16 then return true end
     end

@@ -1,0 +1,50 @@
+﻿QuestieDB import - QuestieDB commit 7901fee2753cecb577a72c2e4b7126198e05baec (QuestieDB v1.0.9 (shipped in Questie bundle/v12.3.1+v1.0.9, published 2026-10-26)), flavor Classic.
+
+items: 2865
+npcs: 4835
+objects: 852
+quests: 4257
+subzones: 121
+warnings: 13
+zones: 312
+
+Corrections applied: 3041
+Corrections skipped (could not be evaluated statically):
+quest 3526 field requiredSpecialization (line 2516): unknown symbol specKeys.ENGINEERING
+quest 3629 field requiredSpecialization (line 2547): unknown symbol specKeys.ENGINEERING
+quest 3630 field requiredSpecialization (line 2552): unknown symbol specKeys.ENGINEERING
+quest 3632 field requiredSpecialization (line 2557): unknown symbol specKeys.ENGINEERING
+quest 3633 field requiredSpecialization (line 2562): unknown symbol specKeys.ENGINEERING
+quest 3634 field requiredSpecialization (line 2567): unknown symbol specKeys.ENGINEERING
+quest 3635 field requiredSpecialization (line 2572): unknown symbol specKeys.ENGINEERING
+quest 3637 field requiredSpecialization (line 2577): unknown symbol specKeys.ENGINEERING
+quest 3638 field requiredSpecialization (line 2583): unknown symbol specKeys.ENGINEERING
+quest 3639 field requiredSpecialization (line 2587): unknown symbol specKeys.ENGINEERING
+quest 3640 field requiredSpecialization (line 2592): unknown symbol specKeys.ENGINEERING
+quest 3641 field requiredSpecialization (line 2596): unknown symbol specKeys.ENGINEERING
+quest 3642 field requiredSpecialization (line 2601): unknown symbol specKeys.ENGINEERING
+quest 3643 field requiredSpecialization (line 2605): unknown symbol specKeys.ENGINEERING
+quest 3644 field requiredSpecialization (line 2610): unknown symbol specKeys.ENGINEERING_GOBLIN
+quest 3645 field requiredSpecialization (line 2616): unknown symbol specKeys.ENGINEERING_GNOMISH
+quest 3646 field requiredSpecialization (line 2620): unknown symbol specKeys.ENGINEERING_GOBLIN
+quest 3647 field requiredSpecialization (line 2626): unknown symbol specKeys.ENGINEERING_GNOMISH
+quest 4181 field requiredSpecialization (line 2853): unknown symbol specKeys.ENGINEERING
+quest 5305 field requiredSpecialization (line 3399): unknown symbol specKeys.BLACKSMITHING_WEAPON
+quest 5306 field requiredSpecialization (line 3402): unknown symbol specKeys.BLACKSMITHING_WEAPON
+quest 5307 field requiredSpecialization (line 3405): unknown symbol specKeys.BLACKSMITHING_WEAPON
+quest 9233 field requiredRanks (line 6546): unary minus on non-number
+
+Warnings:
+item 190179 referenced by a quest is missing from upstream item data
+item 190180 referenced by a quest is missing from upstream item data
+item 190181 referenced by a quest is missing from upstream item data
+item 190186 referenced by a quest is missing from upstream item data
+item 190187 referenced by a quest is missing from upstream item data
+item 190232 referenced by a quest is missing from upstream item data
+item 190307 referenced by a quest is missing from upstream item data
+item 190308 referenced by a quest is missing from upstream item data
+item 190309 referenced by a quest is missing from upstream item data
+npc 185335 referenced but missing from upstream npc data
+object 15885 referenced but missing from upstream object data
+object 175124 referenced but missing from upstream object data
+object 178965 referenced but missing from upstream object data

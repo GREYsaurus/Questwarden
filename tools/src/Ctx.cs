@@ -30,6 +30,23 @@ namespace GuideTools
         public static bool Verified = false;
         // Coverage switches (targets/<Target>/target.json "require"), set by tools/build.ps1.
         public static bool RequireDatabase = true, RequireTalents = true, RequireRoutes = true;
+        // QuestieDB inputs (target.json "questie"), set by tools/build.ps1. Paths are relative to the QuestieDB root.
+        public static string QuestieFlavor = "", QuestieDataDir = "", QuestiePrefix = "", QuestieFixes = "", QuestieFixesModule = "", QuestieXp = "";
+        // NPC flag bits of this data flavor (vanilla and TBC number them differently).
+        public static int FlagQuestGiver = 2, FlagVendor = 4, FlagFlight = 8, FlagTrainer = 16, FlagInn = 128;
+        // Client tables (target.json "clientTables").
+        public static string ClientProduct = "", ClientTablesBuild = "";
+        // Spells with an id at or above this are left out of the trainer and pet tables (0 = keep all).
+        // Classic Era: 400000, because the 1.15 client tables also carry Season of Discovery and seasonal
+        // spells (all 400000+), with no other marker. Every spell left out is listed in a report.
+        public static int ExcludeSpellIdsFrom = 0;
+        public static readonly List<string> ExcludedSpells = new List<string>();
+        public static bool Excluded(int spell, string name, string table)
+        {
+            if (ExcludeSpellIdsFrom <= 0 || spell < ExcludeSpellIdsFrom) return false;
+            ExcludedSpells.Add(table + "," + spell + ",\"" + (name ?? "").Replace("\"", "'") + "\"");
+            return true;
+        }
 
         public static int TalentPoints { get { return MaxLevel - FirstTalentLevel + 1; } }
 

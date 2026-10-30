@@ -13,7 +13,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Distinct quests referenced | 0 |
 | Steps with database-derived coordinates | 0 |
 | Steps with hand-written coordinates (unverified) | 0 |
-| Race/class combinations | 0 |
+| Race/class combinations | 40 |
 | Talent builds | 0 (0 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
 | Compiler warnings | 0 (see docs/generated/ClassicEra/guide-warnings.log) |
@@ -24,6 +24,46 @@ Each race/class combination is followed from its racial start guide through the 
 
 | Race | Class | Faction | Guides | Reaches | Problems |
 |---|---|---|---|---|---|
+| Dwarf | HUNTER | Alliance | 0 | 0 | no start guide |
+| Dwarf | PALADIN | Alliance | 0 | 0 | no start guide |
+| Dwarf | PRIEST | Alliance | 0 | 0 | no start guide |
+| Dwarf | ROGUE | Alliance | 0 | 0 | no start guide |
+| Dwarf | WARRIOR | Alliance | 0 | 0 | no start guide |
+| Gnome | MAGE | Alliance | 0 | 0 | no start guide |
+| Gnome | ROGUE | Alliance | 0 | 0 | no start guide |
+| Gnome | WARLOCK | Alliance | 0 | 0 | no start guide |
+| Gnome | WARRIOR | Alliance | 0 | 0 | no start guide |
+| Human | MAGE | Alliance | 0 | 0 | no start guide |
+| Human | PALADIN | Alliance | 0 | 0 | no start guide |
+| Human | PRIEST | Alliance | 0 | 0 | no start guide |
+| Human | ROGUE | Alliance | 0 | 0 | no start guide |
+| Human | WARLOCK | Alliance | 0 | 0 | no start guide |
+| Human | WARRIOR | Alliance | 0 | 0 | no start guide |
+| NightElf | DRUID | Alliance | 0 | 0 | no start guide |
+| NightElf | HUNTER | Alliance | 0 | 0 | no start guide |
+| NightElf | PRIEST | Alliance | 0 | 0 | no start guide |
+| NightElf | ROGUE | Alliance | 0 | 0 | no start guide |
+| NightElf | WARRIOR | Alliance | 0 | 0 | no start guide |
+| Orc | HUNTER | Horde | 0 | 0 | no start guide |
+| Orc | ROGUE | Horde | 0 | 0 | no start guide |
+| Orc | SHAMAN | Horde | 0 | 0 | no start guide |
+| Orc | WARLOCK | Horde | 0 | 0 | no start guide |
+| Orc | WARRIOR | Horde | 0 | 0 | no start guide |
+| Scourge | MAGE | Horde | 0 | 0 | no start guide |
+| Scourge | PRIEST | Horde | 0 | 0 | no start guide |
+| Scourge | ROGUE | Horde | 0 | 0 | no start guide |
+| Scourge | WARLOCK | Horde | 0 | 0 | no start guide |
+| Scourge | WARRIOR | Horde | 0 | 0 | no start guide |
+| Tauren | DRUID | Horde | 0 | 0 | no start guide |
+| Tauren | HUNTER | Horde | 0 | 0 | no start guide |
+| Tauren | SHAMAN | Horde | 0 | 0 | no start guide |
+| Tauren | WARRIOR | Horde | 0 | 0 | no start guide |
+| Troll | HUNTER | Horde | 0 | 0 | no start guide |
+| Troll | MAGE | Horde | 0 | 0 | no start guide |
+| Troll | PRIEST | Horde | 0 | 0 | no start guide |
+| Troll | ROGUE | Horde | 0 | 0 | no start guide |
+| Troll | SHAMAN | Horde | 0 | 0 | no start guide |
+| Troll | WARRIOR | Horde | 0 | 0 | no start guide |
 
 ## Guides
 

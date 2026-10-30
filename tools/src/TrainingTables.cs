@@ -89,6 +89,7 @@ namespace GuideTools
                 bool marked = mask != 0;
                 if (!marked && !lineClass.TryGetValue(Csv.I(r, "SkillLine"), out mask)) continue;
                 string n; if (!name.TryGetValue(sp, out n) || string.IsNullOrEmpty(n)) continue;
+                if (Ctx.Excluded(sp, n, "training")) continue; // seasonal spells (target.json clientTables.excludeSpellIdsFrom)
                 int lv; level.TryGetValue(sp, out lv);
                 string st; sub.TryGetValue(sp, out st);
                 var m = rx.Match(st ?? "");

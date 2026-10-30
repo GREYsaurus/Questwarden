@@ -210,7 +210,10 @@ namespace GuideTools
             {"Orc","Orc"},{"Troll","Troll"},{"Tauren","Tauren"},{"Undead","Scourge"},{"Scourge","Scourge"},{"BloodElf","BloodElf"},{"Blood Elf","BloodElf"} };
 
         const int ALLIANCE_MASK = 1101, HORDE_MASK = 690;
-        const int FLAG_TRAINER = 16, FLAG_FLIGHT = 8192, FLAG_INN = 65536;
+        // NPC flag bits of the target's data flavor (target.json questie.npcFlags).
+        static int FLAG_TRAINER { get { return Ctx.FlagTrainer; } }
+        static int FLAG_FLIGHT { get { return Ctx.FlagFlight; } }
+        static int FLAG_INN { get { return Ctx.FlagInn; } }
 
         static readonly HashSet<string> Verbs = new HashSet<string>(new[] {
             "accept","turnin","complete","goto","note","train","fp","fly","hs","bind","level","travel","guide","talk","buy","use","collect","grind" });

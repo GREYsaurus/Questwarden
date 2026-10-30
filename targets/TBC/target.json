@@ -10,6 +10,27 @@
     "talents": true,
     "routes": true
   },
+  "questie": {
+    "_comment": "QuestieDB inputs for the TBC fixture (as TBCGuide 0.9.5 imported them).",
+    "flavor": "TBC",
+    "dataDir": "data/TBC",
+    "prefix": "tbc",
+    "fixes": "src/corrections/Tbc/tbcQuestFixes.lua",
+    "fixesModule": "QuestieTBCQuestFixes",
+    "xp": "support/QuestXP/xpDB-tbc.lua",
+    "npcFlags": {
+      "QUEST_GIVER": 2,
+      "VENDOR": 128,
+      "FLIGHT_MASTER": 8192,
+      "TRAINER": 16,
+      "INNKEEPER": 65536
+    }
+  },
+  "clientTables": {
+    "source": "https://wago.tools",
+    "product": "wow_anniversary",
+    "build": "2.5.6.70577"
+  },
   "tocExtra": [],
   "install": "",
   "evidence": [
