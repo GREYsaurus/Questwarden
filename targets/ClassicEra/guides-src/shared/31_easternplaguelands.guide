@@ -20,6 +20,7 @@ turnin Augustus' Receipt Book
 note Ride the road east across the zone to Light's Hope Chapel.
 fp Light's Hope Chapel
 turnin Duke Nicholas Zverenhoff [optional] | Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).
+accept 5251 The Archivist [dungeon=Stratholme]
 accept Zaeldarr the Outcast | Caretaker Alen, Light's Hope Chapel.
 accept 5281 The Restless Souls
 complete Demon Dogs | Plaguehounds and Frenzied Plaguehounds around Light's Hope and the north; Plaguehound Runts in the south.
@@ -47,6 +48,11 @@ turnin Carrion Grubbage
 note Ride back east to Light's Hope Chapel.
 turnin Zaeldarr the Outcast | Caretaker Alen.
 turnin Uncle Carlin | Carlin Redpath.
+accept 5212 The Flesh Does Not Lie [dungeon=Stratholme]
+accept 5243 Houses of the Holy [dungeon=Stratholme]
+accept 5529 Plagued Hatchlings [dungeon=Scholomance]
+complete 5251 The Archivist [dungeon=Stratholme]
+turnin 5251 The Archivist [dungeon=Stratholme]
 complete 6024 Hameya's Plea [faction=Alliance]
 complete 6024 Hameya's Plea [faction=Horde]
 complete 6133 The Ranger Lord's Behest [faction=Horde]
@@ -57,6 +63,12 @@ turnin 6024 Hameya's Plea [faction=Alliance]
 complete 5742 Redemption [faction=Alliance]
 complete 5742 Redemption [faction=Horde]
 turnin 6024 Hameya's Plea [faction=Horde]
+complete 5212 The Flesh Does Not Lie [dungeon=Stratholme]
+complete 5243 Houses of the Holy [dungeon=Stratholme]
+complete 5529 Plagued Hatchlings [dungeon=Scholomance]
+turnin 5212 The Flesh Does Not Lie [dungeon=Stratholme]
+turnin 5243 Houses of the Holy [dungeon=Stratholme]
+turnin 5529 Plagued Hatchlings [dungeon=Scholomance]
 turnin 5742 Redemption [faction=Alliance]
 turnin 5742 Redemption [faction=Horde]
 level 58

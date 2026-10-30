@@ -167,6 +167,11 @@ local charDefaults = {
     killedRares = {},   -- [npcID] = true: rares this character killed (skipKilledRares)
     hardcore = false,   -- this character plays Hardcore: follow the Hardcore route flavor (ns:IsHardcore)
 }
+-- A target may change setting defaults (Config/Target.lua contentDefaults), e.g. Classic Era leaves
+-- elite/group and dungeon quests off until the player turns them on.
+for k, v in pairs(ns.Target and ns.Target.contentDefaults or {}) do
+    if profileDefaults[k] ~= nil then profileDefaults[k] = v end
+end
 ns.PROFILE_DEFAULTS = profileDefaults
 
 -- "Name - Realm" for the current character.

@@ -106,17 +106,44 @@ if STAGE.target == "ClassicEra" then
     local ab = ns.Talents:ActiveBuild()
     check(ab and ab.id == "warrior_arms_iv", "a warrior's default plan is Icy Veins Arms (" .. tostring(ab and ab.id) .. ")")
     check(#ns.Talents.buildList == 28, "28 talent plans registered (" .. #ns.Talents.buildList .. ")")
+    -- Group content is opt-in on Classic Era (Target.contentDefaults).
+    check(ns.db.profile.showElite == false and ns.db.profile.showDungeonSteps == false, "Classic Era: elite and dungeon quests off by default")
+    local function firstStep(pred)
+        for _, gd in ipairs(ns.Guides.list) do
+            for i, st in ipairs(gd.steps) do if pred(st) then return gd, i end end
+        end
+    end
+    local dg, di = firstStep(function(st) return st.dungeon and st[1] == "accept" end)
+    local eg, ei = firstStep(function(st) return st.elite and st[1] == "accept" end)
+    check(dg ~= nil and eg ~= nil, "guides contain dungeon and elite steps")
+    if dg and eg then
+        ns.Engine:Load(dg.id)
+        check(ns.Engine.status[di] == "na", "a dungeon step is left out while dungeon quests are off")
+        ns.db.profile.showDungeonSteps = true
+        ns.Engine:Refresh()
+        check(ns.Engine.status[di] ~= "na", "it is back when Include Dungeon Quests is on")
+        ns.db.profile.showDungeonSteps = false
+        ns.Engine:Load(eg.id)
+        check(ns.Engine.status[ei] == "na", "an elite step is left out while group quests are off")
+        ns.db.profile.showElite = true
+        ns.Engine:Refresh()
+        check(ns.Engine.status[ei] ~= "na" or ns.Engine.status[ei] == nil, "it is back when Show Group Quests is on")
+        ns.db.profile.showElite = false
+        ns.Engine:Load("A_Human_Elwynn")
+    end
     -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
     local g = ns.Guides:Get("A_Human_Elwynn")
     local hogger
     for i, st in ipairs(g.steps) do if st[1] == "accept" and st.hcSkip then hogger = i break end end
     check(hogger ~= nil, "the Elwynn guide marks a step [hc=skip]")
+    ns.db.profile.showElite = true -- Hogger is elite: group quests on, so only the Hardcore flag decides
     ns.Engine:Refresh()
-    check(ns.Engine.status[hogger] ~= "na", "Speed route keeps the Hogger pickup")
+    check(ns.Engine.status[hogger] ~= "na", "Speed route keeps the Hogger pickup (group quests on)")
     ns.char.hardcore = true
     ns.Engine:Refresh()
     check(ns:IsHardcore() and ns.Engine.status[hogger] == "na", "Hardcore route leaves the Hogger pickup out")
     ns.char.hardcore = false
+    ns.db.profile.showElite = false
     ns.Engine:Refresh()
 end
 

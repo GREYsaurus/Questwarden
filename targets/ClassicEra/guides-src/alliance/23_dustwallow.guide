@@ -52,7 +52,10 @@ accept 1320 The Black Shield
 turnin 1320 The Black Shield | Captain Garran Vimes.
 note [hc=only] | Hardcore: Balos Jacken's deserters camp on the hill south-west of the inn and stand in groups. Pull them apart before you talk to him.
 turnin 1286 The Deserters | Balos Jacken, the deserters' camp south-west of the Shady Rest Inn.
+accept 2846 Tiara of the Deep [dungeon=Zul'Farrak]
 accept 1287 The Deserters
+complete 2846 Tiara of the Deep [dungeon=Zul'Farrak]
+turnin 2846 Tiara of the Deep [dungeon=Zul'Farrak]
 complete 1287 The Deserters
 turnin 1287 The Deserters | Captain Garran Vimes, Theramore.
 level 41 | Kill mudrock tortoises and murlocs on the coast if you are short of 41; Tanaris starts at 41.

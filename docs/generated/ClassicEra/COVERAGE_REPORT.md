@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 48 (48 Azeroth) |
-| Guide steps | 4260 |
-| Quest steps (accept/complete/turn-in) | 3601 |
-| Distinct quests referenced | 1216 |
-| Steps with database-derived coordinates | 2916 |
+| Guide steps | 4338 |
+| Quest steps (accept/complete/turn-in) | 3679 |
+| Distinct quests referenced | 1242 |
+| Steps with database-derived coordinates | 2968 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
@@ -79,10 +79,10 @@ Each race/class combination is followed from its racial start guide through the 
 | Loch Modan | Alliance | 11-17 | Loch Modan | 96 | 26 | 8 |
 | Silverpine Forest (The Sepulcher) | Horde | 11-17 | Silverpine Forest | 80 | 29 | 2 |
 | Westfall | Alliance | 12-15 | Westfall | 80 | 27 | 17 |
-| The Barrens (Crossroads) | Horde | 13-22 | The Barrens | 309 | 103 | 74 |
+| The Barrens (Crossroads) | Horde | 13-22 | The Barrens | 315 | 105 | 77 |
 | Redridge Mountains | Alliance | 16-20 | Redridge Mountains | 96 | 30 | 21 |
 | Ashenvale | Alliance | 19-24 | Ashenvale | 81 | 24 | 21 |
-| Duskwood | Alliance | 20-25 | Duskwood | 177 | 61 | 56 |
+| Duskwood | Alliance | 20-25 | Duskwood | 180 | 62 | 56 |
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 22-24 | Stonetalon Mountains | 73 | 28 | 3 |
 | Ashenvale (return, 25-31) | Alliance | 24-25 | Ashenvale | 23 | 8 | 0 |
 | Wetlands | Alliance | 24-29 | Wetlands | 111 | 39 | 18 |
@@ -93,30 +93,30 @@ Each race/class combination is followed from its racial start guide through the 
 | Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 123 | 38 | 48 |
 | Desolace (Ghost Walker Post and Shadowprey) | Horde | 32-35 | Desolace | 46 | 12 | 1 |
 | Desolace (Nijel's Point) | Alliance | 33-36 | Desolace | 72 | 22 | 3 |
-| Arathi Highlands (Hammerfall) | Horde | 35-36 | Arathi Highlands | 53 | 14 | 0 |
+| Arathi Highlands (Hammerfall) | Horde | 35-36 | Arathi Highlands | 56 | 15 | 3 |
 | Badlands (Kargath) | Horde | 35-38 | Badlands | 40 | 8 | 0 |
-| Stranglethorn Vale | Alliance | 36-38 | Stranglethorn Vale | 165 | 59 | 13 |
-| Stranglethorn Vale (return, 38-45) | Alliance | 38-39 | Stranglethorn Vale | 33 | 12 | 0 |
+| Stranglethorn Vale | Alliance | 36-38 | Stranglethorn Vale | 168 | 60 | 16 |
+| Stranglethorn Vale (return, 38-45) | Alliance | 38-39 | Stranglethorn Vale | 45 | 16 | 12 |
 | Badlands | Alliance | 38-40 | Badlands | 56 | 17 | 4 |
 | Stranglethorn Vale (Grom'gol) | Horde | 38-40 | Stranglethorn Vale | 137 | 44 | 1 |
 | Stranglethorn Vale (return, 39-45) | Horde | 39-40 | Stranglethorn Vale | 19 | 6 | 0 |
 | Swamp of Sorrows (Stonard) | Horde | 39-40 | Swamp of Sorrows | 38 | 9 | 3 |
-| Dustwallow Marsh (Theramore) | Alliance | 40-41 | Dustwallow Marsh | 54 | 16 | 3 |
+| Dustwallow Marsh (Theramore) | Alliance | 40-41 | Dustwallow Marsh | 57 | 17 | 3 |
 | Dustwallow Marsh (Brackenwall Village) | Horde | 40-41 | Dustwallow Marsh | 54 | 16 | 2 |
-| Tanaris (Gadgetzan) | Both | 41-44 | Tanaris | 59 | 15 | 9 |
+| Tanaris (Gadgetzan) | Both | 41-44 | Tanaris | 68 | 18 | 9 |
 | Feralas (Feathermoon Stronghold) | Alliance | 44-46 | Feralas | 72 | 23 | 2 |
 | Feralas (Camp Mojache) | Horde | 44-46 | Feralas | 54 | 14 | 0 |
-| The Hinterlands (Aerie Peak) | Alliance | 46-48 | The Hinterlands | 25 | 4 | 0 |
+| The Hinterlands (Aerie Peak) | Alliance | 46-48 | The Hinterlands | 28 | 5 | 0 |
 | The Hinterlands (Revantusk Village) | Horde | 46-49 | The Hinterlands | 63 | 17 | 3 |
-| Searing Gorge (Thorium Point) | Both | 48-49 | Searing Gorge | 64 | 17 | 0 |
+| Searing Gorge (Thorium Point) | Both | 48-49 | Searing Gorge | 67 | 18 | 3 |
 | Un'Goro Crater | Both | 49-51 | Un'Goro Crater | 68 | 19 | 1 |
 | Felwood (Talonbranch Glade) | Alliance | 51-53 | Felwood | 41 | 11 | 0 |
 | Felwood (Bloodvenom Post) | Horde | 51-53 | Felwood | 44 | 12 | 0 |
 | Winterspring (Everlook) | Both | 53-55 | Winterspring | 60 | 19 | 1 |
-| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 48 | 15 | 1 |
-| Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 86 | 29 | 3 |
+| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 63 | 20 | 1 |
+| Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 92 | 31 | 3 |
 | Western Plaguelands (The Bulwark) | Horde | 55-57 | Western Plaguelands | 66 | 22 | 3 |
-| Eastern Plaguelands (Light's Hope) | Both | 57-58 | Eastern Plaguelands | 62 | 15 | 1 |
+| Eastern Plaguelands (Light's Hope) | Both | 57-58 | Eastern Plaguelands | 74 | 19 | 1 |
 
 ### Zones covered
 

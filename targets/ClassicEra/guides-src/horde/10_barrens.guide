@@ -139,6 +139,7 @@ turnin 890 The Missing Shipment | Wharfmaster Dizzywig, Ratchet docks.
 accept 896 Miner's Fortune [optional]
 accept 892 The Missing Shipment
 accept Samophlange | Sputtervalve.
+accept 959 Trouble at the Docks [elite; group; hc=skip]
 grind 16 Savannah Matriarch, Savannah Patriarch | Plundering the Plunderers needs level 16: kill these nearby until you reach it.
 accept 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll] | Needs level 16. If you are lower, {name} skips it and moves on.
 complete 1525 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional] | Fire Tar drops from Razormane Geomancer, Razormane Thornweaver and Razormane Water Seeker and others. Reagent Pouch drops from Burning Blade Cultist.
@@ -167,6 +168,7 @@ complete 901 Samophlange | Console Key drops from Tinkerer Sniggles.
 turnin 901 Samophlange
 accept 902 Samophlange [optional]
 turnin Kolkar Leaders
+complete 959 Trouble at the Docks [elite; group; hc=skip]
 accept Verog the Dervish
 complete Harpy Raiders | Witchwing harpies north-west.
 turnin Harpy Raiders
@@ -181,6 +183,7 @@ complete Echeyakee | Use the horn at Echeyakee's lair.
 turnin Echeyakee
 accept The Angry Scytheclaws
 accept Consumed by Hatred | Mankrik, Crossroads.
+accept 1487 Deviate Eradication [dungeon=Wailing Caverns]
 accept Lost in Battle
 accept 1061 The Spirits of Stonetalon
 accept 5726 Hidden Enemies [class=Warrior,Rogue,Priest,Mage; race=Undead; optional]
@@ -212,6 +215,7 @@ turnin 1069 Deepmoss Spider Eggs [class=Shaman; race=Orc,Tauren,Troll]
 turnin 821 Chen's Empty Keg
 turnin 896 Miner's Fortune [optional]
 turnin 902 Samophlange [optional]
+turnin 959 Trouble at the Docks [elite; group; hc=skip]
 turnin 863 The Escape [optional]
 accept 1483 Ziz Fizziks [optional]
 complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
@@ -296,6 +300,8 @@ turnin 6541 Report to Kadrak
 accept 4021 Counterattack! [optional]
 complete 4021 Counterattack! [optional] | Piece of Krom'zar's Banner: loot Krom'zar's Banner.
 turnin 4021 Counterattack! [optional]
+complete 1487 Deviate Eradication [dungeon=Wailing Caverns]
+turnin 1487 Deviate Eradication [dungeon=Wailing Caverns]
 turnin 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
 accept 1063 The Elder Crone
 accept 6548 Avenge My Village [class=Shaman; race=Orc,Tauren,Troll]

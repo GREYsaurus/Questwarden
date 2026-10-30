@@ -13,6 +13,7 @@
 note Alliance: fly to Thelsamar, ride south into the Badlands and west past Kargath (Horde town) into the Searing Gorge. Horde: fly to Kargath and ride west. Thorium Point is in the north-west of the Gorge. Most quests here need level 45.
 fp Thorium Point
 accept STOLEN: Smithing Tuyere and Lookout's Spyglass | The Wanted board at Thorium Point.
+accept 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
 accept 3377 Prayer to Elune [faction=Alliance]
 complete 3377 Prayer to Elune [faction=Alliance]
 turnin 3377 Prayer to Elune [faction=Alliance]
@@ -44,6 +45,7 @@ accept 3454 The Torch of Retribution
 turnin 3454 The Torch of Retribution | Take the Torch of Retribution from beside Kalaran.
 accept Squire Maltrake
 turnin Squire Maltrake | Squire Maltrake appears next to the torch.
+complete 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
 accept 4449 Caught! [faction=Alliance]
 accept 4449 Caught! [faction=Horde]
 complete 7722 What the Flux?
@@ -57,6 +59,7 @@ turnin 4449 Caught! [faction=Horde]
 turnin STOLEN: Smithing Tuyere and Lookout's Spyglass | Taskmaster Scrange, Thorium Point.
 turnin JOB OPPORTUNITY: Culling the Competition
 turnin Curse These Fat Fingers | Hansel Heavyhands.
+turnin 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
 turnin 7722 What the Flux?
 accept 3481 Trinkets... [faction=Alliance]
 turnin Fiery Menace!

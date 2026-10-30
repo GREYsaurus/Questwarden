@@ -11,10 +11,12 @@
 @next A_WesternPlaguelands
 
 accept Dragonkin Menace | Helendis Riverhorn.
+accept 4701 Put Her Down [dungeon=Blackrock Spire]
 complete Dragonkin Menace | Black Broodlings, Dragonkin Felbinders and dragonspawn.
 turnin Dragonkin Menace
 accept 4183 The True Masters
 accept Extinguish the Firegut | Oralius.
+accept 4286 The Good Stuff [dungeon=Blackrock Depths]
 accept 4283 FIFTY! YEP!
 complete Extinguish the Firegut | Firegut ogres at Dreadmaul Rock.
 turnin Extinguish the Firegut
@@ -28,6 +30,9 @@ fp Morgan's Vigil
 turnin 4183 The True Masters | Magistrate Solomon in Lakeshire.
 accept 4184 The True Masters
 accept Broodling Essence | Tinkee Steamboil, Flame Crest.
+accept 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
+accept 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
+accept 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
 accept 4022 A Taste of Flame
 complete 4283 FIFTY! YEP!
 complete Broodling Essence | Use the essence collector on broodlings.
@@ -43,10 +48,20 @@ accept 4223 The True Masters
 turnin 4223 The True Masters
 turnin 4283 FIFTY! YEP!
 accept 4808 Felnok Steelspring
+complete 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
+complete 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
+complete 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
+turnin 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
+turnin 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
+turnin 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
 turnin 4022 A Taste of Flame
 accept 4224 The True Masters | Escort quest: start it when you are ready to follow.
 complete 4224 The True Masters | Escort: stay close; it fails if the NPC dies.
 turnin 4224 The True Masters
+complete 4286 The Good Stuff [dungeon=Blackrock Depths]
+complete 4701 Put Her Down [dungeon=Blackrock Spire]
+turnin 4286 The Good Stuff [dungeon=Blackrock Depths]
+turnin 4701 Put Her Down [dungeon=Blackrock Spire]
 level 55
 train
 note Fly to Ironforge (Courier Hammerfall has the Western Plaguelands call to arms), then to Chillwind Camp (via Aerie Peak or Southshore if you lack the path).

@@ -13,7 +13,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Warnings | 31 |
 | Peak quest log (worst route) | 22 / 25 |
 | Reduced-XP pickups (6+ levels below estimate) | 32 |
-| Level-gated pickups | 138 |
+| Level-gated pickups | 139 |
 | Accepted, never turned in | 0 |
 | Hub revisits (all guides) | 420 |
 
@@ -44,7 +44,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | A_LochModan | 106 (72) | 29 (24) | 133 (517) | 382 | 5 (11) | 0 | 4 (0) | 0 (2) | 0 | 0 (1) |
 | A_Nagrand | 126 (105) | 43 (37) | 291 (367) | 291 | 3 (4) | 0 | 0 | 0 (1) | 2 | 1 (2) |
 | A_NightElf_Teldrassil | 178 (92) | 63 (30) | 313 (214) | 471 | 13 (7) | 0 | 3 (1) | 0 (1) | 6 (0) | 0 |
-| A_Redridge | 118 (69) | 41 (22) | 243 (289) | 370 | 10 (13) | 0 | 12 (0) | 0 (1) | 1 | 3 |
+| A_Redridge | 118 (69) | 41 (22) | 243 (289) | 370 | 10 (13) | 0 | 13 (0) | 0 (1) | 1 | 3 |
 | A_Shadowmoon | 57 | 18 | 76 (132) | 76 | 1 (2) | 0 | 0 | 0 | 0 | 0 |
 | A_Stranglethorn | 147 (76) | 47 (25) | 311 (269) | 484 | 6 | 12 (0) | 0 | 0 (5) | 0 | 0 |
 | A_Terokkar | 108 (97) | 37 (34) | 327 (390) | 402 | 5 (11) | 0 | 0 | 0 (1) | 1 | 2 (3) |
@@ -216,6 +216,7 @@ None.
 - A_NightElf_Teldrassil: level-gated pickup: The Apple Falls (2241) needs 10, model level 7.2 (quests only: 6) [alliance/02_nightelf_teldrassil.guide:101, NightElf/ROGUE]
 - A_Redridge: level-gated pickup: A Watchful Eye (94) needs 20, model level 15.0 (quests only: 15) [alliance/12_redridge.guide:26, Human/WARRIOR]
 - A_Redridge: level-gated pickup: An Unwelcome Guest (34) needs 18, model level 15.2 (quests only: 15) [alliance/12_redridge.guide:60, Human/WARRIOR]
+- A_Redridge: level-gated pickup: Blackrock Menace (20) needs 18, model level 17.9 (quests only: 17) [alliance/12_redridge.guide:116, Human/WARRIOR]
 - A_Redridge: level-gated pickup: Looking Further (248) needs 20, model level 15.6 (quests only: 15) [alliance/12_redridge.guide:73, Human/WARRIOR]
 - A_Redridge: level-gated pickup: Mathias and the Defias (2360) needs 20, model level 15.0 (quests only: 15) [alliance/12_redridge.guide:19, Human/ROGUE]
 - A_Redridge: level-gated pickup: Missing In Action (219) needs 19, model level 15.4 (quests only: 15) [alliance/12_redridge.guide:68, Human/WARRIOR]
@@ -248,9 +249,9 @@ None.
 - A_Wetlands: level-gated pickup: The Thandol Span (632) needs 28, model level 26.6 (quests only: 26) [alliance/14_wetlands.guide:76, Human/WARRIOR]
 - A_Wetlands: level-gated pickup: The Thandol Span (633) needs 28, model level 26.7 (quests only: 26) [alliance/14_wetlands.guide:78, Human/WARRIOR]
 - A_Wetlands: level-gated pickup: Uncovering the Past (299) needs 25, model level 24.3 (quests only: 24) [alliance/14_wetlands.guide:41, NightElf/WARRIOR]
-- Both_Tanaris: level-gated pickup: Gahz'ridian (3161) needs 43, model level 42.9 (quests only: 42) [shared/24_tanaris.guide:53, Human/WARRIOR]
-- Both_Tanaris: level-gated pickup: The Dunemaul Compound (5863) needs 44, model level 42.5 (quests only: 41) [shared/24_tanaris.guide:41, Human/WARRIOR]
-- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.1 (quests only: 42) [shared/24_tanaris.guide:56, Human/WARRIOR]
+- Both_Tanaris: level-gated pickup: Gahz'ridian (3161) needs 43, model level 42.8 (quests only: 41) [shared/24_tanaris.guide:53, Human/WARRIOR]
+- Both_Tanaris: level-gated pickup: The Dunemaul Compound (5863) needs 44, model level 42.4 (quests only: 41) [shared/24_tanaris.guide:41, Human/WARRIOR]
+- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 42.9 (quests only: 42) [shared/24_tanaris.guide:56, Human/WARRIOR]
 - H_Badlands: level-gated pickup: Badlands Reagent Run (2258) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:15, Orc/WARRIOR]
 - H_Badlands: level-gated pickup: Unclaimed Baggage (9439) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:17, Orc/WARRIOR]
 - H_Barrens: level-gated pickup: Blind Cazul (1508) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:93, Orc/WARLOCK]

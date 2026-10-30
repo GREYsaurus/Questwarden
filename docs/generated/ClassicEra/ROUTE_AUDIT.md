@@ -10,12 +10,12 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 |---|---|
 | Routes walked | 80 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
-| Warnings | 130 |
-| Peak quest log (worst route) | 18 / 20 |
+| Warnings | 156 |
+| Peak quest log (worst route) | 20 / 20 |
 | Reduced-XP pickups (6+ levels below estimate) | 22 |
 | Level-gated pickups | 12 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 407 |
+| Hub revisits (all guides) | 417 |
 
 ## Per guide
 
@@ -27,34 +27,34 @@ No baseline file found.
 | A_Ashenvale | 81 | 24 | 252 | 352 | 13 | 0 | 0 | 0 | 0 | 1 |
 | A_Ashenvale_Late | 23 | 8 | 304 | 304 | 6 | 0 | 4 | 0 | 0 | 0 |
 | A_Badlands | 56 | 17 | 128 | 228 | 5 | 0 | 0 | 0 | 0 | 0 |
-| A_BurningSteppes | 48 | 15 | 188 | 313 | 6 | 0 | 0 | 0 | 3 | 1 |
+| A_BurningSteppes | 63 | 20 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 16 |
 | A_Darkshore | 203 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 2 |
 | A_Desolace | 72 | 22 | 410 | 435 | 7 | 0 | 0 | 0 | 1 | 0 |
-| A_Duskwood | 177 | 61 | 360 | 824 | 22 | 0 | 1 | 0 | 1 | 0 |
-| A_Dustwallow | 54 | 16 | 209 | 207 | 3 | 0 | 0 | 0 | 1 | 0 |
+| A_Duskwood | 180 | 62 | 369 | 833 | 22 | 0 | 1 | 0 | 1 | 3 |
+| A_Dustwallow | 57 | 17 | 231 | 229 | 5 | 0 | 0 | 0 | 1 | 3 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 433 | 17 | 0 | 3 | 0 | 0 | 0 |
 | A_Felwood | 41 | 11 | 430 | 376 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_Feralas | 72 | 23 | 372 | 372 | 10 | 0 | 0 | 0 | 2 | 2 |
 | A_Hillsbrad | 63 | 24 | 36 | 236 | 2 | 0 | 2 | 0 | 0 | 0 |
-| A_Hinterlands | 25 | 4 | 19 | 19 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_Hinterlands | 28 | 5 | 127 | 127 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_Human_Elwynn | 194 | 66 | 783 | 647 | 18 | 0 | 0 | 0 | 1 | 2 |
 | A_LochModan | 96 | 26 | 129 | 328 | 4 | 0 | 0 | 0 | 0 | 0 |
 | A_NightElf_Teldrassil | 183 | 64 | 382 | 538 | 18 | 0 | 0 | 0 | 3 | 0 |
 | A_Redridge | 96 | 30 | 217 | 263 | 11 | 0 | 1 | 0 | 0 | 2 |
-| A_Stranglethorn | 165 | 59 | 627 | 877 | 12 | 12 | 0 | 0 | 0 | 0 |
-| A_Stranglethorn_Late | 33 | 12 | 537 | 537 | 7 | 0 | 0 | 0 | 0 | 0 |
-| A_WesternPlaguelands | 86 | 29 | 578 | 653 | 13 | 0 | 0 | 0 | 0 | 0 |
+| A_Stranglethorn | 168 | 60 | 628 | 877 | 12 | 12 | 0 | 0 | 0 | 3 |
+| A_Stranglethorn_Late | 45 | 16 | 542 | 539 | 7 | 0 | 0 | 0 | 0 | 12 |
+| A_WesternPlaguelands | 92 | 31 | 627 | 702 | 15 | 0 | 0 | 0 | 0 | 6 |
 | A_Westfall | 80 | 27 | 116 | 201 | 7 | 0 | 0 | 0 | 0 | 2 |
 | A_Wetlands | 111 | 39 | 360 | 460 | 9 | 0 | 0 | 0 | 0 | 0 |
-| Both_EasternPlaguelands | 62 | 15 | 513 | 514 | 10 | 0 | 0 | 0 | 2 | 0 |
-| Both_SearingGorge | 64 | 17 | 233 | 200 | 8 | 0 | 0 | 0 | 3 | 0 |
-| Both_Tanaris | 59 | 15 | 129 | 125 | 3 | 0 | 1 | 0 | 0 | 2 |
+| Both_EasternPlaguelands | 74 | 19 | 609 | 610 | 11 | 0 | 0 | 0 | 2 | 12 |
+| Both_SearingGorge | 67 | 18 | 236 | 202 | 8 | 0 | 0 | 0 | 3 | 3 |
+| Both_Tanaris | 68 | 18 | 135 | 131 | 3 | 0 | 1 | 0 | 0 | 11 |
 | Both_UngoroCrater | 68 | 19 | 497 | 493 | 10 | 0 | 0 | 0 | 3 | 1 |
 | Both_Winterspring | 60 | 19 | 242 | 192 | 7 | 0 | 0 | 0 | 0 | 0 |
-| H_Arathi | 53 | 14 | 130 | 130 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_Arathi | 56 | 15 | 215 | 172 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_Ashenvale | 58 | 17 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 5 |
 | H_Badlands | 40 | 8 | 167 | 167 | 5 | 0 | 0 | 0 | 0 | 0 |
-| H_Barrens | 309 | 103 | 537 | 792 | 31 | 5 | 0 | 0 | 2 | 1 |
+| H_Barrens | 315 | 105 | 563 | 818 | 33 | 5 | 0 | 0 | 2 | 7 |
 | H_Desolace | 46 | 12 | 268 | 268 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_Dustwallow | 54 | 16 | 68 | 118 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Felwood | 44 | 12 | 223 | 223 | 3 | 0 | 0 | 0 | 1 | 0 |
@@ -76,21 +76,21 @@ No baseline file found.
 
 | Route | Peak | At |
 |---|---|---|
-| Orc/ROGUE | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/ROGUE (Hardcore) | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/SHAMAN | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/SHAMAN (Hardcore) | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Tauren/DRUID | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Tauren/DRUID (Hardcore) | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Troll/ROGUE | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Troll/ROGUE (Hardcore) | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Troll/SHAMAN | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Troll/SHAMAN (Hardcore) | 18 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/HUNTER | 17 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/HUNTER (Hardcore) | 17 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/WARLOCK | 17 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/WARLOCK (Hardcore) | 17 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
-| Orc/WARRIOR | 17 | H_Barrens (Tribes at War) [horde/10_barrens.guide:190] |
+| Orc/ROGUE | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/SHAMAN | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Tauren/DRUID | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Troll/ROGUE | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Troll/SHAMAN | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/HUNTER | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/ROGUE (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/SHAMAN (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/WARLOCK | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Orc/WARRIOR | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Scourge/ROGUE | 19 | H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189] |
+| Tauren/DRUID (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Tauren/HUNTER | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Tauren/SHAMAN | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
+| Tauren/WARRIOR | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:193] |
 
 ## Errors
 
@@ -100,134 +100,160 @@ None.
 
 - Human/WARRIOR: A_Westfall (Bartleby the Drunk) [alliance/10_westfall.guide:71]: accepts a quest already turned in
 - Human/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/WARRIOR (Hardcore): A_Westfall (Bartleby the Drunk) [alliance/10_westfall.guide:71]: accepts a quest already turned in
 - Human/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/PALADIN: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Human/PALADIN: A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Human/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/PALADIN (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Human/PALADIN (Hardcore): A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Human/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Human/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Human/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Human/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Human/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/PRIEST: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/PRIEST (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/MAGE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/MAGE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/WARLOCK: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Human/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Human/WARLOCK (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
-- Orc/ROGUE: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Orc/ROGUE (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Orc/SHAMAN: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Orc/SHAMAN (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
+- Human/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
+- Orc/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/ROGUE: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/ROGUE (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/SHAMAN: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/SHAMAN (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/WARLOCK: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Orc/WARLOCK (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
 - Dwarf/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/WARRIOR (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/PALADIN: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN: A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/PALADIN (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN (Hardcore): A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/HUNTER: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/HUNTER: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/HUNTER (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/HUNTER (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Dwarf/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/ROGUE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Dwarf/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/PRIEST: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/PRIEST: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Dwarf/PRIEST (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Dwarf/PRIEST (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Dwarf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/WARRIOR: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/WARRIOR: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/WARRIOR (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/WARRIOR (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/HUNTER: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/HUNTER: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/HUNTER (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/HUNTER (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/ROGUE: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/ROGUE: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/ROGUE (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/ROGUE (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/PRIEST: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/PRIEST: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/PRIEST (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/PRIEST (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/DRUID: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/DRUID: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/DRUID: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- NightElf/DRUID: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - NightElf/DRUID (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
 - NightElf/DRUID (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/DRUID (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
-- Tauren/DRUID: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Tauren/DRUID (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
+- NightElf/DRUID (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
+- Scourge/WARRIOR: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189]
+- Scourge/ROGUE: quest log peaks at 19/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189]
+- Scourge/ROGUE (Hardcore): quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189]
+- Scourge/PRIEST: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189]
+- Scourge/MAGE: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:189]
+- Scourge/WARLOCK: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/SHAMAN: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/SHAMAN (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/DRUID: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Tauren/DRUID (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
 - Gnome/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/WARRIOR (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Gnome/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/ROGUE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
 - Gnome/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/MAGE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/MAGE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/MAGE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/MAGE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/WARLOCK: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/WARLOCK: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
+- Gnome/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
 - Gnome/WARLOCK (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
 - Gnome/WARLOCK (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:45]: accepts a quest already turned in
-- Troll/ROGUE: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Troll/ROGUE (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Troll/SHAMAN: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
-- Troll/SHAMAN (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:190]
+- Gnome/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:50]: accepts a quest already turned in
+- Troll/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/ROGUE: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/ROGUE (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/PRIEST: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/PRIEST (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/SHAMAN: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/SHAMAN (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/MAGE: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
+- Troll/MAGE (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:193]
 
 ## Findings (per guide)
 
@@ -254,7 +280,7 @@ None.
 - A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1245, level 30) at estimated level 36.2
 - A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1274, level 28) at estimated level 36.0
 - A_Stranglethorn: reduced-XP quest: Welcome to the Jungle (583, level 30) at estimated level 36.3
-- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.1 (quests only: 43) [shared/24_tanaris.guide:56, Human/WARRIOR]
+- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.1 (quests only: 43) [shared/24_tanaris.guide:58, Human/WARRIOR]
 - H_Barrens: reduced-XP quest: A Sacred Burial (833, level 10) at estimated level 17.2
 - H_Barrens: reduced-XP quest: Forged Steel (1503, level 10) at estimated level 17.3
 - H_Barrens: reduced-XP quest: Path of Defense (1498, level 10) at estimated level 17.3

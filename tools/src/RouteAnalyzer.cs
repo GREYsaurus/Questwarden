@@ -251,6 +251,7 @@ namespace GuideTools
                 };
                 var log = new Dictionary<int, string>();   // quest -> guide id where accepted
                 var done = new HashSet<int>();
+                var groupQuests = new HashSet<int>(); // accepted at an elite/group/dungeon step: optional content
                 int peak = 0; string peakAt = "";
                 for (int k = 0; k < flat.Count; k++)
                 {
@@ -307,12 +308,15 @@ namespace GuideTools
                             }
                         }
                         log[q] = g.Id;
+                        if (s.Elite || s.Group >= 0 || s.Dungeon != null) groupQuests.Add(q);
                         if (log.Count > peak) { peak = log.Count; peakAt = where; }
                     }
                     else if (s.Kind == "turnin")
                     {
-                        // Dungeon quest XP is left out: gates must hold for players who skip dungeons.
-                        if (xpm != null && s.Dungeon == null && !done.Contains(q) && (log.ContainsKey(q) || StartsFromItem(rec))) xs.TurnIn(xpm, q);
+                        // Dungeon and elite/group quest XP is left out: level gates must hold for players who
+                        // leave that content off. The quest log still counts them (worst case: content on).
+                        if (xpm != null && s.Dungeon == null && !s.Elite && s.Group < 0 && !groupQuests.Contains(q) && !done.Contains(q)
+                            && (log.ContainsKey(q) || StartsFromItem(rec))) xs.TurnIn(xpm, q);
                         if (!log.ContainsKey(q) && !done.Contains(q) && !StartsFromItem(rec) && !s.Optional)
                             a.Warnings.Add(key + ": " + where + ": turn-in of a quest never accepted on this route");
                         log.Remove(q);

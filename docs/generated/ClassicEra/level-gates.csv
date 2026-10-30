@@ -3,7 +3,7 @@ guide,source,quest,title,requiredLevel,modelLevel,questsOnlyLevel,route
 "A_Duskwood","alliance/13_duskwood.guide:87","67","The Legend of Stalvan","22","21.7","21","Human/WARRIOR"
 "A_Hillsbrad","alliance/20_hillsbrad.guide:25","564","Costly Menace","30","29.3","28","Human/WARRIOR"
 "A_Hillsbrad","alliance/20_hillsbrad.guide:31","511","Encrypted Letter","30","29.4","28","Human/WARRIOR"
-"Both_Tanaris","shared/24_tanaris.guide:56","2605","The Thirsty Goblin","44","43.1","43","Human/WARRIOR"
+"Both_Tanaris","shared/24_tanaris.guide:58","2605","The Thirsty Goblin","44","43.1","43","Human/WARRIOR"
 "A_DwarfGnome_DunMorogh","alliance/01_dwarf_gnome_dunmorogh.guide:99","412","Operation Recombobulation","7","7.0","5","Dwarf/WARRIOR"
 "A_DwarfGnome_DunMorogh","alliance/01_dwarf_gnome_dunmorogh.guide:113","413","Shimmer Stout","8","7.9","6","Dwarf/WARRIOR"
 "A_DwarfGnome_DunMorogh","alliance/01_dwarf_gnome_dunmorogh.guide:115","415","Rejold's New Brew","8","7.9","6","Dwarf/WARRIOR"

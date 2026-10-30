@@ -11,13 +11,13 @@ alliance/13_duskwood.guide:46: 'Sven's Revenge' has no objective locations in th
 alliance/13_duskwood.guide:113: turn-in of 'Mathias and the Defias' (2360) with no earlier accept on this faction's routes
 alliance/20_hillsbrad.guide:63: 'Hints of a New Plague?' has no objective locations in the database; add [at=x,y] or a goto
 alliance/22_stranglethorn.guide:80: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
-alliance/23_dustwallow.guide:56: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
+alliance/23_dustwallow.guide:59: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:21: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:41: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:51: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
 alliance/30_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6028) with no earlier accept on this faction's routes
-alliance/30_westernplaguelands.guide:25: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
-alliance/30_westernplaguelands.guide:68: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+alliance/30_westernplaguelands.guide:26: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
+alliance/30_westernplaguelands.guide:69: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:67: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
@@ -28,12 +28,12 @@ horde/05_silverpine.guide:54: 'Maps and Runes' has no objective locations in the
 horde/05_silverpine.guide:62: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:73: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:77: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:149: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:150: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:61: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:23: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:35: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:44: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:47: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:36: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:45: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:14: no innkeeper found in zone for Brackenwall Village
 horde/17_dustwallow.guide:23: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
@@ -54,10 +54,10 @@ alliance/22_stranglethorn.guide:34 (The Missing Diplomat): prerequisite 1244 'Th
 alliance/22_stranglethorn.guide:43 (Worgen in the Woods): prerequisite 222 'Worgen in the Woods' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:48 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:108 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/29_burningsteppes.guide:31 (A Taste of Flame): prerequisite 3481 'Trinkets...' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/29_burningsteppes.guide:36 (A Taste of Flame): prerequisite 3481 'Trinkets...' is not turned in anywhere on Alliance routes (one of several alternatives)
 horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:143 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:291 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:144 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:295 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_ashenvale.guide:26 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)

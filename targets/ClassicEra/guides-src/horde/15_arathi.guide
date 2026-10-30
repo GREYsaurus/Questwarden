@@ -24,6 +24,7 @@ complete 674 Raising Spirits
 turnin 674 Raising Spirits
 accept 675 Raising Spirits
 accept 677 Call to Arms | Drum Fel.
+accept 639 Sigil of Strom [elite; group; hc=skip]
 complete 677 Call to Arms | Syndicate at Northfold Manor.
 complete Foul Magics | Syndicate mages.
 complete The Princess Trapped | Kobolds at Drywhisker Gorge.
@@ -50,6 +51,8 @@ turnin Stones of Binding
 accept Breaking the Keystone
 complete Breaking the Keystone | Rod of Order drops from Fozruk.
 turnin Breaking the Keystone
+complete 639 Sigil of Strom [elite; group; hc=skip]
+turnin 639 Sigil of Strom [elite; group; hc=skip]
 accept 663 Land Ho!
 turnin 663 Land Ho!
 level 35

@@ -27,6 +27,10 @@ Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, 
 
 Never write the add-on's name or slash command in a note: write `{name}` and `{slash}`. They are filled in when the guide loads (`{name} skips it` → *ClassicGuide skips it*, `/{slash} talents` → */cg talents*), so a rename needs no guide edits. The lint gate rejects the spelled-out name.
 
+## Group content
+
+On Classic Era, `[elite]`/`[group]` steps and `[dungeon=...]` steps are **off by default** (`contentDefaults` in `Target.ClassicEra.lua`); players turn them on in Settings. Mark every step of an elite quest `[elite; group; hc=skip]`. Tag dungeon quests' steps `[dungeon=<instance>]` by hand when the compiler's automatic tag may not catch them. The route audit gives no XP for either, so solo level gates hold.
+
 ## Hardcore route flavor
 
 Each zone has one guide source. Hardcore characters (Settings → Guide Routing → *Hardcore character*, per character) follow the same file with two step flags:

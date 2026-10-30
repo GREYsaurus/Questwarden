@@ -133,9 +133,12 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Scaring Shaky | Mistvale gorillas.
 turnin Scaring Shaky
+accept 8551 The Captain's Chest [elite; group; hc=skip]
 turnin 595 The Bloodsail Buccaneers
+complete 8551 The Captain's Chest [elite; group; hc=skip]
 complete 621 Zanzil's Secret
 accept Return to MacKinley
+turnin 8551 The Captain's Chest [elite; group; hc=skip]
 accept 597 The Bloodsail Buccaneers
 turnin Return to MacKinley
 turnin 597 The Bloodsail Buccaneers

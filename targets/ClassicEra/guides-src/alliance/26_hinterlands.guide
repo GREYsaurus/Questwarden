@@ -13,6 +13,7 @@
 fp Aerie Peak
 bind Aerie Peak [area=348,349]
 accept Troll Necklace Bounty | Fraggar Thundermantle.
+accept 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
 accept Skulk Rock Clean-up
 accept Witherbark Cages | Gryphon Master Talonaxe.
 complete Witherbark Cages | Witherbark trolls' cages around the Hinterlands.
@@ -24,6 +25,8 @@ turnin The Altar of Zul
 turnin Troll Necklace Bounty
 complete Skulk Rock Clean-up | Oozes at Skulk Rock.
 turnin Skulk Rock Clean-up
+complete 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
+turnin 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
 level 48
 train
 note Thadius Grimshade is in the Blasted Lands (Nethergarde Keep) - optional detour. Next: the Searing Gorge.

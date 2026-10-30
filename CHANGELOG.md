@@ -48,6 +48,12 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - three **return-visit guides** (Stranglethorn for both factions, Alliance Ashenvale), generated from quests no guide used, follow on from their zones;
   - every guide's `@levels` now matches the level the model enters and leaves it at, so the guide browser and guide selection send characters to the right zone.
   Level-gated pickups: 97 -> 12. Modelled grinding stays at about 24.6 levels of 1-58 for each faction: the earlier figure counted XP from quests the character could not yet take. The outdoor, solo, single-zone quests are close to used up; the rest of Classic's quest XP is in elite and group quests, dungeon quests and chains that span zones.
+- **Elite/group and dungeon quests as opt-in content** (`tools/research/group_insert.py`): 26 quests, about 125k XP.
+  - **8 elite/group quests**, such as Stranglethorn's Kurzen and Panther Mastery lines, the Sigil of Strom and WANTED: Overseer Maltorius. Every step is `[elite; group; hc=skip]`.
+  - **18 dungeon quests** across Wailing Caverns, the Stockade, Zul'Farrak, the Sunken Temple, Blackrock Depths and Spire, Scholomance and Stratholme, each step tagged with its instance.
+  - **Off by default on Classic Era** (new `contentDefaults` in `Target.ClassicEra.lua`). Turn them on under *Show Group Quests* and *Include Dungeon Quests*. The Hardcore route never takes the elite ones.
+  - **Classic Era dungeon list** (`Database/Dungeons.lua`, 19 dungeons) for the per-dungeon settings.
+  - **Route audit:** elite, group and dungeon quests now count for the quest log (the case where they are on) but never for XP (the case where they are off). Solo grinding therefore reads 25.0 (Alliance) and 24.8 (Horde); players who do this content level faster.
 
 Tested offline: ClassicEra build all passes (80 route walks, 0 errors, 0 warnings, quest log peak 9/20, 0 level-gated pickups; smoke suite 40/40); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 

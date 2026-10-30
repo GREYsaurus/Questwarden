@@ -43,6 +43,9 @@ ns.Target = {
     -- Hardcore realms exist on this client (Blizzard UI calls C_GameRules.IsHardcoreActive).
     -- The Hardcore route flavor (docs/GUIDE_FORMAT.md) is chosen in Settings -> General.
     hardcore = true,
+    -- Setting defaults for this target (Core/SavedVars.lua). Elite/group quests and dungeon quests are
+    -- opt-in on Classic Era: the default route is one a solo player can do. Both are in Settings.
+    contentDefaults = { showElite = false, showDungeonSteps = false },
     -- Default XP multiplier (1 = Blizzard rates). Used only for advisory "grind" notes.
     xpRate = 1,
     -- Races/classes are generated from client tables into Database/RaceClass.lua.

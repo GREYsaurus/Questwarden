@@ -17,11 +17,17 @@ note Back in Stranglethorn Vale for the higher-level quests.
 accept 576 Keep An Eye Out
 accept 578 The Stone of the Tides
 accept 608 The Bloodsail Buccaneers
+accept 613 Cracking Maury's Foot [elite; group; hc=skip]
+accept 628 Excelsior [elite; group; hc=skip]
 accept 209 Skullsplitter Tusks
 accept 587 Up to Snuff
 accept 196 Raptor Mastery
+accept 193 Panther Mastery [elite; group; hc=skip]
+complete 628 Excelsior [elite; group; hc=skip]
 accept 207 Kurzen's Mystery
 accept 329 The Spy Revealed!
+complete 193 Panther Mastery [elite; group; hc=skip]
+complete 613 Cracking Maury's Foot [elite; group; hc=skip]
 complete 207 Kurzen's Mystery
 complete 196 Raptor Mastery
 complete 209 Skullsplitter Tusks
@@ -31,13 +37,19 @@ complete 608 The Bloodsail Buccaneers
 turnin 587 Up to Snuff
 turnin 209 Skullsplitter Tusks
 turnin 608 The Bloodsail Buccaneers
+turnin 613 Cracking Maury's Foot [elite; group; hc=skip]
+turnin 628 Excelsior [elite; group; hc=skip]
 turnin 578 The Stone of the Tides
 turnin 576 Keep An Eye Out
 turnin 196 Raptor Mastery
+turnin 193 Panther Mastery [elite; group; hc=skip]
 turnin 207 Kurzen's Mystery
 turnin 329 The Spy Revealed!
+accept 202 Colonel Kurzen [elite; group; hc=skip]
 # wave 2: pick up
 accept 330 Patrol Schedules
+complete 202 Colonel Kurzen [elite; group; hc=skip]
+turnin 202 Colonel Kurzen [elite; group; hc=skip]
 accept 205 Troll Witchery
 accept 601 Water Elementals
 complete 205 Troll Witchery

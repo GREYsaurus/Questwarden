@@ -14,6 +14,7 @@ accept 5090 A Call to Arms: The Plaguelands! [zone=Ironforge] | Courier Hammerfa
 fp Chillwind Camp
 turnin 5090 A Call to Arms: The Plaguelands! | Commander Ashlam Valorfist, Chillwind Camp.
 turnin 6028 The Everlook Report [optional] | Argent Officer Pureheart, Chillwind Camp (from Winterspring).
+accept 5343 Barov Family Fortune [dungeon=Scholomance]
 accept 5401 Argent Dawn Commission
 turnin 5401 Argent Dawn Commission
 accept Clear the Way
@@ -71,7 +72,10 @@ accept Target: Gahrron's Withering
 turnin 5904 A Plague Upon Thee
 complete Target: Gahrron's Withering | Cauldron Lord Soulwrath at the Gahrron's Withering cauldron, east.
 turnin Target: Gahrron's Withering
+accept 5382 Doctor Theolen Krastinov, the Butcher [dungeon=Scholomance]
 accept 5226 Return to Chillwind Camp
+complete 5382 Doctor Theolen Krastinov, the Butcher [dungeon=Scholomance]
+turnin 5382 Doctor Theolen Krastinov, the Butcher [dungeon=Scholomance]
 turnin 5226 Return to Chillwind Camp
 accept Mission Accomplished!
 turnin Mission Accomplished! | Commander Ashlam Valorfist.
@@ -80,6 +84,8 @@ turnin Unfinished Business
 accept 6389 A Plague Upon Thee
 accept 6023 Unfinished Business
 turnin 6389 A Plague Upon Thee
+complete 5343 Barov Family Fortune [dungeon=Scholomance]
+turnin 5343 Barov Family Fortune [dungeon=Scholomance]
 complete 6023 Unfinished Business | Huntsman Radley and Cavalier Durgen at Hearthglen.
 turnin 6023 Unfinished Business
 accept 6025 Unfinished Business
