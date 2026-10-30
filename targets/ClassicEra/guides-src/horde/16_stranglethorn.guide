@@ -22,6 +22,7 @@ accept 340 Chapter II
 accept 341 Chapter III
 accept 342 Chapter IV
 turnin Welcome to the Jungle
+turnin 5763 Hunting in Stranglethorn [optional]
 accept 194 Raptor Mastery
 accept 185 Tiger Mastery
 accept 190 Panther Mastery
@@ -50,21 +51,41 @@ complete 186 Tiger Mastery
 complete 191 Panther Mastery
 turnin 186 Tiger Mastery
 turnin 191 Panther Mastery
+accept 187 Tiger Mastery
 turnin 194 Raptor Mastery
+complete 187 Tiger Mastery
 accept 195 Raptor Mastery
 complete 195 Raptor Mastery
 turnin 195 Raptor Mastery
 turnin Headhunting
+accept 598 Split Bone Necklace
 turnin 569 The Defense of Grom'gol
+accept 584 Bloodscalp Clan Heads
 turnin Mok'thardin's Enchantment
+complete 598 Split Bone Necklace
 complete 339 Chapter I
 complete 340 Chapter II
 complete 341 Chapter III
 complete 342 Chapter IV
 turnin 339 Chapter I
+complete 584 Bloodscalp Clan Heads
+turnin 187 Tiger Mastery
+accept 192 Panther Mastery
+accept 572 Mok'thardin's Enchantment
+turnin 598 Split Bone Necklace
 turnin 340 Chapter II
+turnin 584 Bloodscalp Clan Heads
+accept 188 Tiger Mastery
+complete 192 Panther Mastery
 turnin 341 Chapter III
+accept 585 Speaking with Nezzliok
+accept 586 Speaking with Gan'zulah
+complete 188 Tiger Mastery
+turnin 192 Panther Mastery
 turnin 342 Chapter IV
+complete 585 Speaking with Nezzliok
+complete 586 Speaking with Gan'zulah
+turnin 188 Tiger Mastery
 fp Booty Bay
 accept Singing Blue Shards | Crank Fizzlebub.
 accept 621 Zanzil's Secret
@@ -74,6 +95,7 @@ accept 189 Bloodscalp Ears
 accept 201 Investigate the Camp
 turnin 201 Investigate the Camp
 accept Scaring Shaky | "Sea Wolf" MacKinley.
+accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Large River Crocolisk Skin drops from River Crocolisk.
 complete Singing Blue Shards | Singing Crystal Shard drops from Cold Eye Basilisk, Crystal Spine Basilisk and Stone Maw Basilisk and others.
@@ -84,19 +106,36 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Some Assembly Required | Snapjaw Crocolisk Skin drops from Snapjaw Crocolisk.
 turnin Scaring Shaky
+turnin 585 Speaking with Nezzliok
+turnin 586 Speaking with Gan'zulah
+turnin 595 The Bloodsail Buccaneers
+complete 572 Mok'thardin's Enchantment
 complete 621 Zanzil's Secret
 complete 617 Akiris by the Bundle
 complete 213 Hostile Takeover
 complete 189 Bloodscalp Ears
 accept Return to MacKinley
+accept 588 The Fate of Yenniku
+accept 597 The Bloodsail Buccaneers
+turnin 572 Mok'thardin's Enchantment
 turnin Return to MacKinley
+turnin 597 The Bloodsail Buccaneers
 complete Venture Company Mining | Singing Blue Crystal drops from Venture Co. Foreman, Venture Co. Strip Miner and Venture Co. Surveyor and others.
 turnin Some Assembly Required
 turnin Venture Company Mining
+accept 609 Voodoo Dues
 turnin 621 Zanzil's Secret
 turnin 617 Akiris by the Bundle
+turnin 588 The Fate of Yenniku
+accept 599 The Bloodsail Buccaneers
+accept 571 Mok'thardin's Enchantment
+complete 609 Voodoo Dues
 turnin 213 Hostile Takeover
+turnin 599 The Bloodsail Buccaneers
+complete 571 Mok'thardin's Enchantment
+turnin 609 Voodoo Dues
 turnin 189 Bloodscalp Ears
+turnin 571 Mok'thardin's Enchantment
 level 39
 train
 note Next: the Swamp of Sorrows, north through Duskwood and Deadwind Pass.

@@ -51,21 +51,29 @@ turnin Culling the Threat
 complete 1023 Raene's Cleansing | Gnarled ancients near the lake drop the Glowing Soul Gem.
 turnin 1023 Raene's Cleansing
 accept An Aggressive Defense
+accept 1024 Raene's Cleansing
 complete An Aggressive Defense | Foulweald furbolgs south of Astranaar.
 turnin An Aggressive Defense
 turnin Orendil's Cure | Pelturas Whitemoon, Astranaar.
+turnin 1024 Raene's Cleansing
 accept Elune's Tear
+accept 1026 Raene's Cleansing
 complete Elune's Tear | The tear lies on the isle in Lake Iris.
 turnin Elune's Tear
+complete 1026 Raene's Cleansing
 accept The Ruins of Stardust
+turnin 1026 Raene's Cleansing
 complete The Ruins of Stardust | Stardust Covered Bushes south of Astranaar.
 turnin The Ruins of Stardust
 turnin 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Turned in at The Barrens.
 accept 1738 Heartswood [class=Warlock; race=Human,Gnome; optional]
 accept Elemental Bracers | Sentinel Velene Starstrike, Silverwind Refuge.
+accept 1035 Fallen Sky Lake
 complete Elemental Bracers | Befouled Water Elementals at Mystral Lake; divine the bracers at the lake.
 turnin Elemental Bracers
+complete 1035 Fallen Sky Lake
 accept Mage Summoner
+turnin 1035 Fallen Sky Lake
 complete Mage Summoner | Sarilus Foulborne camps beside Mystral Lake.
 complete 1738 Heartswood [class=Warlock; race=Human,Gnome; optional] | Heartswood drops from Dark Strand Excavator.
 turnin Mage Summoner

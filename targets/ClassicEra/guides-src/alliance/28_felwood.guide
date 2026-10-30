@@ -33,8 +33,10 @@ fp Talonbranch Glade
 accept Timbermaw Ally | Grazle, Timbermaw Hold area.
 turnin Timbermaw Ally
 accept Cleansing Felwood | Arathandris Silversky.
+accept 8462 Speak to Nafien
 complete Cleansing Felwood | Cenarion Plant Salve - gather from Felwood.
 turnin Cleansing Felwood
+turnin 8462 Speak to Nafien
 accept Salve via Hunting | Arathandris Silversky. Needs Cleansing Felwood turned in.
 complete Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
 turnin Salve via Hunting

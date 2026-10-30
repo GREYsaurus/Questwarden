@@ -34,6 +34,7 @@ turnin 1064 Forsaken Aid [optional] | Turned in at Thunder Bluff.
 turnin 5642 Shadowguard [class=Priest; race=Troll] | Turned in at Orgrimmar.
 turnin 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll] | Turned in at The Barrens.
 accept Trouble in the Deeps | Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).
+accept 1096 Gerenzo Wrenchwhistle
 accept Cenarius' Legacy | Braelyn Firehand.
 fp Sun Rock Retreat
 turnin 6401 Kaya's Alive
@@ -45,14 +46,17 @@ accept Harpies Threaten | Maggran Earthbinder, Sun Rock Retreat.
 bind Sun Rock Retreat [area=460]
 accept Elemental War
 accept 1090 Gerenzo's Orders | Piznik at the Windshear mine.
+complete 1096 Gerenzo Wrenchwhistle
 complete Harpies Threaten | Bloodfury harpies on the ridge east of Sun Rock.
 complete Jin'Zil's Forest Magic | Venture Co. operators and Stonetalon creatures.
 complete 1090 Gerenzo's Orders | Venture Co. at Windshear Crag.
 turnin 1090 Gerenzo's Orders
 complete Cenarius' Legacy
 turnin Cenarius' Legacy
+accept 6381 New Life
 accept Ordanus
 turnin Harpies Threaten
+accept 1092 Gerenzo's Orders
 accept Bloodfury Bloodline
 complete Bloodfury Bloodline
 complete Elemental War
@@ -60,7 +64,11 @@ complete Ordanus | Ordanus is in the Sons of Cenarius camp.
 turnin Bloodfury Bloodline
 turnin Ordanus
 turnin Elemental War
+turnin 1096 Gerenzo Wrenchwhistle
+complete 6381 New Life
+turnin 1092 Gerenzo's Orders
 turnin Jin'Zil's Forest Magic
+turnin 6381 New Life
 level 24
 train | Orgrimmar or Thunder Bluff.
 note Take the Talondeep Path north-east into Ashenvale; Splintertree Post is the Horde town.

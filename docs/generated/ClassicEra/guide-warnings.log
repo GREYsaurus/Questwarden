@@ -1,5 +1,5 @@
 ﻿alliance/05_darkshore.guide:114: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
-alliance/05_darkshore.guide:132: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+alliance/05_darkshore.guide:133: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
 alliance/06_ashenvale.guide:40: 'Raene's Cleansing' has no objective locations in the database; add [at=x,y] or a goto
 alliance/12_redridge.guide:13: quest 66 requires level 22 but guide ends at 21
 alliance/13_duskwood.guide:48: quest 225 requires level 28 but guide ends at 25
@@ -17,7 +17,7 @@ horde/01_tauren_mulgore.guide:70: 'The Ravaged Caravan' has no objective locatio
 horde/01_tauren_mulgore.guide:82: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:110: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:114: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
-horde/02_undead_tirisfal.guide:82: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
+horde/02_undead_tirisfal.guide:83: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:39: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:54: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:62: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
@@ -39,6 +39,7 @@ horde/17_dustwallow.guide:29: 'The Black Shield' has no objective locations in t
 horde/21_hinterlands.guide:52: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
 horde/23_westernplaguelands.guide:15: turn-in of 'The Everlook Report' (6029) with no earlier accept on this faction's routes
 shared/28b_winterspring.guide:15: turn-in of 'Speak to Salfa' (8465) with no earlier accept on this faction's routes
+shared/28b_winterspring.guide:21: turn-in of 'Felnok Steelspring' (4808) with no earlier accept on this faction's routes
 alliance/02_nightelf_teldrassil.guide:70 (Ferocitas the Dream Eater): prerequisite 2438 'The Emerald Dreamcatcher' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/13_duskwood.guide:39 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/14_wetlands.guide:17 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -54,7 +55,6 @@ horde/12_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale 
 horde/12_ashenvale.guide:41 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_ashenvale.guide:45 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_hillsbrad.guide:17 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/14_thousandneedles.guide:15 (Betrayal from Within): prerequisite 5052 'Blood Shards of Agamaggan' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14_thousandneedles.guide:22 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14b_desolace.guide:19 (Befouled by Satyr): prerequisite 1432 'Alliance Relations' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/17_dustwallow.guide:31 (The Black Shield): prerequisite 1273 'Questioning Reethe' is not turned in anywhere on Horde routes

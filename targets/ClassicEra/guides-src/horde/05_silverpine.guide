@@ -78,9 +78,12 @@ complete Thule Ravenclaw | Fenris Keep, on Fenris Isle.
 turnin Thule Ravenclaw
 accept Report to Hadrec
 turnin Report to Hadrec
+accept 480 The Weaver
 accept Assault on Fenris Isle
+complete 480 The Weaver
 complete Assault on Fenris Isle | Rot Hide gnolls on Fenris Isle.
 turnin Assault on Fenris Isle
+turnin 480 The Weaver
 turnin 423 Arugal's Folly
 accept 424 Arugal's Folly
 complete 424 Arugal's Folly | Pyrewood Village.

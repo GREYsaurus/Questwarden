@@ -13,6 +13,7 @@
 accept Timbermaw Ally | Grazle, near the Timbermaw Hold tunnel.
 turnin Timbermaw Ally
 accept Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.
+accept 8462 Speak to Nafien
 accept Verifying the Corruption | Taronn Redfeather.
 accept Well of Corruption | Winna Hazzard, Bloodvenom Post.
 accept 6162 A Husband's Last Battle
@@ -38,6 +39,7 @@ complete Collection of the Corrupt Water | The corrupted moonwell in Jaedenar.
 turnin Collection of the Corrupt Water
 turnin Verifying the Corruption
 accept Deadwood of the North | Nafien.
+turnin 8462 Speak to Nafien
 complete Deadwood of the North | Deadwood furbolgs.
 turnin Deadwood of the North
 accept Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.

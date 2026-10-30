@@ -17,12 +17,17 @@ accept Stones of Binding
 fp Refuge Pointe
 accept Wanted!  Marez Cowl [elite; group=3; optional]
 accept 691 Worth Its Weight in Gold
+accept 658 Hints of a New Plague?
 complete 691 Worth Its Weight in Gold
 turnin 691 Worth Its Weight in Gold
+complete 658 Hints of a New Plague?
 accept Wanted!  Otto and Falconcrest [elite; group=3; optional]
+turnin 658 Hints of a New Plague?
 accept Northfold Manor | Captain Nials, Refuge Pointe.
+accept 657 Hints of a New Plague?
 complete Northfold Manor | Syndicate at Northfold Manor, north-west.
 turnin Northfold Manor
+turnin 657 Hints of a New Plague?
 accept Stromgarde Badges
 complete Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
 turnin Stromgarde Badges

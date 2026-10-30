@@ -123,6 +123,7 @@ turnin 210 Krazek's Cookery
 turnin 616 The Haunted Isle
 turnin 201 Investigate the Camp
 accept Scaring Shaky | "Sea Wolf" MacKinley.
+accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Elder Saltwater Crocolisks and Snapjaws.
 complete Singing Blue Shards | Crystal Spine Basilisks.
@@ -132,22 +133,32 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Scaring Shaky | Mistvale gorillas.
 turnin Scaring Shaky
+turnin 595 The Bloodsail Buccaneers
 complete 621 Zanzil's Secret
 accept Return to MacKinley
+accept 597 The Bloodsail Buccaneers
 turnin Return to MacKinley
+turnin 597 The Bloodsail Buccaneers
 complete Some Assembly Required | Snapjaw Crocolisks.
 complete Venture Company Mining | Venture Co. miners at the mines.
 turnin Some Assembly Required
+accept 599 The Bloodsail Buccaneers
 turnin Venture Company Mining
+accept 609 Voodoo Dues
 turnin 621 Zanzil's Secret
 complete 187 Tiger Mastery | Elder Stranglethorn Tigers.
 complete 192 Panther Mastery | Shadowmaw Panthers.
 turnin 187 Tiger Mastery
+accept 328 The Hidden Key
 complete 213 Hostile Takeover
 complete 189 Bloodscalp Ears
 turnin 213 Hostile Takeover
+turnin 599 The Bloodsail Buccaneers
+complete 609 Voodoo Dues
 turnin 189 Bloodscalp Ears
+turnin 609 Voodoo Dues
 turnin 198 Supplies to Private Thorsen
+turnin 328 The Hidden Key
 turnin 192 Panther Mastery
 level 38
 train | Fly to Ironforge/Stormwind to train.

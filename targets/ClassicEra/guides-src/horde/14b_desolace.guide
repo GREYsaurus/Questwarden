@@ -17,6 +17,7 @@ accept 1368 Gelkis Alliance
 complete 1367 Magram Alliance
 complete 1368 Gelkis Alliance
 accept Befouled by Satyr | Takata Steelblade.
+turnin 5361 Family Tree [optional]
 accept Kodo Roundup | Smeed Scrabblescrew at the caravan camp just east of Ghost Walker Post.
 turnin 1367 Magram Alliance
 complete Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard (south of Ghost Walker Post) and lead them back to Smeed.
@@ -31,6 +32,7 @@ turnin Befouled by Satyr
 note Ride south-west to Shadowprey Village on the coast.
 fp Shadowprey Village
 accept Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
+accept 5763 Hunting in Stranglethorn
 accept 6142 Clam Bait
 turnin 1368 Gelkis Alliance
 accept Sceptre of Light | Azore Aldamort, the tower on the north-west coast.

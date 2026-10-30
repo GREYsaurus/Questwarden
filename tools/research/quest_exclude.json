@@ -12,6 +12,12 @@
     "9141": "Naxxramas (endgame)",
     "2438": "The Emerald Dreamcatcher: prerequisite of Ferocitas the Dream Eater, which the Teldrassil route already takes earlier",
     "843": "Gann's Reclamation: at its pickup point the Orc routes' Barrens quest log would exceed 20",
-    "868": "Egg Hunt: picked up at the first Crossroads visit but finished much later; it would hold a quest-log slot through the Barrens' fullest stretch"
+    "868": "Egg Hunt: picked up at the first Crossroads visit but finished much later; it would hold a quest-log slot through the Barrens' fullest stretch",
+    "9261": "Investigate the Scourge of Ironforge: Scourge Invasion world event breadcrumb",
+    "9260": "Investigate the Scourge of Stormwind: Scourge Invasion world event breadcrumb",
+    "9262": "Investigate the Scourge of Orgrimmar: Scourge Invasion world event breadcrumb",
+    "9263": "Investigate the Scourge of Darnassus: Scourge Invasion world event breadcrumb",
+    "9264": "Investigate the Scourge of Thunder Bluff: Scourge Invasion world event breadcrumb",
+    "9265": "Investigate the Scourge of the Undercity: Scourge Invasion world event breadcrumb"
   }
 }

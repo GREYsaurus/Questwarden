@@ -18,11 +18,14 @@ accept 1066 Blood of Innocents [optional]
 accept Time To Strike [optional] | Deathguard Lesh.
 accept Prison Break In | Magus Wordeen Voidglare, south of Tarren Mill.
 accept 527 Battle of Hillsbrad | High Executor Darthalia.
+accept 549 WANTED: Syndicate Personnel
 turnin Time To Strike [optional] | High Executor Darthalia, Tarren Mill.
+complete 549 WANTED: Syndicate Personnel
 complete 527 Battle of Hillsbrad | Hillsbrad farmers and peasants on the farms.
 complete Elixir of Suffering | Hillsbrad farm creatures.
 complete 1066 Blood of Innocents [optional] | Vial of Innocent Blood drops from Syndicate Shadow Mage.
 turnin 527 Battle of Hillsbrad
+turnin 549 WANTED: Syndicate Personnel
 accept 528 Battle of Hillsbrad
 accept Souvenirs of Death | Deathguard Samsa (Classic: only after the first Battle of Hillsbrad).
 accept 567 Dangerous!

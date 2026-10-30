@@ -146,6 +146,7 @@ turnin 927 The Moss-twined Heart [class=Warrior,Hunter,Priest,Druid; optional]
 turnin 927 The Moss-twined Heart [class=Rogue; optional]
 complete 2242 Destiny Calls [class=Rogue]
 turnin Timberling Sprouts
+accept 941 Planting the Heart
 turnin 2242 Destiny Calls [class=Rogue] | Turned in at Darnassus.
 turnin 923 Tumors | Turned in at Darnassus.
 turnin 940 Teldrassil [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.
@@ -169,6 +170,7 @@ complete 6102 Taming the Beast [class=Hunter] | Escort: stay close; it fails if 
 turnin 6102 Taming the Beast [class=Hunter]
 accept 6103 Training the Beast [class=Hunter]
 turnin 489 Seek Redemption! [optional]
+turnin 941 Planting the Heart
 turnin 5931 Back to Darnassus [class=Druid] | Turned in at Darnassus.
 accept 6001 Body and Heart [class=Druid; optional] | Escort quest: start it when you are ready to follow.
 turnin 6103 Training the Beast [class=Hunter] | Turned in at Darnassus.

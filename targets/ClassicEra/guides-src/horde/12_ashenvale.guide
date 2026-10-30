@@ -55,8 +55,11 @@ fp Zoram'gar Outpost
 turnin Between a Rock and a Thistlefur
 turnin 6462 Troll Charm
 turnin 824 Je'neu of the Earthen Ring
+accept 6563 The Essence of Aku'Mai
 turnin Trouble in the Deeps [optional] | Je'neu Sancrea, Zoram'gar Outpost (west coast).
+complete 6563 The Essence of Aku'Mai
 accept 6921 Amongst the Ruins [dungeon=Blackfathom Deeps] | Je'neu Sancrea. Needs the Blackfathom Deeps dungeon.
+turnin 6563 The Essence of Aku'Mai
 complete 6921 Amongst the Ruins [dungeon=Blackfathom Deeps] | The Fathom Stone is inside the Blackfathom Deeps instance (entrance at the Zoram Strand).
 turnin 6921 Amongst the Ruins [dungeon=Blackfathom Deeps]
 level 27

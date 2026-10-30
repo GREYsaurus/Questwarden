@@ -38,6 +38,7 @@ ns.Guides:Register({
     {"accept",q=4223,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,v=1},
     {"turnin",q=4223,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,v=1},
     {"turnin",q=4283,title="FIFTY! YEP!",npc="Oralius",z=46,x=84.6,y=68.7,v=1},
+    {"accept",q=4808,title="Felnok Steelspring",npc="Tinkee Steamboil",z=46,x=65.2,y=24,v=1},
     {"accept",q=4224,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,text="Escort quest: start it when you are ready to follow.",v=1},
     {"complete",q=4224,title="The True Masters",text="Escort: stay close; it fails if the NPC dies.",v=1},
     {"turnin",q=4224,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,v=1},

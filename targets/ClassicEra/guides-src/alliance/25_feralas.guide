@@ -62,9 +62,14 @@ turnin Freed from the Hive
 turnin 2821 The Mark of Quality
 turnin 2982 The High Wilderness
 accept A Hero's Welcome
+accept 7733 Improved Quality
 turnin A Hero's Welcome
+accept 2871 Delivering the Relic
 accept The Giant Guardian | Rockbiter at the Twin Colossals.
+complete 7733 Improved Quality
+turnin 2871 Delivering the Relic
 turnin The Giant Guardian
+turnin 7733 Improved Quality
 level 46
 train
 note Fly to Ironforge, then to Aerie Peak in the Hinterlands (fly from Menethil if you lack the path).

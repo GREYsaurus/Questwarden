@@ -106,6 +106,7 @@ ns.Guides:Register({
     {"turnin",q=5064,title="Grimtotem Spying",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=5147,title="Wanted - Arnak Grimtotem",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,optional=true,v=1},
     {"turnin",q=4767,title="Wind Rider",npc="Elu",z=400,x=44.9,y=48.9,v=1},
+    {"accept",q=5361,title="Family Tree",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"ROGUE","PRIEST","MAGE","WARLOCK"},races={"Scourge"},v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"HUNTER","ROGUE","SHAMAN","WARLOCK"},races={"Orc"},v=1},

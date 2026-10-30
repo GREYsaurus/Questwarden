@@ -32,6 +32,8 @@ turnin Pamela's Doll
 accept Uncle Carlin
 complete Zaeldarr the Outcast | Zaeldarr in the Darrowshire crypt, west side of the village.
 accept To Kill With Purpose [faction=Horde] | Nathanos Blightcaller at Marris Stead, west of Darrowshire.
+accept 6024 Hameya's Plea [faction=Alliance]
+accept 6024 Hameya's Plea [faction=Horde]
 accept 6133 The Ranger Lord's Behest [faction=Horde]
 accept Un-Life's Little Annoyances [faction=Horde] | Nathanos Blightcaller.
 complete To Kill With Purpose [faction=Horde] | Coagulated Rot from the ghouls and flayers around Darrowshire and the Marris Stead.
@@ -45,8 +47,12 @@ turnin Carrion Grubbage
 note Ride back east to Light's Hope Chapel.
 turnin Zaeldarr the Outcast | Caretaker Alen.
 turnin Uncle Carlin | Carlin Redpath.
+complete 6024 Hameya's Plea [faction=Alliance]
+complete 6024 Hameya's Plea [faction=Horde]
 complete 6133 The Ranger Lord's Behest [faction=Horde]
 turnin 6133 The Ranger Lord's Behest [faction=Horde]
+turnin 6024 Hameya's Plea [faction=Alliance]
+turnin 6024 Hameya's Plea [faction=Horde]
 level 58
 train
 note At 58 go to the Dark Portal in the Blasted Lands. Alliance: fly to Stormwind, then Nethergarde Keep (the herald for Through the Dark Portal is in Stormwind or Nethergarde). Horde: fly to Orgrimmar or the Undercity (the herald is there), then Stonard and ride south.

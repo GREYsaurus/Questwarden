@@ -126,6 +126,7 @@ accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
 complete Buzzbox 525
 turnin Buzzbox 525
+accept 951 Mathystra Relics
 accept 4731 Beached Sea Turtle
 accept 4732 Beached Sea Turtle
 accept 4733 Beached Sea Creature
@@ -138,6 +139,7 @@ accept 4725 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 accept 4725 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 accept 4725 Beached Sea Turtle [race=Dwarf,Night Elf; optional]
 turnin 955 Bashal'Aran
+complete 951 Mathystra Relics
 accept 956 Bashal'Aran
 complete 956 Bashal'Aran
 turnin 956 Bashal'Aran
@@ -157,6 +159,7 @@ turnin 4727 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 4727 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 4727 Beached Sea Turtle [race=Dwarf,Night Elf; optional]
 turnin 4722 Beached Sea Turtle [optional]
+turnin 951 Mathystra Relics
 turnin 4731 Beached Sea Turtle
 turnin 4732 Beached Sea Turtle
 turnin 4733 Beached Sea Creature
