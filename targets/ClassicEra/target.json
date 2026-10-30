@@ -7,7 +7,7 @@
   "require": {
     "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
     "database": true,
-    "talents": false,
+    "talents": true,
     "routes": false
   },
   "questie": {

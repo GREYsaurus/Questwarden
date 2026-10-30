@@ -96,6 +96,16 @@ if STAGE.target == "ClassicEra" then
     end
     check(trees == 27 and maxTier == 7, "27 talent trees, 7 tiers (" .. trees .. ", " .. maxTier .. ")")
     check(ns.Engine.guide and ns.Engine.guide.id == "A_Human_Elwynn", "a Human warrior gets the Elwynn start guide")
+    local noPlan = {}
+    for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
+        local ok = false
+        for _, bld in ipairs(ns.Talents:BuildsFor(cls)) do if bld.kind == "leveling" then ok = true end end
+        if not ok then noPlan[#noPlan + 1] = cls end
+    end
+    check(#noPlan == 0, "every class has a leveling talent plan (missing: " .. table.concat(noPlan, ",") .. ")")
+    local ab = ns.Talents:ActiveBuild()
+    check(ab and ab.id == "warrior_arms_iv", "a warrior's default plan is Icy Veins Arms (" .. tostring(ab and ab.id) .. ")")
+    check(#ns.Talents.buildList == 28, "28 talent plans registered (" .. #ns.Talents.buildList .. ")")
     -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
     local g = ns.Guides:Get("A_Human_Elwynn")
     local hogger

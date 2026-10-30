@@ -14,7 +14,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Steps with database-derived coordinates | 2675 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
-| Talent builds | 0 (0 pass validation) |
+| Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
 | Compiler warnings | 62 (see docs/generated/ClassicEra/guide-warnings.log) |
 
@@ -123,6 +123,34 @@ Each race/class combination is followed from its racial start guide through the 
 
 | Class | Build | Kind | Role | Points (trees) | Validation |
 |---|---|---|---|---|---|
+| DRUID | Feral (Icy Veins leveling) | leveling | Melee DPS / Tank | 51 (14/32/5) | pass |
+| DRUID | Balance (Icy Veins leveling) | leveling | Ranged DPS | 51 (36/0/15) | pass |
+| DRUID | Restoration (Icy Veins leveling) | leveling | Healer | 51 (19/0/32) | pass |
+| HUNTER | Beast Mastery (Icy Veins leveling) | leveling | Ranged DPS | 51 (31/20/0) | pass |
+| HUNTER | Marksmanship (Icy Veins leveling) | leveling | Ranged DPS | 51 (20/31/0) | pass |
+| HUNTER | Survival (Icy Veins leveling) | leveling | Ranged DPS | 51 (0/20/31) | pass |
+| MAGE | Frost (AoE grinding) (Icy Veins leveling) | leveling | Ranged DPS | 51 (19/0/32) | pass |
+| MAGE | Frost (single target) (Icy Veins leveling) | leveling | Ranged DPS | 51 (17/0/34) | pass |
+| MAGE | Fire (Icy Veins leveling) | leveling | Ranged DPS | 51 (11/37/3) | pass |
+| MAGE | Arcane (Icy Veins leveling) | leveling | Ranged DPS | 51 (31/0/20) | pass |
+| PALADIN | Retribution (Icy Veins leveling) | leveling | Melee DPS | 51 (16/0/35) | pass |
+| PALADIN | Holy (Icy Veins leveling) | leveling | Healer | 51 (32/7/12) | pass |
+| PALADIN | Protection (Icy Veins leveling) | leveling | Tank | 51 (11/31/9) | pass |
+| PRIEST | Shadow (Icy Veins leveling) | leveling | Ranged DPS | 51 (14/0/37) | pass |
+| PRIEST | Holy (Icy Veins leveling) | leveling | Healer | 51 (14/32/5) | pass |
+| PRIEST | Discipline (Icy Veins leveling) | leveling | Healer | 51 (33/13/5) | pass |
+| ROGUE | Combat (swords) (Icy Veins leveling) | leveling | Melee DPS | 51 (19/32/0) | pass |
+| ROGUE | Combat (daggers) (Icy Veins leveling) | leveling | Melee DPS | 51 (15/31/5) | pass |
+| ROGUE | Subtlety (Icy Veins leveling) | leveling | Melee DPS | 51 (21/0/30) | pass |
+| SHAMAN | Enhancement (Icy Veins leveling) | leveling | Melee DPS | 51 (0/38/13) | pass |
+| SHAMAN | Elemental (Icy Veins leveling) | leveling | Ranged DPS | 51 (31/0/20) | pass |
+| SHAMAN | Restoration (Icy Veins leveling) | leveling | Healer | 51 (19/0/32) | pass |
+| WARLOCK | Affliction (Icy Veins leveling) | leveling | Ranged DPS | 51 (30/21/0) | pass |
+| WARLOCK | Demonology (Icy Veins leveling) | leveling | Ranged DPS | 51 (16/35/0) | pass |
+| WARLOCK | Destruction (Icy Veins leveling) | leveling | Ranged DPS | 51 (17/0/34) | pass |
+| WARRIOR | Arms (Icy Veins leveling) | leveling | Melee DPS | 51 (31/20/0) | pass |
+| WARRIOR | Fury (Icy Veins leveling) | leveling | Melee DPS | 51 (20/31/0) | pass |
+| WARRIOR | Protection (Icy Veins leveling) | leveling | Tank | 51 (11/4/36) | pass |
 
 ## Data awaiting verification
 

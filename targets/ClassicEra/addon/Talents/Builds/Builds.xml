@@ -1,3 +1,4 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-<!-- EMPTY for WoW Classic Era: no talent builds yet. -->
+<!-- Talent plans (docs/TALENTS.md). -->
+  <Script file="IcyVeins.lua"/>
 </Ui>
