@@ -28,6 +28,7 @@ namespace GuideTools
         public static string TargetName = "";
         public static string ClientBuild = "";
         public static bool Verified = false;
+        public static bool Hardcore = false;   // the target has a Hardcore ruleset (Target.lua hardcore)
         // Coverage switches (targets/<Target>/target.json "require"), set by tools/build.ps1.
         public static bool RequireDatabase = true, RequireTalents = true, RequireRoutes = true;
         // QuestieDB inputs (target.json "questie"), set by tools/build.ps1. Paths are relative to the QuestieDB root.
@@ -72,6 +73,7 @@ namespace GuideTools
             TargetName = (t.Get("name") as string) ?? target;
             ClientBuild = (t.Get("clientBuild") as string) ?? "";
             Verified = t.Get("verified") is bool && (bool)t.Get("verified");
+            Hardcore = t.Get("hardcore") is bool && (bool)t.Get("hardcore");
             var ch = t.Get("chapters") as LTable;
             Chapters = new List<string>();
             if (ch != null) for (int i = 1; i <= ch.Count; i++) Chapters.Add((string)ch.Get(i));

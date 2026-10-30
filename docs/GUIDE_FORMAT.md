@@ -27,9 +27,21 @@ Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, 
 
 Never write the add-on's name or slash command in a note: write `{name}` and `{slash}`. They are filled in when the guide loads (`{name} skips it` → *ClassicGuide skips it*, `/{slash} talents` → */cg talents*), so a rename needs no guide edits. The lint gate rejects the spelled-out name.
 
-## Hardcore route flavor (Phase 2)
+## Hardcore route flavor
 
-Each zone has one guide source. Hardcore characters (Settings → Guide Routing → *Hardcore character*) follow the same file with marks that leave risky steps out or add a warning; the build checks both routes. The step flags are defined with the first Classic Era guides and documented here then.
+Each zone has one guide source. Hardcore characters (Settings → Guide Routing → *Hardcore character*, per character) follow the same file with two step flags:
+
+| Flag | Meaning |
+|---|---|
+| `[hc=skip]` | left out of the Hardcore route (an elite, a mob well above the route's level, a risky pull) |
+| `[hc=only]` | only on the Hardcore route: usually a `note` warning before a risky step |
+
+```
+note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
+accept Wanted: "Hogger" [elite; group=3; hc=skip] | ...
+```
+
+Mark every step of a quest you leave out (accept, complete and turn-in). Base each warning on the bundled data (NPC level, rank, nearby mobs) and write it in your own words. The flags are only allowed on targets with a Hardcore ruleset (`hardcore = true` in `Target.<Target>.lua`). The route audit walks every race/class route twice, as Speed and as Hardcore, and both must pass.
 
 ## Steps
 

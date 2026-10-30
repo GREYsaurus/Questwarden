@@ -147,8 +147,9 @@ namespace GuideTools
         const double HubRadius = 3.5;
         const double ZoneChangeCost = 25;   // per-route travel: a zone change, as a fixed approximation   // map percent: steps closer than this are "the same place"
 
-        static bool StepApplies(CStep s, string race, string cls, string faction)
+        static bool StepApplies(CStep s, string race, string cls, string faction, bool hardcore)
         {
+            if (hardcore ? s.HcSkip : s.HcOnly) return false;
             if (s.Races != null && !s.Races.Contains(race)) return false;
             if (s.Classes != null && !s.Classes.Contains(cls)) return false;
             if (s.Faction != null && s.Faction != faction) return false;
@@ -194,17 +195,26 @@ namespace GuideTools
             var lowXpSeen = new HashSet<string>();
             var gatedSeen = new HashSet<string>();
             var abandonedSeen = new HashSet<string>();
-            foreach (var c in combos)
+            // Every route is walked as the Speed flavor and, on targets with a Hardcore ruleset, again as the
+            // Hardcore flavor ([hc=skip] steps left out, [hc=only] steps added), so both must pass.
+            var flavors = new List<Tuple<string, string, string, bool>>();
+            foreach (var c0 in combos)
+            {
+                flavors.Add(Tuple.Create(c0.Item1, c0.Item2, c0.Item3, false));
+                if (Ctx.Hardcore) flavors.Add(Tuple.Create(c0.Item1, c0.Item2, c0.Item3, true));
+            }
+            foreach (var c in flavors)
             {
                 string race = c.Item1, cls = c.Item2, faction = c.Item3;
+                bool hc = c.Item4;
                 var route = Validator.Route(comp.Guides, race, cls, faction);
-                string key = race + "/" + cls;
+                string key = race + "/" + cls + (hc ? " (Hardcore)" : "");
                 a.Routes++;
                 // Flatten the applicable steps.
                 var flat = new List<Tuple<CGuide, int, CStep>>();
                 foreach (var g in route.Guides)
                     for (int i = 0; i < g.Steps.Count; i++)
-                        if (StepApplies(g.Steps[i], race, cls, faction)) flat.Add(Tuple.Create(g, i, g.Steps[i]));
+                        if (StepApplies(g.Steps[i], race, cls, faction, hc)) flat.Add(Tuple.Create(g, i, g.Steps[i]));
                 // Per-route travel: what this race/class actually walks in each guide. Same metric as
                 // Travel(): straight lines in zone-map percent, zone changes cost ZoneChangeCost.
                 foreach (var grp in flat.GroupBy(f => f.Item1))

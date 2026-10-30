@@ -205,7 +205,8 @@ function Engine:Refresh(silent)
         if not ns.Guides:StepApplies(s, ctx) then
             st = "na"
         elseif (s.dungeon and self:DungeonOff(s.dungeon) and not (s.q and T:InLog(s.q))) or (s.elite and not prof.showElite)
-            or (s.optional and prof.speedRoute) then
+            or (s.optional and prof.speedRoute)
+            or (s.hcSkip and ns:IsHardcore()) or (s.hcOnly and not ns:IsHardcore()) then
             st = "na"
         elseif p.skipped[i] then
             st = "skipped"

@@ -146,6 +146,8 @@ namespace GuideTools
         public string Title, Npc, Text, Place, Dest, GuideRef, Dungeon, Faction;
         public int Zone; public double X = -1, Y = -1;
         public bool Verified = true, Optional, Elite;
+        // Hardcore route flavor: HcSkip = left out for Hardcore characters, HcOnly = only for them.
+        public bool HcSkip, HcOnly;
         public int Group = -1; // -1 none, 0 unspecified size, n = group size
         public List<string> Classes, Races;
         public int Line;
@@ -422,6 +424,13 @@ namespace GuideTools
                 else s.Faction = v;
             }
             if (flags.ContainsKey("optional")) s.Optional = true;
+            if (flags.TryGetValue("hc", out v))
+            {
+                if (!Ctx.Hardcore) res.Errors.Add(where + ": [hc=] used, but target " + Ctx.Target + " has no Hardcore ruleset");
+                else if (v == "skip") s.HcSkip = true;
+                else if (v == "only") s.HcOnly = true;
+                else res.Errors.Add(where + ": [hc=] must be skip or only");
+            }
             if (flags.ContainsKey("elite")) s.Elite = true;
             if (flags.TryGetValue("group", out v)) { int gs; s.Group = int.TryParse(v, out gs) ? gs : 0; }
             if (flags.TryGetValue("dungeon", out v)) s.Dungeon = v;
@@ -1165,6 +1174,8 @@ namespace GuideTools
             if (s.Races != null) sb.Append(",races=").Append(LList(s.Races));
             if (s.Faction != null) sb.Append(",faction=").Append(L(s.Faction));
             if (s.Optional) sb.Append(",optional=true");
+            if (s.HcSkip) sb.Append(",hcSkip=true");
+            if (s.HcOnly) sb.Append(",hcOnly=true");
             if (s.Elite) sb.Append(",elite=true");
             if (s.Group >= 0) sb.Append(",group=").Append(s.Group > 0 ? s.Group.ToString() : "true");
             if (s.Dungeon != null) sb.Append(",dungeon=").Append(L(s.Dungeon));
