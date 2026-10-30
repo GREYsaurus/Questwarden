@@ -77,7 +77,7 @@ ns.Guides:Register({
     {"turnin",q=1151,title="Test of Strength",npc="Dorn Plainstalker",z=400,x=54,y=41.5,optional=true,v=1},
     {"complete",q=5062,title="Sacred Fire",text="Incendia Agave: loot Incendia Agave.",v=1},
     {"turnin",q=5062,title="Sacred Fire",npc="Magatha Grimtotem",z=1638,x=69.8,y=30.9,text="Turned in at Thunder Bluff.",v=1},
-    {"accept",q=5088,title="Arikara",npc="Magatha Grimtotem",z=1638,x=69.8,y=30.9,text="Escort quest: start it when you are ready to follow.",v=1},
+    {"accept",q=5088,title="Arikara",npc="Magatha Grimtotem",z=1638,x=69.8,y=30.9,v=1},
     {"complete",q=1049,title="Compendium of the Fallen",dungeon="Scarlet Monastery",v=1},
     {"complete",q=1102,title="A Vengeful Fate",dungeon="Razorfen Kraul",v=1},
     {"turnin",q=1049,title="Compendium of the Fallen",npc="Sage Truthseeker",z=1638,x=34.4,y=46.9,dungeon="Scarlet Monastery",v=1},

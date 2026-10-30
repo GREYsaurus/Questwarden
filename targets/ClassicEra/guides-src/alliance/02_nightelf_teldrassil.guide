@@ -137,8 +137,8 @@ accept 2518 Tears of the Moon [class=Rogue]
 complete 2518 Tears of the Moon | Silvery Spinnerets drops from Lady Sathrah.
 complete 923 Tumors | Mossy Tumor drops from Elder Timberling, Timberling Mire Beast and Timberling Trampler.
 turnin 2518 Tears of the Moon | Turned in at Darnassus.
-accept 2520 Sathrah's Sacrifice | Escort quest: start it when you are ready to follow.
-complete 2520 Sathrah's Sacrifice | Escort: stay close; it fails if the NPC dies.
+accept 2520 Sathrah's Sacrifice
+complete 2520 Sathrah's Sacrifice
 turnin 2520 Sathrah's Sacrifice | Turned in at Darnassus.
 turnin 931 The Shimmering Frond [class=Warrior,Hunter,Priest,Druid]
 turnin 931 The Shimmering Frond [class=Rogue]
@@ -158,25 +158,25 @@ turnin 940 Teldrassil [class=Rogue] | Turned in at Darnassus.
 turnin 935 Crown of the Earth
 accept 5921 Moonglade [class=Druid]
 turnin 5921 Moonglade [class=Druid] | Turned in at Moonglade.
-accept 5929 Great Bear Spirit [class=Druid] | Escort quest: start it when you are ready to follow.
-complete 5929 Great Bear Spirit [class=Druid] | Escort: stay close; it fails if the NPC dies.
+accept 5929 Great Bear Spirit [class=Druid]
+complete 5929 Great Bear Spirit [class=Druid]
 turnin 5929 Great Bear Spirit [class=Druid] | Turned in at Moonglade.
 accept 5931 Back to Darnassus [class=Druid]
 accept 1684 Elanaria [class=Warrior]
-accept 6063 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow.
-complete 6063 Taming the Beast [class=Hunter] | Escort: stay close; it fails if the NPC dies.
+accept 6063 Taming the Beast [class=Hunter]
+complete 6063 Taming the Beast [class=Hunter]
 turnin 6063 Taming the Beast [class=Hunter]
-accept 6101 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow.
-complete 6101 Taming the Beast [class=Hunter] | Escort: stay close; it fails if the NPC dies.
+accept 6101 Taming the Beast [class=Hunter]
+complete 6101 Taming the Beast [class=Hunter]
 turnin 6101 Taming the Beast [class=Hunter]
-accept 6102 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow.
-complete 6102 Taming the Beast [class=Hunter] | Escort: stay close; it fails if the NPC dies.
+accept 6102 Taming the Beast [class=Hunter]
+complete 6102 Taming the Beast [class=Hunter]
 turnin 6102 Taming the Beast [class=Hunter]
 accept 6103 Training the Beast [class=Hunter]
 turnin 489 Seek Redemption! [optional]
 turnin 941 Planting the Heart
 turnin 5931 Back to Darnassus [class=Druid] | Turned in at Darnassus.
-accept 6001 Body and Heart [class=Druid; optional] | Escort quest: start it when you are ready to follow.
+accept 6001 Body and Heart [class=Druid; optional]
 turnin 6103 Training the Beast [class=Hunter] | Turned in at Darnassus.
 turnin 1684 Elanaria [class=Warrior] | Turned in at Darnassus.
 accept 1683 Vorlus Vilehoof [class=Warrior]

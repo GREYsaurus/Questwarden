@@ -8,7 +8,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 48 (48 Azeroth) |
-| Guide steps | 4457 |
+| Guide steps | 4459 |
 | Quest steps (accept/complete/turn-in) | 3772 |
 | Distinct quests referenced | 1271 |
 | Steps with database-derived coordinates | 3027 |
@@ -75,7 +75,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 224 | 71 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
 | Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 132 | 44 | 3 |
-| Darkshore | Alliance | 11-19 | Darkshore | 207 | 58 | 82 |
+| Darkshore | Alliance | 11-19 | Darkshore | 208 | 58 | 83 |
 | Loch Modan | Alliance | 11-17 | Loch Modan | 96 | 26 | 8 |
 | Silverpine Forest (The Sepulcher) | Horde | 11-17 | Silverpine Forest | 84 | 30 | 3 |
 | Westfall | Alliance | 12-15 | Westfall | 80 | 27 | 17 |
@@ -104,7 +104,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Dustwallow Marsh (Theramore) | Alliance | 40-41 | Dustwallow Marsh | 58 | 17 | 4 |
 | Dustwallow Marsh (Brackenwall Village) | Horde | 40-41 | Dustwallow Marsh | 54 | 16 | 2 |
 | Tanaris (Gadgetzan) | Both | 41-44 | Tanaris | 72 | 19 | 9 |
-| Feralas (Feathermoon Stronghold) | Alliance | 44-46 | Feralas | 72 | 23 | 2 |
+| Feralas (Feathermoon Stronghold) | Alliance | 44-46 | Feralas | 73 | 23 | 2 |
 | Feralas (Camp Mojache) | Horde | 44-46 | Feralas | 54 | 14 | 0 |
 | The Hinterlands (Aerie Peak) | Alliance | 46-48 | The Hinterlands | 28 | 5 | 0 |
 | The Hinterlands (Revantusk Village) | Horde | 46-49 | The Hinterlands | 63 | 17 | 3 |

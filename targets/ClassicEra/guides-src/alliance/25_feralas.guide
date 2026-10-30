@@ -39,6 +39,7 @@ accept Psychometric Reading
 turnin Psychometric Reading
 accept The Woodpaw Gnolls
 complete The Woodpaw Gnolls | Woodpaw gnolls in the southern hills.
+note The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.
 accept Freedom for All Creatures | Kindal Moonweaver, at the camp east.
 complete Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
 turnin Freedom for All Creatures
@@ -50,7 +51,7 @@ complete 2982 The High Wilderness
 accept The Writhing Deep
 complete The Writhing Deep | Inside the Zukk'ash hive at the Writhing Deep.
 turnin The Writhing Deep
-accept Freed from the Hive | Escort quest: start it when you are ready to follow.
+accept Freed from the Hive
 grind 45 Rogue Vale Screecher, Grizzled Ironfur Bear | Zapped Giants needs level 45: kill these nearby until you reach it.
 accept Zapped Giants | Zorbin Fandazzle, the coast.
 complete 2821 The Mark of Quality

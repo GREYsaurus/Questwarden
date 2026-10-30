@@ -218,7 +218,7 @@ VERB_RE = re.compile(r"^(accept|turnin|complete)\s")
 # Escorts: quest flag 2 (party-accept: escorts, scripted events, duels) AND escort wording in the quest text.
 # The other flag-2 quests (events, duels, timed tasks) stay out of generated routes.
 ESCORT_RE = re.compile(r"\b(escort|protect|accompany|safely|show .{0,40}the way|ensure .{0,60}(arrive|reach)"
-                       r"|lead .{0,40}(to|back|out)|guide .{0,40}to)\b", re.I)
+                       r"|lead .{0,40}(to|back|out)|guide .{0,40}to|help .{0,30}escape|must survive)\b", re.I)
 ESCORT_STEP = "Escort: stay close; it fails if the NPC dies."
 
 

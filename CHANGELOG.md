@@ -74,12 +74,14 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
     - Both factions: *Tooga's Quest* (Tanaris).
   - **Also placed:** re-running the chain tool placed two non-escort chain quests, *Tiger Mastery* and *Return to Tinkee*.
   - **Hand-written escorts get the same note** (`tools/research/escort_notes.py`): 15 notes, each carrying its pickup's class, race and group flags. Among them: Stinky, Torek's Assault, Vorsha the Lasher, Escape Through Force, Protect Kanati Greycloud and the Thousand Needles escorts.
-  - **22 old "Escort quest" labels disagree with the quest data**, and the tool lists them rather than changing them:
-    - Taming the Beast (pet taming).
+  - **Wrong "Escort quest" labels removed** from 38 steps. The TBC port had put them on quests that aren't escorts:
+    - *Taming the Beast* (pet taming).
     - The Un'Goro pylons (exploration).
-    - Great Bear Spirit, Body and Heart and Hidden Enemies.
-    - Arikara and The True Masters (talk steps).
-    - Gyromast's Revenge, which has no escort flag at all.
+    - *Great Bear Spirit*, *Body and Heart* and *Hidden Enemies*.
+    - *Arikara*, *The True Masters*, *Sathrah's Sacrifice*, *Freed from the Hive* and *Corrupted Sabers*.
+  - ***The Tome of Valor*** now says what it is: a defend event in which Daphne Stilwell must survive.
+  - ***Gyromast's Revenge*** keeps its label. You lead the robot back, even though the data has no escort flag.
+  - **Escort wording now also covers** "help … escape" and "must survive". That brings in *Therylune's Escape* and *Freedom for All Creatures*, which now have their notes.
   - **The Deadmines' Defias Brotherhood chain is still out.** Its escort is now allowed, but the chain goes back and forth between Westfall and Redridge, and the Alliance route doesn't return to Westfall.
 
 Tested offline: ClassicEra build all passes (80 route walks, Speed and Hardcore: 0 errors, quest log peak 20/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.

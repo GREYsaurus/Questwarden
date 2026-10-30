@@ -19,7 +19,7 @@ ns.Guides:Register({
     {"complete",q=5155,title="Forces of Jaedenar",text="Jaedenar cultists.",v=1},
     {"complete",q=5156,title="Verifying the Corruption",text="Explore north of Shatter Scar Vale.",v=1},
     {"turnin",q=4505,title="Well of Corruption",npc="Winna Hazzard",z=361,x=34.2,y=52.3,v=1},
-    {"accept",q=4506,title="Corrupted Sabers",npc="Winna Hazzard",z=361,x=34.2,y=52.3,text="Escort quest: start it when you are ready to follow.",v=1},
+    {"accept",q=4506,title="Corrupted Sabers",npc="Winna Hazzard",z=361,x=34.2,y=52.3,v=1},
     {"complete",q=4506,title="Corrupted Sabers",text="Use the cage on a corrupted saber.",v=1},
     {"turnin",q=4506,title="Corrupted Sabers",npc="Winna Hazzard",z=361,x=34.2,y=52.3,v=1},
     {"fp",npc="Brakkar",z=361,x=34.4,y=54,place="Bloodvenom Post",v=1},

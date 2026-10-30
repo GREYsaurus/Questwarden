@@ -52,12 +52,12 @@ turnin Muigin and Larion [faction=Alliance]
 turnin Larion and Muigin [faction=Horde]
 grind 50 Pterrordax, Primal Ooze | Lost! needs level 50: kill these nearby until you reach it.
 accept 4492 Lost!
-accept The Northern Pylon | Escort quest: start it when you are ready to follow.
-accept The Eastern Pylon | Escort quest: start it when you are ready to follow.
-accept The Western Pylon | Escort quest: start it when you are ready to follow.
-complete The Northern Pylon | Escort: stay close; it fails if the NPC dies.
-complete The Eastern Pylon | Escort: stay close; it fails if the NPC dies.
-complete The Western Pylon | Escort: stay close; it fails if the NPC dies.
+accept The Northern Pylon
+accept The Eastern Pylon
+accept The Western Pylon
+complete The Northern Pylon
+complete The Eastern Pylon
+complete The Western Pylon
 turnin The Northern Pylon
 turnin The Eastern Pylon
 turnin The Western Pylon

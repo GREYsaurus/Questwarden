@@ -41,7 +41,7 @@ turnin Broodling Essence
 complete 4022 A Taste of Flame
 turnin Reassignment | Major Samuelson, also in Stormwind Keep.
 turnin 4184 The True Masters | Highlord Bolvar Fordragon, Stormwind Keep.
-accept 4185 The True Masters | Escort quest: start it when you are ready to follow.
+accept 4185 The True Masters
 turnin 4185 The True Masters | Turned in at Stormwind City.
 accept 4186 The True Masters
 turnin 4186 The True Masters | Turned in at Redridge Mountains.
@@ -61,12 +61,12 @@ turnin 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
 turnin 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
 turnin 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
 turnin 4022 A Taste of Flame
-accept 4224 The True Masters | Escort quest: start it when you are ready to follow.
+accept 4224 The True Masters
 turnin 5002 Message to Maxwell [dungeon=Blackrock Spire]
 accept 5081 Maxwell's Mission [dungeon=Blackrock Spire]
 turnin 5089 General Drakkisath's Command [dungeon=Blackrock Spire]
 accept 5102 General Drakkisath's Demise [dungeon=Blackrock Spire]
-complete 4224 The True Masters | Escort: stay close; it fails if the NPC dies.
+complete 4224 The True Masters
 turnin 4224 The True Masters
 complete 5081 Maxwell's Mission [dungeon=Blackrock Spire]
 turnin 5081 Maxwell's Mission [dungeon=Blackrock Spire]

@@ -187,8 +187,8 @@ turnin Need for a Cure
 turnin 5726 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [race=Troll; optional] | Turned in at Orgrimmar.
-accept 5727 Hidden Enemies [class=Warlock; race=Orc; optional] | Escort quest: start it when you are ready to follow.
-complete 5727 Hidden Enemies [class=Warlock; race=Orc; optional] | Escort: stay close; it fails if the NPC dies.
+accept 5727 Hidden Enemies [class=Warlock; race=Orc; optional]
+complete 5727 Hidden Enemies [class=Warlock; race=Orc; optional]
 turnin 5727 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 831 The Admiral's Orders [class=Hunter; race=Troll] | Turned in at Orgrimmar.
 turnin 831 The Admiral's Orders [class=Hunter,Warlock; race=Orc] | Turned in at Orgrimmar.

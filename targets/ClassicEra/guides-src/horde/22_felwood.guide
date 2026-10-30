@@ -21,7 +21,7 @@ complete Well of Corruption | Fill the flask at the Irontree moonwell.
 complete Forces of Jaedenar | Jaedenar cultists.
 complete Verifying the Corruption | Explore north of Shatter Scar Vale.
 turnin Well of Corruption
-accept Corrupted Sabers | Escort quest: start it when you are ready to follow.
+accept Corrupted Sabers
 complete Corrupted Sabers | Use the cage on a corrupted saber.
 turnin Corrupted Sabers
 fp Bloodvenom Post

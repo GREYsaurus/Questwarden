@@ -33,11 +33,12 @@ complete The Master's Glaive | The Master's Glaive in the south.
 turnin The Master's Glaive
 accept 4730 Beached Sea Creature
 accept The Twilight Camp
+note [optional] | The next quest, Therylune's Escape, is an escort: pick it up only when you are ready to follow the NPC.
 accept Therylune's Escape [optional]
 turnin The Twilight Camp
 accept Return to Onu
 turnin Return to Onu
-complete 6001 Body and Heart [class=Druid; race=Night Elf; optional] | Escort: stay close; it fails if the NPC dies.
+complete 6001 Body and Heart [class=Druid; race=Night Elf; optional]
 turnin 6001 Body and Heart [class=Druid; race=Night Elf; optional] | Turned in at Darnassus.
 accept Buzzbox 827 | Wizbang Cranktoggle on the Auberdine dock.
 accept The Red Crystal | Sentinel Glynda Nal'Shea.
@@ -120,7 +121,7 @@ accept 967 The Tower of Althalaxx
 accept 4727 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 accept 4727 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 accept 4727 Beached Sea Turtle [race=Dwarf,Night Elf; optional]
-complete Therylune's Escape [optional] | Escort quest.
+complete Therylune's Escape [optional] | Escort: stay close; it fails if the NPC dies.
 turnin Therylune's Escape [optional]
 accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
