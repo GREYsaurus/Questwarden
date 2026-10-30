@@ -1,0 +1,26 @@
+# ClassicGuide - Stonetalon Mountains (27-28), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_19_StonetalonMountains
+@name Stonetalon Mountains (27-28)
+@faction Horde
+@levels 27-28
+@zone Stonetalon Mountains
+@chapter Azeroth
+@desc Stonetalon Mountains, visit 4 of 4 on the Horde route, levels 27-28.
+@next H_20_ThousandNeedles
+
+travel Stonetalon Mountains
+turnin 1095 Further Instructions
+accept 1096 Gerenzo Wrenchwhistle
+complete 1096 Gerenzo Wrenchwhistle
+accept 1088 Ordanus
+complete 1088 Ordanus | Ordanus is in the Sons of Cenarius camp.
+turnin 1088 Ordanus
+turnin 1096 Gerenzo Wrenchwhistle
+accept 1089 The Den
+complete 1089 The Den
+turnin 1089 The Den
+level 28 | Thousand Needles starts at 28. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

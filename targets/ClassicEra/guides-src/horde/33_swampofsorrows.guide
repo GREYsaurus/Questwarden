@@ -1,0 +1,37 @@
+# ClassicGuide - Swamp of Sorrows (41-42), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_33_SwampofSorrows
+@name Swamp of Sorrows (41-42)
+@faction Horde
+@levels 41-42
+@zone Swamp of Sorrows
+@chapter Azeroth
+@desc Swamp of Sorrows, visit 1 of 2 on the Horde route, levels 41-42.
+@next H_34_StranglethornVale
+
+travel Swamp of Sorrows
+note From Grom'gol ride north through Duskwood (Alliance zone: keep off the roads) and east through Deadwind Pass into the Swamp of Sorrows.
+accept 1389 Draenethyst Crystals | Magtoor, a Lost One in the hut at the west end of the swamp. He is friendly.
+fp Stonard
+accept 1424 Pool of Tears | Fel'zerul, Stonard.
+note The next quest, Galen's Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1393 Galen's Escape
+complete 1393 Galen's Escape | Escort: stay close; it fails if the NPC dies.
+accept 698 Lack of Surplus | Dar, just outside Stonard.
+accept 1430 Fresh Meat | Dar.
+complete 698 Lack of Surplus | Unprepared Sawtooth Flanks from Sawtooth Crocolisks around the lakes east of Stonard.
+complete 1389 Draenethyst Crystals | Draenethyst Crystals on the ground in the same north-east area.
+complete 1424 Pool of Tears | Atal'ai Artifacts on the ground around the Pool of Tears, east of Stonard.
+turnin 698 Lack of Surplus | Tok'Kar at the Misty Reed Strand, south-east coast.
+accept 699 Lack of Surplus
+complete 699 Lack of Surplus | Sawtooth Snapper Claws from Sawtooth Snappers on the east coast, north of Tok'Kar.
+complete 1430 Fresh Meat | Monstrous Crawler Legs from Monstrous Crawlers on the same east coast.
+turnin 699 Lack of Surplus | Tok'Kar.
+turnin 1424 Pool of Tears | Fel'zerul.
+turnin 1393 Galen's Escape
+turnin 1430 Fresh Meat | Dar.
+turnin 1389 Draenethyst Crystals | Magtoor, at the west end of the swamp.
+level 42 | Stranglethorn Vale starts at 42. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

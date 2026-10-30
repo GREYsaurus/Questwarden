@@ -1,0 +1,20 @@
+# ClassicGuide - The Hinterlands (50), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_44_Hinterlands
+@name The Hinterlands (50)
+@faction Alliance
+@levels 50-50
+@zone The Hinterlands
+@chapter Azeroth
+@desc The Hinterlands, visit 2 of 2 on the Alliance route, levels 50.
+@next A_45_BlastedLands
+
+travel The Hinterlands
+train
+accept 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
+complete 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
+turnin 1446 Jammal'an the Prophet [dungeon=The Temple of Atal'Hakkar]
+level 50 | Blasted Lands starts at 50. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

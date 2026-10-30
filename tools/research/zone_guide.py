@@ -7,29 +7,38 @@
 # guide uses yet that:
 #   - start at an NPC or object in the zone, with the finisher in the zone,
 #   - have their objectives in the zone (no dungeon objectives) and no elite targets or elite-only drops,
-#   - are open to the faction, not class, profession, reputation, repeatable or escort quests, not excluded
-#     (quest_exclude.json), with quest XP, required level <= band max and quest level >= band min - 4,
+#   - are open to the faction, not class, profession, reputation, repeatable or scripted-event quests, not
+#     excluded (quest_exclude.json), with quest XP, required level <= band max and quest level >= band min - 4,
 #   - have every prerequisite turned in on the route already, or in this guide earlier.
 # Steps come in waves: accept what is available (nearest-neighbour from the zone's flight master or first
 # giver), do the objectives nearest-neighbour, turn everything in, then the follow-ups; at most 12 quests
-# open at a time. Hardcore: with no elites the guide has no [hc=] marks of its own.
+# open at a time. Escorts come in the pick-up tour as note, accept and the escort itself, one at a time.
+# Hardcore: with no elites the guide has no [hc=] marks of its own.
 # The guide is ours (route selection and order are produced by this algorithm); step notes come from the
 # compiler (NPC names and locations). Review the diff, then run guides + routes.
 #
 # Usage: python tools/research/zone_guide.py ClassicEra <after_guide_id> <faction|Both> <lo> <hi> [--dry-run]
 #   The new guide is linked after <after_guide_id>: it takes over that guide's @next lines and that guide
 #   points to it.
+#        python tools/research/zone_guide.py ClassicEra <guide_id> --fill [--dry-run]
+#   Adds the waves to an existing guide (a zone-order visit), using its zone, faction and @levels: in place of
+#   its "No quests are written" note, or before its closing level step.
 import json
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from qdb import Target, centroid, dist, f, hsh, ids  # noqa: E402
+from qdb import ESCORT_STEP, Target, centroid, dist, escort, escort_note, event_only, f, hsh, ids  # noqa: E402
 
 a = [x for x in sys.argv[1:] if not x.startswith("--")]
 T = Target(a[0])
-AFTER, FAC, LO, HI = a[1], a[2], int(a[3]), int(a[4])
+FILL = "--fill" in sys.argv
+if FILL:
+    AFTER = a[1]
+    FAC, LO, HI = T.guides[AFTER]["faction"], T.guides[AFTER]["min"], T.guides[AFTER]["max"]
+else:
+    AFTER, FAC, LO, HI = a[1], a[2], int(a[3]), int(a[4])
 DRY = "--dry-run" in sys.argv
 EXCLUDE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "quest_exclude.json"), encoding="utf-8")).get(T.name, {})
 MASK = {"Alliance": 77, "Horde": 178, "Both": 77 | 178}
@@ -37,10 +46,28 @@ WAVE = 12
 
 base = T.guides[AFTER]
 zone = base["zone"]
-used = {s["q"] for g in T.guides.values() for s in g["steps"] if s["q"]}
+used = {s["q"] for g in T.guides.values() if FAC == "Both" or g["faction"] in (FAC, "Both") for s in g["steps"] if s["q"]}
 # Turned in on routes of this faction before or at AFTER (by level): treat as done.
 done = {s["q"] for g in T.guides.values() if g["faction"] in (FAC, "Both") or FAC == "Both"
         if g["min"] <= base["max"] for s in g["steps"] if s["kind"] == "turnin" and s["q"]}
+if FILL:
+    # A zone-order visit: done = turned in on every @next path into this guide before it (plus this guide).
+    nxt = {}
+    for g in T.guides.values():
+        if g["file"] and g["faction"] == FAC:
+            m = re.search(r"^@next (\S+)", open(g["file"], encoding="utf-8").read(), re.M)
+            if m:
+                nxt[g["id"]] = m.group(1)
+    paths = []
+    for st in [x for x in nxt if x not in nxt.values()]:
+        path, cur = [], st
+        while cur and cur not in path:
+            path.append(cur)
+            cur = nxt.get(cur)
+        if AFTER in path:
+            paths.append(path[:path.index(AFTER) + 1])
+    sets = [{s["q"] for gid in p for s in T.guides[gid]["steps"] if s["kind"] == "turnin" and s["q"]} for p in paths]
+    done = set.intersection(*sets) if sets else set()
 
 
 def pts_npc(n):
@@ -102,7 +129,7 @@ for qid, q in T.Q.items():
     races = f(q, 4) or 0
     if races and not (races & MASK[FAC]):
         continue
-    if (f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or (f(q, 26) or 0) == 2:
+    if (f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or event_only(q):
         continue
     req, lvl = f(q, 2) or 0, f(q, 3) or 0
     if req > HI or lvl < LO - 4 or lvl > 60:
@@ -159,8 +186,13 @@ for wi, wave in enumerate(order_waves):
     acc, cur = tour(cur, wave, lambda x: pool[x]["gp"])
     lines.append("# wave %d: pick up" % (wi + 1))
     for x in acc:
-        lines.append(("accept %d %s" % (x, pool[x]["q"][0])) + (" [faction=%s]" % pool[x]["fac"] if pool[x]["fac"] else ""))
-    with_obj = [x for x in wave if pool[x]["op"]]
+        fl = " [faction=%s]" % pool[x]["fac"] if pool[x]["fac"] else ""
+        if escort(pool[x]["q"]):
+            lines.append(escort_note(pool[x]["q"], ["faction=" + pool[x]["fac"]] if pool[x]["fac"] else ()))
+        lines.append("accept %d %s%s" % (x, pool[x]["q"][0], fl))
+        if escort(pool[x]["q"]):
+            lines.append("complete %d %s%s | %s" % (x, pool[x]["q"][0], fl, ESCORT_STEP))
+    with_obj = [x for x in wave if pool[x]["op"] and not escort(pool[x]["q"])]
     comp, cur = tour(cur, with_obj, lambda x: pool[x]["op"])
     for x in comp:
         lines.append(("complete %d %s" % (x, pool[x]["q"][0])) + (" [faction=%s]" % pool[x]["fac"] if pool[x]["fac"] else ""))
@@ -179,6 +211,18 @@ if DRY or not n:
 src = open(base["file"], encoding="utf-8", newline="").read()
 nl = "\r\n" if "\r\n" in src else "\n"
 s0 = src.replace("\r\n", "\n")
+if FILL:
+    body = [x for x in lines if not x.startswith("# wave")]
+    old = s0.rstrip("\n").split("\n")
+    if "note No quests are written for this visit yet." in old:
+        i = old.index("note No quests are written for this visit yet.")
+        old[i:i + 1] = body
+    else:
+        i = max(k for k, l in enumerate(old) if l.startswith("level ")) if any(l.startswith("level ") for l in old) else len(old)
+        old[i:i] = body
+    open(base["file"], "w", encoding="utf-8", newline="").write(nl.join(old) + nl)
+    print("filled", os.path.relpath(base["file"]))
+    sys.exit(0)
 zname = re.search(r"^@zone (.+)$", s0, re.M).group(1).strip()
 chapter = re.search(r"^@chapter (.+)$", s0, re.M).group(1).strip()
 nexts = re.findall(r"^@next .+$", s0, re.M)

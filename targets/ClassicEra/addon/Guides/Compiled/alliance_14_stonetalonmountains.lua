@@ -1,0 +1,39 @@
+-- ClassicGuide - compiled guide data. GENERATED from guides-src/alliance/14_stonetalonmountains.guide by tools/build.ps1 guides.
+-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original ClassicGuide content
+-- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.
+local _, ns = ...
+ns.Guides:Register({
+  id="A_14_StonetalonMountains", name="Stonetalon Mountains (22-23)", faction="Alliance", chapter="Azeroth",
+  minLevel=22, maxLevel=23, zone=406, zoneName="Stonetalon Mountains",
+  desc="Stonetalon Mountains, visit 1 of 1 on the Alliance route, levels 22-23.",
+  next={{id="A_15_Darkshore"},},
+  steps={
+    {"travel",text="Travel to Stonetalon Mountains",dest="Stonetalon Mountains",v=1},
+    {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
+    {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},
+    {"train",text="No mage trainer in this zone - train at the next town or capital.",classes={"MAGE"},v=1},
+    {"train",text="No paladin trainer in this zone - train at the next town or capital.",classes={"PALADIN"},v=1},
+    {"train",text="No priest trainer in this zone - train at the next town or capital.",classes={"PRIEST"},v=1},
+    {"train",text="No rogue trainer in this zone - train at the next town or capital.",classes={"ROGUE"},v=1},
+    {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
+    {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
+    {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
+    {"accept",q=1093,title="Super Reaper 6000",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
+    {"accept",q=1085,title="On Guard in Stonetalon",npc="Kaela Shadowspear",z=406,x=59.9,y=66.8,v=1},
+    {"accept",q=1090,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
+    {"accept",q=1057,title="Reclaiming the Charred Vale",npc="Keeper Albagorm",z=406,x=37.1,y=8.1,v=1},
+    {"complete",q=1093,title="Super Reaper 6000",v=1},
+    {"complete",q=1090,title="Gerenzo's Orders",v=1},
+    {"complete",q=1057,title="Reclaiming the Charred Vale",v=1},
+    {"turnin",q=1093,title="Super Reaper 6000",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
+    {"turnin",q=1085,title="On Guard in Stonetalon",npc="Gaxim Rustfizzle",z=406,x=59.5,y=67.2,v=1},
+    {"turnin",q=1090,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
+    {"turnin",q=1057,title="Reclaiming the Charred Vale",npc="Keeper Albagorm",z=406,x=37.1,y=8.1,v=1},
+    {"accept",q=1092,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
+    {"accept",q=1071,title="A Gnome's Respite",npc="Gaxim Rustfizzle",z=406,x=59.5,y=67.2,v=1},
+    {"complete",q=1071,title="A Gnome's Respite",v=1},
+    {"turnin",q=1092,title="Gerenzo's Orders",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
+    {"turnin",q=1071,title="A Gnome's Respite",npc="Gaxim Rustfizzle",z=406,x=59.5,y=67.2,v=1},
+    {"level",text="Darkshore starts at 23. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=23,v=1},
+  },
+})

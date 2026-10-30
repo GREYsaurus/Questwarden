@@ -1,0 +1,90 @@
+# ClassicGuide - Wetlands (24-27), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_17_Wetlands
+@name Wetlands (24-27)
+@faction Alliance
+@levels 24-27
+@zone Wetlands
+@chapter Azeroth
+@desc Wetlands, visit 1 of 3 on the Alliance route, levels 24-27.
+@next A_18_Duskwood
+
+travel Wetlands
+train
+accept 305 In Search of The Excavation Team | Tarrel Rockweaver.
+accept 484 Young Crocolisk Skins | James Halloran, Menethil Harbor.
+accept 472 Fall of Dun Modr | Needs level 25. If you are lower, {name} skips it and moves on.
+accept 470 Digging Through the Ooze | Sida, west Menethil.
+accept 473 Report to Captain Stoutfist | Valstag Ironjaw, the keep.
+turnin 473 Report to Captain Stoutfist
+accept 464 War Banners
+accept 279 Claws from the Deep | Karl Boran on the docks.
+fp Menethil Harbor
+accept 288 The Third Fleet | First Mate Fitzsimmons in the inn.
+accept 463 The Greenwarden
+complete 288 The Third Fleet | Crocolisk meat from crocolisks around Menethil; buy the Flagon of Mead from the innkeeper.
+turnin 942 The Absent Minded Prospector [optional]
+accept 943 The Absent Minded Prospector [optional]
+complete 484 Young Crocolisk Skins
+complete 279 Claws from the Deep | Gobbler and murlocs at the northern coast.
+turnin 279 Claws from the Deep
+accept 281 Reclaiming Goods
+turnin 281 Reclaiming Goods | Damaged crate at the murloc hovels, north coast.
+accept 284 The Search Continues
+turnin 284 The Search Continues
+accept 285 Search More Hovels
+turnin 285 Search More Hovels
+accept 286 Return the Statuette
+accept 299 Uncovering the Past | Prospector Whelgar.
+accept 294 Ormer's Revenge | Ormer Ironbraid, excavation site.
+complete 294 Ormer's Revenge | Mottled Raptors and Screechers around the site.
+complete 299 Uncovering the Past | Relics are scattered in the excavation (raptors present).
+complete 943 The Absent Minded Prospector [optional] | Stone of Relu drops from Mottled Raptor, Mottled Screecher and Mottled Scytheclaw and others. Flagongut's Fossil: loot Flagongut's Fossil.
+turnin 294 Ormer's Revenge
+accept 295 Ormer's Revenge
+complete 295 Ormer's Revenge | Mottled Razormaws.
+turnin 295 Ormer's Revenge
+accept 296 Ormer's Revenge
+complete 296 Ormer's Revenge | Sarltooth, a big raptor on the hill above the site.
+turnin 296 Ormer's Revenge
+turnin 299 Uncovering the Past
+complete 470 Digging Through the Ooze | Black Oozes near the Excavation site.
+turnin 305 In Search of The Excavation Team | Merrin Rockweaver at the Whelgar excavation.
+accept 306 In Search of The Excavation Team
+complete 464 War Banners | Dragonmaw orcs at Angerfang Encampment.
+accept 469 Daily Delivery [optional]
+turnin 463 The Greenwarden | Rethiel the Greenwarden, central Wetlands.
+accept 276 Tramping Paws
+complete 276 Tramping Paws | Mosshide gnolls around the Greenwarden.
+turnin 276 Tramping Paws
+accept 277 Fire Taboo
+complete 277 Fire Taboo | Mosshide gnolls carry Crude Flints.
+turnin 277 Fire Taboo
+accept 275 Blisters on The Land
+complete 275 Blisters on The Land | Fen Creepers in the marshes.
+turnin 275 Blisters on The Land
+accept 968 The Powers Below [optional]
+turnin 470 Digging Through the Ooze
+turnin 968 The Powers Below [optional] | Turned in at Ironforge.
+turnin 472 Fall of Dun Modr
+turnin 288 The Third Fleet
+accept 289 The Cursed Crew
+complete 289 The Cursed Crew | Undead crew on the sunken ships north-west of Menethil.
+turnin 289 The Cursed Crew
+turnin 943 The Absent Minded Prospector [class=Paladin; race=Dwarf; optional]
+turnin 943 The Absent Minded Prospector [class=Warrior,Hunter,Rogue,Priest; race=Dwarf; optional]
+turnin 943 The Absent Minded Prospector [race=Human,Night Elf,Gnome; optional]
+turnin 286 Return the Statuette
+turnin 464 War Banners
+turnin 484 Young Crocolisk Skins
+accept 471 Apprentice's Duties
+turnin 469 Daily Delivery [class=Paladin; race=Dwarf; optional]
+turnin 469 Daily Delivery [class=Warrior,Hunter,Rogue,Priest; race=Dwarf; optional]
+turnin 469 Daily Delivery [race=Human,Night Elf,Gnome; optional]
+complete 471 Apprentice's Duties | Giant Wetlands Crocolisks.
+turnin 471 Apprentice's Duties
+turnin 306 In Search of The Excavation Team | Tarrel Rockweaver, Menethil.
+level 28 | Duskwood starts at 28. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

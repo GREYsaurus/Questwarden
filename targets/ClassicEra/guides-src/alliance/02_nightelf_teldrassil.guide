@@ -10,7 +10,7 @@
 @chapter Azeroth
 @start
 @desc Night elf starting route. Shadowglen to about level 5, then Dolanaar, the Ban'ethil Barrow Den, Lake Al'Ameth and the Oracle Glade. Ends with the flight to Auberdine for Darkshore.
-@next A_Darkshore
+@next A_10_Darkshore
 
 accept 456 The Balance of Nature | Conservator Ilthalaine, in front of Aldrassil.
 complete 456 The Balance of Nature | Young Nightsabers and Young Thistle Boars.

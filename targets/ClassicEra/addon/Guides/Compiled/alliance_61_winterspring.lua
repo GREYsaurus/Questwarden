@@ -1,0 +1,41 @@
+-- ClassicGuide - compiled guide data. GENERATED from guides-src/alliance/61_winterspring.guide by tools/build.ps1 guides.
+-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original ClassicGuide content
+-- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.
+local _, ns = ...
+ns.Guides:Register({
+  id="A_61_Winterspring", name="Winterspring (59-60)", faction="Alliance", chapter="Azeroth",
+  minLevel=59, maxLevel=60, zone=618, zoneName="Winterspring",
+  desc="Winterspring, visit 2 of 2 on the Alliance route, levels 59-60.",
+  next={},
+  steps={
+    {"travel",text="Travel to Winterspring",dest="Winterspring",v=1},
+    {"accept",q=8464,title="Winterfall Activity",npc="Salfa",z=618,x=27.7,y=34.5,text="Salfa. The Winterfall camp is far east, past Everlook.",v=1},
+    {"turnin",q=4808,title="Felnok Steelspring",npc="Felnok Steelspring",z=618,x=61.6,y=38.6,optional=true,v=1},
+    {"accept",q=6604,title="Enraged Wildkin",npc="Harlo Wigglesworth",z=618,x=61.1,y=38.4,text="Harlo Wigglesworth, Everlook.",v=1},
+    {"complete",q=8464,title="Winterfall Activity",text="Winterfall Shamans, Den Watchers and Ursa at the Winterfall Village east of Everlook.",v=1},
+    {"accept",q=4809,title="Chillwind Horns",npc="Felnok Steelspring",z=618,x=61.6,y=38.6,v=1},
+    {"turnin",q=6604,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,text="Jaron Stoneshaper at the Ruins of Kel'Theril, north of the road.",v=1},
+    {"accept",q=4861,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,v=1},
+    {"complete",q=4809,title="Chillwind Horns",v=1},
+    {"accept",q=977,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,v=1},
+    {"turnin",q=4861,title="Enraged Wildkin",npc="Damaged Crate",z=618,x=59,y=59.8,text="The damaged crate south of Everlook, on the road to Frostwhisper Gorge.",v=1},
+    {"accept",q=4863,title="Enraged Wildkin",npc="Damaged Crate",z=618,x=59,y=59.8,v=1},
+    {"turnin",q=4863,title="Enraged Wildkin",npc="Jaron's Wagon",z=618,x=61.4,y=60.7,text="Jaron's Wagon, a little further south.",v=1},
+    {"accept",q=4864,title="Enraged Wildkin",npc="Jaron's Wagon",z=618,x=61.4,y=60.7,v=1},
+    {"complete",q=4864,title="Enraged Wildkin",text="Jaron's Supplies by the wagon; the Blue-feathered Amulet drops from Crazed Owlbeasts around it.",v=1},
+    {"complete",q=977,title="Are We There, Yeti?",text="Pristine Yeti Horn from the Ice Thistle Matriarch, east of Everlook.",v=1},
+    {"turnin",q=4809,title="Chillwind Horns",npc="Felnok Steelspring",z=618,x=61.6,y=38.6,v=1},
+    {"turnin",q=977,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker.",v=1},
+    {"turnin",q=4864,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,text="Jaron Stoneshaper at the Ruins of Kel'Theril.",v=1},
+    {"accept",q=5163,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,v=1},
+    {"complete",q=5163,title="Are We There, Yeti?",v=1},
+    {"turnin",q=5163,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,v=1},
+    {"turnin",q=8464,title="Winterfall Activity",npc="Salfa",z=618,x=27.7,y=34.5,text="Salfa, back at the tunnel.",v=1},
+    {"accept",q=6606,title="A Little Luck",npc="Harlo Wigglesworth",z=618,x=61.1,y=38.4,v=1},
+    {"accept",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
+    {"complete",q=969,title="Luck Be With You",v=1},
+    {"turnin",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
+    {"turnin",q=6606,title="A Little Luck",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
+    {"level",level=60,v=1},
+  },
+})

@@ -1,0 +1,51 @@
+# ClassicGuide - Badlands (40-41), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_32_Badlands
+@name Badlands (40-41)
+@faction Horde
+@levels 40-41
+@zone Badlands
+@chapter Azeroth
+@desc Badlands, visit 1 of 1 on the Horde route, levels 40-41.
+@next H_33_SwampofSorrows
+
+travel Badlands
+train
+note Kargath has no flight path until you reach it. From Hammerfall cross Thandol Span into the Wetlands and ride east through Loch Modan into the Badlands (Alliance zones: keep off the roads). Kargath is on the west edge of the Badlands.
+fp Kargath
+accept 2258 Badlands Reagent Run | Jarkal Mossmeld, Kargath. Needs level 36.
+accept 1419 Coyote Thieves | Neeka Bloodscar.
+accept 710 Study of the Elements: Rock | Lotwil Veriatus, east of Kargath.
+complete 710 Study of the Elements: Rock | Lesser Rock Elementals around Lotwil's camp.
+turnin 710 Study of the Elements: Rock
+accept 711 Study of the Elements: Rock
+complete 711 Study of the Elements: Rock | Rock Elementals north-west of the camp.
+complete 2258 Badlands Reagent Run [obj=3] | Rock Elemental Shards from the same Rock Elementals.
+turnin 711 Study of the Elements: Rock
+accept 2418 Power Stones | Rigglefuzz at the camp in the middle of the Badlands.
+accept 712 Study of the Elements: Rock
+accept 705 Pearl Diving
+accept 703 Barbecued Buzzard Wings
+complete 705 Pearl Diving
+complete 703 Barbecued Buzzard Wings
+turnin 705 Pearl Diving
+turnin 703 Barbecued Buzzard Wings
+complete 1419 Coyote Thieves | Crag Coyotes all over the middle of the zone.
+complete 2258 Badlands Reagent Run [obj=2] | Crag Coyote Fangs from the same coyotes.
+complete 2418 Power Stones | Shadowforge Surveyors at Agmond's End and around Uldaman's entrance.
+complete 2258 Badlands Reagent Run [obj=1] | Buzzard Gizzards from Starving Buzzards in the north-east.
+turnin 2418 Power Stones | Rigglefuzz.
+turnin 1419 Coyote Thieves | Kargath.
+complete 712 Study of the Elements: Rock
+turnin 2258 Badlands Reagent Run
+turnin 712 Study of the Elements: Rock
+accept 782 Broken Alliances
+accept 2202 Uldaman Reagent Run
+complete 782 Broken Alliances
+complete 2202 Uldaman Reagent Run
+turnin 782 Broken Alliances
+turnin 2202 Uldaman Reagent Run
+level 41 | Swamp of Sorrows starts at 41. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,75 @@
+# ClassicGuide - Arathi Highlands (36-37), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_27_ArathiHighlands
+@name Arathi Highlands (36-37)
+@faction Horde
+@levels 36-37
+@zone Arathi Highlands
+@chapter Azeroth
+@desc Arathi Highlands, visit 2 of 2 on the Horde route, levels 36-37.
+@next H_28_AlteracMountains
+
+travel Arathi Highlands
+train
+fp Hammerfall
+accept 655 Hammerfall | Gor'mul.
+accept 642 The Princess Trapped | The Shards of Myzrael, south-east.
+accept 671 Foul Magics
+turnin 655 Hammerfall | Tor'gan.
+accept 672 Raising Spirits | Tor'gan.
+complete 672 Raising Spirits | Highland Striders.
+turnin 672 Raising Spirits
+accept 674 Raising Spirits
+complete 674 Raising Spirits
+turnin 674 Raising Spirits
+accept 675 Raising Spirits
+accept 639 Sigil of Strom [elite; group; hc=skip]
+complete 671 Foul Magics | Syndicate mages.
+complete 642 The Princess Trapped | Kobolds at Drywhisker Gorge.
+accept 678 Call to Arms
+turnin 642 The Princess Trapped
+accept 651 Stones of Binding
+complete 678 Call to Arms | Stromgarde Keep.
+complete 675 Raising Spirits
+turnin 671 Foul Magics
+turnin 675 Raising Spirits
+accept 701 Guile of the Raptor | Tor'gan offers it once Raising Spirits is done.
+complete 701 Guile of the Raptor | Highland raptors.
+turnin 701 Guile of the Raptor
+accept 702 Guile of the Raptor
+complete 651 Stones of Binding | Burning Key drops from Burning Exile. Cresting Key: loot Stone of East Binding.
+turnin 678 Call to Arms
+complete 702 Guile of the Raptor
+turnin 702 Guile of the Raptor
+accept 847 Guile of the Raptor
+complete 847 Guile of the Raptor
+turnin 847 Guile of the Raptor
+turnin 651 Stones of Binding
+accept 652 Breaking the Keystone
+complete 652 Breaking the Keystone | Rod of Order drops from Fozruk.
+turnin 652 Breaking the Keystone
+complete 639 Sigil of Strom [elite; group; hc=skip]
+turnin 639 Sigil of Strom [elite; group; hc=skip]
+accept 663 Land Ho!
+turnin 663 Land Ho!
+accept 688 Myzrael's Allies
+note The next quest, Sunken Treasure, is an escort: pick it up only when you are ready to follow the NPC.
+accept 665 Sunken Treasure
+complete 665 Sunken Treasure | Escort: stay close; it fails if the NPC dies.
+accept 664 Drowned Sorrows
+accept 662 Deep Sea Salvage
+complete 662 Deep Sea Salvage
+complete 664 Drowned Sorrows
+turnin 662 Deep Sea Salvage
+turnin 664 Drowned Sorrows
+turnin 665 Sunken Treasure
+turnin 688 Myzrael's Allies
+accept 666 Sunken Treasure
+complete 666 Sunken Treasure
+turnin 666 Sunken Treasure
+accept 668 Sunken Treasure
+turnin 668 Sunken Treasure
+level 37 | Alterac Mountains starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

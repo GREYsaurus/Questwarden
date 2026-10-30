@@ -1,0 +1,20 @@
+# ClassicGuide - Arathi Highlands (32), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_23_ArathiHighlands
+@name Arathi Highlands (32)
+@faction Alliance
+@levels 32-32
+@zone Arathi Highlands
+@chapter Azeroth
+@desc Arathi Highlands, visit 1 of 2 on the Alliance route, levels 32.
+@next A_24_StranglethornVale
+
+travel Arathi Highlands
+train
+accept 681 Northfold Manor | Captain Nials, Refuge Pointe.
+complete 681 Northfold Manor | Syndicate at Northfold Manor, north-west.
+turnin 681 Northfold Manor
+level 32 | Stranglethorn Vale starts at 32. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

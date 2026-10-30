@@ -1,0 +1,17 @@
+# ClassicGuide - Felwood (55-56), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_53_Felwood
+@name Felwood (55-56)
+@faction Horde
+@levels 55-56
+@zone Felwood
+@chapter Azeroth
+@desc Felwood, visit 2 of 2 on the Horde route, levels 55-56.
+@next H_54_WesternPlaguelands
+
+travel Felwood
+note No quests are written for this visit yet.
+level 56 | Western Plaguelands starts at 56. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

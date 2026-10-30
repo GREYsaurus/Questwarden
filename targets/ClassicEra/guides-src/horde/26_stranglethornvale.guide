@@ -1,0 +1,68 @@
+# ClassicGuide - Stranglethorn Vale (34-36), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_26_StranglethornVale
+@name Stranglethorn Vale (34-36)
+@faction Horde
+@levels 34-36
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 2 of 5 on the Horde route, levels 34-36.
+@next H_27_ArathiHighlands
+
+travel Stranglethorn Vale
+train
+fp Grom'gol
+accept 570 Mok'thardin's Enchantment | Far Seer Mok'thardin.
+accept 568 The Defense of Grom'gol | Commander Aggro'gosh.
+accept 596 Bloody Bone Necklaces | Kin'weelay.
+accept 629 The Vile Reef
+turnin 5763 Hunting in Stranglethorn [optional]
+accept 194 Raptor Mastery
+accept 581 Hunt for Yenniku | Nimboya, Grom'gol.
+complete 629 The Vile Reef
+complete 581 Hunt for Yenniku | Bloodscalp trolls west of Grom'gol.
+complete 596 Bloody Bone Necklaces | Bloodscalp trolls.
+complete 568 The Defense of Grom'gol | Raptors around Grom'gol.
+complete 570 Mok'thardin's Enchantment | Shadowmaw Claw drops from Elder Shadowmaw Panther and Shadowmaw Panther. Pristine Tigress Fang drops from Stranglethorn Tigress.
+complete 194 Raptor Mastery
+turnin 581 Hunt for Yenniku
+accept 582 Headhunting
+turnin 568 The Defense of Grom'gol
+accept 569 The Defense of Grom'gol
+turnin 596 Bloody Bone Necklaces
+turnin 629 The Vile Reef
+complete 582 Headhunting | Shrunken Head drops from Bloodscalp Headhunter.
+complete 569 The Defense of Grom'gol
+accept 187 Tiger Mastery
+turnin 194 Raptor Mastery
+complete 187 Tiger Mastery
+accept 195 Raptor Mastery
+complete 195 Raptor Mastery
+turnin 195 Raptor Mastery
+turnin 582 Headhunting
+turnin 569 The Defense of Grom'gol
+turnin 570 Mok'thardin's Enchantment
+turnin 187 Tiger Mastery
+accept 192 Panther Mastery
+accept 188 Tiger Mastery
+complete 192 Panther Mastery
+complete 188 Tiger Mastery
+turnin 192 Panther Mastery
+turnin 188 Tiger Mastery
+fp Booty Bay
+accept 605 Singing Blue Shards | Crank Fizzlebub.
+accept 213 Hostile Takeover
+accept 189 Bloodscalp Ears
+complete 605 Singing Blue Shards | Singing Crystal Shard drops from Cold Eye Basilisk, Crystal Spine Basilisk and Stone Maw Basilisk and others.
+accept 577 Some Assembly Required
+turnin 605 Singing Blue Shards
+complete 577 Some Assembly Required | Snapjaw Crocolisk Skin drops from Snapjaw Crocolisk.
+complete 213 Hostile Takeover
+complete 189 Bloodscalp Ears
+turnin 577 Some Assembly Required
+turnin 213 Hostile Takeover
+turnin 189 Bloodscalp Ears
+level 36 | Arathi Highlands starts at 36. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

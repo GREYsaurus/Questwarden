@@ -1,0 +1,23 @@
+# ClassicGuide - Stranglethorn Vale (46-47), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_39_StranglethornVale
+@name Stranglethorn Vale (46-47)
+@faction Alliance
+@levels 46-47
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 5 of 5 on the Alliance route, levels 46-47.
+@next A_40_SearingGorge
+
+travel Stranglethorn Vale
+train
+accept 8551 The Captain's Chest [elite; group; hc=skip]
+complete 8551 The Captain's Chest [elite; group; hc=skip]
+turnin 8551 The Captain's Chest [elite; group; hc=skip]
+accept 608 The Bloodsail Buccaneers
+complete 608 The Bloodsail Buccaneers
+turnin 608 The Bloodsail Buccaneers
+level 47 | Searing Gorge starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

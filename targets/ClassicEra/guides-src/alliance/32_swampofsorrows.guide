@@ -1,0 +1,23 @@
+# ClassicGuide - Swamp of Sorrows (41-42), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_32_SwampofSorrows
+@name Swamp of Sorrows (41-42)
+@faction Alliance
+@levels 41-42
+@zone Swamp of Sorrows
+@chapter Azeroth
+@desc Swamp of Sorrows, visit 1 of 1 on the Alliance route, levels 41-42.
+@next A_33_StranglethornVale
+
+travel Swamp of Sorrows
+accept 1396 Encroaching Wildlife
+note The next quest, Galen's Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1393 Galen's Escape
+complete 1393 Galen's Escape | Escort: stay close; it fails if the NPC dies.
+complete 1396 Encroaching Wildlife
+turnin 1393 Galen's Escape
+turnin 1396 Encroaching Wildlife
+level 42 | Stranglethorn Vale starts at 42. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

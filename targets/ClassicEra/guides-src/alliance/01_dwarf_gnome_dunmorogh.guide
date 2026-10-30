@@ -10,7 +10,7 @@
 @chapter Azeroth
 @start
 @desc Dwarf and gnome starting route. Coldridge Valley to about level 5, then Kharanos, the Barleybrew and Amberstill farms and the eastern pass. Ends at about level 11 at the gate to Loch Modan.
-@next A_LochModan
+@next A_10_Darkshore
 
 accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
 accept Dwarven Outfitters | Sten Stoutarm, in front of Anvilmar.

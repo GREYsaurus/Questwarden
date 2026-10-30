@@ -1,0 +1,59 @@
+# ClassicGuide - Darkshore (20-21), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_12_Darkshore
+@name Darkshore (20-21)
+@faction Alliance
+@levels 20-21
+@zone Darkshore
+@chapter Azeroth
+@desc Darkshore, visit 2 of 3 on the Alliance route, levels 20-21.
+@next A_13_Ashenvale
+
+travel Darkshore
+train
+accept 1716 Devourer of Souls [class=Warlock; race=Human,Gnome]
+note  [group=2] | The next quest, The Absent Minded Prospector, is an escort: pick it up only when you are ready to follow the NPC.
+accept 731 The Absent Minded Prospector [group=2] | Escort quest.
+accept 951 Mathystra Relics
+complete 951 Mathystra Relics
+complete 731 The Absent Minded Prospector [group=2]
+turnin 731 The Absent Minded Prospector
+accept 741 The Absent Minded Prospector [class=Warrior,Rogue,Mage; race=Gnome; optional]
+accept 741 The Absent Minded Prospector [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+accept 741 The Absent Minded Prospector [race=Dwarf,Night Elf; optional]
+accept 741 The Absent Minded Prospector [class=Warlock; race=Human,Gnome; optional]
+turnin 951 Mathystra Relics
+accept 2098 Gyromast's Retrieval [class=Warlock; race=Human,Gnome]
+complete 2098 Gyromast's Retrieval [class=Warlock; race=Human,Gnome] | Top of Gelkak's Key drops from Giant Foreststrider. Middle of Gelkak's Key drops from Greymist Coastrunner, Greymist Raider and Greymist Seer and others.
+turnin 2098 Gyromast's Retrieval [class=Warlock; race=Human,Gnome]
+accept 2078 Gyromast's Revenge [class=Warlock; race=Human,Gnome] | Escort quest: start it when you are ready to follow.
+complete 2078 Gyromast's Revenge [class=Warlock; race=Human,Gnome] | Escort: stay close; it fails if the NPC dies.
+turnin 2078 Gyromast's Revenge [class=Warlock; race=Human,Gnome]
+accept 986 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional]
+accept 986 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+accept 986 A Lost Master [race=Dwarf,Night Elf; optional]
+complete 986 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional] | Fine Moonstalker Pelt drops from Moonstalker Matriarch and Moonstalker Sire.
+complete 986 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Fine Moonstalker Pelt drops from Moonstalker Matriarch and Moonstalker Sire.
+complete 986 A Lost Master [race=Dwarf,Night Elf; optional] | Fine Moonstalker Pelt drops from Moonstalker Matriarch and Moonstalker Sire.
+turnin 986 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional]
+turnin 986 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+turnin 986 A Lost Master [race=Dwarf,Night Elf; optional]
+accept 993 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional]
+accept 993 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+accept 993 A Lost Master [race=Dwarf,Night Elf; optional]
+turnin 993 A Lost Master [class=Warrior,Rogue,Mage; race=Gnome; optional]
+turnin 993 A Lost Master [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+turnin 993 A Lost Master [race=Dwarf,Night Elf; optional]
+note  [class=Warrior,Rogue,Mage; race=Gnome; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
+accept 994 Escape Through Force [class=Warrior,Rogue,Mage; race=Gnome; optional] | Escort quest: start it when you are ready to follow.
+note  [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
+accept 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Escort quest: start it when you are ready to follow.
+note  [race=Dwarf,Night Elf; optional] | The next quest, Escape Through Force, is an escort: pick it up only when you are ready to follow the NPC.
+accept 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Escort quest: start it when you are ready to follow.
+complete 994 Escape Through Force [class=Warrior,Rogue,Mage; race=Gnome; optional] | Escort: stay close; it fails if the NPC dies.
+complete 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Escort: stay close; it fails if the NPC dies.
+complete 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Escort: stay close; it fails if the NPC dies.
+level 21 | Ashenvale starts at 21. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

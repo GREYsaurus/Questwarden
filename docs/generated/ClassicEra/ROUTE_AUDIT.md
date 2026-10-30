@@ -10,12 +10,12 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 |---|---|
 | Routes walked | 80 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
-| Warnings | 156 |
-| Peak quest log (worst route) | 20 / 20 |
-| Reduced-XP pickups (6+ levels below estimate) | 22 |
-| Level-gated pickups | 13 |
-| Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 445 |
+| Warnings | 12 |
+| Peak quest log (worst route) | 15 / 20 |
+| Reduced-XP pickups (6+ levels below estimate) | 35 |
+| Level-gated pickups | 26 |
+| Accepted, never turned in | 2 |
+| Hub revisits (all guides) | 497 |
 
 ## Per guide
 
@@ -23,74 +23,133 @@ No baseline file found.
 
 | Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A_Arathi | 45 | 11 | 267 | 267 | 11 | 0 | 0 | 0 | 1 | 4 |
-| A_Ashenvale | 81 | 24 | 252 | 352 | 13 | 0 | 0 | 0 | 0 | 1 |
-| A_Ashenvale_Late | 27 | 9 | 304 | 304 | 6 | 0 | 4 | 0 | 1 | 0 |
-| A_Badlands | 56 | 17 | 128 | 228 | 5 | 0 | 0 | 0 | 0 | 0 |
-| A_BurningSteppes | 77 | 26 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 29 |
-| A_Darkshore | 208 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 3 |
-| A_Desolace | 85 | 25 | 482 | 507 | 8 | 0 | 1 | 0 | 4 | 0 |
-| A_Duskwood | 188 | 65 | 593 | 1057 | 26 | 0 | 1 | 0 | 1 | 11 |
-| A_Dustwallow | 58 | 17 | 231 | 229 | 5 | 0 | 0 | 0 | 1 | 3 |
+| A_10_Darkshore | 162 | 49 | 250 | 381 | 10 | 0 | 9 | 0 | 1 | 0 |
+| A_11_LochModan | 89 | 28 | 167 | 406 | 4 | 5 | 0 | 0 | 0 | 0 |
+| A_12_Darkshore | 53 | 9 | 222 | 158 | 2 | 0 | 0 | 0 | 4 | 3 |
+| A_13_Ashenvale | 57 | 19 | 90 | 212 | 4 | 0 | 0 | 0 | 1 | 0 |
+| A_14_StonetalonMountains | 27 | 6 | 307 | 307 | 8 | 0 | 0 | 0 | 1 | 0 |
+| A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_16_Ashenvale | 20 | 3 | 158 | 112 | 2 | 0 | 0 | 0 | 0 | 1 |
+| A_17_Wetlands | 84 | 27 | 220 | 270 | 5 | 0 | 2 | 0 | 0 | 0 |
+| A_18_Duskwood | 183 | 64 | 599 | 1040 | 27 | 7 | 0 | 0 | 1 | 9 |
+| A_19_Wetlands | 35 | 12 | 206 | 256 | 3 | 0 | 0 | 0 | 0 | 3 |
+| A_20_Ashenvale | 40 | 10 | 347 | 327 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_21_Wetlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_22_HillsbradFoothills | 63 | 28 | 258 | 483 | 6 | 0 | 0 | 0 | 0 | 9 |
+| A_23_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_24_StranglethornVale | 106 | 38 | 487 | 742 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_25_ShimmeringFlats | 17 | 5 | 15 | 15 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_26_StranglethornVale | 52 | 16 | 997 | 935 | 13 | 0 | 0 | 0 | 0 | 3 |
+| A_27_AlteracMountains | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_28_ArathiHighlands | 53 | 17 | 384 | 384 | 11 | 0 | 0 | 0 | 2 | 4 |
+| A_29_DustwallowMarsh | 53 | 16 | 209 | 206 | 3 | 0 | 0 | 0 | 1 | 0 |
+| A_30_StranglethornVale | 53 | 18 | 385 | 384 | 7 | 0 | 0 | 0 | 0 | 6 |
+| A_31_Badlands | 61 | 18 | 155 | 255 | 7 | 0 | 0 | 0 | 0 | 0 |
+| A_32_SwampofSorrows | 9 | 2 | 114 | 114 | 1 | 0 | 0 | 0 | 1 | 0 |
+| A_33_StranglethornVale | 23 | 4 | 4 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
+| A_34_Desolace | 77 | 25 | 508 | 533 | 9 | 16 | 0 | 0 | 4 | 0 |
+| A_35_Tanaris | 39 | 12 | 82 | 82 | 3 | 0 | 1 | 0 | 0 | 8 |
+| A_36_Feralas | 69 | 22 | 250 | 250 | 9 | 0 | 2 | 0 | 2 | 2 |
+| A_37_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_38_Hinterlands | 24 | 4 | 14 | 14 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_39_StranglethornVale | 17 | 2 | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 3 |
+| A_40_SearingGorge | 54 | 18 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
+| A_41_Feralas | 13 | 1 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_42_DustwallowMarsh | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
+| A_43_Tanaris | 30 | 10 | 149 | 149 | 3 | 0 | 0 | 0 | 1 | 3 |
+| A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
+| A_45_BlastedLands | 32 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_46_UnGoroCrater | 42 | 14 | 421 | 421 | 7 | 0 | 0 | 0 | 3 | 0 |
+| A_47_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_48_Felwood | 32 | 11 | 367 | 367 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_49_Winterspring | 27 | 7 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_50_Felwood | 12 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_51_BurningSteppes | 70 | 26 | 244 | 369 | 7 | 0 | 0 | 0 | 4 | 29 |
+| A_52_WesternPlaguelands | 91 | 31 | 635 | 710 | 14 | 1 | 0 | 0 | 0 | 0 |
+| A_53_EasternPlaguelands | 44 | 11 | 502 | 527 | 6 | 0 | 0 | 0 | 1 | 3 |
+| A_54_WesternPlaguelands | 8 | 2 | 57 | 57 | 1 | 0 | 0 | 0 | 0 | 6 |
+| A_55_Felwood | 12 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_56_Azshara | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_57_Tanaris | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_58_UnGoroCrater | 32 | 7 | 432 | 432 | 6 | 0 | 0 | 0 | 1 | 1 |
+| A_59_Silithus | 48 | 13 | 320 | 320 | 9 | 0 | 0 | 0 | 0 | 0 |
+| A_60_EasternPlaguelands | 16 | 5 | 311 | 311 | 3 | 0 | 0 | 0 | 0 | 9 |
+| A_61_Winterspring | 29 | 11 | 198 | 198 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 433 | 17 | 0 | 3 | 0 | 0 | 0 |
-| A_Felwood | 41 | 11 | 430 | 376 | 2 | 0 | 0 | 0 | 0 | 0 |
-| A_Feralas | 73 | 23 | 372 | 372 | 10 | 0 | 0 | 0 | 2 | 2 |
-| A_Hillsbrad | 72 | 27 | 269 | 469 | 6 | 0 | 2 | 0 | 0 | 9 |
-| A_Hinterlands | 28 | 5 | 127 | 127 | 3 | 0 | 0 | 0 | 0 | 3 |
-| A_Human_Elwynn | 194 | 66 | 783 | 647 | 18 | 0 | 0 | 0 | 1 | 2 |
-| A_LochModan | 96 | 26 | 129 | 328 | 4 | 0 | 0 | 0 | 0 | 0 |
+| A_Human_Elwynn | 194 | 66 | 783 | 647 | 18 | 0 | 0 | 1 | 1 | 2 |
 | A_NightElf_Teldrassil | 187 | 65 | 397 | 552 | 19 | 0 | 0 | 0 | 4 | 0 |
-| A_Redridge | 97 | 31 | 220 | 267 | 11 | 0 | 1 | 0 | 0 | 3 |
-| A_Stranglethorn | 170 | 61 | 628 | 877 | 12 | 12 | 0 | 0 | 0 | 3 |
-| A_Stranglethorn_Late | 46 | 17 | 542 | 539 | 7 | 0 | 0 | 0 | 0 | 12 |
-| A_WesternPlaguelands | 92 | 31 | 627 | 702 | 15 | 0 | 0 | 0 | 0 | 6 |
-| A_Westfall | 80 | 27 | 116 | 201 | 7 | 0 | 0 | 0 | 0 | 2 |
-| A_Wetlands | 114 | 40 | 360 | 460 | 9 | 0 | 0 | 0 | 0 | 3 |
-| Both_EasternPlaguelands | 74 | 19 | 609 | 610 | 11 | 0 | 0 | 0 | 2 | 12 |
-| Both_SearingGorge | 67 | 18 | 236 | 202 | 8 | 0 | 0 | 0 | 3 | 3 |
-| Both_Tanaris | 72 | 19 | 207 | 202 | 4 | 0 | 1 | 0 | 1 | 11 |
-| Both_UngoroCrater | 68 | 19 | 497 | 493 | 10 | 0 | 0 | 0 | 3 | 1 |
-| Both_Winterspring | 61 | 20 | 245 | 193 | 7 | 0 | 0 | 0 | 0 | 0 |
-| H_Arathi | 56 | 15 | 215 | 172 | 3 | 0 | 0 | 0 | 0 | 3 |
-| H_Ashenvale | 62 | 18 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 8 |
-| H_Badlands | 40 | 8 | 167 | 167 | 5 | 0 | 0 | 0 | 0 | 0 |
-| H_Barrens | 321 | 106 | 595 | 850 | 34 | 5 | 0 | 0 | 3 | 7 |
-| H_Desolace | 54 | 14 | 282 | 282 | 6 | 0 | 0 | 0 | 2 | 0 |
-| H_Dustwallow | 54 | 16 | 68 | 118 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_Felwood | 44 | 12 | 223 | 223 | 3 | 0 | 0 | 0 | 1 | 0 |
-| H_Feralas | 54 | 14 | 106 | 105 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_Hillsbrad | 53 | 14 | 176 | 176 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_Hinterlands | 63 | 17 | 66 | 66 | 1 | 0 | 0 | 0 | 0 | 0 |
+| H_10_Barrens | 190 | 63 | 421 | 509 | 21 | 0 | 1 | 0 | 0 | 0 |
+| H_11_StonetalonMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_12_Barrens | 133 | 40 | 440 | 479 | 16 | 0 | 2 | 0 | 3 | 7 |
+| H_13_StonetalonMountains | 45 | 18 | 141 | 167 | 1 | 0 | 0 | 0 | 2 | 0 |
+| H_14_SouthernBarrens | 16 | 2 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_15_StonetalonMountains | 20 | 6 | 155 | 155 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_16_SouthernBarrens | 5 | 3 | 28 | 53 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_17_ThousandNeedles | 55 | 18 | 168 | 318 | 3 | 0 | 0 | 0 | 2 | 0 |
+| H_18_Ashenvale | 63 | 19 | 326 | 326 | 6 | 0 | 0 | 0 | 2 | 8 |
+| H_19_StonetalonMountains | 12 | 4 | 93 | 93 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_20_ThousandNeedles | 58 | 16 | 205 | 355 | 4 | 0 | 1 | 0 | 2 | 1 |
+| H_21_HillsbradFoothills | 55 | 18 | 249 | 249 | 3 | 2 | 0 | 0 | 0 | 0 |
+| H_22_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_23_StranglethornVale | 30 | 7 | 185 | 82 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_24_ShimmeringFlats | 19 | 5 | 61 | 87 | 0 | 0 | 0 | 0 | 0 | 3 |
+| H_25_Desolace | 56 | 14 | 408 | 408 | 7 | 0 | 2 | 0 | 2 | 0 |
+| H_26_StranglethornVale | 62 | 17 | 264 | 174 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_27_ArathiHighlands | 69 | 20 | 385 | 343 | 7 | 0 | 0 | 0 | 1 | 3 |
+| H_28_AlteracMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_29_ThousandNeedles | 8 | 3 | 0 | 75 | 0 | 0 | 0 | 0 | 0 | 3 |
+| H_30_DustwallowMarsh | 40 | 12 | 100 | 150 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_31_StranglethornVale | 71 | 21 | 983 | 880 | 20 | 0 | 0 | 0 | 0 | 0 |
+| H_32_Badlands | 45 | 10 | 170 | 170 | 6 | 0 | 0 | 0 | 0 | 0 |
+| H_33_SwampofSorrows | 23 | 6 | 268 | 268 | 4 | 1 | 0 | 0 | 1 | 0 |
+| H_34_StranglethornVale | 23 | 4 | 102 | 60 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_35_DustwallowMarsh | 20 | 6 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_36_Desolace | 19 | 3 | 41 | 41 | 0 | 1 | 0 | 0 | 1 | 0 |
+| H_37_Tanaris | 57 | 15 | 87 | 87 | 3 | 0 | 1 | 0 | 0 | 11 |
+| H_38_Feralas | 49 | 16 | 105 | 105 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_39_Hinterlands | 34 | 10 | 135 | 135 | 0 | 0 | 0 | 0 | 1 | 0 |
+| H_40_StranglethornVale | 10 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_41_SearingGorge | 51 | 17 | 185 | 184 | 4 | 0 | 0 | 0 | 2 | 3 |
+| H_42_SwampofSorrows | 34 | 9 | 149 | 120 | 1 | 0 | 0 | 0 | 2 | 0 |
+| H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_44_Tanaris | 21 | 7 | 140 | 140 | 3 | 0 | 0 | 0 | 1 | 0 |
+| H_45_Azshara | 30 | 7 | 371 | 371 | 7 | 0 | 0 | 0 | 0 | 0 |
+| H_46_Hinterlands | 34 | 8 | 53 | 53 | 1 | 0 | 0 | 0 | 0 | 0 |
+| H_47_BlastedLands | 23 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_48_UnGoroCrater | 63 | 21 | 683 | 683 | 14 | 0 | 0 | 0 | 4 | 1 |
+| H_49_BurningSteppes | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_50_Azshara | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_51_Felwood | 44 | 12 | 223 | 223 | 3 | 1 | 0 | 0 | 1 | 0 |
+| H_52_Winterspring | 33 | 9 | 102 | 102 | 1 | 0 | 2 | 0 | 0 | 0 |
+| H_53_Felwood | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_54_WesternPlaguelands | 76 | 26 | 155 | 405 | 8 | 1 | 0 | 0 | 1 | 0 |
+| H_55_EasternPlaguelands | 67 | 19 | 604 | 629 | 11 | 0 | 0 | 0 | 1 | 12 |
+| H_56_WesternPlaguelands | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
+| H_57_Silithus | 48 | 13 | 407 | 407 | 10 | 0 | 0 | 0 | 0 | 0 |
+| H_58_Winterspring | 14 | 4 | 72 | 72 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 224 | 71 | 458 | 536 | 16 | 0 | 0 | 0 | 1 | 6 |
-| H_Silverpine | 84 | 30 | 322 | 472 | 9 | 0 | 0 | 0 | 1 | 6 |
-| H_Stonetalon | 74 | 28 | 296 | 375 | 14 | 0 | 0 | 0 | 2 | 0 |
-| H_Stranglethorn | 137 | 44 | 853 | 810 | 21 | 5 | 0 | 0 | 0 | 0 |
-| H_Stranglethorn_Late | 19 | 6 | 205 | 205 | 3 | 0 | 0 | 0 | 0 | 0 |
-| H_SwampOfSorrows | 42 | 10 | 319 | 297 | 4 | 0 | 0 | 0 | 1 | 0 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |
-| H_ThousandNeedles | 133 | 41 | 330 | 659 | 12 | 0 | 0 | 0 | 4 | 7 |
-| H_Undead_Tirisfal | 132 | 44 | 166 | 222 | 11 | 0 | 0 | 0 | 0 | 0 |
-| H_WesternPlaguelands | 69 | 23 | 73 | 298 | 5 | 0 | 0 | 0 | 1 | 3 |
+| H_Undead_Tirisfal | 132 | 44 | 166 | 222 | 11 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
 | Route | Peak | At |
 |---|---|---|
-| Orc/ROGUE | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/SHAMAN | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Tauren/DRUID | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Troll/ROGUE | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Troll/SHAMAN | 20 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/HUNTER | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/ROGUE (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/SHAMAN (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/WARLOCK | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Orc/WARRIOR | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Scourge/ROGUE | 19 | H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193] |
-| Tauren/DRUID (Hardcore) | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Tauren/HUNTER | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Tauren/SHAMAN | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
-| Tauren/WARRIOR | 19 | H_Barrens (Tribes at War) [horde/10_barrens.guide:197] |
+| Human/MAGE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/MAGE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/PALADIN | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/PALADIN (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/PRIEST | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/PRIEST (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/ROGUE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/ROGUE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/WARLOCK | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/WARLOCK (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/WARRIOR | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/WARRIOR (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Dwarf/HUNTER | 14 | A_10_Darkshore (Beached Sea Creature) [alliance/10_darkshore.guide:131] |
+| Dwarf/HUNTER (Hardcore) | 14 | A_10_Darkshore (Beached Sea Creature) [alliance/10_darkshore.guide:131] |
+| Dwarf/PALADIN | 14 | A_10_Darkshore (Beached Sea Creature) [alliance/10_darkshore.guide:131] |
 
 ## Errors
 
@@ -98,197 +157,81 @@ None.
 
 ## Warnings
 
-- Human/WARRIOR: A_Westfall (Bartleby the Drunk) [alliance/10_westfall.guide:71]: accepts a quest already turned in
-- Human/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/WARRIOR (Hardcore): A_Westfall (Bartleby the Drunk) [alliance/10_westfall.guide:71]: accepts a quest already turned in
-- Human/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/PALADIN: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PALADIN: A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Human/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/PALADIN (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PALADIN (Hardcore): A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Human/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Human/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Human/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/PRIEST: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/PRIEST (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/MAGE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/MAGE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/WARLOCK: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Human/WARLOCK (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Human/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Orc/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/ROGUE: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/ROGUE (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/SHAMAN: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/SHAMAN (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/WARLOCK: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Orc/WARLOCK (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Dwarf/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/WARRIOR (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/PALADIN: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN: A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/PALADIN (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN (Hardcore): A_Duskwood (The Tome of Valor) [alliance/13_duskwood.guide:28]: turn-in of a quest never accepted on this route
-- Dwarf/PALADIN (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/HUNTER: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/HUNTER (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/ROGUE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/PRIEST: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Dwarf/PRIEST (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Dwarf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/WARRIOR: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/WARRIOR (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/HUNTER: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/HUNTER (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/HUNTER (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/ROGUE: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/ROGUE (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/PRIEST: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/PRIEST (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/DRUID: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/DRUID: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/DRUID: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- NightElf/DRUID (Hardcore): A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:23]: turn-in of a quest never accepted on this route
-- NightElf/DRUID (Hardcore): A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:42]: turn-in of a quest never accepted on this route
-- NightElf/DRUID (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Scourge/WARRIOR: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193]
-- Scourge/ROGUE: quest log peaks at 19/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193]
-- Scourge/ROGUE (Hardcore): quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193]
-- Scourge/PRIEST: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193]
-- Scourge/MAGE: quest log peaks at 18/20 at H_Barrens (Hidden Enemies) [horde/10_barrens.guide:193]
-- Scourge/WARLOCK: quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/SHAMAN: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/SHAMAN (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/DRUID: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Tauren/DRUID (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Gnome/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/WARRIOR (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARRIOR (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE: A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/ROGUE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE (Hardcore): A_Duskwood (Mathias and the Defias) [alliance/13_duskwood.guide:113]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/MAGE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/MAGE: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/MAGE: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/MAGE (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/MAGE (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/MAGE (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/WARLOCK: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK: A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK: A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Gnome/WARLOCK (Hardcore): A_Redridge (Elmore's Task) [alliance/12_redridge.guide:26]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK (Hardcore): A_Duskwood (The Legend of Stalvan) [alliance/13_duskwood.guide:25]: turn-in of a quest never accepted on this route
-- Gnome/WARLOCK (Hardcore): A_BurningSteppes (Felnok Steelspring) [alliance/29_burningsteppes.guide:51]: accepts a quest already turned in
-- Troll/WARRIOR: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/WARRIOR (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/HUNTER: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/HUNTER (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/ROGUE: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/ROGUE (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/PRIEST: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/PRIEST (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/SHAMAN: quest log peaks at 20/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/SHAMAN (Hardcore): quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/MAGE: quest log peaks at 19/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
-- Troll/MAGE (Hardcore): quest log peaks at 18/20 at H_Barrens (Tribes at War) [horde/10_barrens.guide:197]
+- Human/PALADIN: A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:32]: turn-in of a quest never accepted on this route
+- Human/PALADIN (Hardcore): A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:32]: turn-in of a quest never accepted on this route
+- Human/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- Human/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- Dwarf/PALADIN: A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/PALADIN (Hardcore): A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- Dwarf/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- NightElf/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- NightElf/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- Gnome/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
+- Gnome/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:110]: turn-in of a quest never accepted on this route
 
 ## Findings (per guide)
 
-- A_Ashenvale_Late: level-gated pickup: Satyr Slaying! (1032) needs 26, model level 24.9 (quests only: 24) [alliance/06_ashenvale_late.guide:42, NightElf/WARRIOR]
-- A_Ashenvale_Late: level-gated pickup: The Branch of Cenarius (1031) needs 26, model level 24.6 (quests only: 24) [alliance/06_ashenvale_late.guide:36, NightElf/WARRIOR]
-- A_Ashenvale_Late: level-gated pickup: The Howling Vale (1022) needs 25, model level 24.0 (quests only: 24) [alliance/06_ashenvale_late.guide:18, NightElf/WARRIOR]
-- A_Ashenvale_Late: level-gated pickup: Vile Satyr! Dryads in Danger! (1021) needs 26, model level 24.0 (quests only: 24) [alliance/06_ashenvale_late.guide:19, NightElf/WARRIOR]
-- A_Desolace: level-gated pickup: Get Me Out of Here! (6132) needs 34, model level 33.8 (quests only: 33) [alliance/21b_desolace.guide:63, Human/WARRIOR]
-- A_Duskwood: level-gated pickup: The Legend of Stalvan (67) needs 22, model level 21.7 (quests only: 21) [alliance/13_duskwood.guide:87, Human/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Beached Sea Creature (4730) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:35, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Cave Mushrooms (947) needs 12, model level 11.0 (quests only: 11) [alliance/10_darkshore.guide:18, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Fruit of the Sea (1138) needs 15, model level 14.3 (quests only: 13) [alliance/10_darkshore.guide:85, Human/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Onu (948) needs 12, model level 11.2 (quests only: 11) [alliance/10_darkshore.guide:21, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Blackwood Corrupted (4763) needs 15, model level 14.7 (quests only: 13) [alliance/10_darkshore.guide:104, Human/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Master's Glaive (944) needs 12, model level 11.8 (quests only: 11) [alliance/10_darkshore.guide:32, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Tower of Althalaxx (965) needs 13, model level 12.3 (quests only: 11) [alliance/10_darkshore.guide:49, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Twilight Camp (949) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:36, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: WANTED: Murkdeep! (4740) needs 15, model level 14.4 (quests only: 13) [alliance/10_darkshore.guide:94, Human/WARRIOR]
+- A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 17.7
+- A_11_LochModan: reduced-XP quest: Honor Students (6387, level 10) at estimated level 17.2
+- A_11_LochModan: reduced-XP quest: Rat Catching (416, level 11) at estimated level 17.2
+- A_11_LochModan: reduced-XP quest: Ride to Ironforge (6391, level 10) at estimated level 17.3
+- A_11_LochModan: reduced-XP quest: Thelsamar Blood Sausages (418, level 11) at estimated level 17.2
+- A_17_Wetlands: level-gated pickup: Fall of Dun Modr (472) needs 25, model level 24.3 (quests only: 24) [alliance/17_wetlands.guide:19, Human/WARRIOR]
+- A_17_Wetlands: level-gated pickup: Uncovering the Past (299) needs 25, model level 24.6 (quests only: 24) [alliance/17_wetlands.guide:41, Human/WARRIOR]
+- A_18_Duskwood: reduced-XP quest: Aquatic Form (5061, level 16) at estimated level 28.1
+- A_18_Duskwood: reduced-XP quest: Dusky Crab Cakes (93, level 20) at estimated level 28.3
+- A_18_Duskwood: reduced-XP quest: Eight-Legged Menaces (245, level 21) at estimated level 28.1
+- A_18_Duskwood: reduced-XP quest: Jitters' Growling Gut (5, level 20) at estimated level 28.1
+- A_18_Duskwood: reduced-XP quest: Raven Hill (163, level 20) at estimated level 28.1
+- A_18_Duskwood: reduced-XP quest: Return to Jitters (240, level 20) at estimated level 28.8
+- A_18_Duskwood: reduced-XP quest: Wolves at Our Heels (226, level 21) at estimated level 28.2
+- A_34_Desolace: reduced-XP quest: Assault on the Kolkar (1386, level 32) at estimated level 43.3
+- A_34_Desolace: reduced-XP quest: Bodyguard for Hire (5821, level 35) at estimated level 43.2
+- A_34_Desolace: reduced-XP quest: Brutal Politics (1385, level 35) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Centaur Bounty (1387, level 31) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Claim Rackmore's Treasure! (6161, level 36) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Kodo Roundup (5561, level 34) at estimated level 43.2
+- A_34_Desolace: reduced-XP quest: Reagents for Reclaimers Inc. (1458, level 33) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Reagents for Reclaimers Inc. (1459, level 35) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Reclaimers' Business in Desolace (1453, level 33) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Return to Vahlarriel (1440, level 33) at estimated level 43.1
+- A_34_Desolace: reduced-XP quest: Sceptre of Light (5741, level 33) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Search for Tyranis (1439, level 33) at estimated level 43.1
+- A_34_Desolace: reduced-XP quest: Strange Alliance (1382, level 35) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Vahlarriel's Search (1437, level 33) at estimated level 43.0
+- A_34_Desolace: reduced-XP quest: Vahlarriel's Search (1438, level 33) at estimated level 43.1
+- A_34_Desolace: reduced-XP quest: Vahlarriel's Search (1465, level 33) at estimated level 43.0
+- A_35_Tanaris: level-gated pickup: The Dunemaul Compound (5863) needs 44, model level 43.9 (quests only: 43) [alliance/35_tanaris.guide:50, Human/WARRIOR]
+- A_36_Feralas: level-gated pickup: Fuel for the Zapping (7721) needs 45, model level 44.4 (quests only: 44) [alliance/36_feralas.guide:60, Human/WARRIOR]
+- A_36_Feralas: level-gated pickup: Zapped Giants (7003) needs 45, model level 44.4 (quests only: 44) [alliance/36_feralas.guide:58, Human/WARRIOR]
+- A_52_WesternPlaguelands: reduced-XP quest: A Call to Arms: The Plaguelands! (5090, level 50) at estimated level 56.0
 - A_DwarfGnome_DunMorogh: level-gated pickup: Operation Recombobulation (412) needs 7, model level 7.0 (quests only: 5) [alliance/01_dwarf_gnome_dunmorogh.guide:99, Dwarf/WARRIOR]
 - A_DwarfGnome_DunMorogh: level-gated pickup: Rejold's New Brew (415) needs 8, model level 7.9 (quests only: 6) [alliance/01_dwarf_gnome_dunmorogh.guide:115, Dwarf/WARRIOR]
 - A_DwarfGnome_DunMorogh: level-gated pickup: Shimmer Stout (413) needs 8, model level 7.9 (quests only: 6) [alliance/01_dwarf_gnome_dunmorogh.guide:113, Dwarf/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Costly Menace (564) needs 30, model level 29.3 (quests only: 28) [alliance/20_hillsbrad.guide:25, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Encrypted Letter (511) needs 30, model level 29.4 (quests only: 28) [alliance/20_hillsbrad.guide:34, Human/WARRIOR]
-- A_Redridge: level-gated pickup: Solomon's Law (91) needs 17, model level 16.2 (quests only: 16) [alliance/12_redridge.guide:53, Human/WARRIOR]
-- A_Stranglethorn: reduced-XP quest: A Noble Brew (336, level 30) at estimated level 36.2
-- A_Stranglethorn: reduced-XP quest: Supply and Demand (575, level 31) at estimated level 37.0
-- A_Stranglethorn: reduced-XP quest: The Legend of Stalvan (78, level 28) at estimated level 36.1
-- A_Stranglethorn: reduced-XP quest: The Legend of Stalvan (79, level 28) at estimated level 36.2
-- A_Stranglethorn: reduced-XP quest: The Legend of Stalvan (80, level 28) at estimated level 36.2
-- A_Stranglethorn: reduced-XP quest: The Legend of Stalvan (97, level 28) at estimated level 36.2
-- A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1241, level 28) at estimated level 36.3
-- A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1242, level 28) at estimated level 36.8
-- A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1243, level 28) at estimated level 36.8
-- A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1245, level 30) at estimated level 36.2
-- A_Stranglethorn: reduced-XP quest: The Missing Diplomat (1274, level 28) at estimated level 36.0
-- A_Stranglethorn: reduced-XP quest: Welcome to the Jungle (583, level 30) at estimated level 36.3
-- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.1 (quests only: 43) [shared/24_tanaris.guide:61, Human/WARRIOR]
-- H_Barrens: reduced-XP quest: A Sacred Burial (833, level 10) at estimated level 17.2
-- H_Barrens: reduced-XP quest: Forged Steel (1503, level 10) at estimated level 17.3
-- H_Barrens: reduced-XP quest: Path of Defense (1498, level 10) at estimated level 17.3
-- H_Barrens: reduced-XP quest: Preparation for Ceremony (744, level 11) at estimated level 17.1
-- H_Barrens: reduced-XP quest: Veteran Uzzek (1505, level 10) at estimated level 17.1
-- H_Stranglethorn: reduced-XP quest: Investigate the Camp (201, level 32) at estimated level 38.8
-- H_Stranglethorn: reduced-XP quest: Panther Mastery (190, level 31) at estimated level 38.0
-- H_Stranglethorn: reduced-XP quest: Supply and Demand (575, level 31) at estimated level 38.8
-- H_Stranglethorn: reduced-XP quest: Tiger Mastery (185, level 31) at estimated level 38.0
-- H_Stranglethorn: reduced-XP quest: Welcome to the Jungle (583, level 30) at estimated level 38.0
+- A_Human_Elwynn: accepted but never turned in on the route: 109 Report to Gryan Stoutmantle
+- H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:56, Scourge/WARRIOR]
+- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 19.1 (quests only: 17) [horde/12_barrens.guide:119, Orc/WARLOCK]
+- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 19.0 (quests only: 17) [horde/12_barrens.guide:116, Troll/PRIEST]
+- H_20_ThousandNeedles: level-gated pickup: Load Lightening (1176) needs 29, model level 28.9 (quests only: 28) [horde/20_thousandneedles.guide:52, Orc/WARRIOR]
+- H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.3
+- H_21_HillsbradFoothills: reduced-XP quest: WANTED: Syndicate Personnel (549, level 22) at estimated level 29.3
+- H_25_Desolace: level-gated pickup: Bone Collector (5501) needs 33, model level 32.7 (quests only: 32) [horde/25_desolace.guide:55, Orc/WARRIOR]
+- H_25_Desolace: level-gated pickup: Get Me Out of Here! (6132) needs 34, model level 32.7 (quests only: 32) [horde/25_desolace.guide:57, Orc/WARRIOR]
+- H_33_SwampofSorrows: reduced-XP quest: Draenethyst Crystals (1389, level 35) at estimated level 41.0
+- H_36_Desolace: reduced-XP quest: Gizelton Caravan (5943, level 38) at estimated level 44.0
+- H_37_Tanaris: level-gated pickup: Thistleshrub Valley (3362) needs 45, model level 44.5 (quests only: 44) [horde/37_tanaris.guide:58, Orc/WARRIOR]
+- H_51_Felwood: reduced-XP quest: Timbermaw Ally (8460, level 48) at estimated level 54.0
+- H_52_Winterspring: level-gated pickup: A Little Luck (6606) needs 55, model level 54.6 (quests only: 54) [horde/52_winterspring.guide:34, Orc/WARRIOR]
+- H_52_Winterspring: level-gated pickup: Luck Be With You (969) needs 55, model level 54.6 (quests only: 54) [horde/52_winterspring.guide:35, Orc/WARRIOR]
+- H_54_WesternPlaguelands: reduced-XP quest: A Call to Arms: The Plaguelands! (5094, level 50) at estimated level 56.0
+- H_Undead_Tirisfal: accepted but never turned in on the route: 445 Delivery to Silverpine Forest

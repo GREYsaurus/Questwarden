@@ -12,7 +12,7 @@
 @chapter Azeroth
 @start
 @desc Orc and troll starting route. The Valley of Trials to about 6, then Razor Hill, Sen'jin Village, the Echo Isles, Tiragarde Keep and Skull Rock, with class quests and trainers in Orgrimmar. Ends at 12 at the Barrens border.
-@next H_Barrens
+@next H_10_Barrens
 
 accept 790 Sarkoth | Hana'zua, wounded near the canyon to the south.
 complete 790 Sarkoth [mark=skull] | Sarkoth is a large scorpid north-west of Hana'zua.

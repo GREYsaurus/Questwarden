@@ -1,0 +1,24 @@
+# ClassicGuide - Stranglethorn Vale (47), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_40_StranglethornVale
+@name Stranglethorn Vale (47)
+@faction Horde
+@levels 47-47
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 5 of 5 on the Horde route, levels 47.
+@next H_41_SearingGorge
+
+travel Stranglethorn Vale
+accept 586 Speaking with Gan'zulah
+complete 586 Speaking with Gan'zulah
+turnin 586 Speaking with Gan'zulah
+accept 588 The Fate of Yenniku
+turnin 588 The Fate of Yenniku
+accept 589 The Singing Crystals
+complete 589 The Singing Crystals
+turnin 589 The Singing Crystals
+level 47 | Searing Gorge starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

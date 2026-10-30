@@ -1,0 +1,58 @@
+# ClassicGuide - Stranglethorn Vale (36-37), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_26_StranglethornVale
+@name Stranglethorn Vale (36-37)
+@faction Alliance
+@levels 36-37
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 2 of 5 on the Alliance route, levels 36-37.
+@next A_27_AlteracMountains
+
+travel Stranglethorn Vale
+train
+accept 210 Krazek's Cookery
+accept 195 Raptor Mastery
+complete 195 Raptor Mastery
+turnin 195 Raptor Mastery
+accept 192 Panther Mastery
+accept 574 Special Forces
+complete 574 Special Forces | Kurzen Commandos and Headshrinkers.
+turnin 574 Special Forces
+accept 213 Hostile Takeover
+accept 616 The Haunted Isle
+turnin 210 Krazek's Cookery
+turnin 616 The Haunted Isle
+accept 577 Some Assembly Required
+complete 577 Some Assembly Required | Snapjaw Crocolisks.
+turnin 577 Some Assembly Required
+complete 192 Panther Mastery | Shadowmaw Panthers.
+accept 328 The Hidden Key
+complete 213 Hostile Takeover
+turnin 213 Hostile Takeover
+turnin 328 The Hidden Key
+turnin 192 Panther Mastery
+accept 188 Tiger Mastery
+complete 188 Tiger Mastery
+accept 578 The Stone of the Tides
+accept 628 Excelsior [elite; group; hc=skip]
+turnin 188 Tiger Mastery [optional]
+complete 628 Excelsior [elite; group; hc=skip]
+accept 207 Kurzen's Mystery
+accept 329 The Spy Revealed!
+complete 207 Kurzen's Mystery
+turnin 628 Excelsior [elite; group; hc=skip]
+turnin 578 The Stone of the Tides
+turnin 207 Kurzen's Mystery
+turnin 329 The Spy Revealed!
+accept 330 Patrol Schedules
+accept 601 Water Elementals
+complete 601 Water Elementals
+turnin 330 Patrol Schedules
+turnin 601 Water Elementals
+accept 331 Report to Doren
+turnin 331 Report to Doren
+level 37 | Alterac Mountains starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

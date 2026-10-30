@@ -1,0 +1,23 @@
+# ClassicGuide - Azshara (52-53), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_47_Azshara
+@name Azshara (52-53)
+@faction Alliance
+@levels 52-53
+@zone Azshara
+@chapter Azeroth
+@desc Azshara, visit 2 of 3 on the Alliance route, levels 52-53.
+@next A_48_Felwood
+
+travel Azshara
+train
+accept 3601 Kim'jael Indeed!
+complete 3601 Kim'jael Indeed!
+turnin 3601 Kim'jael Indeed!
+accept 5534 Kim'jael's "Missing" Equipment
+complete 5534 Kim'jael's "Missing" Equipment
+turnin 5534 Kim'jael's "Missing" Equipment
+level 53 | Felwood starts at 53. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

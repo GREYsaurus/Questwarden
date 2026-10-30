@@ -1,0 +1,67 @@
+# ClassicGuide - Badlands (40-41), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_31_Badlands
+@name Badlands (40-41)
+@faction Alliance
+@levels 40-41
+@zone Badlands
+@chapter Azeroth
+@desc Badlands, visit 1 of 1 on the Alliance route, levels 40-41.
+@next A_32_SwampofSorrows
+
+travel Badlands
+train
+note From Ironforge fly to Thelsamar and ride south through Loch Modan into the Badlands.
+accept 2418 Power Stones | Rigglefuzz at the camp in the middle of the Badlands.
+accept 705 Pearl Diving
+accept 703 Barbecued Buzzard Wings
+complete 703 Barbecued Buzzard Wings
+turnin 703 Barbecued Buzzard Wings
+accept 710 Study of the Elements: Rock | Lotwil Veriatus, west.
+complete 710 Study of the Elements: Rock | Lesser Rock Elementals around Lotwil's camp.
+turnin 710 Study of the Elements: Rock
+accept 711 Study of the Elements: Rock
+complete 711 Study of the Elements: Rock | Rock Elementals north-west of the camp.
+turnin 711 Study of the Elements: Rock
+accept 719 A Dwarf and His Tools | Prospector Ryedol, east of the middle.
+accept 718 Mirages | Sigrun Ironhew, next to Ryedol.
+accept 720 A Sign of Hope | The Crumpled Map on the ground north of Ryedol.
+complete 705 Pearl Diving
+complete 719 A Dwarf and His Tools | Ryedol's Lucky Pick drops from Shadowforge Tunnelers at Angor Fortress.
+complete 718 Mirages | The Excavation Supply Crate in the north-east hills.
+turnin 720 A Sign of Hope | Prospector Ryedol.
+turnin 719 A Dwarf and His Tools
+turnin 718 Mirages | Sigrun Ironhew.
+accept 721 A Sign of Hope
+accept 733 Scrounging | Scrap Metal from Dustbelcher ogres in the west.
+complete 2418 Power Stones | Shadowforge Surveyors at Agmond's End and around Uldaman's entrance, north.
+turnin 721 A Sign of Hope | Hammertoe Grez at the Uldaman excavation, north.
+accept 722 Amulet of Secrets
+complete 722 Amulet of Secrets | Hammertoe's Amulet drops from Magregan Deepshadow at the Stonesplinter camp just north of Hammertoe.
+turnin 722 Amulet of Secrets
+accept 723 Prospect of Faith
+turnin 723 Prospect of Faith | Prospector Ryedol.
+accept 724 Prospect of Faith | Turned in at Ironforge on your way to Dustwallow.
+complete 733 Scrounging | Dustbelcher ogres in the west.
+turnin 2418 Power Stones | Rigglefuzz.
+turnin 705 Pearl Diving
+turnin 733 Scrounging | Sigrun Ironhew.
+accept 712 Study of the Elements: Rock [optional] | Needs level 42 to kill the Greater Rock Elementals comfortably.
+complete 712 Study of the Elements: Rock [optional] | Bracers of Rock Binding from Greater Rock Elementals in the far south-west.
+turnin 712 Study of the Elements: Rock [optional]
+note Ride back north to Thelsamar and fly to Ironforge.
+turnin 724 Prospect of Faith [zone=Ironforge] | Historian Karnik, Hall of Explorers.
+accept 725 Passing Word of a Threat [zone=Ironforge]
+turnin 725 Passing Word of a Threat [zone=Ironforge] | Advisor Belgrum, same hall.
+accept 726 Passing Word of a Threat [zone=Ironforge]
+turnin 726 Passing Word of a Threat [zone=Ironforge] | Historian Karnik.
+accept 732 Tremors of the Earth
+accept 706 Fiery Blaze Enchantments
+complete 706 Fiery Blaze Enchantments
+complete 732 Tremors of the Earth
+turnin 706 Fiery Blaze Enchantments
+turnin 732 Tremors of the Earth
+level 41 | Swamp of Sorrows starts at 41. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

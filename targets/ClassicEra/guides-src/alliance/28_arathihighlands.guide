@@ -1,0 +1,67 @@
+# ClassicGuide - Arathi Highlands (37-38), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_28_ArathiHighlands
+@name Arathi Highlands (37-38)
+@faction Alliance
+@levels 37-38
+@zone Arathi Highlands
+@chapter Azeroth
+@desc Arathi Highlands, visit 2 of 2 on the Alliance route, levels 37-38.
+@next A_29_DustwallowMarsh
+
+travel Arathi Highlands
+accept 642 The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
+complete 642 The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent Shards.
+turnin 642 The Princess Trapped
+accept 651 Stones of Binding
+fp Refuge Pointe
+accept 684 Wanted!  Marez Cowl [elite; group=3; optional]
+accept 691 Worth Its Weight in Gold
+accept 658 Hints of a New Plague?
+complete 691 Worth Its Weight in Gold
+turnin 691 Worth Its Weight in Gold
+complete 658 Hints of a New Plague?
+accept 685 Wanted!  Otto and Falconcrest [elite; group=3; optional]
+turnin 658 Hints of a New Plague?
+accept 657 Hints of a New Plague?
+turnin 657 Hints of a New Plague?
+accept 682 Stromgarde Badges
+note The next quest, Hints of a New Plague?, is an escort: pick it up only when you are ready to follow the NPC.
+accept 660 Hints of a New Plague?
+complete 660 Hints of a New Plague? | Escort: stay close; it fails if the NPC dies.
+complete 682 Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
+turnin 682 Stromgarde Badges
+turnin 660 Hints of a New Plague?
+complete 684 Wanted!  Marez Cowl [elite; group=3; optional] | Marez's Head drops from Marez Cowl.
+complete 685 Wanted!  Otto and Falconcrest [elite; group=3; optional] | Otto's Head drops from Otto. Falconcrest's Head drops from Lord Falconcrest.
+turnin 684 Wanted!  Marez Cowl [optional]
+turnin 685 Wanted!  Otto and Falconcrest [optional]
+complete 651 Stones of Binding | Collect the three Cresting, Thundering and Burning keys at the stones.
+turnin 651 Stones of Binding
+accept 652 Breaking the Keystone
+complete 652 Breaking the Keystone | Rod of Order drops from Fozruk.
+turnin 652 Breaking the Keystone
+accept 663 Land Ho!
+accept 693 Wand over Fist
+complete 693 Wand over Fist
+turnin 663 Land Ho!
+turnin 693 Wand over Fist
+note The next quest, Sunken Treasure, is an escort: pick it up only when you are ready to follow the NPC.
+accept 665 Sunken Treasure
+complete 665 Sunken Treasure | Escort: stay close; it fails if the NPC dies.
+accept 664 Drowned Sorrows
+accept 662 Deep Sea Salvage
+complete 662 Deep Sea Salvage
+complete 664 Drowned Sorrows
+turnin 662 Deep Sea Salvage
+turnin 664 Drowned Sorrows
+turnin 665 Sunken Treasure
+accept 666 Sunken Treasure
+complete 666 Sunken Treasure
+turnin 666 Sunken Treasure
+accept 668 Sunken Treasure
+turnin 668 Sunken Treasure
+level 38 | Dustwallow Marsh starts at 38. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

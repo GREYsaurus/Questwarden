@@ -1,0 +1,64 @@
+# ClassicGuide - Thousand Needles (28-29), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_20_ThousandNeedles
+@name Thousand Needles (28-29)
+@faction Horde
+@levels 28-29
+@zone Thousand Needles
+@chapter Azeroth
+@desc Thousand Needles, visit 2 of 4 on the Horde route, levels 28-29.
+@next H_21_HillsbradFoothills
+
+travel Thousand Needles
+train
+accept 1196 The Sacred Flame [optional]
+accept 857 The Tear of the Moons [optional]
+complete 857 The Tear of the Moons [optional] | Tear of the Moons: loot General Twinbraid's Strongbox.
+turnin 857 The Tear of the Moons [optional] | Turned in at The Barrens.
+accept 5147 Wanted - Arnak Grimtotem [optional]
+turnin 1196 The Sacred Flame [optional]
+accept 4767 Wind Rider | Elu.
+accept 1150 Test of Endurance [optional]
+complete 5147 Wanted - Arnak Grimtotem [optional] | Arnak's Hoof drops from Arnak Grimtotem.
+note  [optional] | The next quest, Free at Last, is an escort: pick it up only when you are ready to follow the NPC.
+accept 4904 Free at Last [optional] | Escort quest: start it when you are ready to follow.
+complete 4767 Wind Rider | Highperch Wyvern Egg: loot Highperch Wyvern Egg.
+note  [optional] | The next quest, Homeward Bound, is an escort: pick it up only when you are ready to follow the NPC.
+accept 4770 Homeward Bound [optional] | Escort quest: start it when you are ready to follow.
+accept 5151 Hypercapacitor Gizmo | Wizlo Bearingshiner.
+complete 5151 Hypercapacitor Gizmo | Hypercapacitor Gizmo drops from Enraged Panther.
+turnin 5151 Hypercapacitor Gizmo
+complete 4770 Homeward Bound [optional] | Escort: stay close; it fails if the NPC dies.
+complete 1150 Test of Endurance [optional] | Grenka's Claw drops from Grenka Bloodscreech.
+turnin 4770 Homeward Bound [optional]
+turnin 6561 Blackfathom Villainy [dungeon=Blackfathom Deeps; optional]
+complete 4904 Free at Last [optional] | Escort: stay close; it fails if the NPC dies.
+turnin 1150 Test of Endurance [optional]
+accept 1151 Test of Strength [optional]
+complete 1151 Test of Strength [optional] | Fragments of Rok'Alim drops from Rok'Alim the Pounder.
+turnin 1151 Test of Strength [optional]
+accept 1104 Salt Flat Venom | Fizzle Brassbolts, Shimmering Flats.
+accept 1105 Hardened Shells | Wizzle Brassbolts.
+accept 1110 Rocket Car Parts | Kravel Koalbeard.
+accept 1153 A New Ore Sample
+complete 1153 A New Ore Sample | Unrefined Ore Sample drops from Gibblesnik, Gravelsnout Digger and Gravelsnout Surveyor.
+turnin 1153 A New Ore Sample | Turned in at The Barrens.
+turnin 4904 Free at Last [optional]
+turnin 5147 Wanted - Arnak Grimtotem [optional]
+turnin 4767 Wind Rider
+accept 1176 Load Lightening | Pozzik.
+complete 1104 Salt Flat Venom | Scorpids on the salt flats.
+complete 1105 Hardened Shells | Hardened Tortoise Shell drops from Sparkleshell Borer, Sparkleshell Snapper and Sparkleshell Tortoise.
+complete 1110 Rocket Car Parts | Parts scattered on the flats.
+complete 1176 Load Lightening | Saltstone gazers and crawlers.
+turnin 1176 Load Lightening
+turnin 1104 Salt Flat Venom
+turnin 1105 Hardened Shells
+turnin 1110 Rocket Car Parts
+accept 1197 The Sacred Flame
+complete 1197 The Sacred Flame
+turnin 1197 The Sacred Flame
+level 29 | Hillsbrad Foothills starts at 29. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

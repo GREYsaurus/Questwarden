@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="H_Tauren_Mulgore", name="Camp Narache & Mulgore", faction="Horde", chapter="Azeroth",
   minLevel=1, maxLevel=11, zone=215, zoneName="Mulgore", start=true, races={"Tauren"},
   desc="Tauren starting route. Camp Narache and Red Cloud Mesa to about 6, then Bloodhoof Village, the Winterhoof and Thunderhorn totems, the Venture Co. mine and Thunder Bluff. Ends at about 11, heading into the Barrens.",
-  next={{id="H_Barrens"},},
+  next={{id="H_10_Barrens"},},
   steps={
     {"accept",q=752,title="A Humble Task",npc="Chief Hawkwind",z=215,x=44.2,y=76.1,text="Chief Hawkwind.",v=1},
     {"turnin",q=752,title="A Humble Task",npc="Greatmother Hawkwind",z=215,x=50,y=81.2,text="Greatmother Hawkwind at the well.",v=1},

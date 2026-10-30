@@ -1,0 +1,91 @@
+faction,quest,title,reason
+Alliance,1638,A Warrior's Training,no accept visit to Westfall late enough for level 10
+Alliance,5635,Desperate Prayer,no accept visit to Westfall late enough for level 10
+Alliance,1685,Gakin's Summons,no accept visit to Westfall late enough for level 10
+Alliance,64,The Forgotten Heirloom,no accept visit to Westfall late enough for level 9
+Alliance,36,Westfall Stew,no accept visit to Westfall late enough for level 9
+Alliance,151,Poor Old Blanchy,no accept visit to Westfall late enough for level 9
+Alliance,38,Westfall Stew,"needs one of [36], all dropped"
+Alliance,22,Goretusk Liver Pie,no accept visit to Westfall late enough for level 9
+Alliance,6181,A Swift Message,no accept visit to Westfall late enough for level 10
+Alliance,109,Report to Gryan Stoutmantle,no turnin visit to Westfall
+Alliance,12,The People's Militia,no accept visit to Westfall late enough for level 9
+Alliance,102,Patrolling Westfall,no accept visit to Westfall late enough for level 8
+Alliance,6281,Continue to Stormwind,"needs one of [6181], all dropped"
+Alliance,153,Red Leather Bandanas,no accept visit to Westfall late enough for level 10
+Alliance,13,The People's Militia,"needs one of [12], all dropped"
+Alliance,14,The People's Militia,"needs one of [13], all dropped"
+Alliance,65,The Defias Brotherhood,no accept visit to Westfall late enough for level 14
+Alliance,9,The Killing Fields,no accept visit to Westfall late enough for level 8
+Alliance,184,Furlbrow's Deed,no accept visit to Westfall late enough for level 8
+Alliance,61,Shipment to Stormwind,no turnin visit to Westfall
+Alliance,103,Keeper of the Flame,no accept visit to Westfall late enough for level 10
+Alliance,152,The Coast Isn't Clear,no accept visit to Westfall late enough for level 10
+Alliance,104,The Coastal Menace,no accept visit to Westfall late enough for level 15
+Alliance,1639,Bartleby the Drunk,no accept visit to Westfall late enough for level 10
+Alliance,1665,Bartleby's Mug,no accept visit to Westfall late enough for level 10
+Alliance,1097,Elmore's Task,no accept visit to Westfall late enough for level 9
+Alliance,123,The Collector,no accept visit to Westfall late enough for level 7
+Alliance,1642,The Tome of Divinity,no accept visit to Redridge Mountains late enough for level 12
+Alliance,1643,The Tome of Divinity,"needs one of [1642], all dropped"
+Alliance,244,Encroaching Gnolls,no accept visit to Redridge Mountains late enough for level 11
+Alliance,2281,Redridge Rendezvous,no accept visit to Redridge Mountains late enough for level 16
+Alliance,1644,The Tome of Divinity,"needs one of [1643], all dropped"
+Alliance,1780,The Tome of Divinity,"needs one of [1644], all dropped"
+Alliance,1781,The Tome of Divinity,"needs one of [1780], all dropped"
+Alliance,2040,Underground Assault,no accept visit to Redridge Mountains late enough for level 15
+Alliance,6661,Deeprun Rat Roundup,no accept visit to Redridge Mountains late enough for level 10
+Alliance,246,Assessing the Threat,"needs one of [244], all dropped"
+Alliance,1738,Heartswood,no turnin visit to Redridge Mountains
+Alliance,125,The Lost Tools,no accept visit to Redridge Mountains late enough for level 15
+Alliance,118,The Price of Shoes,no accept visit to Redridge Mountains late enough for level 14
+Alliance,169,Wanted: Gath'Ilzogg,no accept visit to Redridge Mountains late enough for level 15
+Alliance,180,Wanted: Lieutenant Fangore,no accept visit to Redridge Mountains late enough for level 15
+Alliance,92,Redridge Goulash,no accept visit to Redridge Mountains late enough for level 15
+Alliance,116,Dry Times,no accept visit to Redridge Mountains late enough for level 12
+Alliance,129,A Free Lunch,no accept visit to Redridge Mountains late enough for level 12
+Alliance,91,Solomon's Law,no accept visit to Redridge Mountains late enough for level 17
+Alliance,119,Return to Verner,"needs one of [118], all dropped"
+Alliance,89,The Everstill Bridge,"needs one of [125], all dropped"
+Alliance,3741,Hilary's Necklace,no accept visit to Redridge Mountains late enough for level 12
+Alliance,2282,Alther's Mill,"needs one of [2281], all dropped"
+Alliance,130,Visit the Herbalist,"needs one of [129], all dropped"
+Alliance,131,Delivering Daffodils,"needs one of [130], all dropped"
+Alliance,127,Selling Fish,no accept visit to Redridge Mountains late enough for level 16
+Alliance,124,A Baying of Gnolls,"needs one of [119], all dropped"
+Alliance,126,Howling in the Hills,"needs one of [124], all dropped"
+Alliance,20,Blackrock Menace,no accept visit to Redridge Mountains late enough for level 18
+Alliance,19,Tharil'zun,"needs one of [20], all dropped"
+Alliance,115,Shadow Magic,"needs one of [20], all dropped"
+Alliance,1457,The Karnitol Shipwreck,no turnin visit to Badlands
+Alliance,4810,Return to Tinkee,no turnin visit to Burning Steppes
+Horde,445,Delivery to Silverpine Forest,no turnin visit to Silverpine Forest
+Horde,447,A Recipe For Death,no accept visit to Silverpine Forest late enough for level 9
+Horde,428,Lost Deathstalkers,no accept visit to Silverpine Forest late enough for level 10
+Horde,6321,Supplying the Sepulcher,no accept visit to Silverpine Forest late enough for level 10
+Horde,437,The Dead Fields,no accept visit to Silverpine Forest late enough for level 10
+Horde,421,Prove Your Worth,no accept visit to Silverpine Forest late enough for level 9
+Horde,477,Border Crossings,no accept visit to Silverpine Forest late enough for level 10
+Horde,429,Wild Hearts,no accept visit to Silverpine Forest late enough for level 10
+Horde,430,Return to Quinn,"needs one of [429], all dropped"
+Horde,425,Ivar the Foul,"needs one of [430], all dropped"
+Horde,435,Escorting Erland,no accept visit to Silverpine Forest late enough for level 10
+Horde,449,The Deathstalkers' Report,"needs one of [435], all dropped"
+Horde,422,Arugal's Folly,"needs one of [421], all dropped"
+Horde,438,The Decrepit Ferry,"needs one of [437], all dropped"
+Horde,5725,The Power to Destroy...,no accept visit to Silverpine Forest late enough for level 9
+Horde,450,A Recipe For Death,"needs one of [447], all dropped"
+Horde,478,Maps and Runes,"needs one of [477], all dropped"
+Horde,439,Rot Hide Clues,"needs one of [438], all dropped"
+Horde,440,The Engraved Ring,"needs one of [439], all dropped"
+Horde,443,Rot Hide Ichor,"needs one of [439], all dropped"
+Horde,481,Dalar's Analysis,"needs one of [478], all dropped"
+Horde,482,Dalaran's Intentions,"needs one of [481], all dropped"
+Horde,479,Ambermill Investigations,"needs one of [482], all dropped"
+Horde,423,Arugal's Folly,"needs one of [422], all dropped"
+Horde,444,Rot Hide Origins,"needs one of [443], all dropped"
+Horde,446,Thule Ravenclaw,"needs one of [444], all dropped"
+Horde,448,Report to Hadrec,"needs one of [446], all dropped"
+Horde,480,The Weaver,"needs one of [479], all dropped"
+Horde,442,Assault on Fenris Isle,"needs one of [448], all dropped"
+Horde,424,Arugal's Folly,"needs one of [423], all dropped"

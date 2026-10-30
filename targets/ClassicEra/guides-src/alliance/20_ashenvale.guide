@@ -1,0 +1,46 @@
+# ClassicGuide - Ashenvale (30), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_20_Ashenvale
+@name Ashenvale (30)
+@faction Alliance
+@levels 30-30
+@zone Ashenvale
+@chapter Azeroth
+@desc Ashenvale, visit 3 of 3 on the Alliance route, levels 30.
+@next A_21_Wetlands
+
+travel Ashenvale
+train
+accept 1026 Raene's Cleansing
+complete 1026 Raene's Cleansing
+turnin 1026 Raene's Cleansing
+accept 1035 Fallen Sky Lake
+complete 1035 Fallen Sky Lake
+turnin 1035 Fallen Sky Lake
+note Back in Ashenvale for the higher-level quests.
+accept 4581 Kayneth Stillwind
+accept 1022 The Howling Vale
+accept 1021 Vile Satyr! Dryads in Danger!
+accept 1140 The Tower of Althalaxx
+accept 1011 Forsaken Diseases
+complete 1140 The Tower of Althalaxx
+complete 1011 Forsaken Diseases
+complete 1022 The Howling Vale
+turnin 1140 The Tower of Althalaxx
+turnin 1022 The Howling Vale
+turnin 1021 Vile Satyr! Dryads in Danger!
+turnin 1011 Forsaken Diseases
+turnin 4581 Kayneth Stillwind
+accept 1012 Insane Druids
+accept 1031 The Branch of Cenarius
+complete 1031 The Branch of Cenarius
+complete 1012 Insane Druids
+turnin 1012 Insane Druids
+turnin 1031 The Branch of Cenarius
+accept 1032 Satyr Slaying!
+complete 1032 Satyr Slaying!
+turnin 1032 Satyr Slaying!
+level 30 | Wetlands starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

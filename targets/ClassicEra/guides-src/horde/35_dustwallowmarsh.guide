@@ -1,0 +1,34 @@
+# ClassicGuide - Dustwallow Marsh (43-44), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_35_DustwallowMarsh
+@name Dustwallow Marsh (43-44)
+@faction Horde
+@levels 43-44
+@zone Dustwallow Marsh
+@chapter Azeroth
+@desc Dustwallow Marsh, visit 2 of 3 on the Horde route, levels 43-44.
+@next H_36_Desolace
+
+travel Dustwallow Marsh
+fp Brackenwall Village
+accept 1169 Identifying the Brood | Draz'Zilb.
+accept 1166 Overlord Mok'Morokk's Concern
+accept 1168 Army of the Black Dragon | Tharg.
+complete 1169 Identifying the Brood | Black dragonspawn in the south.
+complete 1168 Army of the Black Dragon
+complete 1166 Overlord Mok'Morokk's Concern | Mok'Morokk's Snuff: loot Mok'Morokk's Snuff. Mok'Morokk's Grog: loot Mok'Morokk's Grog.
+turnin 1169 Identifying the Brood
+accept 1170 The Brood of Onyxia
+turnin 1166 Overlord Mok'Morokk's Concern
+turnin 1170 The Brood of Onyxia
+accept 1171 The Brood of Onyxia
+turnin 1171 The Brood of Onyxia
+accept 1172 The Brood of Onyxia [hc=skip]
+note  [hc=only] | Hardcore: the eggs lie in the Wyrmbog, close to the dragonkin guarding Onyxia's Lair. Stay on the outer edge, and leave this quest out rather than go deep.
+complete 1172 The Brood of Onyxia [hc=skip] | Destroy the eggs in Wyrmbog.
+turnin 1172 The Brood of Onyxia [hc=skip]
+turnin 1168 Army of the Black Dragon
+level 44 | Desolace starts at 44. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

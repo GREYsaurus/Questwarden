@@ -12,7 +12,7 @@
 @chapter Azeroth
 @start
 @desc Human starting route. Northshire Valley to level 5, then Goldshire, the Stonefield and Maclure farms, Eastvale and Westbrook, with class quests and trainers in Stormwind at 10. Ends at 12.
-@next A_Westfall
+@next A_10_Darkshore
 
 accept A Threat Within
 turnin A Threat Within

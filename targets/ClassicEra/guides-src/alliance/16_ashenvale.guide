@@ -1,0 +1,26 @@
+# ClassicGuide - Ashenvale (24), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_16_Ashenvale
+@name Ashenvale (24)
+@faction Alliance
+@levels 24-24
+@zone Ashenvale
+@chapter Azeroth
+@desc Ashenvale, visit 2 of 3 on the Alliance route, levels 24.
+@next A_17_Wetlands
+
+travel Ashenvale
+train
+accept 1009 Ruuzel
+accept 1054 Culling the Threat
+complete 1009 Ruuzel [group=2] | Ruuzel patrols the island off the strand.
+turnin 1009 Ruuzel
+complete 1054 Culling the Threat
+turnin 1054 Culling the Threat
+accept 1017 Mage Summoner
+complete 1017 Mage Summoner | Sarilus Foulborne camps beside Mystral Lake.
+turnin 1017 Mage Summoner
+level 24 | Wetlands starts at 24. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

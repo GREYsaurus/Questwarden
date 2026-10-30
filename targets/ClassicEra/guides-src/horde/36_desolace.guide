@@ -1,0 +1,25 @@
+# ClassicGuide - Desolace (44), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_36_Desolace
+@name Desolace (44)
+@faction Horde
+@levels 44-44
+@zone Desolace
+@chapter Azeroth
+@desc Desolace, visit 2 of 2 on the Horde route, levels 44.
+@next H_37_Tanaris
+
+travel Desolace
+train
+turnin 5361 Family Tree [optional]
+note The next quest, Gizelton Caravan, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5943 Gizelton Caravan
+complete 5943 Gizelton Caravan | Escort: stay close; it fails if the NPC dies.
+turnin 5943 Gizelton Caravan
+accept 7028 Twisted Evils
+complete 7028 Twisted Evils
+turnin 7028 Twisted Evils
+level 44 | Tanaris starts at 44. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

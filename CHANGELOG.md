@@ -83,8 +83,23 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - ***Gyromast's Revenge*** keeps its label. You lead the robot back, even though the data has no escort flag.
   - **Escort wording now also covers** "help … escape" and "must survive". That brings in *Therylune's Escape* and *Freedom for All Creatures*, which now have their notes.
   - **The Deadmines' Defias Brotherhood chain is still out.** Its escort is now allowed, but the chain goes back and forth between Westfall and Redridge, and the Alliance route doesn't return to Westfall.
+- **Routes rebuilt to the maintainer's zone order** (`targets/ClassicEra/zone-order.json`; `tools/research/zone_order.py`).
+  - **Structure:** after the race start zones, every stop in the order is its own guide: 52 Alliance visits, 49 Horde visits, levels 12 to 60.
+    - Stonetalon, Stranglethorn, Felwood and Azshara come back several times.
+    - New zones: Silithus, Blasted Lands, Azshara and Alterac, plus Alliance visits to Stonetalon, Shimmering Flats and Swamp of Sorrows.
+    - The route ends in Winterspring at 60.
+  - **How the old content moved:** every quest step went, with its flags and notes, to the first visit of its zone that fits the quest's level and comes after its prerequisites. Steps keep their old order within a visit.
+  - **Quests picked up only in a race's start zone** keep their later steps for that race (`[race=...]`).
+  - **Dropped, because the order doesn't visit those zones:** Westfall, Redridge and Silverpine, and the quests that depend on them (`docs/generated/ClassicEra/zone-order-dropped.csv`).
+  - **New quests:** `zone_guide.py --fill` added about 81 unused Classic quests to the visits, in route order.
+    - Silithus: 13 for each faction.
+    - Blasted Lands: 7 each.
+    - Others include Horde Azshara, both factions' Arathi return visits and Alliance Stonetalon.
+    - The fill now judges "already done" by the actual `@next` path, not by level band.
+  - **Levels:** each visit ends with a `level` step for the next stop's first level, with a note that the order expects grinding or a dungeon there. Quests now carry about 28 levels after the start zones. The model leaves about 20 levels to grinding and dungeons (Alliance 20.1, Horde 20.3), down from about 25. Level-gated pickups: 26.
+  - **Fixed:** the Duskwood *The Legend of Stalvan* (66) had a turn-in without a pickup. Madame Eva's pickup is added.
 
-Tested offline: ClassicEra build all passes (80 route walks, Speed and Hardcore: 0 errors, quest log peak 20/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

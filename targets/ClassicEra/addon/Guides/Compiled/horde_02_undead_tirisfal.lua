@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="H_Undead_Tirisfal", name="Deathknell & Tirisfal Glades", faction="Horde", chapter="Azeroth",
   minLevel=1, maxLevel=11, zone=85, zoneName="Tirisfal Glades", start=true, races={"Scourge"},
   desc="Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11, heading to Silverpine Forest.",
-  next={{id="H_Silverpine"},},
+  next={{id="H_10_Barrens"},},
   steps={
     {"accept",q=363,title="Rude Awakening",npc="Undertaker Mordo",z=85,x=30.2,y=71.6,text="Undertaker Mordo.",v=1},
     {"turnin",q=363,title="Rude Awakening",npc="Shadow Priest Sarvis",z=85,x=30.8,y=66.2,text="Shadow Priest Sarvis.",v=1},

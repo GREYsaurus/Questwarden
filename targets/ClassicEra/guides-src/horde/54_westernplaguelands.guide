@@ -1,0 +1,82 @@
+# ClassicGuide - Western Plaguelands (56), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_54_WesternPlaguelands
+@name Western Plaguelands (56)
+@faction Horde
+@levels 56-56
+@zone Western Plaguelands
+@chapter Azeroth
+@desc Western Plaguelands, visit 1 of 2 on the Horde route, levels 56.
+@next H_55_EasternPlaguelands
+
+travel Western Plaguelands
+train
+accept 5094 A Call to Arms: The Plaguelands! [zone=Undercity] | Harbinger Balthazad in the Undercity (Warcaller Gorlach in Orgrimmar has the same quest). Needed for the Bulwark chain.
+turnin 5094 A Call to Arms: The Plaguelands! [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
+turnin 6029 The Everlook Report [zone=Tirisfal Glades; optional] | Argent Officer Garush, the Bulwark (from Winterspring).
+accept 5096 Scarlet Diversions [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
+complete 5096 Scarlet Diversions | Plant the banner at the Scarlet camp in the north and kill Scarlet troops.
+turnin 5096 Scarlet Diversions [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5098 All Along the Watchtowers [zone=Tirisfal Glades] | High Executor Derrington.
+accept 5228 The Scourge Cauldrons [zone=Tirisfal Glades]
+turnin 5228 The Scourge Cauldrons [zone=Tirisfal Glades] | Shadow Priestess Vandis.
+accept 5229 Target: Felstone Field [zone=Tirisfal Glades]
+complete 5229 Target: Felstone Field | The cauldron at Felstone Field; kill the Cauldron Lord for the key.
+turnin 5229 Target: Felstone Field
+accept 5230 Return to the Bulwark
+complete 5098 All Along the Watchtowers | Mark the three watchtowers in Andorhal with the torch.
+accept 4971 A Matter of Time | Chromie in the ruined inn at Andorhal.
+accept 5401 Argent Dawn Commission
+turnin 5401 Argent Dawn Commission
+complete 4971 A Matter of Time | Use the Temporal Displacer by the silos in Andorhal and kill the Temporal Parasites that appear.
+turnin 4971 A Matter of Time
+accept 4972 Counting Out Time
+complete 4972 Counting Out Time | Andorhal Watches from the small lockboxes in the Andorhal houses.
+turnin 4972 Counting Out Time
+turnin 5230 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+turnin 5098 All Along the Watchtowers [zone=Tirisfal Glades]
+accept 5231 Target: Dalson's Tears [zone=Tirisfal Glades]
+complete 5231 Target: Dalson's Tears | The cauldron at Dalson's Tears.
+turnin 5231 Target: Dalson's Tears
+accept 5058 Mrs. Dalson's Diary [optional] | The diary in the Dalson farmhouse.
+turnin 5058 Mrs. Dalson's Diary [optional]
+accept 5060 Locked Away | The locked cabinet in the farmhouse.
+complete 5060 Locked Away | Farmer Dalson, upstairs in the barn, drops the cabinet key.
+turnin 5060 Locked Away
+accept 5232 Return to the Bulwark
+turnin 5232 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5233 Target: Writhing Haunt [zone=Tirisfal Glades]
+complete 5233 Target: Writhing Haunt | The cauldron at the Writhing Haunt.
+accept 4984 The Wildlife Suffers Too | Mulgris Deepriver, the Weeping Cave.
+complete 4984 The Wildlife Suffers Too | Diseased wolves.
+turnin 4984 The Wildlife Suffers Too
+accept 4985 The Wildlife Suffers Too
+complete 4985 The Wildlife Suffers Too | Diseased Grizzlies.
+turnin 4985 The Wildlife Suffers Too
+turnin 5233 Target: Writhing Haunt
+accept 5234 Return to the Bulwark
+accept 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Mickey Levine, the Bulwark.
+complete 5901 A Plague Upon Thee | Termite barrels at the Northridge Lumber Camp.
+turnin 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+turnin 5234 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5235 Target: Gahrron's Withering [zone=Tirisfal Glades]
+complete 5235 Target: Gahrron's Withering | The cauldron at Gahrron's Withering.
+turnin 5235 Target: Gahrron's Withering
+accept 5236 Return to the Bulwark
+turnin 5236 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5238 Mission Accomplished! [zone=Tirisfal Glades]
+turnin 5238 Mission Accomplished! [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5021 Better Late Than Never
+accept 6004 Unfinished Business
+complete 6004 Unfinished Business
+turnin 5021 Better Late Than Never
+turnin 6004 Unfinished Business
+accept 6023 Unfinished Business
+complete 6023 Unfinished Business
+turnin 6023 Unfinished Business
+accept 6025 Unfinished Business
+turnin 6025 Unfinished Business
+level 56 | Eastern Plaguelands starts at 56. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

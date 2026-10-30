@@ -1,0 +1,34 @@
+# ClassicGuide - Stonetalon Mountains (23-25), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_15_StonetalonMountains
+@name Stonetalon Mountains (23-25)
+@faction Horde
+@levels 23-25
+@zone Stonetalon Mountains
+@chapter Azeroth
+@desc Stonetalon Mountains, visit 3 of 4 on the Horde route, levels 23-25.
+@next H_16_SouthernBarrens
+
+travel Stonetalon Mountains
+accept 1058 Jin'Zil's Forest Magic | Witch Doctor Jin'Zil, Malaka'jin (south).
+accept 1087 Cenarius' Legacy | Braelyn Firehand.
+accept 6282 Harpies Threaten | Maggran Earthbinder, Sun Rock Retreat.
+accept 6393 Elemental War
+complete 6282 Harpies Threaten | Bloodfury harpies on the ridge east of Sun Rock.
+complete 1058 Jin'Zil's Forest Magic | Venture Co. operators and Stonetalon creatures.
+complete 1087 Cenarius' Legacy
+turnin 1087 Cenarius' Legacy
+accept 6381 New Life
+turnin 6282 Harpies Threaten
+accept 6283 Bloodfury Bloodline
+complete 6283 Bloodfury Bloodline
+complete 6393 Elemental War
+turnin 6283 Bloodfury Bloodline
+turnin 6393 Elemental War
+complete 6381 New Life
+turnin 1058 Jin'Zil's Forest Magic
+turnin 6381 New Life
+level 25 | Southern Barrens starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

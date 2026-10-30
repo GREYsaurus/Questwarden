@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="A_DwarfGnome_DunMorogh", name="Coldridge Valley & Dun Morogh", faction="Alliance", chapter="Azeroth",
   minLevel=1, maxLevel=11, zone=1, zoneName="Dun Morogh", start=true, races={"Dwarf","Gnome"},
   desc="Dwarf and gnome starting route. Coldridge Valley to about level 5, then Kharanos, the Barleybrew and Amberstill farms and the eastern pass. Ends at about level 11 at the gate to Loch Modan.",
-  next={{id="A_LochModan"},},
+  next={{id="A_10_Darkshore"},},
   steps={
     {"accept",q=183,title="The Boar Hunter",npc="Talin Keeneye",z=1,x=22.6,y=71.4,text="Talin Keeneye, west of Anvilmar.",v=1},
     {"accept",q=179,title="Dwarven Outfitters",npc="Sten Stoutarm",z=1,x=29.9,y=71.2,text="Sten Stoutarm, in front of Anvilmar.",v=1},

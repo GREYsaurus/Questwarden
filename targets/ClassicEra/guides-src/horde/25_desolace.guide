@@ -1,0 +1,62 @@
+# ClassicGuide - Desolace (32-34), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_25_Desolace
+@name Desolace (32-34)
+@faction Horde
+@levels 32-34
+@zone Desolace
+@chapter Azeroth
+@desc Desolace, visit 1 of 2 on the Horde route, levels 32-34.
+@next H_26_StranglethornVale
+
+travel Desolace
+train
+note From Freewind Post fly to the Crossroads and ride west through Stonetalon Mountains (or fly to Sun Rock Retreat if you have it) and take the road south into Desolace. Ghost Walker Post is in the middle of the zone.
+accept 1365 Khan Dez'hepah | Felgur Twocuts, Ghost Walker Post.
+accept 1367 Magram Alliance
+accept 1368 Gelkis Alliance
+complete 1367 Magram Alliance
+complete 1368 Gelkis Alliance
+accept 1434 Befouled by Satyr | Takata Steelblade.
+accept 5561 Kodo Roundup | Smeed Scrabblescrew at the caravan camp just east of Ghost Walker Post.
+note The next quest, Bodyguard for Hire, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5821 Bodyguard for Hire
+complete 5821 Bodyguard for Hire | Escort: stay close; it fails if the NPC dies.
+turnin 5821 Bodyguard for Hire
+turnin 1367 Magram Alliance
+complete 5561 Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard (south of Ghost Walker Post) and lead them back to Smeed.
+turnin 5561 Kodo Roundup
+complete 1365 Khan Dez'hepah | Khan Dez'hepah in the Kolkar village, east.
+turnin 1365 Khan Dez'hepah | Ghost Walker Post.
+accept 1366 Centaur Bounty | Felgur Twocuts. Needs Khan Dez'hepah turned in.
+complete 1366 Centaur Bounty | Centaur Ears from the Kolkar back in the eastern village.
+complete 1434 Befouled by Satyr | Hatefury satyrs at Sargeron, north of the Kolkar village.
+turnin 1366 Centaur Bounty | Ghost Walker Post.
+turnin 1434 Befouled by Satyr
+note Ride south-west to Shadowprey Village on the coast.
+fp Shadowprey Village
+accept 6143 Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
+accept 5763 Hunting in Stranglethorn
+accept 6142 Clam Bait
+turnin 1368 Gelkis Alliance
+accept 5741 Sceptre of Light | Azore Aldamort, the tower on the north-west coast.
+accept 6161 Claim Rackmore's Treasure! | Rackmore's Log by the Karnitol wreck, just south of Azore's tower.
+complete 6142 Clam Bait
+complete 6143 Other Fish to Fry | Slitherblade naga along the north-west coast.
+complete 6161 Claim Rackmore's Treasure! | Silver Key from Drysnap Crawlers on the shore, Golden Key from Slitherblade Naga.
+turnin 6161 Claim Rackmore's Treasure! | Rackmore's Chest on Ranazjar Isle, north-west. Swim across.
+complete 5741 Sceptre of Light | The Sceptre drops from the Burning Blade Seer at the top of the Thunder Axe Fortress tower.
+turnin 5741 Sceptre of Light | Azore Aldamort.
+turnin 6143 Other Fish to Fry | Shadowprey Village.
+turnin 6142 Clam Bait
+accept 5501 Bone Collector
+note The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.
+accept 6132 Get Me Out of Here!
+complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
+complete 5501 Bone Collector
+turnin 6132 Get Me Out of Here!
+turnin 5501 Bone Collector
+level 34 | Stranglethorn Vale starts at 34. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

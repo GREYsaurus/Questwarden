@@ -1,0 +1,20 @@
+# ClassicGuide - Wetlands (30-31), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_21_Wetlands
+@name Wetlands (30-31)
+@faction Alliance
+@levels 30-31
+@zone Wetlands
+@chapter Azeroth
+@desc Wetlands, visit 3 of 3 on the Alliance route, levels 30-31.
+@next A_22_HillsbradFoothills
+
+travel Wetlands
+train
+accept 304 A Grim Task | Longbraid the Grim, Dun Modr.
+complete 304 A Grim Task | Balgaras the Foul, at the Dark Iron camp east of Dun Modr.
+turnin 304 A Grim Task
+level 31 | Hillsbrad Foothills starts at 31. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

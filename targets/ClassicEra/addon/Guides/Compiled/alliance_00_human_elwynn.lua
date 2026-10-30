@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="A_Human_Elwynn", name="Northshire & Elwynn Forest", faction="Alliance", chapter="Azeroth",
   minLevel=1, maxLevel=12, zone=12, zoneName="Elwynn Forest", start=true, races={"Human"},
   desc="Human starting route. Northshire Valley to level 5, then Goldshire, the Stonefield and Maclure farms, Eastvale and Westbrook, with class quests and trainers in Stormwind at 10. Ends at 12.",
-  next={{id="A_Westfall"},},
+  next={{id="A_10_Darkshore"},},
   steps={
     {"accept",q=783,title="A Threat Within",npc="Deputy Willem",z=12,x=48.2,y=42.9,v=1},
     {"turnin",q=783,title="A Threat Within",npc="Marshal McBride",z=12,x=48.9,y=41.6,v=1},

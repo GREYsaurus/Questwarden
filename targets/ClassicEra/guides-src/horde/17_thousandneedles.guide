@@ -1,0 +1,69 @@
+# ClassicGuide - Thousand Needles (25-26), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_17_ThousandNeedles
+@name Thousand Needles (25-26)
+@faction Horde
+@levels 25-26
+@zone Thousand Needles
+@chapter Azeroth
+@desc Thousand Needles, visit 1 of 4 on the Horde route, levels 25-26.
+@next H_18_Ashenvale
+
+travel Thousand Needles
+accept 879 Betrayal from Within [optional]
+accept 885 Washte Pawne [class=Shaman; race=Orc,Tauren,Troll; optional]
+accept 885 Washte Pawne [class=Warrior,Hunter,Rogue,Warlock; race=Orc; optional]
+accept 885 Washte Pawne [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll; optional]
+accept 885 Washte Pawne [class=Warrior,Hunter,Druid; race=Tauren; optional]
+accept 885 Washte Pawne [race=Undead; optional]
+complete 879 Betrayal from Within [optional] | Kuz's Skull drops from Kuz. Nak's Skull drops from Nak.
+accept 846 Revenge of Gann [optional]
+complete 846 Revenge of Gann [optional] | Nitroglycerin drops from Bael'dun Officer, Bael'dun Rifleman and Bael'dun Soldier and others. Wood Pulp drops from Bael'dun Officer, Bael'dun Rifleman and Bael'
+turnin 846 Revenge of Gann [optional] | Turned in at The Barrens.
+accept 849 Revenge of Gann [optional]
+complete 849 Revenge of Gann [optional] | Click Bael Modan Flying Machine.
+turnin 849 Revenge of Gann [optional] | Turned in at The Barrens.
+accept 4542 Message to Freewind Post | Brave Moonhorn at the Great Lift, on the Barrens side.
+fp Freewind Post
+accept 4881 Assassination Plot [optional]
+turnin 4542 Message to Freewind Post | Cliffwatcher Longhorn.
+accept 4841 Pacify the Centaur | Cliffwatcher Longhorn.
+complete 4841 Pacify the Centaur | Galak centaur west of Freewind.
+turnin 4841 Pacify the Centaur
+accept 5064 Grimtotem Spying
+accept 4821 Alien Egg | Hagar Lightninghoof.
+complete 4821 Alien Egg | The egg is in the Roguefeather den.
+turnin 4821 Alien Egg
+accept 4865 Serpent Wild
+accept 1149 Test of Faith
+complete 1149 Test of Faith
+turnin 1149 Test of Faith
+complete 1131 Steelsnap | Steelsnap's Rib drops from Steelsnap.
+complete 4865 Serpent Wild | Wind serpents.
+turnin 4865 Serpent Wild
+accept 5062 Sacred Fire | Motega Firemane.
+turnin 4881 Assassination Plot [optional]
+note  [optional] | The next quest, Protect Kanati Greycloud, is an escort: pick it up only when you are ready to follow the NPC.
+accept 4966 Protect Kanati Greycloud [optional] | Escort quest: start it when you are ready to follow.
+turnin 1131 Steelsnap | Turned in at Thunder Bluff.
+complete 4966 Protect Kanati Greycloud [optional] | Escort: stay close; it fails if the NPC dies.
+complete 5062 Sacred Fire | Incendia Agave: loot Incendia Agave.
+turnin 5062 Sacred Fire | Turned in at Thunder Bluff.
+accept 5088 Arikara
+turnin 879 Betrayal from Within [optional] | Turned in at The Barrens.
+accept 906 Betrayal from Within [optional]
+turnin 885 Washte Pawne [optional] | Turned in at The Barrens.
+complete 5088 Arikara | Arikara Serpent Skin drops from Arikara. Escort: stay close; it fails if the NPC dies.
+turnin 4966 Protect Kanati Greycloud [optional]
+turnin 5088 Arikara
+turnin 874 Mahren Skyseer [optional] | Turned in at The Barrens.
+complete 5064 Grimtotem Spying | Secret Note #1: loot Document Chest and Pitted Iron Chest. Secret Note #2: loot Document Chest and Pitted Iron Chest.
+accept 873 Isha Awak [optional]
+complete 873 Isha Awak [optional] | Heart of Isha Awak drops from Isha Awak.
+turnin 873 Isha Awak [optional] | Turned in at The Barrens.
+turnin 906 Betrayal from Within [optional] | Turned in at The Barrens.
+turnin 5064 Grimtotem Spying
+level 26 | Ashenvale starts at 26. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

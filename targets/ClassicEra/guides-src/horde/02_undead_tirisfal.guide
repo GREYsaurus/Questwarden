@@ -10,7 +10,7 @@
 @chapter Azeroth
 @start
 @desc Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11, heading to Silverpine Forest.
-@next H_Silverpine
+@next H_10_Barrens
 
 accept Rude Awakening | Undertaker Mordo.
 turnin Rude Awakening | Shadow Priest Sarvis.

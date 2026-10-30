@@ -1,0 +1,46 @@
+# ClassicGuide - Dustwallow Marsh (38), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_30_DustwallowMarsh
+@name Dustwallow Marsh (38)
+@faction Horde
+@levels 38-38
+@zone Dustwallow Marsh
+@chapter Azeroth
+@desc Dustwallow Marsh, visit 1 of 3 on the Horde route, levels 38.
+@next H_31_StranglethornVale
+
+travel Dustwallow Marsh
+train
+accept 1269 Lieutenant Paval Reethe [optional]
+accept 1251 The Black Shield | The black shield lies at the Shady Rest Inn too.
+accept 1268 Suspicious Hoofprints | The hoofprints are at the Shady Rest Inn.
+turnin 1268 Suspicious Hoofprints
+turnin 1269 Lieutenant Paval Reethe [optional]
+turnin 1251 The Black Shield
+accept 1321 The Black Shield
+complete 1321 The Black Shield
+turnin 1321 The Black Shield
+accept 1322 The Black Shield
+turnin 1322 The Black Shield
+accept 1323 The Black Shield
+complete 1323 The Black Shield
+turnin 1323 The Black Shield
+accept 1276 The Black Shield
+accept 1238 The Lost Report
+turnin 1276 The Black Shield | Turned in at Thunder Bluff.
+accept 1201 Theramore Spies | Nazeer Bloodpike.
+turnin 1238 The Lost Report
+complete 1201 Theramore Spies | Theramore infiltrators around Brackenwall.
+turnin 1201 Theramore Spies
+accept 1202 The Theramore Docks
+complete 1202 The Theramore Docks | Captain's Documents: loot Captain's Footlocker.
+turnin 1202 The Theramore Docks
+accept 1239 The Severed Head
+accept 1177 Hungry!
+complete 1177 Hungry!
+turnin 1239 The Severed Head
+turnin 1177 Hungry!
+level 38 | Stranglethorn Vale starts at 38. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

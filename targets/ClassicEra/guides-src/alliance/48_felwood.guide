@@ -1,0 +1,46 @@
+# ClassicGuide - Felwood (53-54), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_48_Felwood
+@name Felwood (53-54)
+@faction Alliance
+@levels 53-54
+@zone Felwood
+@chapter Azeroth
+@desc Felwood, visit 1 of 3 on the Alliance route, levels 53-54.
+@next A_49_Winterspring
+
+travel Felwood
+accept 8461 Deadwood of the North | Nafien.
+complete 8461 Deadwood of the North | Deadwood furbolgs in northern Felwood.
+turnin 8461 Deadwood of the North
+accept 8465 Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.
+accept 4421 The Corruption of the Jadefire | Eridan Bluewind.
+complete 4421 The Corruption of the Jadefire | Jadefire satyrs at Jadefire Glen.
+turnin 4421 The Corruption of the Jadefire
+accept 4906 Further Corruption
+complete 4906 Further Corruption | Xavathras, Jadefire Glen.
+turnin 4906 Further Corruption
+accept 5156 Verifying the Corruption | Taronn Redfeather.
+complete 5156 Verifying the Corruption | Explore the area north of Shatter Scar Vale.
+turnin 5156 Verifying the Corruption
+accept 5155 Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.
+complete 5155 Forces of Jaedenar | Jaedenar cultists.
+turnin 5155 Forces of Jaedenar
+accept 5157 Collection of the Corrupt Water
+complete 5157 Collection of the Corrupt Water | Fill the vessel at the corrupted moonwell in Jaedenar.
+turnin 5157 Collection of the Corrupt Water
+fp Talonbranch Glade
+accept 8460 Timbermaw Ally | Grazle, Timbermaw Hold area.
+turnin 8460 Timbermaw Ally
+accept 4101 Cleansing Felwood | Arathandris Silversky.
+accept 8462 Speak to Nafien
+complete 4101 Cleansing Felwood | Cenarion Plant Salve - gather from Felwood.
+turnin 4101 Cleansing Felwood
+turnin 8462 Speak to Nafien
+accept 5882 Salve via Hunting | Arathandris Silversky. Needs Cleansing Felwood turned in.
+complete 5882 Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
+turnin 5882 Salve via Hunting
+level 54 | Winterspring starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

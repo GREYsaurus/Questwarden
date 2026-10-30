@@ -1,0 +1,19 @@
+# ClassicGuide - Southern Barrens (25), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_16_SouthernBarrens
+@name Southern Barrens (25)
+@faction Horde
+@levels 25-25
+@zone The Barrens
+@chapter Azeroth
+@desc Southern Barrens, visit 4 of 4 on the Horde route, levels 25.
+@next H_17_ThousandNeedles
+
+travel The Barrens
+accept 874 Mahren Skyseer [optional]
+accept 1095 Further Instructions
+accept 1131 Steelsnap | Needs level 20. If you are lower, {name} skips it and moves on.
+level 25 | Thousand Needles starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

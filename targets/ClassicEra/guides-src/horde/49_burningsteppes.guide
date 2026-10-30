@@ -1,0 +1,17 @@
+# ClassicGuide - Burning Steppes (53), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_49_BurningSteppes
+@name Burning Steppes (53)
+@faction Horde
+@levels 53-53
+@zone Burning Steppes
+@chapter Azeroth
+@desc Burning Steppes, visit 1 of 1 on the Horde route, levels 53.
+@next H_50_Azshara
+
+travel Burning Steppes
+note No quests are written for this visit yet.
+level 53 | Azshara starts at 53. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

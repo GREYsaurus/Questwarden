@@ -1,0 +1,36 @@
+# ClassicGuide - Azshara (50), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_45_Azshara
+@name Azshara (50)
+@faction Horde
+@levels 50-50
+@zone Azshara
+@chapter Azeroth
+@desc Azshara, visit 1 of 2 on the Horde route, levels 50.
+@next H_46_Hinterlands
+
+travel Azshara
+train
+accept 3517 Stealing Knowledge
+accept 5536 A Land Filled with Hatred
+accept 5535 Spiritual Unrest
+accept 3601 Kim'jael Indeed!
+complete 3601 Kim'jael Indeed!
+complete 3517 Stealing Knowledge
+complete 5536 A Land Filled with Hatred
+complete 5535 Spiritual Unrest
+turnin 5536 A Land Filled with Hatred
+turnin 5535 Spiritual Unrest
+turnin 3517 Stealing Knowledge
+turnin 3601 Kim'jael Indeed!
+accept 5534 Kim'jael's "Missing" Equipment
+accept 3561 Delivery to Archmage Xylem
+complete 5534 Kim'jael's "Missing" Equipment
+turnin 3561 Delivery to Archmage Xylem
+turnin 5534 Kim'jael's "Missing" Equipment
+accept 3565 Xylem's Payment to Jediga
+turnin 3565 Xylem's Payment to Jediga
+level 50 | The Hinterlands starts at 50. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

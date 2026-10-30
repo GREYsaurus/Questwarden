@@ -1,0 +1,18 @@
+# ClassicGuide - Felwood (54-55), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_50_Felwood
+@name Felwood (54-55)
+@faction Alliance
+@levels 54-55
+@zone Felwood
+@chapter Azeroth
+@desc Felwood, visit 2 of 3 on the Alliance route, levels 54-55.
+@next A_51_BurningSteppes
+
+travel Felwood
+train
+note No quests are written for this visit yet.
+level 55 | Burning Steppes starts at 55. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,40 @@
+# ClassicGuide - The Hinterlands (50-51), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_46_Hinterlands
+@name The Hinterlands (50-51)
+@faction Horde
+@levels 50-51
+@zone The Hinterlands
+@chapter Azeroth
+@desc The Hinterlands, visit 2 of 2 on the Horde route, levels 50-51.
+@next H_47_BlastedLands
+
+travel The Hinterlands
+train
+accept 7845 Kidnapped Elder Torntusk! | Primal Torntusk.
+accept 7815 Snapjaws, Mon! | Katoom the Angler.
+accept 7849 Separation Anxiety | Huntsman Markhor, Revantusk Village. Needs level 46.
+accept 7850 Dark Vessels | Primal Torntusk. Needs level 46.
+accept 7862 Job Opening: Guard Captain of Revantusk Village | The Call to Arms! board in Revantusk Village.
+accept 7861 Wanted: Vile Priestess Hexx and Her Minions [optional] | Same board. Hexx is guarded; bring help or skip.
+complete 7815 Snapjaws, Mon! | Turtles along the coast.
+complete 7862 Job Opening: Guard Captain of Revantusk Village | Vilebranch Berserkers, Shadow Hunters and Blood Drinkers in the same troll camps.
+complete 7850 Dark Vessels | Vessels of Tainted Blood on the ground in the Vilebranch camps.
+complete 7849 Separation Anxiety | Huntsman Malkhor's Skull and Bones, in the piles of skulls and bones in the Vilebranch camps.
+complete 7861 Wanted: Vile Priestess Hexx and Her Minions [optional] | Vile Priestess Hexx and her Aman'zasi Guards at the temple south of the troll camps.
+turnin 7815 Snapjaws, Mon!
+complete 7845 Kidnapped Elder Torntusk! | Elder Torntusk is held in the Vilebranch area.
+turnin 7845 Kidnapped Elder Torntusk!
+accept 7846 Recover the Key!
+complete 7846 Recover the Key! | Shackle Key drops from Hitah'ya the Keeper.
+turnin 7846 Recover the Key!
+accept 7847 Return to Primal Torntusk
+turnin 7847 Return to Primal Torntusk
+turnin 7862 Job Opening: Guard Captain of Revantusk Village | Primal Torntusk.
+turnin 7850 Dark Vessels
+turnin 7861 Wanted: Vile Priestess Hexx and Her Minions [optional]
+turnin 7849 Separation Anxiety | Huntsman Markhor.
+level 51 | Blasted Lands starts at 51. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

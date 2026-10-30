@@ -1,0 +1,38 @@
+# ClassicGuide - Un'Goro Crater (58), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_58_UnGoroCrater
+@name Un'Goro Crater (58)
+@faction Alliance
+@levels 58-58
+@zone Un'Goro Crater
+@chapter Azeroth
+@desc Un'Goro Crater, visit 2 of 2 on the Alliance route, levels 58.
+@next A_59_Silithus
+
+travel Un'Goro Crater
+train
+accept 4501 Beware of Pterrordax | The sign on the ramp down into the crater.
+accept 4289 The Apes of Un'Goro | Torwa Pathfinder at the east side of the crater.
+complete 4501 Beware of Pterrordax | Pterrordaxes and Frenzied Pterrordaxes.
+accept 4292 The Bait for Lar'korwi
+complete 4292 The Bait for Lar'korwi [group=2] | Lar'korwi's Head drops from Lar'korwi.
+turnin 4292 The Bait for Lar'korwi
+complete 4289 The Apes of Un'Goro | Un'Goro gorillas north-east.
+turnin 4289 The Apes of Un'Goro
+turnin 4501 Beware of Pterrordax
+accept 4492 Lost!
+accept 974 Finding the Source | Needs level 51. Krakle, at the hot springs on the west side of Fire Plume Ridge.
+turnin 4492 Lost!
+complete 974 Finding the Source | Use Krakle's Thermometer at the hottest vent up on Fire Plume Ridge.
+turnin 974 Finding the Source
+note The next quest, A Little Help From My Friends, is an escort: pick it up only when you are ready to follow the NPC.
+accept 4491 A Little Help From My Friends
+complete 4491 A Little Help From My Friends | Escort: stay close; it fails if the NPC dies.
+accept 4301 The Mighty U'cha
+complete 4301 The Mighty U'cha
+turnin 4491 A Little Help From My Friends
+turnin 4301 The Mighty U'cha
+level 58 | Silithus starts at 58. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

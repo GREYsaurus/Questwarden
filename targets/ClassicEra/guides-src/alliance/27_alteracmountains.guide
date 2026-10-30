@@ -1,0 +1,17 @@
+# ClassicGuide - Alterac Mountains (37), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_27_AlteracMountains
+@name Alterac Mountains (37)
+@faction Alliance
+@levels 37-37
+@zone Alterac Mountains
+@chapter Azeroth
+@desc Alterac Mountains, visit 1 of 1 on the Alliance route, levels 37.
+@next A_28_ArathiHighlands
+
+travel Alterac Mountains
+note No quests are written for this visit yet.
+level 37 | Arathi Highlands starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,35 @@
+# ClassicGuide - Tanaris (49-50), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_44_Tanaris
+@name Tanaris (49-50)
+@faction Horde
+@levels 49-50
+@zone Tanaris
+@chapter Azeroth
+@desc Tanaris, visit 2 of 2 on the Horde route, levels 49-50.
+@next H_45_Azshara
+
+travel Tanaris
+accept 10 The Scrimshank Redemption
+complete 10 The Scrimshank Redemption | Inside the Noxious Lair tunnels.
+turnin 10 The Scrimshank Redemption
+accept 110 Insect Part Analysis
+turnin 110 Insect Part Analysis | Alchemist Pestlezugg.
+accept 113 Insect Part Analysis
+turnin 113 Insect Part Analysis
+accept 3161 Gahz'ridian [optional] | Marvon Rivetseeker, south of Gadgetzan. Needs level 43.
+note The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1560 Tooga's Quest
+complete 1560 Tooga's Quest | Escort: stay close; it fails if the NPC dies.
+complete 3161 Gahz'ridian [optional] | Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.
+turnin 3161 Gahz'ridian [optional]
+accept 2605 The Thirsty Goblin [optional] | Marin Noggenfogger, Gadgetzan. Needs level 44.
+turnin 1560 Tooga's Quest
+complete 2605 The Thirsty Goblin [optional] | Laden Dew Glands from Thistleshrub Dew Collectors in the south-west of Tanaris.
+turnin 2605 The Thirsty Goblin [optional]
+accept 2606 In Good Taste
+turnin 2606 In Good Taste
+level 50 | Azshara starts at 50. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

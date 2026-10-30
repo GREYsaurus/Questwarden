@@ -1,0 +1,51 @@
+# ClassicGuide - Stonetalon Mountains (20-21), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_13_StonetalonMountains
+@name Stonetalon Mountains (20-21)
+@faction Horde
+@levels 20-21
+@zone Stonetalon Mountains
+@chapter Azeroth
+@desc Stonetalon Mountains, visit 2 of 4 on the Horde route, levels 20-21.
+@next H_14_SouthernBarrens
+
+travel Stonetalon Mountains
+train
+turnin 1060 Letter to Jin'Zil [optional] | Witch Doctor Jin'Zil, if you took the letter in the Barrens.
+turnin 1510 News of Dogran [class=Warlock; race=Orc,Undead]
+accept 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead]
+turnin 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
+accept 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll]
+complete 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll]
+turnin 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll] | Turned in at The Barrens.
+turnin 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead] | Turned in at The Barrens.
+accept 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead]
+turnin 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead] | Turned in at The Barrens.
+accept 1512 Love's Gift [class=Warlock; race=Orc,Undead]
+note  [class=Shaman; race=Orc,Tauren,Troll] | The next quest, Vorsha the Lasher, is an escort: pick it up only when you are ready to follow the NPC.
+accept 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort quest: start it when you are ready to follow.
+complete 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort: stay close; it fails if the NPC dies.
+turnin 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Ashenvale.
+turnin 1512 Love's Gift [class=Warlock; race=Orc,Undead] | Turned in at Orgrimmar.
+accept 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll]
+turnin 1063 The Elder Crone | Turned in at Thunder Bluff.
+accept 1064 Forsaken Aid [optional]
+turnin 1064 Forsaken Aid [optional] | Turned in at Thunder Bluff.
+turnin 5642 Shadowguard [class=Priest; race=Troll] | Turned in at Orgrimmar.
+turnin 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll] | Turned in at The Barrens.
+accept 6562 Trouble in the Deeps | Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).
+fp Sun Rock Retreat
+turnin 6401 Kaya's Alive
+accept 6301 Cycle of Rebirth
+complete 6301 Cycle of Rebirth
+turnin 6301 Cycle of Rebirth
+turnin 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll]
+accept 1090 Gerenzo's Orders | Piznik at the Windshear mine.
+complete 1090 Gerenzo's Orders | Venture Co. at Windshear Crag.
+turnin 1090 Gerenzo's Orders
+accept 1092 Gerenzo's Orders
+turnin 1092 Gerenzo's Orders
+level 22 | Southern Barrens starts at 22. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

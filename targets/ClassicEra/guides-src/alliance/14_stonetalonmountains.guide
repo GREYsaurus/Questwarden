@@ -1,0 +1,33 @@
+# ClassicGuide - Stonetalon Mountains (22-23), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_14_StonetalonMountains
+@name Stonetalon Mountains (22-23)
+@faction Alliance
+@levels 22-23
+@zone Stonetalon Mountains
+@chapter Azeroth
+@desc Stonetalon Mountains, visit 1 of 1 on the Alliance route, levels 22-23.
+@next A_15_Darkshore
+
+travel Stonetalon Mountains
+train
+accept 1093 Super Reaper 6000
+accept 1085 On Guard in Stonetalon
+accept 1090 Gerenzo's Orders
+accept 1057 Reclaiming the Charred Vale
+complete 1093 Super Reaper 6000
+complete 1090 Gerenzo's Orders
+complete 1057 Reclaiming the Charred Vale
+turnin 1093 Super Reaper 6000
+turnin 1085 On Guard in Stonetalon
+turnin 1090 Gerenzo's Orders
+turnin 1057 Reclaiming the Charred Vale
+accept 1092 Gerenzo's Orders
+accept 1071 A Gnome's Respite
+complete 1071 A Gnome's Respite
+turnin 1092 Gerenzo's Orders
+turnin 1071 A Gnome's Respite
+level 23 | Darkshore starts at 23. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,18 @@
+# ClassicGuide - Tanaris (58), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_57_Tanaris
+@name Tanaris (58)
+@faction Alliance
+@levels 58-58
+@zone Tanaris
+@chapter Azeroth
+@desc Tanaris, visit 3 of 3 on the Alliance route, levels 58.
+@next A_58_UnGoroCrater
+
+travel Tanaris
+train
+note No quests are written for this visit yet.
+level 58 | Un'Goro Crater starts at 58. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

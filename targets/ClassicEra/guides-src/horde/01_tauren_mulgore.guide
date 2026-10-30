@@ -10,7 +10,7 @@
 @chapter Azeroth
 @start
 @desc Tauren starting route. Camp Narache and Red Cloud Mesa to about 6, then Bloodhoof Village, the Winterhoof and Thunderhorn totems, the Venture Co. mine and Thunder Bluff. Ends at about 11, heading into the Barrens.
-@next H_Barrens
+@next H_10_Barrens
 
 accept 752 A Humble Task | Chief Hawkwind.
 turnin 752 A Humble Task | Greatmother Hawkwind at the well.

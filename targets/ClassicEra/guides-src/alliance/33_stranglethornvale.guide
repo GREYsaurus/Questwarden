@@ -1,0 +1,29 @@
+# ClassicGuide - Stranglethorn Vale (42), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_33_StranglethornVale
+@name Stranglethorn Vale (42)
+@faction Alliance
+@levels 42-42
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 4 of 5 on the Alliance route, levels 42.
+@next A_34_Desolace
+
+travel Stranglethorn Vale
+train
+accept 621 Zanzil's Secret
+complete 621 Zanzil's Secret
+accept 609 Voodoo Dues
+turnin 621 Zanzil's Secret
+complete 609 Voodoo Dues
+accept 604 The Bloodsail Buccaneers
+turnin 609 Voodoo Dues
+complete 604 The Bloodsail Buccaneers
+turnin 604 The Bloodsail Buccaneers
+accept 613 Cracking Maury's Foot [elite; group; hc=skip]
+complete 613 Cracking Maury's Foot [elite; group; hc=skip]
+turnin 613 Cracking Maury's Foot [elite; group; hc=skip]
+level 43 | Desolace starts at 43. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,54 @@
+# ClassicGuide - Silithus (58-59), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_59_Silithus
+@name Silithus (58-59)
+@faction Alliance
+@levels 58-59
+@zone Silithus
+@chapter Azeroth
+@desc Silithus, visit 1 of 1 on the Alliance route, levels 58-59.
+@next A_60_EasternPlaguelands
+
+travel Silithus
+train
+accept 8277 Deadly Desert Venom
+accept 8280 Securing the Supply Lines
+accept 8284 The Twilight Mystery
+accept 8318 Secret Communication
+accept 8304 Dearest Natalia
+accept 9419 Scouring the Desert
+complete 9419 Scouring the Desert
+complete 8318 Secret Communication
+complete 8280 Securing the Supply Lines
+complete 8277 Deadly Desert Venom
+complete 8284 The Twilight Mystery
+complete 8304 Dearest Natalia
+turnin 9419 Scouring the Desert
+turnin 8318 Secret Communication
+turnin 8284 The Twilight Mystery
+turnin 8280 Securing the Supply Lines
+turnin 8277 Deadly Desert Venom
+turnin 8304 Dearest Natalia
+accept 8285 The Deserter
+accept 8281 Stepping Up Security
+accept 8278 Noggle's Last Hope
+complete 8281 Stepping Up Security
+complete 8278 Noggle's Last Hope
+turnin 8285 The Deserter
+turnin 8278 Noggle's Last Hope
+turnin 8281 Stepping Up Security
+accept 8282 Noggle's Lost Satchel
+accept 8279 The Twilight Lexicon
+complete 8282 Noggle's Lost Satchel
+complete 8279 The Twilight Lexicon
+turnin 8282 Noggle's Lost Satchel
+turnin 8279 The Twilight Lexicon
+accept 8287 A Terrible Purpose
+accept 8323 True Believers
+complete 8323 True Believers
+turnin 8287 A Terrible Purpose
+turnin 8323 True Believers
+level 59 | Eastern Plaguelands starts at 59. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

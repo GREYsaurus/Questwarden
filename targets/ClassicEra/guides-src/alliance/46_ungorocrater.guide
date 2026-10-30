@@ -1,0 +1,56 @@
+# ClassicGuide - Un'Goro Crater (51-52), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_46_UnGoroCrater
+@name Un'Goro Crater (51-52)
+@faction Alliance
+@levels 51-52
+@zone Un'Goro Crater
+@chapter Azeroth
+@desc Un'Goro Crater, visit 1 of 2 on the Alliance route, levels 51-52.
+@next A_47_Azshara
+
+travel Un'Goro Crater
+accept 4284 Crystals of Power | J.D. Collie.
+accept 3881 Expedition Salvation | Williden Marshal, Marshal's Refuge.
+accept 3883 Alien Ecology | Hol'anyee Marshal.
+accept 3882 Roll the Bones | Spark Nilminer.
+accept 4503 Shizzle's Flyer | Shizzle, Marshal's Refuge.
+accept 4243 Chasing A-Me 01
+accept 4141 Muigin and Larion | Muigin, Marshal's Refuge.
+turnin 4243 Chasing A-Me 01
+accept 4290 The Fare of Lar'korwi
+fp Marshal's Refuge
+complete 4290 The Fare of Lar'korwi | The threshadon carcass is near Torwa.
+turnin 4290 The Fare of Lar'korwi
+accept 4291 The Scent of Lar'korwi
+complete 3881 Expedition Salvation | Supply crates around the crater.
+complete 3883 Alien Ecology | Use the gorishi scent gland on the hive at the Slithering Scar (southwest).
+complete 3882 Roll the Bones | Dinosaur bones on the ground.
+complete 4284 Crystals of Power | Power crystals in the crater.
+complete 4503 Shizzle's Flyer | Webbed scales from Young Diemetradons and Fledgling Pterrordaxes around the crater.
+complete 4141 Muigin and Larion | Bloodpetals from Bloodpetal Lashers, Trappers and Flayers.
+complete 4291 The Scent of Lar'korwi | Raptor nests near the Terror Run.
+turnin 4291 The Scent of Lar'korwi
+turnin 3882 Roll the Bones
+turnin 3883 Alien Ecology
+turnin 3881 Expedition Salvation
+turnin 4284 Crystals of Power
+turnin 4503 Shizzle's Flyer
+turnin 4141 Muigin and Larion
+accept 4285 The Northern Pylon
+accept 4287 The Eastern Pylon
+accept 4288 The Western Pylon
+complete 4285 The Northern Pylon
+complete 4287 The Eastern Pylon
+complete 4288 The Western Pylon
+turnin 4285 The Northern Pylon
+turnin 4287 The Eastern Pylon
+turnin 4288 The Western Pylon
+accept 4321 Making Sense of It
+turnin 4321 Making Sense of It
+accept 3844 It's a Secret to Everybody
+turnin 3844 It's a Secret to Everybody
+level 52 | Azshara starts at 52. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

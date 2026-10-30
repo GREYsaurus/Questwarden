@@ -1,0 +1,139 @@
+# ClassicGuide - The Barrens (16-20), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_12_Barrens
+@name The Barrens (16-20)
+@faction Horde
+@levels 16-20
+@zone The Barrens
+@chapter Azeroth
+@desc The Barrens, visit 2 of 4 on the Horde route, levels 16-20.
+@next H_13_StonetalonMountains
+
+travel The Barrens
+train
+accept 3281 Stolen Silver
+accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
+accept 865 Raptor Horns | Mebok Mizzyrix.
+accept 891 The Guns of Northwatch
+note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
+accept 898 Free From the Hold
+complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.
+turnin 898 Free From the Hold
+complete 891 The Guns of Northwatch
+turnin 891 The Guns of Northwatch
+accept 896 Miner's Fortune [optional]
+accept 959 Trouble at the Docks [elite; group; hc=skip]
+accept 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll] | Needs level 16. If you are lower, {name} skips it and moves on.
+accept 858 Ignition [optional]
+complete 858 Ignition [optional] | Ignition Key drops from Supervisor Lugwizzle.
+turnin 858 Ignition [optional]
+complete 896 Miner's Fortune [optional] | Cats Eye Emerald drops from Boss Copperplug, Venture Co. Enforcer and Venture Co. Overseer.
+complete 865 Raptor Horns | Sunscale Scytheclaws.
+complete 3281 Stolen Silver | Stolen Silver: loot Stolen Silver.
+complete 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Rogue,Warlock; race=Orc] | Deepmoss Egg: loot Deepmoss Eggs.
+complete 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll] | Deepmoss Egg: loot Deepmoss Eggs.
+complete 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Druid; race=Tauren] | Deepmoss Egg: loot Deepmoss Eggs.
+complete 1069 Deepmoss Spider Eggs [race=Undead] | Deepmoss Egg: loot Deepmoss Eggs.
+complete 1069 Deepmoss Spider Eggs [class=Shaman; race=Orc,Tauren,Troll] | Deepmoss Egg: loot Deepmoss Eggs.
+complete 959 Trouble at the Docks [elite; group; hc=skip]
+accept 851 Verog the Dervish
+accept 876 Serena Bloodfeather
+complete 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll] | Southsea Treasure drops from Polly.
+accept 899 Consumed by Hatred | Mankrik, Crossroads.
+accept 1487 Deviate Eradication [dungeon=Wailing Caverns]
+accept 4921 Lost in Battle
+complete 4921 Lost in Battle | Mankrik's wife lies near Blackthorn Ridge.
+accept 878 Tribes at War
+complete 899 Consumed by Hatred
+turnin 3281 Stolen Silver
+turnin 4921 Lost in Battle
+turnin 899 Consumed by Hatred
+note  [optional] | The next quest, The Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 863 The Escape [optional] | Escort quest: start it when you are ready to follow.
+complete 863 The Escape [optional] | Escort: stay close; it fails if the NPC dies.
+turnin 865 Raptor Horns
+turnin 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
+turnin 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
+turnin 1069 Deepmoss Spider Eggs [class=Warrior,Hunter,Druid; race=Tauren]
+turnin 1069 Deepmoss Spider Eggs [race=Undead]
+turnin 1069 Deepmoss Spider Eggs [class=Shaman; race=Orc,Tauren,Troll]
+turnin 896 Miner's Fortune [optional]
+turnin 959 Trouble at the Docks [elite; group; hc=skip]
+turnin 863 The Escape [optional]
+accept 1483 Ziz Fizziks [optional]
+complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
+complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
+complete 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
+complete 878 Tribes at War [race=Undead]
+complete 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
+complete 876 Serena Bloodfeather [group=2]
+complete 851 Verog the Dervish
+accept 3261 Jorn Skyseer
+turnin 876 Serena Bloodfeather
+accept 1060 Letter to Jin'Zil [optional]
+turnin 851 Verog the Dervish
+accept 852 Hezrul Bloodmark
+accept 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
+accept 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
+note  [class=Shaman; race=Orc,Tauren,Troll; optional] | The next quest, Protect Kaya, is an escort: pick it up only when you are ready to follow the NPC.
+accept 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escort quest: start it when you are ready to follow.
+complete 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escort: stay close; it fails if the NPC dies.
+accept 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll]
+complete 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll] | Besseleth's Fang drops from Besseleth.
+turnin 1483 Ziz Fizziks [optional] | Turned in at Stonetalon Mountains.
+accept 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll]
+complete 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Super Reaper 6000 Blueprints drops from Venture Co. Operator.
+complete 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
+turnin 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Stonetalon Mountains.
+accept 1094 Further Instructions
+accept 27 A Lesson to Learn [class=Druid; race=Tauren]
+fp Camp Taurajo
+turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
+turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
+turnin 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
+turnin 878 Tribes at War [race=Undead]
+turnin 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
+accept 883 Lakota'mani [optional]
+turnin 883 Lakota'mani [optional]
+accept 5052 Blood Shards of Agamaggan
+complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
+turnin 3261 Jorn Skyseer | Camp Taurajo.
+complete 5052 Blood Shards of Agamaggan
+accept 882 Ishamuhale
+turnin 5052 Blood Shards of Agamaggan
+complete 882 Ishamuhale
+complete 852 Hezrul Bloodmark
+turnin 882 Ishamuhale
+accept 907 Enraged Thunder Lizards
+complete 907 Enraged Thunder Lizards
+turnin 907 Enraged Thunder Lizards
+accept 913 Cry of the Thunderhawk
+complete 913 Cry of the Thunderhawk
+turnin 913 Cry of the Thunderhawk
+accept 5642 Shadowguard [class=Priest; race=Troll] | Needs level 20. If you are lower, {name} skips it and moves on.
+turnin 1094 Further Instructions
+turnin 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll]
+accept 1510 News of Dogran [class=Warlock; race=Orc,Undead] | Needs level 20. If you are lower, {name} skips it and moves on.
+turnin 852 Hezrul Bloodmark
+accept 6541 Report to Kadrak
+turnin 6541 Report to Kadrak
+accept 4021 Counterattack! [optional]
+complete 4021 Counterattack! [optional] | Piece of Krom'zar's Banner: loot Krom'zar's Banner.
+turnin 4021 Counterattack! [optional]
+complete 1487 Deviate Eradication [dungeon=Wailing Caverns]
+turnin 1487 Deviate Eradication [dungeon=Wailing Caverns]
+turnin 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
+accept 1063 The Elder Crone
+accept 6548 Avenge My Village [class=Shaman; race=Orc,Tauren,Troll]
+complete 6548 Avenge My Village [class=Shaman; race=Orc,Tauren,Troll]
+turnin 6548 Avenge My Village [class=Shaman; race=Orc,Tauren,Troll]
+accept 6629 Kill Grundig Darkcloud [class=Shaman; race=Orc,Tauren,Troll; optional]
+complete 6629 Kill Grundig Darkcloud [class=Shaman; race=Orc,Tauren,Troll; optional]
+turnin 6629 Kill Grundig Darkcloud [class=Shaman; race=Orc,Tauren,Troll; optional]
+turnin 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional]
+accept 6401 Kaya's Alive
+turnin 27 A Lesson to Learn [class=Druid; race=Tauren] | Turned in at Moonglade.
+level 20 | Stonetalon Mountains starts at 20. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

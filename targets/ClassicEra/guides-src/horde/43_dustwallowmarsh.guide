@@ -1,0 +1,17 @@
+# ClassicGuide - Dustwallow Marsh (49), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_43_DustwallowMarsh
+@name Dustwallow Marsh (49)
+@faction Horde
+@levels 49-49
+@zone Dustwallow Marsh
+@chapter Azeroth
+@desc Dustwallow Marsh, visit 3 of 3 on the Horde route, levels 49.
+@next H_44_Tanaris
+
+travel Dustwallow Marsh
+note No quests are written for this visit yet.
+level 49 | Tanaris starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

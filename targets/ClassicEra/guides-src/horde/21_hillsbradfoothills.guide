@@ -1,0 +1,69 @@
+# ClassicGuide - Hillsbrad Foothills (29-30), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_21_HillsbradFoothills
+@name Hillsbrad Foothills (29-30)
+@faction Horde
+@levels 29-30
+@zone Hillsbrad Foothills
+@chapter Azeroth
+@desc Hillsbrad Foothills, visit 1 of 1 on the Horde route, levels 29-30.
+@next H_22_ArathiHighlands
+
+travel Hillsbrad Foothills
+fp Tarren Mill
+accept 496 Elixir of Suffering | Apothecary Lydon.
+accept 1066 Blood of Innocents [optional]
+accept 494 Time To Strike [optional] | Deathguard Lesh.
+accept 527 Battle of Hillsbrad | High Executor Darthalia.
+accept 547 Humbert's Sword
+accept 549 WANTED: Syndicate Personnel
+turnin 494 Time To Strike [optional] | High Executor Darthalia, Tarren Mill.
+complete 549 WANTED: Syndicate Personnel
+complete 527 Battle of Hillsbrad | Hillsbrad farmers and peasants on the farms.
+complete 496 Elixir of Suffering | Hillsbrad farm creatures.
+complete 1066 Blood of Innocents [optional] | Vial of Innocent Blood drops from Syndicate Shadow Mage.
+turnin 527 Battle of Hillsbrad
+turnin 549 WANTED: Syndicate Personnel
+accept 528 Battle of Hillsbrad
+accept 546 Souvenirs of Death | Deathguard Samsa (Classic: only after the first Battle of Hillsbrad).
+accept 567 Dangerous!
+turnin 546 Souvenirs of Death
+turnin 496 Elixir of Suffering
+turnin 1066 Blood of Innocents [optional]
+accept 501 Elixir of Pain
+accept 509 Elixir of Agony
+complete 509 Elixir of Agony
+turnin 509 Elixir of Agony
+complete 546 Souvenirs of Death | Hillsbrad farmers and peasants drop the skulls.
+complete 528 Battle of Hillsbrad
+complete 501 Elixir of Pain | Mountain Lions.
+turnin 501 Elixir of Pain
+accept 502 Elixir of Pain [optional]
+turnin 528 Battle of Hillsbrad
+accept 529 Battle of Hillsbrad
+complete 529 Battle of Hillsbrad
+turnin 529 Battle of Hillsbrad
+accept 532 Battle of Hillsbrad
+complete 532 Battle of Hillsbrad
+turnin 532 Battle of Hillsbrad
+turnin 502 Elixir of Pain [optional]
+complete 547 Humbert's Sword
+complete 567 Dangerous!
+turnin 567 Dangerous!
+turnin 547 Humbert's Sword
+accept 539 Battle of Hillsbrad
+accept 552 Helcular's Revenge
+complete 552 Helcular's Revenge
+complete 539 Battle of Hillsbrad
+turnin 539 Battle of Hillsbrad
+turnin 552 Helcular's Revenge
+accept 553 Helcular's Revenge
+accept 541 Battle of Hillsbrad
+complete 553 Helcular's Revenge
+complete 541 Battle of Hillsbrad
+turnin 553 Helcular's Revenge
+turnin 541 Battle of Hillsbrad
+level 30 | Arathi Highlands starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

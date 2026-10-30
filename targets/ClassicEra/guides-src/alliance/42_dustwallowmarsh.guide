@@ -1,0 +1,19 @@
+# ClassicGuide - Dustwallow Marsh (49), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_42_DustwallowMarsh
+@name Dustwallow Marsh (49)
+@faction Alliance
+@levels 49-49
+@zone Dustwallow Marsh
+@chapter Azeroth
+@desc Dustwallow Marsh, visit 2 of 2 on the Alliance route, levels 49.
+@next A_43_Tanaris
+
+travel Dustwallow Marsh
+accept 2846 Tiara of the Deep [dungeon=Zul'Farrak]
+complete 2846 Tiara of the Deep [dungeon=Zul'Farrak]
+turnin 2846 Tiara of the Deep [dungeon=Zul'Farrak]
+level 49 | Tanaris starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

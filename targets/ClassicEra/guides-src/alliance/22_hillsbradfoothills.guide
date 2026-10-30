@@ -1,0 +1,77 @@
+# ClassicGuide - Hillsbrad Foothills (31-32), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_22_HillsbradFoothills
+@name Hillsbrad Foothills (31-32)
+@faction Alliance
+@levels 31-32
+@zone Hillsbrad Foothills
+@chapter Azeroth
+@desc Hillsbrad Foothills, visit 1 of 1 on the Alliance route, levels 31-32.
+@next A_23_ArathiHighlands
+
+travel Hillsbrad Foothills
+fp Southshore
+accept 536 Down the Coast | Lieutenant Farren Orinelle, Southshore.
+complete 536 Down the Coast | Murlocs on the coast south of Southshore.
+turnin 536 Down the Coast
+accept 559 Farren's Proof
+accept 555 Soothing Turtle Bisque | Chef Jessen.
+complete 555 Soothing Turtle Bisque | Snapjaws along the coast.
+complete 559 Farren's Proof | Murloc heads from Torn Fin murlocs.
+turnin 555 Soothing Turtle Bisque
+turnin 559 Farren's Proof
+accept 560 Farren's Proof
+accept 564 Costly Menace | Darren Malvew.
+complete 564 Costly Menace | Hillsbrad farms; kill the Syndicate.
+turnin 564 Costly Menace
+turnin 637 Sully Balloo's Letter | Turned in at Ironforge.
+accept 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+accept 2924 Essential Artificials [dungeon=Gnomeregan]
+accept 2929 The Grand Betrayal [dungeon=Gnomeregan]
+accept 683 Sara Balloo's Plea
+accept 510 Foreboding Plans
+accept 511 Encrypted Letter | Needs level 30. If you are lower, {name} skips it and moves on.
+turnin 683 Sara Balloo's Plea | Turned in at Ironforge.
+accept 686 A King's Tribute
+accept 505 Syndicate Assassins | Magistrate Henry Maleb, town hall.
+complete 505 Syndicate Assassins | Syndicate camp north-east of Southshore (Durnholde area).
+turnin 505 Syndicate Assassins
+turnin 510 Foreboding Plans
+accept 500 Crushridge Bounty | Marshal Redpath.
+complete 500 Crushridge Bounty | Crushridge ogres north of Southshore.
+turnin 500 Crushridge Bounty
+turnin 560 Farren's Proof | Marshal Redpath.
+accept 561 Farren's Proof
+accept 659 Hints of a New Plague? | Phin Odelic.
+turnin 561 Farren's Proof
+accept 562 Stormwind Ho!
+complete 562 Stormwind Ho! | Daggerspine naga further south.
+turnin 562 Stormwind Ho!
+accept 563 Reassignment
+turnin 538 Southshore [optional]
+turnin 511 Encrypted Letter
+accept 514 Letter to Stormpike [optional] | Needs level 30. If you are lower, {name} skips it and moves on.
+accept 565 Bartolo's Yeti Fur Cloak | Bartolo Ginsetti.
+complete 565 Bartolo's Yeti Fur Cloak | Yetis in the Alterac foothills cave.
+turnin 565 Bartolo's Yeti Fur Cloak
+turnin 514 Letter to Stormpike [optional] | Turned in at Ironforge.
+turnin 474 Defeat Nek'rosh [optional] | Turned in at Wetlands.
+turnin 292 The Eye of Paleth | Turned in at Wetlands.
+accept 293 Cleansing the Eye [optional]
+accept 322 Blessed Arm [optional]
+turnin 321 Lightforge Iron [optional]
+turnin 686 A King's Tribute | Turned in at Ironforge.
+complete 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+complete 2924 Essential Artificials [dungeon=Gnomeregan]
+complete 2929 The Grand Betrayal [dungeon=Gnomeregan]
+turnin 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+turnin 2924 Essential Artificials [dungeon=Gnomeregan]
+turnin 2929 The Grand Betrayal [dungeon=Gnomeregan]
+complete 659 Hints of a New Plague? | Forsaken courier on the road (patrols).
+turnin 659 Hints of a New Plague?
+accept 1658 Crashing the Wickerman Festival
+turnin 1658 Crashing the Wickerman Festival
+level 32 | Arathi Highlands starts at 32. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

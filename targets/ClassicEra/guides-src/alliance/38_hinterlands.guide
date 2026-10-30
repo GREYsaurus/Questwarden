@@ -1,0 +1,30 @@
+# ClassicGuide - The Hinterlands (46), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_38_Hinterlands
+@name The Hinterlands (46)
+@faction Alliance
+@levels 46-46
+@zone The Hinterlands
+@chapter Azeroth
+@desc The Hinterlands, visit 1 of 2 on the Alliance route, levels 46.
+@next A_39_StranglethornVale
+
+travel The Hinterlands
+train
+fp Aerie Peak
+accept 2880 Troll Necklace Bounty | Fraggar Thundermantle.
+accept 2877 Skulk Rock Clean-up
+accept 2988 Witherbark Cages | Gryphon Master Talonaxe.
+complete 2988 Witherbark Cages | Witherbark trolls' cages around the Hinterlands.
+complete 2880 Troll Necklace Bounty | Any Witherbark trolls.
+turnin 2988 Witherbark Cages
+accept 2989 The Altar of Zul
+complete 2989 The Altar of Zul | Explore the altar (trolls are dense here).
+turnin 2989 The Altar of Zul
+turnin 2880 Troll Necklace Bounty
+complete 2877 Skulk Rock Clean-up | Oozes at Skulk Rock.
+turnin 2877 Skulk Rock Clean-up
+level 46 | Stranglethorn Vale starts at 46. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

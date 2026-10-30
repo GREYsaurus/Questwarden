@@ -1,0 +1,67 @@
+# ClassicGuide - Stranglethorn Vale (39-40), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_30_StranglethornVale
+@name Stranglethorn Vale (39-40)
+@faction Alliance
+@levels 39-40
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc Stranglethorn Vale, visit 3 of 5 on the Alliance route, levels 39-40.
+@next A_31_Badlands
+
+travel Stranglethorn Vale
+accept 339 Chapter I
+accept 340 Chapter II
+accept 341 Chapter III
+accept 342 Chapter IV
+complete 339 Chapter I
+complete 340 Chapter II
+complete 341 Chapter III
+complete 342 Chapter IV
+turnin 339 Chapter I
+turnin 340 Chapter II
+turnin 341 Chapter III
+turnin 342 Chapter IV
+accept 606 Scaring Shaky | "Sea Wolf" MacKinley.
+accept 595 The Bloodsail Buccaneers
+accept 600 Venture Company Mining
+complete 606 Scaring Shaky | Mistvale gorillas.
+turnin 606 Scaring Shaky
+turnin 595 The Bloodsail Buccaneers
+accept 607 Return to MacKinley
+accept 597 The Bloodsail Buccaneers
+turnin 607 Return to MacKinley
+turnin 597 The Bloodsail Buccaneers
+complete 600 Venture Company Mining | Venture Co. miners at the mines.
+accept 599 The Bloodsail Buccaneers
+turnin 600 Venture Company Mining
+turnin 599 The Bloodsail Buccaneers
+note Back in Stranglethorn Vale for the higher-level quests.
+accept 576 Keep An Eye Out
+accept 209 Skullsplitter Tusks
+accept 587 Up to Snuff
+accept 196 Raptor Mastery
+accept 193 Panther Mastery [elite; group; hc=skip]
+complete 193 Panther Mastery [elite; group; hc=skip]
+complete 196 Raptor Mastery
+complete 209 Skullsplitter Tusks
+complete 576 Keep An Eye Out
+complete 587 Up to Snuff
+turnin 587 Up to Snuff
+turnin 209 Skullsplitter Tusks
+turnin 576 Keep An Eye Out
+turnin 196 Raptor Mastery
+turnin 193 Panther Mastery [elite; group; hc=skip]
+accept 202 Colonel Kurzen [elite; group; hc=skip]
+complete 202 Colonel Kurzen [elite; group; hc=skip]
+turnin 202 Colonel Kurzen [elite; group; hc=skip]
+accept 205 Troll Witchery
+complete 205 Troll Witchery
+turnin 205 Troll Witchery
+accept 617 Akiris by the Bundle
+complete 617 Akiris by the Bundle
+turnin 617 Akiris by the Bundle
+level 40 | Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -1,0 +1,37 @@
+# ClassicGuide - Blasted Lands (51-52), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide H_47_BlastedLands
+@name Blasted Lands (51-52)
+@faction Horde
+@levels 51-52
+@zone Blasted Lands
+@chapter Azeroth
+@desc Blasted Lands, visit 1 of 1 on the Horde route, levels 51-52.
+@next H_48_UnGoroCrater
+
+travel Blasted Lands
+accept 2603 Vulture's Vigor
+accept 2601 The Basilisk's Bite
+accept 2581 Snickerfang Jowls
+accept 2583 A Boar's Vitality
+accept 2585 The Decisive Striker
+accept 2521 To Serve Kum'isha
+accept 3501 Everything Counts In Large Amounts
+complete 2603 Vulture's Vigor
+complete 2601 The Basilisk's Bite
+complete 2585 The Decisive Striker
+complete 2583 A Boar's Vitality
+complete 2581 Snickerfang Jowls
+complete 2521 To Serve Kum'isha
+complete 3501 Everything Counts In Large Amounts
+turnin 2603 Vulture's Vigor
+turnin 2601 The Basilisk's Bite
+turnin 2581 Snickerfang Jowls
+turnin 2583 A Boar's Vitality
+turnin 2585 The Decisive Striker
+turnin 2521 To Serve Kum'isha
+turnin 3501 Everything Counts In Large Amounts
+level 51 | Un'Goro Crater starts at 51. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="A_NightElf_Teldrassil", name="Shadowglen & Teldrassil", faction="Alliance", chapter="Azeroth",
   minLevel=1, maxLevel=12, zone=141, zoneName="Teldrassil", start=true, races={"NightElf"},
   desc="Night elf starting route. Shadowglen to about level 5, then Dolanaar, the Ban'ethil Barrow Den, Lake Al'Ameth and the Oracle Glade. Ends with the flight to Auberdine for Darkshore.",
-  next={{id="A_Darkshore"},},
+  next={{id="A_10_Darkshore"},},
   steps={
     {"accept",q=456,title="The Balance of Nature",npc="Conservator Ilthalaine",z=141,x=58.7,y=44.3,text="Conservator Ilthalaine, in front of Aldrassil.",v=1},
     {"complete",q=456,title="The Balance of Nature",text="Young Nightsabers and Young Thistle Boars.",v=1},

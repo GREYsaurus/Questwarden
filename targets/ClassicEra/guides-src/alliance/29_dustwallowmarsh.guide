@@ -1,0 +1,59 @@
+# ClassicGuide - Dustwallow Marsh (38-39), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_29_DustwallowMarsh
+@name Dustwallow Marsh (38-39)
+@faction Alliance
+@levels 38-39
+@zone Dustwallow Marsh
+@chapter Azeroth
+@desc Dustwallow Marsh, visit 1 of 2 on the Alliance route, levels 38-39.
+@next A_30_StranglethornVale
+
+travel Dustwallow Marsh
+train
+fp Theramore
+accept 1282 They Call Him Smiling Jim | Guard Byron, at the Theramore gate.
+turnin 1282 They Call Him Smiling Jim | Captain Garran Vimes, Foothold Citadel.
+accept 1204 Mudrock Soup and Bugs | Morgan Stern, by the Theramore docks.
+complete 1204 Mudrock Soup and Bugs | Mudrock tortoises along the Theramore coast.
+turnin 1204 Mudrock Soup and Bugs
+accept 1258 ... and Bugs
+note Ride out along the road west to the burned Shady Rest Inn.
+accept 1252 Lieutenant Paval Reethe | The guard badge lies in the ruins of the inn.
+accept 1253 The Black Shield | The black shield is in the same ruins.
+accept 1284 Suspicious Hoofprints | The hoofprints are beside the inn.
+complete 1258 ... and Bugs | Saltspittle and mire crawlers along the shore.
+accept 1177 Hungry! | Mudcrush Durtfeet, the friendly giant in the north.
+complete 1177 Hungry! | Mirefin murlocs on the northern coast.
+turnin 1177 Hungry!
+note  [optional] | The next quest, Stinky's Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1222 Stinky's Escape [optional] | "Stinky" Ignatz, north of the road. Escort: start it only when you are ready to follow.
+complete 1222 Stinky's Escape [optional] | Stay close; it fails if he dies.
+note  [hc=only] | Hardcore: Stinky's escort draws murlocs and crocolisks in waves. Leave it out unless you are 37 or higher and at full health.
+accept 1219 The Orc Report | The loose dirt beside Swamp Eye Jarl's house.
+turnin 1252 Lieutenant Paval Reethe | Captain Garran Vimes.
+turnin 1253 The Black Shield
+turnin 1284 Suspicious Hoofprints
+turnin 1219 The Orc Report | A Theramore lieutenant outside the citadel.
+accept 1220 Captain Vimes
+turnin 1220 Captain Vimes
+turnin 1258 ... and Bugs | Morgan Stern.
+turnin 1222 Stinky's Escape [optional] | Morgan Stern.
+accept 1259 Lieutenant Paval Reethe | Vimes again.
+turnin 1259 Lieutenant Paval Reethe | Adjutant Tesoran, in the citadel.
+accept 1285 Daelin's Men
+turnin 1285 Daelin's Men | Captain Garran Vimes.
+accept 1286 The Deserters
+accept 1319 The Black Shield
+turnin 1319 The Black Shield | Caz Twosprocket, Theramore.
+accept 1320 The Black Shield
+turnin 1320 The Black Shield | Captain Garran Vimes.
+note  [hc=only] | Hardcore: Balos Jacken's deserters camp on the hill south-west of the inn and stand in groups. Pull them apart before you talk to him.
+turnin 1286 The Deserters | Balos Jacken, the deserters' camp south-west of the Shady Rest Inn.
+accept 1287 The Deserters
+complete 1287 The Deserters
+turnin 1287 The Deserters | Captain Garran Vimes, Theramore.
+level 39 | Stranglethorn Vale starts at 39. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

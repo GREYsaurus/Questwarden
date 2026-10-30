@@ -1,0 +1,31 @@
+# ClassicGuide - Shimmering Flats (33-34), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_25_ShimmeringFlats
+@name Shimmering Flats (33-34)
+@faction Alliance
+@levels 33-34
+@zone Thousand Needles
+@chapter Azeroth
+@desc Shimmering Flats, visit 1 of 1 on the Alliance route, levels 33-34.
+@next A_26_StranglethornVale
+
+travel Thousand Needles
+accept 1105 Hardened Shells
+accept 1104 Salt Flat Venom
+accept 1110 Rocket Car Parts
+accept 1176 Load Lightening
+accept 1175 A Bump in the Road
+complete 1175 A Bump in the Road
+complete 1110 Rocket Car Parts
+complete 1176 Load Lightening
+complete 1104 Salt Flat Venom
+complete 1105 Hardened Shells
+turnin 1176 Load Lightening
+turnin 1105 Hardened Shells
+turnin 1104 Salt Flat Venom
+turnin 1110 Rocket Car Parts
+turnin 1175 A Bump in the Road
+level 36 | Stranglethorn Vale starts at 36. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

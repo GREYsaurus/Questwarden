@@ -1,0 +1,53 @@
+# ClassicGuide - Tanaris (43-44), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
+# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+
+@guide A_35_Tanaris
+@name Tanaris (43-44)
+@faction Alliance
+@levels 43-44
+@zone Tanaris
+@chapter Azeroth
+@desc Tanaris, visit 1 of 3 on the Alliance route, levels 43-44.
+@next A_36_Feralas
+
+travel Tanaris
+fp Gadgetzan
+accept 992 Gadgetzan Water Survey | Senior Surveyor Fizzledowser.
+accept 2781 WANTED: Caliph Scorpidsting [elite; group=3; optional]
+accept 2865 Scarab Shells [dungeon=Zul'Farrak]
+complete 2781 WANTED: Caliph Scorpidsting [elite; group=3; optional] | Caliph Scorpidsting's Head drops from Caliph Scorpidsting.
+turnin 2781 WANTED: Caliph Scorpidsting [optional]
+accept 1690 Wastewander Justice | Chief Engineer Bilgewhizzle, Gadgetzan.
+accept 1707 Water Pouch Bounty | Spigot Operator Luglunket.
+complete 1690 Wastewander Justice | Wastewander bandits east of Gadgetzan.
+complete 1707 Water Pouch Bounty | Same bandits drop Wastewander Water Pouches.
+turnin 1707 Water Pouch Bounty
+complete 992 Gadgetzan Water Survey | Use the tool at the Noxious Lair water hole.
+turnin 1690 Wastewander Justice
+accept 1691 More Wastewander Justice
+complete 1691 More Wastewander Justice
+turnin 1691 More Wastewander Justice
+turnin 992 Gadgetzan Water Survey
+accept 8365 Pirate Hats Ahoy! | Haughty Modiste.
+accept 2875 WANTED: Andre Firebeard | The wanted poster in Gadgetzan. Turned in at Steamwheedle Port.
+accept 8366 Southsea Shakedown | Security Chief Bilgewhizzle at Steamwheedle Port.
+accept 2873 Stoley's Shipment
+complete 8366 Southsea Shakedown | Pirates at Lost Rigger Cove.
+complete 2875 WANTED: Andre Firebeard | Andre Firebeard at Lost Rigger Cove, in the pirate camp on the coast.
+complete 8365 Pirate Hats Ahoy! | Southsea Pirate Hat drops from Southsea Dock Worker, Southsea Freebooter and Southsea Pirate and others.
+turnin 8366 Southsea Shakedown
+turnin 2875 WANTED: Andre Firebeard | Security Chief Bilgewhizzle, Steamwheedle Port.
+turnin 8365 Pirate Hats Ahoy!
+complete 2873 Stoley's Shipment
+accept 3042 Troll Temper [dungeon=Zul'Farrak]
+turnin 2873 Stoley's Shipment
+complete 2865 Scarab Shells [dungeon=Zul'Farrak]
+complete 3042 Troll Temper [dungeon=Zul'Farrak]
+turnin 2865 Scarab Shells [dungeon=Zul'Farrak]
+turnin 3042 Troll Temper [dungeon=Zul'Farrak]
+accept 5863 The Dunemaul Compound
+complete 5863 The Dunemaul Compound
+turnin 5863 The Dunemaul Compound
+level 44 | Feralas starts at 44. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
