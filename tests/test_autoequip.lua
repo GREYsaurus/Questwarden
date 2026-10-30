@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: automatic upgrades, BoE bag markers, equip notifications
+-- ClassicGuide - headless tests: automatic upgrades, BoE bag markers, equip notifications
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -326,7 +326,7 @@ autoT.set(true)
 check(prof().autoEquip == false, "automatic upgrades cannot be switched on without a spec profile")
 ns.char.gearProfile = "warrior_fury_raid"
 autoT.set(true)
-if StaticPopupDialogs and StaticPopupDialogs.TBCGUIDE_CONFIRM then StaticPopupDialogs.TBCGUIDE_CONFIRM.OnAccept() end
+if StaticPopupDialogs and StaticPopupDialogs[ns.key .. "_CONFIRM"] then StaticPopupDialogs[ns.key .. "_CONFIRM"].OnAccept() end
 check(prof().autoEquip == true, "with a spec chosen, switching on asks first and then enables")
 CF.frame:Hide()
 

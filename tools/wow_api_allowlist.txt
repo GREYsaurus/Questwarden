@@ -1,4 +1,4 @@
-﻿# TBCGuide - client globals the add-on is allowed to reference.
+# ClassicGuide - client globals the add-on is allowed to reference.
 # SPDX-License-Identifier: GPL-3.0-only
 #
 # tools/build.ps1 lint fails on any global read that is not a Lua builtin, one of our own
@@ -9,7 +9,7 @@
 #   classic   - modern-API function present in the Classic (1.13+/2.5+) clients
 #   guarded   - may be missing in some builds; every call site checks it exists first
 #   optional  - provided by another add-on; always nil-checked
-# Run /tbcg debug api in the client to confirm availability.
+# Run /cg debug api in the client to confirm availability.
 
 # --- frames / UI (core) ---
 CreateFrame
@@ -149,7 +149,7 @@ QuestLogFrame                     # core frame; guarded (button is skipped if mi
 # Marker.lua detects ADDON_ACTION_BLOCKED/FORBIDDEN and falls back to the secure marker bar.
 SetRaidTarget                     # core; called via Compat (pcall) and from secure macro buttons
 GetRaidTargetIndex                # core
-CombatLogGetCurrentEventInfo      # classic (1.13+/2.5+); guarded; only UNIT_DIED of units TBCGuide marked is read
+CombatLogGetCurrentEventInfo      # classic (1.13+/2.5+); guarded; only UNIT_DIED of units ClassicGuide marked is read
 UnitGUID                          # core
 strsplit                          # core string helper
 UnitIsDead                        # core
@@ -163,7 +163,7 @@ InCombatLockdown                  # core; secure frames are not shown/hidden in 
 
 # --- gear scoring (UI/GearUI.lua, Gear/Gear.lua) ---
 # GetItemStats, GetInventoryItemLink and GetCombatRating are reached through ns.Compat.Has (by name,
-# nil-guarded), so they are not listed as global reads. Run /tbcg debug api to confirm them in the client.
+# nil-guarded), so they are not listed as global reads. Run /cg debug api to confirm them in the client.
 ItemRefTooltip                    # core frame (chat link tooltip); hooked with HookScript only
 
 # --- minimap button (UI/MinimapButton.lua) ---
@@ -229,7 +229,7 @@ SaveBindings                      # core
 GetCurrentBindingSet              # core
 GetContainerNumFreeSlots          # legacy fallback (guarded)
 PickupContainerItem               # legacy fallback (guarded)
-DeleteCursorItem                  # core; deletes only the junk item TBCGuide just picked up
+DeleteCursorItem                  # core; deletes only the junk item ClassicGuide just picked up
 ContainerFrameItemButton_OnModifiedClick # core; hooked with hooksecurefunc only
 C_AddOns                          # classic namespace (guarded)
 C_AddOns.IsAddOnLoaded
@@ -263,7 +263,7 @@ MerchantFrame.page                # core field
 MerchantFrame.selectedTab         # core field
 MerchantFrame_UpdateMerchantInfo  # core; hooked with hooksecurefunc only, guarded
 RequestTimePlayed                 # core; guarded
-ChatFrame_DisplayTimePlayed       # core; wrapped once to hide the login /played lines TBCGuide asks for
+ChatFrame_DisplayTimePlayed       # core; wrapped once to hide the login /played lines ClassicGuide asks for
 write:ChatFrame_DisplayTimePlayed # the wrapper passes every other call through unchanged
 CharacterFrame                    # core frame; guarded
 CharacterFrame.HookScript         # core

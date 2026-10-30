@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for roaming hunting routes (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for roaming hunting routes (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 
@@ -121,14 +121,14 @@ GetLocale = realLocale
 quest(7, { { text = "Kobold Vermin slain: 0/10", done = false } })
 
 -- Manual waypoint is respected
-Nav:SetTarget(12, 41.1, 65.7, "Trainer") -- e.g. /tbcg train waypoint
+Nav:SetTarget(12, 41.1, 65.7, "Trainer") -- e.g. /cg train waypoint
 local idx = R.active.idx
 R:Next()
 check(Nav.owner == "manual" and Nav.target.x == 41.1 and R.active.idx == idx % 3 + 1, "a waypoint you chose is not replaced by the route")
 quest(7, { { text = "Kobold Vermin slain: 1/10", done = false } })
 check(Nav.owner == "manual", "quest updates do not replace it either")
 R:Resume()
-check(Nav.owner == "route", "/tbcg route on takes the arrow back")
+check(Nav.owner == "route", "/" .. ns.slash .. " route on takes the arrow back")
 
 -- Suspend / resume, settings, instance, step and guide changes
 R:Suspend()

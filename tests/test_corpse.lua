@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for the corpse waypoint (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for the corpse waypoint (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 
@@ -124,12 +124,12 @@ fire("PLAYER_DEAD")
 state.ghost, state.corpse = true, { map = 1429, x = 0.3, y = 0.3 }
 fire("PLAYER_ALIVE")
 CP:Dismiss()
-check(not CP:Active() and Nav.owner ~= "corpse", "/tbcg corpse off: back to the guide")
+check(not CP:Active() and Nav.owner ~= "corpse", "/" .. ns.slash .. " corpse off: back to the guide")
 fire("ZONE_CHANGED_NEW_AREA")
 MOCK.tick(5)
 check(not CP:Active(), "dismissed: not recreated on its own")
 CP:Resume()
-check(CP:Active() and Nav.owner == "corpse", "/tbcg corpse on: back to the corpse")
+check(CP:Active() and Nav.owner == "corpse", "/" .. ns.slash .. " corpse on: back to the corpse")
 Nav:SetTarget(12, 41.1, 65.7, "Trainer")
 check(Nav.owner == "manual" and not CP:Active(), "a waypoint you ask for replaces the corpse arrow")
 CP:Resume()

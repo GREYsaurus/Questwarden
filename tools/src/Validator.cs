@@ -1,17 +1,20 @@
-// TBCGuide build tooling - content validation and coverage report.
+// Guide build tooling - content validation and coverage report.
 // Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 // SPDX-License-Identifier: GPL-3.0-only
 //
 // Checks (errors fail the build; warnings are reported):
 //   * every race/class combination (Database/RaceClass.lua) has a start guide and a guide
-//     chain that reaches level 70 without level gaps, cycles or dead ends;
+//     chain that reaches the target's level cap without level gaps, cycles or dead ends;
 //   * guides compile (quest resolution etc. - see GuideCompiler);
-//   * every class has leveling plans (each runs from level 10 to 70, so there is no separate
-//     level-70 build); every build is legal against the client talent tables (ranks, tier
-//     gating, prerequisites, 61-point budget);
+//   * every class has leveling plans (each runs from the first talent point to the level cap);
+//     every build is legal against the client talent tables (ranks, tier gating, prerequisites,
+//     the target's point budget: 51 at 60, 61 at 70);
+//   * a target that is still being built switches these on one at a time with the `require`
+//     flags in targets/<Target>/target.json (database, talents, routes); off means "not yet",
+//     reported as info, never as a pass;
 //   * manifest interface matches Config/Target.lua; saved variables declared;
 //   * bundled database sanity (counts, dangling references from guides).
-// The coverage report (docs/COVERAGE_REPORT.md) is generated from the same data, so it can never
+// The coverage report (docs/generated/<Target>/COVERAGE_REPORT.md) is generated from the same data, so it can never
 // claim more than the checks actually found.
 
 using System;
@@ -22,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TBCGuideTools
+namespace GuideTools
 {
     public sealed class ValidationResult
     {
@@ -161,10 +164,11 @@ namespace TBCGuideTools
                         }
                     }
                     bc.Points = n;
-                    if (n > 61) bc.Errors.Add(n + " points exceeds 61");
-                    // The Icy Veins Destruction build spends 59 points (docs/TALENTS.md); nothing is invented.
-                    int want = bc.Id == "warlock_destro_iv" ? 59 : 61;
-                    if (n < want) bc.Errors.Add("only " + n + " of 61 points allocated");
+                    int budget = Ctx.TalentPoints;
+                    if (n > budget) bc.Errors.Add(n + " points exceeds " + budget);
+                    // TBC fixture only: the Icy Veins Destruction build spends 59 points (TBCGuide docs/TALENTS.md).
+                    int want = (Ctx.Target == "TBC" && bc.Id == "warlock_destro_iv") ? budget - 2 : budget;
+                    if (n < want) bc.Errors.Add("only " + n + " of " + budget + " points allocated");
                 }
                 }
             }
@@ -238,7 +242,7 @@ namespace TBCGuideTools
                 cur = next;
             }
             r.ReachedLevel = lastMax;
-            if (lastMax < 70) r.Problems.Add("route ends at level " + lastMax);
+            if (lastMax < Ctx.MaxLevel) r.Problems.Add("route ends at level " + lastMax);
             return r;
         }
 
@@ -246,18 +250,24 @@ namespace TBCGuideTools
         public static ValidationResult Run(string root, string addOnDir)
         {
             var v = new ValidationResult();
-            var comp = GuideCompiler.CompileAll(Path.Combine(root, "guides-src"), addOnDir, false);
+            var comp = GuideCompiler.CompileAll(Ctx.GuidesSrc, addOnDir, false);
             foreach (var e in comp.Errors) v.Err("guide: " + e);
             v.Info(comp.Summary);
 
             // Race/class coverage
             var combos = LoadCombos(addOnDir);
-            if (combos.Count != 52) v.Warn("expected 52 race/class combinations for TBC, found " + combos.Count);
-            foreach (var c in combos)
+            if (Ctx.RequireDatabase && combos.Count == 0) v.Err("no race/class combinations in Database/RaceClass.lua");
+            if (Ctx.RequireRoutes)
             {
-                var r = Route(comp.Guides, c.Item1, c.Item2, c.Item3);
-                foreach (var p in r.Problems) v.Err(string.Format("route {0} {1}: {2}", c.Item1, c.Item2, p));
+                foreach (var c in combos)
+                {
+                    var r = Route(comp.Guides, c.Item1, c.Item2, c.Item3);
+                    foreach (var p in r.Problems) v.Err(string.Format("route {0} {1}: {2}", c.Item1, c.Item2, p));
+                }
+                foreach (var ch in Ctx.Chapters)
+                    if (!comp.Guides.Any(g => g.Chapter == ch)) v.Err("no " + ch + " guides");
             }
+            else v.Info("route coverage not required yet for " + Ctx.Target + " (target.json require.routes = false)");
             // Guides must not offer races/classes that cannot exist
             var legal = new HashSet<string>(combos.Select(c => c.Item1 + "/" + c.Item2));
             foreach (var g in comp.Guides)
@@ -269,7 +279,6 @@ namespace TBCGuideTools
                     if (s.Classes != null && s.Races != null)
                         foreach (var r in s.Races) foreach (var cl in s.Classes)
                                 if (!legal.Contains(r + "/" + cl)) v.Warn(g.Id + ": step targets illegal combination " + r + "/" + cl);
-            if (!comp.Guides.Any(g => g.Chapter == "Outland")) v.Err("no Outland guides");
             // Reachability: every guide should be on at least one route
             var used = new HashSet<string>();
             foreach (var c in combos) foreach (var g in Route(comp.Guides, c.Item1, c.Item2, c.Item3).Guides) used.Add(g.Id);
@@ -278,28 +287,33 @@ namespace TBCGuideTools
             // Talents
             var talents = LoadTalents(addOnDir);
             int talentCount = talents.Values.Sum(x => x.Count);
-            if (talentCount < 500) v.Err("talent data looks incomplete (" + talentCount + " talents)");
             var builds = CheckBuilds(addOnDir, talents);
             foreach (var b in builds) foreach (var e in b.Errors) v.Err(string.Format("build {0} ({1}): {2}", b.Id, b.File, e));
-            foreach (var cls in new[] { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" })
+            if (Ctx.RequireTalents)
             {
-                if (!builds.Any(b => b.Class == cls && b.Kind == "leveling")) v.Err(cls + " has no leveling build");
+                if (talentCount < 400) v.Err("talent data looks incomplete (" + talentCount + " talents)");
+                foreach (var cls in new[] { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" })
+                {
+                    if (!builds.Any(b => b.Class == cls && b.Kind == "leveling")) v.Err(cls + " has no leveling build");
+                }
             }
+            else v.Info("talent coverage not required yet for " + Ctx.Target + " (target.json require.talents = false)");
             if (builds.Select(b => b.Id).Distinct().Count() != builds.Count) v.Err("duplicate build ids");
 
             // Manifest vs target config
-            string toc = File.ReadAllText(Path.Combine(addOnDir, "TBCGuide.toc"));
+            string toc = File.ReadAllText(Path.Combine(addOnDir, Ctx.Name + ".toc"));
             string target = File.ReadAllText(Path.Combine(addOnDir, "Config", "Target.lua"));
             var ti = Regex.Match(toc, @"## Interface:\s*(\d+)");
             var ci = Regex.Match(target, @"interface\s*=\s*(\d+)");
             if (!ti.Success || !ci.Success || ti.Groups[1].Value != ci.Groups[1].Value)
                 v.Err("TOC interface and Config/Target.lua interface differ");
-            if (!toc.Contains("## SavedVariables: TBCGuideDB") || !toc.Contains("## SavedVariablesPerCharacter: TBCGuideCharDB"))
+            if (!toc.Contains("## SavedVariables: " + Ctx.Name + "DB") || !toc.Contains("## SavedVariablesPerCharacter: " + Ctx.Name + "CharDB"))
                 v.Err("saved variables not declared in TOC");
 
             // Database sanity
             var db = comp.Db;
-            if (db.Quests.Count < 5000) v.Err("quest database looks truncated (" + db.Quests.Count + ")");
+            if (Ctx.RequireDatabase && db.Quests.Count < 3000) v.Err("quest database looks truncated (" + db.Quests.Count + ")");
+            if (!Ctx.RequireDatabase) v.Info("database not required yet for " + Ctx.Target + " (target.json require.database = false)");
             int missingNames = db.Quests.Values.Count(q => !(q.Get(1) is string));
             if (missingNames > 0) v.Err(missingNames + " quest records without names");
             int npcMissing = 0;
@@ -315,13 +329,13 @@ namespace TBCGuideTools
         // ---------------------------------------------------------------- report
         public static void WriteCoverageReport(string root, string addOnDir, string path)
         {
-            var comp = GuideCompiler.CompileAll(Path.Combine(root, "guides-src"), addOnDir, false);
+            var comp = GuideCompiler.CompileAll(Ctx.GuidesSrc, addOnDir, false);
             var combos = LoadCombos(addOnDir);
             var talents = LoadTalents(addOnDir);
             var builds = CheckBuilds(addOnDir, talents);
             var v = Run(root, addOnDir);
             var sb = new StringBuilder();
-            sb.AppendLine("# TBCGuide coverage report");
+            sb.AppendLine("# " + Ctx.Name + " coverage report: " + Ctx.TargetName);
             sb.AppendLine();
             sb.AppendLine("Generated by `tools/build.ps1 report` from the actual guide sources, compiled data and talent files.");
             sb.AppendLine("It reports what the automated checks found. It is **not** evidence of in-game testing: none of this has been run in the game client.");
@@ -330,7 +344,7 @@ namespace TBCGuideTools
             sb.AppendLine();
             sb.AppendLine("| Item | Count |");
             sb.AppendLine("|---|---|");
-            sb.AppendLine("| Guides | " + comp.Guides.Count + " (" + comp.Guides.Count(g => g.Chapter == "Azeroth") + " Azeroth, " + comp.Guides.Count(g => g.Chapter == "Outland") + " Outland) |");
+            sb.AppendLine("| Guides | " + comp.Guides.Count + " (" + string.Join(", ", Ctx.Chapters.Select(ch => comp.Guides.Count(g => g.Chapter == ch) + " " + ch).ToArray()) + ") |");
             sb.AppendLine("| Guide steps | " + comp.Guides.Sum(g => g.Steps.Count) + " |");
             int qsteps = comp.Guides.Sum(g => g.Steps.Count(s => s.Quest > 0));
             sb.AppendLine("| Quest steps (accept/complete/turn-in) | " + qsteps + " |");
@@ -340,9 +354,9 @@ namespace TBCGuideTools
             sb.AppendLine("| Race/class combinations | " + combos.Count + " |");
             sb.AppendLine("| Talent builds | " + builds.Count + " (" + builds.Count(b => b.Errors.Count == 0) + " pass validation) |");
             sb.AppendLine("| Validation | " + v.Summary + " |");
-            sb.AppendLine("| Compiler warnings | " + comp.Warnings.Count + " (see docs/generated/guide-warnings.log) |");
+            sb.AppendLine("| Compiler warnings | " + comp.Warnings.Count + " (see docs/generated/" + Ctx.Target + "/guide-warnings.log) |");
             sb.AppendLine();
-            sb.AppendLine("## Race/class routes (level 1 to 70)");
+            sb.AppendLine("## Race/class routes (level 1 to " + Ctx.MaxLevel + ")");
             sb.AppendLine();
             sb.AppendLine("Each race/class combination is followed from its racial start guide through the `@next` chain.");
             sb.AppendLine();
@@ -358,7 +372,7 @@ namespace TBCGuideTools
             sb.AppendLine();
             sb.AppendLine("| Guide | Faction | Levels | Zone | Steps | Quests | Optional/elite/group steps |");
             sb.AppendLine("|---|---|---|---|---|---|---|");
-            foreach (var g in comp.Guides.OrderBy(g => g.Chapter == "Outland").ThenBy(g => g.MinLevel).ThenBy(g => g.Faction))
+            foreach (var g in comp.Guides.OrderBy(g => Ctx.Chapters.IndexOf(g.Chapter)).ThenBy(g => g.MinLevel).ThenBy(g => g.Faction))
             {
                 sb.AppendLine(string.Format("| {0} | {1} | {2}-{3} | {4} | {5} | {6} | {7} |", g.Name, g.Faction, g.MinLevel, g.MaxLevel, g.ZoneName,
                     g.Steps.Count, g.Steps.Where(s => s.Quest > 0).Select(s => s.Quest).Distinct().Count(),
@@ -367,10 +381,11 @@ namespace TBCGuideTools
             sb.AppendLine();
             sb.AppendLine("### Zones covered");
             sb.AppendLine();
-            var az = comp.Guides.Where(g => g.Chapter == "Azeroth").Select(g => g.ZoneName).Distinct().OrderBy(x => x).ToList();
-            var ol = comp.Guides.Where(g => g.Chapter == "Outland").Select(g => g.ZoneName).Distinct().OrderBy(x => x).ToList();
-            sb.AppendLine("- **Azeroth (" + az.Count + "):** " + string.Join(", ", az.ToArray()));
-            sb.AppendLine("- **Outland (" + ol.Count + "):** " + string.Join(", ", ol.ToArray()));
+            foreach (var ch in Ctx.Chapters)
+            {
+                var zs = comp.Guides.Where(g => g.Chapter == ch).Select(g => g.ZoneName).Distinct().OrderBy(x => x).ToList();
+                sb.AppendLine("- **" + ch + " (" + zs.Count + "):** " + string.Join(", ", zs.ToArray()));
+            }
             sb.AppendLine();
             sb.AppendLine("## Talent builds");
             sb.AppendLine();
@@ -385,7 +400,7 @@ namespace TBCGuideTools
             sb.AppendLine("- **" + comp.Warnings.Count(w => w.Contains("no objective locations")) + " complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.");
             sb.AppendLine("- **" + comp.Warnings.Count(w => w.Contains("prerequisite")) + " prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.");
             sb.AppendLine("- **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.");
-            sb.AppendLine("- **Talent builds** are legal against the 2.5.6 client tables, but how good they are is a judgement call, not something tested.");
+            sb.AppendLine("- **Talent builds** are legal against the " + Ctx.ClientBuild + " client tables, but how good they are is a judgement call, not something tested.");
             sb.AppendLine();
             sb.AppendLine("## Known compatibility limitations");
             sb.AppendLine();

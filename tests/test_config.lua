@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: settings window, profiles and the features behind it
+-- ClassicGuide - headless tests: settings window, profiles and the features behind it
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -12,10 +12,10 @@ local function printed(pattern, from)
 end
 
 -- Window ------------------------------------------------------------------------------------------------
-check(CF.frame ~= nil and _G.TBCGuideConfigFrame == CF.frame, "settings window created at login")
+check(CF.frame ~= nil and _G[ns.name .. "ConfigFrame"] == CF.frame, "settings window created at login")
 CF:Create()
-check(_G.TBCGuideConfigFrame == CF.frame, "created only once")
-check(string.find(CF.title:GetText(), "TBCGuide - Version", 1, true), "title shows the add-on name and version")
+check(_G[ns.name .. "ConfigFrame"] == CF.frame, "created only once")
+check(string.find(CF.title:GetText(), ns.name .. " - Version", 1, true), "title shows the add-on name and version")
 local ids = { "general", "guide", "targeting", "tracker", "comms", "tips", "help", "advanced", "profiles" }
 local tabCount = 0
 for _ in pairs(CF.tabs) do tabCount = tabCount + 1 end
@@ -86,22 +86,22 @@ local first = P:Current()
 check(first == "Default", "existing settings live in the 'Default' profile")
 prof().scale = 1.3
 check(P:Set("Alt") and P:Current() == "Alt" and prof().scale == 1, "new profile starts from defaults")
-check(TBCGuideDB.profileKeys[ns.CharKey()] == "Alt", "the character remembers its profile")
+check(_G[ns.svAccount].profileKeys[ns.CharKey()] == "Alt", "the character remembers its profile")
 check(P:CopyFrom("Default") and prof().scale == 1.3, "copy from another profile")
 prof().scale = 0.8
-check(TBCGuideDB.profiles.Default.scale == 1.3, "profiles are separate tables")
+check(_G[ns.svAccount].profiles.Default.scale == 1.3, "profiles are separate tables")
 check(not P:Delete("Alt") and not P:Delete("Default"), "active and default profiles cannot be deleted")
 P:Reset()
 check(prof().scale == 1 and prof().showAllFrames == true, "reset puts the active profile back to defaults")
 check(P:Set("Default") and prof().scale == 1.3, "switching back restores the other profile's settings")
-check(P:Delete("Alt") and TBCGuideDB.profiles.Alt == nil, "unused profile deleted")
+check(P:Delete("Alt") and _G[ns.svAccount].profiles.Alt == nil, "unused profile deleted")
 check(not P:Set("   "), "blank profile names are refused")
 -- a profile used by another character is reassigned when deleted
 P:Set("Shared")
 P:Set("Default")
-TBCGuideDB.profileKeys["Other - Realm"] = "Shared"
+_G[ns.svAccount].profileKeys["Other - Realm"] = "Shared"
 P:Delete("Shared")
-check(TBCGuideDB.profileKeys["Other - Realm"] == "Default", "characters on a deleted profile fall back to the default")
+check(_G[ns.svAccount].profileKeys["Other - Realm"] == "Default", "characters on a deleted profile fall back to the default")
 -- set as default: new characters start with it
 P:Set("Main")
 P:SetDefault()
@@ -113,15 +113,15 @@ MOCK.player.name = name
 ns:InitSavedVariables()
 check(P:Current() == "Main", "the character keeps its profile after a reload")
 P:Set("Default")
-TBCGuideDB.defaultProfile = "Default"
+_G[ns.svAccount].defaultProfile = "Default"
 P:Delete("Main")
 -- migration from the single pre-0.5.0 profile
-local saved = TBCGuideDB
-TBCGuideDB = { profile = { scale = 1.4, autoMarkObjectives = true } }
+local saved = _G[ns.svAccount]
+_G[ns.svAccount] = { profile = { scale = 1.4, autoMarkObjectives = true } }
 ns:InitSavedVariables()
-check(TBCGuideDB.profile == nil and TBCGuideDB.profiles.Default.scale == 1.4 and prof().scale == 1.4, "old settings become the Default profile")
-check(rawget(ns.db, "profile") == TBCGuideDB.profiles.Default and rawget(TBCGuideDB, "profile") == nil, "the profile table is saved once (no alias)")
-TBCGuideDB = saved
+check(_G[ns.svAccount].profile == nil and _G[ns.svAccount].profiles.Default.scale == 1.4 and prof().scale == 1.4, "old settings become the Default profile")
+check(rawget(ns.db, "profile") == _G[ns.svAccount].profiles.Default and rawget(_G[ns.svAccount], "profile") == nil, "the profile table is saved once (no alias)")
+_G[ns.svAccount] = saved
 ns:InitSavedVariables()
 prof().scale = 1
 
@@ -202,14 +202,14 @@ local macros = {}
 function GetMacroIndexByName(nm) return macros[nm] and 1 or 0 end
 function GetNumMacros() return 0 end
 function CreateMacro(nm, icon, b) macros[nm] = b return 1 end
-function EditMacro(idx, nm, icon, b) macros["TBCGuide"] = b end
+function EditMacro(idx, nm, icon, b) macros[ns.name] = b end
 A.lastBody = nil
 MOCK.combat = true
 A:UpdateMacro()
-check(macros.TBCGuide == nil and A.macroPending, "no macro changes in combat (done after combat)")
+check(macros[ns.name] == nil and A.macroPending, "no macro changes in combat (done after combat)")
 MOCK.combat = false
 MOCK.fire("PLAYER_REGEN_ENABLED")
-check(macros.TBCGuide ~= nil and string.find(macros.TBCGuide, "Sarkoth", 1, true), "macro created after combat")
+check(macros[ns.name] ~= nil and string.find(macros[ns.name], "Sarkoth", 1, true), "macro created after combat")
 local before = #MOCK.printed
 MOCK.units.nameplate1 = MOCK.creature(3281, 501, "Sarkoth")
 A.notified = {}
@@ -307,9 +307,9 @@ ClearCursor = function() MOCK.cursor = false end
 local freeSlots = 0
 C_Container.GetContainerNumFreeSlots = function() return freeSlots end
 local function click() WorldFrame.scripts.OnMouseDown(WorldFrame, "LeftButton") end
-local function key() TBCGuideJunkInput.scripts.OnKeyDown(TBCGuideJunkInput, "W") end
+local function key() _G[ns.name .. "JunkInput"].scripts.OnKeyDown(_G[ns.name .. "JunkInput"], "W") end
 check(type(WorldFrame.scripts.OnMouseDown) == "function" and type(WorldFrame.scripts.OnMouseUp) == "function", "world clicks are hooked")
-check(TBCGuideJunkInput and type(TBCGuideJunkInput.scripts.OnKeyDown) == "function", "key presses are hooked")
+check(_G[ns.name .. "JunkInput"] and type(_G[ns.name .. "JunkInput"].scripts.OnKeyDown) == "function", "key presses are hooked")
 deleted = {}
 A.discardFailed, A.discardPending, A.discardTarget = {}, nil, nil
 A:OnBagsChanged()
@@ -467,8 +467,8 @@ local title = ns.StepText:Title({ "accept", q = 783, title = "A Threat Within" }
 check(string.find(title, "|cffff0000", 1, true), "quest colour comes from the profile")
 prof().colorQuest = { r = 1, g = 0.82, b = 0 }
 
--- Help and profile pages show TBCGuide's own commands -----------------------------------------------------
+-- Help and profile pages show ClassicGuide's own commands -----------------------------------------------------
 local helpText = ""
 for _, it in ipairs(ns.ConfigPages.help.items(CF)) do if it.text then helpText = helpText .. it.text end end
-check(string.find(helpText, "/tbcg", 1, true) and not string.find(helpText, "/rxp", 1, true), "help lists TBCGuide commands")
+check(string.find(helpText, "/" .. ns.slash, 1, true) and not string.find(helpText, "/rxp", 1, true), "help lists " .. ns.name .. " commands")
 check(#ns.errors == 0, "no captured errors after settings tests: " .. table.concat(ns.errors, " | "))

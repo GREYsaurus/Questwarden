@@ -1,5 +1,5 @@
--- TBCGuide - headless test runner (Lua 5.1). Run from the repository root:
---     lua5.1 tests/run_tests.lua
+-- ClassicGuide - headless test runner (Lua 5.1). Run from the repository root:
+--     tools/build.ps1 test -Target TBC     (stages the add-on, then runs this file)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --
@@ -8,8 +8,11 @@
 
 dofile("tests/mock_wow.lua")
 
-local ADDON = "TBCGuide"
-local root = "TBCGuide/"
+-- The add-on as staged for one target by tools/build.ps1 (build/<Target>/stage.lua). This suite needs
+-- real data, so it runs against the TBC fixture target unless GUIDE_TARGET says otherwise.
+local STAGE = dofile("build/" .. (os.getenv("GUIDE_TARGET") or "TBC") .. "/stage.lua")
+local ADDON = STAGE.name
+local root = STAGE.dir
 local ns = {}
 local failures, passes = 0, 0
 
@@ -33,7 +36,7 @@ local function loadXml(path, dir)
     end
 end
 
-local toc = assert(io.open(root .. "TBCGuide.toc", "r"))
+local toc = assert(io.open(root .. ADDON .. ".toc", "r"))
 for line in toc:lines() do
     line = line:gsub("\r", "")
     if line ~= "" and not line:match("^#") then
@@ -57,7 +60,7 @@ check(#ns.errors == 0, "no captured errors after boot: " .. table.concat(ns.erro
 check(#ns.Guides.list >= 50, "guides registered (" .. #ns.Guides.list .. ")")
 check(#ns.Guides.rejected == 0, "no rejected guides")
 check(ns.Engine.guide ~= nil and ns.Engine.guide.id == "A_Human_Elwynn", "human warrior gets the Elwynn start guide")
-check(SlashCmdList["TBCGUIDE"] ~= nil, "slash command registered")
+check(SlashCmdList[ns.key] ~= nil, "slash command registered")
 
 -- Database adapter --------------------------------------------------------------------------------
 local q = ns.DB.GetQuestByID(783)
@@ -91,12 +94,12 @@ ns.Engine:Prev()
 check(ns.Engine.current == before, "prev reopens skipped step")
 
 -- Saved variables survive a "reload"
-local saved = TBCGuideCharDB
-TBCGuideCharDB = saved
+local saved = _G[ns.svChar]
+_G[ns.svChar] = saved
 ns:InitSavedVariables()
 check(ns.char.activeGuide == "A_Human_Elwynn", "active guide persisted")
 -- Corrupt progress is repaired, not fatal
-TBCGuideCharDB.progress["A_Human_Elwynn"] = "garbage"
+_G[ns.svChar].progress["A_Human_Elwynn"] = "garbage"
 ns:InitSavedVariables()
 check(type(ns.char.progress["A_Human_Elwynn"]) ~= "string", "corrupt progress record removed")
 
@@ -122,8 +125,8 @@ end
 
 -- Commands do not error
 for _, cmd in ipairs({ "", "help", "guide", "talents", "debug", "debug api", "debug talents", "debug quest 783", "class", "bogus" }) do
-    local ok, err = pcall(SlashCmdList["TBCGUIDE"], cmd)
-    check(ok, "/tbcg " .. cmd .. " -> " .. tostring(err))
+    local ok, err = pcall(SlashCmdList[ns.key], cmd)
+    check(ok, "/" .. ns.slash .. " " .. cmd .. " -> " .. tostring(err))
 end
 
 -- Grind steps -------------------------------------------------------------------------------------

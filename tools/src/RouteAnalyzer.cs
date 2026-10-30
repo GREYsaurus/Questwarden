@@ -1,8 +1,8 @@
-// TBCGuide build tooling - route optimization model / audit (tools/build.ps1 routes).
+// Guide build tooling - route optimization model / audit (tools/build.ps1 routes).
 // Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 // SPDX-License-Identifier: GPL-3.0-only
 //
-// Walks every race/class route (start guide -> @next chain -> level 70) step by step, the way a
+// Walks every race/class route (start guide -> @next chain -> the target's level cap) step by step, the way a
 // player would, and measures what the bundled data can actually support:
 //   * correctness  - prerequisite ORDER (a prerequisite turned in later on the same route is an
 //                    impossible order => error), complete/turn-in before accept, quest log over
@@ -18,8 +18,8 @@
 // TBC quest XP table, the post-2.3 XP-to-level table, and a documented assumption for kill XP. Without
 // the XP table (run `build.ps1 fetch`) it falls back to interpolating @levels. Either way it is a
 // planning estimate, NOT a measurement; no XP/hour figure is ever produced.
-// Output: docs/ROUTE_AUDIT.md and docs/generated/route-metrics.csv. If
-// docs/generated/route-metrics-baseline.csv exists, the report compares against it.
+// Output: docs/generated/<Target>/ROUTE_AUDIT.md and route-metrics.csv. If
+// docs/generated/<Target>/route-metrics-baseline.csv exists, the report compares against it.
 
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace TBCGuideTools
+namespace GuideTools
 {
     public sealed class GuideMetrics
     {
@@ -89,6 +89,9 @@ namespace TBCGuideTools
 
         public static XpModel Load(string root)
         {
+            // The XP-to-level table above and xpDB-tbc.lua are TBC (post-2.3) values. Other targets get no XP
+            // model until their own tables are added (Phase 2), and the audit falls back to interpolation.
+            if (Ctx.Target != "TBC") return null;
             string p = Path.Combine(root, ".cache", "upstream", "questiedb", "support", "QuestXP", "xpDB-tbc.lua");
             if (!File.Exists(p)) return null;
             var m = new XpModel();
@@ -118,7 +121,7 @@ namespace TBCGuideTools
             static void Add(ref int level, ref double xp, double gain)
             {
                 xp += gain;
-                while (level < 70 && xp >= ToNext[level]) { xp -= ToNext[level]; level++; }
+                while (level < Ctx.MaxLevel && xp >= ToNext[level]) { xp -= ToNext[level]; level++; }
             }
             public void TurnIn(XpModel m, int quest)
             {
@@ -132,15 +135,15 @@ namespace TBCGuideTools
                 if (Level < level) { Lifted += level - Exact; Level = level; Xp = 0; Grinds++; }
                 if (QLevel < level) { QLevel = level; QXp = 0; }
             }
-            public double Exact { get { return Level + (Level < 70 ? Xp / ToNext[Level] : 0); } }
-            public double QExact { get { return QLevel + (QLevel < 70 ? QXp / ToNext[QLevel] : 0); } }
+            public double Exact { get { return Level + (Level < Ctx.MaxLevel ? Xp / ToNext[Level] : 0); } }
+            public double QExact { get { return QLevel + (QLevel < Ctx.MaxLevel ? QXp / ToNext[QLevel] : 0); } }
         }
     }
 
     public static class RouteAnalyzer
     {
-        const int LogCap = 25;          // TBC quest log size
-        const int LogWarn = 22;
+        static int LogCap { get { return Ctx.QuestLogMax; } }   // quest log size (Target.<Target>.lua)
+        static int LogWarn { get { return LogCap - 3; } }   // "nearly full" warning
         const double HubRadius = 3.5;
         const double ZoneChangeCost = 25;   // per-route travel: a zone change, as a fixed approximation   // map percent: steps closer than this are "the same place"
 
@@ -178,7 +181,7 @@ namespace TBCGuideTools
 
         public static RouteAudit Run(string root, string addOnDir)
         {
-            var comp = GuideCompiler.CompileAll(Path.Combine(root, "guides-src"), addOnDir, false);
+            var comp = GuideCompiler.CompileAll(Ctx.GuidesSrc, addOnDir, false);
             var a = new RouteAudit();
             foreach (var e in comp.Errors) a.Errors.Add("compile: " + e);
             var db = comp.Db;
@@ -387,7 +390,7 @@ namespace TBCGuideTools
 
         public static void Write(string root, RouteAudit a)
         {
-            string gen = Path.Combine(root, "docs", "generated");
+            string gen = Ctx.ReportDir;
             Directory.CreateDirectory(gen);
             var csv = new List<string> { GuideMetrics.Header };
             csv.AddRange(a.Guides.Values.OrderBy(m => m.Id, StringComparer.Ordinal).Select(m => m.Csv()));
@@ -434,7 +437,7 @@ namespace TBCGuideTools
             sb.AppendLine("## Per guide");
             sb.AppendLine();
             bool cmp = baseline.Count > 0;
-            sb.AppendLine(cmp ? "Values in brackets are the baseline (`docs/generated/route-metrics-baseline.csv`, the 0.1.0 routes)." : "No baseline file found.");
+            sb.AppendLine(cmp ? "Values in brackets are the baseline (`docs/generated/" + Ctx.Target + "/route-metrics-baseline.csv`)." : "No baseline file found.");
             sb.AppendLine();
             sb.AppendLine("| Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |");
             sb.AppendLine("|---|---|---|---|---|---|---|---|---|---|---|");
@@ -474,7 +477,7 @@ namespace TBCGuideTools
             sb.AppendLine("## Findings (per guide)");
             sb.AppendLine();
             foreach (var f in a.Findings.Distinct().OrderBy(x => x, StringComparer.Ordinal)) sb.AppendLine("- " + f);
-            File.WriteAllText(Path.Combine(root, "docs", "ROUTE_AUDIT.md"), sb.ToString(), new UTF8Encoding(false));
+            File.WriteAllText(Path.Combine(Ctx.ReportDir, "ROUTE_AUDIT.md"), sb.ToString(), new UTF8Encoding(false));
         }
     }
 }

@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for junk selling and quest automation (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for junk selling and quest automation (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --
@@ -458,13 +458,13 @@ check(countNA() == naBefore, "speed route off restores optional steps")
 ns.Engine:Load("A_Human_Elwynn")
 
 -- Settings / saved variables --------------------------------------------------------------------
-TBCGuideDB.protectedItems = "garbage"
-TBCGuideCharDB.junkStats = { items = "x" }
+_G[ns.svAccount].protectedItems = "garbage"
+_G[ns.svChar].junkStats = { items = "x" }
 ns:InitSavedVariables()
 check(type(ns.db.protectedItems) == "table" and ns.char.junkStats.items == 0, "corrupt automation settings repaired")
 for _, cmd in ipairs({ "automation", "orphans", "orphans", "protect 6948", "protected", "unprotect 6948", "escort", "escort add 123",
                        "escort remove 123", "escort remove 309", "debug escort 309", "set autoSellJunk on", "set autoSellJunk off" }) do
-    local ok, err = pcall(SlashCmdList["TBCGUIDE"], cmd)
-    check(ok, "/tbcg " .. cmd .. " -> " .. tostring(err))
+    local ok, err = pcall(SlashCmdList[ns.key], cmd)
+    check(ok, "/" .. ns.slash .. " " .. cmd .. " -> " .. tostring(err))
 end
 check(#ns.errors == 0, "no captured errors after automation tests: " .. table.concat(ns.errors, " | "))

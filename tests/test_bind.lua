@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for hearthstone binding on guide bind steps (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for hearthstone binding on guide bind steps (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 
@@ -240,7 +240,7 @@ C_PlayerInteractionManager = { ConfirmationInteraction = function() confirms = c
 MOCK.fire("GOSSIP_SHOW")
 MOCK.fire("CONFIRM_BINDER", "Goldhain")
 MOCK.tick(0.1)
-MOCK.fire("ADDON_ACTION_BLOCKED", "TBCGuide", "ConfirmationInteraction")
+MOCK.fire("ADDON_ACTION_BLOCKED", ns.name, "ConfirmationInteraction")
 check(printedHas("click Yes on the hearthstone dialog yourself"), "a blocked confirmation asks the player to click Yes")
 B:Cancel("test")
 

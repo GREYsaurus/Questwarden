@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: settings-window features (dungeons, group, flights, tracker, active
+-- ClassicGuide - headless tests: settings-window features (dungeons, group, flights, tracker, active
 -- items/targets, junk indicator, vendor treasures, map pins, talent plan, low quality, preload)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
@@ -73,22 +73,22 @@ GetNumGroupMembers = function() return grouped and 2 or 0 end
 MOCK.units.party1 = { name = "Buddy", guid = "Player-1" }
 ns.version = "0.7.0"
 local before = #MOCK.printed
-Gp:OnAddonMessage("TBCGuide", "V:0.8.0", "PARTY", "Buddy-Realm")
+Gp:OnAddonMessage(ns.name, "V:0.8.0", "PARTY", "Buddy-Realm")
 check(Gp.users.Buddy == "0.8.0", "addon message records the sender's version")
-check(string.find(MOCK.printed[#MOCK.printed] or "", "newer TBCGuide (0.8.0)", 1, true) and #MOCK.printed == before + 1, "newer version reported once")
-Gp:OnAddonMessage("TBCGuide", "V:0.9.0", "PARTY", "Other")
+check(string.find(MOCK.printed[#MOCK.printed] or "", "newer " .. ns.name .. " (0.8.0)", 1, true) and #MOCK.printed == before + 1, "newer version reported once")
+Gp:OnAddonMessage(ns.name, "V:0.9.0", "PARTY", "Other")
 check(#MOCK.printed == before + 1, "...and only once per session")
 check(addon[1] == "PARTY:V:0.7.0", "we answer with our version")
 prof().groupFeatures, prof().announceCollect = false, true
 grouped = true
 check(not Gp:Announce("x", "announceCollect"), "group features off: no announcements")
 prof().groupFeatures = true
-check(Gp:Announce("Wolf Meat: 3/8", "announceCollect") and sent[#sent] == "PARTY:[TBCGuide] Wolf Meat: 3/8", "party announcement sent")
+check(Gp:Announce("Wolf Meat: 3/8", "announceCollect") and sent[#sent] == "PARTY:[" .. ns.name .. "] Wolf Meat: 3/8", "party announcement sent")
 Gp.users = {}
 prof().announceAlways = false
-check(not Gp:Announce("y", "announceCollect"), "no other TBCGuide user in the party: nothing sent")
+check(not Gp:Announce("y", "announceCollect"), "no other " .. ns.name .. " user in the party: nothing sent")
 prof().announceAlways = true
-check(Gp:Announce("y", "announceCollect"), "...unless 'without another TBCGuide user' is on")
+check(Gp:Announce("y", "announceCollect"), "...unless 'without another " .. ns.name .. " user' is on")
 prof().announceCollect = false
 check(not Gp:Announce("z", "announceCollect"), "that announcement type off: nothing sent")
 MOCK.inRaid = true
@@ -164,7 +164,7 @@ check(not LT.splits:IsShown(), "and hidden when disabled")
 local rl = LT:ReportLines()
 check(string.find(rl[1], "Level 23", 1, true), "report: current level line")
 LT:ToggleReport()
-check(LT.report and LT.report:IsShown(), "/tbcg tracker opens the report")
+check(LT.report and LT.report:IsShown(), "/" .. ns.slash .. " tracker opens the report")
 LT:ToggleReport()
 check(LT.Format(3725) == "1:02:05" and LT.Format(nil) == "-", "tracker time format")
 

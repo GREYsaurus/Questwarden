@@ -1,4 +1,4 @@
-"""Coverage counts for roaming routes, from docs/research/roaming-dispositions.csv and the compiled routes.
+"""Coverage counts for roaming routes, from docs/tbcguide/research/roaming-dispositions.csv and the compiled routes.
 
 Definitions (docs/ROAMING.md, "Coverage"):
   unique routes        distinct point sets (a route block reused by another quest counts once)

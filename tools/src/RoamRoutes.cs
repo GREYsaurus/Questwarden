@@ -1,5 +1,5 @@
-// TBCGuide - roaming hunting routes: parses guides-src/routes/*.routes, checks them against the bundled
-// database and writes TBCGuide/Guides/Compiled/Routes.lua (docs/ROAMING.md).
+// Guide build tooling - roaming hunting routes: parses guides-src/routes/*.routes, checks them against the bundled
+// database and writes <add-on>/Guides/Compiled/Routes.lua (docs/ROAMING.md).
 // Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 // SPDX-License-Identifier: GPL-3.0-only
 //
@@ -20,7 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TBCGuideTools
+namespace GuideTools
 {
     public sealed class RoamObjective { public int Index; public string Kind; public int Item; public List<int> Npcs = new List<int>(); }
     public sealed class RoamPoint { public double X, Y, R; public string Note; }
@@ -190,9 +190,9 @@ namespace TBCGuideTools
         public static string Lua(List<RoamRoute> routes, BundledDb db)
         {
             var sb = new StringBuilder();
-            sb.Append("-- TBCGuide - roaming hunting routes. GENERATED from guides-src/routes by tools/build.ps1 guides.\n");
+            sb.Append("-- " + Ctx.Name + " - roaming hunting routes. GENERATED from guides-src/routes by tools/build.ps1 guides.\n");
             sb.Append("-- DO NOT EDIT: edit the .routes source and rebuild. Route points come from QuestieDB-derived spawn data\n");
-            sb.Append("-- (docs/ROAMING.md); the route selection and order are original TBCGuide content (GPL-3.0-only).\n");
+            sb.Append("-- (docs/ROAMING.md); the route selection and order are original " + Ctx.Name + " content (GPL-3.0-only).\n");
             sb.Append("local _, ns = ...\nns.RoamRoutes = {\n");
             foreach (var g in routes.GroupBy(r => r.Quest).OrderBy(g => g.Key))
             {

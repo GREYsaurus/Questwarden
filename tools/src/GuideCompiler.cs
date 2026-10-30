@@ -1,4 +1,4 @@
-// TBCGuide build tooling - guide compiler (guides-src/*.guide -> TBCGuide/Guides/Compiled/*.lua)
+// Guide build tooling - guide compiler (guides-src/*.guide -> <add-on>/Guides/Compiled/*.lua)
 // Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 // SPDX-License-Identifier: GPL-3.0-only
 //
@@ -20,7 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TBCGuideTools
+namespace GuideTools
 {
     // ---------------------------------------------------------------- bundled DB reader
     public sealed class BundledDb
@@ -49,7 +49,7 @@ namespace TBCGuideTools
         public static BundledDb Load(string addOnDir)
         {
             var db = new BundledDb();
-            string dir = Path.Combine(addOnDir, "Database", "QuestieTBC");
+            string dir = Path.Combine(addOnDir, "Database", "Questie");
             foreach (var file in new[] { "Quests.lua", "Npcs.lua", "Objects.lua", "Items.lua" })
             {
                 foreach (var line in File.ReadLines(Path.Combine(dir, file)))
@@ -287,14 +287,14 @@ namespace TBCGuideTools
                             var lm = Regex.Match(val, @"^(\d+)\s*-\s*(\d+)$");
                             if (!lm.Success) { res.Errors.Add(where + ": @levels must be like 1-10"); break; }
                             g.MinLevel = int.Parse(lm.Groups[1].Value); g.MaxLevel = int.Parse(lm.Groups[2].Value);
-                            if (g.MinLevel < 1 || g.MaxLevel > 70 || g.MinLevel > g.MaxLevel) res.Errors.Add(where + ": invalid level range");
+                            if (g.MinLevel < 1 || g.MaxLevel > Ctx.MaxLevel || g.MinLevel > g.MaxLevel) res.Errors.Add(where + ": invalid level range");
                             break;
                         case "zone":
                             int zid;
                             if (!res.Db.ZoneByName.TryGetValue(val, out zid)) res.Errors.Add(where + ": unknown zone '" + val + "'");
                             g.Zone = zid; g.ZoneName = val; lz = zid; break;
                         case "chapter":
-                            if (val != "Azeroth" && val != "Outland") res.Errors.Add(where + ": chapter must be Azeroth or Outland");
+                            if (!Ctx.Chapters.Contains(val)) res.Errors.Add(where + ": chapter must be one of " + string.Join(", ", Ctx.Chapters) + " for target " + Ctx.Target);
                             g.Chapter = val; break;
                         case "start": g.Start = true; break;
                         case "desc": g.Desc = string.IsNullOrEmpty(g.Desc) ? val : g.Desc + " " + val; break;
@@ -581,7 +581,7 @@ namespace TBCGuideTools
                     break;
                 case "level":
                     int lvl;
-                    if (!int.TryParse(arg, out lvl) || lvl < 2 || lvl > 70) { res.Errors.Add(where + ": level needs 2-70"); return; }
+                    if (!int.TryParse(arg, out lvl) || lvl < 2 || lvl > Ctx.MaxLevel) { res.Errors.Add(where + ": level needs 2-" + Ctx.MaxLevel); return; }
                     s.Level = lvl;
                     break;
                 case "grind":
@@ -620,9 +620,9 @@ namespace TBCGuideTools
         {
             var m = Regex.Match(arg, @"^(\d+)\s+([^@]+?)\s*(?:@\s*(.+))?$");
             int lvl;
-            if (!m.Success || !int.TryParse(m.Groups[1].Value, out lvl) || lvl < 2 || lvl > 70)
+            if (!m.Success || !int.TryParse(m.Groups[1].Value, out lvl) || lvl < 2 || lvl > Ctx.MaxLevel)
             {
-                res.Errors.Add(where + ": grind needs '<level 2-70> <Mob>[, <Mob>] [@ location]'");
+                res.Errors.Add(where + ": grind needs '<level 2-" + Ctx.MaxLevel + "> <Mob>[, <Mob>] [@ location]'");
                 return false;
             }
             s.Level = lvl;
@@ -1185,8 +1185,8 @@ namespace TBCGuideTools
             {
                 string fname = Regex.Replace(grp.Key.Replace(".guide", ""), @"[^A-Za-z0-9_]+", "_") + ".lua";
                 var sb = new StringBuilder();
-                sb.Append("-- TBCGuide - compiled guide data. GENERATED from guides-src/" + grp.Key + " by tools/build.ps1 guides.\n");
-                sb.Append("-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original TBCGuide content\n");
+                sb.Append("-- " + Ctx.Name + " - compiled guide data. GENERATED from guides-src/" + grp.Key + " by tools/build.ps1 guides.\n");
+                sb.Append("-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original " + Ctx.Name + " content\n");
                 sb.Append("-- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.\n");
                 sb.Append("local _, ns = ...\n");
                 foreach (var g in grp)

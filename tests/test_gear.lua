@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: gear scoring (profiles, engine, tooltip, quest rewards, /tbcg gear)
+-- ClassicGuide - headless tests: gear scoring (profiles, engine, tooltip, quest rewards, /cg gear)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -214,20 +214,20 @@ MOCK.tick(1)
 check(not string.find(table.concat(MOCK.printed, "\n"), "Reward comparison", 1, true), "each quest's rewards are ranked once")
 MOCK.dialog, MOCK.questChoices = nil, {}
 
--- /tbcg gear and /tbcgear ------------------------------------------------------------------------------------
+-- /cg gear and /cggear ------------------------------------------------------------------------------------
 MOCK.printed = {}
 MOCK.bags[0][1] = { itemID = 90001, count = 1 }
 MOCK.equipped[8] = 90002
-local ok, err = pcall(SlashCmdList["TBCGUIDE"], "gear")
+local ok, err = pcall(SlashCmdList[ns.key], "gear")
 out = table.concat(MOCK.printed, "\n")
-check(ok and string.find(out, "Gear profile", 1, true) and string.find(out, "Agile Boots", 1, true), "/tbcg gear lists profile and bag upgrades: " .. tostring(err))
-check(string.find(out, "Empty slots", 1, true) ~= nil, "/tbcg gear lists empty slots")
-check(SlashCmdList["TBCGEAR"] ~= nil and SLASH_TBCGEAR1 == "/tbcgear", "/tbcgear registered")
+check(ok and string.find(out, "Gear profile", 1, true) and string.find(out, "Agile Boots", 1, true), "/" .. ns.slash .. " gear lists profile and bag upgrades: " .. tostring(err))
+check(string.find(out, "Empty slots", 1, true) ~= nil, "/" .. ns.slash .. " gear lists empty slots")
+check(SlashCmdList[ns.key .. "GEAR"] ~= nil and _G["SLASH_" .. ns.key .. "GEAR1"] == "/" .. ns.slash .. "gear", "/" .. ns.slash .. "gear registered")
 for _, c in ipairs({ "gear profiles", "gear profile auto", "gear profile rogue_combat_preraid", "gear profile nope", "gear options" }) do
-    ok, err = pcall(SlashCmdList["TBCGUIDE"], c)
-    check(ok, "/tbcg " .. c .. " -> " .. tostring(err))
+    ok, err = pcall(SlashCmdList[ns.key], c)
+    check(ok, "/" .. ns.slash .. " " .. c .. " -> " .. tostring(err))
 end
-check(ns.char.gearProfile == "rogue_combat_preraid", "/tbcg gear profile <id> saves the choice")
+check(ns.char.gearProfile == "rogue_combat_preraid", "/" .. ns.slash .. " gear profile <id> saves the choice")
 GUI:ResetSettings()
 check(ns.char.gearProfile == nil and ns.db.profile.gearTooltip == true, "reset restores gear defaults")
 MOCK.bags[0][1] = nil

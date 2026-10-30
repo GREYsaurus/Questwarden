@@ -1,0 +1,8 @@
+<Bindings>
+	<Binding name="{{KEY}}_DELETEJUNK" header="{{KEY}}">
+		{{NAME}}_DeleteCheapestJunk()
+	</Binding>
+	<Binding name="{{KEY}}_ROUTENEXT" header="{{KEY}}">
+		{{NAME}}_RouteNext()
+	</Binding>
+</Bindings>

@@ -1,14 +1,15 @@
 # Publishes each GitHub release's add-on zip to CurseForge.
 # SPDX-License-Identifier: GPL-3.0-only
 #
-# Uploads exactly the TBCGuide-<version>.zip attached to the release (built and checked by
+# Uploads exactly the ClassicGuide-<version>-ClassicEra.zip attached to the release (built and checked by
 # tools/build.ps1 all); nothing is rebuilt here. GitHub pre-releases go up as CurseForge "beta",
 # normal releases as "release".
 #
 # One-time setup (see docs/CURSEFORGE.md):
 #   - repository variable CURSEFORGE_PROJECT_ID = the numeric project ID from the CurseForge page
 #   - repository secret   CF_API_KEY            = a CurseForge API token (authors.curseforge.com > API tokens)
-# Optional variable CURSEFORGE_GAME_VERSION (default 2.5.6) picks the CurseForge game version.
+# Optional variable CURSEFORGE_GAME_VERSION (default 1.15.9) picks the CurseForge game version.
+# Optional variable ADDON_NAME (default ClassicGuide) must match tools/addon.json "name".
 # Without the variable and secret the workflow skips the upload instead of failing.
 #
 # Re-run for an existing release: Actions > "Publish to CurseForge" > Run workflow > tag, e.g. v0.2.0.
@@ -33,10 +34,11 @@ jobs:
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
       CF_PROJECT: ${{ vars.CURSEFORGE_PROJECT_ID }}
-      CF_GAME_VERSION: ${{ vars.CURSEFORGE_GAME_VERSION || '2.5.6' }}
+      CF_GAME_VERSION: ${{ vars.CURSEFORGE_GAME_VERSION || '1.15.9' }}
       CF_HOST: https://wow.curseforge.com
       GH_TOKEN: ${{ github.token }}
       TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      ADDON: ${{ vars.ADDON_NAME || 'ClassicGuide' }}
     steps:
       - name: Check configuration
         id: cfg
@@ -51,8 +53,8 @@ jobs:
         run: |
           set -euo pipefail
           VERSION="${TAG#v}"
-          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "TBCGuide-${VERSION}.zip" --dir dist
-          test -s "dist/TBCGuide-${VERSION}.zip"
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "${ADDON}-${VERSION}-ClassicEra.zip" --dir dist
+          test -s "dist/${ADDON}-${VERSION}-ClassicEra.zip"
           gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body,isPrerelease,name > release.json
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
@@ -75,7 +77,7 @@ jobs:
         run: |
           set -euo pipefail
           jq -n \
-            --arg name "TBCGuide $VERSION" \
+            --arg name "$ADDON $VERSION" \
             --argjson versions "$GAME_VERSION_IDS" \
             --slurpfile rel release.json \
             '{displayName: $name,
@@ -87,6 +89,6 @@ jobs:
           cat metadata.json | jq 'del(.changelog)'
           curl -sSf -H "X-Api-Token: $CF_API_KEY" \
             -F "metadata=<metadata.json" \
-            -F "file=@dist/TBCGuide-${VERSION}.zip" \
+            -F "file=@dist/${ADDON}-${VERSION}-ClassicEra.zip" \
             "$CF_HOST/api/projects/$CF_PROJECT/upload-file" | tee response.json
-          echo "::notice::Uploaded TBCGuide $VERSION to CurseForge (file id $(jq -r .id response.json)). New files go through CurseForge moderation before they are public."
+          echo "::notice::Uploaded $ADDON $VERSION to CurseForge (file id $(jq -r .id response.json)). New files go through CurseForge moderation before they are public."

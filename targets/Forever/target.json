@@ -1,0 +1,20 @@
+{
+  "_comment": "Build metadata for the World of Warcraft: Forever target. SKELETON: no guides ship until the data is verified in the live client (docs/FOREVER_PLAN.md). Every value here is UNVERIFIED until checked in the live game.",
+  "id": "Forever",
+  "title": "World of Warcraft: Forever (unverified)",
+  "interface": "16001",
+  "shipped": false,
+  "require": {
+    "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
+    "database": false,
+    "talents": false,
+    "routes": false
+  },
+  "tocExtra": [],
+  "install": "UNVERIFIED - confirm the Forever AddOns path after launch (2026-11-04)",
+  "evidence": [
+    "UNVERIFIED: Questie bundle/v12.3.1+v1.0.9 release.json lists flavor forever at interface 16001, checked 2026-10-29",
+    "UNVERIFIED: wago.tools/api/builds lists product wowf at 1.60.1.70685 (2026-10-28); that wowf is Forever is an assumption, checked 2026-10-29",
+    "UNVERIFIED: Gethe/wow-ui-source has a forever branch, checked 2026-10-29"
+  ]
+}

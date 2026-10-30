@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: minimap button (loaded by run_tests.lua)
+-- ClassicGuide - headless tests: minimap button (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 
@@ -7,7 +7,7 @@ local MB = ns.MinimapButton
 local b = MB.button
 
 -- Created at login, once, on the minimap, visible by default ----------------------------------------
-check(b ~= nil and _G.TBCGuideMinimapButton == b and b.parent == Minimap, "minimap button created on the minimap")
+check(b ~= nil and _G[ns.name .. "MinimapButton"] == b and b.parent == Minimap, "minimap button created on the minimap")
 check(ns.db.profile.showMinimapButton == true and b:IsShown(), "shown by default")
 MB:Create()
 check(MB.button == b, "created only once")
@@ -18,7 +18,7 @@ check(ns.db.minimap.angle == MB.DEFAULT_ANGLE and b.point and b.point[1] == "CEN
 local r = math.rad(MB.DEFAULT_ANGLE)
 check(math.abs(b.point[4] - math.cos(r) * 80) < 1e-6 and math.abs(b.point[5] - math.sin(r) * 80) < 1e-6, "sits on the minimap edge (radius 70 + 10)")
 
--- Left-click opens the TBCGuide settings window; a second click closes it --------------------------
+-- Left-click opens the ClassicGuide settings window; a second click closes it --------------------------
 local cfg = ns.Config.frame
 local function settingsShown() return cfg:IsShown() end
 cfg:Hide()
@@ -46,7 +46,7 @@ check(not settingsShown(), "right-click does not open settings")
 -- Tooltip --------------------------------------------------------------------------------------------
 GameTooltip.lines = {}
 b.scripts.OnEnter(b)
-check(GameTooltip.lines[1] == "TBCGuide" and string.find(table.concat(GameTooltip.lines, "\n"), "open TBCGuide settings", 1, true), "tooltip names the add-on and says what a click does")
+check(GameTooltip.lines[1] == ns.name and string.find(table.concat(GameTooltip.lines, "\n"), "open " .. ns.name .. " settings", 1, true), "tooltip names the add-on and says what a click does")
 
 -- Dragging: follows the cursor, saves once on release, release is not a click ----------------------
 -- cursor straight above the minimap centre -> 90 degrees
@@ -79,14 +79,14 @@ ns:InitSavedVariables()
 MB:Update()
 check(ns.db.minimap.angle == 180 and math.abs(b.point[4] + 80) < 1e-6, "position kept after a reload")
 for _, bad in ipairs({ "x", -1 / 0, 0 / 0 }) do
-    TBCGuideDB.minimap = { angle = bad }
+    _G[ns.svAccount].minimap = { angle = bad }
     ns:InitSavedVariables()
     check(ns.db.minimap.angle == MB.DEFAULT_ANGLE, "invalid saved angle repaired: " .. tostring(bad))
 end
-TBCGuideDB.minimap = "garbage"
+_G[ns.svAccount].minimap = "garbage"
 ns:InitSavedVariables()
 check(type(ns.db.minimap) == "table" and ns.db.minimap.angle == MB.DEFAULT_ANGLE, "corrupt minimap record repaired")
-TBCGuideDB.minimap = { angle = 725 }
+_G[ns.svAccount].minimap = { angle = 725 }
 ns:InitSavedVariables()
 check(ns.db.minimap.angle == 5, "angle normalised to 0-360")
 local keepAuto = ns.db.profile.autoAccept
@@ -109,13 +109,13 @@ check(ns.db.profile.showMinimapButton == false and not b:IsShown(), "unticking h
 ns:InitSavedVariables()
 MB:Update()
 check(ns.db.profile.showMinimapButton == false and not b:IsShown(), "hidden state survives a reload")
-check(SlashCmdList["TBCGUIDE"] ~= nil and pcall(SlashCmdList["TBCGUIDE"], "options"), "settings still reachable by /tbcg options while hidden")
-local okc = pcall(SlashCmdList["TBCGUIDE"], "minimap")
-check(okc and ns.db.profile.showMinimapButton == true and b:IsShown(), "/tbcg minimap shows it again")
-pcall(SlashCmdList["TBCGUIDE"], "set showMinimapButton off")
-check(not b:IsShown(), "/tbcg set showMinimapButton off hides it")
-pcall(SlashCmdList["TBCGUIDE"], "set showMinimapButton on")
-check(b:IsShown(), "/tbcg set showMinimapButton on shows it")
+check(SlashCmdList[ns.key] ~= nil and pcall(SlashCmdList[ns.key], "options"), "settings still reachable by /" .. ns.slash .. " options while hidden")
+local okc = pcall(SlashCmdList[ns.key], "minimap")
+check(okc and ns.db.profile.showMinimapButton == true and b:IsShown(), "/" .. ns.slash .. " minimap shows it again")
+pcall(SlashCmdList[ns.key], "set showMinimapButton off")
+check(not b:IsShown(), "/" .. ns.slash .. " set showMinimapButton off hides it")
+pcall(SlashCmdList[ns.key], "set showMinimapButton on")
+check(b:IsShown(), "/" .. ns.slash .. " set showMinimapButton on shows it")
 InterfaceOptionsFrame:Hide()
 ns.db.minimap.angle = MB.DEFAULT_ANGLE
 MB:Update()

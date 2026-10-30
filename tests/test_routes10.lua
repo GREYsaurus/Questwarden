@@ -1,4 +1,4 @@
--- TBCGuide - headless tests: 1.0 route pass (saved-progress remap, under-level pickups, notes)
+-- ClassicGuide - headless tests: 1.0 route pass (saved-progress remap, under-level pickups, notes)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -87,7 +87,7 @@ local withDrop, gateNotes = 0, 0
 for _, g in ipairs(G.list) do
     for _, s in ipairs(g.steps) do
         if s.text and string.find(s.text, "drops from", 1, true) then withDrop = withDrop + 1 end
-        if s.text and string.find(s.text, "If you are lower, TBCGuide skips it", 1, true) then gateNotes = gateNotes + 1 end
+        if s.text and string.find(s.text, "If you are lower, " .. ns.name .. " skips it", 1, true) then gateNotes = gateNotes + 1 end
     end
 end
 check(withDrop >= 50, "drop-source notes on objective steps (" .. withDrop .. ")")

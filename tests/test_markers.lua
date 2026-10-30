@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for raid markers (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for raid markers (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --
@@ -15,7 +15,7 @@ local function printedSince(mark, pattern)
     end
     return false
 end
-local function slash(cmd) return pcall(SlashCmdList["TBCGUIDE"], cmd) end
+local function slash(cmd) return pcall(SlashCmdList[ns.key], cmd) end
 local function reset()
     MOCK.units, MOCK.icons, MOCK.markCalls, MOCK.markDenied = {}, {}, 0, false
     MOCK.inRaid, MOCK.leader, MOCK.assist, MOCK.combat = false, false, false, false
@@ -298,11 +298,11 @@ M:OnStep()
 -- 16) Diagnostics
 mark = #MOCK.printed
 local okd, errd = slash("debug marks")
-check(okd and printedSince(mark, "raid markers:") and printedSince(mark, "settings:"), "/tbcg debug marks reports rule and settings: " .. tostring(errd))
+check(okd and printedSince(mark, "raid markers:") and printedSince(mark, "settings:"), "/" .. ns.slash .. " debug marks reports rule and settings: " .. tostring(errd))
 
 -- 17) Migration: settings saved by 0.3.x/0.4.0 (objective marking off) are switched on once
-local savedDB = TBCGuideDB
-TBCGuideDB = { profile = { autoMarkObjectives = false } }
+local savedDB = _G[ns.svAccount]
+_G[ns.svAccount] = { profile = { autoMarkObjectives = false } }
 ns.migrationNote = nil
 ns:InitSavedVariables()
 check(ns.db.profile.autoMarkObjectives == true and ns.migrationNote ~= nil, "old saved setting switched on once, with a note")
@@ -310,10 +310,10 @@ ns.db.profile.autoMarkObjectives = false -- the player turns it off again
 ns.migrationNote = nil
 ns:InitSavedVariables()
 check(ns.db.profile.autoMarkObjectives == false and ns.migrationNote == nil, "the player's later choice is kept")
-TBCGuideDB = nil
+_G[ns.svAccount] = nil
 ns:InitSavedVariables()
 check(ns.db.profile.autoMarkObjectives == true and ns.migrationNote == nil, "new install: on by default, no note")
-TBCGuideDB = savedDB
+_G[ns.svAccount] = savedDB
 ns:InitSavedVariables()
 prof = ns.db.profile
 
@@ -331,7 +331,7 @@ target(MOCK.creature(3281, 43, "Sarkoth"))
 check(MOCK.markCalls == calls, "no further attempts once paused")
 reset()
 M:OnStep()
-MOCK.fire("ADDON_ACTION_BLOCKED", "TBCGuide", "SetRaidTarget()")
+MOCK.fire("ADDON_ACTION_BLOCKED", ns.name, "SetRaidTarget()")
 calls = MOCK.markCalls
 target(MOCK.creature(3281, 44, "Sarkoth"))
 check(M.blocked and MOCK.markCalls == calls, "blocked by the client: automatic marking stops")
@@ -348,7 +348,7 @@ check(prof.showMarkerBar == true, "marker bar toggles out of combat")
 slash("markbar")
 for _, cmd in ipairs({ "markers", "marker", "marker bogus", "mark bogus", "debug marks", "set autoMark off", "set autoMark on" }) do
     local okc, err = slash(cmd)
-    check(okc, "/tbcg " .. cmd .. " -> " .. tostring(err))
+    check(okc, "/" .. ns.slash .. " " .. cmd .. " -> " .. tostring(err))
 end
 ns.db.profile.defaultMarker = 42
 ns:InitSavedVariables()

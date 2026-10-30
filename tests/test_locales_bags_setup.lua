@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for tooltip locales, bag add-on adapters and first-login setup
+-- ClassicGuide - headless tests for tooltip locales, bag add-on adapters and first-login setup
 -- (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
@@ -139,7 +139,7 @@ function adi:NewModule(name)
     return mod
 end
 LibStub = function(lib) if lib == "AceAddon-3.0" then return { GetAddon = function(_, n) return n == "AdiBags" and adi or nil end } end end
-check(BA:AdiBags() and mod.name == "TBCGuideMarkers" and mod.handlers.AdiBags_UpdateButton, "AdiBags: module created and enabled at once")
+check(BA:AdiBags() and mod.name == ns.name .. "Markers" and mod.handlers.AdiBags_UpdateButton, "AdiBags: module created and enabled at once")
 local ab = button({ bag = 0, slot = 3, IsBank = function() return false end })
 mod.handlers.AdiBags_UpdateButton("AdiBags_UpdateButton", ab)
 check(GM.overlays[ab] and GM.overlays[ab].shown, "AdiBags: marked slot shows the arrow")
@@ -153,11 +153,11 @@ Baganator = { API = {
     RegisterJunkPlugin = function(label, id, cb) junkPlugin = { id = id, cb = cb } end,
     RequestItemButtonsRefresh = function(r2) refreshes[#refreshes + 1] = r2 end,
 }, Constants = { RefreshReason = { ItemWidgets = 7 } } }
-check(BA:Baganator() and corner and corner.id == "tbcguide_boe_upgrade" and junkPlugin and junkPlugin.id == "tbcguide", "Baganator: corner widget and junk plugin registered")
+check(BA:Baganator() and corner and corner.id == ns.slashLong .. "_boe_upgrade" and junkPlugin and junkPlugin.id == ns.slashLong, "Baganator: corner widget and junk plugin registered")
 local parent0 = { GetID = function() return 0 end }
 local gb = button({ GetID = function() return 3 end, GetParent = function() return parent0 end })
 local widget = corner.onInit(gb)
-check(widget.tbcgButton == gb and GM.tipOnly[gb] == BA.BaganatorResolve, "Baganator: widget knows its button; tooltip lines enabled")
+check(widget.guideButton == gb and GM.tipOnly[gb] == BA.BaganatorResolve, "Baganator: widget knows its button; tooltip lines enabled")
 check(corner.onUpdate(widget, { itemID = ITEM }) == true and corner.onUpdate(widget, { itemID = OTHER }) == false, "Baganator: arrow only for the marked item")
 local bankParent = { GetID = function() return -1 end }
 local gbank = button({ GetID = function() return 3 end, GetParent = function() return bankParent end })

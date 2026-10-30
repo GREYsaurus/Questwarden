@@ -1,0 +1,20 @@
+{
+  "_comment": "Build metadata for the WoW Classic Era target. Game rules the add-on itself needs live in Target.ClassicEra.lua. See docs/DEVELOPER.md (Targets).",
+  "id": "ClassicEra",
+  "title": "WoW Classic Era 1.15.9",
+  "interface": "11509",
+  "shipped": true,
+  "require": {
+    "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
+    "database": false,
+    "talents": false,
+    "routes": false
+  },
+  "tocExtra": [],
+  "install": "World of Warcraft\\_classic_era_\\Interface\\AddOns\\",
+  "evidence": [
+    "wago.tools/api/builds: product wow_classic_era latest 1.15.9.70576 (2026-10-26), checked 2026-10-29",
+    "Questie bundle/v12.3.1+v1.0.9 release.json: flavor classic at interfaces 11508 and 11509, checked 2026-10-29",
+    "Gethe/wow-ui-source branch classic_era: 1.15.9 (70576), checked 2026-10-29"
+  ]
+}

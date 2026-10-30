@@ -1,4 +1,4 @@
-// TBCGuide build tooling - Lua lint + manifest check.
+// Guide build tooling - Lua lint + manifest check.
 // Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 // SPDX-License-Identifier: GPL-3.0-only
 //
@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TBCGuideTools
+namespace GuideTools
 {
     public sealed class LintResult
     {
@@ -38,10 +38,21 @@ namespace TBCGuideTools
             "strupper","strsub","strlen","strmatch","gmatch","mod","random","sqrt","hooksecurefunc","securecall",
             "issecurevariable","geterrorhandler","seterrorhandler","setfenv","getfenv" });
 
-        static readonly HashSet<string> OwnGlobalsWrite = new HashSet<string>(new[] {
-            "TBCGuide","TBCGuideDB","TBCGuideCharDB","SLASH_TBCGUIDE1","SLASH_TBCGUIDE2","SLASH_TBCGEAR1",
-            "BINDING_HEADER_TBCGUIDE","BINDING_NAME_TBCGUIDE_DELETEJUNK","TBCGuide_DeleteCheapestJunk",
-            "BINDING_NAME_TBCGUIDE_ROUTENEXT","TBCGuide_RouteNext" });
+        // Our own globals are created through _G[...] from names derived at runtime (Core/Init.lua), so
+        // no global identifier of ours appears in the source and none needs listing here.
+        static readonly HashSet<string> OwnGlobalsWrite = new HashSet<string>();
+
+        // The add-on's name lives only in tools/addon.json. Shipped code must not spell it (or the old
+        // TBCGuide name) in an identifier or string: use ns.name, ns.key, ns.slash, ns.svAccount, ...
+        // Comments may mention it. Returns the offending token text, or null.
+        static string HardCodedName(Token t)
+        {
+            if (t.Kind != TK.Name && t.Kind != TK.String) return null;
+            string v = t.Text ?? "";
+            foreach (var n in new[] { Ctx.Name, "TBCGuide", "TBCG_", "tbcg" })
+                if (n.Length > 0 && v.IndexOf(n, StringComparison.OrdinalIgnoreCase) >= 0) return v;
+            return null;
+        }
 
         public static LintResult Run(string addOnDir, string allowlistPath)
         {
@@ -84,9 +95,24 @@ namespace TBCGuideTools
                 LuaChecker chk;
                 try { chk = LuaChecker.Check(src); }
                 catch (LuaSyntaxError e) { r.Err(rel + ":" + e.Line + ": " + e.Message); continue; }
-                bool generatedData = rel.Replace('/', '\\').StartsWith("Database\\QuestieTBC", StringComparison.OrdinalIgnoreCase);
+                bool generatedData = rel.Replace('/', '\\').StartsWith("Database\\Questie\\", StringComparison.OrdinalIgnoreCase);
                 if (generatedData) continue; // data files: syntax only
                 var reported = new HashSet<string>();
+                var toks = LuaLexer.Lex(src);
+                for (int k = 0; k + 3 < toks.Count; k++)
+                {
+                    // Compat.has("Api.Name") / Compat.Has(...) reach an API by name, so the global audit below
+                    // cannot see it. Those names must be on the allowlist too (warning until reviewed).
+                    if (toks[k].Kind == TK.Name && (toks[k].Text == "has" || toks[k].Text == "Has") && toks[k + 1].Text == "("
+                        && toks[k + 2].Kind == TK.String && toks[k + 3].Text == ")" && !allow.Contains(toks[k + 2].Text)
+                        && reported.Add("byname:" + toks[k + 2].Text))
+                        r.Warn(rel + ":" + toks[k].Line + ": API reached by name '" + toks[k + 2].Text + "' is not on tools/wow_api_allowlist.txt");
+                }
+                foreach (var t in toks)
+                {
+                    string bad = HardCodedName(t);
+                    if (bad != null) r.Err(rel + ":" + t.Line + ": hard-coded add-on name in '" + (bad.Length > 60 ? bad.Substring(0, 60) + "..." : bad) + "' (use ns.name / ns.key / ns.slash; the name lives in tools/addon.json)");
+                }
                 foreach (var g in chk.Globals)
                 {
                     if (g.Write)

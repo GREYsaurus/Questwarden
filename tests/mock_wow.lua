@@ -1,4 +1,4 @@
--- TBCGuide - minimal World of Warcraft API mocks for headless tests (Lua 5.1)
+-- ClassicGuide - minimal World of Warcraft API mocks for headless tests (Lua 5.1)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --

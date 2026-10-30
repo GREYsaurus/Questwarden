@@ -1,22 +1,31 @@
-﻿# TBCGuide build script (Windows PowerShell 5.1+ / PowerShell 7).
+# ClassicGuide build script (Windows PowerShell 5.1+ / PowerShell 7).
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 # SPDX-License-Identifier: GPL-3.0-only
 #
 # Usage:
-#   powershell -ExecutionPolicy Bypass -File tools/build.ps1 <command>
+#   powershell -ExecutionPolicy Bypass -File tools/build.ps1 <command> [-Target ClassicEra|Forever|TBC]
+#
+# Targets (targets/<Target>/, docs/DEVELOPER.md): ClassicEra (default, shipped), Forever (skeleton, not
+# shipped until verified in the live client) and TBC (TBCGuide 0.9.5 data kept as a test fixture, never
+# shipped). Every command works on the add-on as staged for ONE target in build/<Target>/<name>/.
 #
 # Commands:
+#   stage            Assemble build/<Target>/<name>/ from addon/ (shared code), targets/<Target>/addon/ (data),
+#                    Target.<Target>.lua, and the TOC/Bindings templates filled from tools/addon.json
 #   fetch            Download pinned upstream inputs (tools/upstream.json) into .cache/ and verify checksums
-#   import-questie   Regenerate TBCGuide/Database/QuestieTBC/*.lua from the pinned QuestieDB source
+#   import-questie   Regenerate targets/<Target>/addon/Database/Questie/*.lua from the pinned QuestieDB source
 #   import-client    Regenerate talent trees and race/class tables from client DB2 CSV exports
-#   guides           Compile guides-src/*.guide into TBCGuide/Guides/Compiled/*.lua
+#   guides           Compile targets/<Target>/guides-src/*.guide into targets/<Target>/addon/Guides/Compiled/
 #   lint             Lua 5.1 syntax check + global usage audit of every shipped .lua file
 #   validate         Content validation (guides, talents, coverage, manifest)
-#   report           Write docs/COVERAGE_REPORT.md
-#   routes           Route optimization model: walk every race/class route, write docs/ROUTE_AUDIT.md
-#                    and docs/generated/route-metrics.csv (fails on impossible quest order / log overflow)
-#   package          Build dist/TBCGuide-<version>.zip (installable add-on + corresponding source)
-#   all              guides, lint, validate, routes, report, package (uses already-imported data)
+#   report           Write docs/generated/<Target>/COVERAGE_REPORT.md
+#   routes           Route model: walk every race/class route, write docs/generated/<Target>/ROUTE_AUDIT.md
+#                    (fails on impossible quest order / quest-log overflow)
+#   test             Headless Lua 5.1 tests against the staged add-on (lua5.1, or Python's lupa package)
+#   package          Build dist/<name>-<version>-<Target>.zip (installable add-on + corresponding source);
+#                    refused for targets with "shipped": false
+#   all              stage, guides, lint, validate, routes, report, test, package (package skipped when not shipped)
+#   rename <Name> [<slash>]   Change the add-on's name (and slash command) in tools/addon.json
 #   zonequests "<Zone>" <Alliance|Horde>   Authoring aid: list a zone's quests from the bundled DB
 #
 # Nothing here is needed by players: the shipped add-on already contains all generated data.
@@ -24,23 +33,106 @@
 param(
     [Parameter(Position = 0)][string]$Command = "all",
     [Parameter(Position = 1)][string]$Arg1,
-    [Parameter(Position = 2)][string]$Arg2
+    [Parameter(Position = 2)][string]$Arg2,
+    [string]$Target = "ClassicEra"
 )
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
-$AddOn = Join-Path $Root "TBCGuide"
 $Cache = Join-Path $Root ".cache"
 $Upstream = Get-Content (Join-Path $PSScriptRoot "upstream.json") -Raw | ConvertFrom-Json
+$BrandFile = Join-Path $PSScriptRoot "addon.json"
+$Brand = Get-Content $BrandFile -Raw | ConvertFrom-Json
+$Name = $Brand.name
+
+$Shared = Join-Path $Root "addon"
+$TargetDir = Join-Path $Root "targets\$Target"
+if (-not (Test-Path (Join-Path $TargetDir "target.json"))) {
+    $known = (Get-ChildItem (Join-Path $Root "targets") -Directory | ForEach-Object { $_.Name }) -join ", "
+    throw "Unknown target '$Target'. Known targets: $known"
+}
+$TargetInfo = Get-Content (Join-Path $TargetDir "target.json") -Raw | ConvertFrom-Json
+$Overlay = Join-Path $TargetDir "addon"
+$StageRoot = Join-Path $Root "build\$Target"
+$AddOn = Join-Path $StageRoot $Name
+$Reports = Join-Path $Root "docs\generated\$Target"
+$script:Staged = $false
 
 function Load-Tools {
-    if ("TBCGuideTools.LuaLiteralReader" -as [type]) { return }
-    $src = Get-ChildItem (Join-Path $PSScriptRoot "src") -Filter *.cs | ForEach-Object { $_.FullName }
-    Add-Type -Path $src -ReferencedAssemblies System.Core, System.Data, System.Xml, Microsoft.VisualBasic
+    if (-not ("GuideTools.LuaLiteralReader" -as [type])) {
+        $src = Get-ChildItem (Join-Path $PSScriptRoot "src") -Filter *.cs | ForEach-Object { $_.FullName }
+        Add-Type -Path $src -ReferencedAssemblies System.Core, System.Data, System.Xml, Microsoft.VisualBasic
+    }
+    $info = [GuideTools.Ctx]::Load($Root, $Target, $Name)
+    $req = $TargetInfo.require
+    [GuideTools.Ctx]::RequireDatabase = [bool]$req.database
+    [GuideTools.Ctx]::RequireTalents = [bool]$req.talents
+    [GuideTools.Ctx]::RequireRoutes = [bool]$req.routes
+    New-Item -ItemType Directory -Force $Reports | Out-Null
+    if (-not $script:ToolsAnnounced) { Write-Host "info  $info"; $script:ToolsAnnounced = $true }
 }
 
 function Get-QdbRoot { Join-Path $Cache "upstream\questiedb" }
 function Get-Db2Root { Join-Path $Cache "upstream\db2" }
+
+function Write-Text([string]$path, [string[]]$lines) {
+    New-Item -ItemType Directory -Force (Split-Path $path) | Out-Null
+    [IO.File]::WriteAllText($path, (($lines -join "`r`n") + "`r`n"), (New-Object Text.UTF8Encoding($false)))
+}
+
+# Copy every file under $from into $to, keeping relative paths and overwriting what is there.
+function Copy-Tree([string]$from, [string]$to) {
+    if (-not (Test-Path $from)) { return }
+    $base = (Resolve-Path $from).Path.TrimEnd('\')
+    foreach ($f in Get-ChildItem $from -Recurse -File) {
+        $dest = Join-Path $to $f.FullName.Substring($base.Length + 1)
+        New-Item -ItemType Directory -Force (Split-Path $dest) | Out-Null
+        Copy-Item $f.FullName $dest -Force
+    }
+}
+
+function Assert-Name {
+    if ($Name -notmatch '^[A-Za-z][A-Za-z0-9]{2,15}$') { throw "tools/addon.json name '$Name' must be 3-16 letters/digits starting with a letter (it becomes a folder, SavedVariables and party-message prefix)" }
+    if ($Brand.slash -notmatch '^[a-z][a-z0-9]{1,15}$') { throw "tools/addon.json slash '$($Brand.slash)' must be lowercase letters/digits" }
+}
+
+function Invoke-Stage {
+    if ($script:Staged) { return }
+    Assert-Name
+    if (Test-Path $StageRoot) { Remove-Item $StageRoot -Recurse -Force -Confirm:$false }
+    New-Item -ItemType Directory -Force $AddOn | Out-Null
+    Copy-Tree $Shared $AddOn
+    Copy-Tree $Overlay $AddOn
+    New-Item -ItemType Directory -Force (Join-Path $AddOn "Config") | Out-Null
+    Copy-Item (Join-Path $TargetDir "Target.$Target.lua") (Join-Path $AddOn "Config\Target.lua") -Force
+    Write-Text (Join-Path $AddOn "Config\Brand.lua") @(
+        "-- $Name - names that are not derived from the add-on folder. GENERATED by tools/build.ps1 stage",
+        "-- from tools/addon.json. DO NOT EDIT: change tools/addon.json and rebuild.",
+        "-- SPDX-License-Identifier: GPL-3.0-only",
+        "local _, ns = ...",
+        "ns.brand = { slash = `"$($Brand.slash)`" }")
+    $vars = @{
+        "{{NAME}}" = $Name; "{{KEY}}" = $Name.ToUpperInvariant(); "{{VERSION}}" = $Brand.version
+        "{{AUTHOR}}" = $Brand.author; "{{NOTES}}" = $Brand.notes; "{{INTERFACE}}" = $TargetInfo.interface
+        "{{TARGET_TITLE}}" = $TargetInfo.title
+    }
+    function Fill([string]$text) { foreach ($k in $vars.Keys) { $text = $text.Replace($k, [string]$vars[$k]) }; $text }
+    $toc = foreach ($l in Get-Content (Join-Path $Shared "addon.toc.in")) {
+        if ($l.StartsWith("#!")) { continue }
+        if ($l.Trim() -eq "{{EXTRA}}") { foreach ($x in @($TargetInfo.tocExtra)) { if ($x) { Fill $x } }; continue }
+        Fill $l
+    }
+    Write-Text (Join-Path $AddOn "$Name.toc") $toc
+    Write-Text (Join-Path $AddOn "Bindings.xml") (Get-Content (Join-Path $Shared "Bindings.xml.in") | ForEach-Object { Fill $_ })
+    Get-ChildItem $AddOn -Recurse -File -Filter *.in | Remove-Item -Force -Confirm:$false
+    # For tests/run_tests.lua and tests/run_smoke.lua (GUIDE_TARGET picks the target; see docs/DEVELOPER.md).
+    $rel = "build/$Target/$Name/"
+    Write-Text (Join-Path $StageRoot "stage.lua") @(
+        "-- GENERATED by tools/build.ps1 stage. Where the staged add-on is, for the headless tests.",
+        "return { name = `"$Name`", target = `"$Target`", dir = `"$rel`", slash = `"$($Brand.slash)`" }")
+    $script:Staged = $true
+    Write-Host "Staged $Target -> $rel"
+}
 
 function Invoke-Fetch {
     $ProgressPreference = 'SilentlyContinue'
@@ -89,15 +181,14 @@ function Invoke-ImportQuestie {
     $qdb = Get-QdbRoot
     if (-not (Test-Path $qdb)) { throw "Run 'fetch' first." }
     $prov = "QuestieDB commit $($Upstream.questiedb.commit) ($($Upstream.questiedb.release))."
-    Write-Host "Parsing upstream TBC tables..."
-    $data = [TBCGuideTools.QuestieData]::Load($qdb)
-    $corr = [TBCGuideTools.QuestieCorrections]::Apply($data, $qdb)
-    $out = Join-Path $AddOn "Database\QuestieTBC"
-    $stats = [TBCGuideTools.QuestieExporter]::Export($data, $out, $prov)
+    Write-Host "Parsing upstream tables..."
+    $data = [GuideTools.QuestieData]::Load($qdb)
+    $corr = [GuideTools.QuestieCorrections]::Apply($data, $qdb)
+    $out = Join-Path $Overlay "Database\Questie"
+    $stats = [GuideTools.QuestieExporter]::Export($data, $out, $prov)
     $stats.GetEnumerator() | Sort-Object Key | ForEach-Object { Write-Host ("  {0,-10} {1}" -f $_.Key, $_.Value) }
     Write-Host ("  corrections applied: {0}, skipped: {1}" -f $corr.Applied, $corr.Skipped.Count)
-    $log = Join-Path $Root "docs\generated\questie-import.log"
-    New-Item -ItemType Directory -Force (Split-Path $log) | Out-Null
+    $log = Join-Path $Reports "questie-import.log"
     $lines = @("QuestieDB import - $prov", "")
     $lines += $stats.GetEnumerator() | Sort-Object Key | ForEach-Object { "{0}: {1}" -f $_.Key, $_.Value }
     $lines += "", "Corrections applied: $($corr.Applied)", "Corrections skipped (could not be evaluated statically):"
@@ -112,63 +203,93 @@ function Invoke-ImportClient {
     Load-Tools
     $dd = Get-Db2Root
     if (-not (Test-Path $dd)) { throw "Run 'fetch' first." }
-    $r = [TBCGuideTools.ClientTables]::Export($dd, $AddOn, $Upstream.clientTables.build)
+    $r = [GuideTools.ClientTables]::Export($dd, $Overlay, $Upstream.clientTables.build)
     Write-Host $r
 }
 
+function Write-Csv([string]$path, [string]$header, $rows) {
+    (@($header) + @($rows | ForEach-Object { ($_ | ForEach-Object { '"' + ($_ -replace '"','""') + '"' }) -join "," })) | Set-Content $path -Encoding UTF8
+}
+
 function Invoke-Guides {
+    Invoke-Stage
     Load-Tools
-    $res = [TBCGuideTools.GuideCompiler]::CompileAll((Join-Path $Root "guides-src"), $AddOn)
+    $stagedCompiled = Join-Path $AddOn "Guides\Compiled"
+    if (Test-Path $stagedCompiled) { Get-ChildItem $stagedCompiled -File | Remove-Item -Force -Confirm:$false }
+    $res = [GuideTools.GuideCompiler]::CompileAll([GuideTools.Ctx]::GuidesSrc, $AddOn)
     Write-Host $res.Summary
-    $log = Join-Path $Root "docs\generated\guide-warnings.log"
-    New-Item -ItemType Directory -Force (Split-Path $log) | Out-Null
-    (@($res.Errors | ForEach-Object { "ERROR $_" }) + @($res.Warnings)) | Set-Content $log -Encoding UTF8
+    (@($res.Errors | ForEach-Object { "ERROR $_" }) + @($res.Warnings)) | Set-Content (Join-Path $Reports "guide-warnings.log") -Encoding UTF8
     # Dungeon audit: quests tagged from quest data, and quests with only some objectives inside.
-    $dg = Join-Path $Root "docs\generated\dungeon-quests.csv"
-    (@("guide,quest,title,instance,step") + @($res.AutoDungeon | ForEach-Object { ($_ | ForEach-Object { '"' + ($_ -replace '"','""') + '"' }) -join "," })) | Set-Content $dg -Encoding UTF8
-    $mx = Join-Path $Root "docs\generated\dungeon-mixed.csv"
-    (@("guide,quest,title,place") + @($res.MixedDungeon | ForEach-Object { ($_ | ForEach-Object { '"' + ($_ -replace '"','""') + '"' }) -join "," })) | Set-Content $mx -Encoding UTF8
+    Write-Csv (Join-Path $Reports "dungeon-quests.csv") "guide,quest,title,instance,step" $res.AutoDungeon
+    Write-Csv (Join-Path $Reports "dungeon-mixed.csv") "guide,quest,title,place" $res.MixedDungeon
     # Roaming hunting routes: which kill/drop steps have one, could get one, or keep a single waypoint (docs/ROAMING.md).
-    $rc = Join-Path $Root "docs\generated\roaming-candidates.csv"
-    (@("guide,quest,obj,title,status,reason,targets,route") + @($res.RoamInventory | ForEach-Object { ($_ | ForEach-Object { '"' + ($_ -replace '"','""') + '"' }) -join "," })) | Set-Content $rc -Encoding UTF8
+    Write-Csv (Join-Path $Reports "roaming-candidates.csv") "guide,quest,obj,title,status,reason,targets,route" $res.RoamInventory
     if ($res.Errors.Count -gt 0) {
         $res.Errors | Select-Object -First 200 | ForEach-Object { Write-Host "  ERROR $_" -ForegroundColor Red }
         throw "Guide compilation failed with $($res.Errors.Count) error(s)."
     }
+    # The compiled guides are target data: keep the copy in targets/<Target>/addon/ in step with the stage.
+    $compiledOut = Join-Path $Overlay "Guides\Compiled"
+    if (Test-Path $compiledOut) { Get-ChildItem $compiledOut -File | Remove-Item -Force -Confirm:$false }
+    Copy-Tree (Join-Path $AddOn "Guides\Compiled") $compiledOut
     $res.Warnings | Select-Object -First 60 | ForEach-Object { Write-Host "  warn  $_" -ForegroundColor Yellow }
-    if ($res.Warnings.Count -gt 60) { Write-Host "  ... $($res.Warnings.Count - 60) more warnings (see docs/generated/guide-warnings.log)" }
+    if ($res.Warnings.Count -gt 60) { Write-Host "  ... $($res.Warnings.Count - 60) more warnings (see docs/generated/$Target/guide-warnings.log)" }
 }
 
 function Invoke-Lint {
+    Invoke-Stage
     Load-Tools
-    $r = [TBCGuideTools.Linter]::Run($AddOn, (Join-Path $PSScriptRoot "wow_api_allowlist.txt"))
+    $r = [GuideTools.Linter]::Run($AddOn, (Join-Path $PSScriptRoot "wow_api_allowlist.txt"))
     $r.Messages | ForEach-Object { Write-Host $_ }
     Write-Host $r.Summary
     if ($r.Errors -gt 0) { throw "Lint failed with $($r.Errors) error(s)." }
 }
 
 function Invoke-Validate {
+    Invoke-Stage
     Load-Tools
-    $r = [TBCGuideTools.Validator]::Run($Root, $AddOn)
+    $r = [GuideTools.Validator]::Run($Root, $AddOn)
     $r.Messages | ForEach-Object { Write-Host $_ }
     Write-Host $r.Summary
     if ($r.Errors -gt 0) { throw "Validation failed with $($r.Errors) error(s)." }
 }
 
 function Invoke-Routes {
+    Invoke-Stage
     Load-Tools
-    $a = [TBCGuideTools.RouteAnalyzer]::Run($Root, $AddOn)
-    [TBCGuideTools.RouteAnalyzer]::Write($Root, $a)
+    $a = [GuideTools.RouteAnalyzer]::Run($Root, $AddOn)
+    [GuideTools.RouteAnalyzer]::Write($Root, $a)
     $a.Errors | Select-Object -First 40 | ForEach-Object { Write-Host "  ERROR $_" -ForegroundColor Red }
-    Write-Host ("routes: {0} routes walked, {1} error(s), {2} warning(s). Report: docs/ROUTE_AUDIT.md" -f $a.Routes, $a.Errors.Count, $a.Warnings.Count)
+    Write-Host ("routes: {0} routes walked, {1} error(s), {2} warning(s). Report: docs/generated/{3}/ROUTE_AUDIT.md" -f $a.Routes, $a.Errors.Count, $a.Warnings.Count, $Target)
     if ($a.Errors.Count -gt 0) { throw "Route audit failed with $($a.Errors.Count) error(s)." }
 }
 
 function Invoke-Report {
+    Invoke-Stage
     Load-Tools
-    $path = Join-Path $Root "docs\COVERAGE_REPORT.md"
-    [TBCGuideTools.Validator]::WriteCoverageReport($Root, $AddOn, $path)
+    $path = Join-Path $Reports "COVERAGE_REPORT.md"
+    [GuideTools.Validator]::WriteCoverageReport($Root, $AddOn, $path)
     Write-Host "Wrote $path"
+}
+
+function Invoke-Test {
+    Invoke-Stage
+    # Build tooling first (C# lua reader, linter, target rules), then the add-on in Lua.
+    powershell -ExecutionPolicy Bypass -File (Join-Path $Root "tests/tools-selftest.ps1")
+    if ($LASTEXITCODE -ne 0) { throw "Tool self-test failed." }
+    # The TBC fixture carries real data, so it runs the full suite; the other targets run the smoke suite
+    # (boot, detection, empty-data behaviour) until their data exists.
+    $runner = if ($Target -eq "TBC") { "tests/run_tests.lua" } else { "tests/run_smoke.lua" }
+    $env:GUIDE_TARGET = $Target
+    Push-Location $Root
+    try {
+        $lua = Get-Command lua5.1 -ErrorAction SilentlyContinue
+        if ($lua) { & $lua.Source $runner; $code = $LASTEXITCODE }
+        else {
+            python (Join-Path $PSScriptRoot "lua51.py") $runner; $code = $LASTEXITCODE
+        }
+    } finally { Pop-Location }
+    if ($code -ne 0) { throw "Tests failed ($runner, target $Target)." }
 }
 
 # Zip a folder (including the folder name) with forward-slash entry names, as the zip spec requires.
@@ -187,34 +308,46 @@ function New-Zip([string]$dir, [string]$zipPath) {
 }
 
 function Invoke-Package {
-    $toc = Get-Content (Join-Path $AddOn "TBCGuide.toc")
-    $ver = ($toc | Where-Object { $_ -match '^## Version:' }) -replace '^## Version:\s*', ''
+    if (-not $TargetInfo.shipped) { throw "Target $Target is not shipped (targets/$Target/target.json: `"shipped`": false)." }
+    Invoke-Stage
+    $ver = $Brand.version
     $dist = Join-Path $Root "dist"
     $stage = Join-Path $dist "stage"
     if (Test-Path $stage) { Remove-Item $stage -Recurse -Force -Confirm:$false }
     New-Item -ItemType Directory -Force $stage | Out-Null
-    Copy-Item $AddOn (Join-Path $stage "TBCGuide") -Recurse
+    Copy-Tree $AddOn (Join-Path $stage $Name)
     # GPL: ship licence + attribution inside the add-on folder, and the full corresponding source alongside.
     foreach ($f in "LICENSE", "NOTICE.md", "THIRD_PARTY_LICENSES.md", "README.md") {
-        Copy-Item (Join-Path $Root $f) (Join-Path $stage "TBCGuide\$f")
+        Copy-Item (Join-Path $Root $f) (Join-Path $stage "$Name\$f")
     }
-    $srcStage = Join-Path $stage "TBCGuide-source"
+    $srcStage = Join-Path $stage "$Name-source"
     New-Item -ItemType Directory -Force $srcStage | Out-Null
-    foreach ($d in "TBCGuide", "guides-src", "tools", "tests", "docs") { Copy-Item (Join-Path $Root $d) (Join-Path $srcStage $d) -Recurse }
+    foreach ($d in "addon", "targets", "tools", "tests", "docs") { Copy-Tree (Join-Path $Root $d) (Join-Path $srcStage $d) }
     foreach ($f in "LICENSE", "COPYING", "NOTICE.md", "THIRD_PARTY_LICENSES.md", "README.md", "INSTALL.md", "CHANGELOG.md", ".gitignore") {
         Copy-Item (Join-Path $Root $f) (Join-Path $srcStage $f)
     }
-    $addonZip = Join-Path $dist "TBCGuide-$ver.zip"
-    $srcZip = Join-Path $dist "TBCGuide-$ver-source.zip"
+    $addonZip = Join-Path $dist "$Name-$ver-$Target.zip"
+    $srcZip = Join-Path $dist "$Name-$ver-source.zip"
     foreach ($z in $addonZip, $srcZip) { if (Test-Path $z) { Remove-Item $z -Force -Confirm:$false } }
-    New-Zip (Join-Path $stage "TBCGuide") $addonZip
+    New-Zip (Join-Path $stage $Name) $addonZip
     New-Zip $srcStage $srcZip
     Remove-Item $stage -Recurse -Force -Confirm:$false
     Write-Host "Packaged $addonZip"
     Write-Host "Packaged $srcZip"
 }
 
+function Invoke-Rename([string]$newName, [string]$newSlash) {
+    if (-not $newName) { throw "Usage: tools/build.ps1 rename <NewName> [<slash>]" }
+    $j = Get-Content $BrandFile -Raw
+    $j = $j -replace '"name":\s*"[^"]*"', ('"name": "' + $newName + '"')
+    if ($newSlash) { $j = $j -replace '"slash":\s*"[^"]*"', ('"slash": "' + $newSlash + '"') }
+    [IO.File]::WriteAllText($BrandFile, $j, (New-Object Text.UTF8Encoding($false)))
+    Write-Host "tools/addon.json: name $Name -> $newName$(if ($newSlash) { ", slash -> $newSlash" })"
+    Write-Host "Code needs no change. Prose in README.md, INSTALL.md and docs/ still says ${Name}: update it by hand."
+}
+
 switch ($Command) {
+    "stage" { Invoke-Stage }
     "fetch" { Invoke-Fetch }
     "import-questie" { Invoke-ImportQuestie }
     "import-client" { Invoke-ImportClient }
@@ -223,8 +356,13 @@ switch ($Command) {
     "validate" { Invoke-Validate }
     "report" { Invoke-Report }
     "routes" { Invoke-Routes }
+    "test" { Invoke-Test }
     "package" { Invoke-Package }
-    "zonequests" { Load-Tools; [TBCGuideTools.QuestLister]::List($AddOn, $Arg1, $Arg2) }
-    "all" { Invoke-Guides; Invoke-Lint; Invoke-Validate; Invoke-Routes; Invoke-Report; Invoke-Package }
+    "rename" { Invoke-Rename $Arg1 $Arg2 }
+    "zonequests" { Invoke-Stage; Load-Tools; [GuideTools.QuestLister]::List($AddOn, $Arg1, $Arg2) }
+    "all" {
+        Invoke-Stage; Invoke-Guides; Invoke-Lint; Invoke-Validate; Invoke-Routes; Invoke-Report; Invoke-Test
+        if ($TargetInfo.shipped) { Invoke-Package } else { Write-Host "package: skipped ($Target is not shipped)" }
+    }
     default { throw "Unknown command '$Command'. See the header of tools/build.ps1." }
 }

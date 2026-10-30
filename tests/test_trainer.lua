@@ -1,4 +1,4 @@
--- TBCGuide - headless tests for class trainer suggestions (loaded by run_tests.lua)
+-- ClassicGuide - headless tests for class trainer suggestions (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --

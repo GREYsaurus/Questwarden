@@ -1,8 +1,0 @@
-<Bindings>
-	<Binding name="TBCGUIDE_DELETEJUNK" header="TBCGUIDE">
-		TBCGuide_DeleteCheapestJunk()
-	</Binding>
-	<Binding name="TBCGUIDE_ROUTENEXT" header="TBCGUIDE">
-		TBCGuide_RouteNext()
-	</Binding>
-</Bindings>
