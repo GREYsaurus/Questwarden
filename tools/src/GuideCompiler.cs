@@ -777,7 +777,7 @@ namespace GuideTools
             {
                 int id = int.Parse(m.Groups[1].Value);
                 LTable rec;
-                if (!db.Quests.TryGetValue(id, out rec)) { res.Errors.Add(where + ": quest id " + id + " is not in the TBC database"); return -1; }
+                if (!db.Quests.TryGetValue(id, out rec)) { res.Errors.Add(where + ": quest id " + id + " is not in the " + Ctx.TargetName + " database"); return -1; }
                 string given = m.Groups[2].Value.Trim();
                 if (given.Length > 0 && BundledDb.Norm(given) != BundledDb.Norm(BundledDb.Str(rec, BundledDb.Q_NAME)))
                     res.Errors.Add(where + ": quest " + id + " is '" + BundledDb.Str(rec, BundledDb.Q_NAME) + "', not '" + given + "'");

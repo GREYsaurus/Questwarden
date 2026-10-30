@@ -1,0 +1,37 @@
+# ClassicGuide - Arathi Highlands (30-34), Alliance
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
+
+@guide A_Arathi
+@name Arathi Highlands (Refuge Pointe)
+@faction Alliance
+@levels 30-34
+@zone Arathi Highlands
+@chapter Azeroth
+@desc Refuge Pointe, Northfold Manor, Stromgarde and the Shards of Myzrael. Then south to Stranglethorn.
+@next A_Desolace
+
+accept The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
+complete The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent Shards.
+turnin The Princess Trapped
+accept Stones of Binding
+fp Refuge Pointe
+accept Wanted!  Marez Cowl [elite; group=3; optional]
+accept Wanted!  Otto and Falconcrest [elite; group=3; optional]
+accept Northfold Manor | Captain Nials, Refuge Pointe.
+complete Northfold Manor | Syndicate at Northfold Manor, north-west.
+turnin Northfold Manor
+accept Stromgarde Badges
+complete Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
+turnin Stromgarde Badges
+complete Wanted!  Marez Cowl [elite; group=3; optional] | Marez's Head drops from Marez Cowl.
+complete Wanted!  Otto and Falconcrest [elite; group=3; optional] | Otto's Head drops from Otto. Falconcrest's Head drops from Lord Falconcrest.
+turnin Wanted!  Marez Cowl [optional]
+turnin Wanted!  Otto and Falconcrest [optional]
+complete Stones of Binding | Collect the three Cresting, Thundering and Burning keys at the stones.
+turnin Stones of Binding
+accept Breaking the Keystone
+complete Breaking the Keystone | Rod of Order drops from Fozruk.
+turnin Breaking the Keystone
+level 33
+train
+note Next: Desolace in Kalimdor. Fly from Refuge Pointe to Ironforge first (a Desolace quest starts there).

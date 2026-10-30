@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="A_Human_Elwynn", name="Northshire & Elwynn Forest", faction="Alliance", chapter="Azeroth",
   minLevel=1, maxLevel=12, zone=12, zoneName="Elwynn Forest", start=true, races={"Human"},
   desc="Human starting route. Northshire Valley to level 5, then Goldshire, the Stonefield and Maclure farms, Eastvale and Westbrook, with class quests and trainers in Stormwind at 10. Ends at 12.",
-  next={},
+  next={{id="A_Westfall"},},
   steps={
     {"accept",q=783,title="A Threat Within",npc="Deputy Willem",z=12,x=48.2,y=42.9,v=1},
     {"turnin",q=783,title="A Threat Within",npc="Marshal McBride",z=12,x=48.9,y=41.6,v=1},
@@ -200,6 +200,6 @@ ns.Guides:Register({
     {"complete",q=1689,title="The Binding",text="Use the Bloodstone Choker to summon the voidwalker, then defeat it.",classes={"WARLOCK"},v=1},
     {"turnin",q=1689,title="The Binding",npc="Gakin the Darkbinder",z=1519,x=25.2,y=78.6,classes={"WARLOCK"},v=1},
     {"grind",z=12,x=27.8,y=81.2,text="Classic levels slowly: finish at 12 here before moving on.",level=12,mobs={"Riverpaw Outrunner","Riverpaw Runt"},location="south of Westbrook Garrison",v=0},
-    {"note",text="Elwynn is done. The next guide (12-20) comes later in this release.",v=1},
+    {"note",text="Elwynn is done. Take the road west into Westfall.",v=1},
   },
 })

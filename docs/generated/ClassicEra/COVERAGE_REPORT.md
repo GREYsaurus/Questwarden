@@ -7,16 +7,16 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 
 | Item | Count |
 |---|---|
-| Guides | 2 (2 Azeroth) |
-| Guide steps | 410 |
-| Quest steps (accept/complete/turn-in) | 353 |
-| Distinct quests referenced | 135 |
-| Steps with database-derived coordinates | 321 |
+| Guides | 45 (45 Azeroth) |
+| Guide steps | 3931 |
+| Quest steps (accept/complete/turn-in) | 3305 |
+| Distinct quests referenced | 1130 |
+| Steps with database-derived coordinates | 2675 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 0 (0 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 0 (see docs/generated/ClassicEra/guide-warnings.log) |
+| Compiler warnings | 62 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)
 
@@ -24,57 +24,100 @@ Each race/class combination is followed from its racial start guide through the 
 
 | Race | Class | Faction | Guides | Reaches | Problems |
 |---|---|---|---|---|---|
-| Dwarf | HUNTER | Alliance | 0 | 0 | no start guide |
-| Dwarf | PALADIN | Alliance | 0 | 0 | no start guide |
-| Dwarf | PRIEST | Alliance | 0 | 0 | no start guide |
-| Dwarf | ROGUE | Alliance | 0 | 0 | no start guide |
-| Dwarf | WARRIOR | Alliance | 0 | 0 | no start guide |
-| Gnome | MAGE | Alliance | 0 | 0 | no start guide |
-| Gnome | ROGUE | Alliance | 0 | 0 | no start guide |
-| Gnome | WARLOCK | Alliance | 0 | 0 | no start guide |
-| Gnome | WARRIOR | Alliance | 0 | 0 | no start guide |
-| Human | MAGE | Alliance | 1 | 12 | route ends at level 12 |
-| Human | PALADIN | Alliance | 1 | 12 | route ends at level 12 |
-| Human | PRIEST | Alliance | 1 | 12 | route ends at level 12 |
-| Human | ROGUE | Alliance | 1 | 12 | route ends at level 12 |
-| Human | WARLOCK | Alliance | 1 | 12 | route ends at level 12 |
-| Human | WARRIOR | Alliance | 1 | 12 | route ends at level 12 |
-| NightElf | DRUID | Alliance | 0 | 0 | no start guide |
-| NightElf | HUNTER | Alliance | 0 | 0 | no start guide |
-| NightElf | PRIEST | Alliance | 0 | 0 | no start guide |
-| NightElf | ROGUE | Alliance | 0 | 0 | no start guide |
-| NightElf | WARRIOR | Alliance | 0 | 0 | no start guide |
-| Orc | HUNTER | Horde | 1 | 12 | route ends at level 12 |
-| Orc | ROGUE | Horde | 1 | 12 | route ends at level 12 |
-| Orc | SHAMAN | Horde | 1 | 12 | route ends at level 12 |
-| Orc | WARLOCK | Horde | 1 | 12 | route ends at level 12 |
-| Orc | WARRIOR | Horde | 1 | 12 | route ends at level 12 |
-| Scourge | MAGE | Horde | 0 | 0 | no start guide |
-| Scourge | PRIEST | Horde | 0 | 0 | no start guide |
-| Scourge | ROGUE | Horde | 0 | 0 | no start guide |
-| Scourge | WARLOCK | Horde | 0 | 0 | no start guide |
-| Scourge | WARRIOR | Horde | 0 | 0 | no start guide |
-| Tauren | DRUID | Horde | 0 | 0 | no start guide |
-| Tauren | HUNTER | Horde | 0 | 0 | no start guide |
-| Tauren | SHAMAN | Horde | 0 | 0 | no start guide |
-| Tauren | WARRIOR | Horde | 0 | 0 | no start guide |
-| Troll | HUNTER | Horde | 1 | 12 | route ends at level 12 |
-| Troll | MAGE | Horde | 1 | 12 | route ends at level 12 |
-| Troll | PRIEST | Horde | 1 | 12 | route ends at level 12 |
-| Troll | ROGUE | Horde | 1 | 12 | route ends at level 12 |
-| Troll | SHAMAN | Horde | 1 | 12 | route ends at level 12 |
-| Troll | WARRIOR | Horde | 1 | 12 | route ends at level 12 |
+| Dwarf | HUNTER | Alliance | 21 | 58 | route ends at level 58 |
+| Dwarf | PALADIN | Alliance | 21 | 58 | route ends at level 58 |
+| Dwarf | PRIEST | Alliance | 21 | 58 | route ends at level 58 |
+| Dwarf | ROGUE | Alliance | 21 | 58 | route ends at level 58 |
+| Dwarf | WARRIOR | Alliance | 21 | 58 | route ends at level 58 |
+| Gnome | MAGE | Alliance | 21 | 58 | route ends at level 58 |
+| Gnome | ROGUE | Alliance | 21 | 58 | route ends at level 58 |
+| Gnome | WARLOCK | Alliance | 21 | 58 | route ends at level 58 |
+| Gnome | WARRIOR | Alliance | 21 | 58 | route ends at level 58 |
+| Human | MAGE | Alliance | 21 | 58 | route ends at level 58 |
+| Human | PALADIN | Alliance | 21 | 58 | route ends at level 58 |
+| Human | PRIEST | Alliance | 21 | 58 | route ends at level 58 |
+| Human | ROGUE | Alliance | 21 | 58 | route ends at level 58 |
+| Human | WARLOCK | Alliance | 21 | 58 | route ends at level 58 |
+| Human | WARRIOR | Alliance | 21 | 58 | route ends at level 58 |
+| NightElf | DRUID | Alliance | 20 | 58 | route ends at level 58 |
+| NightElf | HUNTER | Alliance | 20 | 58 | route ends at level 58 |
+| NightElf | PRIEST | Alliance | 20 | 58 | route ends at level 58 |
+| NightElf | ROGUE | Alliance | 20 | 58 | route ends at level 58 |
+| NightElf | WARRIOR | Alliance | 20 | 58 | route ends at level 58 |
+| Orc | HUNTER | Horde | 21 | 58 | route ends at level 58 |
+| Orc | ROGUE | Horde | 21 | 58 | route ends at level 58 |
+| Orc | SHAMAN | Horde | 21 | 58 | route ends at level 58 |
+| Orc | WARLOCK | Horde | 21 | 58 | route ends at level 58 |
+| Orc | WARRIOR | Horde | 21 | 58 | route ends at level 58 |
+| Scourge | MAGE | Horde | 22 | 58 | route ends at level 58 |
+| Scourge | PRIEST | Horde | 22 | 58 | route ends at level 58 |
+| Scourge | ROGUE | Horde | 22 | 58 | route ends at level 58 |
+| Scourge | WARLOCK | Horde | 22 | 58 | route ends at level 58 |
+| Scourge | WARRIOR | Horde | 22 | 58 | route ends at level 58 |
+| Tauren | DRUID | Horde | 21 | 58 | route ends at level 58 |
+| Tauren | HUNTER | Horde | 21 | 58 | route ends at level 58 |
+| Tauren | SHAMAN | Horde | 21 | 58 | route ends at level 58 |
+| Tauren | WARRIOR | Horde | 21 | 58 | route ends at level 58 |
+| Troll | HUNTER | Horde | 21 | 58 | route ends at level 58 |
+| Troll | MAGE | Horde | 21 | 58 | route ends at level 58 |
+| Troll | PRIEST | Horde | 21 | 58 | route ends at level 58 |
+| Troll | ROGUE | Horde | 21 | 58 | route ends at level 58 |
+| Troll | SHAMAN | Horde | 21 | 58 | route ends at level 58 |
+| Troll | WARRIOR | Horde | 21 | 58 | route ends at level 58 |
 
 ## Guides
 
 | Guide | Faction | Levels | Zone | Steps | Quests | Optional/elite/group steps |
 |---|---|---|---|---|---|---|
 | Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 193 | 66 | 12 |
+| Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 145 | 50 | 3 |
+| Shadowglen & Teldrassil | Alliance | 1-11 | Teldrassil | 178 | 63 | 14 |
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 217 | 69 | 33 |
+| Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 157 | 58 | 22 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 119 | 40 | 3 |
+| Westfall | Alliance | 10-16 | Westfall | 78 | 27 | 17 |
+| Silverpine Forest (The Sepulcher) | Horde | 10-18 | Silverpine Forest | 75 | 27 | 2 |
+| Darkshore | Alliance | 11-20 | Darkshore | 187 | 52 | 78 |
+| Loch Modan | Alliance | 11-18 | Loch Modan | 101 | 29 | 9 |
+| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 312 | 107 | 83 |
+| Redridge Mountains | Alliance | 15-21 | Redridge Mountains | 114 | 40 | 31 |
+| Ashenvale | Alliance | 19-25 | Ashenvale | 72 | 21 | 21 |
+| Duskwood | Alliance | 20-25 | Duskwood | 180 | 63 | 58 |
+| Stonetalon Mountains (Sun Rock Retreat) | Horde | 21-25 | Stonetalon Mountains | 59 | 23 | 3 |
+| Ashenvale (Splintertree Post) | Horde | 23-28 | Ashenvale | 57 | 17 | 14 |
+| Wetlands | Alliance | 24-29 | Wetlands | 113 | 41 | 20 |
+| Hillsbrad Foothills (Tarren Mill) | Horde | 27-31 | Hillsbrad Foothills | 51 | 14 | 7 |
+| Hillsbrad Foothills (Southshore) | Alliance | 28-31 | Hillsbrad Foothills | 62 | 24 | 7 |
+| Thousand Needles (Freewind Post) | Horde | 29-33 | Thousand Needles | 126 | 39 | 53 |
+| Arathi Highlands (Refuge Pointe) | Alliance | 30-34 | Arathi Highlands | 33 | 7 | 6 |
+| Stranglethorn Vale | Alliance | 32-40 | Stranglethorn Vale | 122 | 43 | 14 |
+| Arathi Highlands (Hammerfall) | Horde | 32-35 | Arathi Highlands | 52 | 14 | 0 |
+| Desolace (Nijel's Point) | Alliance | 33-37 | Desolace | 69 | 21 | 3 |
+| Desolace (Ghost Walker Post and Shadowprey) | Horde | 33-36 | Desolace | 35 | 7 | 0 |
+| Stranglethorn Vale (Grom'gol) | Horde | 34-40 | Stranglethorn Vale | 69 | 19 | 0 |
+| Badlands (Kargath) | Horde | 35-38 | Badlands | 30 | 5 | 0 |
+| Dustwallow Marsh (Theramore) | Alliance | 36-41 | Dustwallow Marsh | 54 | 16 | 3 |
+| Dustwallow Marsh (Brackenwall Village) | Horde | 37-42 | Dustwallow Marsh | 52 | 15 | 2 |
+| Badlands | Alliance | 38-41 | Badlands | 50 | 15 | 4 |
+| Swamp of Sorrows (Stonard) | Horde | 39-42 | Swamp of Sorrows | 38 | 9 | 3 |
+| Tanaris (Gadgetzan) | Both | 41-45 | Tanaris | 58 | 15 | 12 |
+| Feralas (Feathermoon Stronghold) | Alliance | 43-47 | Feralas | 60 | 19 | 2 |
+| Feralas (Camp Mojache) | Horde | 43-47 | Feralas | 54 | 14 | 0 |
+| The Hinterlands (Revantusk Village) | Horde | 44-50 | The Hinterlands | 63 | 17 | 3 |
+| The Hinterlands (Aerie Peak) | Alliance | 45-49 | The Hinterlands | 25 | 4 | 0 |
+| Searing Gorge (Thorium Point) | Both | 47-50 | Searing Gorge | 50 | 13 | 0 |
+| Un'Goro Crater | Both | 48-52 | Un'Goro Crater | 63 | 17 | 1 |
+| Felwood (Talonbranch Glade) | Alliance | 51-54 | Felwood | 39 | 10 | 0 |
+| Felwood (Bloodvenom Post) | Horde | 51-54 | Felwood | 39 | 10 | 0 |
+| Burning Steppes (Morgan's Vigil) | Alliance | 53-56 | Burning Steppes | 41 | 12 | 1 |
+| Winterspring (Everlook) | Both | 54-56 | Winterspring | 48 | 15 | 0 |
+| Western Plaguelands (The Bulwark) | Horde | 54-58 | Western Plaguelands | 64 | 21 | 3 |
+| Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 82 | 27 | 3 |
+| Eastern Plaguelands (Light's Hope) | Both | 56-58 | Eastern Plaguelands | 45 | 11 | 1 |
 
 ### Zones covered
 
-- **Azeroth (2):** Durotar, Elwynn Forest
+- **Azeroth (34):** Arathi Highlands, Ashenvale, Badlands, Burning Steppes, Darkshore, Desolace, Dun Morogh, Durotar, Duskwood, Dustwallow Marsh, Eastern Plaguelands, Elwynn Forest, Felwood, Feralas, Hillsbrad Foothills, Loch Modan, Mulgore, Redridge Mountains, Searing Gorge, Silverpine Forest, Stonetalon Mountains, Stranglethorn Vale, Swamp of Sorrows, Tanaris, Teldrassil, The Barrens, The Hinterlands, Thousand Needles, Tirisfal Glades, Un'Goro Crater, Western Plaguelands, Westfall, Wetlands, Winterspring
 
 ## Talent builds
 
@@ -84,8 +127,8 @@ Each race/class combination is followed from its racial start guide through the 
 ## Data awaiting verification
 
 - Guide **routes, ordering and notes** are original and were written without in-game testing. Quest ids, names, faction/race/class limits and NPC coordinates come from the database, but the practical route (XP sufficiency, travel efficiency) needs play-testing.
-- **0 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
-- **0 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
+- **31 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
+- **20 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
 - **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.
 - **Talent builds** are legal against the 1.15.9.70576 client tables, but how good they are is a judgement call, not something tested.
 

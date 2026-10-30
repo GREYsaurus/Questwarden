@@ -77,6 +77,10 @@ function Load-Tools {
         [GuideTools.Ctx]::FlagQuestGiver = $f.QUEST_GIVER; [GuideTools.Ctx]::FlagVendor = $f.VENDOR
         [GuideTools.Ctx]::FlagFlight = $f.FLIGHT_MASTER; [GuideTools.Ctx]::FlagTrainer = $f.TRAINER; [GuideTools.Ctx]::FlagInn = $f.INNKEEPER
     }
+    if ($TargetInfo.xpPerLevel) {
+        $v = @(0) + @($TargetInfo.xpPerLevel.values | ForEach-Object { [int]$_ })
+        [GuideTools.Ctx]::XpPerLevel = [int[]]$v
+    }
     if ($TargetInfo.clientTables) {
         [GuideTools.Ctx]::ClientProduct = $TargetInfo.clientTables.product
         [GuideTools.Ctx]::ClientTablesBuild = $TargetInfo.clientTables.build

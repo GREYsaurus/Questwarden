@@ -41,6 +41,8 @@ namespace GuideTools
         // Classic Era: 400000, because the 1.15 client tables also carry Season of Discovery and seasonal
         // spells (all 400000+), with no other marker. Every spell left out is listed in a report.
         public static int ExcludeSpellIdsFrom = 0;
+        // XP needed from each level to the next, index = level (target.json xpPerLevel); null = none.
+        public static int[] XpPerLevel = null;
         public static readonly List<string> ExcludedSpells = new List<string>();
         public static bool Excluded(int spell, string name, string table)
         {

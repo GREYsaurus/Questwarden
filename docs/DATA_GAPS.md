@@ -18,7 +18,7 @@ Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest databa
 | Quest log size 20 | From Blizzard's UI source (`Blizzard_FrameXMLBase/Vanilla/Constants.lua`) | confirm in game |
 | API availability | 35 of the 284 audited names are not found in Blizzard's Classic Era UI source (docs/generated/ClassicEra/api-audit.md). Nearly all are guarded legacy fallbacks; `GetPlayerFacing` (arrow), `GetMacroIndexByName` (targeting macro) and `GetItemStats` (gear scoring) need an in-game check. 32 APIs reached by name through Compat are not on the allowlist (awaiting review) | `/cg debug api` in the client |
 | Hardcore realm detection | Manual per-character setting only | needs `C_GameRules.IsHardcoreActive` on the allowlist (awaiting approval) |
-| Routes 1-12 (Human, Orc/Troll) | Written and audited offline (Speed and Hardcore): 0 order errors, quest log peak 9/20 | not timed; XP sufficiency unmeasured (no Classic XP model yet); five pickups wait for the 12-20 guides |
+| Routes 1-58, all 40 race/class combinations | Ported from TBCGuide and rebuilt on Classic data; audited offline (Speed and Hardcore): 0 order errors, quest log at most 20/20, nothing left un-turned-in | **XP:** the model leaves about 25-27 levels to grinding (Classic needs more quests than TBC). **58-60:** no zone yet. Hunting routes (`guides-src/routes`) were generated from TBC spawn data; the compiler re-checks every drop and spawn against Classic data, but they have not been regenerated from Classic spawns. Not timed or played |
 | Warrior Defensive Stance | Client tables list it as a level-10 trainer spell | whether a class quest gates it on Classic Era is not in the data; check in game |
 
 ## WoW: Forever (not launched; launch 2026-11-04)

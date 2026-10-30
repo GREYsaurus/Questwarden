@@ -1,1 +1,62 @@
-﻿horde/00_orc_troll_durotar.guide:219 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
+﻿alliance/05_darkshore.guide:112: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+alliance/05_darkshore.guide:126: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+alliance/06_ashenvale.guide:40: 'Raene's Cleansing' has no objective locations in the database; add [at=x,y] or a goto
+alliance/12_redridge.guide:13: quest 66 requires level 22 but guide ends at 21
+alliance/13_duskwood.guide:48: quest 225 requires level 28 but guide ends at 25
+alliance/13_duskwood.guide:49: 'Sven's Revenge' has no objective locations in the database; add [at=x,y] or a goto
+alliance/20_hillsbrad.guide:62: 'Hints of a New Plague?' has no objective locations in the database; add [at=x,y] or a goto
+alliance/22_stranglethorn.guide:68: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
+alliance/23_dustwallow.guide:56: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:21: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:39: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:48: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/30_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6028) with no earlier accept on this faction's routes
+alliance/30_westernplaguelands.guide:23: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
+alliance/30_westernplaguelands.guide:66: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:70: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:82: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:110: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:114: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
+horde/02_undead_tirisfal.guide:82: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:37: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:52: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:60: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:71: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:75: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:159: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:253: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:254: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:255: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:256: quest 5881 requires level 23 but guide ends at 22
+horde/14_thousandneedles.guide:66: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:23: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:36: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:45: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/17_dustwallow.guide:14: no innkeeper found in zone for Brackenwall Village
+horde/17_dustwallow.guide:23: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
+horde/17_dustwallow.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
+horde/21_hinterlands.guide:52: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
+horde/23_westernplaguelands.guide:15: turn-in of 'The Everlook Report' (6029) with no earlier accept on this faction's routes
+shared/28b_winterspring.guide:15: turn-in of 'Speak to Salfa' (8465) with no earlier accept on this faction's routes
+alliance/02_nightelf_teldrassil.guide:69 (Ferocitas the Dream Eater): prerequisite 2438 'The Emerald Dreamcatcher' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/13_duskwood.guide:39 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/14_wetlands.guide:17 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/20_hillsbrad.guide:59 (Blessed Arm): prerequisite 324 'The Lost Ingots' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/22_stranglethorn.guide:35 (The Missing Diplomat): prerequisite 1244 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/22_stranglethorn.guide:44 (Worgen in the Woods): prerequisite 222 'Worgen in the Woods' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/22_stranglethorn.guide:49 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/22_stranglethorn.guide:96 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
+horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:29 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:39 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:43 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/13_hillsbrad.guide:17 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/14_thousandneedles.guide:15 (Betrayal from Within): prerequisite 5052 'Blood Shards of Agamaggan' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/14_thousandneedles.guide:22 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/14_thousandneedles.guide:89 (A New Ore Sample): prerequisite 893 'Weapons of Choice' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/14b_desolace.guide:15 (Befouled by Satyr): prerequisite 1432 'Alliance Relations' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/17_dustwallow.guide:31 (The Black Shield): prerequisite 1273 'Questioning Reethe' is not turned in anywhere on Horde routes
+routes/auto_elwynn_forest.routes:20: quest 46 has no complete step in any guide

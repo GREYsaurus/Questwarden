@@ -12,6 +12,7 @@
 @chapter Azeroth
 @start
 @desc Human starting route. Northshire Valley to level 5, then Goldshire, the Stonefield and Maclure farms, Eastvale and Westbrook, with class quests and trainers in Stormwind at 10. Ends at 12.
+@next A_Westfall
 
 accept A Threat Within
 turnin A Threat Within
@@ -185,4 +186,4 @@ accept 1689 The Binding [class=Warlock]
 complete 1689 The Binding [class=Warlock] | Use the Bloodstone Choker to summon the voidwalker, then defeat it.
 turnin 1689 The Binding [class=Warlock]
 grind 12 Riverpaw Outrunner, Riverpaw Runt @ south of Westbrook Garrison [at=27.8,81.2] | Classic levels slowly: finish at 12 here before moving on.
-note Elwynn is done. The next guide (12-20) comes later in this release.
+note Elwynn is done. Take the road west into Westfall.

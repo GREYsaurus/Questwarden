@@ -6,7 +6,7 @@ ns.Guides:Register({
   id="H_OrcTroll_Durotar", name="Valley of Trials & Durotar", faction="Horde", chapter="Azeroth",
   minLevel=1, maxLevel=12, zone=14, zoneName="Durotar", start=true, races={"Orc","Troll"},
   desc="Orc and troll starting route. The Valley of Trials to about 6, then Razor Hill, Sen'jin Village, the Echo Isles, Tiragarde Keep and Skull Rock, with class quests and trainers in Orgrimmar. Ends at 12 at the Barrens border.",
-  next={},
+  next={{id="H_Barrens"},},
   steps={
     {"accept",q=790,title="Sarkoth",npc="Hana'zua",z=14,x=40.6,y=62.6,text="Hana'zua, wounded near the canyon to the south.",v=1},
     {"complete",q=790,title="Sarkoth",text="Sarkoth is a large scorpid north-west of Hana'zua.",mark={i=8,npcs={3281}},v=1},
@@ -224,6 +224,6 @@ ns.Guides:Register({
     {"accept",q=1498,title="Path of Defense",npc="Uzzek",z=17,x=61.4,y=21.1,classes={"WARRIOR"},v=1},
     {"turnin",q=2983,title="Call of Fire",npc="Kranal Fiss",z=17,x=56,y=19.9,text="Turned in at The Barrens.",classes={"SHAMAN"},optional=true,v=1},
     {"accept",q=1524,title="Call of Fire",npc="Kranal Fiss",z=17,x=56,y=19.9,classes={"SHAMAN"},v=1},
-    {"note",text="Follow the road west into the Barrens; the Crossroads is the main hub. The Barrens guide comes next.",v=1},
+    {"note",text="Follow the road west into the Barrens; the Crossroads is the main hub. The Barrens guide is next.",v=1},
   },
 })
