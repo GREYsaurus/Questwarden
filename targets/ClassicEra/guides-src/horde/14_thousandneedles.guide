@@ -65,6 +65,8 @@ turnin 4770 Homeward Bound [optional]
 turnin 4881 Assassination Plot [optional]
 accept 4966 Protect Kanati Greycloud [optional] | Escort quest: start it when you are ready to follow.
 turnin 1131 Steelsnap | Turned in at Thunder Bluff.
+accept 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
+accept 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
 complete 4904 Free at Last [optional] | Escort: stay close; it fails if the NPC dies.
 turnin 1150 Test of Endurance [optional]
 accept 1151 Test of Strength [optional]
@@ -74,6 +76,10 @@ turnin 1151 Test of Strength [optional]
 complete Sacred Fire | Incendia Agave: loot Incendia Agave.
 turnin Sacred Fire | Turned in at Thunder Bluff.
 accept Arikara | Escort quest: start it when you are ready to follow.
+complete 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
+complete 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
+turnin 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
+turnin 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
 accept Salt Flat Venom | Fizzle Brassbolts, Shimmering Flats.
 accept Hardened Shells | Wizzle Brassbolts.
 accept Rocket Car Parts | Kravel Koalbeard.

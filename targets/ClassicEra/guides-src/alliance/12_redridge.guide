@@ -24,6 +24,7 @@ turnin 1780 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stor
 accept 1781 The Tome of Divinity [class=Paladin; race=Human]
 turnin 1781 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
 turnin 1097 Elmore's Task | Turned in at Stormwind City.
+accept 2040 Underground Assault [dungeon=The Deadmines]
 turnin Encroaching Gnolls | Deputy Feldon, further east on the road.
 accept 6661 Deeprun Rat Roundup [class=Paladin,Priest; race=Dwarf; optional]
 accept 6661 Deeprun Rat Roundup [class=Mage; race=Gnome; optional]

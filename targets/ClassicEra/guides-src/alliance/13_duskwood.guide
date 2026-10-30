@@ -151,6 +151,10 @@ complete The Totem of Infliction | Ogres, worgen and spiders throughout Duskwood
 accept 70 The Legend of Stalvan
 complete 70 The Legend of Stalvan | An Undelivered Letter: loot Gizmorium Shipping Crate and Storage Chest.
 turnin 70 The Legend of Stalvan | Turned in at Stormwind City.
+accept 387 Quell The Uprising [dungeon=The Stockade]
+accept 388 The Color of Blood [dungeon=The Stockade]
+complete 2040 Underground Assault [dungeon=The Deadmines; optional]
+turnin 2040 Underground Assault [dungeon=The Deadmines; optional]
 accept 72 The Legend of Stalvan
 turnin 72 The Legend of Stalvan
 accept 74 The Legend of Stalvan
@@ -163,6 +167,10 @@ complete 323 Proving Your Worth
 turnin 323 Proving Your Worth
 accept 269 Seeking Wisdom [optional]
 accept 2923 Tinkmaster Overspark
+complete 387 Quell The Uprising [dungeon=The Stockade]
+complete 388 The Color of Blood [dungeon=The Stockade]
+turnin 387 Quell The Uprising [dungeon=The Stockade]
+turnin 388 The Color of Blood [dungeon=The Stockade]
 turnin 1652 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Turned in at Stormwind City.
 turnin 269 Seeking Wisdom [optional] | Turned in at Stormwind City.
 accept 270 The Doomed Fleet [optional]

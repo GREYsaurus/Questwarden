@@ -22,6 +22,7 @@ ns.Guides:Register({
     {"accept",q=1781,title="The Tome of Divinity",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,classes={"PALADIN"},races={"Human"},v=1},
     {"turnin",q=1781,title="The Tome of Divinity",npc="Gazin Tenorm",z=1519,x=38.6,y=26.6,text="Turned in at Stormwind City.",classes={"PALADIN"},races={"Human"},v=1},
     {"turnin",q=1097,title="Elmore's Task",npc="Grimand Elmore",z=1519,x=51.8,y=12.1,text="Turned in at Stormwind City.",v=1},
+    {"accept",q=2040,title="Underground Assault",npc="Shoni the Shilent",z=1519,x=55.5,y=12.5,dungeon="The Deadmines",v=1},
     {"turnin",q=244,title="Encroaching Gnolls",npc="Deputy Feldon",z=44,x=30.7,y=60,text="Deputy Feldon, further east on the road.",v=1},
     {"accept",q=6661,title="Deeprun Rat Roundup",npc="Monty",classes={"PALADIN","PRIEST"},races={"Dwarf"},optional=true,v=1},
     {"accept",q=6661,title="Deeprun Rat Roundup",npc="Monty",classes={"MAGE"},races={"Gnome"},optional=true,v=1},

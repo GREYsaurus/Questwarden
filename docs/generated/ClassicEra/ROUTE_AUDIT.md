@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 22 |
 | Level-gated pickups | 12 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 417 |
+| Hub revisits (all guides) | 433 |
 
 ## Per guide
 
@@ -30,22 +30,22 @@ No baseline file found.
 | A_BurningSteppes | 63 | 20 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 16 |
 | A_Darkshore | 203 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 2 |
 | A_Desolace | 72 | 22 | 410 | 435 | 7 | 0 | 0 | 0 | 1 | 0 |
-| A_Duskwood | 180 | 62 | 369 | 833 | 22 | 0 | 1 | 0 | 1 | 3 |
+| A_Duskwood | 188 | 65 | 593 | 1057 | 26 | 0 | 1 | 0 | 1 | 11 |
 | A_Dustwallow | 57 | 17 | 231 | 229 | 5 | 0 | 0 | 0 | 1 | 3 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 433 | 17 | 0 | 3 | 0 | 0 | 0 |
 | A_Felwood | 41 | 11 | 430 | 376 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_Feralas | 72 | 23 | 372 | 372 | 10 | 0 | 0 | 0 | 2 | 2 |
-| A_Hillsbrad | 63 | 24 | 36 | 236 | 2 | 0 | 2 | 0 | 0 | 0 |
+| A_Hillsbrad | 72 | 27 | 269 | 469 | 6 | 0 | 2 | 0 | 0 | 9 |
 | A_Hinterlands | 28 | 5 | 127 | 127 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_Human_Elwynn | 194 | 66 | 783 | 647 | 18 | 0 | 0 | 0 | 1 | 2 |
 | A_LochModan | 96 | 26 | 129 | 328 | 4 | 0 | 0 | 0 | 0 | 0 |
 | A_NightElf_Teldrassil | 183 | 64 | 382 | 538 | 18 | 0 | 0 | 0 | 3 | 0 |
-| A_Redridge | 96 | 30 | 217 | 263 | 11 | 0 | 1 | 0 | 0 | 2 |
+| A_Redridge | 97 | 31 | 220 | 267 | 11 | 0 | 1 | 0 | 0 | 3 |
 | A_Stranglethorn | 168 | 60 | 628 | 877 | 12 | 12 | 0 | 0 | 0 | 3 |
 | A_Stranglethorn_Late | 45 | 16 | 542 | 539 | 7 | 0 | 0 | 0 | 0 | 12 |
 | A_WesternPlaguelands | 92 | 31 | 627 | 702 | 15 | 0 | 0 | 0 | 0 | 6 |
 | A_Westfall | 80 | 27 | 116 | 201 | 7 | 0 | 0 | 0 | 0 | 2 |
-| A_Wetlands | 111 | 39 | 360 | 460 | 9 | 0 | 0 | 0 | 0 | 0 |
+| A_Wetlands | 114 | 40 | 360 | 460 | 9 | 0 | 0 | 0 | 0 | 3 |
 | Both_EasternPlaguelands | 74 | 19 | 609 | 610 | 11 | 0 | 0 | 0 | 2 | 12 |
 | Both_SearingGorge | 67 | 18 | 236 | 202 | 8 | 0 | 0 | 0 | 3 | 3 |
 | Both_Tanaris | 68 | 18 | 135 | 131 | 3 | 0 | 1 | 0 | 0 | 11 |
@@ -61,16 +61,16 @@ No baseline file found.
 | H_Feralas | 54 | 14 | 106 | 105 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Hillsbrad | 53 | 14 | 176 | 176 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Hinterlands | 63 | 17 | 66 | 66 | 1 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 218 | 69 | 370 | 449 | 12 | 0 | 0 | 0 | 1 | 0 |
-| H_Silverpine | 80 | 29 | 194 | 344 | 7 | 0 | 0 | 0 | 1 | 2 |
+| H_OrcTroll_Durotar | 224 | 71 | 458 | 536 | 16 | 0 | 0 | 0 | 1 | 6 |
+| H_Silverpine | 83 | 30 | 322 | 472 | 9 | 0 | 0 | 0 | 1 | 5 |
 | H_Stonetalon | 73 | 28 | 296 | 375 | 14 | 0 | 0 | 0 | 2 | 0 |
 | H_Stranglethorn | 137 | 44 | 853 | 810 | 21 | 5 | 0 | 0 | 0 | 0 |
 | H_Stranglethorn_Late | 19 | 6 | 205 | 205 | 3 | 0 | 0 | 0 | 0 | 0 |
 | H_SwampOfSorrows | 38 | 9 | 210 | 188 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |
-| H_ThousandNeedles | 123 | 38 | 179 | 508 | 9 | 0 | 0 | 0 | 4 | 0 |
+| H_ThousandNeedles | 129 | 40 | 287 | 616 | 11 | 0 | 0 | 0 | 4 | 6 |
 | H_Undead_Tirisfal | 132 | 44 | 166 | 222 | 11 | 0 | 0 | 0 | 0 | 0 |
-| H_WesternPlaguelands | 66 | 22 | 65 | 290 | 5 | 0 | 0 | 0 | 1 | 0 |
+| H_WesternPlaguelands | 69 | 23 | 73 | 298 | 5 | 0 | 0 | 0 | 1 | 3 |
 
 ## Peak quest log per route
 
@@ -266,8 +266,8 @@ None.
 - A_DwarfGnome_DunMorogh: level-gated pickup: Rejold's New Brew (415) needs 8, model level 7.9 (quests only: 6) [alliance/01_dwarf_gnome_dunmorogh.guide:115, Dwarf/WARRIOR]
 - A_DwarfGnome_DunMorogh: level-gated pickup: Shimmer Stout (413) needs 8, model level 7.9 (quests only: 6) [alliance/01_dwarf_gnome_dunmorogh.guide:113, Dwarf/WARRIOR]
 - A_Hillsbrad: level-gated pickup: Costly Menace (564) needs 30, model level 29.3 (quests only: 28) [alliance/20_hillsbrad.guide:25, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Encrypted Letter (511) needs 30, model level 29.4 (quests only: 28) [alliance/20_hillsbrad.guide:31, Human/WARRIOR]
-- A_Redridge: level-gated pickup: Solomon's Law (91) needs 17, model level 16.2 (quests only: 16) [alliance/12_redridge.guide:52, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Encrypted Letter (511) needs 30, model level 29.4 (quests only: 28) [alliance/20_hillsbrad.guide:34, Human/WARRIOR]
+- A_Redridge: level-gated pickup: Solomon's Law (91) needs 17, model level 16.2 (quests only: 16) [alliance/12_redridge.guide:53, Human/WARRIOR]
 - A_Stranglethorn: reduced-XP quest: A Noble Brew (336, level 30) at estimated level 36.2
 - A_Stranglethorn: reduced-XP quest: Supply and Demand (575, level 31) at estimated level 37.0
 - A_Stranglethorn: reduced-XP quest: The Legend of Stalvan (78, level 28) at estimated level 36.1

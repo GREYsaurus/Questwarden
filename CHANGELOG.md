@@ -54,8 +54,13 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Off by default on Classic Era** (new `contentDefaults` in `Target.ClassicEra.lua`). Turn them on under *Show Group Quests* and *Include Dungeon Quests*. The Hardcore route never takes the elite ones.
   - **Classic Era dungeon list** (`Database/Dungeons.lua`, 19 dungeons) for the per-dungeon settings.
   - **Route audit:** elite, group and dungeon quests now count for the quest log (the case where they are on) but never for XP (the case where they are off). Solo grinding therefore reads 25.0 (Alliance) and 24.8 (Horde); players who do this content level faster.
+- **13 more dungeon quests, given in cities and neighbouring zones** (`tools/research/dungeon_cross.py`, about 37k XP).
+  - Covered: Ragefire Chasm (Orgrimmar, the Undercity), the Deadmines and the Stockade (Stormwind), Gnomeregan and Scarlet Monastery (Ironforge, Thunder Bluff), Razorfen Kraul and Scholomance.
+  - **Where a quest lands:** at a city or neighbouring-zone visit the route already makes. A visit counts only if every character on that route makes it, so steps limited to a class or race, optional steps and Hardcore-only steps don't count. Guides follow their `@next` paths, so a pickup in one race's start zone is never turned in on another race's path.
+  - **Same opt-in rule** as the other dungeon quests (*Include Dungeon Quests*).
+  - **Not placed:** 63 dungeon quests. Their giver stands inside the instance, or the route never visits the giver, or their lead-in has objectives of its own (the Defias Brotherhood chain, for example).
 
-Tested offline: ClassicEra build all passes (80 route walks, 0 errors, 0 warnings, quest log peak 9/20, 0 level-gated pickups; smoke suite 40/40); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (80 route walks, Speed and Hardcore: 0 errors, quest log peak 20/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

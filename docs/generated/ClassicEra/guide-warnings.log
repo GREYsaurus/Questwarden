@@ -9,7 +9,7 @@ alliance/13_duskwood.guide:25: turn-in of 'The Legend of Stalvan' (66) with no e
 alliance/13_duskwood.guide:28: turn-in of 'The Tome of Valor' (1650) with no earlier accept on this faction's routes
 alliance/13_duskwood.guide:46: 'Sven's Revenge' has no objective locations in the database; add [at=x,y] or a goto
 alliance/13_duskwood.guide:113: turn-in of 'Mathias and the Defias' (2360) with no earlier accept on this faction's routes
-alliance/20_hillsbrad.guide:63: 'Hints of a New Plague?' has no objective locations in the database; add [at=x,y] or a goto
+alliance/20_hillsbrad.guide:72: 'Hints of a New Plague?' has no objective locations in the database; add [at=x,y] or a goto
 alliance/22_stranglethorn.guide:80: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
 alliance/23_dustwallow.guide:59: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:21: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
@@ -24,10 +24,10 @@ horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations i
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
 horde/02_undead_tirisfal.guide:85: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:39: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:54: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:62: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:73: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:77: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:55: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:63: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:74: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:80: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:150: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:61: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:23: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
@@ -38,7 +38,7 @@ horde/17_dustwallow.guide:14: no innkeeper found in zone for Brackenwall Village
 horde/17_dustwallow.guide:23: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/21_hinterlands.guide:52: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
-horde/23_westernplaguelands.guide:15: turn-in of 'The Everlook Report' (6029) with no earlier accept on this faction's routes
+horde/23_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6029) with no earlier accept on this faction's routes
 shared/28b_winterspring.guide:15: turn-in of 'Speak to Salfa' (8465) with no earlier accept on this faction's routes
 shared/28b_winterspring.guide:21: turn-in of 'Felnok Steelspring' (4808) with no earlier accept on this faction's routes
 alliance/01_dwarf_gnome_dunmorogh.guide:98 (The Reports): prerequisite 287 'Frostmane Hold' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -48,7 +48,7 @@ alliance/05_darkshore.guide:129 (The Absent Minded Prospector): prerequisite 729
 alliance/13_duskwood.guide:37 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/14_wetlands.guide:18 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/14_wetlands.guide:74 (The Thandol Span): prerequisite 632 'The Thandol Span' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/20_hillsbrad.guide:60 (Blessed Arm): prerequisite 324 'The Lost Ingots' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/20_hillsbrad.guide:63 (Blessed Arm): prerequisite 324 'The Lost Ingots' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:33 (A Noble Brew): prerequisite 335 'A Noble Brew' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:34 (The Missing Diplomat): prerequisite 1244 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:43 (Worgen in the Woods): prerequisite 222 'Worgen in the Woods' is not turned in anywhere on Alliance routes (one of several alternatives)

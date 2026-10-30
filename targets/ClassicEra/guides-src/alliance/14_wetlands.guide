@@ -102,10 +102,13 @@ complete The Dark Iron War | Dark Iron dwarves at Dun Modr.
 complete A Grim Task | Balgaras the Foul, at the Dark Iron camp east of Dun Modr.
 turnin The Dark Iron War
 turnin A Grim Task
+accept 378 The Fury Runs Deep [dungeon=The Stockade]
 complete 474 Defeat Nek'rosh [optional] | Nek'rosh's Head drops from Chieftain Nek'rosh.
 turnin 633 The Thandol Span
 turnin 631 The Thandol Span
 accept 634 Plea To The Alliance | Needs level 28. If you are lower, {name} skips it and moves on.
+complete 378 The Fury Runs Deep [dungeon=The Stockade]
+turnin 378 The Fury Runs Deep [dungeon=The Stockade]
 turnin 634 Plea To The Alliance | Turned in at Arathi Highlands.
 complete 290 Lifting the Curse | Intrepid Strongbox Key drops from Captain Halyndor.
 turnin 290 Lifting the Curse

@@ -26,6 +26,9 @@ accept Costly Menace | Darren Malvew.
 complete Costly Menace | Hillsbrad farms; kill the Syndicate.
 turnin Costly Menace
 turnin 637 Sully Balloo's Letter | Turned in at Ironforge.
+accept 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+accept 2924 Essential Artificials [dungeon=Gnomeregan]
+accept 2929 The Grand Betrayal [dungeon=Gnomeregan]
 accept 683 Sara Balloo's Plea
 accept 510 Foreboding Plans
 accept 511 Encrypted Letter | Needs level 30. If you are lower, {name} skips it and moves on.
@@ -60,6 +63,12 @@ accept 293 Cleansing the Eye [optional]
 accept 322 Blessed Arm [optional]
 turnin 321 Lightforge Iron [optional]
 turnin 686 A King's Tribute | Turned in at Ironforge.
+complete 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+complete 2924 Essential Artificials [dungeon=Gnomeregan]
+complete 2929 The Grand Betrayal [dungeon=Gnomeregan]
+turnin 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
+turnin 2924 Essential Artificials [dungeon=Gnomeregan]
+turnin 2929 The Grand Betrayal [dungeon=Gnomeregan]
 complete Hints of a New Plague? | Forsaken courier on the road (patrols).
 turnin Hints of a New Plague?
 level 30

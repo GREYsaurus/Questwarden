@@ -43,6 +43,7 @@ accept 422 Arugal's Folly
 turnin The Dead Fields
 accept The Decrepit Ferry
 turnin 447 A Recipe For Death
+accept 5725 The Power to Destroy... [dungeon=Ragefire Chasm]
 accept 450 A Recipe For Death
 turnin Border Crossings
 accept Maps and Runes
@@ -74,6 +75,8 @@ complete Rot Hide Origins
 complete 423 Arugal's Folly
 turnin Rot Hide Origins
 accept Thule Ravenclaw | Chain order: Rot Hide Origins, Thule Ravenclaw, Report to Hadrec, Assault on Fenris Isle.
+complete 5725 The Power to Destroy... [dungeon=Ragefire Chasm]
+turnin 5725 The Power to Destroy... [dungeon=Ragefire Chasm]
 complete Thule Ravenclaw | Fenris Keep, on Fenris Isle.
 turnin Thule Ravenclaw
 accept Report to Hadrec

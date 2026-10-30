@@ -12,6 +12,7 @@
 
 accept 5094 A Call to Arms: The Plaguelands! [zone=Undercity] | Harbinger Balthazad in the Undercity (Warcaller Gorlach in Orgrimmar has the same quest). Needed for the Bulwark chain.
 turnin 5094 A Call to Arms: The Plaguelands! [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
+accept 5341 Barov Family Fortune [dungeon=Scholomance]
 turnin 6029 The Everlook Report [zone=Tirisfal Glades; optional] | Argent Officer Garush, the Bulwark (from Winterspring).
 accept Scarlet Diversions [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
 complete Scarlet Diversions | Plant the banner at the Scarlet camp in the north and kill Scarlet troops.
@@ -65,6 +66,8 @@ accept 5236 Return to the Bulwark
 turnin 5236 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept Mission Accomplished! [zone=Tirisfal Glades]
 turnin Mission Accomplished! [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+complete 5341 Barov Family Fortune [dungeon=Scholomance]
+turnin 5341 Barov Family Fortune [dungeon=Scholomance]
 level 57
 train
 note Next: the Eastern Plaguelands, east along the Thondroril River.

@@ -205,7 +205,13 @@ turnin 832 Burning Shadows [class=Warlock; race=Orc; optional; hc=skip] | Turned
 turnin 832 Burning Shadows [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional; hc=skip] | Turned in at Orgrimmar.
 turnin 832 Burning Shadows [race=Troll; optional; hc=skip] | Turned in at Orgrimmar.
 turnin Neeru Fireblade | Cleft of Shadow, Orgrimmar.
+accept 5728 Hidden Enemies [dungeon=Ragefire Chasm]
+accept 5761 Slaying the Beast [dungeon=Ragefire Chasm]
 accept Ak'Zeloth
+complete 5728 Hidden Enemies [dungeon=Ragefire Chasm]
+complete 5761 Slaying the Beast [dungeon=Ragefire Chasm]
+turnin 5728 Hidden Enemies [dungeon=Ragefire Chasm]
+turnin 5761 Slaying the Beast [dungeon=Ragefire Chasm]
 train | Orgrimmar trainers.
 accept 1505 Veteran Uzzek [class=Warrior]
 accept Conscript of the Horde | Takrin Pathseeker, outside the western gate.

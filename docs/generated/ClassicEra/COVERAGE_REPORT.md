@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 48 (48 Azeroth) |
-| Guide steps | 4338 |
-| Quest steps (accept/complete/turn-in) | 3679 |
-| Distinct quests referenced | 1242 |
-| Steps with database-derived coordinates | 2968 |
+| Guide steps | 4377 |
+| Quest steps (accept/complete/turn-in) | 3718 |
+| Distinct quests referenced | 1255 |
+| Steps with database-derived coordinates | 2994 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
@@ -72,25 +72,25 @@ Each race/class combination is followed from its racial start guide through the 
 | Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 194 | 66 | 12 |
 | Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 133 | 46 | 3 |
 | Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 183 | 64 | 14 |
-| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 218 | 69 | 33 |
+| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 224 | 71 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
 | Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 132 | 44 | 3 |
 | Darkshore | Alliance | 11-19 | Darkshore | 203 | 58 | 78 |
 | Loch Modan | Alliance | 11-17 | Loch Modan | 96 | 26 | 8 |
-| Silverpine Forest (The Sepulcher) | Horde | 11-17 | Silverpine Forest | 80 | 29 | 2 |
+| Silverpine Forest (The Sepulcher) | Horde | 11-17 | Silverpine Forest | 83 | 30 | 2 |
 | Westfall | Alliance | 12-15 | Westfall | 80 | 27 | 17 |
 | The Barrens (Crossroads) | Horde | 13-22 | The Barrens | 315 | 105 | 77 |
-| Redridge Mountains | Alliance | 16-20 | Redridge Mountains | 96 | 30 | 21 |
+| Redridge Mountains | Alliance | 16-20 | Redridge Mountains | 97 | 31 | 21 |
 | Ashenvale | Alliance | 19-24 | Ashenvale | 81 | 24 | 21 |
-| Duskwood | Alliance | 20-25 | Duskwood | 180 | 62 | 56 |
+| Duskwood | Alliance | 20-25 | Duskwood | 188 | 65 | 58 |
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 22-24 | Stonetalon Mountains | 73 | 28 | 3 |
 | Ashenvale (return, 25-31) | Alliance | 24-25 | Ashenvale | 23 | 8 | 0 |
-| Wetlands | Alliance | 24-29 | Wetlands | 111 | 39 | 18 |
+| Wetlands | Alliance | 24-29 | Wetlands | 114 | 40 | 18 |
 | Ashenvale (Splintertree Post) | Horde | 24-27 | Ashenvale | 58 | 17 | 9 |
 | Hillsbrad Foothills (Tarren Mill) | Horde | 27-30 | Hillsbrad Foothills | 53 | 14 | 7 |
-| Hillsbrad Foothills (Southshore) | Alliance | 29-31 | Hillsbrad Foothills | 63 | 24 | 7 |
+| Hillsbrad Foothills (Southshore) | Alliance | 29-31 | Hillsbrad Foothills | 72 | 27 | 7 |
 | Arathi Highlands (Refuge Pointe) | Alliance | 30-33 | Arathi Highlands | 41 | 10 | 6 |
-| Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 123 | 38 | 48 |
+| Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 129 | 40 | 48 |
 | Desolace (Ghost Walker Post and Shadowprey) | Horde | 32-35 | Desolace | 46 | 12 | 1 |
 | Desolace (Nijel's Point) | Alliance | 33-36 | Desolace | 72 | 22 | 3 |
 | Arathi Highlands (Hammerfall) | Horde | 35-36 | Arathi Highlands | 56 | 15 | 3 |
@@ -115,7 +115,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Winterspring (Everlook) | Both | 53-55 | Winterspring | 60 | 19 | 1 |
 | Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 63 | 20 | 1 |
 | Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 92 | 31 | 3 |
-| Western Plaguelands (The Bulwark) | Horde | 55-57 | Western Plaguelands | 66 | 22 | 3 |
+| Western Plaguelands (The Bulwark) | Horde | 55-57 | Western Plaguelands | 69 | 23 | 3 |
 | Eastern Plaguelands (Light's Hope) | Both | 57-58 | Eastern Plaguelands | 74 | 19 | 1 |
 
 ### Zones covered
