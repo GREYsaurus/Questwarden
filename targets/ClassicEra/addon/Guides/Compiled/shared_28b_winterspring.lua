@@ -27,6 +27,8 @@ ns.Guides:Register({
     {"accept",q=5055,title="Brumeran of the Chillwind",npc="Storm Shadowhoof",z=618,x=61.9,y=38.4,faction="Horde",v=1},
     {"complete",q=3783,title="Are We There, Yeti?",text="Thick Yeti Fur from Rogue Ice Thistle yetis on the road west of Everlook.",v=1},
     {"turnin",q=6604,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,text="Jaron Stoneshaper at the Ruins of Kel'Theril, north of the road.",faction="Alliance",v=1},
+    {"accept",q=5244,title="The Ruins of Kel'Theril",npc="Wynd Nightchaser",z=618,x=52,y=30.4,faction="Alliance",v=1},
+    {"turnin",q=5244,title="The Ruins of Kel'Theril",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,faction="Alliance",v=1},
     {"accept",q=4861,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,faction="Alliance",v=1},
     {"turnin",q=3783,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker, Everlook.",v=1},
     {"accept",q=977,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,v=1},

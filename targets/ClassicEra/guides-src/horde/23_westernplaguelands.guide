@@ -25,6 +25,8 @@ turnin Target: Felstone Field
 accept Return to the Bulwark
 complete All Along the Watchtowers | Mark the three watchtowers in Andorhal with the torch.
 accept A Matter of Time | Chromie in the ruined inn at Andorhal.
+accept 5401 Argent Dawn Commission
+turnin 5401 Argent Dawn Commission
 complete A Matter of Time | Use the Temporal Displacer by the silos in Andorhal and kill the Temporal Parasites that appear.
 turnin A Matter of Time
 accept Counting Out Time

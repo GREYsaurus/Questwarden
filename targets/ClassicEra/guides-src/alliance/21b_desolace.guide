@@ -15,6 +15,8 @@ note From Ironforge fly to Menethil Harbor and take the boat to Auberdine. Fly t
 fp Nijel's Point
 bind Nijel's Point [area=608]
 accept Centaur Bounty | Corporal Melkins.
+accept 1382 Strange Alliance
+complete 1382 Strange Alliance
 accept 1437 Vahlarriel's Search | Vahlarriel Demonslayer.
 accept Brutal Politics | Captain Pentigast. Choose the Magram side: do not also take Strange Alliance.
 turnin Reclaimers' Business in Desolace | Kreldig Ungor.
@@ -50,6 +52,7 @@ turnin 1456 The Karnitol Shipwreck | Nijel's Point.
 accept 1457 The Karnitol Shipwreck | Turned in at Ironforge; keep it for the trip to the Badlands.
 accept Bone Collector | Bibbly F'utzbuckle at Kormek's Hut.
 accept Kodo Roundup | Smeed Scrabblescrew at the caravan camp.
+turnin 1382 Strange Alliance
 complete Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
 complete Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.
 complete 1459 Reagents for Reclaimers Inc. [obj=2] | Aged Kodo Hide from Aged Kodos around the graveyard.

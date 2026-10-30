@@ -25,6 +25,7 @@ complete 1066 Blood of Innocents [optional] | Vial of Innocent Blood drops from 
 turnin 527 Battle of Hillsbrad
 accept 528 Battle of Hillsbrad
 accept Souvenirs of Death | Deathguard Samsa (Classic: only after the first Battle of Hillsbrad).
+accept 567 Dangerous!
 turnin Souvenirs of Death
 turnin Elixir of Suffering
 turnin 1066 Blood of Innocents [optional]
@@ -50,6 +51,8 @@ accept Dalaran Patrols
 complete Dalaran Patrols
 turnin Dalaran Patrols
 turnin 502 Elixir of Pain [optional]
+complete 567 Dangerous!
+turnin 567 Dangerous!
 level 30
 train | Undercity trainers.
 note Fly to Orgrimmar via the Undercity zeppelin, then fly to Freewind Post (Thousand Needles).

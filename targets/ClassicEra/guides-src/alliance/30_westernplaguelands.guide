@@ -14,6 +14,8 @@ accept 5090 A Call to Arms: The Plaguelands! [zone=Ironforge] | Courier Hammerfa
 fp Chillwind Camp
 turnin 5090 A Call to Arms: The Plaguelands! | Commander Ashlam Valorfist, Chillwind Camp.
 turnin 6028 The Everlook Report [optional] | Argent Officer Pureheart, Chillwind Camp (from Winterspring).
+accept 5401 Argent Dawn Commission
+turnin 5401 Argent Dawn Commission
 accept Clear the Way
 accept A Plague Upon Thee | Nathaniel Dumah, Chillwind Camp.
 accept The Wildlife Suffers Too | Mulgris Deepriver.

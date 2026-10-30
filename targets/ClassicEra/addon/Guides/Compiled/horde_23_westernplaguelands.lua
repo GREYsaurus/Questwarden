@@ -23,6 +23,8 @@ ns.Guides:Register({
     {"accept",q=5230,title="Return to the Bulwark",npc="Scourge Cauldron",z=28,x=37.2,y=56.8,v=1},
     {"complete",q=5098,title="All Along the Watchtowers",text="Mark the three watchtowers in Andorhal with the torch.",v=1},
     {"accept",q=4971,title="A Matter of Time",npc="Chromie",z=28,x=39.5,y=66.8,text="Chromie in the ruined inn at Andorhal.",v=1},
+    {"accept",q=5401,title="Argent Dawn Commission",npc="Argent Officer Pureheart",z=28,x=43,y=83.6,v=1},
+    {"turnin",q=5401,title="Argent Dawn Commission",npc="Argent Officer Pureheart",z=28,x=43,y=83.6,v=1},
     {"complete",q=4971,title="A Matter of Time",text="Use the Temporal Displacer by the silos in Andorhal and kill the Temporal Parasites that appear.",v=1},
     {"turnin",q=4971,title="A Matter of Time",npc="Chromie",z=28,x=39.5,y=66.8,v=1},
     {"accept",q=4972,title="Counting Out Time",npc="Chromie",z=28,x=39.5,y=66.8,v=1},

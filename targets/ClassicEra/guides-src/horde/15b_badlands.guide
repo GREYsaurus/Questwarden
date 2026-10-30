@@ -22,6 +22,12 @@ complete 711 Study of the Elements: Rock | Rock Elementals north-west of the cam
 complete Badlands Reagent Run [obj=3] | Rock Elemental Shards from the same Rock Elementals.
 turnin 711 Study of the Elements: Rock
 accept Power Stones | Rigglefuzz at the camp in the middle of the Badlands.
+accept 705 Pearl Diving
+accept 703 Barbecued Buzzard Wings
+complete 705 Pearl Diving
+complete 703 Barbecued Buzzard Wings
+turnin 705 Pearl Diving
+turnin 703 Barbecued Buzzard Wings
 complete Coyote Thieves | Crag Coyotes all over the middle of the zone.
 complete Badlands Reagent Run [obj=2] | Crag Coyote Fangs from the same coyotes.
 complete Power Stones | Shadowforge Surveyors at Agmond's End and around Uldaman's entrance.

@@ -60,6 +60,7 @@ accept Dolanaar Delivery | Porthannius on the path out of Shadowglen.
 turnin Dolanaar Delivery | Innkeeper Keldamyr, Dolanaar.
 bind Dolanaar [area=186]
 accept The Road to Darnassus [optional] | Moon Priestess Amara patrols the road.
+accept 2541 The Sleeping Druid
 complete The Road to Darnassus [optional] | Gnarlpine Ambushers along the road west of Dolanaar.
 turnin The Road to Darnassus [optional]
 accept Denalan's Earth | Syral Bladeleaf.
@@ -83,6 +84,8 @@ complete Timberling Seeds | Timberlings around the lake.
 turnin Timberling Seeds
 accept 922 Rellian Greenspyre
 turnin 928 Crown of the Earth | Corithras Moonrage, Dolanaar.
+complete 2541 The Sleeping Druid
+turnin 2541 The Sleeping Druid
 accept 929 Crown of the Earth
 complete Timberling Sprouts | Sprouts on the ground around the lake.
 complete 929 Crown of the Earth | Fill the phial at the Starbreeze Village moonwell.

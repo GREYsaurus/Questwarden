@@ -143,6 +143,9 @@ accept Prowlers of the Barrens
 accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
 accept Raptor Horns | Mebok Mizzyrix.
 turnin Chen's Empty Keg [optional] | Brewmaster Drohn.
+accept 891 The Guns of Northwatch
+complete 891 The Guns of Northwatch
+turnin 891 The Guns of Northwatch
 accept 821 Chen's Empty Keg
 turnin Wharfmaster Dizzywig [optional]
 turnin 890 The Missing Shipment | Wharfmaster Dizzywig, Ratchet docks.
@@ -270,6 +273,9 @@ accept 883 Lakota'mani [optional]
 turnin 883 Lakota'mani [optional]
 complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
 turnin Jorn Skyseer | Camp Taurajo.
+accept 893 Weapons of Choice
+complete 893 Weapons of Choice
+turnin 893 Weapons of Choice
 accept Ishamuhale
 complete Ishamuhale
 complete Hezrul Bloodmark
@@ -296,6 +302,8 @@ turnin Stolen Booty
 turnin 6386 Return to the Crossroads. [race=Orc,Troll; optional]
 turnin 6364 Return to Jahan [class=Warrior,Hunter,Druid; race=Tauren]
 turnin Hezrul Bloodmark
+accept 6541 Report to Kadrak
+turnin 6541 Report to Kadrak
 accept 4021 Counterattack! [optional]
 complete 4021 Counterattack! [optional] | Piece of Krom'zar's Banner: loot Krom'zar's Banner.
 turnin 4021 Counterattack! [optional]

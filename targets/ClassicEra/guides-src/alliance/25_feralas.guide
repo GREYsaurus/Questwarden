@@ -27,12 +27,14 @@ accept Against Lord Shalzaru
 complete Against Lord Shalzaru [group=2] | Lord Shalzaru, in the cave on the isle.
 turnin Against Lord Shalzaru
 turnin The Missing Courier | Ginro Hearthkindle on the mainland dock.
+accept 2982 The High Wilderness
 accept 4125 The Missing Courier
 turnin 4125 The Missing Courier
 accept Boat Wreckage
 turnin Boat Wreckage
 accept The Knife Revealed
 turnin The Knife Revealed
+accept 2821 The Mark of Quality
 accept Psychometric Reading
 turnin Psychometric Reading
 accept The Woodpaw Gnolls
@@ -44,17 +46,21 @@ accept 2970 Doling Justice
 complete 2970 Doling Justice | Grimtotem tauren at the compound.
 turnin 2970 Doling Justice
 turnin The Woodpaw Gnolls
+complete 2982 The High Wilderness
 accept The Writhing Deep
 complete The Writhing Deep | Inside the Zukk'ash hive at the Writhing Deep.
 turnin The Writhing Deep
 accept Freed from the Hive | Escort quest: start it when you are ready to follow.
 accept Zapped Giants | Zorbin Fandazzle, the coast.
+complete 2821 The Mark of Quality
 accept Fuel for the Zapping | Needs level 45. If you are lower, {name} skips it and moves on.
 complete Zapped Giants | Use the Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.
 complete Fuel for the Zapping | Water elementals on the coast.
 turnin Zapped Giants
 turnin Fuel for the Zapping
 turnin Freed from the Hive
+turnin 2821 The Mark of Quality
+turnin 2982 The High Wilderness
 accept A Hero's Welcome
 turnin A Hero's Welcome
 accept The Giant Guardian | Rockbiter at the Twin Colossals.

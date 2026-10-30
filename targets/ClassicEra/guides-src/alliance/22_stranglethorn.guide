@@ -52,13 +52,26 @@ turnin 1274 The Missing Diplomat | Turned in at Stormwind City.
 accept 1241 The Missing Diplomat
 accept Jungle Secrets | Private Thorsen.
 accept Bad Medicine
+accept 210 Krazek's Cookery
 accept The Second Rebellion | Sergeant Yohwa, Rebel Camp (north).
 turnin Jungle Secrets | Lieutenant Doren.
 accept Bookie Herod
 accept Welcome to the Jungle | Barnil Stonepot, Nesingwary's Expedition.
+accept 339 Chapter I
+accept 340 Chapter II
+accept 341 Chapter III
+accept 342 Chapter IV
 turnin Welcome to the Jungle
+complete 339 Chapter I
+complete 340 Chapter II
+complete 341 Chapter III
+complete 342 Chapter IV
 accept 194 Raptor Mastery
 accept 185 Tiger Mastery
+turnin 339 Chapter I
+turnin 340 Chapter II
+turnin 341 Chapter III
+turnin 342 Chapter IV
 accept 190 Panther Mastery
 complete 185 Tiger Mastery | Young Stranglethorn Tigers.
 complete 190 Panther Mastery | Young Panthers.
@@ -100,6 +113,15 @@ turnin 1301 James Hyal | Turned in at Wetlands.
 turnin 1243 The Missing Diplomat | Turned in at Duskwood.
 bind Booty Bay [area=35]
 accept Singing Blue Shards | Crank Fizzlebub.
+accept 621 Zanzil's Secret
+accept 213 Hostile Takeover
+accept 189 Bloodscalp Ears
+accept 198 Supplies to Private Thorsen
+accept 616 The Haunted Isle
+accept 201 Investigate the Camp
+turnin 210 Krazek's Cookery
+turnin 616 The Haunted Isle
+turnin 201 Investigate the Camp
 accept Scaring Shaky | "Sea Wolf" MacKinley.
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Elder Saltwater Crocolisks and Snapjaws.
@@ -110,15 +132,22 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Scaring Shaky | Mistvale gorillas.
 turnin Scaring Shaky
+complete 621 Zanzil's Secret
 accept Return to MacKinley
 turnin Return to MacKinley
 complete Some Assembly Required | Snapjaw Crocolisks.
 complete Venture Company Mining | Venture Co. miners at the mines.
 turnin Some Assembly Required
 turnin Venture Company Mining
+turnin 621 Zanzil's Secret
 complete 187 Tiger Mastery | Elder Stranglethorn Tigers.
 complete 192 Panther Mastery | Shadowmaw Panthers.
 turnin 187 Tiger Mastery
+complete 213 Hostile Takeover
+complete 189 Bloodscalp Ears
+turnin 213 Hostile Takeover
+turnin 189 Bloodscalp Ears
+turnin 198 Supplies to Private Thorsen
 turnin 192 Panther Mastery
 level 38
 train | Fly to Ironforge/Stormwind to train.

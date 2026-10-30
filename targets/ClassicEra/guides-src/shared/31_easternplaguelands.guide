@@ -21,6 +21,7 @@ note Ride the road east across the zone to Light's Hope Chapel.
 fp Light's Hope Chapel
 turnin Duke Nicholas Zverenhoff [optional] | Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).
 accept Zaeldarr the Outcast | Caretaker Alen, Light's Hope Chapel.
+accept 5281 The Restless Souls
 complete Demon Dogs | Plaguehounds and Frenzied Plaguehounds around Light's Hope and the north; Plaguehound Runts in the south.
 complete Carrion Grubbage | Slabs of Carrion Worm Meat from Carrion Grubs, often next to the plaguehounds.
 complete Blood Tinged Skies | Plaguebats are everywhere south of the road.
@@ -31,17 +32,21 @@ turnin Pamela's Doll
 accept Uncle Carlin
 complete Zaeldarr the Outcast | Zaeldarr in the Darrowshire crypt, west side of the village.
 accept To Kill With Purpose [faction=Horde] | Nathanos Blightcaller at Marris Stead, west of Darrowshire.
+accept 6133 The Ranger Lord's Behest [faction=Horde]
 accept Un-Life's Little Annoyances [faction=Horde] | Nathanos Blightcaller.
 complete To Kill With Purpose [faction=Horde] | Coagulated Rot from the ghouls and flayers around Darrowshire and the Marris Stead.
 complete Un-Life's Little Annoyances [faction=Horde] | Noxious Plaguebats south, Monstrous Plaguebats north.
 turnin To Kill With Purpose [faction=Horde]
 turnin Un-Life's Little Annoyances [faction=Horde]
 turnin Demon Dogs | Tirion Fordring.
+turnin 5281 The Restless Souls
 turnin Blood Tinged Skies
 turnin Carrion Grubbage
 note Ride back east to Light's Hope Chapel.
 turnin Zaeldarr the Outcast | Caretaker Alen.
 turnin Uncle Carlin | Carlin Redpath.
+complete 6133 The Ranger Lord's Behest [faction=Horde]
+turnin 6133 The Ranger Lord's Behest [faction=Horde]
 level 58
 train
 note At 58 go to the Dark Portal in the Blasted Lands. Alliance: fly to Stormwind, then Nethergarde Keep (the herald for Through the Dark Portal is in Stormwind or Nethergarde). Horde: fly to Orgrimmar or the Undercity (the herald is there), then Stonard and ride south.

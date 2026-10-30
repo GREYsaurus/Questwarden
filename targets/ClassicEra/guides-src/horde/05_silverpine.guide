@@ -13,9 +13,11 @@
 turnin Delivery to Silverpine Forest | Apothecary Renferrel, The Sepulcher.
 accept 447 A Recipe For Death
 accept Lost Deathstalkers | High Executor Hadrec.
+accept 6321 Supplying the Sepulcher
 accept The Dead Fields
 accept Prove Your Worth | Dalar Dawnweaver.
 accept Border Crossings | Shadow Priest Allister.
+turnin 6321 Supplying the Sepulcher
 fp The Sepulcher
 bind The Sepulcher [area=228]
 turnin Lost Deathstalkers | Rane Yorick, at the hut on the northern coast.

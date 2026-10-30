@@ -15,12 +15,18 @@ bind Grom'gol [area=117]
 accept Mok'thardin's Enchantment | Far Seer Mok'thardin.
 accept The Defense of Grom'gol | Commander Aggro'gosh.
 accept Bloody Bone Necklaces | Kin'weelay.
+accept 629 The Vile Reef
 accept Welcome to the Jungle | Barnil Stonepot, Nesingwary's Expedition.
+accept 339 Chapter I
+accept 340 Chapter II
+accept 341 Chapter III
+accept 342 Chapter IV
 turnin Welcome to the Jungle
 accept 194 Raptor Mastery
 accept 185 Tiger Mastery
 accept 190 Panther Mastery
 accept Hunt for Yenniku | Nimboya, Grom'gol.
+complete 629 The Vile Reef
 complete Hunt for Yenniku | Bloodscalp trolls west of Grom'gol.
 complete Bloody Bone Necklaces | Bloodscalp trolls.
 complete The Defense of Grom'gol | Raptors around Grom'gol.
@@ -33,6 +39,7 @@ accept Headhunting
 turnin The Defense of Grom'gol
 accept 569 The Defense of Grom'gol
 turnin Bloody Bone Necklaces
+turnin 629 The Vile Reef
 turnin 185 Tiger Mastery
 accept 186 Tiger Mastery
 turnin 190 Panther Mastery
@@ -50,8 +57,22 @@ turnin 195 Raptor Mastery
 turnin Headhunting
 turnin 569 The Defense of Grom'gol
 turnin Mok'thardin's Enchantment
+complete 339 Chapter I
+complete 340 Chapter II
+complete 341 Chapter III
+complete 342 Chapter IV
+turnin 339 Chapter I
+turnin 340 Chapter II
+turnin 341 Chapter III
+turnin 342 Chapter IV
 fp Booty Bay
 accept Singing Blue Shards | Crank Fizzlebub.
+accept 621 Zanzil's Secret
+accept 617 Akiris by the Bundle
+accept 213 Hostile Takeover
+accept 189 Bloodscalp Ears
+accept 201 Investigate the Camp
+turnin 201 Investigate the Camp
 accept Scaring Shaky | "Sea Wolf" MacKinley.
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Large River Crocolisk Skin drops from River Crocolisk.
@@ -63,11 +84,19 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Some Assembly Required | Snapjaw Crocolisk Skin drops from Snapjaw Crocolisk.
 turnin Scaring Shaky
+complete 621 Zanzil's Secret
+complete 617 Akiris by the Bundle
+complete 213 Hostile Takeover
+complete 189 Bloodscalp Ears
 accept Return to MacKinley
 turnin Return to MacKinley
 complete Venture Company Mining | Singing Blue Crystal drops from Venture Co. Foreman, Venture Co. Strip Miner and Venture Co. Surveyor and others.
 turnin Some Assembly Required
 turnin Venture Company Mining
+turnin 621 Zanzil's Secret
+turnin 617 Akiris by the Bundle
+turnin 213 Hostile Takeover
+turnin 189 Bloodscalp Ears
 level 39
 train
 note Next: the Swamp of Sorrows, north through Duskwood and Deadwind Pass.

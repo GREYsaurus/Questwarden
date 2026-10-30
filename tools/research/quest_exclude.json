@@ -1,0 +1,17 @@
+{
+  "_comment": "Quests tools/research/quest_insert.py never adds automatically, with the reason. Our own review; extend it when a pick turns out not to be leveling content.",
+  "ClassicEra": {
+    "9664": "Establishing New Outposts: Scourge Invasion world event (patch 1.11), not a leveling quest",
+    "9665": "Bolstering Our Defenses: Scourge Invasion world event",
+    "5503": "Argent Dawn Commission: equips the reputation trinket, almost no XP",
+    "9124": "Naxxramas tier armour turn-in (endgame)",
+    "9126": "Naxxramas tier armour turn-in (endgame)",
+    "9128": "Naxxramas tier armour turn-in (endgame)",
+    "9131": "Naxxramas tier armour turn-in (endgame)",
+    "9136": "Naxxramas tier armour turn-in (endgame)",
+    "9141": "Naxxramas (endgame)",
+    "2438": "The Emerald Dreamcatcher: prerequisite of Ferocitas the Dream Eater, which the Teldrassil route already takes earlier",
+    "843": "Gann's Reclamation: at its pickup point the Orc routes' Barrens quest log would exceed 20",
+    "868": "Egg Hunt: picked up at the first Crossroads visit but finished much later; it would hold a quest-log slot through the Barrens' fullest stretch"
+  }
+}

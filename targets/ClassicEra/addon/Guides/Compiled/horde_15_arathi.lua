@@ -49,6 +49,8 @@ ns.Guides:Register({
     {"accept",q=652,title="Breaking the Keystone",npc="Stone of Inner Binding",z=45,x=36.2,y=57.4,v=1},
     {"complete",q=652,title="Breaking the Keystone",text="Rod of Order drops from Fozruk.",v=1},
     {"turnin",q=652,title="Breaking the Keystone",npc="Keystone",z=45,x=36.1,y=58.1,v=1},
+    {"accept",q=663,title="Land Ho!",npc="Lolo the Lookout",z=45,x=31.8,y=82.7,v=1},
+    {"turnin",q=663,title="Land Ho!",npc="Shakes O'Breen",z=45,x=32.3,y=81.4,v=1},
     {"level",level=35,v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},

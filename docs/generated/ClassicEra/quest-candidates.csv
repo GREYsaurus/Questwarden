@@ -1,7 +1,6 @@
 guide,levels,quest,title,req,level,xp,escort,start
 A_Arathi,30-34,656,Summoning the Princess,30,50,7100,,npc
 A_Arathi,30-34,697,Malin's Request,30,39,3750,,npc
-A_Arathi,30-34,691,Worth Its Weight in Gold,30,36,3500,,npc
 A_Arathi,30-34,693,Wand over Fist,30,39,3000,,npc
 A_Arathi,30-34,694,Trelane's Defenses,30,39,3000,,npc
 A_Arathi,30-34,696,Attack on the Tower,30,39,3000,,npc
@@ -44,13 +43,11 @@ A_Badlands,38-41,778,This Is Going to Be Hard,35,45,4850,,npc
 A_Badlands,38-41,762,An Ambassador of Evil,35,44,4650,,npc
 A_Badlands,38-41,706,Fiery Blaze Enchantments,40,45,3900,,npc
 A_Badlands,38-41,732,Tremors of the Earth,40,43,3600,,npc
-A_Badlands,38-41,705,Pearl Diving,30,37,3550,,npc
 A_Badlands,38-41,739,Murdaloc,30,42,3450,,item/object
 A_Badlands,38-41,692,The Lost Fragments,30,41,3300,,npc
 A_Badlands,38-41,713,Coolant Heads Prevail,35,37,2850,,npc
 A_Badlands,38-41,714,Gyro... What?,35,37,2850,,npc
 A_Badlands,38-41,716,Stone Is Better than Cloth,35,42,2550,,npc
-A_Badlands,38-41,703,Barbecued Buzzard Wings,33,40,2350,,npc
 A_Badlands,38-41,708,The Black Box,30,40,2350,,item/object
 A_Badlands,38-41,737,Forbidden Knowledge,30,40,2350,,npc
 A_Badlands,38-41,715,Liquid Stone,35,37,2100,,npc
@@ -59,7 +56,6 @@ A_Badlands,38-41,727,To Ironforge for Yagyin's Digest,30,40,780,,npc
 A_Badlands,38-41,734,This Is Going to Be Hard,35,42,0,,npc
 A_Badlands,38-41,777,This Is Going to Be Hard,35,42,0,,npc
 A_Badlands,38-41,779,Seal of the Earth,40,50,0,,item/object
-A_BurningSteppes,53-56,4283,FIFTY! YEP!,50,56,5800,,npc
 A_BurningSteppes,53-56,4022,A Taste of Flame,52,54,5450,,npc
 A_BurningSteppes,53-56,4023,A Taste of Flame,52,54,5450,,npc
 A_BurningSteppes,53-56,4808,Felnok Steelspring,50,54,2700,,npc
@@ -76,13 +72,7 @@ A_Darkshore,11-20,5321,The Sleeper Has Awakened,17,20,1550,yes,npc
 A_Darkshore,11-20,5713,One Shot. One Kill.,10,15,1050,yes,npc
 A_Darkshore,11-20,6343,Return to Nessa,10,10,1050,,npc
 A_Darkshore,11-20,995,Escape Through Stealth,10,20,780,yes,npc
-A_Darkshore,11-20,4731,Beached Sea Turtle,13,19,730,,item/object
-A_Darkshore,11-20,4732,Beached Sea Turtle,13,19,730,,item/object
-A_Darkshore,11-20,4733,Beached Sea Creature,13,19,730,,item/object
-A_Darkshore,11-20,4730,Beached Sea Creature,12,16,580,,item/object
 A_Darkshore,11-20,1167,The Tower of Althalaxx,13,28,570,,npc
-A_Darkshore,11-20,4728,Beached Sea Creature,12,14,490,,item/object
-A_Darkshore,11-20,4723,Beached Sea Creature,11,13,455,,item/object
 A_Desolace,33-37,1380,Khan Hratha,30,42,4300,,npc
 A_Desolace,33-37,1381,Khan Hratha,30,42,4300,,npc
 A_Desolace,33-37,6027,Book of the Ancients,30,38,3550,,npc
@@ -97,7 +87,6 @@ A_Desolace,33-37,1384,Raid on the Kolkar,30,32,2550,,npc
 A_Desolace,33-37,6132,Get Me Out of Here!,34,39,2250,yes,npc
 A_Desolace,33-37,6134,Ghost-o-plasm Round Up,34,39,2250,,npc
 A_Desolace,33-37,1371,Gizmo for Warug,30,35,2050,,npc
-A_Desolace,33-37,1382,Strange Alliance,30,35,2050,,npc
 A_Desolace,33-37,1052,Down the Scarlet Path,34,40,1550,,npc
 A_Desolace,33-37,1370,Stealing Supplies,30,35,1350,,npc
 A_Desolace,33-37,6141,Brother Anton,34,39,300,,npc
@@ -181,10 +170,8 @@ A_Feralas,43-47,2944,The Super Snapper FX,42,48,4400,,npc
 A_Feralas,43-47,7733,Improved Quality,40,48,4400,,npc
 A_Feralas,43-47,3843,The Newest Member of the Family,38,47,4200,,npc
 A_Feralas,43-47,4297,Food for Baby,38,47,4200,,npc
-A_Feralas,43-47,2821,The Mark of Quality,40,46,4050,,npc
 A_Feralas,43-47,2766,Find OOX-22/FE!,40,45,3900,,item/object
 A_Feralas,43-47,2871,Delivering the Relic,40,45,3900,,npc
-A_Feralas,43-47,2982,The High Wilderness,39,44,3750,,npc
 A_Feralas,43-47,3445,The Sunken Temple,46,51,3650,,npc
 A_Feralas,43-47,2943,Return to Troyas,42,48,3300,,npc
 A_Feralas,43-47,4281,Thalanaar Delivery,40,44,2800,,item/object
@@ -232,7 +219,6 @@ A_NightElf_Teldrassil,1-11,2561,Druid of the Claw,3,10,1050,yes,npc
 A_NightElf_Teldrassil,1-11,2499,Oakenscowl,4,9,980,,npc
 A_NightElf_Teldrassil,1-11,938,Mist,7,12,910,yes,npc
 A_NightElf_Teldrassil,1-11,941,Planting the Heart,9,12,910,,npc
-A_NightElf_Teldrassil,1-11,2541,The Sleeping Druid,3,8,700,,npc
 A_NightElf_Teldrassil,1-11,934,Crown of the Earth,1,11,660,,item/object
 A_NightElf_Teldrassil,1-11,2438,The Emerald Dreamcatcher,1,6,405,,npc
 A_NightElf_Teldrassil,1-11,2399,The Sprouted Fronds,4,10,85,,item/object
@@ -258,10 +244,8 @@ A_Stranglethorn,32-40,338,The Green Hills of Stranglethorn,30,40,4700,,npc
 A_Stranglethorn,32-40,580,Whiskey Slim's Lost Grog,40,50,4700,,npc
 A_Stranglethorn,32-40,613,Cracking Maury's Foot,30,44,4650,,npc
 A_Stranglethorn,32-40,609,Voodoo Dues,30,44,3750,,npc
-A_Stranglethorn,32-40,621,Zanzil's Secret,35,44,3750,,npc
 A_Stranglethorn,32-40,197,Raptor Mastery,28,43,3600,,npc
 A_Stranglethorn,32-40,604,The Bloodsail Buccaneers,37,43,3600,,npc
-A_Stranglethorn,32-40,617,Akiris by the Bundle,38,43,3600,,npc
 A_Stranglethorn,32-40,624,Cortello's Riddle,35,43,3600,,item/object
 A_Stranglethorn,32-40,625,Cortello's Riddle,35,43,3600,,item/object
 A_Stranglethorn,32-40,207,Kurzen's Mystery,30,38,3550,,npc
@@ -277,7 +261,6 @@ A_Stranglethorn,32-40,578,The Stone of the Tides,32,37,2850,,npc
 A_Stranglethorn,32-40,601,Water Elementals,32,37,2850,,npc
 A_Stranglethorn,32-40,622,Return to Corporal Kaleb,32,37,2850,,npc
 A_Stranglethorn,32-40,628,Excelsior,31,38,2850,,npc
-A_Stranglethorn,32-40,213,Hostile Takeover,31,36,2800,,npc
 A_Stranglethorn,32-40,623,Akiris by the Bundle,38,43,2700,,npc
 A_Stranglethorn,32-40,576,Keep An Eye Out,37,42,2550,,npc
 A_Stranglethorn,32-40,196,Raptor Mastery,28,41,2450,,npc
@@ -286,26 +269,17 @@ A_Stranglethorn,32-40,597,The Bloodsail Buccaneers,37,41,2450,,item/object
 A_Stranglethorn,32-40,8552,The Monogrammed Sash,40,50,2350,,item/object
 A_Stranglethorn,32-40,610,"""Pretty Boy"" Duncan",32,39,2250,,npc
 A_Stranglethorn,32-40,627,Favor for Krazek,32,37,2100,,npc
-A_Stranglethorn,32-40,189,Bloodscalp Ears,30,35,2050,,npc
 A_Stranglethorn,32-40,587,Up to Snuff,37,41,1650,,npc
-A_Stranglethorn,32-40,210,Krazek's Cookery,32,37,1400,,npc
 A_Stranglethorn,32-40,328,The Hidden Key,30,37,1400,,item/object
 A_Stranglethorn,32-40,329,The Spy Revealed!,30,37,1400,,item/object
 A_Stranglethorn,32-40,602,Magical Analysis,32,37,1400,,npc
 A_Stranglethorn,32-40,603,Ansirem's Key,32,37,1400,,npc
 A_Stranglethorn,32-40,599,The Bloodsail Buccaneers,37,41,820,,npc
-A_Stranglethorn,32-40,339,Chapter I,30,40,780,,npc
-A_Stranglethorn,32-40,340,Chapter II,30,40,780,,npc
-A_Stranglethorn,32-40,341,Chapter III,30,40,780,,npc
-A_Stranglethorn,32-40,342,Chapter IV,30,40,780,,npc
-A_Stranglethorn,32-40,198,Supplies to Private Thorsen,30,32,640,,npc
 A_Stranglethorn,32-40,7810,Arena Master,1,55,560,,item/object
 A_Stranglethorn,32-40,615,The Captain's Cutlass,35,51,490,,item/object
 A_Stranglethorn,32-40,8553,The Captain's Cutlass,40,50,470,,npc
 A_Stranglethorn,32-40,1127,Fool's Stout,36,44,375,,npc
 A_Stranglethorn,32-40,330,Patrol Schedules,30,37,285,,npc
-A_Stranglethorn,32-40,616,The Haunted Isle,32,37,285,,npc
-A_Stranglethorn,32-40,201,Investigate the Camp,28,32,255,,npc
 A_Stranglethorn,32-40,349,Stranglethorn Fever,32,45,0,,npc
 A_Stranglethorn,32-40,619,Enticing Negolash,35,52,0,,item/object
 A_Stranglethorn,32-40,7838,Arena Grandmaster,1,55,0,,npc
@@ -337,7 +311,6 @@ A_WesternPlaguelands,55-57,5538,Mold Rhymes With...,55,57,600,,npc
 A_WesternPlaguelands,55-57,4973,Counting Out Time,53,56,580,,npc
 A_WesternPlaguelands,55-57,5221,Dalson's Tears Cauldron,50,55,560,,item/object
 A_WesternPlaguelands,55-57,5224,Writhing Haunt Cauldron,50,55,560,,item/object
-A_WesternPlaguelands,55-57,5401,Argent Dawn Commission,50,55,560,,npc
 A_WesternPlaguelands,55-57,5402,Minion's Scourgestones,50,55,560,,npc
 A_WesternPlaguelands,55-57,5403,Invader's Scourgestones,50,55,560,,npc
 A_WesternPlaguelands,55-57,5404,Corruptor's Scourgestones,50,55,560,,npc
@@ -371,10 +344,8 @@ Both_EasternPlaguelands,56-58,6185,The Eastern Plagues,56,60,8300,,npc
 Both_EasternPlaguelands,56-58,5065,The Lost Tablets of Mosh'aru,40,58,7750,,npc
 Both_EasternPlaguelands,56-58,5206,Marauders of Darrowshire,50,60,6600,,npc
 Both_EasternPlaguelands,56-58,5264,Lord Maxwell Tyrosus,55,60,6600,,npc
-Both_EasternPlaguelands,56-58,5281,The Restless Souls,55,60,6600,,npc
 Both_EasternPlaguelands,56-58,5513,Mantles of the Dawn,55,60,6600,,npc
 Both_EasternPlaguelands,56-58,6024,Hameya's Plea,54,60,6600,,item/object
-Both_EasternPlaguelands,56-58,6133,The Ranger Lord's Behest,54,60,6600,,npc
 Both_EasternPlaguelands,56-58,6135,"Duskwing, Oh How I Hate Thee...",56,60,6600,,npc
 Both_EasternPlaguelands,56-58,6136,The Corpulent One,56,60,6600,,npc
 Both_EasternPlaguelands,56-58,6145,The Crimson Courier,56,60,6600,,npc
@@ -461,11 +432,9 @@ Both_SearingGorge,47-50,3372,Release Them,40,52,5100,,npc
 Both_SearingGorge,47-50,4450,Ledger from Tanaris,43,46,5050,,item/object
 Both_SearingGorge,47-50,7701,WANTED: Overseer Maltorius,45,50,4700,,item/object
 Both_SearingGorge,47-50,7704,Look at the Size of It!,45,50,4700,,item/object
-Both_SearingGorge,47-50,7722,What the Flux?,45,50,4700,,npc
 Both_SearingGorge,47-50,3367,Suntara Stones,40,48,4400,yes,npc
 Both_SearingGorge,47-50,3368,Suntara Stones,40,48,4400,,item/object
 Both_SearingGorge,47-50,4449,Caught!,43,45,3900,,item/object
-Both_SearingGorge,47-50,3377,Prayer to Elune,40,50,470,,npc
 Both_SearingGorge,47-50,3481,Trinkets...,40,50,470,,item/object
 Both_SearingGorge,47-50,7736,Restoring Fiery Flux Supplies via Kingsblood,45,60,0,,npc
 Both_SearingGorge,47-50,7737,Gaining Acceptance,45,60,0,,npc
@@ -483,7 +452,6 @@ Both_Tanaris,41-45,3362,Thistleshrub Valley,45,50,4700,,npc
 Both_Tanaris,41-45,2641,Sprinkle's Secret Ingredient,44,49,4550,,npc
 Both_Tanaris,41-45,351,Find OOX-17/TN!,43,48,4400,,item/object
 Both_Tanaris,41-45,654,Tanaris Field Sampling,38,46,4050,,item/object
-Both_Tanaris,41-45,2873,Stoley's Shipment,40,45,3900,,npc
 Both_Tanaris,41-45,2874,Deliver to MacKinley,40,45,3900,,npc
 Both_Tanaris,41-45,3520,Screecher Spirits,40,44,3750,,npc
 Both_Tanaris,41-45,379,Slake That Thirst,38,46,3050,,npc
@@ -523,9 +491,7 @@ Both_UngoroCrater,48-52,4244,Chasing A-Me 01,48,53,3950,,npc
 Both_UngoroCrater,48-52,4142,A Visit to Gregan,47,52,3800,,npc
 Both_UngoroCrater,48-52,3884,Williden's Journal,48,50,3550,,item/object
 Both_UngoroCrater,48-52,980,The New Springs,51,55,2800,,npc
-Both_UngoroCrater,48-52,4492,Lost!,50,55,2800,,npc
 Both_UngoroCrater,48-52,3961,Linken's Adventure,47,54,2700,,npc
-Both_UngoroCrater,48-52,4243,Chasing A-Me 01,48,53,2650,,npc
 Both_UngoroCrater,48-52,3913,A Grave Situation,47,52,2550,,npc
 Both_UngoroCrater,48-52,4147,Marvon's Workshop,47,52,2550,,npc
 Both_UngoroCrater,48-52,3844,It's a Secret to Everybody,47,52,1250,,item/object
@@ -562,7 +528,6 @@ Both_Winterspring,54-56,5123,The Final Piece,52,59,3200,,item/object
 Both_Winterspring,54-56,5083,Winterfall Firewater,52,56,2900,,item/object
 Both_Winterspring,54-56,4810,Return to Tinkee,50,54,2700,,npc
 Both_Winterspring,54-56,6606,A Little Luck,55,60,660,,npc
-Both_Winterspring,54-56,5244,The Ruins of Kel'Theril,53,56,580,,npc
 Both_Winterspring,54-56,6605,A Strange One,49,54,540,,npc
 Both_Winterspring,54-56,975,Cache of Mau'ari,55,60,0,,npc
 Both_Winterspring,54-56,4801,Frostsaber E'ko,55,60,0,,npc
@@ -594,23 +559,19 @@ H_Arathi,32-35,688,Myzrael's Allies,30,40,2350,,item/object
 H_Arathi,32-35,668,Sunken Treasure,35,40,1550,,npc
 H_Arathi,32-35,687,Theldurin the Lost,30,40,1550,,npc
 H_Arathi,32-35,645,Trol'kalar,32,42,860,,npc
-H_Arathi,32-35,663,Land Ho!,35,35,690,,npc
 H_Arathi,32-35,641,Sigil of Thoradin,32,40,315,,npc
 H_Arathi,32-35,635,Crystal in the Mountains,30,35,275,,item/object
 H_Arathi,32-35,636,Legends of the Earth,30,35,275,,item/object
 H_Ashenvale,23-28,247,The Hunt Completed,20,30,3050,,npc
 H_Ashenvale,23-28,6621,King of the Foulweald,21,26,2650,,npc
-H_Ashenvale,23-28,6462,Troll Charm,19,24,1950,,npc
 H_Ashenvale,23-28,6546,Warsong Outrider Update,17,25,0,,npc
 H_Ashenvale,23-28,6547,Warsong Scout Update,17,21,0,,npc
 H_Ashenvale,23-28,6581,Warsong Saw Blades,22,27,0,,npc
 H_Badlands,35-38,778,This Is Going to Be Hard,35,45,4850,,npc
-H_Badlands,35-38,705,Pearl Diving,30,37,3550,,npc
 H_Badlands,35-38,692,The Lost Fragments,30,41,3300,,npc
 H_Badlands,35-38,713,Coolant Heads Prevail,35,37,2850,,npc
 H_Badlands,35-38,714,Gyro... What?,35,37,2850,,npc
 H_Badlands,35-38,716,Stone Is Better than Cloth,35,42,2550,,npc
-H_Badlands,35-38,703,Barbecued Buzzard Wings,33,40,2350,,npc
 H_Badlands,35-38,737,Forbidden Knowledge,30,40,2350,,npc
 H_Badlands,35-38,1420,Report to Helgrum,30,40,2350,,npc
 H_Badlands,35-38,715,Liquid Stone,35,37,2100,,npc
@@ -621,13 +582,11 @@ H_Barrens,11-22,3514,Horde Presence,15,29,2950,,npc
 H_Barrens,11-22,3513,The Runed Scroll,15,25,2550,,item/object
 H_Barrens,11-22,897,The Harvester,10,24,2400,,item/object
 H_Barrens,11-22,3369,In Nightmares,15,25,2000,,npc
-H_Barrens,11-22,893,Weapons of Choice,17,24,1950,,npc
 H_Barrens,11-22,898,Free From the Hold,13,20,1950,yes,npc
 H_Barrens,11-22,843,Gann's Reclamation,17,23,1850,,npc
 H_Barrens,11-22,3924,Samophlange Manual,10,19,1800,,npc
 H_Barrens,11-22,6543,The Warsong Reports,17,19,1800,,npc
 H_Barrens,11-22,868,Egg Hunt,17,22,1750,,npc
-H_Barrens,11-22,891,The Guns of Northwatch,13,20,1550,,npc
 H_Barrens,11-22,5052,Blood Shards of Agamaggan,14,21,1250,,npc
 H_Barrens,11-22,3301,Mura Runetotem,10,15,1050,,npc
 H_Barrens,11-22,3922,Nugget Slugs,10,15,1050,,npc
@@ -635,7 +594,6 @@ H_Barrens,11-22,822,Chen's Empty Keg,11,24,970,,npc
 H_Barrens,11-22,3921,Wenikee Boltbucket,10,14,490,,npc
 H_Barrens,11-22,6382,The Ashenvale Hunt,20,20,390,,npc
 H_Barrens,11-22,3923,Rilli Greasygob,10,18,340,,npc
-H_Barrens,11-22,6541,Report to Kadrak,17,19,145,,npc
 H_Barrens,11-22,889,Spirit of the Wind,14,20,0,,npc
 H_Barrens,11-22,5042,Agamaggan's Strength,14,20,0,,npc
 H_Barrens,11-22,5043,Agamaggan's Agility,14,20,0,,npc
@@ -655,7 +613,6 @@ H_Desolace,33-36,5381,Hand of Iruxos,32,38,2850,,npc
 H_Desolace,33-36,5943,Gizelton Caravan,32,38,2850,yes,npc
 H_Desolace,33-36,1482,The Corrupter,25,35,2750,,npc
 H_Desolace,33-36,5821,Bodyguard for Hire,30,35,2750,yes,npc
-H_Desolace,33-36,6142,Clam Bait,31,35,2750,,npc
 H_Desolace,33-36,1369,Broken Tears,30,33,2650,,npc
 H_Desolace,33-36,1481,The Corrupter,25,33,2650,,npc
 H_Desolace,33-36,6132,Get Me Out of Here!,34,39,2250,yes,npc
@@ -665,8 +622,6 @@ H_Desolace,33-36,1371,Gizmo for Warug,30,35,2050,,npc
 H_Desolace,33-36,1370,Stealing Supplies,30,35,1350,,npc
 H_Desolace,33-36,1480,The Corrupter,25,33,1300,,item/object
 H_Desolace,33-36,5763,Hunting in Stranglethorn,28,31,1250,,npc
-H_Desolace,33-36,1367,Magram Alliance,30,33,660,,npc
-H_Desolace,33-36,1368,Gelkis Alliance,30,33,660,,npc
 H_Desolace,33-36,1361,Regthar Deathgate,30,32,640,,npc
 H_Desolace,33-36,1362,The Kolkar of Desolace,30,32,640,,npc
 H_Desolace,33-36,1484,The Corrupter,25,35,275,,npc
@@ -679,7 +634,6 @@ H_Dustwallow,37-42,1262,Report to Zor,30,40,3150,,npc
 H_Dustwallow,37-42,1270,Stinky's Escape,30,37,2850,yes,npc
 H_Dustwallow,37-42,1206,Jarl Needs Eyes,30,35,2750,,npc
 H_Dustwallow,37-42,1240,The Troll Witchdoctor,30,35,2750,,npc
-H_Dustwallow,37-42,1238,The Lost Report,30,35,2050,,item/object
 H_Dustwallow,37-42,1239,The Severed Head,30,35,2050,,item/object
 H_Dustwallow,37-42,7541,Service to the Horde,30,40,1950,,npc
 H_Dustwallow,37-42,1218,Soothing Spices,30,35,1350,,npc
@@ -692,7 +646,6 @@ H_Felwood,51-54,5165,Dousing the Flames of Protection,48,55,5650,,npc
 H_Felwood,51-54,5202,A Strange Red Key,49,55,5650,,item/object
 H_Felwood,51-54,5203,Rescue From Jaedenar,49,55,5650,yes,npc
 H_Felwood,51-54,8470,Deadwood Ritual Totem,45,55,5650,,item/object
-H_Felwood,51-54,6162,A Husband's Last Battle,46,51,4900,,npc
 H_Felwood,51-54,5204,Retribution of the Light,49,57,4500,,npc
 H_Felwood,51-54,5159,Cleansed Water Returns to Felwood,48,54,2700,,npc
 H_Felwood,51-54,5158,Seeking Spiritual Aid,48,52,2550,,npc
@@ -777,7 +730,6 @@ H_Hillsbrad,27-31,550,Battle of Hillsbrad,19,32,2550,,npc
 H_Hillsbrad,27-31,556,Stone Tokens,30,32,2550,,npc
 H_Hillsbrad,27-31,541,Battle of Hillsbrad,19,30,2450,,npc
 H_Hillsbrad,27-31,539,Battle of Hillsbrad,19,28,2300,,npc
-H_Hillsbrad,27-31,567,Dangerous!,19,28,2300,,item/object
 H_Hillsbrad,27-31,506,Blackmoore's Legacy,29,36,2100,,npc
 H_Hillsbrad,27-31,517,Elixir of Agony,24,30,1200,,npc
 H_Hillsbrad,27-31,513,Elixir of Agony,24,28,1150,,npc
@@ -810,7 +762,6 @@ H_Silverpine,10-18,461,The Hidden Niche,12,18,680,,item/object
 H_Silverpine,10-18,460,Resting in Pieces,12,17,630,,item/object
 H_Silverpine,10-18,441,Raleigh and the Undercity,10,16,580,,npc
 H_Silverpine,10-18,6323,Ride to the Undercity,10,10,420,,npc
-H_Silverpine,10-18,6321,Supplying the Sepulcher,10,10,210,,npc
 H_Silverpine,10-18,6322,Michael Garrett,10,10,210,,npc
 H_Silverpine,10-18,3221,Speak with Renferrel,10,12,90,,npc
 H_Stonetalon,21-25,1089,The Den,20,29,2950,,npc
@@ -818,7 +769,6 @@ H_Stonetalon,21-25,1096,Gerenzo Wrenchwhistle,16,27,2200,,npc
 H_Stonetalon,21-25,6381,New Life,17,25,2000,,npc
 H_Stonetalon,21-25,1068,Shredding Machines,13,23,1850,,npc
 H_Stonetalon,21-25,6481,Earthen Arise,14,20,1550,,npc
-H_Stonetalon,21-25,6301,Cycle of Rebirth,17,23,1400,,npc
 H_Stonetalon,21-25,1092,Gerenzo's Orders,17,22,1300,,npc
 H_Stonetalon,21-25,6542,Report to Kadrak,17,19,145,,npc
 H_Stranglethorn,34-40,618,Facing Negolash,40,50,7100,,item/object
@@ -836,10 +786,8 @@ H_Stranglethorn,34-40,613,Cracking Maury's Foot,30,44,4650,,npc
 H_Stranglethorn,34-40,586,Speaking with Gan'zulah,30,46,4050,,item/object
 H_Stranglethorn,34-40,589,The Singing Crystals,30,45,3900,,npc
 H_Stranglethorn,34-40,609,Voodoo Dues,30,44,3750,,npc
-H_Stranglethorn,34-40,621,Zanzil's Secret,35,44,3750,,npc
 H_Stranglethorn,34-40,197,Raptor Mastery,28,43,3600,,npc
 H_Stranglethorn,34-40,604,The Bloodsail Buccaneers,37,43,3600,,npc
-H_Stranglethorn,34-40,617,Akiris by the Bundle,38,43,3600,,npc
 H_Stranglethorn,34-40,624,Cortello's Riddle,35,43,3600,,item/object
 H_Stranglethorn,34-40,625,Cortello's Riddle,35,43,3600,,item/object
 H_Stranglethorn,34-40,209,Skullsplitter Tusks,37,42,3450,,npc
@@ -849,8 +797,6 @@ H_Stranglethorn,34-40,193,Panther Mastery,28,40,3150,,npc
 H_Stranglethorn,34-40,8551,The Captain's Chest,35,47,3150,,npc
 H_Stranglethorn,34-40,188,Tiger Mastery,28,37,2850,,npc
 H_Stranglethorn,34-40,628,Excelsior,31,38,2850,,npc
-H_Stranglethorn,34-40,629,The Vile Reef,30,37,2850,,npc
-H_Stranglethorn,34-40,213,Hostile Takeover,31,36,2800,,npc
 H_Stranglethorn,34-40,576,Keep An Eye Out,37,42,2550,,npc
 H_Stranglethorn,34-40,196,Raptor Mastery,28,41,2450,,npc
 H_Stranglethorn,34-40,571,Mok'thardin's Enchantment,33,41,2450,,npc
@@ -859,20 +805,14 @@ H_Stranglethorn,34-40,595,The Bloodsail Buccaneers,37,41,2450,,npc
 H_Stranglethorn,34-40,597,The Bloodsail Buccaneers,37,41,2450,,item/object
 H_Stranglethorn,34-40,585,Speaking with Nezzliok,30,40,2350,,item/object
 H_Stranglethorn,34-40,8552,The Monogrammed Sash,40,50,2350,,item/object
-H_Stranglethorn,34-40,189,Bloodscalp Ears,30,35,2050,,npc
 H_Stranglethorn,34-40,587,Up to Snuff,37,41,1650,,npc
 H_Stranglethorn,34-40,599,The Bloodsail Buccaneers,37,41,820,,npc
-H_Stranglethorn,34-40,339,Chapter I,30,40,780,,npc
-H_Stranglethorn,34-40,340,Chapter II,30,40,780,,npc
-H_Stranglethorn,34-40,341,Chapter III,30,40,780,,npc
-H_Stranglethorn,34-40,342,Chapter IV,30,40,780,,npc
 H_Stranglethorn,34-40,638,Trollbane,32,37,710,,npc
 H_Stranglethorn,34-40,7810,Arena Master,1,55,560,,item/object
 H_Stranglethorn,34-40,615,The Captain's Cutlass,35,51,490,,item/object
 H_Stranglethorn,34-40,8553,The Captain's Cutlass,40,50,470,,npc
 H_Stranglethorn,34-40,588,The Fate of Yenniku,30,45,390,,item/object
 H_Stranglethorn,34-40,1127,Fool's Stout,36,44,375,,npc
-H_Stranglethorn,34-40,201,Investigate the Camp,28,32,255,,npc
 H_Stranglethorn,34-40,349,Stranglethorn Fever,32,45,0,,npc
 H_Stranglethorn,34-40,593,Filling the Soul Gem,1,46,0,,npc
 H_Stranglethorn,34-40,619,Enticing Negolash,35,52,0,,item/object
@@ -917,7 +857,6 @@ H_Undead_Tirisfal,1-11,408,The Family Crypt,7,13,910,,npc
 H_Undead_Tirisfal,1-11,411,The Prodigal Lich Returns,5,12,910,,npc
 H_Undead_Tirisfal,1-11,492,A New Plague,6,11,880,,npc
 H_Undead_Tirisfal,1-11,409,Proving Allegiance,5,12,680,,npc
-H_Undead_Tirisfal,1-11,356,Rear Guard Patrol,6,11,660,,npc
 H_Undead_Tirisfal,1-11,374,Proof of Demise,5,7,630,,npc
 H_Undead_Tirisfal,1-11,5482,Doom Weed,5,6,540,,npc
 H_Undead_Tirisfal,1-11,361,A Letter Undelivered,4,7,475,,item/object
@@ -955,7 +894,6 @@ H_WesternPlaguelands,54-58,4973,Counting Out Time,53,56,580,,npc
 H_WesternPlaguelands,54-58,838,Scholomance,55,55,560,,npc
 H_WesternPlaguelands,54-58,5221,Dalson's Tears Cauldron,50,55,560,,item/object
 H_WesternPlaguelands,54-58,5224,Writhing Haunt Cauldron,50,55,560,,item/object
-H_WesternPlaguelands,54-58,5401,Argent Dawn Commission,50,55,560,,npc
 H_WesternPlaguelands,54-58,5402,Minion's Scourgestones,50,55,560,,npc
 H_WesternPlaguelands,54-58,5403,Invader's Scourgestones,50,55,560,,npc
 H_WesternPlaguelands,54-58,5404,Corruptor's Scourgestones,50,55,560,,npc
