@@ -65,6 +65,15 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
     - 24 have a pickup the route never reaches at the needed level: Dire Maul quests in Feralas, Maraudon quests in Desolace, Blackrock quests in the Badlands.
     - 34 have a lead-in that is an escort (excluded by rule), has no spawn data for its objective (Overmaster Pyron, the Screecher Spirits), or is itself blocked.
     - The rest are given inside an instance no route enters at that level.
+- **Escort quests are back in the generated routes, each with a note** (`tools/research/qdb.py` `escort()`, used by `quest_insert`, `chain_insert`, `group_insert` and `dungeon_cross`).
+  - **Format:** a `note` step right before the pickup says the next quest is an escort. The escort's own step follows the accept straight away: *Escort: stay close; it fails if the NPC dies.*
+  - **How escorts are recognised:** quest flag 2 plus escort wording in the quest text. Other flag-2 quests (scripted events, duels, timed tasks) stay out.
+  - **Added, about 26k XP:**
+    - Alliance: *Mist*, *Supplies to Auberdine*, *Hints of a New Plague?*, the Desolace *Gizelton Caravan*, *Bodyguard for Hire* and *Get Me Out of Here!*.
+    - Horde: *Free From the Hold*, *Galen's Escape* and the two Gizelton escorts.
+    - Both factions: *Tooga's Quest* (Tanaris).
+  - **Also placed:** re-running the chain tool placed two non-escort chain quests, *Tiger Mastery* and *Return to Tinkee*.
+  - **The Deadmines' Defias Brotherhood chain is still out.** Its escort is now allowed, but the chain goes back and forth between Westfall and Redridge, and the Alliance route doesn't return to Westfall.
 
 Tested offline: ClassicEra build all passes (80 route walks, Speed and Hardcore: 0 errors, quest log peak 20/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 

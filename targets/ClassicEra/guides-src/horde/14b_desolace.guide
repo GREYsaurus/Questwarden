@@ -19,6 +19,14 @@ complete 1368 Gelkis Alliance
 accept Befouled by Satyr | Takata Steelblade.
 turnin 5361 Family Tree [optional]
 accept Kodo Roundup | Smeed Scrabblescrew at the caravan camp just east of Ghost Walker Post.
+note The next quest, Gizelton Caravan, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5943 Gizelton Caravan
+complete 5943 Gizelton Caravan | Escort: stay close; it fails if the NPC dies.
+note The next quest, Bodyguard for Hire, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5821 Bodyguard for Hire
+complete 5821 Bodyguard for Hire | Escort: stay close; it fails if the NPC dies.
+turnin 5943 Gizelton Caravan
+turnin 5821 Bodyguard for Hire
 turnin 1367 Magram Alliance
 complete Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard (south of Ghost Walker Post) and lead them back to Smeed.
 turnin Kodo Roundup

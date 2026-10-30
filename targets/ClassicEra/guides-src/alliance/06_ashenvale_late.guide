@@ -18,6 +18,10 @@ accept 4581 Kayneth Stillwind
 accept 1022 The Howling Vale
 accept 1021 Vile Satyr! Dryads in Danger!
 accept 1140 The Tower of Althalaxx
+note The next quest, Supplies to Auberdine, is an escort: pick it up only when you are ready to follow the NPC.
+accept 976 Supplies to Auberdine
+complete 976 Supplies to Auberdine | Escort: stay close; it fails if the NPC dies.
+turnin 976 Supplies to Auberdine
 accept 1011 Forsaken Diseases
 complete 1140 The Tower of Althalaxx
 complete 1011 Forsaken Diseases

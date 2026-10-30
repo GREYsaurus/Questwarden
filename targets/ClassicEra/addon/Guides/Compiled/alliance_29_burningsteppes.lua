@@ -28,6 +28,7 @@ ns.Guides:Register({
     {"turnin",q=4183,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,text="Magistrate Solomon in Lakeshire.",v=1},
     {"accept",q=4184,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,v=1},
     {"accept",q=4726,title="Broodling Essence",npc="Tinkee Steamboil",z=46,x=65.2,y=24,text="Tinkee Steamboil, Flame Crest.",v=1},
+    {"turnin",q=4810,title="Return to Tinkee",npc="Tinkee Steamboil",z=46,x=65.2,y=24,optional=true,v=1},
     {"accept",q=4123,title="The Heart of the Mountain",npc="Maxwort Uberglint",z=46,x=65.2,y=23.9,dungeon="Blackrock Depths",v=1},
     {"accept",q=4136,title="Ribbly Screwspigot",npc="Yuka Screwspigot",z=46,x=66.1,y=22,dungeon="Blackrock Depths",v=1},
     {"accept",q=4862,title="En-Ay-Es-Tee-Why",npc="Kibler",z=46,x=65.9,y=21.9,dungeon="Blackrock Spire",v=1},

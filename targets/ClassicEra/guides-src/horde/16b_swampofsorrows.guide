@@ -14,6 +14,9 @@ note From Grom'gol ride north through Duskwood (Alliance zone: keep off the road
 accept Draenethyst Crystals | Magtoor, a Lost One in the hut at the west end of the swamp. He is friendly.
 fp Stonard
 accept Pool of Tears | Fel'zerul, Stonard.
+note The next quest, Galen's Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1393 Galen's Escape
+complete 1393 Galen's Escape | Escort: stay close; it fails if the NPC dies.
 accept 698 Lack of Surplus | Dar, just outside Stonard.
 accept Fresh Meat | Dar.
 complete 698 Lack of Surplus | Unprepared Sawtooth Flanks from Sawtooth Crocolisks around the lakes east of Stonard.
@@ -35,6 +38,7 @@ accept Continued Threat [optional] | Katar. Needs level 41; skipped if you are l
 complete Continued Threat [optional] | Marsh Inkspewers, Flesheaters and Oracles on the same beach.
 turnin Continued Threat [optional]
 turnin Pool of Tears | Fel'zerul.
+turnin 1393 Galen's Escape
 turnin Fresh Meat | Dar.
 turnin Draenethyst Crystals | Magtoor, at the west end of the swamp.
 level 40

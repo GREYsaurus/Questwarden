@@ -121,6 +121,10 @@ complete 937 The Enchanted Glade | Bloodfeather Belt drops from Bloodfeather Har
 turnin 937 The Enchanted Glade
 accept 940 Teldrassil
 accept 931 The Shimmering Frond
+note The next quest, Mist, is an escort: pick it up only when you are ready to follow the NPC.
+accept 938 Mist
+complete 938 Mist | Escort: stay close; it fails if the NPC dies.
+turnin 938 Mist
 grind 10 Bloodfeather Fury, Bloodfeather Harpy | Destiny Calls needs level 10: kill these nearby until you reach it.
 accept 2242 Destiny Calls [class=Rogue] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin 922 Rellian Greenspyre [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.

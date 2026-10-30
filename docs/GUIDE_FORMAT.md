@@ -31,6 +31,18 @@ Never write the add-on's name or slash command in a note: write `{name}` and `{s
 
 On Classic Era, `[elite]`/`[group]` steps and `[dungeon=...]` steps are **off by default** (`contentDefaults` in `Target.ClassicEra.lua`); players turn them on in Settings. Mark every step of an elite quest `[elite; group; hc=skip]`. Tag dungeon quests' steps `[dungeon=<instance>]` by hand when the compiler's automatic tag may not catch them. The route audit gives no XP for either, so solo level gates hold.
 
+## Escort quests
+
+Escorts belong in routes. Put a `note` right before the pickup saying the next quest is an escort, then the accept, then the escort's `complete` step at once (the NPC starts walking from the giver), with *Escort: stay close; it fails if the NPC dies.* One escort at a time:
+
+```
+note The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1560 Tooga's Quest
+complete 1560 Tooga's Quest | Escort: stay close; it fails if the NPC dies.
+```
+
+The research tools write exactly this. They recognise an escort by quest flag 2 plus escort wording in the quest text, and leave out the other flag-2 quests (scripted events, duels, timed tasks).
+
 ## Hardcore route flavor
 
 Each zone has one guide source. Hardcore characters (Settings → Guide Routing → *Hardcore character*, per character) follow the same file with two step flags:

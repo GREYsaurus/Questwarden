@@ -12,8 +12,9 @@
 # picked up in one race's start zone is never turned in on another race's path.
 #
 # Roots are unused dungeon quests: XP, open to the faction, not a class/profession/reputation/repeatable/
-# escort quest, not excluded, and ALL objectives inside one dungeon (never a raid or a Season of Discovery
-# instance). Every unused prerequisite up the chain comes along as a member of one of three kinds:
+# scripted-event quest, not excluded, and ALL objectives inside one dungeon (never a raid or a Season of
+# Discovery instance). Escorts are fine: a note before the pickup says the next quest is an escort, and the
+# escort's complete step follows the accept. Every unused prerequisite up the chain comes along as a member of one of three kinds:
 #   dungeon - objectives inside one dungeon;   talk - no objectives;   outdoor - objectives outdoors only.
 # Givers and finishers (NPC, object or the item that starts the quest) stand either outdoors or inside an
 # instance. A dungeon visit is a "run": the steps inside one instance sit together at one point of the route.
@@ -40,7 +41,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from qdb import Target, VERB_RE, centroid, dist, f, hsh, ids  # noqa: E402
+from qdb import ESCORT_STEP, Target, VERB_RE, centroid, dist, escort, escort_note, event_only, f, hsh, ids  # noqa: E402
 
 args = [x for x in sys.argv[1:] if not x.startswith("--")]
 T = Target(args[0] if args else "ClassicEra")
@@ -123,8 +124,8 @@ def near_any(an, zp):
 
 
 def plain(q):
-    """Not a class, profession, reputation, repeatable or escort quest."""
-    return not ((f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or (f(q, 26) or 0) == 2)
+    """Not a class, profession, reputation or repeatable quest, nor a scripted event (escorts are fine)."""
+    return not ((f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or event_only(q))
 
 
 # Guides with aligned source lines; anchors = every located step every character of the faction takes.
@@ -299,7 +300,9 @@ for fac in ("Alliance", "Horde"):
             c = t = None
             if not run and p["fin_in"]:
                 run = "new"  # the finisher is inside: go in right after the pickup
-            if p["kind"] == "outdoor":
+            if escort(q) and p["kind"] != "dungeon":
+                c = a  # an escort starts at the giver
+            elif p["kind"] == "outdoor":
                 c = next(((gid, an[0]) for gid, an in ahead(*a) if near_any(an, p["obj"])), None)
                 if not c:
                     WHY[(fac, qid)] = "objectives not visited after the pickup"
@@ -351,7 +354,12 @@ for fac in ("Alliance", "Horde"):
                     flags.append("faction=" + fac)
                 if verb != "accept" and gid != a[0]:
                     flags.append("optional")
-                gg["inserts"].append((ln, k, "%s %d %s [%s]" % (verb, qid, q[0], "; ".join(flags)), fac, qid))
+                txt = "%s %d %s [%s]" % (verb, qid, q[0], "; ".join(flags))
+                if escort(q) and verb == "accept":
+                    gg["inserts"].append((ln, k - 0.0005, escort_note(q, flags), fac, qid))
+                if escort(q) and verb == "complete":
+                    txt += " | " + ESCORT_STEP
+                gg["inserts"].append((ln, k, txt, fac, qid))
             if p["kind"] == "dungeon" and not p["giv_in"]:
                 mine[a[0]]["added"] += 1
             done[qid] = [t]

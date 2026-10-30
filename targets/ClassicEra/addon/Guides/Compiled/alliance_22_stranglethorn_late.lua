@@ -18,6 +18,7 @@ ns.Guides:Register({
     {"accept",q=587,title="Up to Snuff",npc="Deeg",z=33,x=26.9,y=77.4,v=1},
     {"accept",q=196,title="Raptor Mastery",npc="Hemet Nesingwary",z=33,x=35.7,y=10.8,v=1},
     {"accept",q=193,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,hcSkip=true,elite=true,group=true,v=1},
+    {"turnin",q=188,title="Tiger Mastery",npc="Ajeck Rouack",z=33,x=35.6,y=10.6,optional=true,v=1},
     {"complete",q=628,title="Excelsior",hcSkip=true,elite=true,group=true,v=1},
     {"accept",q=207,title="Kurzen's Mystery",npc="Brother Nimetz",z=33,x=37.8,y=3.6,v=1},
     {"accept",q=329,title="The Spy Revealed!",npc="Bookie Herod's Strongbox",z=33,x=49.6,y=7.6,v=1},

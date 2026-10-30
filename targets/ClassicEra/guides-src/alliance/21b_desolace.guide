@@ -52,6 +52,18 @@ turnin 1456 The Karnitol Shipwreck | Nijel's Point.
 accept 1457 The Karnitol Shipwreck | Turned in at Ironforge; keep it for the trip to the Badlands.
 accept Bone Collector | Bibbly F'utzbuckle at Kormek's Hut.
 accept Kodo Roundup | Smeed Scrabblescrew at the caravan camp.
+note The next quest, Gizelton Caravan, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5943 Gizelton Caravan
+complete 5943 Gizelton Caravan | Escort: stay close; it fails if the NPC dies.
+note The next quest, Bodyguard for Hire, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5821 Bodyguard for Hire
+complete 5821 Bodyguard for Hire | Escort: stay close; it fails if the NPC dies.
+note The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.
+accept 6132 Get Me Out of Here!
+complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
+turnin 5943 Gizelton Caravan
+turnin 5821 Bodyguard for Hire
+turnin 6132 Get Me Out of Here!
 turnin 1382 Strange Alliance
 complete Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
 complete Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.

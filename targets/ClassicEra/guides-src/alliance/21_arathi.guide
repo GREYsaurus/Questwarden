@@ -29,8 +29,12 @@ complete Northfold Manor | Syndicate at Northfold Manor, north-west.
 turnin Northfold Manor
 turnin 657 Hints of a New Plague?
 accept Stromgarde Badges
+note The next quest, Hints of a New Plague?, is an escort: pick it up only when you are ready to follow the NPC.
+accept 660 Hints of a New Plague?
+complete 660 Hints of a New Plague? | Escort: stay close; it fails if the NPC dies.
 complete Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
 turnin Stromgarde Badges
+turnin 660 Hints of a New Plague?
 complete Wanted!  Marez Cowl [elite; group=3; optional] | Marez's Head drops from Marez Cowl.
 complete Wanted!  Otto and Falconcrest [elite; group=3; optional] | Otto's Head drops from Otto. Falconcrest's Head drops from Lord Falconcrest.
 turnin Wanted!  Marez Cowl [optional]

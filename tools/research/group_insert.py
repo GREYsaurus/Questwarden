@@ -4,7 +4,8 @@
 #
 # The solo tools (quest_insert, chain_insert, zone_guide) leave these out. Here, per guide, quests no guide
 # uses yet that start and end in the guide's zone (NPC or object), are open to the guide's faction, have quest
-# XP, are not class/profession/reputation/repeatable/escort quests, not excluded, with prerequisites already
+# XP, are not class/profession/reputation/repeatable/scripted-event quests (escorts are fine, with a note
+# before the pickup), not excluded, with prerequisites already
 # done earlier, and whose objectives are either
 #   elite   - outdoors in the zone, with at least one hostile elite target (or an item only elites drop):
 #             every step gets [elite; group; hc=skip], so the default route and Hardcore leave it out
@@ -24,7 +25,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from qdb import Target, VERB_RE, centroid, dist, f, hsh, ids  # noqa: E402
+from qdb import ESCORT_STEP, Target, VERB_RE, centroid, dist, escort, escort_note, event_only, f, hsh, ids  # noqa: E402
 
 args = [x for x in sys.argv[1:] if not x.startswith("--")]
 T = Target(args[0] if args else "ClassicEra")
@@ -129,7 +130,7 @@ for gid, g in sorted(T.guides.items(), key=lambda kv: kv[1]["min"]):
         races = f(q, 4) or 0
         if races and not (races & MASK[g["faction"]]):
             continue
-        if (f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or (f(q, 26) or 0) == 2:
+        if (f(q, 5) or 0) or f(q, 22) or f(q, 23) or ((f(q, 19) or 0) & 1) or event_only(q):
             continue
         req, lvl = f(q, 2) or 0, f(q, 3) or 0
         if req > g["max"] + 1 or lvl < g["min"] - 2 or lvl > 60:
@@ -192,8 +193,16 @@ for gid, g in sorted(T.guides.items(), key=lambda kv: kv[1]["min"]):
             ic = it_
             fl = "[dungeon=%s%s]" % (kind.split(":", 1)[1], "; " + flag if flag else "")
         name = q[0]
-        inserts.append((ia, 0, ("accept %d %s %s" % (qid, name, fl)).rstrip()))
-        inserts.append((ic, 1, ("complete %d %s %s" % (qid, name, fl)).rstrip()))
+        if escort(q) and kind == "elite":  # one escort at a time, from the giver: note, accept, escort
+            k = 0.5 + len(inserts) * 1e-4
+            inserts.append((ia, k, escort_note(q, fl.strip("[]").split("; "))))
+            inserts.append((ia, k + 1e-5, ("accept %d %s %s" % (qid, name, fl)).rstrip()))
+            inserts.append((ia, k + 2e-5, ("complete %d %s %s | %s" % (qid, name, fl, ESCORT_STEP))))
+        else:
+            if escort(q):
+                inserts.append((ia, len(inserts) * 1e-4, escort_note(q, fl.strip("[]").split("; "))))
+            inserts.append((ia, len(inserts) * 1e-4, ("accept %d %s %s" % (qid, name, fl)).rstrip()))
+            inserts.append((ic, 1, ("complete %d %s %s" % (qid, name, fl)).rstrip() + (" | " + ESCORT_STEP if escort(q) else "")))
         inserts.append((it_, 2, ("turnin %d %s %s" % (qid, name, fl)).rstrip()))
         done_here[qid] = it_
         used.add(qid)

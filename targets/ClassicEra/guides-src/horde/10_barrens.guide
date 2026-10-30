@@ -131,6 +131,10 @@ accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skip
 accept Raptor Horns | Mebok Mizzyrix.
 turnin Chen's Empty Keg [optional] | Brewmaster Drohn.
 accept 891 The Guns of Northwatch
+note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
+accept 898 Free From the Hold
+complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.
+turnin 898 Free From the Hold
 complete 891 The Guns of Northwatch
 turnin 891 The Guns of Northwatch
 accept 821 Chen's Empty Keg

@@ -4,7 +4,8 @@
 #
 # For each guide of a target, takes the quests from docs/generated/<Target>/quest-candidates.csv that:
 #   - are started by an NPC that stands in the guide's zone (not an item or object),
-#   - are not escorts, not repeatable, not class quests,
+#   - are not scripted events, not repeatable, not class quests (escorts are fine: a note before the
+#     accept says the next quest is an escort, and the complete step follows the accept),
 #   - have at least one objective location (or the finisher) in the zone,
 #   - have no elite, rare-elite or boss among their kill objectives,
 #   - have every prerequisite turned in earlier in this guide, or in a guide of the same faction that
@@ -34,6 +35,9 @@ MAXPER = 999
 for i, a in enumerate(sys.argv):
     if a == "--max-per-guide":
         MAXPER = int(sys.argv[i + 1])
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from qdb import ESCORT_STEP, escort, escort_note  # noqa: E402
+
 tdir = os.path.join(ROOT, "targets", target)
 qdir = os.path.join(tdir, "addon", "Database", "Questie")
 
@@ -281,7 +285,7 @@ for gid, g in sorted(comp.items(), key=lambda kv: kv[1]["min"]):
           if qid in taken:
               continue
           q = Q.get(qid)
-          if not q or c["escort"] or str(qid) in EXCLUDE or (c["start"] != "npc" and not [o for o in ids(f(q, 7)) if obj_pts(o, zone)]):
+          if not q or (c["escort"] and not escort(q)) or str(qid) in EXCLUDE or (c["start"] != "npc" and not [o for o in ids(f(q, 7)) if obj_pts(o, zone)]):
               WHY["escort/item-start/excluded"] = WHY.get("escort/item-start/excluded", 0) + 1; continue
           if (f(q, 19) or 0) & 1:  # repeatable
               WHY["repeatable"] = WHY.get("repeatable", 0) + 1; continue
@@ -342,7 +346,7 @@ for gid, g in sorted(comp.items(), key=lambda kv: kv[1]["min"]):
           if not ok_pre:
               WHY["prerequisite not earlier"] = WHY.get("prerequisite not earlier", 0) + 1; continue
           after_a = [a for a in anchors if a[0] >= ia]
-          ic = min(after_a, key=lambda a: dist(a[1], opos))[0] if opos else ia
+          ic = min(after_a, key=lambda a: dist(a[1], opos))[0] if opos and not escort(q) else ia
           after_c = [a for a in anchors if a[0] >= ic]
           it_ = min(after_c, key=lambda a: dist(a[1], epos))[0]
           title = q[0].replace('"', "'")
@@ -353,8 +357,14 @@ for gid, g in sorted(comp.items(), key=lambda kv: kv[1]["min"]):
                   flag = " [faction=Alliance]"
               elif races and not (races & 77):
                   flag = " [faction=Horde]"
-          inserts.append((ia, 0, "accept %d %s%s" % (qid, q[0], flag)))
-          if obj:
+          if escort(q):  # note, accept and the escort itself together, after the other pickups here
+              k = 0.5 + len(inserts) * 1e-4  # one escort at a time: note, accept, escort
+              inserts.append((ia, k, escort_note(q, [flag.strip(" []")])))
+              inserts.append((ia, k + 1e-5, "accept %d %s%s" % (qid, q[0], flag)))
+              inserts.append((ia, k + 2e-5, "complete %d %s%s | %s" % (qid, q[0], flag, ESCORT_STEP)))
+          else:
+              inserts.append((ia, 0, "accept %d %s%s" % (qid, q[0], flag)))
+          if obj and not escort(q):
               inserts.append((ic, 1, "complete %d %s%s" % (qid, q[0], flag)))
           inserts.append((it_, 2, "turnin %d %s%s" % (qid, q[0], flag)))
           done_before[qid] = it_

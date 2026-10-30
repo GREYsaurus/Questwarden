@@ -23,6 +23,7 @@ accept 209 Skullsplitter Tusks
 accept 587 Up to Snuff
 accept 196 Raptor Mastery
 accept 193 Panther Mastery [elite; group; hc=skip]
+turnin 188 Tiger Mastery [optional]
 complete 628 Excelsior [elite; group; hc=skip]
 accept 207 Kurzen's Mystery
 accept 329 The Spy Revealed!

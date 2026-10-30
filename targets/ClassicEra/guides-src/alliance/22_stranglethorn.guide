@@ -165,7 +165,9 @@ complete 604 The Bloodsail Buccaneers
 turnin 198 Supplies to Private Thorsen
 turnin 328 The Hidden Key
 turnin 192 Panther Mastery
+accept 188 Tiger Mastery
 turnin 604 The Bloodsail Buccaneers
+complete 188 Tiger Mastery
 level 38
 train | Fly to Ironforge/Stormwind to train.
 note Leave the remaining Tiger/Panther/Raptor Mastery chain for your second STV visit or skip it.

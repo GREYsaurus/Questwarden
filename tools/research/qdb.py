@@ -214,3 +214,25 @@ def centroid(pts):
 
 
 VERB_RE = re.compile(r"^(accept|turnin|complete)\s")
+
+# Escorts: quest flag 2 (party-accept: escorts, scripted events, duels) AND escort wording in the quest text.
+# The other flag-2 quests (events, duels, timed tasks) stay out of generated routes.
+ESCORT_RE = re.compile(r"\b(escort|protect|accompany|safely|show .{0,40}the way|ensure .{0,60}(arrive|reach)"
+                       r"|lead .{0,40}(to|back|out)|guide .{0,40}to)\b", re.I)
+ESCORT_STEP = "Escort: stay close; it fails if the NPC dies."
+
+
+def escort(q):
+    return bool(((f(q, 26) or 0) & 2) and ESCORT_RE.search(f(q, 11) or ""))
+
+
+def event_only(q):
+    """Flag-2 quest that is not an escort (generated routes leave these out)."""
+    return (f(q, 26) or 0) == 2 and not escort(q)
+
+
+def escort_note(q, flags=()):
+    """The note line placed right before an escort's accept step."""
+    text = "The next quest, %s, is an escort: pick it up only when you are ready to follow the NPC." % q[0]
+    flags = [x for x in flags if x]
+    return "note [%s] | %s" % ("; ".join(flags), text) if flags else "note " + text

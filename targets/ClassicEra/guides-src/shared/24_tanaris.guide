@@ -52,12 +52,16 @@ turnin WANTED: Andre Firebeard | Security Chief Bilgewhizzle, Steamwheedle Port.
 turnin Pirate Hats Ahoy!
 grind 43 Fire Roc, Scorpid Tail Lasher | Gahz'ridian needs level 43: kill these nearby until you reach it.
 accept Gahz'ridian [optional] | Marvon Rivetseeker, south of Gadgetzan. Needs level 43.
+note The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1560 Tooga's Quest
+complete 1560 Tooga's Quest | Escort: stay close; it fails if the NPC dies.
 complete 2873 Stoley's Shipment
 complete Gahz'ridian [optional] | Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.
 turnin Gahz'ridian [optional]
 accept The Thirsty Goblin [optional] | Marin Noggenfogger, Gadgetzan. Needs level 44.
 accept 3042 Troll Temper [dungeon=Zul'Farrak]
 turnin 2873 Stoley's Shipment
+turnin 1560 Tooga's Quest
 complete The Thirsty Goblin [optional] | Laden Dew Glands from Thistleshrub Dew Collectors in the south-west of Tanaris.
 turnin The Thirsty Goblin [optional]
 complete 2768 Divino-matic Rod [dungeon=Zul'Farrak]

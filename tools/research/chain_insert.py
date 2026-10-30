@@ -14,6 +14,8 @@
 # done, or a pickup held across more than MAX_SPAN guides) ends the chain there.
 # Steps in a different guide from their accept are [optional], so routes that skipped the pickup
 # guide skip them too. Shared guides get [faction=...]. Excluded quests: quest_exclude.json.
+# Escorts are placed like any member, with a note before the accept saying the next quest is an escort and
+# the complete step right after the accept (the escort starts at the giver); other scripted events are left out.
 #
 # Writes guide sources (our own content). Run guides + routes afterwards; the route audit is the judge.
 # Usage: python tools/research/chain_insert.py ClassicEra [--dry-run] [--min-xp N]
@@ -23,7 +25,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from qdb import ROOT, Target, VERB_RE, centroid, dist, f, hsh, ids  # noqa: E402
+from qdb import ESCORT_STEP, ROOT, Target, VERB_RE, centroid, dist, escort, escort_note, event_only, f, hsh, ids  # noqa: E402
 
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 T = Target(args[0] if args else "ClassicEra")
@@ -181,8 +183,8 @@ for fac in ("Alliance", "Horde"):
             races = f(q, 4) or 0
             if races and not (races & MASK[fac]):
                 break
-            if (f(q, 5) or 0) or ((f(q, 19) or 0) & 1) or f(q, 23) or (f(q, 26) or 0) == 2:
-                why("class/repeatable/reputation/escort")
+            if (f(q, 5) or 0) or ((f(q, 19) or 0) & 1) or f(q, 23) or event_only(q):
+                why("class/repeatable/reputation/scripted event")
                 break
             obj = hsh(f(q, 12))
             if any(T.hostile_elite(n) for n in ids(obj.get("c")) + ids(obj.get("k"))):
@@ -199,7 +201,7 @@ for fac in ("Alliance", "Horde"):
                 why("no pickup spot at the right level")
                 break
             c = a
-            if obj:
+            if obj and not escort(q):
                 c = find(place_zone_pts(q, "c"), a, max_seq=a[0] + MAX_SPAN)
                 if not c:
                     why("objectives not on a guide (dungeon or other zone)")
@@ -210,7 +212,7 @@ for fac in ("Alliance", "Horde"):
                 break
             name = q[0]
             for (si, ln), order, verb in ((a, 0, "accept"), (c, 1, "complete"), (t, 2, "turnin")):
-                if verb == "complete" and not obj:
+                if verb == "complete" and not obj and not escort(q):
                     continue
                 g = seq[si]
                 flags = []
@@ -219,6 +221,10 @@ for fac in ("Alliance", "Horde"):
                 if verb != "accept" and si != a[0]:
                     flags.append("optional")
                 txt = "%s %d %s%s" % (verb, m, name, (" [" + "; ".join(flags) + "]") if flags else "")
+                if escort(q) and verb == "accept":
+                    g["inserts"].append((ln, len(g["inserts"]), escort_note(q, flags)))
+                if escort(q) and verb == "complete":
+                    txt += " | " + ESCORT_STEP
                 g["inserts"].append((ln, len(g["inserts"]), txt))
             done[m] = t
             report.append("%s %s: + %d %s (%s XP) accept in %s, turn-in in %s" % (

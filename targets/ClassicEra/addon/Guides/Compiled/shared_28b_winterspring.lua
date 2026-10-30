@@ -45,6 +45,7 @@ ns.Guides:Register({
     {"turnin",q=5055,title="Brumeran of the Chillwind",npc="Storm Shadowhoof",z=618,x=61.9,y=38.4,text="Storm Shadowhoof, Everlook.",faction="Horde",v=1},
     {"turnin",q=4809,title="Chillwind Horns",npc="Felnok Steelspring",z=618,x=61.6,y=38.6,faction="Alliance",v=1},
     {"turnin",q=977,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker.",v=1},
+    {"accept",q=4810,title="Return to Tinkee",npc="Felnok Steelspring",z=618,x=61.6,y=38.6,faction="Alliance",v=1},
     {"turnin",q=4864,title="Enraged Wildkin",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,text="Jaron Stoneshaper at the Ruins of Kel'Theril.",faction="Alliance",v=1},
     {"accept",q=5163,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,faction="Alliance",v=1},
     {"accept",q=5163,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,faction="Horde",v=1},

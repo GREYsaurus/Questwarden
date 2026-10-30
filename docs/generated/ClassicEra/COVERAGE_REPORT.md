@@ -8,15 +8,15 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 48 (48 Azeroth) |
-| Guide steps | 4393 |
-| Quest steps (accept/complete/turn-in) | 3734 |
-| Distinct quests referenced | 1261 |
-| Steps with database-derived coordinates | 3001 |
+| Guide steps | 4442 |
+| Quest steps (accept/complete/turn-in) | 3772 |
+| Distinct quests referenced | 1271 |
+| Steps with database-derived coordinates | 3027 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 71 (see docs/generated/ClassicEra/guide-warnings.log) |
+| Compiler warnings | 72 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)
 
@@ -71,7 +71,7 @@ Each race/class combination is followed from its racial start guide through the 
 |---|---|---|---|---|---|---|
 | Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 194 | 66 | 12 |
 | Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 133 | 46 | 3 |
-| Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 183 | 64 | 14 |
+| Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 187 | 65 | 14 |
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 224 | 71 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
 | Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 132 | 44 | 3 |
@@ -79,31 +79,31 @@ Each race/class combination is followed from its racial start guide through the 
 | Loch Modan | Alliance | 11-17 | Loch Modan | 96 | 26 | 8 |
 | Silverpine Forest (The Sepulcher) | Horde | 11-17 | Silverpine Forest | 83 | 30 | 2 |
 | Westfall | Alliance | 12-15 | Westfall | 80 | 27 | 17 |
-| The Barrens (Crossroads) | Horde | 13-22 | The Barrens | 315 | 105 | 77 |
+| The Barrens (Crossroads) | Horde | 13-22 | The Barrens | 319 | 106 | 77 |
 | Redridge Mountains | Alliance | 16-20 | Redridge Mountains | 97 | 31 | 21 |
 | Ashenvale | Alliance | 19-24 | Ashenvale | 81 | 24 | 21 |
 | Duskwood | Alliance | 20-25 | Duskwood | 188 | 65 | 58 |
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 22-24 | Stonetalon Mountains | 73 | 28 | 3 |
-| Ashenvale (return, 25-31) | Alliance | 24-25 | Ashenvale | 23 | 8 | 0 |
+| Ashenvale (return, 25-31) | Alliance | 24-25 | Ashenvale | 27 | 9 | 0 |
 | Wetlands | Alliance | 24-29 | Wetlands | 114 | 40 | 18 |
 | Ashenvale (Splintertree Post) | Horde | 24-27 | Ashenvale | 60 | 18 | 9 |
 | Hillsbrad Foothills (Tarren Mill) | Horde | 27-30 | Hillsbrad Foothills | 53 | 14 | 7 |
 | Hillsbrad Foothills (Southshore) | Alliance | 29-31 | Hillsbrad Foothills | 72 | 27 | 7 |
-| Arathi Highlands (Refuge Pointe) | Alliance | 30-33 | Arathi Highlands | 41 | 10 | 6 |
+| Arathi Highlands (Refuge Pointe) | Alliance | 30-33 | Arathi Highlands | 45 | 11 | 6 |
 | Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 130 | 41 | 49 |
-| Desolace (Ghost Walker Post and Shadowprey) | Horde | 32-35 | Desolace | 46 | 12 | 1 |
-| Desolace (Nijel's Point) | Alliance | 33-36 | Desolace | 72 | 22 | 3 |
+| Desolace (Ghost Walker Post and Shadowprey) | Horde | 32-35 | Desolace | 54 | 14 | 1 |
+| Desolace (Nijel's Point) | Alliance | 33-36 | Desolace | 84 | 25 | 3 |
 | Arathi Highlands (Hammerfall) | Horde | 35-36 | Arathi Highlands | 56 | 15 | 3 |
 | Badlands (Kargath) | Horde | 35-38 | Badlands | 40 | 8 | 0 |
-| Stranglethorn Vale | Alliance | 36-38 | Stranglethorn Vale | 168 | 60 | 16 |
-| Stranglethorn Vale (return, 38-45) | Alliance | 38-39 | Stranglethorn Vale | 45 | 16 | 12 |
+| Stranglethorn Vale | Alliance | 36-38 | Stranglethorn Vale | 170 | 61 | 16 |
+| Stranglethorn Vale (return, 38-45) | Alliance | 38-39 | Stranglethorn Vale | 46 | 17 | 13 |
 | Badlands | Alliance | 38-40 | Badlands | 56 | 17 | 4 |
 | Stranglethorn Vale (Grom'gol) | Horde | 38-40 | Stranglethorn Vale | 137 | 44 | 1 |
 | Stranglethorn Vale (return, 39-45) | Horde | 39-40 | Stranglethorn Vale | 19 | 6 | 0 |
-| Swamp of Sorrows (Stonard) | Horde | 39-40 | Swamp of Sorrows | 38 | 9 | 3 |
+| Swamp of Sorrows (Stonard) | Horde | 39-40 | Swamp of Sorrows | 42 | 10 | 3 |
 | Dustwallow Marsh (Theramore) | Alliance | 40-41 | Dustwallow Marsh | 57 | 17 | 3 |
 | Dustwallow Marsh (Brackenwall Village) | Horde | 40-41 | Dustwallow Marsh | 54 | 16 | 2 |
-| Tanaris (Gadgetzan) | Both | 41-44 | Tanaris | 68 | 18 | 9 |
+| Tanaris (Gadgetzan) | Both | 41-44 | Tanaris | 72 | 19 | 9 |
 | Feralas (Feathermoon Stronghold) | Alliance | 44-46 | Feralas | 72 | 23 | 2 |
 | Feralas (Camp Mojache) | Horde | 44-46 | Feralas | 54 | 14 | 0 |
 | The Hinterlands (Aerie Peak) | Alliance | 46-48 | The Hinterlands | 28 | 5 | 0 |
@@ -112,8 +112,8 @@ Each race/class combination is followed from its racial start guide through the 
 | Un'Goro Crater | Both | 49-51 | Un'Goro Crater | 68 | 19 | 1 |
 | Felwood (Talonbranch Glade) | Alliance | 51-53 | Felwood | 41 | 11 | 0 |
 | Felwood (Bloodvenom Post) | Horde | 51-53 | Felwood | 44 | 12 | 0 |
-| Winterspring (Everlook) | Both | 53-55 | Winterspring | 60 | 19 | 1 |
-| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 76 | 25 | 1 |
+| Winterspring (Everlook) | Both | 53-55 | Winterspring | 61 | 20 | 1 |
+| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 77 | 26 | 2 |
 | Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 92 | 31 | 3 |
 | Western Plaguelands (The Bulwark) | Horde | 55-57 | Western Plaguelands | 69 | 23 | 3 |
 | Eastern Plaguelands (Light's Hope) | Both | 57-58 | Eastern Plaguelands | 74 | 19 | 1 |
