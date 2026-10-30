@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 22 |
 | Level-gated pickups | 12 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 433 |
+| Hub revisits (all guides) | 434 |
 
 ## Per guide
 
@@ -27,7 +27,7 @@ No baseline file found.
 | A_Ashenvale | 81 | 24 | 252 | 352 | 13 | 0 | 0 | 0 | 0 | 1 |
 | A_Ashenvale_Late | 23 | 8 | 304 | 304 | 6 | 0 | 4 | 0 | 0 | 0 |
 | A_Badlands | 56 | 17 | 128 | 228 | 5 | 0 | 0 | 0 | 0 | 0 |
-| A_BurningSteppes | 63 | 20 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 16 |
+| A_BurningSteppes | 76 | 25 | 194 | 319 | 6 | 0 | 0 | 0 | 3 | 29 |
 | A_Darkshore | 203 | 58 | 438 | 539 | 17 | 0 | 0 | 0 | 5 | 2 |
 | A_Desolace | 72 | 22 | 410 | 435 | 7 | 0 | 0 | 0 | 1 | 0 |
 | A_Duskwood | 188 | 65 | 593 | 1057 | 26 | 0 | 1 | 0 | 1 | 11 |
@@ -52,7 +52,7 @@ No baseline file found.
 | Both_UngoroCrater | 68 | 19 | 497 | 493 | 10 | 0 | 0 | 0 | 3 | 1 |
 | Both_Winterspring | 60 | 19 | 242 | 192 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_Arathi | 56 | 15 | 215 | 172 | 3 | 0 | 0 | 0 | 0 | 3 |
-| H_Ashenvale | 58 | 17 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 5 |
+| H_Ashenvale | 60 | 18 | 259 | 259 | 6 | 0 | 0 | 0 | 2 | 7 |
 | H_Badlands | 40 | 8 | 167 | 167 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_Barrens | 315 | 105 | 563 | 818 | 33 | 5 | 0 | 0 | 2 | 7 |
 | H_Desolace | 46 | 12 | 268 | 268 | 5 | 0 | 0 | 0 | 0 | 0 |
@@ -68,7 +68,7 @@ No baseline file found.
 | H_Stranglethorn_Late | 19 | 6 | 205 | 205 | 3 | 0 | 0 | 0 | 0 | 0 |
 | H_SwampOfSorrows | 38 | 9 | 210 | 188 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |
-| H_ThousandNeedles | 129 | 40 | 287 | 616 | 11 | 0 | 0 | 0 | 4 | 6 |
+| H_ThousandNeedles | 130 | 41 | 330 | 659 | 12 | 0 | 0 | 0 | 4 | 7 |
 | H_Undead_Tirisfal | 132 | 44 | 166 | 222 | 11 | 0 | 0 | 0 | 0 | 0 |
 | H_WesternPlaguelands | 69 | 23 | 73 | 298 | 5 | 0 | 0 | 0 | 1 | 3 |
 

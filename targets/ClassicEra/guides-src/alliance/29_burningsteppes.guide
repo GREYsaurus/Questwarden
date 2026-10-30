@@ -51,13 +51,26 @@ accept 4808 Felnok Steelspring
 complete 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
 complete 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
 complete 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
+accept 5001 Bijou's Belongings [dungeon=Blackrock Spire]
+complete 5001 Bijou's Belongings [dungeon=Blackrock Spire]
+turnin 5001 Bijou's Belongings [dungeon=Blackrock Spire]
+accept 5002 Message to Maxwell [dungeon=Blackrock Spire]
+accept 5089 General Drakkisath's Command [dungeon=Blackrock Spire]
 turnin 4123 The Heart of the Mountain [dungeon=Blackrock Depths]
 turnin 4136 Ribbly Screwspigot [dungeon=Blackrock Depths]
 turnin 4862 En-Ay-Es-Tee-Why [dungeon=Blackrock Spire]
 turnin 4022 A Taste of Flame
 accept 4224 The True Masters | Escort quest: start it when you are ready to follow.
+turnin 5002 Message to Maxwell [dungeon=Blackrock Spire]
+accept 5081 Maxwell's Mission [dungeon=Blackrock Spire]
+turnin 5089 General Drakkisath's Command [dungeon=Blackrock Spire]
+accept 5102 General Drakkisath's Demise [dungeon=Blackrock Spire]
 complete 4224 The True Masters | Escort: stay close; it fails if the NPC dies.
 turnin 4224 The True Masters
+complete 5081 Maxwell's Mission [dungeon=Blackrock Spire]
+turnin 5081 Maxwell's Mission [dungeon=Blackrock Spire]
+complete 5102 General Drakkisath's Demise [dungeon=Blackrock Spire]
+turnin 5102 General Drakkisath's Demise [dungeon=Blackrock Spire]
 complete 4286 The Good Stuff [dungeon=Blackrock Depths]
 complete 4701 Put Her Down [dungeon=Blackrock Spire]
 turnin 4286 The Good Stuff [dungeon=Blackrock Depths]

@@ -54,6 +54,8 @@ ns.Guides:Register({
     {"accept",q=6921,title="Amongst the Ruins",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,text="Je'neu Sancrea. Needs the Blackfathom Deeps dungeon.",dungeon="Blackfathom Deeps",v=1},
     {"turnin",q=6563,title="The Essence of Aku'Mai",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,v=1},
     {"complete",q=6921,title="Amongst the Ruins",text="The Fathom Stone is inside the Blackfathom Deeps instance (entrance at the Zoram Strand).",dungeon="Blackfathom Deeps",v=1},
+    {"accept",q=6561,title="Blackfathom Villainy",npc="Argent Guard Thaelrid",dungeon="Blackfathom Deeps",v=1},
+    {"complete",q=6561,title="Blackfathom Villainy",dungeon="Blackfathom Deeps",v=1},
     {"turnin",q=6921,title="Amongst the Ruins",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,dungeon="Blackfathom Deeps",v=1},
     {"level",level=27,v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},

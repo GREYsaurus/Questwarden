@@ -58,7 +58,13 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - Covered: Ragefire Chasm (Orgrimmar, the Undercity), the Deadmines and the Stockade (Stormwind), Gnomeregan and Scarlet Monastery (Ironforge, Thunder Bluff), Razorfen Kraul and Scholomance.
   - **Where a quest lands:** at a city or neighbouring-zone visit the route already makes. A visit counts only if every character on that route makes it, so steps limited to a class or race, optional steps and Hardcore-only steps don't count. Guides follow their `@next` paths, so a pickup in one race's start zone is never turned in on another race's path.
   - **Same opt-in rule** as the other dungeon quests (*Include Dungeon Quests*).
-  - **Not placed:** 63 dungeon quests. Their giver stands inside the instance, or the route never visits the giver, or their lead-in has objectives of its own (the Defias Brotherhood chain, for example).
+- **Mixed dungeon chains** (same tool): 4 more dungeon quests and 2 lead-ins, about 39k XP.
+  - **What the tool now plans:** the whole chain behind a dungeon quest. That covers outdoor lead-ins, talk-only steps, quests that start from an item, and follow-ups handed out inside the instance. A dungeon visit is one "run": the steps inside an instance stay together, and quests given inside it are picked up during a run the route already makes.
+  - **Placed:** Alliance Blackrock Spire (*Bijou's Belongings*, *Message to Maxwell*, *Maxwell's Mission*, *General Drakkisath's Command* and *Demise*) and Horde *Blackfathom Villainy*.
+  - **Still missing:** 59 dungeon quests, each with its reason in `docs/generated/ClassicEra/dungeon-unplaced.csv`.
+    - 24 have a pickup the route never reaches at the needed level: Dire Maul quests in Feralas, Maraudon quests in Desolace, Blackrock quests in the Badlands.
+    - 34 have a lead-in that is an escort (excluded by rule), has no spawn data for its objective (Overmaster Pyron, the Screecher Spirits), or is itself blocked.
+    - The rest are given inside an instance no route enters at that level.
 
 Tested offline: ClassicEra build all passes (80 route walks, Speed and Hardcore: 0 errors, quest log peak 20/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 

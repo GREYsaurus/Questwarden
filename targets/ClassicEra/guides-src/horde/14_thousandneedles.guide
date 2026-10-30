@@ -65,6 +65,7 @@ turnin 4770 Homeward Bound [optional]
 turnin 4881 Assassination Plot [optional]
 accept 4966 Protect Kanati Greycloud [optional] | Escort quest: start it when you are ready to follow.
 turnin 1131 Steelsnap | Turned in at Thunder Bluff.
+turnin 6561 Blackfathom Villainy [dungeon=Blackfathom Deeps; optional]
 accept 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
 accept 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
 complete 4904 Free at Last [optional] | Escort: stay close; it fails if the NPC dies.

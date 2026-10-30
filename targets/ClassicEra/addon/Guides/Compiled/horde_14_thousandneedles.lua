@@ -63,6 +63,7 @@ ns.Guides:Register({
     {"turnin",q=4881,title="Assassination Plot",npc="Kanati Greycloud",z=400,x=21.2,y=32.1,optional=true,v=1},
     {"accept",q=4966,title="Protect Kanati Greycloud",npc="Kanati Greycloud",z=400,x=21.2,y=32.1,text="Escort quest: start it when you are ready to follow.",optional=true,v=1},
     {"turnin",q=1131,title="Steelsnap",npc="Melor Stonehoof",z=1638,x=61.5,y=80.9,text="Turned in at Thunder Bluff.",v=1},
+    {"turnin",q=6561,title="Blackfathom Villainy",npc="Bashana Runetotem",z=1638,x=71.1,y=34.2,optional=true,dungeon="Blackfathom Deeps",v=1},
     {"accept",q=1049,title="Compendium of the Fallen",npc="Sage Truthseeker",z=1638,x=34.4,y=46.9,dungeon="Scarlet Monastery",v=1},
     {"accept",q=1102,title="A Vengeful Fate",npc="Auld Stonespire",z=1638,x=36,y=59.9,dungeon="Razorfen Kraul",v=1},
     {"complete",q=4904,title="Free at Last",text="Escort: stay close; it fails if the NPC dies.",optional=true,v=1},

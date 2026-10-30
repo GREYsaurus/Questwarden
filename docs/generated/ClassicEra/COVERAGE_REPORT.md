@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 48 (48 Azeroth) |
-| Guide steps | 4377 |
-| Quest steps (accept/complete/turn-in) | 3718 |
-| Distinct quests referenced | 1255 |
-| Steps with database-derived coordinates | 2994 |
+| Guide steps | 4393 |
+| Quest steps (accept/complete/turn-in) | 3734 |
+| Distinct quests referenced | 1261 |
+| Steps with database-derived coordinates | 3001 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
@@ -86,11 +86,11 @@ Each race/class combination is followed from its racial start guide through the 
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 22-24 | Stonetalon Mountains | 73 | 28 | 3 |
 | Ashenvale (return, 25-31) | Alliance | 24-25 | Ashenvale | 23 | 8 | 0 |
 | Wetlands | Alliance | 24-29 | Wetlands | 114 | 40 | 18 |
-| Ashenvale (Splintertree Post) | Horde | 24-27 | Ashenvale | 58 | 17 | 9 |
+| Ashenvale (Splintertree Post) | Horde | 24-27 | Ashenvale | 60 | 18 | 9 |
 | Hillsbrad Foothills (Tarren Mill) | Horde | 27-30 | Hillsbrad Foothills | 53 | 14 | 7 |
 | Hillsbrad Foothills (Southshore) | Alliance | 29-31 | Hillsbrad Foothills | 72 | 27 | 7 |
 | Arathi Highlands (Refuge Pointe) | Alliance | 30-33 | Arathi Highlands | 41 | 10 | 6 |
-| Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 129 | 40 | 48 |
+| Thousand Needles (Freewind Post) | Horde | 30-32 | Thousand Needles | 130 | 41 | 49 |
 | Desolace (Ghost Walker Post and Shadowprey) | Horde | 32-35 | Desolace | 46 | 12 | 1 |
 | Desolace (Nijel's Point) | Alliance | 33-36 | Desolace | 72 | 22 | 3 |
 | Arathi Highlands (Hammerfall) | Horde | 35-36 | Arathi Highlands | 56 | 15 | 3 |
@@ -113,7 +113,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Felwood (Talonbranch Glade) | Alliance | 51-53 | Felwood | 41 | 11 | 0 |
 | Felwood (Bloodvenom Post) | Horde | 51-53 | Felwood | 44 | 12 | 0 |
 | Winterspring (Everlook) | Both | 53-55 | Winterspring | 60 | 19 | 1 |
-| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 63 | 20 | 1 |
+| Burning Steppes (Morgan's Vigil) | Alliance | 55-56 | Burning Steppes | 76 | 25 | 1 |
 | Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 92 | 31 | 3 |
 | Western Plaguelands (The Bulwark) | Horde | 55-57 | Western Plaguelands | 69 | 23 | 3 |
 | Eastern Plaguelands (Light's Hope) | Both | 57-58 | Eastern Plaguelands | 74 | 19 | 1 |

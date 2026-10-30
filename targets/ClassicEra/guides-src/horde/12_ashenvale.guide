@@ -56,6 +56,8 @@ complete 6563 The Essence of Aku'Mai
 accept 6921 Amongst the Ruins [dungeon=Blackfathom Deeps] | Je'neu Sancrea. Needs the Blackfathom Deeps dungeon.
 turnin 6563 The Essence of Aku'Mai
 complete 6921 Amongst the Ruins [dungeon=Blackfathom Deeps] | The Fathom Stone is inside the Blackfathom Deeps instance (entrance at the Zoram Strand).
+accept 6561 Blackfathom Villainy [dungeon=Blackfathom Deeps]
+complete 6561 Blackfathom Villainy [dungeon=Blackfathom Deeps]
 turnin 6921 Amongst the Ruins [dungeon=Blackfathom Deeps]
 level 27
 train
