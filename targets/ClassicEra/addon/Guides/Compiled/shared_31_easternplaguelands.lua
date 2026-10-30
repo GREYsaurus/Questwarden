@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="Both_EasternPlaguelands", name="Eastern Plaguelands (Light's Hope)", faction="Both", chapter="Azeroth",
-  minLevel=56, maxLevel=58, zone=139, zoneName="Eastern Plaguelands",
+  minLevel=57, maxLevel=58, zone=139, zoneName="Eastern Plaguelands",
   desc="Tirion Fordring's hut on the western edge, Augustus at Terrordale, Light's Hope Chapel and the plaguehounds, then Darrowshire and the Redpath family. Horde also work for Nathanos Blightcaller at Marris Stead. Ends at 58 for the Dark Portal.",
   next={},
   steps={
@@ -51,8 +51,14 @@ ns.Guides:Register({
     {"complete",q=6024,title="Hameya's Plea",faction="Horde",v=1},
     {"complete",q=6133,title="The Ranger Lord's Behest",faction="Horde",v=1},
     {"turnin",q=6133,title="The Ranger Lord's Behest",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,faction="Horde",v=1},
+    {"accept",q=5742,title="Redemption",npc="Tirion Fordring",z=139,x=7.6,y=43.7,faction="Alliance",v=1},
+    {"accept",q=5742,title="Redemption",npc="Tirion Fordring",z=139,x=7.6,y=43.7,faction="Horde",v=1},
     {"turnin",q=6024,title="Hameya's Plea",npc="Mound of Dirt",z=139,x=28,y=86.2,faction="Alliance",v=1},
+    {"complete",q=5742,title="Redemption",faction="Alliance",v=1},
+    {"complete",q=5742,title="Redemption",faction="Horde",v=1},
     {"turnin",q=6024,title="Hameya's Plea",npc="Mound of Dirt",z=139,x=28,y=86.2,faction="Horde",v=1},
+    {"turnin",q=5742,title="Redemption",npc="Tirion Fordring",z=139,x=7.6,y=43.7,faction="Alliance",v=1},
+    {"turnin",q=5742,title="Redemption",npc="Tirion Fordring",z=139,x=7.6,y=43.7,faction="Horde",v=1},
     {"level",level=58,v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},

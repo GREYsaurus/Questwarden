@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Westfall", name="Westfall", faction="Alliance", chapter="Azeroth",
-  minLevel=10, maxLevel=16, zone=40, zoneName="Westfall",
+  minLevel=12, maxLevel=15, zone=40, zoneName="Westfall",
   desc="Farms of northern Westfall, Sentinel Hill and the Jangolode Mine, then the coast and the Defias chain up to Moonbrook. Leaves for Redridge at about 15-16.",
   next={{id="A_Redridge"},},
   steps={
@@ -45,6 +45,7 @@ ns.Guides:Register({
     {"complete",q=13,title="The People's Militia",text="Defias Pathstalkers and Highwaymen west of the Jangolode Mine.",v=1},
     {"turnin",q=13,title="The People's Militia",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,v=1},
     {"accept",q=14,title="The People's Militia",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,v=1},
+    {"grind",z=40,x=51.4,y=46.8,text="The Defias Brotherhood needs level 14: kill these nearby until you reach it.",level=14,mobs={"Defias Trapper","Fleshripper"},v=1},
     {"accept",q=65,title="The Defias Brotherhood",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,text="Leads to Lakeshire (Redridge); you will hand it in there.",v=1},
     {"complete",q=14,title="The People's Militia",text="Defias Looters and Pillagers around the Moonbrook area.",v=1},
     {"turnin",q=14,title="The People's Militia",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,v=1},
@@ -60,6 +61,7 @@ ns.Guides:Register({
     {"complete",q=152,title="The Coast Isn't Clear",text="Murlocs along the shore north of the lighthouse.",v=1},
     {"turnin",q=103,title="Keeper of the Flame",npc="Captain Grayson",z=40,x=30,y=86,v=1},
     {"turnin",q=152,title="The Coast Isn't Clear",npc="Captain Grayson",z=40,x=30,y=86,v=1},
+    {"grind",z=40,x=27.2,y=74.4,text="The Coastal Menace needs level 15: kill these nearby until you reach it.",level=15,mobs={"Murloc Oracle","Defias Knuckleduster"},v=1},
     {"accept",q=104,title="The Coastal Menace",npc="Captain Grayson",z=40,x=30,y=86,text="Old Murk-Eye (elite murloc). Skip if solo below level 16.",optional=true,elite=true,group=2,v=1},
     {"complete",q=104,title="The Coastal Menace",optional=true,elite=true,group=2,v=1},
     {"turnin",q=104,title="The Coastal Menace",npc="Captain Grayson",z=40,x=30,y=86,optional=true,v=1},

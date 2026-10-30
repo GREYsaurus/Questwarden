@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_WesternPlaguelands", name="Western Plaguelands (The Bulwark)", faction="Horde", chapter="Azeroth",
-  minLevel=54, maxLevel=58, zone=28, zoneName="Western Plaguelands",
+  minLevel=55, maxLevel=57, zone=28, zoneName="Western Plaguelands",
   desc="The Bulwark: the Scourge cauldron chain, the plagued farms, Andorhal and the wildlife quests. At 58 go straight to the Dark Portal.",
   next={{id="Both_EasternPlaguelands"},},
   steps={

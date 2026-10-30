@@ -156,6 +156,7 @@ ns.Guides:Register({
     {"turnin",q=806,title="Dark Storms",npc="Orgnil Soulscar",z=14,x=52.2,y=43.2,v=1},
     {"accept",q=828,title="Margoz",npc="Orgnil Soulscar",z=14,x=52.2,y=43.2,v=1},
     {"turnin",q=5648,title="Garments of Spirituality",npc="Tai'jin",z=14,x=54.3,y=42.9,classes={"PRIEST"},races={"Troll"},v=1},
+    {"grind",z=14,x=54.8,y=36.6,text="Call of Fire needs level 10: kill these nearby until you reach it.",level=10,mobs={"Armored Scorpid","Makrura Elder"},v=1},
     {"accept",q=2983,title="Call of Fire",npc="Swart",z=14,x=54.4,y=42.6,text="Needs level 10. If you are lower, {name} skips it and moves on.",classes={"SHAMAN"},optional=true,v=1},
     {"accept",q=1506,title="Gan'rul's Summons",npc="Ophek",z=14,x=54.4,y=41.3,text="Needs level 10. If you are lower, {name} skips it and moves on.",classes={"WARLOCK"},races={"Orc"},v=1},
     {"turnin",q=6081,title="Training the Beast",npc="Ormak Grimshot",z=1637,x=66,y=18.5,text="Turned in at Orgrimmar.",classes={"HUNTER"},v=1},

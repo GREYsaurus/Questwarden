@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Dustwallow", name="Dustwallow Marsh (Brackenwall Village)", faction="Horde", chapter="Azeroth",
-  minLevel=37, maxLevel=42, zone=15, zoneName="Dustwallow Marsh",
+  minLevel=40, maxLevel=41, zone=15, zoneName="Dustwallow Marsh",
   desc="Brackenwall Village: the Shady Rest Inn, the black shield and Paval Reethe, the Theramore spies, and the Black Dragonflight in the south.",
   next={{id="Both_Tanaris"},},
   steps={

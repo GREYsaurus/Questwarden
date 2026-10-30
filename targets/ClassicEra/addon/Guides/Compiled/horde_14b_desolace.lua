@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Desolace", name="Desolace (Ghost Walker Post and Shadowprey)", faction="Horde", chapter="Azeroth",
-  minLevel=33, maxLevel=36, zone=405, zoneName="Desolace",
+  minLevel=32, maxLevel=35, zone=405, zoneName="Desolace",
   desc="Ghost Walker Post's Kolkar and satyr quests and the Gizelton kodos in the middle and east, then Shadowprey Village and the naga, Rackmore's treasure and the Burning Blade on the west side.",
   next={{id="H_Arathi"},},
   steps={

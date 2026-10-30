@@ -1,0 +1,50 @@
+# ClassicGuide - Stranglethorn Vale return visit (38-45), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route.
+# GENERATED as a starting point by tools/research/zone_guide.py (quests no other guide uses, in waves);
+# edit freely: it is a normal guide source from here on.
+
+@guide A_Stranglethorn_Late
+@name Stranglethorn Vale (return, 38-45)
+@faction Alliance
+@levels 38-39
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc A second pass through Stranglethorn Vale at 38-45 for the quests the first visit was too low for.
+@next A_Badlands
+
+note Back in Stranglethorn Vale for the higher-level quests.
+# wave 1: pick up
+accept 576 Keep An Eye Out
+accept 578 The Stone of the Tides
+accept 608 The Bloodsail Buccaneers
+accept 209 Skullsplitter Tusks
+accept 587 Up to Snuff
+accept 196 Raptor Mastery
+accept 207 Kurzen's Mystery
+accept 329 The Spy Revealed!
+complete 207 Kurzen's Mystery
+complete 196 Raptor Mastery
+complete 209 Skullsplitter Tusks
+complete 576 Keep An Eye Out
+complete 587 Up to Snuff
+complete 608 The Bloodsail Buccaneers
+turnin 587 Up to Snuff
+turnin 209 Skullsplitter Tusks
+turnin 608 The Bloodsail Buccaneers
+turnin 578 The Stone of the Tides
+turnin 576 Keep An Eye Out
+turnin 196 Raptor Mastery
+turnin 207 Kurzen's Mystery
+turnin 329 The Spy Revealed!
+# wave 2: pick up
+accept 330 Patrol Schedules
+accept 205 Troll Witchery
+accept 601 Water Elementals
+complete 205 Troll Witchery
+complete 601 Water Elementals
+turnin 205 Troll Witchery
+turnin 330 Patrol Schedules
+turnin 601 Water Elementals
+# wave 3: pick up
+accept 331 Report to Doren
+turnin 331 Report to Doren

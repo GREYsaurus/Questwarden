@@ -4,7 +4,7 @@
 @guide A_BurningSteppes
 @name Burning Steppes (Morgan's Vigil)
 @faction Alliance
-@levels 53-56
+@levels 55-56
 @zone Burning Steppes
 @chapter Azeroth
 @desc Morgan's Vigil, the Firegut ogres, the Blackrock orcs and The True Masters chain. Blackrock Depths and Spire quests are optional group content.
@@ -28,9 +28,11 @@ fp Morgan's Vigil
 turnin 4183 The True Masters | Magistrate Solomon in Lakeshire.
 accept 4184 The True Masters
 accept Broodling Essence | Tinkee Steamboil, Flame Crest.
+accept 4022 A Taste of Flame
 complete 4283 FIFTY! YEP!
 complete Broodling Essence | Use the essence collector on broodlings.
 turnin Broodling Essence
+complete 4022 A Taste of Flame
 turnin Reassignment | Major Samuelson, also in Stormwind Keep.
 turnin 4184 The True Masters | Highlord Bolvar Fordragon, Stormwind Keep.
 accept 4185 The True Masters | Escort quest: start it when you are ready to follow.
@@ -41,6 +43,7 @@ accept 4223 The True Masters
 turnin 4223 The True Masters
 turnin 4283 FIFTY! YEP!
 accept 4808 Felnok Steelspring
+turnin 4022 A Taste of Flame
 accept 4224 The True Masters | Escort quest: start it when you are ready to follow.
 complete 4224 The True Masters | Escort: stay close; it fails if the NPC dies.
 turnin 4224 The True Masters

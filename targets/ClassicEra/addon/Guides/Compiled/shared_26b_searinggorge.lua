@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="Both_SearingGorge", name="Searing Gorge (Thorium Point)", faction="Both", chapter="Azeroth",
-  minLevel=47, maxLevel=50, zone=51, zoneName="Searing Gorge",
+  minLevel=48, maxLevel=49, zone=51, zoneName="Searing Gorge",
   desc="Thorium Point's bounty board and Hansel Heavyhands' hunts, then Kalaran Windblade's chain: the Flawless Flame, the Twilight shamans and setting the sentry braziers ablaze. Neutral hub, same route for both factions.",
   next={{id="Both_UngoroCrater"},},
   steps={

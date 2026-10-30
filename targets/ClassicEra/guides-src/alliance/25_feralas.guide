@@ -4,7 +4,7 @@
 @guide A_Feralas
 @name Feralas (Feathermoon Stronghold)
 @faction Alliance
-@levels 43-47
+@levels 44-46
 @zone Feralas
 @chapter Azeroth
 @desc Feathermoon Stronghold, the Hatecrest naga, the missing courier chain and the Grimtotem and gnoll camps.
@@ -51,6 +51,7 @@ accept The Writhing Deep
 complete The Writhing Deep | Inside the Zukk'ash hive at the Writhing Deep.
 turnin The Writhing Deep
 accept Freed from the Hive | Escort quest: start it when you are ready to follow.
+grind 45 Rogue Vale Screecher, Grizzled Ironfur Bear | Zapped Giants needs level 45: kill these nearby until you reach it.
 accept Zapped Giants | Zorbin Fandazzle, the coast.
 complete 2821 The Mark of Quality
 accept Fuel for the Zapping | Needs level 45. If you are lower, {name} skips it and moves on.

@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_LochModan", name="Loch Modan", faction="Alliance", chapter="Azeroth",
-  minLevel=11, maxLevel=18, zone=38, zoneName="Loch Modan",
+  minLevel=11, maxLevel=17, zone=38, zoneName="Loch Modan",
   desc="Thelsamar, the Stonewrought Dam, the Ironband excavation and the eastern farms. Finish with the Dark Threat Looms chain at the dam, then head to Redridge.",
   next={{id="A_Redridge"},},
   steps={
@@ -71,11 +71,6 @@ ns.Guides:Register({
     {"turnin",q=6388,title="Gryth Thurden",npc="Gryth Thurden",z=1537,x=55.5,y=47.7,text="Turned in at Ironforge.",classes={"MAGE"},races={"Gnome"},v=1},
     {"accept",q=6392,title="Return to Brock",npc="Gryth Thurden",z=1537,x=55.5,y=47.7,classes={"WARRIOR","ROGUE"},races={"Dwarf"},optional=true,v=1},
     {"accept",q=6392,title="Return to Brock",npc="Gryth Thurden",z=1537,x=55.5,y=47.7,classes={"WARRIOR","ROGUE","WARLOCK"},races={"Gnome"},optional=true,v=1},
-    {"accept",q=250,title="A Dark Threat Looms",npc="Chief Engineer Hinderweir VII",z=38,x=46,y=13.6,text="Chief Engineer Hinderweir VII on the Stonewrought Dam.",v=1},
-    {"turnin",q=250,title="A Dark Threat Looms",npc="Suspicious Barrel",z=38,x=56,y=13.2,text="The suspicious barrel is on the dam.",v=1},
-    {"accept",q=199,title="A Dark Threat Looms",npc="Suspicious Barrel",z=38,x=56,y=13.2,text="Needs level 16. If you are lower, {name} skips it and moves on.",v=1},
-    {"turnin",q=199,title="A Dark Threat Looms",npc="Chief Engineer Hinderweir VII",z=38,x=46,y=13.6,v=1},
-    {"accept",q=161,title="A Dark Threat Looms",npc="Chief Engineer Hinderweir VII",z=38,x=46,y=13.6,text="Needs level 16. If you are lower, {name} skips it and moves on.",v=1},
     {"turnin",q=1339,title="Mountaineer Stormpike's Task",npc="Mountaineer Stormpike",z=38,x=24.8,y=18.4,text="Mountaineer Stormpike at the Dam.",v=1},
     {"accept",q=1338,title="Stormpike's Order",npc="Mountaineer Stormpike",z=38,x=24.8,y=18.4,classes={"WARRIOR","ROGUE"},races={"Dwarf","NightElf"},v=1},
     {"accept",q=1338,title="Stormpike's Order",npc="Mountaineer Stormpike",z=38,x=24.8,y=18.4,classes={"WARRIOR","ROGUE","WARLOCK"},races={"Human","Gnome"},v=1},
@@ -84,6 +79,7 @@ ns.Guides:Register({
     {"turnin",q=307,title="Filthy Paws",npc="Mountaineer Stormpike",z=38,x=24.8,y=18.4,v=1},
     {"turnin",q=1338,title="Stormpike's Order",npc="Furen Longbeard",z=1519,x=58.1,y=16.5,text="Turned in at Stormwind City.",classes={"WARRIOR","ROGUE"},races={"Dwarf","NightElf"},v=1},
     {"turnin",q=1338,title="Stormpike's Order",npc="Furen Longbeard",z=1519,x=58.1,y=16.5,text="Turned in at Stormwind City.",classes={"WARRIOR","ROGUE","WARLOCK"},races={"Human","Gnome"},v=1},
+    {"grind",z=38,x=36.6,y=25.1,text="Mercenaries needs level 15: kill these nearby until you reach it.",level=15,mobs={"Tunnel Rat Geomancer","Tunnel Rat Surveyor"},v=1},
     {"accept",q=255,title="Mercenaries",npc="Magistrate Bluntnose",z=38,x=34.6,y=44.5,text="Magistrate Bluntnose, Thelsamar.",v=1},
     {"complete",q=255,title="Mercenaries",text="Mo'grosh ogres at the north-east of the loch.",v=1},
     {"turnin",q=255,title="Mercenaries",npc="Magistrate Bluntnose",z=38,x=34.6,y=44.5,v=1},
@@ -97,7 +93,6 @@ ns.Guides:Register({
     {"turnin",q=436,title="Ironband's Excavation",npc="Magmar Fellhew",z=38,x=64.9,y=66.7,v=1},
     {"complete",q=297,title="Gathering Idols",text="Troggs at the excavation site drop Carved Stone Idols.",v=1},
     {"turnin",q=297,title="Gathering Idols",npc="Magmar Fellhew",z=38,x=64.9,y=66.7,v=1},
-    {"turnin",q=161,title="A Dark Threat Looms",npc="Ashlan Stonesmirk",z=11,x=50,y=18.2,text="Ashlan Stonesmirk in the Wetlands. Leave it if you are going straight to Redridge.",optional=true,v=1},
     {"level",text="Finish leftover kills here if you are not 17 yet.",level=17,v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",npc="Dargh Trueaim",z=38,x=82.4,y=62.4,classes={"HUNTER"},v=1},

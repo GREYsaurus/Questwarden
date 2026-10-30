@@ -18,13 +18,11 @@ accept 177 Look To The Stars [optional]
 accept Raven Hill | Elaine Carevin, Darkshire.
 accept Deliveries to Sven
 accept The Hermit
-accept 173 Worgen in the Woods | Needs level 23. If you are lower, {name} skips it and moves on.
 accept 337 An Old History Book [optional]
 fp Darkshire
 accept The Totem of Infliction | Madame Eva.
 accept The Night Watch | Commander Althea Ebonlocke, Darkshire town hall.
 turnin 66 The Legend of Stalvan
-accept 67 The Legend of Stalvan | Needs level 22. If you are lower, {name} skips it and moves on.
 accept Seasoned Wolf Kabobs | Chef Grual.
 bind Darkshire [area=42]
 turnin 1650 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Turned in at Westfall.
@@ -45,11 +43,9 @@ accept Sven's Revenge
 accept Wolves at Our Heels | Lars, next to Sven.
 complete Wolves at Our Heels
 turnin Wolves at Our Heels
-accept 225 The Weathered Grave | Needs level 25. If you are lower, {name} skips it and moves on.
 complete Sven's Revenge | The dirt mound is south of Darkshire's road, near the river.
 turnin The Hermit | Abercrombie's hut, north of Raven Hill.
 accept Supplies from Darkshire
-accept 335 A Noble Brew [optional] | Needs level 25. If you are lower, {name} skips it and moves on.
 turnin Seasoned Wolf Kabobs
 turnin Jitters' Growling Gut | Chef Grual.
 accept Dusky Crab Cakes
@@ -88,6 +84,7 @@ turnin Dusky Crab Cakes
 accept Return to Jitters
 turnin Zombie Juice | Tavernkeep Smitts, Darkshire inn.
 accept Gather Rot Blossoms
+accept 67 The Legend of Stalvan | Needs level 22. If you are lower, {name} skips it and moves on.
 complete Gather Rot Blossoms | Skeletons in Raven Hill Cemetery.
 turnin Gather Rot Blossoms
 accept Juice Delivery
@@ -99,6 +96,7 @@ accept 265 The Shadowy Search Continues [class=Rogue,Priest,Mage,Warlock; race=H
 accept 265 The Shadowy Search Continues [class=Hunter,Rogue,Priest; race=Dwarf; optional]
 accept 265 The Shadowy Search Continues [class=Hunter,Rogue,Priest,Druid; race=Night Elf; optional]
 turnin 67 The Legend of Stalvan
+grind 22 Green Recluse, Lupos | The Legend of Stalvan needs level 22: kill these nearby until you reach it.
 accept 68 The Legend of Stalvan
 turnin 337 An Old History Book [optional] | Turned in at Stormwind City.
 accept 538 Southshore [optional]
@@ -129,7 +127,6 @@ accept 266 Inquire at the Inn [class=Rogue,Mage,Warlock; race=Gnome; optional]
 accept 266 Inquire at the Inn [class=Rogue,Priest,Mage,Warlock; race=Human; optional]
 accept 266 Inquire at the Inn [class=Hunter,Rogue,Priest; race=Dwarf; optional]
 accept 266 Inquire at the Inn [class=Hunter,Rogue,Priest,Druid; race=Night Elf; optional]
-turnin 225 The Weathered Grave
 turnin 251 Translate Abercrombie's Note
 accept 401 Wait for Sirra to Finish
 turnin 401 Wait for Sirra to Finish
@@ -171,8 +168,8 @@ accept 270 The Doomed Fleet [optional]
 turnin 74 The Legend of Stalvan | Turned in at Elwynn Forest.
 accept 75 The Legend of Stalvan
 complete 75 The Legend of Stalvan | A Faded Journal Page: loot Marshal Haggard's Chest.
-complete 335 A Noble Brew [race=Human,Dwarf,Night Elf,Gnome; optional] | Tear of Tilloa: loot Tear of Tilloa. Musquash Root: loot Musquash Root.
 turnin The Totem of Infliction
+accept 173 Worgen in the Woods | Needs level 23. If you are lower, {name} skips it and moves on.
 complete 173 Worgen in the Woods
 turnin 173 Worgen in the Woods
 accept 221 Worgen in the Woods

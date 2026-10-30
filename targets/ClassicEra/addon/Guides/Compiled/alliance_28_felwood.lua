@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Felwood", name="Felwood (Talonbranch Glade)", faction="Alliance", chapter="Azeroth",
-  minLevel=51, maxLevel=54, zone=361, zoneName="Felwood",
+  minLevel=51, maxLevel=53, zone=361, zoneName="Felwood",
   desc="Emerald Sanctuary, Jaedenar, the corrupted moonwells and Talonbranch Glade.",
   next={{id="Both_Winterspring"},},
   steps={

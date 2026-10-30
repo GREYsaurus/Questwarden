@@ -13,7 +13,6 @@
 @next H_Barrens
 
 accept 752 A Humble Task | Chief Hawkwind.
-accept 1519 Call of Earth [class=Shaman] | Seer Ravenfeather, Camp Narache (level 4).
 turnin 752 A Humble Task | Greatmother Hawkwind at the well.
 accept 753 A Humble Task
 accept 747 The Hunt Begins | Grull Hawkwind, Camp Narache.
@@ -42,13 +41,11 @@ accept 3376 Break Sharptusk!
 turnin 750 The Hunt Continues
 accept The Battleboars
 complete The Battleboars | Battleboars in the ravine; Bristleback Belt from Chief Sharptusk Thornmantle's camp.
-complete 1519 Call of Earth [class=Shaman] | Bristleback Shamans in the ravine drop Ritual Salve.
 complete 3376 Break Sharptusk! | Chief Sharptusk Thornmantle's Head drops from Chief Sharptusk Thornmantle.
 accept 781 Attack on Camp Narache
 turnin The Battleboars
 turnin 3376 Break Sharptusk!
 train | Trainers at Camp Narache.
-turnin 1519 Call of Earth [class=Shaman]
 accept 1520 Call of Earth [class=Shaman]
 turnin 1520 Call of Earth [class=Shaman] | Drink the Earth Sapta at Kodo Rock; the Minor Manifestation of Earth appears.
 accept 1521 Call of Earth [class=Shaman]

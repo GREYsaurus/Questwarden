@@ -13,7 +13,6 @@
 @next A_LochModan
 
 accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
-accept A Refugee's Quandary | Felix Whindlebolt, north of Anvilmar.
 accept Dwarven Outfitters | Sten Stoutarm, in front of Anvilmar.
 complete Dwarven Outfitters | Wolves around Anvilmar drop Tough Wolf Meat.
 turnin Dwarven Outfitters
@@ -30,7 +29,6 @@ accept 3115 Tainted Memorandum [class=Warlock; race=Gnome]
 accept A New Threat
 complete A New Threat | Rockjaw Troggs and Burly Rockjaw Troggs in the valley.
 complete The Boar Hunter | Small Crag Boars west of Anvilmar.
-complete A Refugee's Quandary | Felix's chest, box and bucket are in the camps of the trolls.
 turnin A New Threat
 turnin 3107 Consecrated Rune [class=Paladin; race=Dwarf]
 turnin 3108 Etched Rune [class=Hunter; race=Dwarf]
@@ -40,7 +38,6 @@ accept 1599 Beginnings [class=Warlock; race=Gnome] | Alamar Grimm.
 turnin 3114 Glyphic Memorandum [class=Mage; race=Gnome]
 turnin 3106 Simple Rune [class=Warrior; race=Dwarf] | Your class trainer inside Anvilmar.
 turnin 3112 Simple Memorandum [class=Warrior; race=Gnome]
-turnin A Refugee's Quandary
 turnin 3109 Encrypted Rune [class=Rogue; race=Dwarf]
 turnin 3113 Encrypted Memorandum [class=Rogue; race=Gnome]
 turnin 233 Coldridge Valley Mail Delivery
@@ -59,13 +56,15 @@ turnin The Stolen Journal
 accept 282 Senir's Observations
 accept Scalding Mornbrew Delivery | Nori Pridedrift at Grelin's camp. Deliver fast; the brew cools.
 turnin Scalding Mornbrew Delivery | Durnan Furcutter inside Anvilmar.
+accept 3361 A Refugee's Quandary
 accept Bring Back the Mug
 turnin Bring Back the Mug
+complete 3361 A Refugee's Quandary
 accept Supplies to Tannok [optional] | Hands Springsprocket stands at the tunnel too.
 turnin 282 Senir's Observations | Mountaineer Thalos at the tunnel out of the valley.
+turnin 3361 A Refugee's Quandary
 accept 420 Senir's Observations
 turnin 420 Senir's Observations | Senir Whitebeard in Kharanos.
-accept Frostmane Hold
 turnin Supplies to Tannok [optional] | Tannok Frosthammer inside the Thunderbrew Distillery.
 accept 5625 Garments of the Light [class=Priest; race=Dwarf]
 complete 5625 Garments of the Light [class=Priest; race=Dwarf]
@@ -73,17 +72,13 @@ turnin 5625 Garments of the Light [class=Priest; race=Dwarf]
 bind Kharanos [area=131,2102]
 accept Beer Basted Boar Ribs
 accept Tools for Steelgrill
-accept Operation Recombobulation | Razzle Sprysprocket in the gnome building of Kharanos.
 accept Stocking Jetsteam | Pilot Bellowfiz, north side of Kharanos.
 accept The Grizzled Den | Pilot Stonegear, same house.
 accept Ammo for Rumbleshot
 train | Your trainer is in Kharanos.
-complete Operation Recombobulation | Leper Gnomes at the Gnomeregan entrance and the tunnel west of Kharanos.
-turnin Operation Recombobulation
 complete Stocking Jetsteam | Boars and bears south of Kharanos.
 turnin Stocking Jetsteam
 accept Evershine
-complete Frostmane Hold | Explore Frostmane Hold, the troll cave west of Kharanos.
 accept Bitter Rivals | Marleth Barleybrew, Brewnall Village.
 accept The Perfect Stout | Rejold Barleybrew, Brewnall Village.
 turnin Evershine
@@ -100,18 +95,8 @@ turnin Tools for Steelgrill | Beldin Steelgrill at Steelgrill's Depot, east of K
 turnin Bitter Rivals | The barrel stands inside the Thunderbrew Distillery.
 accept Return to Marleth
 turnin Beer Basted Boar Ribs
-accept 6064 Taming the Beast [class=Hunter; race=Dwarf] | Escort quest: start it when you are ready to follow. Needs level 10. If you are lower, {name} skips it and moves on.
-complete 6064 Taming the Beast [class=Hunter; race=Dwarf] | Escort: stay close; it fails if the NPC dies.
-turnin 6064 Taming the Beast [class=Hunter; race=Dwarf]
-accept 6084 Taming the Beast [class=Hunter; race=Dwarf] | Escort quest: start it when you are ready to follow. Needs level 10. If you are lower, {name} skips it and moves on.
-complete 6084 Taming the Beast [class=Hunter; race=Dwarf] | Escort: stay close; it fails if the NPC dies.
-turnin 6084 Taming the Beast [class=Hunter; race=Dwarf]
-accept 6085 Taming the Beast [class=Hunter; race=Dwarf] | Escort quest: start it when you are ready to follow. Needs level 10. If you are lower, {name} skips it and moves on.
-complete 6085 Taming the Beast [class=Hunter; race=Dwarf] | Escort: stay close; it fails if the NPC dies.
-turnin 6085 Taming the Beast [class=Hunter; race=Dwarf]
-accept 6086 Training the Beast [class=Hunter; race=Dwarf] | Needs level 10. If you are lower, {name} skips it and moves on.
-turnin Frostmane Hold
 accept The Reports
+accept 412 Operation Recombobulation
 turnin Ammo for Rumbleshot | Hegnar Rumbleshot's camp at the lake east of Kharanos.
 accept 312 Tundra MacGrann's Stolen Stash [class=Hunter; race=Dwarf]
 accept 312 Tundra MacGrann's Stolen Stash [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
@@ -123,11 +108,12 @@ turnin 312 Tundra MacGrann's Stolen Stash [class=Hunter; race=Dwarf]
 turnin 312 Tundra MacGrann's Stolen Stash [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 turnin 312 Tundra MacGrann's Stolen Stash [race=Gnome]
 turnin Return to Marleth
+complete 412 Operation Recombobulation
 turnin The Perfect Stout
 accept Shimmer Stout
-turnin 6086 Training the Beast [class=Hunter; race=Dwarf] | Turned in at Ironforge.
 accept Protecting the Herd | Rudra Amberstill at the Amberstill Ranch.
 accept 415 Rejold's New Brew
+turnin 412 Operation Recombobulation
 complete Protecting the Herd | Vagash is a wandering yeti on the hill above the ranch.
 turnin Protecting the Herd
 turnin 415 Rejold's New Brew

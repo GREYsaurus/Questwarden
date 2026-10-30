@@ -4,15 +4,16 @@
 @guide A_Ashenvale
 @name Ashenvale
 @faction Alliance
-@levels 19-25
+@levels 19-24
 @zone Ashenvale
 @chapter Azeroth
 @desc Maestra's Post, Astranaar, the Zoram Strand and Raene's Cleansing chain. Draenei and night elves meet here, then take the Auberdine boat to Menethil for the Wetlands.
-@next A_Wetlands
+@next A_Ashenvale_Late
 
 accept The Ancient Statuette | Talen at the Zoram Strand.
 complete The Ancient Statuette | In the naga ruins on the strand.
 turnin The Ancient Statuette
+grind 20 Wrathtail Razortail, Wrathtail Sorceress | Ruuzel needs level 20: kill these nearby until you reach it.
 accept Ruuzel
 accept Bathran's Hair | Orendil Broadleaf, Maestra's Post.
 complete Bathran's Hair | Bathran's Haven, north of Maestra's Post.

@@ -4,7 +4,7 @@
 @guide H_Stonetalon
 @name Stonetalon Mountains (Sun Rock Retreat)
 @faction Horde
-@levels 21-25
+@levels 22-24
 @zone Stonetalon Mountains
 @chapter Azeroth
 @desc Sun Rock Retreat, Malaka'jin, the Venture Co. at Windshear Crag and the harpies. A short stop before Ashenvale.
@@ -34,6 +34,7 @@ turnin 1064 Forsaken Aid [optional] | Turned in at Thunder Bluff.
 turnin 5642 Shadowguard [class=Priest; race=Troll] | Turned in at Orgrimmar.
 turnin 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll] | Turned in at The Barrens.
 accept Trouble in the Deeps | Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).
+accept 6421 Boulderslide Ravine
 accept 1096 Gerenzo Wrenchwhistle
 accept Cenarius' Legacy | Braelyn Firehand.
 fp Sun Rock Retreat
@@ -68,7 +69,9 @@ turnin 1096 Gerenzo Wrenchwhistle
 complete 6381 New Life
 turnin 1092 Gerenzo's Orders
 turnin Jin'Zil's Forest Magic
+complete 6421 Boulderslide Ravine
 turnin 6381 New Life
+turnin 6421 Boulderslide Ravine
 level 24
 train | Orgrimmar or Thunder Bluff.
 note Take the Talondeep Path north-east into Ashenvale; Splintertree Post is the Horde town.

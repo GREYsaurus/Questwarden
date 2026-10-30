@@ -4,7 +4,7 @@
 @guide A_Darkshore
 @name Darkshore
 @faction Alliance
-@levels 11-20
+@levels 11-19
 @zone Darkshore
 @chapter Azeroth
 @desc Auberdine, Bashal'Aran, the beached sea creatures, the Cliffspring River and southern Darkshore. Ends at about 19-20 heading south to Ashenvale.
@@ -12,11 +12,11 @@
 
 fp Auberdine
 bind Auberdine [area=442]
+grind 12 Thistle Bear, Shadowclaw | Cave Mushrooms needs level 12: kill these nearby until you reach it.
 accept Cave Mushrooms | Barithras Moonshade.
 complete Cave Mushrooms | The Mist's Edge cave.
 turnin Cave Mushrooms
 accept Onu
-accept The Absent Minded Prospector | Archaeologist Hollee, Auberdine.
 accept 963 For Love Eternal [optional]
 complete 963 For Love Eternal [optional] | Anaya's Pendant drops from Anaya Dawnrunner.
 turnin 963 For Love Eternal [optional]
@@ -29,10 +29,8 @@ turnin 4681 Washed Ashore
 accept 1716 Devourer of Souls [class=Warlock; race=Human,Gnome]
 turnin Onu | Onu at the Grove of the Ancients.
 accept The Master's Glaive
-turnin The Absent Minded Prospector | Prospector Remtravel, south coast.
 complete The Master's Glaive | The Master's Glaive in the south.
 turnin The Master's Glaive
-accept 731 The Absent Minded Prospector [group=2] | Escort quest.
 accept 4730 Beached Sea Creature
 accept The Twilight Camp
 accept Therylune's Escape [optional]
@@ -46,6 +44,7 @@ accept The Red Crystal | Sentinel Glynda Nal'Shea.
 complete The Red Crystal | The crystal is on the cliff east of Auberdine.
 turnin The Red Crystal
 accept As Water Cascades
+grind 13 Thistle Bear, Shadowclaw | The Tower of Althalaxx needs level 13: kill these nearby until you reach it.
 accept The Tower of Althalaxx | Sentinel Elissa Starbreeze.
 accept How Big a Threat? | Terenthis.
 complete How Big a Threat? | Explore the furbolg camp east of Auberdine.
@@ -82,6 +81,7 @@ complete 953 The Fall of Ameth'Aran [optional] | Click The Fall of Ameth'Aran an
 turnin 953 The Fall of Ameth'Aran [optional]
 turnin Buzzbox 827
 accept Buzzbox 411
+grind 15 Darkshore Thresher, Moonstalker Runt | Fruit of the Sea needs level 15: kill these nearby until you reach it.
 accept 1138 Fruit of the Sea [optional] | Needs level 15. If you are lower, {name} skips it and moves on.
 accept 1141 The Family and the Fishing Pole [class=Warlock; race=Human,Gnome; optional]
 accept 1141 The Family and the Fishing Pole [class=Warrior,Rogue,Mage; race=Gnome; optional]
@@ -126,6 +126,7 @@ accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
 complete Buzzbox 525
 turnin Buzzbox 525
+accept 731 The Absent Minded Prospector [group=2] | Escort quest.
 accept 951 Mathystra Relics
 accept 4731 Beached Sea Turtle
 accept 4732 Beached Sea Turtle

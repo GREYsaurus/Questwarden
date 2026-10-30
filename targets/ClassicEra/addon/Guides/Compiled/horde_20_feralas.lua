@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Feralas", name="Feralas (Camp Mojache)", faction="Horde", chapter="Azeroth",
-  minLevel=43, maxLevel=47, zone=357, zoneName="Feralas",
+  minLevel=44, maxLevel=46, zone=357, zoneName="Feralas",
   desc="Camp Mojache: the Woodpaw gnolls and the Zukk'ash hive to the south-east, the Grimtotem and the Gordunni ogres to the north, then the yetis, the Gordunni camp, the Twin Colossals giants and the Northspring harpies to the west.",
   next={{id="H_Hinterlands"},},
   steps={

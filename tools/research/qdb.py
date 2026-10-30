@@ -122,8 +122,8 @@ class Target:
         return d
 
     def _raw_tables(self):
-        # Normalised: NPC [name, min, max, rank, zone, spawns]; object [name, zone, spawns]; item [name, npcDrops, objectDrops]
-        N = {k: [v[0], v[3], v[4], v[5], v[8] if len(v) > 8 else None, v[6]] for k, v in self._raw("NpcDB.lua", "QuestieDB.npcData").items() if len(v) >= 7}
+        # Normalised: NPC [name, min, max, rank, zone, spawns, friendlyTo]; object [name, zone, spawns]; item [name, npcDrops, objectDrops]
+        N = {k: [v[0], v[3], v[4], v[5], v[8] if len(v) > 8 else None, v[6], v[12] if len(v) > 12 else None] for k, v in self._raw("NpcDB.lua", "QuestieDB.npcData").items() if len(v) >= 7}
         O = {k: [v[0], v[4] if len(v) > 4 else None, v[3]] for k, v in self._raw("ObjectDB.lua", "QuestieDB.objectData").items() if len(v) >= 4}
         I = {k: [v[0], v[1], v[2]] for k, v in self._raw("ItemDB.lua", "QuestieDB.itemData").items() if len(v) >= 3}
         return N, O, I
@@ -194,6 +194,12 @@ class Target:
     def rank(self, nid):
         r = self.N.get(nid)
         return (r[3] or 0) if r else 0
+
+    def hostile_elite(self, nid):
+        """Elite, rare elite or boss AND not friendly to anyone: a fight. Friendly elites (quest NPCs you
+        talk to, like Tirion Fordring) are not."""
+        r = self.N.get(nid)
+        return bool(r) and (r[3] or 0) in (1, 2, 3) and not (len(r) > 6 and r[6])
 
 
 def dist(a, b):

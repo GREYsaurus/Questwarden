@@ -115,7 +115,7 @@ def place_zone_pts(q, kind):
             if not ir:
                 continue
             for n in ids(ir[1]):
-                if T.rank(n) in (1, 2, 3):
+                if T.hostile_elite(n):
                     continue
                 for z in hsh(T.N[n][5]).keys() if T.N.get(n) else []:
                     out.setdefault(z, []).extend(T.npc_pts(n, z))
@@ -185,7 +185,7 @@ for fac in ("Alliance", "Horde"):
                 why("class/repeatable/reputation/escort")
                 break
             obj = hsh(f(q, 12))
-            if any(T.rank(n) in (1, 2, 3) for n in ids(obj.get("c")) + ids(obj.get("k"))):
+            if any(T.hostile_elite(n) for n in ids(obj.get("c")) + ids(obj.get("k"))):
                 why("elite target")
                 break
             pg, ps = ids(f(q, 13)), ids(f(q, 14))

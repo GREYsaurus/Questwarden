@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Ashenvale", name="Ashenvale (Splintertree Post)", faction="Horde", chapter="Azeroth",
-  minLevel=23, maxLevel=28, zone=331, zoneName="Ashenvale",
+  minLevel=24, maxLevel=27, zone=331, zoneName="Ashenvale",
   desc="Zoram'gar Outpost, Splintertree Post and the Warsong Lumber Camp. The Ashenvale Hunt and Blackfathom Deeps are optional.",
   next={{id="H_Hillsbrad"},},
   steps={
@@ -16,10 +16,6 @@ ns.Guides:Register({
     {"accept",q=6571,title="Warsong Supplies",npc="Locke Okarr",z=331,x=71.4,y=67.6,text="Locke Okarr.",v=1},
     {"accept",q=6441,title="Satyr Horns",npc="Pixel",z=331,x=73.1,y=61.5,text="Pixel.",v=1},
     {"fp",npc="Vhulgra",z=331,x=73.2,y=61.6,place="Splintertree Post",v=1},
-    {"turnin",q=742,title="The Ashenvale Hunt",npc="Senani Thunderheart",z=331,x=73.8,y=61.5,classes={"WARRIOR","HUNTER","ROGUE","WARLOCK"},races={"Orc"},optional=true,v=1},
-    {"turnin",q=742,title="The Ashenvale Hunt",npc="Senani Thunderheart",z=331,x=73.8,y=61.5,classes={"WARRIOR","HUNTER","ROGUE","PRIEST","MAGE"},races={"Troll"},optional=true,v=1},
-    {"turnin",q=742,title="The Ashenvale Hunt",npc="Senani Thunderheart",z=331,x=73.8,y=61.5,classes={"WARRIOR","HUNTER","DRUID"},races={"Tauren"},optional=true,v=1},
-    {"turnin",q=742,title="The Ashenvale Hunt",npc="Senani Thunderheart",z=331,x=73.8,y=61.5,races={"Scourge"},optional=true,v=1},
     {"accept",q=25,title="Stonetalon Standstill",npc="Mastok Wrilehiss",z=331,x=73.7,y=60,text="Mastok Wrilehiss, Splintertree Post.",v=1},
     {"bind",npc="Innkeeper Kaylisk",z=331,x=74,y=60.6,place="Splintertree Post",npcId=12196,areas={431},v=1},
     {"complete",q=6503,title="Ashenvale Outrunners",text="Ashenvale Outrunners, stealthy night elves around Splintertree.",v=1},
@@ -43,7 +39,6 @@ ns.Guides:Register({
     {"accept",q=2,title="Sharptalon's Claw",text="Starts from the item Sharptalon's Claw.",optional=true,v=1},
     {"complete",q=25,title="Stonetalon Standstill",text="Venture Co. in the eastern lumber camps.",v=1},
     {"accept",q=1918,title="The Befouled Element",text="Starts from the item Befouled Water Globe.",v=1},
-    {"complete",q=1195,title="The Sacred Flame",optional=true,v=1},
     {"turnin",q=2,title="Sharptalon's Claw",npc="Senani Thunderheart",z=331,x=73.8,y=61.5,optional=true,v=1},
     {"turnin",q=6482,title="Freedom to Ruul",npc="Yama Snowhoof",z=331,x=74.1,y=60.9,v=1},
     {"turnin",q=25,title="Stonetalon Standstill",npc="Mastok Wrilehiss",z=331,x=73.7,y=60,v=1},

@@ -4,13 +4,14 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Ashenvale", name="Ashenvale", faction="Alliance", chapter="Azeroth",
-  minLevel=19, maxLevel=25, zone=331, zoneName="Ashenvale",
+  minLevel=19, maxLevel=24, zone=331, zoneName="Ashenvale",
   desc="Maestra's Post, Astranaar, the Zoram Strand and Raene's Cleansing chain. Draenei and night elves meet here, then take the Auberdine boat to Menethil for the Wetlands.",
-  next={{id="A_Wetlands"},},
+  next={{id="A_Ashenvale_Late"},},
   steps={
     {"accept",q=1007,title="The Ancient Statuette",npc="Talen",z=331,x=14.8,y=31.3,text="Talen at the Zoram Strand.",v=1},
     {"complete",q=1007,title="The Ancient Statuette",text="In the naga ruins on the strand.",v=1},
     {"turnin",q=1007,title="The Ancient Statuette",npc="Talen",z=331,x=14.8,y=31.3,v=1},
+    {"grind",z=331,x=13.7,y=30.9,text="Ruuzel needs level 20: kill these nearby until you reach it.",level=20,mobs={"Wrathtail Razortail","Wrathtail Sorceress"},v=1},
     {"accept",q=1009,title="Ruuzel",npc="Talen",z=331,x=14.8,y=31.3,v=1},
     {"accept",q=1010,title="Bathran's Hair",npc="Orendil Broadleaf",z=331,x=26.4,y=38.6,text="Orendil Broadleaf, Maestra's Post.",v=1},
     {"complete",q=1010,title="Bathran's Hair",text="Bathran's Haven, north of Maestra's Post.",v=1},

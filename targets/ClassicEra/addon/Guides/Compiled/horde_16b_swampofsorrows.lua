@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_SwampOfSorrows", name="Swamp of Sorrows (Stonard)", faction="Horde", chapter="Azeroth",
-  minLevel=39, maxLevel=42, zone=8, zoneName="Swamp of Sorrows",
+  minLevel=39, maxLevel=40, zone=8, zoneName="Swamp of Sorrows",
   desc="Stonard: the captured beasts, the Pool of Tears artifacts and the crocolisk hunts, Magtoor's draenethyst crystals, then the Misty Reed Strand where Tok'Kar and Katar fight the murlocs of the coast.",
   next={{id="H_Dustwallow"},},
   steps={

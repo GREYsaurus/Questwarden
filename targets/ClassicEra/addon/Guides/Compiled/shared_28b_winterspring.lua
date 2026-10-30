@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="Both_Winterspring", name="Winterspring (Everlook)", faction="Both", chapter="Azeroth",
-  minLevel=54, maxLevel=56, zone=618, zoneName="Winterspring",
+  minLevel=53, maxLevel=55, zone=618, zoneName="Winterspring",
   desc="Through the Timbermaw tunnel from Felwood: Salfa's Winterfall quest, Everlook's yeti and Shardtooth hunts, and Jaron Stoneshaper's lost wildkin supplies, then back out through the tunnel. Neutral hub, same route for both factions.",
   next={{id="A_BurningSteppes",faction="Alliance"},{id="H_WesternPlaguelands",faction="Horde"},},
   steps={

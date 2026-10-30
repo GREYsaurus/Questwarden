@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Stonetalon", name="Stonetalon Mountains (Sun Rock Retreat)", faction="Horde", chapter="Azeroth",
-  minLevel=21, maxLevel=25, zone=406, zoneName="Stonetalon Mountains",
+  minLevel=22, maxLevel=24, zone=406, zoneName="Stonetalon Mountains",
   desc="Sun Rock Retreat, Malaka'jin, the Venture Co. at Windshear Crag and the harpies. A short stop before Ashenvale.",
   next={{id="H_Ashenvale"},},
   steps={
@@ -32,6 +32,7 @@ ns.Guides:Register({
     {"turnin",q=5642,title="Shadowguard",npc="Ur'kyo",z=1637,x=35.6,y=87.8,text="Turned in at Orgrimmar.",classes={"PRIEST"},races={"Troll"},v=1},
     {"turnin",q=2458,title="Deep Cover",npc="Taskmaster Fizzule",z=17,x=55.4,y=5.6,text="Turned in at The Barrens.",classes={"ROGUE"},races={"Orc","Scourge","Troll"},v=1},
     {"accept",q=6562,title="Trouble in the Deeps",npc="Tsunaman",z=406,x=47.4,y=64.2,text="Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).",v=1},
+    {"accept",q=6421,title="Boulderslide Ravine",npc="Mor'rogal",z=406,x=47.2,y=64,v=1},
     {"accept",q=1096,title="Gerenzo Wrenchwhistle",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
     {"accept",q=1087,title="Cenarius' Legacy",npc="Braelyn Firehand",z=406,x=45.9,y=60.4,text="Braelyn Firehand.",v=1},
     {"fp",npc="Tharm",z=406,x=45.1,y=59.8,place="Sun Rock Retreat",v=1},
@@ -66,7 +67,9 @@ ns.Guides:Register({
     {"complete",q=6381,title="New Life",v=1},
     {"turnin",q=1092,title="Gerenzo's Orders",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
     {"turnin",q=1058,title="Jin'Zil's Forest Magic",npc="Witch Doctor Jin'Zil",z=406,x=74.5,y=97.9,v=1},
+    {"complete",q=6421,title="Boulderslide Ravine",v=1},
     {"turnin",q=6381,title="New Life",npc="Tammra Windfield",z=406,x=47.5,y=58.4,v=1},
+    {"turnin",q=6421,title="Boulderslide Ravine",npc="Mor'rogal",z=406,x=47.2,y=64,v=1},
     {"level",level=24,v=1},
     {"train",text="Orgrimmar or Thunder Bluff.",classes={"DRUID"},v=1},
     {"train",text="Orgrimmar or Thunder Bluff.",classes={"HUNTER"},v=1},

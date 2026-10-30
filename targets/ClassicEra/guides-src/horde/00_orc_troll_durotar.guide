@@ -156,6 +156,7 @@ turnin Encroachment
 turnin Dark Storms
 accept Margoz
 turnin 5648 Garments of Spirituality [class=Priest; race=Troll]
+grind 10 Armored Scorpid, Makrura Elder | Call of Fire needs level 10: kill these nearby until you reach it.
 accept 2983 Call of Fire [class=Shaman; optional] | Needs level 10. If you are lower, {name} skips it and moves on.
 accept 1506 Gan'rul's Summons [class=Warlock; race=Orc] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin 6081 Training the Beast [class=Hunter] | Turned in at Orgrimmar.

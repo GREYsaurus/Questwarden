@@ -5,6 +5,7 @@
   <Script file="alliance_02_nightelf_teldrassil.lua"/>
   <Script file="alliance_05_darkshore.lua"/>
   <Script file="alliance_06_ashenvale.lua"/>
+  <Script file="alliance_06_ashenvale_late.lua"/>
   <Script file="alliance_10_westfall.lua"/>
   <Script file="alliance_11_lochmodan.lua"/>
   <Script file="alliance_12_redridge.lua"/>
@@ -14,6 +15,7 @@
   <Script file="alliance_21_arathi.lua"/>
   <Script file="alliance_21b_desolace.lua"/>
   <Script file="alliance_22_stranglethorn.lua"/>
+  <Script file="alliance_22_stranglethorn_late.lua"/>
   <Script file="alliance_22b_badlands.lua"/>
   <Script file="alliance_23_dustwallow.lua"/>
   <Script file="alliance_25_feralas.lua"/>
@@ -34,6 +36,7 @@
   <Script file="horde_15_arathi.lua"/>
   <Script file="horde_15b_badlands.lua"/>
   <Script file="horde_16_stranglethorn.lua"/>
+  <Script file="horde_16_stranglethorn_late.lua"/>
   <Script file="horde_16b_swampofsorrows.lua"/>
   <Script file="horde_17_dustwallow.lua"/>
   <Script file="horde_20_feralas.lua"/>

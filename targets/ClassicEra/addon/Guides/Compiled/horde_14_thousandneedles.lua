@@ -4,11 +4,10 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_ThousandNeedles", name="Thousand Needles (Freewind Post)", faction="Horde", chapter="Azeroth",
-  minLevel=29, maxLevel=33, zone=400, zoneName="Thousand Needles",
+  minLevel=30, maxLevel=32, zone=400, zoneName="Thousand Needles",
   desc="Freewind Post, the Grimtotem and centaur camps, and the Shimmering Flats racing goblins and gnomes.",
   next={{id="H_Desolace"},},
   steps={
-    {"turnin",q=1195,title="The Sacred Flame",npc="Zangen Stonehoof",z=1638,x=55,y=51.4,text="Turned in at Thunder Bluff.",optional=true,v=1},
     {"accept",q=1196,title="The Sacred Flame",npc="Zangen Stonehoof",z=1638,x=55,y=51.4,optional=true,v=1},
     {"accept",q=879,title="Betrayal from Within",npc="Mangletooth",z=17,x=44.6,y=59.3,optional=true,v=1},
     {"accept",q=885,title="Washte Pawne",text="Starts from the item Washte Pawne's Feather.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},optional=true,v=1},
@@ -26,10 +25,6 @@ ns.Guides:Register({
     {"accept",q=857,title="The Tear of the Moons",npc="Feegly the Exiled",z=17,x=49,y=86.3,optional=true,v=1},
     {"complete",q=857,title="The Tear of the Moons",text="Tear of the Moons: loot General Twinbraid's Strongbox.",optional=true,v=1},
     {"turnin",q=857,title="The Tear of the Moons",npc="Feegly the Exiled",z=17,x=49,y=86.3,text="Turned in at The Barrens.",optional=true,v=1},
-    {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,classes={"WARRIOR","HUNTER","ROGUE","WARLOCK"},races={"Orc"},optional=true,v=1},
-    {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,classes={"WARRIOR","HUNTER","ROGUE","PRIEST","MAGE"},races={"Troll"},optional=true,v=1},
-    {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,classes={"WARRIOR","HUNTER","DRUID"},races={"Tauren"},optional=true,v=1},
-    {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,races={"Scourge"},optional=true,v=1},
     {"accept",q=4542,title="Message to Freewind Post",npc="Brave Moonhorn",z=400,x=32.2,y=22.2,text="Brave Moonhorn at the Great Lift, on the Barrens side.",v=1},
     {"accept",q=1718,title="The Islander",npc="Torm Ragetotem",z=1638,x=57.2,y=87.4,classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},optional=true,v=1},
     {"fp",npc="Nyse",z=400,x=45.1,y=49.1,place="Freewind Post",v=1},
@@ -106,6 +101,7 @@ ns.Guides:Register({
     {"turnin",q=5064,title="Grimtotem Spying",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=5147,title="Wanted - Arnak Grimtotem",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,optional=true,v=1},
     {"turnin",q=4767,title="Wind Rider",npc="Elu",z=400,x=44.9,y=48.9,v=1},
+    {"grind",z=400,x=27.9,y=48.2,text="Family Tree needs level 32: kill these nearby until you reach it.",level=32,mobs={"Screeching Roguefeather","Screeching Windcaller"},v=1},
     {"accept",q=5361,title="Family Tree",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"ROGUE","PRIEST","MAGE","WARLOCK"},races={"Scourge"},v=1},

@@ -1,0 +1,40 @@
+# ClassicGuide - Ashenvale return visit (25-31), Alliance, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route.
+# GENERATED as a starting point by tools/research/zone_guide.py (quests no other guide uses, in waves);
+# edit freely: it is a normal guide source from here on.
+
+@guide A_Ashenvale_Late
+@name Ashenvale (return, 25-31)
+@faction Alliance
+@levels 24-25
+@zone Ashenvale
+@chapter Azeroth
+@desc A second pass through Ashenvale at 25-31 for the quests the first visit was too low for.
+@next A_Wetlands
+
+note Back in Ashenvale for the higher-level quests.
+# wave 1: pick up
+accept 4581 Kayneth Stillwind
+accept 1022 The Howling Vale
+accept 1021 Vile Satyr! Dryads in Danger!
+accept 1140 The Tower of Althalaxx
+accept 1011 Forsaken Diseases
+complete 1140 The Tower of Althalaxx
+complete 1011 Forsaken Diseases
+complete 1022 The Howling Vale
+turnin 1140 The Tower of Althalaxx
+turnin 1022 The Howling Vale
+turnin 1021 Vile Satyr! Dryads in Danger!
+turnin 1011 Forsaken Diseases
+turnin 4581 Kayneth Stillwind
+# wave 2: pick up
+accept 1012 Insane Druids
+accept 1031 The Branch of Cenarius
+complete 1031 The Branch of Cenarius
+complete 1012 Insane Druids
+turnin 1012 Insane Druids
+turnin 1031 The Branch of Cenarius
+# wave 3: pick up
+accept 1032 Satyr Slaying!
+complete 1032 Satyr Slaying!
+turnin 1032 Satyr Slaying!

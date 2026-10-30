@@ -4,7 +4,7 @@
 @guide Both_Tanaris
 @name Tanaris (Gadgetzan)
 @faction Both
-@levels 41-45
+@levels 41-44
 @zone Tanaris
 @chapter Azeroth
 @desc Gadgetzan's neutral quest hub: the Wastewander bandits, the water survey, the pirates of Lost Rigger Cove and Steamwheedle Port. Zul'Farrak (dungeon) quests are optional.
@@ -38,9 +38,6 @@ accept 110 Insect Part Analysis
 turnin 110 Insect Part Analysis | Alchemist Pestlezugg.
 accept 113 Insect Part Analysis
 turnin 113 Insect Part Analysis
-accept The Dunemaul Compound [optional] | Needs level 44. If you are lower, {name} skips it and moves on.
-complete The Dunemaul Compound [optional] | Dunemaul ogres.
-turnin The Dunemaul Compound [optional]
 accept Pirate Hats Ahoy! | Haughty Modiste.
 accept WANTED: Andre Firebeard | The wanted poster in Gadgetzan. Turned in at Steamwheedle Port.
 accept Southsea Shakedown | Security Chief Bilgewhizzle at Steamwheedle Port.
@@ -51,6 +48,7 @@ complete Pirate Hats Ahoy! | Southsea Pirate Hat drops from Southsea Dock Worker
 turnin Southsea Shakedown
 turnin WANTED: Andre Firebeard | Security Chief Bilgewhizzle, Steamwheedle Port.
 turnin Pirate Hats Ahoy!
+grind 43 Fire Roc, Scorpid Tail Lasher | Gahz'ridian needs level 43: kill these nearby until you reach it.
 accept Gahz'ridian [optional] | Marvon Rivetseeker, south of Gadgetzan. Needs level 43.
 complete 2873 Stoley's Shipment
 complete Gahz'ridian [optional] | Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.

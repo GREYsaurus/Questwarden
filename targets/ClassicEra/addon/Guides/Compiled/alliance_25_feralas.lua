@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Feralas", name="Feralas (Feathermoon Stronghold)", faction="Alliance", chapter="Azeroth",
-  minLevel=43, maxLevel=47, zone=357, zoneName="Feralas",
+  minLevel=44, maxLevel=46, zone=357, zoneName="Feralas",
   desc="Feathermoon Stronghold, the Hatecrest naga, the missing courier chain and the Grimtotem and gnoll camps.",
   next={{id="A_Hinterlands"},},
   steps={
@@ -49,6 +49,7 @@ ns.Guides:Register({
     {"complete",q=4135,title="The Writhing Deep",text="Inside the Zukk'ash hive at the Writhing Deep.",v=1},
     {"turnin",q=4135,title="The Writhing Deep",npc="Zukk'ash Pod",z=357,x=72.1,y=63.7,v=1},
     {"accept",q=4265,title="Freed from the Hive",npc="Zukk'ash Pod",z=357,x=72.1,y=63.7,text="Escort quest: start it when you are ready to follow.",v=1},
+    {"grind",z=357,x=71.8,y=60.1,text="Zapped Giants needs level 45: kill these nearby until you reach it.",level=45,mobs={"Rogue Vale Screecher","Grizzled Ironfur Bear"},v=1},
     {"accept",q=7003,title="Zapped Giants",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,text="Zorbin Fandazzle, the coast.",v=1},
     {"complete",q=2821,title="The Mark of Quality",v=1},
     {"accept",q=7721,title="Fuel for the Zapping",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,text="Needs level 45. If you are lower, {name} skips it and moves on.",v=1},

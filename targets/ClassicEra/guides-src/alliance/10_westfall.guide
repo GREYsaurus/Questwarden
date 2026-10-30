@@ -4,7 +4,7 @@
 @guide A_Westfall
 @name Westfall
 @faction Alliance
-@levels 10-16
+@levels 12-15
 @zone Westfall
 @chapter Azeroth
 @desc Farms of northern Westfall, Sentinel Hill and the Jangolode Mine, then the coast and the Defias chain up to Moonbrook. Leaves for Redridge at about 15-16.
@@ -47,6 +47,7 @@ accept 13 The People's Militia
 complete 13 The People's Militia | Defias Pathstalkers and Highwaymen west of the Jangolode Mine.
 turnin 13 The People's Militia
 accept 14 The People's Militia
+grind 14 Defias Trapper, Fleshripper | The Defias Brotherhood needs level 14: kill these nearby until you reach it.
 accept 65 The Defias Brotherhood | Leads to Lakeshire (Redridge); you will hand it in there.
 complete 14 The People's Militia | Defias Looters and Pillagers around the Moonbrook area.
 turnin 14 The People's Militia
@@ -62,6 +63,7 @@ complete Keeper of the Flame | Kill Gnoll Mystics on the coast for Flasks of Oil
 complete The Coast Isn't Clear | Murlocs along the shore north of the lighthouse.
 turnin Keeper of the Flame
 turnin The Coast Isn't Clear
+grind 15 Murloc Oracle, Defias Knuckleduster | The Coastal Menace needs level 15: kill these nearby until you reach it.
 accept The Coastal Menace [elite; group=2; optional] | Old Murk-Eye (elite murloc). Skip if solo below level 16.
 complete The Coastal Menace [elite; group=2; optional]
 turnin The Coastal Menace [optional]

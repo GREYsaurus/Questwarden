@@ -41,6 +41,7 @@ turnin Scavenging Deathknell
 accept Marla's Last Wish | Novice Elreth.
 complete Marla's Last Wish | Samuel Fipps; bury Marla's remains in the graveyard.
 turnin Marla's Last Wish
+grind 5 Scarlet Convert, Scarlet Initiate | In Favor of Darkness needs level 5: kill these nearby until you reach it.
 accept 5651 In Favor of Darkness [class=Priest] | Needs level 5. If you are lower, {name} skips it and moves on.
 turnin 3097 Hallowed Scroll [class=Priest]
 turnin Night Web's Hollow
@@ -66,6 +67,7 @@ complete 5650 Garments of Darkness [class=Priest]
 turnin 5650 Garments of Darkness [class=Priest]
 turnin 8 A Rogue's Deal
 accept Graverobbers | Magistrate Sevren.
+grind 6 Cursed Darkhound, Darkeye Bonecaster | Wanted: Maggot Eye needs level 6: kill these nearby until you reach it.
 accept Wanted: Maggot Eye
 bind Brill [area=159,2119]
 complete Gordo's Task | Gloom Weed around Brill.

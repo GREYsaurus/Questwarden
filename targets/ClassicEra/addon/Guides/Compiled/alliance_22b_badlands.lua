@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Badlands", name="Badlands", faction="Alliance", chapter="Azeroth",
-  minLevel=38, maxLevel=41, zone=3, zoneName="Badlands",
+  minLevel=38, maxLevel=40, zone=3, zoneName="Badlands",
   desc="Prospector Ryedol's camp and the Explorers' League chain, Lotwil Veriatus's rock elementals and Rigglefuzz's power stones, then the Ironforge follow-ups on the way to Dustwallow.",
   next={{id="A_Dustwallow"},},
   steps={

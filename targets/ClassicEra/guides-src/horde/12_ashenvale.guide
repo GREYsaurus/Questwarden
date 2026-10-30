@@ -4,7 +4,7 @@
 @guide H_Ashenvale
 @name Ashenvale (Splintertree Post)
 @faction Horde
-@levels 23-28
+@levels 24-27
 @zone Ashenvale
 @chapter Azeroth
 @desc Zoram'gar Outpost, Splintertree Post and the Warsong Lumber Camp. The Ashenvale Hunt and Blackfathom Deeps are optional.
@@ -18,10 +18,6 @@ accept Ashenvale Outrunners | Kuray'bin.
 accept Warsong Supplies | Locke Okarr.
 accept Satyr Horns | Pixel.
 fp Splintertree Post
-turnin 742 The Ashenvale Hunt [class=Warrior,Hunter,Rogue,Warlock; race=Orc; optional]
-turnin 742 The Ashenvale Hunt [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll; optional]
-turnin 742 The Ashenvale Hunt [class=Warrior,Hunter,Druid; race=Tauren; optional]
-turnin 742 The Ashenvale Hunt [race=Undead; optional]
 accept Stonetalon Standstill | Mastok Wrilehiss, Splintertree Post.
 bind Splintertree Post [area=431]
 complete Ashenvale Outrunners | Ashenvale Outrunners, stealthy night elves around Splintertree.
@@ -45,7 +41,6 @@ turnin 24 Shadumbra's Head [optional]
 accept 2 Sharptalon's Claw [optional]
 complete Stonetalon Standstill | Venture Co. in the eastern lumber camps.
 accept 1918 The Befouled Element
-complete 1195 The Sacred Flame [optional]
 turnin 2 Sharptalon's Claw [optional]
 turnin 6482 Freedom to Ruul
 turnin Stonetalon Standstill

@@ -9,7 +9,6 @@ ns.Guides:Register({
   next={{id="H_Barrens"},},
   steps={
     {"accept",q=752,title="A Humble Task",npc="Chief Hawkwind",z=215,x=44.2,y=76.1,text="Chief Hawkwind.",v=1},
-    {"accept",q=1519,title="Call of Earth",npc="Seer Ravenfeather",z=215,x=44.7,y=76.2,text="Seer Ravenfeather, Camp Narache (level 4).",classes={"SHAMAN"},v=1},
     {"turnin",q=752,title="A Humble Task",npc="Greatmother Hawkwind",z=215,x=50,y=81.2,text="Greatmother Hawkwind at the well.",v=1},
     {"accept",q=753,title="A Humble Task",npc="Greatmother Hawkwind",z=215,x=50,y=81.2,v=1},
     {"accept",q=747,title="The Hunt Begins",npc="Grull Hawkwind",z=215,x=44.9,y=77.1,text="Grull Hawkwind, Camp Narache.",v=1},
@@ -38,7 +37,6 @@ ns.Guides:Register({
     {"turnin",q=750,title="The Hunt Continues",npc="Grull Hawkwind",z=215,x=44.9,y=77.1,v=1},
     {"accept",q=780,title="The Battleboars",npc="Grull Hawkwind",z=215,x=44.9,y=77.1,v=1},
     {"complete",q=780,title="The Battleboars",text="Battleboars in the ravine; Bristleback Belt from Chief Sharptusk Thornmantle's camp.",v=1},
-    {"complete",q=1519,title="Call of Earth",text="Bristleback Shamans in the ravine drop Ritual Salve.",classes={"SHAMAN"},v=1},
     {"complete",q=3376,title="Break Sharptusk!",text="Chief Sharptusk Thornmantle's Head drops from Chief Sharptusk Thornmantle.",v=1},
     {"accept",q=781,title="Attack on Camp Narache",text="Starts from the item Dirt-stained Map.",v=1},
     {"turnin",q=780,title="The Battleboars",npc="Grull Hawkwind",z=215,x=44.9,y=77.1,v=1},
@@ -47,7 +45,6 @@ ns.Guides:Register({
     {"train",npc="Lanka Farshot",z=215,x=44.3,y=75.7,text="Trainers at Camp Narache.",classes={"HUNTER"},v=1},
     {"train",npc="Meela Dawnstrider",z=215,x=45,y=75.9,text="Trainers at Camp Narache.",classes={"SHAMAN"},v=1},
     {"train",npc="Harutt Thunderhorn",z=215,x=44,y=76.1,text="Trainers at Camp Narache.",classes={"WARRIOR"},v=1},
-    {"turnin",q=1519,title="Call of Earth",npc="Seer Ravenfeather",z=215,x=44.7,y=76.2,classes={"SHAMAN"},v=1},
     {"accept",q=1520,title="Call of Earth",npc="Seer Ravenfeather",z=215,x=44.7,y=76.2,classes={"SHAMAN"},v=1},
     {"turnin",q=1520,title="Call of Earth",npc="Minor Manifestation of Earth",z=215,x=53.9,y=80.5,text="Drink the Earth Sapta at Kodo Rock; the Minor Manifestation of Earth appears.",classes={"SHAMAN"},v=1},
     {"accept",q=1521,title="Call of Earth",npc="Minor Manifestation of Earth",z=215,x=53.9,y=80.5,classes={"SHAMAN"},v=1},

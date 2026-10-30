@@ -4,7 +4,7 @@
 @guide A_LochModan
 @name Loch Modan
 @faction Alliance
-@levels 11-18
+@levels 11-17
 @zone Loch Modan
 @chapter Azeroth
 @desc Thelsamar, the Stonewrought Dam, the Ironband excavation and the eastern farms. Finish with the Dark Threat Looms chain at the dam, then head to Redridge.
@@ -73,11 +73,6 @@ turnin 6388 Gryth Thurden [class=Paladin,Priest; race=Dwarf] | Turned in at Iron
 turnin 6388 Gryth Thurden [class=Mage; race=Gnome] | Turned in at Ironforge.
 accept 6392 Return to Brock [class=Warrior,Rogue; race=Dwarf; optional]
 accept 6392 Return to Brock [class=Warrior,Rogue,Warlock; race=Gnome; optional]
-accept 250 A Dark Threat Looms | Chief Engineer Hinderweir VII on the Stonewrought Dam.
-turnin 250 A Dark Threat Looms | The suspicious barrel is on the dam.
-accept 199 A Dark Threat Looms | Needs level 16. If you are lower, {name} skips it and moves on.
-turnin 199 A Dark Threat Looms
-accept 161 A Dark Threat Looms | Needs level 16. If you are lower, {name} skips it and moves on.
 turnin Mountaineer Stormpike's Task | Mountaineer Stormpike at the Dam.
 accept 1338 Stormpike's Order [class=Warrior,Rogue; race=Dwarf,Night Elf]
 accept 1338 Stormpike's Order [class=Warrior,Rogue,Warlock; race=Human,Gnome]
@@ -86,6 +81,7 @@ complete Filthy Paws | Kobold crates inside Silver Stream Mine.
 turnin Filthy Paws
 turnin 1338 Stormpike's Order [class=Warrior,Rogue; race=Dwarf,Night Elf] | Turned in at Stormwind City.
 turnin 1338 Stormpike's Order [class=Warrior,Rogue,Warlock; race=Human,Gnome] | Turned in at Stormwind City.
+grind 15 Tunnel Rat Geomancer, Tunnel Rat Surveyor | Mercenaries needs level 15: kill these nearby until you reach it.
 accept Mercenaries | Magistrate Bluntnose, Thelsamar.
 complete Mercenaries | Mo'grosh ogres at the north-east of the loch.
 turnin Mercenaries
@@ -99,7 +95,6 @@ accept Gathering Idols | Magmar Fellhew at the excavation.
 turnin Ironband's Excavation
 complete Gathering Idols | Troggs at the excavation site drop Carved Stone Idols.
 turnin Gathering Idols
-turnin 161 A Dark Threat Looms [optional] | Ashlan Stonesmirk in the Wetlands. Leave it if you are going straight to Redridge.
 level 17 | Finish leftover kills here if you are not 17 yet.
 train
 note Fly from Thelsamar to Ironforge, take the Deeprun Tram to Stormwind, and walk east through Elwynn to Redridge.

@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_NightElf_Teldrassil", name="Shadowglen & Teldrassil", faction="Alliance", chapter="Azeroth",
-  minLevel=1, maxLevel=11, zone=141, zoneName="Teldrassil", start=true, races={"NightElf"},
+  minLevel=1, maxLevel=12, zone=141, zoneName="Teldrassil", start=true, races={"NightElf"},
   desc="Night elf starting route. Shadowglen to about level 5, then Dolanaar, the Ban'ethil Barrow Den, Lake Al'Ameth and the Oracle Glade. Ends with the flight to Auberdine for Darkshore.",
   next={{id="A_Darkshore"},},
   steps={
@@ -45,6 +45,7 @@ ns.Guides:Register({
     {"complete",q=921,title="Crown of the Earth",text="Fill the phial at the moonwell north of Aldrassil.",v=1},
     {"turnin",q=921,title="Crown of the Earth",npc="Tenaron Stormgrip",z=141,x=59.1,y=39.4,v=1},
     {"accept",q=928,title="Crown of the Earth",npc="Tenaron Stormgrip",z=141,x=59.1,y=39.4,v=1},
+    {"grind",z=141,x=57.6,y=33.9,text="In Favor of Elune needs level 5: kill these nearby until you reach it.",level=5,mobs={"Webwood Spider","Nightsaber"},v=1},
     {"accept",q=5622,title="In Favor of Elune",npc="Shanda",z=141,x=59.2,y=40.4,text="Needs level 5. If you are lower, {name} skips it and moves on.",classes={"PRIEST"},optional=true,v=1},
     {"turnin",q=3119,title="Hallowed Sigil",npc="Shanda",z=141,x=59.2,y=40.4,classes={"PRIEST"},v=1},
     {"turnin",q=458,title="The Woodland Protector",npc="Tarindrella",z=141,x=57.8,y=45.2,text="Tarindrella in the glade.",v=1},
@@ -101,7 +102,6 @@ ns.Guides:Register({
     {"accept",q=4161,title="Recipe of the Kaldorei",npc="Zarrin",z=141,x=57.1,y=61.3,text="Zarrin.",v=1},
     {"complete",q=4161,title="Recipe of the Kaldorei",text="Webwood Lurkers drop Small Spider Legs.",v=1},
     {"turnin",q=4161,title="Recipe of the Kaldorei",npc="Zarrin",z=141,x=57.1,y=61.3,v=1},
-    {"accept",q=2241,title="The Apple Falls",npc="Jannok Breezesong",z=141,x=56.4,y=60.1,text="Needs level 10. If you are lower, {name} skips it and moves on.",classes={"ROGUE"},v=1},
     {"turnin",q=1581,title="Elixirs for the Bladeleafs",npc="Syral Bladeleaf",z=141,x=56.1,y=57.7,v=1},
     {"accept",q=489,title="Seek Redemption!",npc="Syral Bladeleaf",z=141,x=56.1,y=57.7,optional=true,v=1},
     {"complete",q=2459,title="Ferocitas the Dream Eater",v=1},
@@ -121,7 +121,7 @@ ns.Guides:Register({
     {"turnin",q=937,title="The Enchanted Glade",npc="Sentinel Arynia Cloudsbreak",z=141,x=38.3,y=34.4,v=1},
     {"accept",q=940,title="Teldrassil",npc="Sentinel Arynia Cloudsbreak",z=141,x=38.3,y=34.4,v=1},
     {"accept",q=931,title="The Shimmering Frond",npc="Strange Fronded Plant",z=141,x=34.6,y=28.8,v=1},
-    {"turnin",q=2241,title="The Apple Falls",npc="Syurna",z=1657,x=37,y=21.9,text="Turned in at Darnassus.",classes={"ROGUE"},v=1},
+    {"grind",z=141,x=34.3,y=28.3,text="Destiny Calls needs level 10: kill these nearby until you reach it.",level=10,mobs={"Bloodfeather Fury","Bloodfeather Harpy"},v=1},
     {"accept",q=2242,title="Destiny Calls",npc="Syurna",z=1657,x=37,y=21.9,text="Needs level 10. If you are lower, {name} skips it and moves on.",classes={"ROGUE"},v=1},
     {"turnin",q=922,title="Rellian Greenspyre",npc="Rellian Greenspyre",z=1657,x=38.2,y=21.6,text="Turned in at Darnassus.",classes={"WARRIOR","HUNTER","PRIEST","DRUID"},v=1},
     {"turnin",q=922,title="Rellian Greenspyre",npc="Rellian Greenspyre",z=1657,x=38.2,y=21.6,text="Turned in at Darnassus.",classes={"ROGUE"},v=1},

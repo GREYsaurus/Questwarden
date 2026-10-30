@@ -4,11 +4,11 @@
 @guide H_Stranglethorn
 @name Stranglethorn Vale (Grom'gol)
 @faction Horde
-@levels 34-40
+@levels 38-40
 @zone Stranglethorn Vale
 @chapter Azeroth
 @desc Grom'gol Base Camp, Nesingwary's Expedition, the Bloodscalp and Skullsplitter trolls, and Booty Bay. A contested zone - watch for Alliance players.
-@next H_SwampOfSorrows
+@next H_Stranglethorn_Late
 
 fp Grom'gol
 bind Grom'gol [area=117]

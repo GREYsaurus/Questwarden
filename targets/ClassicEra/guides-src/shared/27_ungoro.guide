@@ -4,7 +4,7 @@
 @guide Both_UngoroCrater
 @name Un'Goro Crater
 @faction Both
-@levels 48-52
+@levels 49-51
 @zone Un'Goro Crater
 @chapter Azeroth
 @desc Marshal's Refuge and the neutral crater quests: pylons, devilsaurs, oozes, raptors, the gorillas and Linken.
@@ -50,6 +50,7 @@ turnin Crystals of Power
 turnin Shizzle's Flyer
 turnin Muigin and Larion [faction=Alliance]
 turnin Larion and Muigin [faction=Horde]
+grind 50 Pterrordax, Primal Ooze | Lost! needs level 50: kill these nearby until you reach it.
 accept 4492 Lost!
 accept The Northern Pylon | Escort quest: start it when you are ready to follow.
 accept The Eastern Pylon | Escort quest: start it when you are ready to follow.

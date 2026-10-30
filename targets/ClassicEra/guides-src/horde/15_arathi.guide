@@ -4,7 +4,7 @@
 @guide H_Arathi
 @name Arathi Highlands (Hammerfall)
 @faction Horde
-@levels 32-35
+@levels 35-36
 @zone Arathi Highlands
 @chapter Azeroth
 @desc Hammerfall: the raising spirits and raptor quests, Call to Arms at Stromgarde, the sigils and the Shards of Myzrael.
@@ -23,7 +23,6 @@ accept 674 Raising Spirits
 complete 674 Raising Spirits
 turnin 674 Raising Spirits
 accept 675 Raising Spirits
-turnin The Hammer May Fall | Drum Fel.
 accept 677 Call to Arms | Drum Fel.
 complete 677 Call to Arms | Syndicate at Northfold Manor.
 complete Foul Magics | Syndicate mages.

@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Arathi", name="Arathi Highlands (Hammerfall)", faction="Horde", chapter="Azeroth",
-  minLevel=32, maxLevel=35, zone=45, zoneName="Arathi Highlands",
+  minLevel=35, maxLevel=36, zone=45, zoneName="Arathi Highlands",
   desc="Hammerfall: the raising spirits and raptor quests, Call to Arms at Stromgarde, the sigils and the Shards of Myzrael.",
   next={{id="H_Badlands"},},
   steps={
@@ -21,7 +21,6 @@ ns.Guides:Register({
     {"complete",q=674,title="Raising Spirits",v=1},
     {"turnin",q=674,title="Raising Spirits",npc="Gor'mul",z=45,x=72.6,y=33.9,v=1},
     {"accept",q=675,title="Raising Spirits",npc="Gor'mul",z=45,x=72.6,y=33.9,v=1},
-    {"turnin",q=676,title="The Hammer May Fall",npc="Drum Fel",z=45,x=74.2,y=33.9,text="Drum Fel.",v=1},
     {"accept",q=677,title="Call to Arms",npc="Drum Fel",z=45,x=74.2,y=33.9,text="Drum Fel.",v=1},
     {"complete",q=677,title="Call to Arms",text="Syndicate at Northfold Manor.",v=1},
     {"complete",q=671,title="Foul Magics",text="Syndicate mages.",v=1},

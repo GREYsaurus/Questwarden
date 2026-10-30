@@ -4,7 +4,7 @@
 @guide A_Hillsbrad
 @name Hillsbrad Foothills (Southshore)
 @faction Alliance
-@levels 28-31
+@levels 29-31
 @zone Hillsbrad Foothills
 @chapter Azeroth
 @desc Southshore quests: the coast, the Syndicate, the Crushridge ogres and the yetis. A short stop before Arathi.
@@ -35,6 +35,7 @@ accept Syndicate Assassins | Magistrate Henry Maleb, town hall.
 complete Syndicate Assassins | Syndicate camp north-east of Southshore (Durnholde area).
 turnin Syndicate Assassins
 turnin 510 Foreboding Plans
+grind 30 Torn Fin Tidehunter, Feral Mountain Lion | Crushridge Bounty needs level 30: kill these nearby until you reach it.
 accept Crushridge Bounty | Marshal Redpath.
 complete Crushridge Bounty | Crushridge ogres north of Southshore.
 turnin Crushridge Bounty

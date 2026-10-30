@@ -143,6 +143,7 @@ ns.Guides:Register({
     {"accept",q=239,title="Westbrook Garrison Needs Help!",npc="Marshal Dughan",z=12,x=42.1,y=65.9,v=1},
     {"accept",q=109,title="Report to Gryan Stoutmantle",npc="Marshal Dughan",z=12,x=42.1,y=65.9,text="From Marshal Dughan in Goldshire.",v=1},
     {"accept",q=1097,title="Elmore's Task",npc="Smith Argus",z=12,x=41.7,y=65.5,v=1},
+    {"grind",z=12,x=31.2,y=65.1,text="A Warrior's Training needs level 10: kill these nearby until you reach it.",level=10,mobs={"Defias Bandit","Narg the Taskmaster"},v=1},
     {"accept",q=1638,title="A Warrior's Training",npc="Lyria Du Lac",z=12,x=41.1,y=65.8,text="Needs level 10. If you are lower, {name} skips it and moves on.",classes={"WARRIOR"},optional=true,v=1},
     {"accept",q=176,title="Wanted:  \"Hogger\"",npc="Wanted Poster",z=12,x=24.6,y=74.7,text="The poster is next to Deputy Rainer. Hogger is level 11 elite - group up or skip.",hcSkip=true,elite=true,group=3,v=1},
     {"turnin",q=239,title="Westbrook Garrison Needs Help!",npc="Deputy Rainer",z=12,x=24.2,y=74.4,text="Deputy Rainer is at the Westbrook Garrison, west Elwynn.",v=1},

@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_BurningSteppes", name="Burning Steppes (Morgan's Vigil)", faction="Alliance", chapter="Azeroth",
-  minLevel=53, maxLevel=56, zone=46, zoneName="Burning Steppes",
+  minLevel=55, maxLevel=56, zone=46, zoneName="Burning Steppes",
   desc="Morgan's Vigil, the Firegut ogres, the Blackrock orcs and The True Masters chain. Blackrock Depths and Spire quests are optional group content.",
   next={{id="A_WesternPlaguelands"},},
   steps={
@@ -26,9 +26,11 @@ ns.Guides:Register({
     {"turnin",q=4183,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,text="Magistrate Solomon in Lakeshire.",v=1},
     {"accept",q=4184,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,v=1},
     {"accept",q=4726,title="Broodling Essence",npc="Tinkee Steamboil",z=46,x=65.2,y=24,text="Tinkee Steamboil, Flame Crest.",v=1},
+    {"accept",q=4022,title="A Taste of Flame",npc="Cyrus Therepentous",z=46,x=95.1,y=31.6,v=1},
     {"complete",q=4283,title="FIFTY! YEP!",v=1},
     {"complete",q=4726,title="Broodling Essence",text="Use the essence collector on broodlings.",v=1},
     {"turnin",q=4726,title="Broodling Essence",npc="Tinkee Steamboil",z=46,x=65.2,y=24,v=1},
+    {"complete",q=4022,title="A Taste of Flame",v=1},
     {"turnin",q=563,title="Reassignment",npc="Major Samuelson",z=1519,x=72.6,y=15.9,text="Major Samuelson, also in Stormwind Keep.",v=1},
     {"turnin",q=4184,title="The True Masters",npc="Highlord Bolvar Fordragon",z=1519,x=78.2,y=18,text="Highlord Bolvar Fordragon, Stormwind Keep.",v=1},
     {"accept",q=4185,title="The True Masters",npc="Highlord Bolvar Fordragon",z=1519,x=78.2,y=18,text="Escort quest: start it when you are ready to follow.",v=1},
@@ -39,6 +41,7 @@ ns.Guides:Register({
     {"turnin",q=4223,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,v=1},
     {"turnin",q=4283,title="FIFTY! YEP!",npc="Oralius",z=46,x=84.6,y=68.7,v=1},
     {"accept",q=4808,title="Felnok Steelspring",npc="Tinkee Steamboil",z=46,x=65.2,y=24,v=1},
+    {"turnin",q=4022,title="A Taste of Flame",npc="Cyrus Therepentous",z=46,x=95.1,y=31.6,v=1},
     {"accept",q=4224,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,text="Escort quest: start it when you are ready to follow.",v=1},
     {"complete",q=4224,title="The True Masters",text="Escort: stay close; it fails if the NPC dies.",v=1},
     {"turnin",q=4224,title="The True Masters",npc="Marshal Maxwell",z=46,x=84.7,y=69,v=1},

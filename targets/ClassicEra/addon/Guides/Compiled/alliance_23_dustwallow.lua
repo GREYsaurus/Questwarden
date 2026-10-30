@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Dustwallow", name="Dustwallow Marsh (Theramore)", faction="Alliance", chapter="Azeroth",
-  minLevel=36, maxLevel=41, zone=15, zoneName="Dustwallow Marsh",
+  minLevel=40, maxLevel=41, zone=15, zoneName="Dustwallow Marsh",
   desc="Theramore Isle and the Shady Rest Inn: the deserters and Lieutenant Paval Reethe, the black shield, Morgan Stern's cooking and the Mirefin murlocs.",
   next={{id="Both_Tanaris"},},
   steps={

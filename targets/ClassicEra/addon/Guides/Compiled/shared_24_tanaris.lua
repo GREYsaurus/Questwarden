@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="Both_Tanaris", name="Tanaris (Gadgetzan)", faction="Both", chapter="Azeroth",
-  minLevel=41, maxLevel=45, zone=440, zoneName="Tanaris",
+  minLevel=41, maxLevel=44, zone=440, zoneName="Tanaris",
   desc="Gadgetzan's neutral quest hub: the Wastewander bandits, the water survey, the pirates of Lost Rigger Cove and Steamwheedle Port. Zul'Farrak (dungeon) quests are optional.",
   next={{id="A_Feralas",faction="Alliance"},{id="H_Feralas",faction="Horde"},},
   steps={
@@ -37,9 +37,6 @@ ns.Guides:Register({
     {"turnin",q=110,title="Insect Part Analysis",npc="Alchemist Pestlezugg",z=440,x=50.9,y=27,text="Alchemist Pestlezugg.",v=1},
     {"accept",q=113,title="Insect Part Analysis",npc="Alchemist Pestlezugg",z=440,x=50.9,y=27,v=1},
     {"turnin",q=113,title="Insect Part Analysis",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},
-    {"accept",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,text="Needs level 44. If you are lower, {name} skips it and moves on.",optional=true,v=1},
-    {"complete",q=5863,title="The Dunemaul Compound",text="Dunemaul ogres.",optional=true,v=1},
-    {"turnin",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,optional=true,v=1},
     {"accept",q=8365,title="Pirate Hats Ahoy!",npc="Haughty Modiste",z=440,x=66.6,y=22.3,text="Haughty Modiste.",v=1},
     {"accept",q=2875,title="WANTED: Andre Firebeard",npc="Wanted Poster",z=440,x=66.8,y=22.3,text="The wanted poster in Gadgetzan. Turned in at Steamwheedle Port.",v=1},
     {"accept",q=8366,title="Southsea Shakedown",npc="Security Chief Bilgewhizzle",z=440,x=67.1,y=23.9,text="Security Chief Bilgewhizzle at Steamwheedle Port.",v=1},
@@ -50,6 +47,7 @@ ns.Guides:Register({
     {"turnin",q=8366,title="Southsea Shakedown",npc="Security Chief Bilgewhizzle",z=440,x=67.1,y=23.9,v=1},
     {"turnin",q=2875,title="WANTED: Andre Firebeard",npc="Security Chief Bilgewhizzle",z=440,x=67.1,y=23.9,text="Security Chief Bilgewhizzle, Steamwheedle Port.",v=1},
     {"turnin",q=8365,title="Pirate Hats Ahoy!",npc="Haughty Modiste",z=440,x=66.6,y=22.3,v=1},
+    {"grind",z=440,x=47.4,y=25.2,text="Gahz'ridian needs level 43: kill these nearby until you reach it.",level=43,mobs={"Fire Roc","Scorpid Tail Lasher"},v=1},
     {"accept",q=3161,title="Gahz'ridian",npc="Marvon Rivetseeker",z=440,x=52.7,y=45.9,text="Marvon Rivetseeker, south of Gadgetzan. Needs level 43.",optional=true,v=1},
     {"complete",q=2873,title="Stoley's Shipment",v=1},
     {"complete",q=3161,title="Gahz'ridian",text="Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.",optional=true,v=1},

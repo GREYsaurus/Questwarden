@@ -4,7 +4,7 @@
 @guide H_Hillsbrad
 @name Hillsbrad Foothills (Tarren Mill)
 @faction Horde
-@levels 27-31
+@levels 27-30
 @zone Hillsbrad Foothills
 @chapter Azeroth
 @desc Tarren Mill: the Battle of Hillsbrad, Apothecary Lydon's elixirs, the Syndicate and the Dalaran mages. Then to Thousand Needles.
@@ -12,12 +12,11 @@
 
 fp Tarren Mill
 bind Tarren Mill [area=272]
-accept The Hammer May Fall | Tallow, at the Tarren Mill area - leads to Hammerfall.
 accept Elixir of Suffering | Apothecary Lydon.
 accept 1066 Blood of Innocents [optional]
 accept Time To Strike [optional] | Deathguard Lesh.
-accept Prison Break In | Magus Wordeen Voidglare, south of Tarren Mill.
 accept 527 Battle of Hillsbrad | High Executor Darthalia.
+accept 547 Humbert's Sword
 accept 549 WANTED: Syndicate Personnel
 turnin Time To Strike [optional] | High Executor Darthalia, Tarren Mill.
 complete 549 WANTED: Syndicate Personnel
@@ -41,7 +40,6 @@ complete 528 Battle of Hillsbrad
 complete Elixir of Pain | Mountain Lions.
 turnin Elixir of Pain
 accept 502 Elixir of Pain [optional]
-complete Prison Break In
 turnin 528 Battle of Hillsbrad
 accept 529 Battle of Hillsbrad
 complete 529 Battle of Hillsbrad
@@ -49,13 +47,11 @@ turnin 529 Battle of Hillsbrad
 accept 532 Battle of Hillsbrad
 complete 532 Battle of Hillsbrad
 turnin 532 Battle of Hillsbrad
-turnin Prison Break In
-accept Dalaran Patrols
-complete Dalaran Patrols
-turnin Dalaran Patrols
 turnin 502 Elixir of Pain [optional]
+complete 547 Humbert's Sword
 complete 567 Dangerous!
 turnin 567 Dangerous!
+turnin 547 Humbert's Sword
 level 30
 train | Undercity trainers.
 note Fly to Orgrimmar via the Undercity zeppelin, then fly to Freewind Post (Thousand Needles).

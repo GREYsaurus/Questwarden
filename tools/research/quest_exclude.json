@@ -18,6 +18,9 @@
     "9262": "Investigate the Scourge of Orgrimmar: Scourge Invasion world event breadcrumb",
     "9263": "Investigate the Scourge of Darnassus: Scourge Invasion world event breadcrumb",
     "9264": "Investigate the Scourge of Thunder Bluff: Scourge Invasion world event breadcrumb",
-    "9265": "Investigate the Scourge of the Undercity: Scourge Invasion world event breadcrumb"
+    "9265": "Investigate the Scourge of the Undercity: Scourge Invasion world event breadcrumb",
+    "632": "prerequisite of The Thandol Span, which the Wetlands route already takes earlier",
+    "287": "prerequisite of The Reports, which the Dun Morogh route already takes earlier",
+    "729": "prerequisite of The Absent Minded Prospector, which the Darkshore route already takes earlier"
   }
 }

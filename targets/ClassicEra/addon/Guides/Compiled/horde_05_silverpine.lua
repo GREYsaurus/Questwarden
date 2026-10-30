@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Silverpine", name="Silverpine Forest (The Sepulcher)", faction="Horde", chapter="Azeroth",
-  minLevel=10, maxLevel=18, zone=130, zoneName="Silverpine Forest",
+  minLevel=11, maxLevel=17, zone=130, zoneName="Silverpine Forest",
   desc="The Sepulcher, the Yorick hut, the Dead Fields, the Decrepit Ferry, Fenris Isle, Ambermill and Pyrewood. Ends at about 18; take the zeppelin to Orgrimmar for the Barrens.",
   next={{id="H_Barrens"},},
   steps={

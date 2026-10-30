@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Hinterlands", name="The Hinterlands (Aerie Peak)", faction="Alliance", chapter="Azeroth",
-  minLevel=45, maxLevel=49, zone=47, zoneName="The Hinterlands",
+  minLevel=46, maxLevel=48, zone=47, zoneName="The Hinterlands",
   desc="Aerie Peak, the Witherbark trolls, Skulk Rock, the Featherbeard chain and the Altar of Zul.",
   next={{id="Both_SearingGorge"},},
   steps={

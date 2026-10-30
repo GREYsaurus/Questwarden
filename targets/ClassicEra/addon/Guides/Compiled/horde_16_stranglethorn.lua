@@ -4,9 +4,9 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Stranglethorn", name="Stranglethorn Vale (Grom'gol)", faction="Horde", chapter="Azeroth",
-  minLevel=34, maxLevel=40, zone=33, zoneName="Stranglethorn Vale",
+  minLevel=38, maxLevel=40, zone=33, zoneName="Stranglethorn Vale",
   desc="Grom'gol Base Camp, Nesingwary's Expedition, the Bloodscalp and Skullsplitter trolls, and Booty Bay. A contested zone - watch for Alliance players.",
-  next={{id="H_SwampOfSorrows"},},
+  next={{id="H_Stranglethorn_Late"},},
   steps={
     {"fp",npc="Thysta",z=33,x=32.5,y=29.4,place="Grom'gol",v=1},
     {"bind",npc="Innkeeper Thulbek",z=33,x=31.5,y=29.8,place="Grom'gol",npcId=5814,areas={117},v=1},

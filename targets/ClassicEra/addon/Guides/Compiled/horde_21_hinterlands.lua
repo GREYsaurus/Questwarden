@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Hinterlands", name="The Hinterlands (Revantusk Village)", faction="Horde", chapter="Azeroth",
-  minLevel=44, maxLevel=50, zone=47, zoneName="The Hinterlands",
+  minLevel=46, maxLevel=49, zone=47, zoneName="The Hinterlands",
   desc="Revantusk Village: the Vilebranch trolls, the Wildhammer messages, Elder Torntusk and the Hinterlands wildlife.",
   next={{id="Both_SearingGorge"},},
   steps={

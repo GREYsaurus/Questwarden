@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Arathi", name="Arathi Highlands (Refuge Pointe)", faction="Alliance", chapter="Azeroth",
-  minLevel=30, maxLevel=34, zone=45, zoneName="Arathi Highlands",
+  minLevel=30, maxLevel=33, zone=45, zoneName="Arathi Highlands",
   desc="Refuge Pointe, Northfold Manor, Stromgarde and the Shards of Myzrael. Then south to Stranglethorn.",
   next={{id="A_Desolace"},},
   steps={

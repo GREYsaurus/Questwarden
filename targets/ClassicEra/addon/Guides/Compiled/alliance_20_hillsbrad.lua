@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Hillsbrad", name="Hillsbrad Foothills (Southshore)", faction="Alliance", chapter="Azeroth",
-  minLevel=28, maxLevel=31, zone=267, zoneName="Hillsbrad Foothills",
+  minLevel=29, maxLevel=31, zone=267, zoneName="Hillsbrad Foothills",
   desc="Southshore quests: the coast, the Syndicate, the Crushridge ogres and the yetis. A short stop before Arathi.",
   next={{id="A_Arathi"},},
   steps={
@@ -33,6 +33,7 @@ ns.Guides:Register({
     {"complete",q=505,title="Syndicate Assassins",text="Syndicate camp north-east of Southshore (Durnholde area).",v=1},
     {"turnin",q=505,title="Syndicate Assassins",npc="Magistrate Henry Maleb",z=267,x=48.1,y=59.1,v=1},
     {"turnin",q=510,title="Foreboding Plans",npc="Magistrate Henry Maleb",z=267,x=48.1,y=59.1,v=1},
+    {"grind",z=267,x=47.4,y=64.7,text="Crushridge Bounty needs level 30: kill these nearby until you reach it.",level=30,mobs={"Torn Fin Tidehunter","Feral Mountain Lion"},v=1},
     {"accept",q=500,title="Crushridge Bounty",npc="Marshal Redpath",z=267,x=49.5,y=58.7,text="Marshal Redpath.",v=1},
     {"complete",q=500,title="Crushridge Bounty",text="Crushridge ogres north of Southshore.",v=1},
     {"turnin",q=500,title="Crushridge Bounty",npc="Marshal Redpath",z=267,x=49.5,y=58.7,v=1},

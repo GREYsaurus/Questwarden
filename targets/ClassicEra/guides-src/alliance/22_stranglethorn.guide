@@ -4,11 +4,11 @@
 @guide A_Stranglethorn
 @name Stranglethorn Vale
 @faction Alliance
-@levels 32-40
+@levels 36-38
 @zone Stranglethorn Vale
 @chapter Azeroth
 @desc Rebel Camp, Nesingwary's Expedition, Kurzen's compound, Grom'gol's neighbours and Booty Bay. A contested zone - watch for Horde players.
-@next A_Badlands
+@next A_Stranglethorn_Late
 
 turnin 322 Blessed Arm [class=Warrior,Rogue,Warlock; race=Gnome; optional] | Turned in at Stormwind City.
 turnin 322 Blessed Arm [class=Warrior,Paladin,Rogue,Priest,Warlock; race=Human; optional] | Turned in at Stormwind City.
@@ -30,7 +30,6 @@ accept 1301 James Hyal [class=Mage; race=Human,Gnome]
 accept 1301 James Hyal [class=Warrior,Rogue,Warlock; race=Gnome]
 accept 1301 James Hyal [class=Warrior,Paladin,Rogue,Priest,Warlock; race=Human]
 accept 1301 James Hyal [race=Dwarf,Night Elf]
-turnin 335 A Noble Brew [optional] | Turned in at Stormwind City.
 accept 336 A Noble Brew
 accept 1245 The Missing Diplomat
 turnin 78 The Legend of Stalvan [race=Human,Dwarf,Night Elf,Gnome] | Turned in at Duskwood.
@@ -123,6 +122,7 @@ turnin 210 Krazek's Cookery
 turnin 616 The Haunted Isle
 turnin 201 Investigate the Camp
 accept Scaring Shaky | "Sea Wolf" MacKinley.
+level 37 | The Bloodsail Buccaneers needs level 37: kill monsters nearby until you reach it.
 accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Elder Saltwater Crocolisks and Snapjaws.
@@ -156,10 +156,13 @@ turnin 213 Hostile Takeover
 turnin 599 The Bloodsail Buccaneers
 complete 609 Voodoo Dues
 turnin 189 Bloodscalp Ears
+accept 604 The Bloodsail Buccaneers
 turnin 609 Voodoo Dues
+complete 604 The Bloodsail Buccaneers
 turnin 198 Supplies to Private Thorsen
 turnin 328 The Hidden Key
 turnin 192 Panther Mastery
+turnin 604 The Bloodsail Buccaneers
 level 38
 train | Fly to Ironforge/Stormwind to train.
 note Leave the remaining Tiger/Panther/Raptor Mastery chain for your second STV visit or skip it.

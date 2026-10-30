@@ -5,7 +5,7 @@
 @name Shadowglen & Teldrassil
 @faction Alliance
 @races NightElf
-@levels 1-11
+@levels 1-12
 @zone Teldrassil
 @chapter Azeroth
 @start
@@ -49,6 +49,7 @@ accept 921 Crown of the Earth
 complete 921 Crown of the Earth | Fill the phial at the moonwell north of Aldrassil.
 turnin 921 Crown of the Earth
 accept 928 Crown of the Earth
+grind 5 Webwood Spider, Nightsaber | In Favor of Elune needs level 5: kill these nearby until you reach it.
 accept 5622 In Favor of Elune [class=Priest; optional] | Needs level 5. If you are lower, {name} skips it and moves on.
 turnin 3119 Hallowed Sigil [class=Priest]
 turnin The Woodland Protector | Tarindrella in the glade.
@@ -101,7 +102,6 @@ accept 935 Crown of the Earth
 accept Recipe of the Kaldorei | Zarrin.
 complete Recipe of the Kaldorei | Webwood Lurkers drop Small Spider Legs.
 turnin Recipe of the Kaldorei
-accept 2241 The Apple Falls [class=Rogue] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin Elixirs for the Bladeleafs
 accept 489 Seek Redemption! [optional]
 complete 2459 Ferocitas the Dream Eater
@@ -121,7 +121,7 @@ complete 937 The Enchanted Glade | Bloodfeather Belt drops from Bloodfeather Har
 turnin 937 The Enchanted Glade
 accept 940 Teldrassil
 accept 931 The Shimmering Frond
-turnin 2241 The Apple Falls [class=Rogue] | Turned in at Darnassus.
+grind 10 Bloodfeather Fury, Bloodfeather Harpy | Destiny Calls needs level 10: kill these nearby until you reach it.
 accept 2242 Destiny Calls [class=Rogue] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin 922 Rellian Greenspyre [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.
 turnin 922 Rellian Greenspyre [class=Rogue] | Turned in at Darnassus.

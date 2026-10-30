@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="Both_UngoroCrater", name="Un'Goro Crater", faction="Both", chapter="Azeroth",
-  minLevel=48, maxLevel=52, zone=490, zoneName="Un'Goro Crater",
+  minLevel=49, maxLevel=51, zone=490, zoneName="Un'Goro Crater",
   desc="Marshal's Refuge and the neutral crater quests: pylons, devilsaurs, oozes, raptors, the gorillas and Linken.",
   next={{id="A_Felwood",faction="Alliance"},{id="H_Felwood",faction="Horde"},},
   steps={
@@ -48,6 +48,7 @@ ns.Guides:Register({
     {"turnin",q=4503,title="Shizzle's Flyer",npc="Shizzle",z=490,x=44.2,y=11.6,v=1},
     {"turnin",q=4141,title="Muigin and Larion",npc="Muigin",z=490,x=42.9,y=9.6,faction="Alliance",v=1},
     {"turnin",q=4145,title="Larion and Muigin",npc="Larion",z=490,x=45.5,y=8.7,faction="Horde",v=1},
+    {"grind",z=490,x=50.2,y=11.5,text="Lost! needs level 50: kill these nearby until you reach it.",level=50,mobs={"Pterrordax","Primal Ooze"},v=1},
     {"accept",q=4492,title="Lost!",npc="Spraggle Frock",z=490,x=43.6,y=8.5,v=1},
     {"accept",q=4285,title="The Northern Pylon",npc="J.D. Collie",z=490,x=41.9,y=2.7,text="Escort quest: start it when you are ready to follow.",v=1},
     {"accept",q=4287,title="The Eastern Pylon",npc="J.D. Collie",z=490,x=41.9,y=2.7,text="Escort quest: start it when you are ready to follow.",v=1},

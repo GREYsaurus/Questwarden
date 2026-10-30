@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="A_Desolace", name="Desolace (Nijel's Point)", faction="Alliance", chapter="Azeroth",
-  minLevel=33, maxLevel=37, zone=405, zoneName="Desolace",
+  minLevel=33, maxLevel=36, zone=405, zoneName="Desolace",
   desc="Nijel's Point: the Reclaimers and the Karnitol wreck, Vahlarriel's search for the Malem family, Rackmore's treasure, the Magram centaurs and the Gizelton caravan's kodos. Loops run north-east, west coast, Thunder Axe Fortress, then the south.",
   next={{id="A_Stranglethorn"},},
   steps={

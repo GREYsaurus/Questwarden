@@ -1,0 +1,34 @@
+# ClassicGuide - Stranglethorn Vale return visit (39-45), Horde, WoW Classic Era
+# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route.
+# GENERATED as a starting point by tools/research/zone_guide.py (quests no other guide uses, in waves);
+# edit freely: it is a normal guide source from here on.
+
+@guide H_Stranglethorn_Late
+@name Stranglethorn Vale (return, 39-45)
+@faction Horde
+@levels 39-40
+@zone Stranglethorn Vale
+@chapter Azeroth
+@desc A second pass through Stranglethorn Vale at 39-45 for the quests the first visit was too low for.
+@next H_SwampOfSorrows
+
+note Back in Stranglethorn Vale for the higher-level quests.
+# wave 1: pick up
+accept 576 Keep An Eye Out
+accept 209 Skullsplitter Tusks
+accept 587 Up to Snuff
+accept 573 Mok'thardin's Enchantment
+accept 589 The Singing Crystals
+accept 196 Raptor Mastery
+complete 209 Skullsplitter Tusks
+complete 589 The Singing Crystals
+complete 196 Raptor Mastery
+complete 573 Mok'thardin's Enchantment
+complete 576 Keep An Eye Out
+complete 587 Up to Snuff
+turnin 576 Keep An Eye Out
+turnin 209 Skullsplitter Tusks
+turnin 587 Up to Snuff
+turnin 573 Mok'thardin's Enchantment
+turnin 589 The Singing Crystals
+turnin 196 Raptor Mastery

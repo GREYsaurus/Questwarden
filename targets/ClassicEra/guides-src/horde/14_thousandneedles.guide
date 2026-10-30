@@ -4,13 +4,12 @@
 @guide H_ThousandNeedles
 @name Thousand Needles (Freewind Post)
 @faction Horde
-@levels 29-33
+@levels 30-32
 @zone Thousand Needles
 @chapter Azeroth
 @desc Freewind Post, the Grimtotem and centaur camps, and the Shimmering Flats racing goblins and gnomes.
 @next H_Desolace
 
-turnin 1195 The Sacred Flame [optional] | Turned in at Thunder Bluff.
 accept 1196 The Sacred Flame [optional]
 accept 879 Betrayal from Within [optional]
 accept 885 Washte Pawne [class=Shaman; race=Orc,Tauren,Troll; optional]
@@ -28,10 +27,6 @@ turnin 849 Revenge of Gann [optional] | Turned in at The Barrens.
 accept 857 The Tear of the Moons [optional]
 complete 857 The Tear of the Moons [optional] | Tear of the Moons: loot General Twinbraid's Strongbox.
 turnin 857 The Tear of the Moons [optional] | Turned in at The Barrens.
-turnin 5881 Calling in the Reserves [class=Warrior,Hunter,Rogue,Warlock; race=Orc; optional]
-turnin 5881 Calling in the Reserves [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll; optional]
-turnin 5881 Calling in the Reserves [class=Warrior,Hunter,Druid; race=Tauren; optional]
-turnin 5881 Calling in the Reserves [race=Undead; optional]
 accept Message to Freewind Post | Brave Moonhorn at the Great Lift, on the Barrens side.
 accept 1718 The Islander [class=Warrior; race=Orc,Undead,Tauren,Troll; optional]
 fp Freewind Post
@@ -108,6 +103,7 @@ turnin 4904 Free at Last [optional]
 turnin Grimtotem Spying
 turnin 5147 Wanted - Arnak Grimtotem [optional]
 turnin Wind Rider
+grind 32 Screeching Roguefeather, Screeching Windcaller | Family Tree needs level 32: kill these nearby until you reach it.
 accept 5361 Family Tree
 turnin 1145 The Swarm Grows [class=Warrior; race=Orc,Undead,Tauren,Troll] | Turned in at Orgrimmar.
 turnin 1145 The Swarm Grows [class=Rogue,Priest,Mage,Warlock; race=Undead] | Turned in at Orgrimmar.

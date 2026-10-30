@@ -4,7 +4,7 @@
 @guide Both_EasternPlaguelands
 @name Eastern Plaguelands (Light's Hope)
 @faction Both
-@levels 56-58
+@levels 57-58
 @zone Eastern Plaguelands
 @chapter Azeroth
 @desc Tirion Fordring's hut on the western edge, Augustus at Terrordale, Light's Hope Chapel and the plaguehounds, then Darrowshire and the Redpath family. Horde also work for Nathanos Blightcaller at Marris Stead. Ends at 58 for the Dark Portal.
@@ -51,8 +51,14 @@ complete 6024 Hameya's Plea [faction=Alliance]
 complete 6024 Hameya's Plea [faction=Horde]
 complete 6133 The Ranger Lord's Behest [faction=Horde]
 turnin 6133 The Ranger Lord's Behest [faction=Horde]
+accept 5742 Redemption [faction=Alliance]
+accept 5742 Redemption [faction=Horde]
 turnin 6024 Hameya's Plea [faction=Alliance]
+complete 5742 Redemption [faction=Alliance]
+complete 5742 Redemption [faction=Horde]
 turnin 6024 Hameya's Plea [faction=Horde]
+turnin 5742 Redemption [faction=Alliance]
+turnin 5742 Redemption [faction=Horde]
 level 58
 train
 note At 58 go to the Dark Portal in the Blasted Lands. Alliance: fly to Stormwind, then Nethergarde Keep (the herald for Through the Dark Portal is in Stormwind or Nethergarde). Horde: fly to Orgrimmar or the Undercity (the herald is there), then Stonard and ride south.

@@ -4,7 +4,7 @@
 local _, ns = ...
 ns.Guides:Register({
   id="H_Felwood", name="Felwood (Bloodvenom Post)", faction="Horde", chapter="Azeroth",
-  minLevel=51, maxLevel=54, zone=361, zoneName="Felwood",
+  minLevel=51, maxLevel=53, zone=361, zoneName="Felwood",
   desc="Bloodvenom Post, the corrupted moonwells, Jaedenar, Shatter Scar Vale and the Timbermaw furbolgs.",
   next={{id="Both_Winterspring"},},
   steps={

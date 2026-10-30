@@ -4,27 +4,22 @@
 @guide A_Redridge
 @name Redridge Mountains
 @faction Alliance
-@levels 15-21
+@levels 16-20
 @zone Redridge Mountains
 @chapter Azeroth
 @desc Lakeshire and the gnoll and Blackrock camps. Shared by humans arriving from Westfall and dwarves and gnomes arriving from Loch Modan.
 @next A_Duskwood
 
-accept 66 The Legend of Stalvan | Needs level 22. If you are lower, {name} skips it and moves on.
 accept 1642 The Tome of Divinity [class=Paladin; race=Human]
 turnin 1642 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
 accept 1643 The Tome of Divinity [class=Paladin; race=Human]
 accept Encroaching Gnolls | Guard Parker at the Elwynn border bridge.
-accept 2360 Mathias and the Defias [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | Needs level 20. If you are lower, {name} skips it and moves on.
+grind 16 Black Dragon Whelp, Murloc Minor Tidecaller | Redridge Rendezvous needs level 16: kill these nearby until you reach it.
 accept 2281 Redridge Rendezvous [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | Needs level 16. If you are lower, {name} skips it and moves on.
 turnin 1643 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
 accept 1644 The Tome of Divinity [class=Paladin; race=Human]
 turnin 1644 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
 accept 1780 The Tome of Divinity [class=Paladin; race=Human]
-accept 1649 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Needs level 20. If you are lower, {name} skips it and moves on.
-accept 94 A Watchful Eye [optional] | Needs level 20. If you are lower, {name} skips it and moves on.
-turnin 1649 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Turned in at Stormwind City.
-accept 1650 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin 1780 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
 accept 1781 The Tome of Divinity [class=Paladin; race=Human]
 turnin 1781 The Tome of Divinity [class=Paladin; race=Human] | Turned in at Stormwind City.
@@ -45,30 +40,20 @@ turnin 6661 Deeprun Rat Roundup [class=Priest,Druid; race=Night Elf; optional]
 accept Assessing the Threat
 fp Lakeshire
 turnin 1738 Heartswood [class=Warlock; race=Human,Gnome; optional] | Turned in at Stormwind City.
-accept 1739 The Binding [class=Warlock; race=Human,Gnome; optional] | Needs level 20. If you are lower, {name} skips it and moves on.
-complete 1739 The Binding [class=Warlock; race=Human,Gnome; optional]
-turnin 1739 The Binding [class=Warlock; race=Human,Gnome; optional] | Turned in at Stormwind City.
 accept The Lost Tools | Foreman Oslow at the broken bridge.
 accept The Price of Shoes | Verner Osgood, south of the bridge.
 accept Wanted: Gath'Ilzogg
 accept Wanted: Lieutenant Fangore
 turnin 65 The Defias Brotherhood [race=Human; optional] | Wiley the Black in the Lakeshire inn (if you brought it from Westfall).
-accept 34 An Unwelcome Guest | Needs level 18. If you are lower, {name} skips it and moves on.
-complete 34 An Unwelcome Guest | Bellygrub's Tusk drops from Bellygrub.
-turnin 34 An Unwelcome Guest
 accept Redridge Goulash | Chef Breanna in the inn.
 accept Dry Times
 accept A Free Lunch
 bind Lakeshire [area=69]
 accept Solomon's Law
-accept Missing In Action [optional; group=2] | Corporal Keeshan at Render's Camp - escort quest.
 turnin The Price of Shoes | Smith Argus, the Goldshire blacksmith (Elwynn). Combine with a training trip.
 accept Return to Verner
 complete Wanted: Lieutenant Fangore [elite; group=3; optional]
-turnin 94 A Watchful Eye [optional]
-accept 248 Looking Further [optional] | Needs level 20. If you are lower, {name} skips it and moves on.
 complete Wanted: Gath'Ilzogg [elite; group=3; optional]
-turnin 248 Looking Further [optional]
 complete The Lost Tools | Underwater by the broken bridge, a box on the lake bed.
 turnin The Lost Tools
 accept The Everstill Bridge
@@ -87,7 +72,6 @@ turnin Visit the Herbalist | Martie Jainrose, the farm north-west of Lakeshire.
 accept Delivering Daffodils
 turnin Redridge Goulash
 accept Selling Fish | Dockmaster Baren on the dock.
-accept 150 Murloc Poachers | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin Delivering Daffodils | Darcy in the Lakeshire inn.
 complete Selling Fish | Murlocs drop Spotted Sunfish.
 complete 2282 Alther's Mill [class=Rogue; race=Human,Dwarf,Night Elf,Gnome; optional] | Token of Thievery: loot Lucius's Lockbox.
@@ -98,7 +82,6 @@ turnin Solomon's Law
 turnin Wanted: Lieutenant Fangore [optional]
 turnin Wanted: Gath'Ilzogg [optional]
 turnin Selling Fish
-turnin 150 Murloc Poachers
 turnin Return to Verner
 accept A Baying of Gnolls
 complete A Baying of Gnolls | Gnolls around Alther's Mill and Stonewatch.
@@ -107,8 +90,7 @@ accept Howling in the Hills
 complete Howling in the Hills | Yowler is a gnoll at Stonewatch Keep.
 turnin Howling in the Hills
 turnin The Everstill Bridge
-complete Missing In Action [optional]
-turnin Missing In Action [optional]
+grind 18 Murloc Flesheater, Murloc Minor Tidecaller | Blackrock Menace needs level 18: kill these nearby until you reach it.
 accept Blackrock Menace | Marshal Marris at the east house of Lakeshire.
 complete Blackrock Menace | Blackrock orcs in the Render's Camp area north of Lakeshire.
 turnin Blackrock Menace
