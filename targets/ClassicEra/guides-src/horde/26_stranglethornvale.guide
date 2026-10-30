@@ -46,11 +46,8 @@ turnin 582 Headhunting
 turnin 569 The Defense of Grom'gol
 turnin 570 Mok'thardin's Enchantment
 turnin 187 Tiger Mastery
-accept 192 Panther Mastery
 accept 188 Tiger Mastery
-complete 192 Panther Mastery
 complete 188 Tiger Mastery
-turnin 192 Panther Mastery
 turnin 188 Tiger Mastery
 fp Booty Bay
 accept 605 Singing Blue Shards | Crank Fizzlebub.
@@ -65,4 +62,7 @@ complete 189 Bloodscalp Ears
 turnin 577 Some Assembly Required
 turnin 213 Hostile Takeover
 turnin 189 Bloodscalp Ears
+accept 191 Panther Mastery
+complete 191 Panther Mastery
+turnin 191 Panther Mastery
 level 36 | Arathi Highlands starts at 36. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

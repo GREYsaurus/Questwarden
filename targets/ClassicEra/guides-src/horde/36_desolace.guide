@@ -22,4 +22,11 @@ turnin 5943 Gizelton Caravan
 accept 7028 Twisted Evils
 complete 7028 Twisted Evils
 turnin 7028 Twisted Evils
+accept 5501 Bone Collector
+complete 5501 Bone Collector
+turnin 5501 Bone Collector
+note The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.
+accept 6132 Get Me Out of Here!
+complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
+turnin 6132 Get Me Out of Here!
 level 44 | Tanaris starts at 44. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

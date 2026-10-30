@@ -13,5 +13,14 @@
 @next H_51_Felwood
 
 travel Azshara
-note No quests are written for this visit yet.
+accept 3601 Kim'jael Indeed!
+complete 3601 Kim'jael Indeed!
+turnin 3601 Kim'jael Indeed!
+accept 5534 Kim'jael's "Missing" Equipment
+complete 5534 Kim'jael's "Missing" Equipment
+turnin 5534 Kim'jael's "Missing" Equipment
+accept 3561 Delivery to Archmage Xylem
+turnin 3561 Delivery to Archmage Xylem
+accept 3565 Xylem's Payment to Jediga
+turnin 3565 Xylem's Payment to Jediga
 level 54 | Felwood starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

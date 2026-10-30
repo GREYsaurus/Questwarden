@@ -16,4 +16,20 @@ travel Feralas
 train
 accept 2844 The Giant Guardian | Rockbiter at the Twin Colossals.
 turnin 2844 The Giant Guardian
+accept 7003 Zapped Giants | Zorbin Fandazzle, the coast.
+complete 7003 Zapped Giants | Use the Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.
+turnin 7003 Zapped Giants
+accept 7721 Fuel for the Zapping | Needs level 45. If you are lower, {name} skips it and moves on.
+complete 7721 Fuel for the Zapping | Water elementals on the coast.
+turnin 7721 Fuel for the Zapping
+accept 7733 Improved Quality
+complete 7733 Improved Quality
+turnin 7733 Improved Quality
+note The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.
+accept 2969 Freedom for All Creatures | Kindal Moonweaver, at the camp east.
+complete 2969 Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
+turnin 2969 Freedom for All Creatures
+accept 2970 Doling Justice
+complete 2970 Doling Justice | Grimtotem tauren at the compound.
+turnin 2970 Doling Justice
 level 49 | Dustwallow Marsh starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

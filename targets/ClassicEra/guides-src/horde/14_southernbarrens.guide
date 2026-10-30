@@ -14,9 +14,31 @@
 
 travel The Barrens
 train
-accept 893 Weapons of Choice
-complete 893 Weapons of Choice
-turnin 893 Weapons of Choice
-accept 884 Owatanka [optional]
-turnin 884 Owatanka [optional]
+accept 883 Lakota'mani [optional]
+turnin 883 Lakota'mani [optional]
+accept 1487 Deviate Eradication [dungeon=Wailing Caverns]
+complete 1487 Deviate Eradication [dungeon=Wailing Caverns]
+turnin 1487 Deviate Eradication [dungeon=Wailing Caverns]
+accept 878 Tribes at War
+complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
+complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
+complete 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
+complete 878 Tribes at War [race=Undead]
+complete 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
+fp Camp Taurajo
+turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
+turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
+turnin 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
+turnin 878 Tribes at War [race=Undead]
+turnin 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
+accept 5052 Blood Shards of Agamaggan
+complete 5052 Blood Shards of Agamaggan
+turnin 5052 Blood Shards of Agamaggan
+accept 1483 Ziz Fizziks [optional]
+turnin 1483 Ziz Fizziks [optional] | Turned in at Stonetalon Mountains.
+accept 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll]
+complete 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Super Reaper 6000 Blueprints drops from Venture Co. Operator.
+turnin 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Stonetalon Mountains.
+accept 1094 Further Instructions
+turnin 1094 Further Instructions
 level 23 | Stonetalon Mountains starts at 23. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

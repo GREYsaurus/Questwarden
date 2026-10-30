@@ -30,10 +30,6 @@ turnin 325 Armed and Ready [optional] | Turned in at Duskwood.
 accept 55 Morbent Fel [optional]
 complete 55 Morbent Fel [optional]
 turnin 55 Morbent Fel [optional] | Turned in at Duskwood.
-accept 1301 James Hyal [class=Mage; race=Human,Gnome]
-accept 1301 James Hyal [class=Warrior,Rogue,Warlock; race=Gnome]
-accept 1301 James Hyal [class=Warrior,Paladin,Rogue,Priest,Warlock; race=Human]
-accept 1301 James Hyal [race=Dwarf,Night Elf]
 accept 336 A Noble Brew
 accept 1245 The Missing Diplomat
 turnin 78 The Legend of Stalvan [race=Human,Dwarf,Night Elf,Gnome] | Turned in at Duskwood.
@@ -92,21 +88,14 @@ accept 1248 The Missing Diplomat
 accept 1250 The Missing Diplomat
 turnin 1250 The Missing Diplomat | Turned in at Wetlands.
 turnin 1248 The Missing Diplomat | Turned in at Wetlands.
-turnin 1301 James Hyal | Turned in at Wetlands.
 turnin 1243 The Missing Diplomat | Turned in at Duskwood.
-accept 605 Singing Blue Shards | Crank Fizzlebub.
-accept 189 Bloodscalp Ears
 accept 198 Supplies to Private Thorsen
 accept 201 Investigate the Camp
 turnin 201 Investigate the Camp
 accept 575 Supply and Demand | Drizzlik, Booty Bay.
 complete 575 Supply and Demand | Elder Saltwater Crocolisks and Snapjaws.
-complete 605 Singing Blue Shards | Crystal Spine Basilisks.
 turnin 575 Supply and Demand
-turnin 605 Singing Blue Shards
 complete 187 Tiger Mastery | Elder Stranglethorn Tigers.
 turnin 187 Tiger Mastery
-complete 189 Bloodscalp Ears
-turnin 189 Bloodscalp Ears
 turnin 198 Supplies to Private Thorsen
 level 33 | Shimmering Flats starts at 33. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -74,12 +74,9 @@ accept 1524 Call of Fire [class=Shaman; race=Tauren]
 accept 924 The Demon Seed [race=Undead; optional]
 complete 1498 Path of Defense [class=Warrior; race=Orc,Undead,Tauren,Troll] | Singed Scale drops from Lightning Hide and Thunder Lizard.
 turnin 1498 Path of Defense [class=Warrior; race=Orc,Undead,Tauren,Troll]
-accept 895 WANTED: Baron Longshore
 accept 887 Southsea Freebooters | Gazlowe, Ratchet.
 complete 887 Southsea Freebooters | Pirates at the camp north of Ratchet.
-complete 895 WANTED: Baron Longshore | Baron Longshore's Head drops from Baron Longshore.
 turnin 887 Southsea Freebooters
-turnin 895 WANTED: Baron Longshore
 accept 890 The Missing Shipment
 turnin 6362 Ride to Thunder Bluff [race=Tauren] | Turned in at Thunder Bluff.
 accept 6363 Tal the Wind Rider Master [race=Tauren]
@@ -106,12 +103,8 @@ turnin 844 Plainstrider Menace
 accept 845 The Zhevra
 complete 870 The Forgotten Pools | Explore the pool north of the Crossroads.
 turnin 870 The Forgotten Pools
-accept 877 The Stagnant Oasis
 complete 845 The Zhevra | Zhevra Runners.
 complete 848 Fungal Spores | The Forgotten Pools.
-complete 877 The Stagnant Oasis
-turnin 877 The Stagnant Oasis
-accept 880 Altered Beings
 turnin 871 Disrupt the Attacks
 accept 872 The Disruption Ends
 accept 5041 Supplies for the Crossroads
@@ -137,7 +130,6 @@ complete 1525 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional] | Fir
 turnin 924 The Demon Seed [race=Orc,Undead,Troll; optional]
 complete 894 Samophlange | The Sludge Fen control console.
 complete 903 Prowlers of the Barrens | Savannah Prowlers.
-complete 880 Altered Beings | Oasis creatures.
 complete 850 Kolkar Leaders | Barak Kodobane.
 turnin 894 Samophlange
 accept 900 Samophlange
@@ -158,7 +150,6 @@ accept 881 Echeyakee
 complete 881 Echeyakee | Use the horn at Echeyakee's lair.
 turnin 881 Echeyakee
 accept 905 The Angry Scytheclaws
-accept 1061 The Spirits of Stonetalon
 accept 5726 Hidden Enemies [class=Warrior,Rogue,Priest,Mage; race=Undead; optional]
 complete 5726 Hidden Enemies [class=Warrior,Rogue,Priest,Mage; race=Undead; optional] | Lieutenant's Insignia drops from Burning Blade Apprentice and Burning Blade Fanatic.
 turnin 5726 Hidden Enemies [class=Warrior,Rogue,Priest,Mage; race=Undead; optional] | Turned in at Orgrimmar.
@@ -170,11 +161,9 @@ turnin 1526 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional]
 accept 1527 Call of Fire [class=Shaman; race=Orc,Tauren,Troll]
 turnin 1527 Call of Fire [class=Shaman; race=Orc,Tauren,Troll]
 complete 821 Chen's Empty Keg | Savannah Lion Tusk drops from Savannah Highmane, Savannah Huntress and Savannah Patriarch and others. Plainstrider Kidney drops from Fleeting Plainstrider, Grea
-turnin 880 Altered Beings
 turnin 821 Chen's Empty Keg
 turnin 902 Samophlange [optional]
 turnin 905 The Angry Scytheclaws
-turnin 1061 The Spirits of Stonetalon
 accept 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional]
 turnin 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional] | Turned in at Tirisfal Glades.
 accept 1820 Speak with Coleman [class=Warrior; race=Orc,Undead,Tauren,Troll; optional]
@@ -183,9 +172,6 @@ turnin 6002 Body and Heart [class=Druid; race=Tauren] | Turned in at Thunder Blu
 turnin 853 Apothecary Zamah [race=Orc,Undead,Troll] | Turned in at Thunder Bluff.
 turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
 turnin 892 The Missing Shipment
-accept 888 Stolen Booty
-complete 888 Stolen Booty | Back to the pirate camp north of Ratchet for Tazan.
-turnin 888 Stolen Booty
 turnin 6386 Return to the Crossroads. [race=Orc,Troll; optional]
 turnin 6364 Return to Jahan [class=Warrior,Hunter,Druid; race=Tauren]
 accept 3921 Wenikee Boltbucket

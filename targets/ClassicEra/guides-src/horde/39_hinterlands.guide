@@ -13,8 +13,6 @@
 @next H_40_StranglethornVale
 
 travel The Hinterlands
-fp Revantusk Village
-accept 7840 Lard Lost His Lunch | Lard.
 accept 7839 Vilebranch Hooligans | Smith Slagtree.
 accept 7844 Cannibalistic Cousins | Mystic Yayo'jin.
 accept 7841 Message to the Wildhammer | Otho Moji'ko.
@@ -25,7 +23,6 @@ complete 7828 Stalking the Stalkers | Silvermane Stalkers.
 complete 7829 Hunt the Savages | Savage Owlbeasts.
 complete 7830 Avenging the Fallen | Wildhammer dwarves.
 complete 7839 Vilebranch Hooligans | Vilebranch trolls.
-complete 7840 Lard Lost His Lunch | The Wildhammer camp by the coast.
 complete 7844 Cannibalistic Cousins | Vilebranch Scalpers.
 complete 7841 Message to the Wildhammer | Highvale area Wildhammer.
 accept 7816 Gammerita, Mon!
@@ -40,7 +37,6 @@ complete 7842 Another Message to the Wildhammer | Long Elegant Feather drops fro
 turnin 7842 Another Message to the Wildhammer
 turnin 7844 Cannibalistic Cousins
 turnin 7839 Vilebranch Hooligans
-turnin 7840 Lard Lost His Lunch
 note The next quest, Rin'ji is Trapped!, is an escort: pick it up only when you are ready to follow the NPC.
 accept 2742 Rin'ji is Trapped!
 complete 2742 Rin'ji is Trapped! | Escort: stay close; it fails if the NPC dies.

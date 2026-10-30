@@ -17,6 +17,9 @@ ns.Guides:Register({
     {"accept",q=589,title="The Singing Crystals",npc="Kin'weelay",z=33,x=32.3,y=27.7,v=1},
     {"complete",q=589,title="The Singing Crystals",v=1},
     {"turnin",q=589,title="The Singing Crystals",npc="Kin'weelay",z=33,x=32.3,y=27.7,v=1},
+    {"accept",q=608,title="The Bloodsail Buccaneers",npc="Fleet Master Seahorn",z=33,x=27.2,y=77,v=1},
+    {"complete",q=608,title="The Bloodsail Buccaneers",v=1},
+    {"turnin",q=608,title="The Bloodsail Buccaneers",npc="Fleet Master Seahorn",z=33,x=27.2,y=77,v=1},
     {"level",text="Searing Gorge starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=47,v=1},
   },
 })

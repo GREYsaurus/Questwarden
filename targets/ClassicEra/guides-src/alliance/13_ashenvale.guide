@@ -23,20 +23,11 @@ accept 1020 Orendil's Cure
 accept 970 The Tower of Althalaxx [optional] | Delgren the Purifier at Maestra's Post.
 complete 970 The Tower of Althalaxx [optional] | Dark Strand cultists at Ordil'Aran.
 turnin 970 The Tower of Althalaxx [optional]
-accept 973 The Tower of Althalaxx [optional]
 fp Astranaar
 accept 991 Raene's Cleansing | Raene Wolfrunner, Astranaar.
-complete 973 The Tower of Althalaxx [class=Warlock; race=Human,Gnome; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
-complete 973 The Tower of Althalaxx [class=Warrior,Rogue,Mage; race=Gnome; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
-complete 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
-complete 973 The Tower of Althalaxx [race=Dwarf,Night Elf; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
 accept 1008 The Zoram Strand | Shindrell Swiftfire.
 complete 1008 The Zoram Strand | Wrathtail naga at the strand.
 turnin 1008 The Zoram Strand
-turnin 973 The Tower of Althalaxx [class=Warlock; race=Human,Gnome; optional]
-turnin 973 The Tower of Althalaxx [class=Warrior,Rogue,Mage; race=Gnome; optional]
-turnin 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
-turnin 973 The Tower of Althalaxx [race=Dwarf,Night Elf; optional]
 complete 991 Raene's Cleansing | Teronis' corpse is at the Zoram Strand ruins.
 turnin 991 Raene's Cleansing
 accept 1023 Raene's Cleansing
@@ -46,26 +37,16 @@ turnin 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=H
 turnin 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Turned in at Darkshore.
 complete 1023 Raene's Cleansing | Gnarled ancients near the lake drop the Glowing Soul Gem.
 turnin 1023 Raene's Cleansing
-accept 1025 An Aggressive Defense
 accept 1024 Raene's Cleansing
-complete 1025 An Aggressive Defense | Foulweald furbolgs south of Astranaar.
-turnin 1025 An Aggressive Defense
 turnin 1020 Orendil's Cure | Pelturas Whitemoon, Astranaar.
 turnin 1024 Raene's Cleansing
 accept 1033 Elune's Tear
 complete 1033 Elune's Tear | The tear lies on the isle in Lake Iris.
 turnin 1033 Elune's Tear
-accept 1034 The Ruins of Stardust
-complete 1034 The Ruins of Stardust | Stardust Covered Bushes south of Astranaar.
-turnin 1034 The Ruins of Stardust
 turnin 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Turned in at The Barrens.
 accept 1016 Elemental Bracers | Sentinel Velene Starstrike, Silverwind Refuge.
 complete 1016 Elemental Bracers | Befouled Water Elementals at Mystral Lake; divine the bracers at the lake.
 turnin 1016 Elemental Bracers
 turnin 741 The Absent Minded Prospector [optional] | Turned in at Darnassus.
 accept 942 The Absent Minded Prospector [optional]
-note The next quest, Supplies to Auberdine, is an escort: pick it up only when you are ready to follow the NPC.
-accept 976 Supplies to Auberdine
-complete 976 Supplies to Auberdine | Escort: stay close; it fails if the NPC dies.
-turnin 976 Supplies to Auberdine
 level 22 | Stonetalon Mountains starts at 22. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

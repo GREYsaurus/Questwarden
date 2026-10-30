@@ -34,8 +34,6 @@ complete 944 The Master's Glaive | The Master's Glaive in the south.
 turnin 944 The Master's Glaive
 accept 4730 Beached Sea Creature
 accept 949 The Twilight Camp
-note  [optional] | The next quest, Therylune's Escape, is an escort: pick it up only when you are ready to follow the NPC.
-accept 945 Therylune's Escape [optional]
 turnin 949 The Twilight Camp
 accept 950 Return to Onu
 turnin 950 Return to Onu
@@ -46,7 +44,6 @@ accept 4811 The Red Crystal | Sentinel Glynda Nal'Shea.
 complete 4811 The Red Crystal | The crystal is on the cliff east of Auberdine.
 turnin 4811 The Red Crystal
 accept 4812 As Water Cascades
-accept 965 The Tower of Althalaxx | Sentinel Elissa Starbreeze.
 accept 984 How Big a Threat? | Terenthis.
 complete 984 How Big a Threat? | Explore the furbolg camp east of Auberdine.
 turnin 984 How Big a Threat?
@@ -58,9 +55,6 @@ turnin 2118 Plagued Lands
 accept 2138 Cleansing of the Infected
 complete 2138 Cleansing of the Infected | Rabid Thistle Bears.
 turnin 2138 Cleansing of the Infected
-accept 2139 Tharnariun's Hope
-complete 2139 Tharnariun's Hope | Den Mother in the bear cave north-east.
-turnin 2139 Tharnariun's Hope
 accept 954 Bashal'Aran | Thundris Windweaver.
 turnin 954 Bashal'Aran | Asterion, at the ruins east of Auberdine.
 accept 955 Bashal'Aran
@@ -101,9 +95,6 @@ complete 4740 WANTED: Murkdeep! [race=Dwarf,Night Elf; optional]
 complete 2178 Easy Strider Living | Strider meat from striders along the coast.
 turnin 2178 Easy Strider Living
 turnin 4762 The Cliffspring River
-accept 4763 The Blackwood Corrupted
-complete 4763 The Blackwood Corrupted | Blackwood furbolg camp in the north.
-turnin 4763 The Blackwood Corrupted
 complete 1001 Buzzbox 411 | Thresher eyes from threshers off the coast.
 turnin 1001 Buzzbox 411
 accept 4723 Beached Sea Creature
@@ -111,26 +102,13 @@ accept 1002 Buzzbox 323
 complete 1002 Buzzbox 323 | Moonstalkers.
 turnin 1002 Buzzbox 323
 accept 1003 Buzzbox 525
-complete 965 The Tower of Althalaxx | Balthule Shadowstrike, north-east.
-turnin 965 The Tower of Althalaxx
-accept 966 The Tower of Althalaxx
-complete 966 The Tower of Althalaxx | Dark Strand Fanatics at the tower.
-turnin 966 The Tower of Althalaxx
-accept 967 The Tower of Althalaxx
 accept 4727 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 accept 4727 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 accept 4727 Beached Sea Turtle [race=Dwarf,Night Elf; optional]
-complete 945 Therylune's Escape [optional] | Escort: stay close; it fails if the NPC dies.
-turnin 945 Therylune's Escape [optional]
 accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
 complete 1003 Buzzbox 525
 turnin 1003 Buzzbox 525
-accept 4731 Beached Sea Turtle
-accept 4732 Beached Sea Turtle
-accept 4733 Beached Sea Creature
-complete 967 The Tower of Althalaxx
-turnin 967 The Tower of Althalaxx
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Rogue,Mage; race=Gnome; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
 complete 982 Deep Ocean, Vast Sea [race=Dwarf,Night Elf; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
@@ -151,9 +129,6 @@ turnin 4727 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 4727 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 4727 Beached Sea Turtle [race=Dwarf,Night Elf; optional]
 turnin 4722 Beached Sea Turtle [optional]
-turnin 4731 Beached Sea Turtle
-turnin 4732 Beached Sea Turtle
-turnin 4733 Beached Sea Creature
 turnin 4730 Beached Sea Creature
 turnin 4728 Beached Sea Creature
 turnin 4723 Beached Sea Creature

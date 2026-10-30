@@ -37,4 +37,8 @@ turnin 7862 Job Opening: Guard Captain of Revantusk Village | Primal Torntusk.
 turnin 7850 Dark Vessels
 turnin 7861 Wanted: Vile Priestess Hexx and Her Minions [optional]
 turnin 7849 Separation Anxiety | Huntsman Markhor.
+fp Revantusk Village
+accept 7840 Lard Lost His Lunch | Lard.
+complete 7840 Lard Lost His Lunch | The Wildhammer camp by the coast.
+turnin 7840 Lard Lost His Lunch
 level 51 | Blasted Lands starts at 51. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

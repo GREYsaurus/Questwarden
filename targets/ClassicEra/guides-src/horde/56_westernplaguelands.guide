@@ -16,4 +16,13 @@ travel Western Plaguelands
 accept 5341 Barov Family Fortune [dungeon=Scholomance]
 complete 5341 Barov Family Fortune [dungeon=Scholomance]
 turnin 5341 Barov Family Fortune [dungeon=Scholomance]
+accept 5235 Target: Gahrron's Withering [zone=Tirisfal Glades]
+complete 5235 Target: Gahrron's Withering | The cauldron at Gahrron's Withering.
+turnin 5235 Target: Gahrron's Withering
+accept 5236 Return to the Bulwark
+turnin 5236 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5238 Mission Accomplished! [zone=Tirisfal Glades]
+turnin 5238 Mission Accomplished! [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 6025 Unfinished Business
+turnin 6025 Unfinished Business
 level 58 | Silithus starts at 58. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

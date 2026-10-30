@@ -16,4 +16,9 @@ travel The Barrens
 accept 874 Mahren Skyseer [optional]
 accept 1095 Further Instructions
 accept 1131 Steelsnap | Needs level 20. If you are lower, {name} skips it and moves on.
+accept 893 Weapons of Choice
+complete 893 Weapons of Choice
+turnin 893 Weapons of Choice
+accept 884 Owatanka [optional]
+turnin 884 Owatanka [optional]
 level 25 | Thousand Needles starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

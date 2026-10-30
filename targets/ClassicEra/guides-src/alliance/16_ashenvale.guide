@@ -23,4 +23,23 @@ turnin 1054 Culling the Threat
 accept 1017 Mage Summoner
 complete 1017 Mage Summoner | Sarilus Foulborne camps beside Mystral Lake.
 turnin 1017 Mage Summoner
+accept 973 The Tower of Althalaxx [optional]
+complete 973 The Tower of Althalaxx [class=Warlock; race=Human,Gnome; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
+complete 973 The Tower of Althalaxx [class=Warrior,Rogue,Mage; race=Gnome; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
+complete 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
+complete 973 The Tower of Althalaxx [race=Dwarf,Night Elf; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
+turnin 973 The Tower of Althalaxx [class=Warlock; race=Human,Gnome; optional]
+turnin 973 The Tower of Althalaxx [class=Warrior,Rogue,Mage; race=Gnome; optional]
+turnin 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
+turnin 973 The Tower of Althalaxx [race=Dwarf,Night Elf; optional]
+note The next quest, Supplies to Auberdine, is an escort: pick it up only when you are ready to follow the NPC.
+accept 976 Supplies to Auberdine
+complete 976 Supplies to Auberdine | Escort: stay close; it fails if the NPC dies.
+turnin 976 Supplies to Auberdine
+accept 1025 An Aggressive Defense
+complete 1025 An Aggressive Defense | Foulweald furbolgs south of Astranaar.
+turnin 1025 An Aggressive Defense
+accept 1034 The Ruins of Stardust
+complete 1034 The Ruins of Stardust | Stardust Covered Bushes south of Astranaar.
+turnin 1034 The Ruins of Stardust
 level 24 | Wetlands starts at 24. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -17,7 +17,6 @@ train
 accept 8460 Timbermaw Ally | Grazle, near the Timbermaw Hold tunnel.
 turnin 8460 Timbermaw Ally
 accept 5155 Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.
-accept 8462 Speak to Nafien
 accept 5156 Verifying the Corruption | Taronn Redfeather.
 accept 4505 Well of Corruption | Winna Hazzard, Bloodvenom Post.
 accept 6162 A Husband's Last Battle
@@ -28,22 +27,14 @@ turnin 4505 Well of Corruption
 accept 4506 Corrupted Sabers
 complete 4506 Corrupted Sabers | Use the cage on a corrupted saber.
 turnin 4506 Corrupted Sabers
-fp Bloodvenom Post
-accept 4102 Cleansing Felwood | Maybess Riverbreeze, Emerald Sanctuary.
 complete 6162 A Husband's Last Battle
 turnin 6162 A Husband's Last Battle
-complete 4102 Cleansing Felwood | Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.
-turnin 4102 Cleansing Felwood
-accept 5887 Salve via Hunting | Maybess Riverbreeze. Needs Cleansing Felwood turned in.
-complete 5887 Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
-turnin 5887 Salve via Hunting
 turnin 5155 Forces of Jaedenar
 accept 5157 Collection of the Corrupt Water
 complete 5157 Collection of the Corrupt Water | The corrupted moonwell in Jaedenar.
 turnin 5157 Collection of the Corrupt Water
 turnin 5156 Verifying the Corruption
 accept 8461 Deadwood of the North | Nafien.
-turnin 8462 Speak to Nafien
 complete 8461 Deadwood of the North | Deadwood furbolgs.
 turnin 8461 Deadwood of the North
 accept 8465 Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.

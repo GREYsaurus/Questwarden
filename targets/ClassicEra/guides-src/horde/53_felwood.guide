@@ -13,5 +13,13 @@
 @next H_54_WesternPlaguelands
 
 travel Felwood
-note No quests are written for this visit yet.
+accept 8462 Speak to Nafien
+turnin 8462 Speak to Nafien
+fp Bloodvenom Post
+accept 4102 Cleansing Felwood | Maybess Riverbreeze, Emerald Sanctuary.
+complete 4102 Cleansing Felwood | Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.
+turnin 4102 Cleansing Felwood
+accept 5887 Salve via Hunting | Maybess Riverbreeze. Needs Cleansing Felwood turned in.
+complete 5887 Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
+turnin 5887 Salve via Hunting
 level 56 | Western Plaguelands starts at 56. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

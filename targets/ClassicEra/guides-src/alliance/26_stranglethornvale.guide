@@ -55,4 +55,15 @@ turnin 330 Patrol Schedules
 turnin 601 Water Elementals
 accept 331 Report to Doren
 turnin 331 Report to Doren
+accept 1301 James Hyal [class=Mage; race=Human,Gnome]
+accept 1301 James Hyal [class=Warrior,Rogue,Warlock; race=Gnome]
+accept 1301 James Hyal [class=Warrior,Paladin,Rogue,Priest,Warlock; race=Human]
+accept 1301 James Hyal [race=Dwarf,Night Elf]
+turnin 1301 James Hyal | Turned in at Wetlands.
+accept 605 Singing Blue Shards | Crank Fizzlebub.
+complete 605 Singing Blue Shards | Crystal Spine Basilisks.
+turnin 605 Singing Blue Shards
+accept 189 Bloodscalp Ears
+complete 189 Bloodscalp Ears
+turnin 189 Bloodscalp Ears
 level 37 | Alterac Mountains starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -18,9 +18,7 @@ accept 339 Chapter I
 accept 340 Chapter II
 accept 341 Chapter III
 accept 342 Chapter IV
-accept 598 Split Bone Necklace
 accept 584 Bloodscalp Clan Heads
-complete 598 Split Bone Necklace
 complete 339 Chapter I
 complete 340 Chapter II
 complete 341 Chapter III
@@ -28,7 +26,6 @@ complete 342 Chapter IV
 turnin 339 Chapter I
 complete 584 Bloodscalp Clan Heads
 accept 572 Mok'thardin's Enchantment
-turnin 598 Split Bone Necklace
 turnin 340 Chapter II
 turnin 584 Bloodscalp Clan Heads
 turnin 341 Chapter III
@@ -38,7 +35,6 @@ complete 585 Speaking with Nezzliok
 accept 606 Scaring Shaky | "Sea Wolf" MacKinley.
 accept 595 The Bloodsail Buccaneers
 complete 606 Scaring Shaky | Mistvale Giblets drops from Elder Mistvale Gorilla.
-accept 600 Venture Company Mining
 turnin 606 Scaring Shaky
 turnin 585 Speaking with Nezzliok
 turnin 595 The Bloodsail Buccaneers
@@ -48,30 +44,12 @@ accept 597 The Bloodsail Buccaneers
 turnin 572 Mok'thardin's Enchantment
 turnin 607 Return to MacKinley
 turnin 597 The Bloodsail Buccaneers
-complete 600 Venture Company Mining | Singing Blue Crystal drops from Venture Co. Foreman, Venture Co. Strip Miner and Venture Co. Surveyor and others.
-turnin 600 Venture Company Mining
 accept 599 The Bloodsail Buccaneers
 accept 571 Mok'thardin's Enchantment
 turnin 599 The Bloodsail Buccaneers
 complete 571 Mok'thardin's Enchantment
 turnin 571 Mok'thardin's Enchantment
-note Back in Stranglethorn Vale for the higher-level quests.
-accept 576 Keep An Eye Out
-accept 209 Skullsplitter Tusks
-accept 587 Up to Snuff
-accept 196 Raptor Mastery
-complete 209 Skullsplitter Tusks
-complete 196 Raptor Mastery
-complete 576 Keep An Eye Out
-complete 587 Up to Snuff
-turnin 576 Keep An Eye Out
-turnin 209 Skullsplitter Tusks
-turnin 587 Up to Snuff
-turnin 196 Raptor Mastery
-accept 604 The Bloodsail Buccaneers
-complete 604 The Bloodsail Buccaneers
-turnin 604 The Bloodsail Buccaneers
-accept 608 The Bloodsail Buccaneers
-complete 608 The Bloodsail Buccaneers
-turnin 608 The Bloodsail Buccaneers
+accept 192 Panther Mastery
+complete 192 Panther Mastery
+turnin 192 Panther Mastery
 level 40 | Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

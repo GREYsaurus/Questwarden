@@ -56,13 +56,6 @@ ns.Guides:Register({
     {"turnin",q=5741,title="Sceptre of Light",npc="Azore Aldamort",z=405,x=38.9,y=27.2,text="Azore Aldamort.",v=1},
     {"turnin",q=6143,title="Other Fish to Fry",npc="Drulzegar Skraghook",z=405,x=23.3,y=72.9,text="Shadowprey Village.",v=1},
     {"turnin",q=6142,title="Clam Bait",npc="Mai'Lahii",z=405,x=22.6,y=72,v=1},
-    {"accept",q=5501,title="Bone Collector",npc="Bibbly F'utzbuckle",z=405,x=62.3,y=39,v=1},
-    {"note",text="The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
-    {"accept",q=6132,title="Get Me Out of Here!",npc="Melizza Brimbuzzle",z=405,x=34,y=53.5,v=1},
-    {"complete",q=6132,title="Get Me Out of Here!",text="Escort: stay close; it fails if the NPC dies.",v=1},
-    {"complete",q=5501,title="Bone Collector",v=1},
-    {"turnin",q=6132,title="Get Me Out of Here!",npc="Hornizz Brimbuzzle",z=405,x=47.8,y=61.8,v=1},
-    {"turnin",q=5501,title="Bone Collector",npc="Bibbly F'utzbuckle",z=405,x=62.3,y=39,v=1},
     {"level",text="Stranglethorn Vale starts at 34. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=34,v=1},
   },
 })

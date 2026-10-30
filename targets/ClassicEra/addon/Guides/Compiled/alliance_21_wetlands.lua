@@ -21,6 +21,13 @@ ns.Guides:Register({
     {"accept",q=304,title="A Grim Task",npc="Longbraid the Grim",z=11,x=49.8,y=18.3,text="Longbraid the Grim, Dun Modr.",v=1},
     {"complete",q=304,title="A Grim Task",text="Balgaras the Foul, at the Dark Iron camp east of Dun Modr.",v=1},
     {"turnin",q=304,title="A Grim Task",npc="Longbraid the Grim",z=11,x=49.8,y=18.3,v=1},
+    {"accept",q=633,title="The Thandol Span",npc="Rhag Garmason",z=11,x=49.9,y=18.2,text="Needs level 28. If you are lower, {name} skips it and moves on.",v=1},
+    {"complete",q=633,title="The Thandol Span",text="Click Cache of Explosives.",v=1},
+    {"turnin",q=633,title="The Thandol Span",npc="Rhag Garmason",z=11,x=49.9,y=18.2,v=1},
+    {"accept",q=634,title="Plea To The Alliance",npc="Rhag Garmason",z=11,x=49.9,y=18.2,text="Needs level 28. If you are lower, {name} skips it and moves on.",v=1},
+    {"turnin",q=634,title="Plea To The Alliance",npc="Captain Nials",z=45,x=45.8,y=47.6,text="Turned in at Arathi Highlands.",v=1},
+    {"accept",q=631,title="The Thandol Span",npc="Rhag Garmason",z=11,x=49.9,y=18.2,v=1},
+    {"turnin",q=631,title="The Thandol Span",npc="Ebenezer Rustlocke's Corpse",z=11,x=51.3,y=8,v=1},
     {"level",text="Hillsbrad Foothills starts at 31. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=31,v=1},
   },
 })

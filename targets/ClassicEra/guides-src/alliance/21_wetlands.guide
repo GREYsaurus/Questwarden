@@ -17,4 +17,11 @@ train
 accept 304 A Grim Task | Longbraid the Grim, Dun Modr.
 complete 304 A Grim Task | Balgaras the Foul, at the Dark Iron camp east of Dun Modr.
 turnin 304 A Grim Task
+accept 633 The Thandol Span | Needs level 28. If you are lower, {name} skips it and moves on.
+complete 633 The Thandol Span | Click Cache of Explosives.
+turnin 633 The Thandol Span
+accept 634 Plea To The Alliance | Needs level 28. If you are lower, {name} skips it and moves on.
+turnin 634 Plea To The Alliance | Turned in at Arathi Highlands.
+accept 631 The Thandol Span
+turnin 631 The Thandol Span
 level 31 | Hillsbrad Foothills starts at 31. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

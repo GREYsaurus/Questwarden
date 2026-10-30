@@ -43,10 +43,8 @@ accept 851 Verog the Dervish
 accept 876 Serena Bloodfeather
 complete 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll] | Southsea Treasure drops from Polly.
 accept 899 Consumed by Hatred | Mankrik, Crossroads.
-accept 1487 Deviate Eradication [dungeon=Wailing Caverns]
 accept 4921 Lost in Battle
 complete 4921 Lost in Battle | Mankrik's wife lies near Blackthorn Ridge.
-accept 878 Tribes at War
 complete 899 Consumed by Hatred
 turnin 3281 Stolen Silver
 turnin 4921 Lost in Battle
@@ -63,12 +61,6 @@ turnin 1069 Deepmoss Spider Eggs [class=Shaman; race=Orc,Tauren,Troll]
 turnin 896 Miner's Fortune [optional]
 turnin 959 Trouble at the Docks [elite; group; hc=skip]
 turnin 863 The Escape [optional]
-accept 1483 Ziz Fizziks [optional]
-complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
-complete 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
-complete 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
-complete 878 Tribes at War [race=Undead]
-complete 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
 complete 876 Serena Bloodfeather [group=2]
 complete 851 Verog the Dervish
 accept 3261 Jorn Skyseer
@@ -83,27 +75,11 @@ accept 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escor
 complete 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional] | Escort: stay close; it fails if the NPC dies.
 accept 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll]
 complete 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll] | Besseleth's Fang drops from Besseleth.
-turnin 1483 Ziz Fizziks [optional] | Turned in at Stonetalon Mountains.
-accept 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll]
-complete 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Super Reaper 6000 Blueprints drops from Venture Co. Operator.
 complete 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
-turnin 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Stonetalon Mountains.
-accept 1094 Further Instructions
 accept 27 A Lesson to Learn [class=Druid; race=Tauren]
-fp Camp Taurajo
-turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
-turnin 878 Tribes at War [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
-turnin 878 Tribes at War [class=Warrior,Hunter,Druid; race=Tauren]
-turnin 878 Tribes at War [race=Undead]
-turnin 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
-accept 883 Lakota'mani [optional]
-turnin 883 Lakota'mani [optional]
-accept 5052 Blood Shards of Agamaggan
 complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
 turnin 3261 Jorn Skyseer | Camp Taurajo.
-complete 5052 Blood Shards of Agamaggan
 accept 882 Ishamuhale
-turnin 5052 Blood Shards of Agamaggan
 complete 882 Ishamuhale
 complete 852 Hezrul Bloodmark
 turnin 882 Ishamuhale
@@ -114,7 +90,6 @@ accept 913 Cry of the Thunderhawk
 complete 913 Cry of the Thunderhawk
 turnin 913 Cry of the Thunderhawk
 accept 5642 Shadowguard [class=Priest; race=Troll] | Needs level 20. If you are lower, {name} skips it and moves on.
-turnin 1094 Further Instructions
 turnin 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll]
 accept 1510 News of Dogran [class=Warlock; race=Orc,Undead] | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin 852 Hezrul Bloodmark
@@ -123,8 +98,6 @@ turnin 6541 Report to Kadrak
 accept 4021 Counterattack! [optional]
 complete 4021 Counterattack! [optional] | Piece of Krom'zar's Banner: loot Krom'zar's Banner.
 turnin 4021 Counterattack! [optional]
-complete 1487 Deviate Eradication [dungeon=Wailing Caverns]
-turnin 1487 Deviate Eradication [dungeon=Wailing Caverns]
 turnin 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
 accept 1063 The Elder Crone
 accept 6548 Avenge My Village [class=Shaman; race=Orc,Tauren,Troll]
@@ -136,4 +109,18 @@ turnin 6629 Kill Grundig Darkcloud [class=Shaman; race=Orc,Tauren,Troll; optiona
 turnin 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional]
 accept 6401 Kaya's Alive
 turnin 27 A Lesson to Learn [class=Druid; race=Tauren] | Turned in at Moonglade.
+accept 1061 The Spirits of Stonetalon
+turnin 1061 The Spirits of Stonetalon
+accept 895 WANTED: Baron Longshore
+complete 895 WANTED: Baron Longshore | Baron Longshore's Head drops from Baron Longshore.
+turnin 895 WANTED: Baron Longshore
+accept 877 The Stagnant Oasis
+complete 877 The Stagnant Oasis
+turnin 877 The Stagnant Oasis
+accept 880 Altered Beings
+complete 880 Altered Beings | Oasis creatures.
+turnin 880 Altered Beings
+accept 888 Stolen Booty
+complete 888 Stolen Booty | Back to the pirate camp north of Ratchet for Tazan.
+turnin 888 Stolen Booty
 level 20 | Stonetalon Mountains starts at 20. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

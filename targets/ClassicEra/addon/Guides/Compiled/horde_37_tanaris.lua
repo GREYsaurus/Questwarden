@@ -58,12 +58,6 @@ ns.Guides:Register({
     {"turnin",q=2768,title="Divino-matic Rod",npc="Chief Engineer Bilgewhizzle",z=440,x=52.5,y=28.5,dungeon="Zul'Farrak",v=1},
     {"turnin",q=2865,title="Scarab Shells",npc="Tran'rek",z=440,x=51.6,y=26.8,dungeon="Zul'Farrak",v=1},
     {"turnin",q=3042,title="Troll Temper",npc="Trenton Lighthammer",z=440,x=51.4,y=28.8,dungeon="Zul'Farrak",v=1},
-    {"accept",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,v=1},
-    {"accept",q=3362,title="Thistleshrub Valley",npc="Tran'rek",z=440,x=51.6,y=26.8,v=1},
-    {"complete",q=5863,title="The Dunemaul Compound",v=1},
-    {"complete",q=3362,title="Thistleshrub Valley",v=1},
-    {"turnin",q=3362,title="Thistleshrub Valley",npc="Tran'rek",z=440,x=51.6,y=26.8,v=1},
-    {"turnin",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,v=1},
     {"level",text="Feralas starts at 45. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=45,v=1},
   },
 })

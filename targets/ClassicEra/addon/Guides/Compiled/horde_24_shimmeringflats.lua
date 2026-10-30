@@ -26,6 +26,9 @@ ns.Guides:Register({
     {"accept",q=1175,title="A Bump in the Road",npc="Trackmaster Zherin",z=400,x=81.6,y=78,text="Trackmaster Zherin.",v=1},
     {"complete",q=1175,title="A Bump in the Road",text="Saltstone basilisks.",v=1},
     {"turnin",q=1175,title="A Bump in the Road",npc="Trackmaster Zherin",z=400,x=81.6,y=78,v=1},
+    {"accept",q=1110,title="Rocket Car Parts",npc="Kravel Koalbeard",z=400,x=77.8,y=77.3,text="Kravel Koalbeard.",v=1},
+    {"complete",q=1110,title="Rocket Car Parts",text="Parts scattered on the flats.",v=1},
+    {"turnin",q=1110,title="Rocket Car Parts",npc="Kravel Koalbeard",z=400,x=77.8,y=77.3,v=1},
     {"level",text="Desolace starts at 32. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=32,v=1},
   },
 })

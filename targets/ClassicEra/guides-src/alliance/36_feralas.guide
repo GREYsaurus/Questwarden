@@ -42,34 +42,18 @@ accept 4130 Psychometric Reading
 turnin 4130 Psychometric Reading
 accept 4131 The Woodpaw Gnolls
 complete 4131 The Woodpaw Gnolls | Woodpaw gnolls in the southern hills.
-note The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.
-accept 2969 Freedom for All Creatures | Kindal Moonweaver, at the camp east.
-complete 2969 Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
-turnin 2969 Freedom for All Creatures
-accept 2970 Doling Justice
-complete 2970 Doling Justice | Grimtotem tauren at the compound.
-turnin 2970 Doling Justice
 turnin 4131 The Woodpaw Gnolls
 complete 2982 The High Wilderness
 accept 4135 The Writhing Deep
 complete 4135 The Writhing Deep | Inside the Zukk'ash hive at the Writhing Deep.
 turnin 4135 The Writhing Deep
 accept 4265 Freed from the Hive
-accept 7003 Zapped Giants | Zorbin Fandazzle, the coast.
 complete 2821 The Mark of Quality
-accept 7721 Fuel for the Zapping | Needs level 45. If you are lower, {name} skips it and moves on.
-complete 7003 Zapped Giants | Use the Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.
-complete 7721 Fuel for the Zapping | Water elementals on the coast.
-turnin 7003 Zapped Giants
-turnin 7721 Fuel for the Zapping
 turnin 4265 Freed from the Hive
 turnin 2821 The Mark of Quality
 turnin 2982 The High Wilderness
 accept 4266 A Hero's Welcome
-accept 7733 Improved Quality
 turnin 4266 A Hero's Welcome
 accept 2871 Delivering the Relic
-complete 7733 Improved Quality
 turnin 2871 Delivering the Relic
-turnin 7733 Improved Quality
 level 46 | Azshara starts at 46. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

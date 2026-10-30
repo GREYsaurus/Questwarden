@@ -35,11 +35,6 @@ ns.Guides:Register({
     {"accept",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"complete",q=5082,title="Threat of the Winterfall",text="Winterfall Pathfinders, Den Watchers and Totemics in the two furbolg camps around Donova.",v=1},
     {"turnin",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
-    {"accept",q=6606,title="A Little Luck",npc="Harlo Wigglesworth",z=618,x=61.1,y=38.4,v=1},
-    {"accept",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
-    {"complete",q=969,title="Luck Be With You",v=1},
-    {"turnin",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
-    {"turnin",q=6606,title="A Little Luck",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
     {"level",text="Felwood starts at 55. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=55,v=1},
   },
 })

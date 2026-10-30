@@ -17,20 +17,10 @@ train
 accept 3517 Stealing Knowledge
 accept 5536 A Land Filled with Hatred
 accept 5535 Spiritual Unrest
-accept 3601 Kim'jael Indeed!
-complete 3601 Kim'jael Indeed!
 complete 3517 Stealing Knowledge
 complete 5536 A Land Filled with Hatred
 complete 5535 Spiritual Unrest
 turnin 5536 A Land Filled with Hatred
 turnin 5535 Spiritual Unrest
 turnin 3517 Stealing Knowledge
-turnin 3601 Kim'jael Indeed!
-accept 5534 Kim'jael's "Missing" Equipment
-accept 3561 Delivery to Archmage Xylem
-complete 5534 Kim'jael's "Missing" Equipment
-turnin 3561 Delivery to Archmage Xylem
-turnin 5534 Kim'jael's "Missing" Equipment
-accept 3565 Xylem's Payment to Jediga
-turnin 3565 Xylem's Payment to Jediga
 level 50 | The Hinterlands starts at 50. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

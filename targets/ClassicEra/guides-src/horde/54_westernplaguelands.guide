@@ -62,13 +62,6 @@ accept 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Mickey Levine, the Bulwa
 complete 5901 A Plague Upon Thee | Termite barrels at the Northridge Lumber Camp.
 turnin 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 turnin 5234 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
-accept 5235 Target: Gahrron's Withering [zone=Tirisfal Glades]
-complete 5235 Target: Gahrron's Withering | The cauldron at Gahrron's Withering.
-turnin 5235 Target: Gahrron's Withering
-accept 5236 Return to the Bulwark
-turnin 5236 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
-accept 5238 Mission Accomplished! [zone=Tirisfal Glades]
-turnin 5238 Mission Accomplished! [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept 5021 Better Late Than Never
 accept 6004 Unfinished Business
 complete 6004 Unfinished Business
@@ -77,6 +70,4 @@ turnin 6004 Unfinished Business
 accept 6023 Unfinished Business
 complete 6023 Unfinished Business
 turnin 6023 Unfinished Business
-accept 6025 Unfinished Business
-turnin 6025 Unfinished Business
 level 56 | Eastern Plaguelands starts at 56. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

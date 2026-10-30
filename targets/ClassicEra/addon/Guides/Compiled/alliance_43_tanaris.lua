@@ -37,6 +37,9 @@ ns.Guides:Register({
     {"complete",q=3362,title="Thistleshrub Valley",v=1},
     {"turnin",q=2606,title="In Good Taste",npc="Sprinkle",z=440,x=51.1,y=26.9,v=1},
     {"turnin",q=3362,title="Thistleshrub Valley",npc="Tran'rek",z=440,x=51.6,y=26.8,v=1},
+    {"accept",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,v=1},
+    {"complete",q=5863,title="The Dunemaul Compound",v=1},
+    {"turnin",q=5863,title="The Dunemaul Compound",npc="Andi Lynn",z=440,x=52.8,y=27.4,v=1},
     {"level",text="The Hinterlands starts at 50. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=50,v=1},
   },
 })

@@ -18,8 +18,6 @@ accept 305 In Search of The Excavation Team | Tarrel Rockweaver.
 accept 484 Young Crocolisk Skins | James Halloran, Menethil Harbor.
 accept 472 Fall of Dun Modr | Needs level 25. If you are lower, {name} skips it and moves on.
 accept 470 Digging Through the Ooze | Sida, west Menethil.
-accept 473 Report to Captain Stoutfist | Valstag Ironjaw, the keep.
-turnin 473 Report to Captain Stoutfist
 accept 464 War Banners
 accept 279 Claws from the Deep | Karl Boran on the docks.
 fp Menethil Harbor
@@ -38,19 +36,13 @@ turnin 284 The Search Continues
 accept 285 Search More Hovels
 turnin 285 Search More Hovels
 accept 286 Return the Statuette
-accept 299 Uncovering the Past | Prospector Whelgar.
 accept 294 Ormer's Revenge | Ormer Ironbraid, excavation site.
 complete 294 Ormer's Revenge | Mottled Raptors and Screechers around the site.
-complete 299 Uncovering the Past | Relics are scattered in the excavation (raptors present).
 complete 943 The Absent Minded Prospector [optional] | Stone of Relu drops from Mottled Raptor, Mottled Screecher and Mottled Scytheclaw and others. Flagongut's Fossil: loot Flagongut's Fossil.
 turnin 294 Ormer's Revenge
 accept 295 Ormer's Revenge
 complete 295 Ormer's Revenge | Mottled Razormaws.
 turnin 295 Ormer's Revenge
-accept 296 Ormer's Revenge
-complete 296 Ormer's Revenge | Sarltooth, a big raptor on the hill above the site.
-turnin 296 Ormer's Revenge
-turnin 299 Uncovering the Past
 complete 470 Digging Through the Ooze | Black Oozes near the Excavation site.
 turnin 305 In Search of The Excavation Team | Merrin Rockweaver at the Whelgar excavation.
 accept 306 In Search of The Excavation Team

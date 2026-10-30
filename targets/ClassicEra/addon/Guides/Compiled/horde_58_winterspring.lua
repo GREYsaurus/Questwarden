@@ -21,6 +21,11 @@ ns.Guides:Register({
     {"complete",q=5163,title="Are We There, Yeti?",v=1},
     {"turnin",q=5163,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,v=1},
     {"turnin",q=8464,title="Winterfall Activity",npc="Salfa",z=618,x=27.7,y=34.5,text="Salfa, back at the tunnel.",v=1},
+    {"accept",q=6606,title="A Little Luck",npc="Harlo Wigglesworth",z=618,x=61.1,y=38.4,v=1},
+    {"turnin",q=6606,title="A Little Luck",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
+    {"accept",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
+    {"complete",q=969,title="Luck Be With You",v=1},
+    {"turnin",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
     {"level",level=60,v=1},
   },
 })

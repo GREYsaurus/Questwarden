@@ -14,5 +14,12 @@
 
 travel Felwood
 train
-note No quests are written for this visit yet.
+accept 4101 Cleansing Felwood | Arathandris Silversky.
+complete 4101 Cleansing Felwood | Cenarion Plant Salve - gather from Felwood.
+turnin 4101 Cleansing Felwood
+accept 5882 Salve via Hunting | Arathandris Silversky. Needs Cleansing Felwood turned in.
+complete 5882 Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
+turnin 5882 Salve via Hunting
+accept 8462 Speak to Nafien
+turnin 8462 Speak to Nafien
 level 55 | Burning Steppes starts at 55. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

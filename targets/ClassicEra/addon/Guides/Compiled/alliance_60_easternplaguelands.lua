@@ -23,6 +23,9 @@ ns.Guides:Register({
     {"complete",q=5243,title="Houses of the Holy",dungeon="Stratholme",v=1},
     {"turnin",q=5212,title="The Flesh Does Not Lie",npc="Betina Bigglezink",z=139,x=81.5,y=59.7,dungeon="Stratholme",v=1},
     {"turnin",q=5243,title="Houses of the Holy",npc="Leonid Barthalomew the Revered",z=139,x=81.7,y=57.8,dungeon="Stratholme",v=1},
+    {"accept",q=5529,title="Plagued Hatchlings",npc="Betina Bigglezink",z=139,x=81.5,y=59.7,dungeon="Scholomance",v=1},
+    {"complete",q=5529,title="Plagued Hatchlings",dungeon="Scholomance",v=1},
+    {"turnin",q=5529,title="Plagued Hatchlings",npc="Betina Bigglezink",z=139,x=81.5,y=59.7,dungeon="Scholomance",v=1},
     {"level",text="Winterspring starts at 59. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=59,v=1},
   },
 })

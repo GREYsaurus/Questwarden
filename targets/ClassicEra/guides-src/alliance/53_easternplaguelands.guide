@@ -41,10 +41,7 @@ turnin 5544 Carrion Grubbage
 note Ride back east to Light's Hope Chapel.
 turnin 6021 Zaeldarr the Outcast | Caretaker Alen.
 turnin 5241 Uncle Carlin | Carlin Redpath.
-accept 5529 Plagued Hatchlings [dungeon=Scholomance]
 accept 5742 Redemption
 complete 5742 Redemption
-complete 5529 Plagued Hatchlings [dungeon=Scholomance]
-turnin 5529 Plagued Hatchlings [dungeon=Scholomance]
 turnin 5742 Redemption
 level 57 | Western Plaguelands starts at 57. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

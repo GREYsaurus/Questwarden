@@ -12,6 +12,11 @@ ns.Guides:Register({
     {"accept",q=874,title="Mahren Skyseer",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
     {"accept",q=1095,title="Further Instructions",npc="Sputtervalve",z=17,x=63,y=37.2,v=1},
     {"accept",q=1131,title="Steelsnap",npc="Melor Stonehoof",z=1638,x=61.5,y=80.9,text="Needs level 20. If you are lower, {name} skips it and moves on.",v=1},
+    {"accept",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
+    {"complete",q=893,title="Weapons of Choice",v=1},
+    {"turnin",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
+    {"accept",q=884,title="Owatanka",text="Starts from the item Owatanka's Tailspike.",optional=true,v=1},
+    {"turnin",q=884,title="Owatanka",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
     {"level",text="Thousand Needles starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=25,v=1},
   },
 })

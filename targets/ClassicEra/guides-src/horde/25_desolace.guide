@@ -52,11 +52,4 @@ complete 5741 Sceptre of Light | The Sceptre drops from the Burning Blade Seer a
 turnin 5741 Sceptre of Light | Azore Aldamort.
 turnin 6143 Other Fish to Fry | Shadowprey Village.
 turnin 6142 Clam Bait
-accept 5501 Bone Collector
-note The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.
-accept 6132 Get Me Out of Here!
-complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
-complete 5501 Bone Collector
-turnin 6132 Get Me Out of Here!
-turnin 5501 Bone Collector
 level 34 | Stranglethorn Vale starts at 34. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

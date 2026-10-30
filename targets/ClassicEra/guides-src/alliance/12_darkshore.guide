@@ -56,4 +56,29 @@ accept 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Escort quest:
 complete 994 Escape Through Force [class=Warrior,Rogue,Mage; race=Gnome; optional] | Escort: stay close; it fails if the NPC dies.
 complete 994 Escape Through Force [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Escort: stay close; it fails if the NPC dies.
 complete 994 Escape Through Force [race=Dwarf,Night Elf; optional] | Escort: stay close; it fails if the NPC dies.
+accept 4731 Beached Sea Turtle
+turnin 4731 Beached Sea Turtle
+accept 4732 Beached Sea Turtle
+turnin 4732 Beached Sea Turtle
+accept 4733 Beached Sea Creature
+turnin 4733 Beached Sea Creature
+note  [optional] | The next quest, Therylune's Escape, is an escort: pick it up only when you are ready to follow the NPC.
+accept 945 Therylune's Escape [optional]
+complete 945 Therylune's Escape [optional] | Escort: stay close; it fails if the NPC dies.
+turnin 945 Therylune's Escape [optional]
+accept 965 The Tower of Althalaxx | Sentinel Elissa Starbreeze.
+complete 965 The Tower of Althalaxx | Balthule Shadowstrike, north-east.
+turnin 965 The Tower of Althalaxx
+accept 966 The Tower of Althalaxx
+complete 966 The Tower of Althalaxx | Dark Strand Fanatics at the tower.
+turnin 966 The Tower of Althalaxx
+accept 967 The Tower of Althalaxx
+complete 967 The Tower of Althalaxx
+turnin 967 The Tower of Althalaxx
+accept 2139 Tharnariun's Hope
+complete 2139 Tharnariun's Hope | Den Mother in the bear cave north-east.
+turnin 2139 Tharnariun's Hope
+accept 4763 The Blackwood Corrupted
+complete 4763 The Blackwood Corrupted | Blackwood furbolg camp in the north.
+turnin 4763 The Blackwood Corrupted
 level 21 | Ashenvale starts at 21. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -98,6 +98,11 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
     - The fill now judges "already done" by the actual `@next` path, not by level band.
   - **Levels:** each visit ends with a `level` step for the next stop's first level, with a note that the order expects grinding or a dungeon there. Quests now carry about 28 levels after the start zones. The model leaves about 20 levels to grinding and dungeons (Alliance 20.1, Horde 20.3), down from about 25. Level-gated pickups: 26.
   - **Fixed:** the Duskwood *The Legend of Stalvan* (66) had a turn-in without a pickup. Madame Eva's pickup is added.
+- **Quests spread across repeat visits** (`tools/research/spread_visits.py`): 76 moves.
+  - **What can move:** a quest, together with everything in its visit that needs it, moves to a later visit of the same zone. That happens when the later visit's level range fits it better, nothing that depends on it comes earlier, and the old visit keeps at least 3 quests.
+  - **Examples:** Barrens quests moved into the Southern Barrens visits, Stranglethorn's Mastery and Bloodsail lines into the later Stranglethorn visits, the Gahrron's Withering chains into the second Western Plaguelands visit, and the Felwood cleansing quests into the second Felwood visit.
+  - **Effect:** level-gated pickups went from 26 to 16. Modelled grinding rose slightly (Alliance 20.8, Horde 21.1): earlier visits now end lower, and some quest XP lands near the cap.
+  - **Still empty, because the data has nothing that fits:** Alliance Darkshore 23-24, Alterac 37, and Felwood, Azshara and Tanaris at 58. Horde Dustwallow 49 and Burning Steppes 53.
 
 Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 

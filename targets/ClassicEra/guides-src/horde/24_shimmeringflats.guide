@@ -30,4 +30,7 @@ turnin 1145 The Swarm Grows [class=Hunter,Shaman,Druid; race=Tauren] | Turned in
 accept 1175 A Bump in the Road | Trackmaster Zherin.
 complete 1175 A Bump in the Road | Saltstone basilisks.
 turnin 1175 A Bump in the Road
+accept 1110 Rocket Car Parts | Kravel Koalbeard.
+complete 1110 Rocket Car Parts | Parts scattered on the flats.
+turnin 1110 Rocket Car Parts
 level 32 | Desolace starts at 32. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -42,7 +42,6 @@ complete 1151 Test of Strength [optional] | Fragments of Rok'Alim drops from Rok
 turnin 1151 Test of Strength [optional]
 accept 1104 Salt Flat Venom | Fizzle Brassbolts, Shimmering Flats.
 accept 1105 Hardened Shells | Wizzle Brassbolts.
-accept 1110 Rocket Car Parts | Kravel Koalbeard.
 accept 1153 A New Ore Sample
 complete 1153 A New Ore Sample | Unrefined Ore Sample drops from Gibblesnik, Gravelsnout Digger and Gravelsnout Surveyor.
 turnin 1153 A New Ore Sample | Turned in at The Barrens.
@@ -52,13 +51,24 @@ turnin 4767 Wind Rider
 accept 1176 Load Lightening | Pozzik.
 complete 1104 Salt Flat Venom | Scorpids on the salt flats.
 complete 1105 Hardened Shells | Hardened Tortoise Shell drops from Sparkleshell Borer, Sparkleshell Snapper and Sparkleshell Tortoise.
-complete 1110 Rocket Car Parts | Parts scattered on the flats.
 complete 1176 Load Lightening | Saltstone gazers and crawlers.
 turnin 1176 Load Lightening
 turnin 1104 Salt Flat Venom
 turnin 1105 Hardened Shells
-turnin 1110 Rocket Car Parts
 accept 1197 The Sacred Flame
 complete 1197 The Sacred Flame
 turnin 1197 The Sacred Flame
+fp Freewind Post
+accept 4881 Assassination Plot [optional]
+turnin 4881 Assassination Plot [optional]
+note  [optional] | The next quest, Protect Kanati Greycloud, is an escort: pick it up only when you are ready to follow the NPC.
+accept 4966 Protect Kanati Greycloud [optional] | Escort quest: start it when you are ready to follow.
+complete 4966 Protect Kanati Greycloud [optional] | Escort: stay close; it fails if the NPC dies.
+turnin 4966 Protect Kanati Greycloud [optional]
+accept 5064 Grimtotem Spying
+complete 5064 Grimtotem Spying | Secret Note #1: loot Document Chest and Pitted Iron Chest. Secret Note #2: loot Document Chest and Pitted Iron Chest.
+turnin 5064 Grimtotem Spying
+accept 5088 Arikara
+complete 5088 Arikara | Arikara Serpent Skin drops from Arikara. Escort: stay close; it fails if the NPC dies.
+turnin 5088 Arikara
 level 29 | Hillsbrad Foothills starts at 29. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
