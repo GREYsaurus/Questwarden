@@ -8,14 +8,14 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 
 | Check | Result |
 |---|---|
-| Routes walked | 40 |
+| Routes walked | 80 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
 | Warnings | 0 |
-| Peak quest log (worst route) | 0 / 20 |
+| Peak quest log (worst route) | 9 / 20 |
 | Reduced-XP pickups (6+ levels below estimate) | 0 |
 | Level-gated pickups | 0 |
-| Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 0 |
+| Accepted, never turned in | 5 |
+| Hub revisits (all guides) | 28 |
 
 ## Per guide
 
@@ -23,26 +23,28 @@ No baseline file found.
 
 | Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |
 |---|---|---|---|---|---|---|---|---|---|---|
+| A_Human_Elwynn | 193 | 66 | 763 | 642 | 17 | 0 | 0 | 1 | 1 | 2 |
+| H_OrcTroll_Durotar | 217 | 69 | 358 | 444 | 11 | 0 | 0 | 4 | 1 | 0 |
 
 ## Peak quest log per route
 
 | Route | Peak | At |
 |---|---|---|
-| Dwarf/HUNTER | 0 |  |
-| Dwarf/PALADIN | 0 |  |
-| Dwarf/PRIEST | 0 |  |
-| Dwarf/ROGUE | 0 |  |
-| Dwarf/WARRIOR | 0 |  |
-| Gnome/MAGE | 0 |  |
-| Gnome/ROGUE | 0 |  |
-| Gnome/WARLOCK | 0 |  |
-| Gnome/WARRIOR | 0 |  |
-| Human/MAGE | 0 |  |
-| Human/PALADIN | 0 |  |
-| Human/PRIEST | 0 |  |
-| Human/ROGUE | 0 |  |
-| Human/WARLOCK | 0 |  |
-| Human/WARRIOR | 0 |  |
+| Human/WARRIOR | 9 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/MAGE | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/PALADIN | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/PRIEST | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/ROGUE | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/WARLOCK | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Human/WARRIOR (Hardcore) | 8 | A_Human_Elwynn (The Collector) [alliance/00_human_elwynn.guide:140] |
+| Orc/SHAMAN | 8 | H_OrcTroll_Durotar (Lost But Not Forgotten) [horde/00_orc_troll_durotar.guide:174] |
+| Orc/WARLOCK | 8 | H_OrcTroll_Durotar (Lost But Not Forgotten) [horde/00_orc_troll_durotar.guide:174] |
+| Troll/SHAMAN | 8 | H_OrcTroll_Durotar (Lost But Not Forgotten) [horde/00_orc_troll_durotar.guide:174] |
+| Human/MAGE (Hardcore) | 7 | A_Human_Elwynn (Red Linen Goods) [alliance/00_human_elwynn.guide:120] |
+| Human/PALADIN (Hardcore) | 7 | A_Human_Elwynn (Red Linen Goods) [alliance/00_human_elwynn.guide:120] |
+| Human/PRIEST (Hardcore) | 7 | A_Human_Elwynn (Red Linen Goods) [alliance/00_human_elwynn.guide:120] |
+| Human/ROGUE (Hardcore) | 7 | A_Human_Elwynn (Red Linen Goods) [alliance/00_human_elwynn.guide:120] |
+| Human/WARLOCK (Hardcore) | 7 | A_Human_Elwynn (Red Linen Goods) [alliance/00_human_elwynn.guide:120] |
 
 ## Errors
 
@@ -54,3 +56,8 @@ None.
 
 ## Findings (per guide)
 
+- A_Human_Elwynn: accepted but never turned in on the route: 109 Report to Gryan Stoutmantle
+- H_OrcTroll_Durotar: accepted but never turned in on the route: 1498 Path of Defense
+- H_OrcTroll_Durotar: accepted but never turned in on the route: 1524 Call of Fire
+- H_OrcTroll_Durotar: accepted but never turned in on the route: 842 Crossroads Conscription
+- H_OrcTroll_Durotar: accepted but never turned in on the route: 924 The Demon Seed

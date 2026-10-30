@@ -2,21 +2,24 @@
 
 Facts ClassicGuide could not rebuild from its own sources (docs/DATA_POLICY.md), and values we hold but have not verified. Nothing here is filled in from another add-on's data. Each entry says how to close it. Update this page whenever data is generated, cross-checked or checked in the game.
 
-Status: **0.1.0 development, Phase 1** (multi-target scaffolding). No Classic Era data has been generated yet, so most of the Classic Era list is "not built yet" rather than "missing".
+Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest database, talent trees, race/class table, trainer and pet data are generated; the first two routes (Human and Orc/Troll, 1-12) are written.
 
 ## Classic Era (1.15.9)
 
 | Item | Status | How to close it |
 |---|---|---|
-| Quest, NPC, object, item and zone data | Not built yet (Phase 2) | `import-questie` from the pinned QuestieDB `data/Classic` files |
-| Talent trees (51 points), race/class table (8 races, 9 classes) | Not built yet (Phase 2) | `import-client` from the 1.15.9.70576 client tables |
-| Trainer spells, flight-path graph, spirit healers | Not built yet (Phase 2) | client tables; flight **times** need in-game captures |
+| Quest, NPC, object, item and zone data | **Built**: 4,257 quests, 4,835 NPCs, 852 objects, 2,865 items; 3,041 corrections applied | 23 corrections skipped (profession specializations and one rank expression; `docs/generated/ClassicEra/questie-import.log`); only quest corrections are applied, not QuestieDB's NPC, object or item fixes |
+| Talent trees (51 points), race/class table | **Built**: 432 talents in 27 trees (7 tiers), 8 races, 40 combinations | check in game with `/cg debug talents` |
+| Trainer spells, pet and demon skills | **Built**: 1,330 trainer ranks, 19 hunter pet families, 63 demon skills | 1,334 seasonal spells (ids 400000+) left out by rule; spot-check `docs/generated/ClassicEra/client-excluded-spells.csv` in game. Which spells come from class quests instead of the trainer is not in the client data (Classes/TrainingNotes.lua is still empty) |
+| Flight-path graph, spirit healers | Not built yet | client tables; flight **times** need in-game captures |
 | Rares and dangerous mobs | Not built yet (Phase 2) | QuestieDB NPC data plus our own criteria (elite, rare, level above the route's expected level, patrols) |
 | XP model for the route audit (quest XP, XP per level) | Missing | QuestieDB `support/QuestXP` Classic table plus the Classic XP-per-level table from a citable source |
 | Interface 11509 | Verified from sources (wago.tools build list, Questie release.json, Blizzard UI source), **not yet loaded in the client** | load the add-on in the client |
 | Quest log size 20 | From Blizzard's UI source (`Blizzard_FrameXMLBase/Vanilla/Constants.lua`) | confirm in game |
 | API availability | 35 of the 284 audited names are not found in Blizzard's Classic Era UI source (docs/generated/ClassicEra/api-audit.md). Nearly all are guarded legacy fallbacks; `GetPlayerFacing` (arrow), `GetMacroIndexByName` (targeting macro) and `GetItemStats` (gear scoring) need an in-game check. 32 APIs reached by name through Compat are not on the allowlist (awaiting review) | `/cg debug api` in the client |
 | Hardcore realm detection | Manual per-character setting only | needs `C_GameRules.IsHardcoreActive` on the allowlist (awaiting approval) |
+| Routes 1-12 (Human, Orc/Troll) | Written and audited offline (Speed and Hardcore): 0 order errors, quest log peak 9/20 | not timed; XP sufficiency unmeasured (no Classic XP model yet); five pickups wait for the 12-20 guides |
+| Warrior Defensive Stance | Client tables list it as a level-10 trainer spell | whether a class quest gates it on Classic Era is not in the data; check in game |
 
 ## WoW: Forever (not launched; launch 2026-11-04)
 

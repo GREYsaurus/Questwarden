@@ -2,7 +2,11 @@
 
 Players never run any of this. The released add-on already contains the generated files.
 
-> **Phase 1 status.** Every command takes `-Target` and writes into that target's folder. The importers themselves still read QuestieDB's **TBC** files and the `wow_anniversary` client tables pinned in `tools/upstream.json`, so only the TBC fixture can be imported today. Phase 2 makes them read each target's files (Classic Era: QuestieDB `data/Classic`, client product `wow_classic_era` 1.15.9.70576) and adds the `src`/`v` fields of docs/DATA_POLICY.md. Do not run `import-questie` or `import-client` for ClassicEra before then.
+> **Per target.** Every command takes `-Target`. Which QuestieDB files a target imports (data folder, file prefix, corrections file and module, XP table, NPC flag values) and which client build its tables come from are set in `targets/<Target>/target.json` (`questie`, `clientTables`). Client tables are cached per build in `.cache/upstream/db2/<build>/`.
+>
+> - **Classic Era:** QuestieDB `data/Classic/classic*DB.lua` with `src/corrections/Era/classicQuestFixes.lua`; client product `wow_classic_era` 1.15.9.70576. NPC flags use the vanilla numbers (flight master 8, innkeeper 128). The 1.15 client tables also carry Season of Discovery and seasonal spells (ids 400000 and up, with no other marker), so `clientTables.excludeSpellIdsFrom = 400000` leaves them out of the trainer and pet data and lists each one in `docs/generated/ClassicEra/client-excluded-spells.csv`.
+> - **TBC fixture:** QuestieDB `data/TBC` with `tbcQuestFixes.lua`; client product `wow_anniversary` 2.5.6.70577. Re-importing it reproduces TBCGuide 0.9.5's data.
+> - Every record of a generated file comes from one source, so `src` and `v` are stated once in the file header (`src = questie` or `src = client`, `v = 1`) rather than on each of thousands of records. Records from mixed sources (overrides, captures) carry their own.
 
 ```
 tools/upstream.json  --fetch-->  .cache/  --import-questie-->  targets/<Target>/addon/Database/Questie/*.lua

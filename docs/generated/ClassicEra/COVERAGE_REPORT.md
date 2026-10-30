@@ -7,12 +7,12 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 
 | Item | Count |
 |---|---|
-| Guides | 0 (0 Azeroth) |
-| Guide steps | 0 |
-| Quest steps (accept/complete/turn-in) | 0 |
-| Distinct quests referenced | 0 |
-| Steps with database-derived coordinates | 0 |
-| Steps with hand-written coordinates (unverified) | 0 |
+| Guides | 2 (2 Azeroth) |
+| Guide steps | 410 |
+| Quest steps (accept/complete/turn-in) | 353 |
+| Distinct quests referenced | 135 |
+| Steps with database-derived coordinates | 321 |
+| Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 0 (0 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
@@ -33,22 +33,22 @@ Each race/class combination is followed from its racial start guide through the 
 | Gnome | ROGUE | Alliance | 0 | 0 | no start guide |
 | Gnome | WARLOCK | Alliance | 0 | 0 | no start guide |
 | Gnome | WARRIOR | Alliance | 0 | 0 | no start guide |
-| Human | MAGE | Alliance | 0 | 0 | no start guide |
-| Human | PALADIN | Alliance | 0 | 0 | no start guide |
-| Human | PRIEST | Alliance | 0 | 0 | no start guide |
-| Human | ROGUE | Alliance | 0 | 0 | no start guide |
-| Human | WARLOCK | Alliance | 0 | 0 | no start guide |
-| Human | WARRIOR | Alliance | 0 | 0 | no start guide |
+| Human | MAGE | Alliance | 1 | 12 | route ends at level 12 |
+| Human | PALADIN | Alliance | 1 | 12 | route ends at level 12 |
+| Human | PRIEST | Alliance | 1 | 12 | route ends at level 12 |
+| Human | ROGUE | Alliance | 1 | 12 | route ends at level 12 |
+| Human | WARLOCK | Alliance | 1 | 12 | route ends at level 12 |
+| Human | WARRIOR | Alliance | 1 | 12 | route ends at level 12 |
 | NightElf | DRUID | Alliance | 0 | 0 | no start guide |
 | NightElf | HUNTER | Alliance | 0 | 0 | no start guide |
 | NightElf | PRIEST | Alliance | 0 | 0 | no start guide |
 | NightElf | ROGUE | Alliance | 0 | 0 | no start guide |
 | NightElf | WARRIOR | Alliance | 0 | 0 | no start guide |
-| Orc | HUNTER | Horde | 0 | 0 | no start guide |
-| Orc | ROGUE | Horde | 0 | 0 | no start guide |
-| Orc | SHAMAN | Horde | 0 | 0 | no start guide |
-| Orc | WARLOCK | Horde | 0 | 0 | no start guide |
-| Orc | WARRIOR | Horde | 0 | 0 | no start guide |
+| Orc | HUNTER | Horde | 1 | 12 | route ends at level 12 |
+| Orc | ROGUE | Horde | 1 | 12 | route ends at level 12 |
+| Orc | SHAMAN | Horde | 1 | 12 | route ends at level 12 |
+| Orc | WARLOCK | Horde | 1 | 12 | route ends at level 12 |
+| Orc | WARRIOR | Horde | 1 | 12 | route ends at level 12 |
 | Scourge | MAGE | Horde | 0 | 0 | no start guide |
 | Scourge | PRIEST | Horde | 0 | 0 | no start guide |
 | Scourge | ROGUE | Horde | 0 | 0 | no start guide |
@@ -58,21 +58,23 @@ Each race/class combination is followed from its racial start guide through the 
 | Tauren | HUNTER | Horde | 0 | 0 | no start guide |
 | Tauren | SHAMAN | Horde | 0 | 0 | no start guide |
 | Tauren | WARRIOR | Horde | 0 | 0 | no start guide |
-| Troll | HUNTER | Horde | 0 | 0 | no start guide |
-| Troll | MAGE | Horde | 0 | 0 | no start guide |
-| Troll | PRIEST | Horde | 0 | 0 | no start guide |
-| Troll | ROGUE | Horde | 0 | 0 | no start guide |
-| Troll | SHAMAN | Horde | 0 | 0 | no start guide |
-| Troll | WARRIOR | Horde | 0 | 0 | no start guide |
+| Troll | HUNTER | Horde | 1 | 12 | route ends at level 12 |
+| Troll | MAGE | Horde | 1 | 12 | route ends at level 12 |
+| Troll | PRIEST | Horde | 1 | 12 | route ends at level 12 |
+| Troll | ROGUE | Horde | 1 | 12 | route ends at level 12 |
+| Troll | SHAMAN | Horde | 1 | 12 | route ends at level 12 |
+| Troll | WARRIOR | Horde | 1 | 12 | route ends at level 12 |
 
 ## Guides
 
 | Guide | Faction | Levels | Zone | Steps | Quests | Optional/elite/group steps |
 |---|---|---|---|---|---|---|
+| Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 193 | 66 | 12 |
+| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 217 | 69 | 33 |
 
 ### Zones covered
 
-- **Azeroth (0):** 
+- **Azeroth (2):** Durotar, Elwynn Forest
 
 ## Talent builds
 

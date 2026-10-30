@@ -20,6 +20,8 @@ ClassicGuide is GPL-3.0-only. Everything it ships must be either our own work or
 | 3 | **Our own in-game captures** from the recorder module (planned, docs/FOREVER_PLAN.md) | IDs, coordinates, patrol paths, flight times, saved to SavedVariables | `capture` |
 | 4 | **Published, citable research** for stat weights (class Discords, theorycraft sheets, Wowhead, Icy Veins) | numbers with a citation and a confidence level each | `research:<url>` |
 
+**Route research.** Leveling guides on the web may be read for facts about routes: which zones to level in, at which levels, where to set the hearthstone, where grinding is needed, which elites and quests are risky. Approved so far: **Joana's Classic speedrun guides** (joanasworld.com, approved by the maintainer 2026-10-29). We do not copy their text, notes or step-by-step order: our step order comes from QuestieDB prerequisites and our own route model, and every note is our own. Each guide file that used one says so in its header.
+
 Our own reasoning on top of these (which mobs count as dangerous, which steps a Hardcore route leaves out, stat priorities where nobody publishes numbers) is our own work, and says so.
 
 **Verification.** `v=1` means the value came straight from source 1, 2 or 3 for the target build. Anything typed by hand, estimated, or carried over from another game version is `v=0` until checked in the game. Nothing from Classic Era is assumed to hold on WoW: Forever without a source or an in-game check.

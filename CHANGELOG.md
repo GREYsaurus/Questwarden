@@ -25,6 +25,17 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
 - **Offline (all passing):** `tools/build.ps1 all` for ClassicEra, Forever and TBC (lint 0 errors and 39 warnings for the by-name APIs; validation 0 errors; TBC route audit 52 routes, 0 errors, 31 warnings, the same as TBCGuide 0.9.5); build-tool self-test 21/21; TBC engine suite 4,420/4,420; Classic Era smoke 33/33; Forever smoke 29/29.
 - **In the game client:** nothing yet.
 
+### Phase 2: Classic Era data and guides (in progress)
+
+- **Classic Era data pipeline.** The importers read each target's QuestieDB flavor and client build from `target.json`. Classic Era now has 4,257 quests, 4,835 NPCs, 852 objects and 2,865 items from QuestieDB's Classic data (3,041 corrections), plus talent trees (432 talents, 27 trees), the race/class table (8 races, 40 combinations), 1,330 trainer ranks, and hunter pet and demon skills from the 1.15.9.70576 client tables. Re-importing the TBC fixture reproduces TBCGuide's data, which checks the importer.
+- **Vanilla NPC flags.** Classic data numbers flight masters (8) and innkeepers (128) differently from TBC (8192, 65536). The flags now come from the target's data, so flight-path, inn and trainer steps find the right NPCs.
+- **Season of Discovery spells left out.** The 1.15 client tables also contain SoD and seasonal spells (1,334, all ids 400000+). They are excluded from trainer and pet data and listed for review.
+- **Hardcore route flavor.** Steps can be `[hc=skip]` (left out for Hardcore characters) or `[hc=only]` (warnings). The engine follows the character's *Hardcore character* setting, and the route audit walks every route as Speed and as Hardcore.
+- **First routes, 1-12:** Human (Northshire, Elwynn, Stormwind at 10) and Orc/Troll (Valley of Trials, Durotar, Orgrimmar), adapted from TBCGuide's routes and rebuilt on Classic data. Classic prerequisites that TBC removed are respected (Milly Osworth after Brotherhood of Thieves; Bounty on Murlocs left out). Full Classic class chains at 10 (warrior Bartleby to Dead-tooth Jack, warlock Voidwalker, rogue, mage, priest). Hardcore: Hogger and the Gazz'uz quest are skipped, with warnings for Tiragarde Keep, Zalazane, Fizzle Darkstorm and Princess. Level bands checked against Joana's Classic guides (research only).
+- **Fixed** (also present in TBCGuide 0.9.5): the hunter *Taming the Beast* steps were described as escorts. They are taming quests.
+
+Tested offline: ClassicEra build all passes (80 route walks, 0 errors, 0 warnings, quest log peak 9/20, 0 level-gated pickups; smoke suite 40/40); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+
 ---
 
 # TBCGuide history (the add-on ClassicGuide was forked from)

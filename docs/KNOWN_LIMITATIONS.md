@@ -4,13 +4,12 @@ Stated plainly, so nobody mistakes "files exist" for "finished and tested". This
 
 ## Not done yet
 
-- **No Classic Era content.** There are no guides, quest data, talent trees, trainer spells, class tips, talent builds or gear profiles for Classic Era yet. The add-on loads and its windows work, but they are empty. All of this is Phase 2 (docs/DATA_GAPS.md).
-- **No Hardcore route flavor yet.** The *Hardcore character* setting exists and is saved per character, but no guide uses it until the Phase 2 guides have Hardcore marks.
+- **Classic Era content is partial (Phase 2 in progress).** The quest database, talent trees, trainer and pet data exist. Guides exist only for Human (Elwynn) and Orc/Troll (Durotar) from 1 to 12. Other races, levels 12-60, class tips, talent builds and gear profiles come next (docs/DATA_GAPS.md).
+- **Hardcore route flavor:** the 1-12 routes carry Hardcore marks (`[hc=skip]`, `[hc=only]` warnings), chosen from NPC levels and ranks in the data. They are judgement, not play-tested.
 - **Hardcore realms are not detected.** Detection needs `C_GameRules.IsHardcoreActive`, which is not on the API allowlist yet.
 - **Season of Discovery is not supported or detected.** Out of scope.
 - **WoW: Forever is a skeleton.** Its rules are unverified, its data is empty, and the add-on refuses to load guides on it. 21 APIs the add-on uses on Classic Era are missing from the Forever client's UI code, so talents, orphan abandoning, hearth binding, the auction tab, parts of gear scoring and pet skills need adapters there (Phase 3).
 - **Route audit XP model:** for Classic Era the audit estimates levels by interpolation between guide checkpoints; the TBC XP model is not used for it, and the Classic XP tables are Phase 2.
-- **Data importers** (`import-questie`, `import-client`) still read the TBC upstream files. They write to the chosen target's folder, but must not be run for Classic Era until Phase 2 makes them target-aware.
 
 ## Testing
 

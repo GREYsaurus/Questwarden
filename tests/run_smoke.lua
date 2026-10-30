@@ -71,7 +71,7 @@ check(SlashCmdList[ns.key] ~= nil, "slash command registered")
 check(_G[ADDON] == ns, "public handle _G." .. ADDON)
 check(ns.Target.id == STAGE.target, "Config/Target.lua is the " .. STAGE.target .. " target")
 check(#ns.Guides.rejected == 0, "no rejected guides")
-check(ns.Selector:Recommend() == nil, "no guide recommended when there are none")
+if #ns.Guides.list == 0 then check(ns.Selector:Recommend() == nil, "no guide recommended when there are none") end
 
 -- Target rules ------------------------------------------------------------------------------------
 check(ns.TalentPointsAt(ns.Target.maxLevel) == ns.Target.maxLevel - ns.Target.firstTalentLevel + 1, "talent points at the level cap")
@@ -80,6 +80,34 @@ if STAGE.target == "ClassicEra" then
     check(ns.Target.maxLevel == 60 and ns.TalentPointsAt(60) == 51, "Classic Era: level 60, 51 talent points")
     check(ns.Target.questLogMax == 20, "Classic Era: quest log holds 20")
     check(#ns.Target.chapters == 1 and ns.Target.chapters[1] == "Azeroth", "Classic Era: Azeroth only")
+end
+
+-- Real data (Classic Era, Phase 2) --------------------------------------------------------------------
+if STAGE.target == "ClassicEra" then
+    check(ns.DB.GetQuestByID(783) and ns.DB.GetQuestByID(783).name == "A Threat Within", "Classic quest 783 resolves")
+    check(ns.QDB.NPC_FLAGS.INNKEEPER == 128 and ns.QDB.NPC_FLAGS.FLIGHT_MASTER == 8, "vanilla NPC flag numbering from the Classic data")
+    local combos, races = 0, 0
+    for _, r in pairs(ns.RaceClass.races) do races = races + 1; combos = combos + #r.classes end
+    check(races == 8 and combos == 40, "8 races, 40 race/class combinations (" .. races .. ", " .. combos .. ")")
+    local trees, maxTier = 0, 0
+    for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
+        trees = trees + #(ns.TalentTrees[cls] or {})
+        for _, tab in ipairs(ns.TalentTrees[cls] or {}) do for _, t in ipairs(tab.talents) do if t.tier > maxTier then maxTier = t.tier end end end
+    end
+    check(trees == 27 and maxTier == 7, "27 talent trees, 7 tiers (" .. trees .. ", " .. maxTier .. ")")
+    check(ns.Engine.guide and ns.Engine.guide.id == "A_Human_Elwynn", "a Human warrior gets the Elwynn start guide")
+    -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
+    local g = ns.Guides:Get("A_Human_Elwynn")
+    local hogger
+    for i, st in ipairs(g.steps) do if st[1] == "accept" and st.hcSkip then hogger = i break end end
+    check(hogger ~= nil, "the Elwynn guide marks a step [hc=skip]")
+    ns.Engine:Refresh()
+    check(ns.Engine.status[hogger] ~= "na", "Speed route keeps the Hogger pickup")
+    ns.char.hardcore = true
+    ns.Engine:Refresh()
+    check(ns:IsHardcore() and ns.Engine.status[hogger] == "na", "Hardcore route leaves the Hogger pickup out")
+    ns.char.hardcore = false
+    ns.Engine:Refresh()
 end
 
 -- Detection ---------------------------------------------------------------------------------------
