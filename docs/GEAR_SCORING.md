@@ -4,7 +4,11 @@ ClassicGuide compares items with what you wear: on item tooltips, for quest rewa
 
 **Automatic upgrades** (opt-in) and the Bind-on-Equip bag markers use a separate evaluator with the profile you choose. For priority-only profiles it uses **estimated** weights, labelled as such. See [AUTO_EQUIP.md](AUTO_EQUIP.md).
 
-The stat weights come from researched sources, listed with their assumptions in [GEAR_RESEARCH.md](tbcguide/GEAR_RESEARCH.md). Nothing has been tested in the game client yet.
+The stat weights come from researched sources, listed with their assumptions:
+- Classic Era: [GEAR_RESEARCH_CLASSIC.md](GEAR_RESEARCH_CLASSIC.md). It is priority-only, since no source publishes numbers.
+- TBC test fixture: [GEAR_RESEARCH.md](tbcguide/GEAR_RESEARCH.md).
+
+Nothing has been tested in the game client yet.
 
 ## How an item is scored
 
@@ -52,7 +56,7 @@ From chat: `/cg set gearTooltip off`, and the same for `gearEnabled`, `gearQuest
 
 Profiles are plain data in `addon/Gear/Profiles.lua`; no code changes are needed.
 
-1. Record the new source in `docs/tbcguide/GEAR_RESEARCH.md`: URL, date, game version and phase, context, assumptions, and whether it gives numbers.
+1. Record the new source in the target's research page (`docs/GEAR_RESEARCH_CLASSIC.md` for Classic Era): URL, date, game version and phase, context, assumptions, and whether it gives numbers.
 2. Edit or add the profile. Use the stat keys listed at the top of the file, keep `sources` and `assumptions` accurate, and set `confidence` by the rules in the research doc.
 3. Only add `weights` when a source publishes numbers. Otherwise use `priority`. Don't write derived numbers into a profile. The only derived numbers are the automatic-upgrade estimates, made at runtime from the `heuristic` table in the same file and labelled as estimates (AUTO_EQUIP.md).
 4. Run the tests (`tests/run_tests.lua`). They check every profile's structure: unique id, valid class, confidence, level range, sources, known stat keys, weights *or* priority, and no numbers on leveling profiles.

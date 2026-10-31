@@ -131,6 +131,26 @@ if STAGE.target == "ClassicEra" then
         ns.db.profile.showElite = false
         ns.Engine:Load("A_Human_Elwynn")
     end
+    -- Gear profiles (docs/GEAR_RESEARCH_CLASSIC.md): priority-only, sourced, every class covered at 60.
+    local KNOWN, at60, leveling, bad = {}, {}, {}, {}
+    for _, k in pairs(ns.Gear.STAT_KEYS) do KNOWN[k] = true end
+    for _, p in ipairs(ns.GearProfiles.list) do
+        local ok = p.weights == nil and type(p.priority) == "table" and #p.priority > 0 and type(p.sources) == "table" and #p.sources > 0
+        for _, k in ipairs(p.priority or {}) do ok = ok and KNOWN[k] == true end
+        if not ok then bad[#bad + 1] = p.id end
+        if p.levelMax == 60 then at60[p.class] = true end
+        if p.context == "leveling" then leveling[p.class] = true end
+    end
+    check(#bad == 0, "gear profiles are priority-only, sourced, with known stats (bad: " .. table.concat(bad, ",") .. ")")
+    local miss60, missLvl = {}, {}
+    for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
+        if not at60[cls] then miss60[#miss60 + 1] = cls end
+        if not leveling[cls] and cls ~= "HUNTER" and cls ~= "ROGUE" then missLvl[#missLvl + 1] = cls end
+    end
+    check(#miss60 == 0, "every class has a level-60 gear profile (missing: " .. table.concat(miss60, ",") .. ")")
+    check(#missLvl == 0, "every class with a sourced leveling priority has a leveling profile (missing: " .. table.concat(missLvl, ",") .. ")")
+    local wp = ns.Gear:SelectProfile({ class = "WARRIOR", level = 20 })
+    check(wp and wp.id == "warrior_leveling_early", "a level-20 warrior gets the early leveling profile (" .. tostring(wp and wp.id) .. ")")
     -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
     local g = ns.Guides:Get("A_Human_Elwynn")
     local hogger

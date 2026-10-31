@@ -103,8 +103,13 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Examples:** Barrens quests moved into the Southern Barrens visits, Stranglethorn's Mastery and Bloodsail lines into the later Stranglethorn visits, the Gahrron's Withering chains into the second Western Plaguelands visit, and the Felwood cleansing quests into the second Felwood visit.
   - **Effect:** level-gated pickups went from 26 to 16. Modelled grinding rose slightly (Alliance 20.8, Horde 21.1): earlier visits now end lower, and some quest XP lands near the cap.
   - **Still empty, because the data has nothing that fits:** Alliance Darkshore 23-24, Alterac 37, and Felwood, Azshara and Tanaris at 58. Horde Dustwallow 49 and Burning Steppes 53.
+- **Classic Era gear stat priorities** (`targets/ClassicEra/addon/Gear/Profiles.lua`, sources in `docs/GEAR_RESEARCH_CLASSIC.md`).
+  - **What's there:** 14 leveling profiles and 19 level-60 profiles, from the Icy Veins Classic leveling, Hardcore and PvE stat pages, with Wowhead as a cross-check.
+  - **All priority-only:** no Classic source publishes numeric weights. Items are compared stat by stat; automatic upgrades use labelled estimates.
+  - **Gaps:** Rogue and Hunter have no leveling profile, because no usable source ranks their leveling stats.
+  - **Smoke tests:** check that the profiles are priority-only and sourced, that every class has a level-60 profile, and that leveling profiles are chosen by level.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 49/49); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 53/53); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 
