@@ -52,8 +52,3 @@ horde/20_thousandneedles.guide:17 (The Sacred Flame): prerequisite 1195 'The Sac
 horde/21_hillsbradfoothills.guide:18 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/25_desolace.guide:23 (Befouled by Satyr): prerequisite 1432 'Alliance Relations' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/30_dustwallowmarsh.guide:31 (The Black Shield): prerequisite 1273 'Questioning Reethe' is not turned in anywhere on Horde routes
-routes/auto_elwynn_forest.routes:20: quest 46 has no complete step in any guide
-routes/auto_redridge_mountains.routes:7: quest 89 has no complete step in any guide
-routes/auto_silverpine_forest.routes:7: quest 479 has no complete step in any guide
-routes/auto_westfall.routes:7: quest 38 has no complete step in any guide
-routes/auto_westfall.routes:18: quest 152 has no complete step in any guide

@@ -1,0 +1,44 @@
+scope,key,decision,reason
+"# Human review for tools/research/roam_propose.py ClassicEra (docs/ROAMING.md). Carried over from TBCGuide's review (docs/tbcguide/research/roaming-overrides.csv) on 2026-10-31: the old-world terrain is the same; Outland, Draenei and Blood Elf zone rows and TBC-only quests were dropped. Zones without a row here are not reviewed for Classic yet, so no route is written for them.",,,
+# quest/objective rows override the tool for one quest (all objectives) or one quest:objective.,,,
+zone,12,reviewed,"batch 1 (Alliance starting zones): Elwynn Forest, rolling farmland and forest"
+zone,1,reviewed,batch 1: Dun Morogh valleys; mobs in valley floors
+zone,141,reviewed,batch 1: Teldrassil forest floor
+zone,148,reviewed,batch 3 (Alliance 10-30): Darkshore coast and forest
+zone,331,reviewed,batch 3: Ashenvale forest
+zone,38,reviewed,batch 3: Loch Modan hills around the lake
+zone,44,reviewed,"batch 3: Redridge, valley west of the lake"
+zone,10,reviewed,batch 3: Duskwood forest and cemeteries
+zone,40,reviewed,batch 3: Westfall farmland and coast
+zone,11,reviewed,batch 3: Wetlands
+zone,14,reviewed,batch 2 (Horde starting zones): Durotar
+zone,215,reviewed,batch 2: Mulgore plains
+zone,85,reviewed,batch 2: Tirisfal Glades
+zone,17,reviewed,batch 4 (Horde 10-30): The Barrens savanna
+zone,130,reviewed,batch 4: Silverpine Forest
+zone,267,reviewed,batch 4: Hillsbrad Foothills
+zone,45,reviewed,batch 5 (30-50): Arathi Highlands
+zone,33,reviewed,batch 5: Stranglethorn Vale jungle (hilly; legs stay inside spawn areas)
+zone,405,reviewed,batch 5: Desolace
+zone,15,reviewed,batch 5: Dustwallow Marsh
+zone,8,reviewed,batch 5: Swamp of Sorrows
+zone,28,reviewed,batch 6 (50-60): Western Plaguelands
+zone,361,reviewed,batch 6: Felwood
+zone,3,strict,batch 5: Badlands canyons and mesas
+zone,400,strict,batch 5: Thousand Needles: mesas and canyon walls; only floor/salt-flat spawn areas pass the stricter leg limit
+zone,357,strict,batch 5: Feralas cliffs between forest shelves
+zone,47,strict,batch 5: The Hinterlands hills and cliffs
+zone,440,strict,batch 6: Tanaris dunes; Lost Rigger Cove has docks and ships on several levels
+zone,51,strict,batch 6: Searing Gorge cliffs and lava
+zone,490,strict,batch 6: Un'Goro Crater lava and crater walls
+zone,618,strict,batch 6: Winterspring hills; Ice Thistle yeti caves
+quest,1485,Blocked — missing evidence,Vile Familiars live mostly inside the Burning Blade Coven cave; spawn data has no height
+quest,47,Blocked — missing evidence,Kobold Miners spawn mostly inside Fargodeep and Jasperlode Mines
+quest,380,Blocked — missing evidence,Night Web's Hollow is a cave system
+quest,432,Blocked — missing evidence,Gol'Bolar Quarry is a terraced pit with a mine; no height data
+quest,1023,Blocked — missing evidence,"the guide text names gnarled ancients, the quest data names Saltspittle murlocs; sources need checking first"
+quest,93,Blocked — missing evidence,"the guide text says crabs, the quest data names spiders; sources need checking first"
+quest,955,Blocked — missing evidence,"the guide text says satyrs, the quest data names sprites and grell; sources need checking first"
+zone,46,strict,batch 6: Burning Steppes lava fields and ridges
+zone,139,reviewed,batch 6: Eastern Plaguelands
+quest,153,Blocked — missing evidence,"Defias Smugglers cluster at Jangolode Mine, partly underground; no height data"

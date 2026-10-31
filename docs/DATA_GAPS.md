@@ -27,7 +27,7 @@ Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest databa
 - Alliance: Darkshore 23-24, Alterac 37, Felwood 58, Azshara 58 and Tanaris 58.
 - Horde: Dustwallow 49 and Burning Steppes 53.
 
-The data has no unused or better-fitting quests for them. About 10 more visits hold only 1-2 quests. **Westfall, Redridge and Silverpine** are not in the order, so their quests are gone (`zone-order-dropped.csv`). Hunting routes (`guides-src/routes`) were generated from TBC spawn data; the compiler re-checks every drop and spawn against Classic data, but they have not been regenerated from Classic spawns. Not timed or played |
+The data has no unused or better-fitting quests for them. About 10 more visits hold only 1-2 quests. **Westfall, Redridge and Silverpine** are not in the order, so their quests are gone (`zone-order-dropped.csv`). Hunting routes (`guides-src/routes`) were regenerated from Classic spawns (104 routes, 25 zones); the zone reviews behind them were carried over from TBCGuide, and Stonetalon, Azshara, Alterac, Blasted Lands and Silithus are not reviewed yet. Not timed or played |
 | Warrior Defensive Stance | **Answered from client data:** *Path of Defense* (8121), the level-10 class quest's teaching spell, teaches Defensive Stance, Taunt and Sunder Armor together. *Path of the Berserker* (8616) teaches Berserker Stance and Intercept. All are marked as quest spells | confirm in game |
 
 ## WoW: Forever (not launched; launch 2026-11-04)

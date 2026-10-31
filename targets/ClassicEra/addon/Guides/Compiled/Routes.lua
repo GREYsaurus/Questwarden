@@ -16,22 +16,12 @@ ns.RoamRoutes = {
   [25] = {
     { name="Stonetalon Standstill: Befouled Water Elemental", zone=331, r=20, loop=true,
       objs={{i=1,kind="kill",name="Befouled Water Elemental",npcs={3917}}},
-      pts={{47.8,68.6},{46.2,70.3},{48.1,72.3},{47.7,70.3}} },
+      pts={{46.2,70.3},{47.8,68.6},{47.7,70.3},{48.1,72.3}} },
   },
   [33] = {
     { name="Wolves Across the Border: Tough Wolf Meat", zone=12, r=20, loop=true,
       objs={{i=1,kind="drop",item=750,name="Tough Wolf Meat",npcs={69,299}}},
       pts={{46.1,38.4,note="West of the abbey"},{48.7,37.9,note="North of the abbey"},{50.6,36.3,note="North-east field"},{52.3,39.4,note="East of the abbey"},{51.6,43.6,note="South-east, by the vineyard path"},{49.1,46.2,note="South of the abbey"},{46.1,43.6,note="South-west field"}} },
-  },
-  [38] = {
-    { name="Westfall Stew: Murloc Eye", zone=40, r=15, loop=true,
-      objs={{i=2,kind="drop",item=730,name="Murloc Eye",npcs={126,127,171,391,456,458,513,515,517}}},
-      pts={{53.5,10.6},{52.5,9.5},{55.8,8.7}} },
-  },
-  [46] = {
-    { name="Bounty on Murlocs: Torn Murloc Fin", zone=12, r=15, loop=true,
-      objs={{i=1,kind="drop",item=780,name="Torn Murloc Fin",npcs={46,732}}},
-      pts={{79.3,56.8},{78.1,57},{79.5,54.6}} },
   },
   [52] = {
     { name="Protect the Frontier: Prowler", zone=12, r=15, loop=true,
@@ -41,15 +31,10 @@ ns.RoamRoutes = {
   [56] = {
     { name="The Night Watch: Skeletal Warrior", zone=10, r=15, loop=true,
       objs={{i=1,kind="kill",name="Skeletal Warrior",npcs={48}}},
-      pts={{80.5,68.9},{77.5,71.8},{80.3,73}} },
+      pts={{77.7,71.4},{80.3,73},{80.8,68.7}} },
     { name="The Night Watch: Skeletal Mage", zone=10, r=15, loop=true,
       objs={{i=2,kind="kill",name="Skeletal Mage",npcs={203}}},
-      pts={{77.6,68.2},{78.2,75.6},{79.6,74.5},{79,72},{79.7,69.3}} },
-  },
-  [57] = {
-    { name="The Night Watch: Skeletal Horror", zone=10, r=15, loop=true,
-      objs={{i=2,kind="kill",name="Skeletal Horror",npcs={202}}},
-      pts={{81.4,57.1},{79.3,58.3},{80.6,60.8}} },
+      pts={{78.9,75},{77.6,68.2},{79.2,71.4}} },
   },
   [83] = {
     { name="Red Linen Goods: Red Linen Bandana", zone=12, r=15, loop=true,
@@ -61,30 +46,15 @@ ns.RoamRoutes = {
       objs={{i=1,kind="drop",item=769,name="Chunk of Boar Meat",npcs={113,119,330,390,524}}},
       pts={{41.2,85.9},{40.8,88.7},{42.3,86.5}} },
   },
-  [89] = {
-    { name="The Everstill Bridge: Iron Pike", zone=44, r=20, loop=true,
-      objs={{i=1,kind="drop",item=2856,name="Iron Pike",npcs={426,430,446,580}},{i=2,kind="drop",item=1013,name="Iron Rivet",npcs={426,430,446,580}}},
-      pts={{23.9,35.4},{20.9,34.3},{19.7,23.9},{17,19.1},{19.2,14.6},{23.4,26.7}} },
-  },
   [101] = {
     { name="The Totem of Infliction: Vial of Spider Venom", zone=10, r=20, loop=true,
       objs={{i=2,kind="drop",item=1130,name="Vial of Spider Venom",npcs={217,539,569,930,949}}},
-      pts={{30.1,51},{30.5,47.2},{33.2,49},{31.1,55.6}} },
+      pts={{30.5,48.1},{29.9,52},{31.1,55.6},{33.2,49}} },
   },
   [112] = {
     { name="Collecting Kelp: Crystal Kelp Frond", zone=12, r=15, loop=true,
       objs={{i=1,kind="drop",item=1256,name="Crystal Kelp Frond",npcs={285,735}}},
-      pts={{56.5,66.8},{52.5,68.8},{54.6,66.4}} },
-  },
-  [152] = {
-    { name="The Coast Isn't Clear: Murloc Coastrunner", zone=40, r=15, loop=true,
-      objs={{i=1,kind="kill",name="Murloc Coastrunner",npcs={126}}},
-      pts={{44.7,8.3},{42.4,12},{42.7,8.9}} },
-  },
-  [156] = {
-    { name="Gather Rot Blossoms: Rot Blossom", zone=10, r=15, loop=true,
-      objs={{i=1,kind="drop",item=1598,name="Rot Blossom",npcs={202,531}}},
-      pts={{81.4,57.1},{79.3,58.3},{80.6,60.8}} },
+      pts={{56.5,66.8},{52.3,68.5},{54.6,66.4}} },
   },
   [170] = {
     { name="A New Threat: Rockjaw Trogg", zone=1, r=20, loop=true,
@@ -104,61 +74,93 @@ ns.RoamRoutes = {
       objs={{i=1,kind="kill",name="Small Crag Boar",npcs={708}}},
       pts={{24,68.7},{22.1,71.9},{20,75.6},{20.3,73.6},{20.8,69.9},{22.4,69.7}} },
   },
+  [189] = {
+    { name="Bloodscalp Ears: Bloodscalp Ear", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=1519,name="Bloodscalp Ear",npcs={587,588,595,597,660,671,694,697,699,701,702}}},
+      pts={{23,12},{23.3,9},{24.5,10.2},{25.7,9.4},{26,12.4},{24.5,12.6}} },
+  },
   [192] = {
     { name="Panther Mastery: Shadowmaw Panther", zone=33, r=15, loop=true,
       objs={{i=1,kind="kill",name="Shadowmaw Panther",npcs={684}}},
-      pts={{39.5,40.9},{39.5,42.2},{41.3,40.3},{40.5,40.3}} },
+      pts={{40.3,40.4},{39.4,41.8},{41.3,40.3}} },
   },
   [203] = {
     { name="The Second Rebellion: Kurzen Jungle Fighter", zone=33, r=15, loop=true,
       objs={{i=1,kind="kill",name="Kurzen Jungle Fighter",npcs={937}}},
-      pts={{44.8,11.3},{43.7,9.7},{44.4,9.9}} },
+      pts={{44.4,9.9},{43.7,9.7},{44.8,11.3}} },
+  },
+  [205] = {
+    { name="Troll Witchery: Skullsplitter Fetish", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2466,name="Skullsplitter Fetish",npcs={670,780}}},
+      pts={{47.1,39.1},{46.3,40.4},{48.2,40.6}} },
+  },
+  [209] = {
+    { name="Skullsplitter Tusks: Skullsplitter Tusk", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=1524,name="Skullsplitter Tusk",npcs={667,669,670,672,696,780,781,782,783,784,1059}}},
+      pts={{47.1,39.1},{46.3,40.4},{47.4,41.6},{47.7,43.5},{48.3,40.5}} },
   },
   [221] = {
     { name="Worgen in the Woods: Nightbane Dark Runner", zone=10, r=15, loop=true,
       objs={{i=1,kind="kill",name="Nightbane Dark Runner",npcs={205}}},
-      pts={{65.4,69.4},{65.4,67},{66.8,68.6}} },
+      pts={{65.5,67.1},{65.4,69.4},{67.3,69.2}} },
   },
   [224] = {
     { name="In Defense of the King's Lands: Stonesplinter Scout", zone=38, r=15, loop=true,
       objs={{i=2,kind="kill",name="Stonesplinter Scout",npcs={1162}}},
-      pts={{34.6,71.2},{31.5,75.1},{34.3,76}} },
-  },
-  [237] = {
-    { name="In Defense of the King's Lands: Stonesplinter Skullthumper", zone=38, r=15, loop=true,
-      objs={{i=1,kind="kill",name="Stonesplinter Skullthumper",npcs={1163}}},
-      pts={{35.7,87.8},{34.3,86.8},{35.8,81.7},{36.1,84.2}} },
-    { name="In Defense of the King's Lands: Stonesplinter Seer", zone=38, r=20, loop=true,
-      objs={{i=2,kind="kill",name="Stonesplinter Seer",npcs={1166}}},
-      pts={{34.7,89.3},{34.1,85.8},{35,81.7},{36.7,78.7},{36.4,84.4}} },
+      pts={{34.3,76},{31.5,75.1},{34.6,71.2}} },
   },
   [261] = {
     { name="Down the Scarlet Path: Undead Ravager", zone=405, r=20, loop=true,
       objs={{i=1,kind="kill",name="Undead Ravager",npcs={11561}}},
-      pts={{64.3,88.9},{63.3,91.1},{60.4,90.4},{65.1,86.7}} },
-  },
-  [263] = {
-    { name="In Defense of the King's Lands: Stonesplinter Shaman", zone=38, r=15, loop=true,
-      objs={{i=1,kind="kill",name="Stonesplinter Shaman",npcs={1197}}},
-      pts={{34.5,93.4},{36.4,93.5},{36.9,90.5}} },
+      pts={{63.6,90.6},{60.4,90.4},{64.7,87.4}} },
   },
   [267] = {
     { name="The Trogg Threat: Trogg Stone Tooth", zone=38, r=20, loop=true,
       objs={{i=1,kind="drop",item=2536,name="Trogg Stone Tooth",npcs={1161,1162,1163,1164,1165,1166,1167,1197,1393}}},
-      pts={{33.9,71.5},{30.9,74.2},{28.9,82.2},{28.7,86.4},{32.8,78.3}} },
+      pts={{32.2,78.7},{28.7,84.5},{30.9,73.9},{34.2,72.3}} },
   },
   [317] = {
     { name="Stocking Jetsteam: Chunk of Boar Meat", zone=1, r=20, loop=true,
       objs={{i=1,kind="drop",item=769,name="Chunk of Boar Meat",npcs={708,1125,1126,1127}}},
       pts={{24,68.7},{22.1,71.9},{20,75.6},{20.3,73.6},{20.8,69.9},{22.4,69.7}} },
   },
+  [339] = {
+    { name="Chapter I: Green Hills of Stranglethorn - Page 1", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2725,name="Green Hills of Stranglethorn - Page 1",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=2,kind="drop",item=2728,name="Green Hills of Stranglethorn - Page 4",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=3,kind="drop",item=2730,name="Green Hills of Stranglethorn - Page 6",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=4,kind="drop",item=2732,name="Green Hills of Stranglethorn - Page 8",npcs={587,588,595,597,660,667,669,670,671,672,674,675}}},
+      pts={{23.1,12},{23.3,9},{24.3,10.1},{25.7,9.5},{25.3,12.5}} },
+  },
+  [340] = {
+    { name="Chapter II: Green Hills of Stranglethorn - Page 10", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2734,name="Green Hills of Stranglethorn - Page 10",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=2,kind="drop",item=2735,name="Green Hills of Stranglethorn - Page 11",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=3,kind="drop",item=2738,name="Green Hills of Stranglethorn - Page 14",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=4,kind="drop",item=2740,name="Green Hills of Stranglethorn - Page 16",npcs={587,588,595,597,660,667,669,670,671,672,674,675}}},
+      pts={{23.1,12},{23.3,9},{24.3,10.1},{25.7,9.5},{25.3,12.5}} },
+  },
+  [341] = {
+    { name="Chapter III: Green Hills of Stranglethorn - Page 18", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2742,name="Green Hills of Stranglethorn - Page 18",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=2,kind="drop",item=2744,name="Green Hills of Stranglethorn - Page 20",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=3,kind="drop",item=2745,name="Green Hills of Stranglethorn - Page 21",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=4,kind="drop",item=2748,name="Green Hills of Stranglethorn - Page 24",npcs={587,588,595,597,660,667,669,670,671,672,674,675}}},
+      pts={{23.1,12},{23.3,9},{24.3,10.1},{25.7,9.5},{25.3,12.5}} },
+  },
+  [342] = {
+    { name="Chapter IV: Green Hills of Stranglethorn - Page 25", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2749,name="Green Hills of Stranglethorn - Page 25",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=2,kind="drop",item=2750,name="Green Hills of Stranglethorn - Page 26",npcs={587,588,595,597,660,667,669,670,671,672,674,675}},{i=3,kind="drop",item=2751,name="Green Hills of Stranglethorn - Page 27",npcs={587,588,595,597,660,667,669,670,671,672,674,675}}},
+      pts={{23.1,12},{23.3,9},{24.3,10.1},{25.7,9.5},{25.3,12.5}} },
+  },
   [364] = {
     { name="The Mindless Ones: Mindless Zombie", zone=85, r=20, loop=true,
       objs={{i=1,kind="kill",name="Mindless Zombie",npcs={1501}}},
-      pts={{32.9,63.9},{31.3,63.7},{31.2,62},{34.8,62.8},{34.3,64.6}} },
+      pts={{34.8,62.8},{31.2,62},{31.3,63.7},{32.9,63.9},{34.3,64.6}} },
     { name="The Mindless Ones: Wretched Zombie", zone=85, r=20, loop=true,
       objs={{i=2,kind="kill",name="Wretched Zombie",npcs={1502}}},
-      pts={{33.6,64.6},{32.1,62},{33.8,62.1}} },
+      pts={{33.6,65.6},{32.2,62.1},{33.6,63.5}} },
+  },
+  [368] = {
+    { name="A New Plague: Vile Fin Scale", zone=85, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2859,name="Vile Fin Scale",npcs={1543,1544,1545}}},
+      pts={{63.1,28.3},{61.2,27.6},{58.1,26.4},{58.5,28},{59.8,28.5},{61.8,30},{64.7,29.8}} },
+  },
+  [374] = {
+    { name="Proof of Demise: Scarlet Insignia Ring", zone=85, r=20, loop=true,
+      objs={{i=1,kind="drop",item=2875,name="Scarlet Insignia Ring",npcs={1535,1536,1537,1538,1539,1540,1660,1662,1664,1665}}},
+      pts={{50.8,68},{51.3,65.8},{53.7,66.4},{52.5,68.2}} },
   },
   [381] = {
     { name="The Scarlet Crusade: Scarlet Armband", zone=85, r=20, loop=true,
@@ -168,7 +170,7 @@ ns.RoamRoutes = {
   [418] = {
     { name="Thelsamar Blood Sausages: Boar Intestines", zone=38, r=15, loop=true,
       objs={{i=1,kind="drop",item=3172,name="Boar Intestines",npcs={1190,1191,1192}}},
-      pts={{37.6,35.1},{35.5,34},{37.6,38.8}} },
+      pts={{36.6,34.3},{37.6,38.8},{38,35.5}} },
   },
   [426] = {
     { name="The Mills Overrun: Blackened Skull", zone=85, r=15, loop=true,
@@ -193,10 +195,10 @@ ns.RoamRoutes = {
       objs={{i=1,kind="kill",name="Mangy Nightsaber",npcs={2032}}},
       pts={{60,35.8},{60.5,34.4},{61.7,35.2}} },
   },
-  [479] = {
-    { name="Ambermill Investigations: Dalaran Pendant", zone=130, r=20, loop=true,
-      objs={{i=1,kind="drop",item=3354,name="Dalaran Pendant",npcs={1912,1914,1915}}},
-      pts={{61.5,62.4},{59.1,62.4},{58,65.4},{60,66},{63.2,64.3}} },
+  [470] = {
+    { name="Digging Through the Ooze: Sida's Bag", zone=11, r=15, loop=true,
+      objs={{i=1,kind="drop",item=3349,name="Sida's Bag",npcs={1031,1032,1033}}},
+      pts={{44.3,24.8},{43.4,26.2},{43.3,28.6},{44.4,26.9}} },
   },
   [487] = {
     { name="The Road to Darnassus: Gnarlpine Ambusher", zone=141, r=15, loop=true,
@@ -206,25 +208,35 @@ ns.RoamRoutes = {
   [546] = {
     { name="Souvenirs of Death: Hillsbrad Human Skull", zone=267, r=20, loop=true,
       objs={{i=1,kind="drop",item=3692,name="Hillsbrad Human Skull",npcs={232,2244,2260,2261,2264,2265,2266,2267,2268,2269,2270,2305}}},
-      pts={{80.7,45.5},{77.4,44.7},{75.6,40.9},{78.8,40.3},{82,41.1}} },
+      pts={{82.4,40.8},{79,41.1},{75.7,41.1},{78.2,45.9},{81.1,45.1}} },
+  },
+  [549] = {
+    { name="WANTED: Syndicate Personnel: Syndicate Watchman", zone=267, r=20, loop=true,
+      objs={{i=2,kind="kill",name="Syndicate Watchman",npcs={2261}}},
+      pts={{82.1,42.2},{78.6,45.9},{77,41.8},{75,39.9},{79.7,40.7}} },
+  },
+  [552] = {
+    { name="Helcular's Revenge: Helcular's Rod", zone=267, r=20, loop=true,
+      objs={{i=1,kind="drop",item=3708,name="Helcular's Rod",npcs={2248,2249}}},
+      pts={{46.2,32.3},{42.5,32.3},{44.1,26.6},{44.3,29.9}} },
   },
   [570] = {
     { name="Mok'thardin's Enchantment: Shadowmaw Claw", zone=33, r=15, loop=true,
       objs={{i=1,kind="drop",item=3838,name="Shadowmaw Claw",npcs={684,1713}}},
-      pts={{39.5,40.9},{39.5,42.2},{41.3,40.3},{40.5,40.3}} },
+      pts={{40.3,40.4},{39.4,41.8},{41.3,40.3}} },
     { name="Mok'thardin's Enchantment: Pristine Tigress Fang", zone=33, r=15, loop=true,
       objs={{i=2,kind="drop",item=3839,name="Pristine Tigress Fang",npcs={772}}},
-      pts={{39.5,40.9},{39.5,42.2},{41.3,40.3},{40.5,40.3}} },
+      pts={{40.3,40.4},{39.4,41.8},{41.3,40.3}} },
   },
   [574] = {
     { name="Special Forces: Kurzen Commando", zone=33, r=15, loop=true,
       objs={{i=1,kind="kill",name="Kurzen Commando",npcs={938}}},
-      pts={{45.9,8.2},{46.5,7.1},{47.3,7.6}} },
+      pts={{45.8,8.2},{46.4,7.3},{47.3,7.6}} },
   },
   [581] = {
     { name="Hunt for Yenniku: Bloodscalp Tusk", zone=33, r=20, loop=true,
       objs={{i=1,kind="drop",item=3901,name="Bloodscalp Tusk",npcs={587,588,595,597,660,671,694,697,699,701,702}}},
-      pts={{23,11.9},{23.3,9},{24.6,10.4},{25.7,9.4},{26,12.4},{24.4,12.7}} },
+      pts={{23,12},{23.3,9},{24.5,10.2},{25.7,9.4},{26,12.4},{24.5,12.6}} },
   },
   [582] = {
     { name="Headhunting: Shrunken Head", zone=33, r=15, loop=true,
@@ -234,52 +246,82 @@ ns.RoamRoutes = {
   [596] = {
     { name="Bloody Bone Necklaces: Bloody Bone Necklace", zone=33, r=20, loop=true,
       objs={{i=1,kind="drop",item=3915,name="Bloody Bone Necklace",npcs={587,588,595,597,660,671,694,697,699,701,702}}},
-      pts={{23,11.9},{23.3,9},{24.6,10.4},{25.7,9.4},{26,12.4},{24.4,12.7}} },
+      pts={{23,12},{23.3,9},{24.5,10.2},{25.7,9.4},{26,12.4},{24.5,12.6}} },
+  },
+  [598] = {
+    { name="Split Bone Necklace: Split Bone Necklace", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=3916,name="Split Bone Necklace",npcs={667,669,670,672,696,780,781,782,783,784,1059}}},
+      pts={{47.1,39.1},{46.3,40.4},{47.4,41.6},{47.7,43.5},{48.3,40.5}} },
+  },
+  [601] = {
+    { name="Water Elementals: Water Elemental Bracers", zone=33, r=20, loop=true,
+      objs={{i=1,kind="drop",item=3923,name="Water Elemental Bracers",npcs={691}}},
+      pts={{20.2,24},{20.2,22.1},{22,22.8},{21.3,23.8}} },
+  },
+  [621] = {
+    { name="Zanzil's Secret: Zanzil's Mixture", zone=33, r=15, loop=true,
+      objs={{i=1,kind="drop",item=4016,name="Zanzil's Mixture",npcs={1488,1489,1490,1491,2534,2536,2537}}},
+      pts={{39.6,58.2},{38.8,59.2},{40.6,58.7}} },
+  },
+  [642] = {
+    { name="The Princess Trapped: Mote of Myzrael", zone=45, r=20, loop=true,
+      objs={{i=1,kind="drop",item=4435,name="Mote of Myzrael",npcs={2572,2573,2574}}},
+      pts={{82.4,36.8},{83.5,33.2},{84.4,30.3},{86,30.9},{85.4,33.3}} },
+  },
+  [664] = {
+    { name="Drowned Sorrows: Daggerspine Raider", zone=45, r=20, loop=true,
+      objs={{i=1,kind="kill",name="Daggerspine Raider",npcs={2595}}},
+      pts={{23.1,86},{21.6,85.2},{19.3,84.3},{20.1,86.7},{25.3,90.4},{24.8,86.6}} },
   },
   [678] = {
     { name="Call to Arms: Boulderfist Brute", zone=45, r=15, loop=true,
       objs={{i=1,kind="kill",name="Boulderfist Brute",npcs={2566}}},
-      pts={{52.1,73},{53.6,75.4},{54.4,73.1}} },
+      pts={{53.4,74.8},{51.9,72.7},{54.8,73.3}} },
+  },
+  [706] = {
+    { name="Fiery Blaze Enchantments: Black Drake's Heart", zone=3, r=15, loop=true,
+      objs={{i=1,kind="drop",item=4612,name="Black Drake's Heart",npcs={2725}}},
+      pts={{82,31},{83,33.6},{85.2,28.7}} },
   },
   [710] = {
     { name="Study of the Elements: Rock: Small Stone Shard", zone=3, r=20, loop=true,
       objs={{i=1,kind="drop",item=4626,name="Small Stone Shard",npcs={2735}}},
-      pts={{19.1,45.8},{18.1,42.1},{21.3,44.2},{23.5,45.5},{21.6,47.9}} },
+      pts={{21.3,44.2},{18.1,42.1},{20.3,47.2},{23.3,46.6}} },
   },
   [733] = {
     { name="Scrounging: Scrap Metal", zone=3, r=15, loop=true,
       objs={{i=1,kind="drop",item=4630,name="Scrap Metal",npcs={2701,2715,2716,2717,2718,2719,2720,2906,2907}}},
-      pts={{9.4,74.3},{8.7,77.4},{8.6,84.4},{7.5,90.4},{7.5,94.8},{9.4,90.4},{10.2,80.1},{13,74.6}} },
+      pts={{12.8,74.6},{9.5,76.9},{8,73.1},{8.6,84.4},{7.5,90.4},{7.5,94.8},{9.4,90.4},{10.1,80.9}} },
   },
   [743] = {
-    { name="Dangers of the Windfury: Windfury Talon", zone=215, r=15, loop=true,
+    { name="Dangers of the Windfury: Windfury Talon", zone=215, r=20, loop=true,
       objs={{i=1,kind="drop",item=4751,name="Windfury Talon",npcs={2962,2963}}},
-      pts={{67,70.3},{65.5,70.6},{63.6,71.8},{62,71.6},{63.9,70.2},{66,68.8},{67.8,69.5},{67.7,71.6}} },
+      pts={{67.4,70.4},{62.7,71.4},{65.4,69.6}} },
   },
   [747] = {
     { name="The Hunt Begins: Plainstrider Meat", zone=215, r=20, loop=true,
       objs={{i=1,kind="drop",item=4739,name="Plainstrider Meat",npcs={2955}},{i=2,kind="drop",item=4740,name="Plainstrider Feather",npcs={2955}}},
-      pts={{47.9,77},{47.1,75.3},{50,74.7},{48.9,76.3}} },
+      pts={{47.1,75.3},{48.3,76.8},{49.7,75}} },
   },
   [748] = {
     { name="Poison Water: Plainstrider Talon", zone=215, r=20, loop=true,
       objs={{i=2,kind="drop",item=4759,name="Plainstrider Talon",npcs={2955,2956,2957}}},
-      pts={{47.9,77},{47.1,75.3},{50,74.7},{48.9,76.3}} },
+      pts={{47.1,75.3},{48.3,76.8},{49.7,75}} },
   },
   [750] = {
     { name="The Hunt Continues: Mountain Cougar Pelt", zone=215, r=20, loop=true,
       objs={{i=1,kind="drop",item=4742,name="Mountain Cougar Pelt",npcs={2961}}},
-      pts={{48.1,89.8},{47.6,92.2},{49.3,90.9},{50.8,89.4}} },
+      pts={{47.6,91.5},{48.6,89.4},{50.8,89.4},{49.3,90.9}} },
   },
   [757] = {
     { name="Rite of Strength: Bristleback Belt", zone=215, r=20, loop=true,
       objs={{i=1,kind="drop",item=4770,name="Bristleback Belt",npcs={2952,2953}}},
-      pts={{59.5,78.9},{59.6,77},{60.2,75.4},{61.4,76.4}} },
+      pts={{60.7,75.8},{58.6,78.2},{59.6,78.4},{60.1,80.4}} },
   },
   [766] = {
     { name="Mazzranache: Plainstrider Scale", zone=215, r=20, loop=true,
       objs={{i=3,kind="drop",item=4806,name="Plainstrider Scale",npcs={2955,2956,2957}}},
-      pts={{47.9,77},{47.1,75.3},{50,74.7},{48.9,76.3}} },
+      pts={{47.1,75.3},{48.3,76.8},{49.7,75}} },
   },
   [780] = {
     { name="The Battleboars: Battleboar Snout", zone=215, r=15, loop=true,
@@ -289,17 +331,12 @@ ns.RoamRoutes = {
   [818] = {
     { name="A Solvent Spirit: Crawler Mucus", zone=14, r=15, loop=true,
       objs={{i=2,kind="drop",item=4888,name="Crawler Mucus",npcs={3106,3107,3108,3228}}},
-      pts={{54.6,82},{52.8,83},{51.8,84},{54.4,83.3}} },
-  },
-  [821] = {
-    { name="Chen's Empty Keg: Savannah Lion Tusk", zone=17, r=15, loop=true,
-      objs={{i=1,kind="drop",item=4893,name="Savannah Lion Tusk",npcs={3241,3243,3415,3416,3425}}},
-      pts={{55.1,30.6},{54.5,29.9},{54.9,29.3}} },
+      pts={{54.6,83.5},{51.8,84},{52.5,83.1},{53.8,82.7},{54.9,81.9}} },
   },
   [835] = {
     { name="Securing the Lines: Dustwind Savage", zone=14, r=15, loop=true,
       objs={{i=1,kind="kill",name="Dustwind Savage",npcs={3117}}},
-      pts={{53.8,24.5},{52.3,24},{53.8,22.3}} },
+      pts={{52.3,24},{53.8,22.3},{53.8,24.5}} },
   },
   [867] = {
     { name="Harpy Raiders: Witchwing Talon", zone=17, r=20, loop=true,
@@ -309,22 +346,22 @@ ns.RoamRoutes = {
   [878] = {
     { name="Tribes at War: Bristleback Water Seeker", zone=17, r=15, loop=true,
       objs={{i=1,kind="kill",name="Bristleback Water Seeker",npcs={3260}}},
-      pts={{47,53.6},{46.5,53.7},{47.2,52.9}} },
+      pts={{47.1,53.4},{46.6,53.7},{47.1,52.7}} },
   },
   [887] = {
     { name="Southsea Freebooters: Southsea Cannoneer", zone=17, r=15, loop=true,
       objs={{i=2,kind="kill",name="Southsea Cannoneer",npcs={3382}}},
-      pts={{63.6,46.3},{64.2,47.8},{64.3,47.1}} },
+      pts={{63.6,46.3},{64.2,47.5},{64.3,46.9}} },
   },
   [896] = {
     { name="Miner's Fortune: Cats Eye Emerald", zone=17, r=20, loop=true,
       objs={{i=1,kind="drop",item=5097,name="Cats Eye Emerald",npcs={3283,3286,9336}}},
-      pts={{60.7,3.8},{59.7,3},{60,3.8},{61.3,5.4},{62,5.4},{61.7,4.5},{61.9,3.7}} },
+      pts={{60.2,3.8},{59.7,3.2},{61.7,3.7},{61.9,4.5},{62,5.5},{61.4,5.3}} },
   },
   [899] = {
     { name="Consumed by Hatred: Bristleback Quilboar Tusk", zone=17, r=20, loop=true,
       objs={{i=1,kind="drop",item=5085,name="Bristleback Quilboar Tusk",npcs={3258,3260,3261,3263}}},
-      pts={{51.2,55.4},{51.2,54.6},{52.8,52.2},{53.3,53.3},{53.4,54.3},{52.4,53.7}} },
+      pts={{51.2,54.6},{51.2,55.4},{52.4,53.7},{53.4,54.1},{53.2,53},{52.8,52.2}} },
   },
   [958] = {
     { name="Tools of the Highborne: Highborne Relic", zone=148, r=20, loop=true,
@@ -334,7 +371,7 @@ ns.RoamRoutes = {
   [970] = {
     { name="The Tower of Althalaxx: Glowing Soul Gem", zone=331, r=15, loop=true,
       objs={{i=1,kind="drop",item=5366,name="Glowing Soul Gem",npcs={3725,3727,3728,3730}}},
-      pts={{31.8,29.7},{30.6,31.3},{31.6,31.2}} },
+      pts={{30.6,31.3},{31.6,29.8},{32.6,29.3},{31.6,31.2}} },
   },
   [977] = {
     { name="Are We There, Yeti?: Pristine Yeti Horn", zone=618, r=15, loop=true,
@@ -349,32 +386,32 @@ ns.RoamRoutes = {
   [1008] = {
     { name="The Zoram Strand: Wrathtail Head", zone=331, r=20, loop=true,
       objs={{i=1,kind="drop",item=5490,name="Wrathtail Head",npcs={3711,3712,3713,3715,3717,3944}}},
-      pts={{8.1,15.5},{6.9,15.4},{5.4,14.5},{6.3,11.4},{7.3,12.7}} },
+      pts={{6.8,15.6},{5.4,14.5},{6.4,11.7},{7.5,13.4},{8.1,15.7}} },
+  },
+  [1032] = {
+    { name="Satyr Slaying!: Satyr Horns", zone=331, r=20, loop=true,
+      objs={{i=1,kind="drop",item=5481,name="Satyr Horns",npcs={3752,3754,3755,3757,3758,3759,3762,3763,3765,3767,3770,3771}}},
+      pts={{68.4,53.7},{66.5,52.4},{66.8,54.8},{66.7,56.6}} },
   },
   [1105] = {
     { name="Hardened Shells: Hardened Tortoise Shell", zone=400, r=15, loop=true,
       objs={{i=1,kind="drop",item=5795,name="Hardened Tortoise Shell",npcs={4142,4143,4144}}},
-      pts={{82.2,54.7},{81.5,53.1},{83.2,54.3}} },
+      pts={{81.5,53.1},{82.2,54.7},{83.2,54.3}} },
   },
   [1366] = {
     { name="Centaur Bounty: Centaur Ear", zone=405, r=20, loop=true,
       objs={{i=1,kind="drop",item=6067,name="Centaur Ear",npcs={4632,4633,4634,4635,4636,4637,4638,4639,4640,4641,4642,4643}}},
-      pts={{74.2,47.4},{72.8,46.7},{74,50.1}} },
+      pts={{73.3,46.7},{74,50.3},{74.3,48.1}} },
   },
   [1387] = {
     { name="Centaur Bounty: Centaur Ear", zone=405, r=20, loop=true,
       objs={{i=1,kind="drop",item=6067,name="Centaur Ear",npcs={4632,4633,4634,4635,4636,4637,4638,4639,4640,4641,4642,4643}}},
-      pts={{74.2,47.4},{72.8,46.7},{74,50.1}} },
+      pts={{73.3,46.7},{74,50.3},{74.3,48.1}} },
   },
   [1456] = {
     { name="The Karnitol Shipwreck: Karnitol's Satchel", zone=405, r=15, loop=true,
       objs={{i=1,kind="drop",item=6245,name="Karnitol's Satchel",npcs={4716,4719}}},
-      pts={{28.3,9.3},{28.8,11.6},{30.5,10.6}} },
-  },
-  [1458] = {
-    { name="Reagents for Reclaimers Inc.: Hatefury Claw", zone=405, r=20, loop=true,
-      objs={{i=1,kind="drop",item=6246,name="Hatefury Claw",npcs={4670,4671,4672,4673,4674,4675}},{i=2,kind="drop",item=6247,name="Hatefury Horn",npcs={4670,4671,4672,4673,4674,4675}}},
-      pts={{78.7,22.1},{74.3,23.4},{76.8,24.3}} },
+      pts={{28.8,11.6},{28.3,9.3},{30.5,10.6}} },
   },
   [1470] = {
     { name="Piercing the Veil: Rattlecage Skull", zone=85, r=15, loop=true,
@@ -389,7 +426,12 @@ ns.RoamRoutes = {
   [2258] = {
     { name="Badlands Reagent Run: Rock Elemental Shard", zone=3, r=20, loop=true,
       objs={{i=3,kind="drop",item=7848,name="Rock Elemental Shard",npcs={92,2735,2736,2791}}},
-      pts={{19.1,45.8},{18.1,42.1},{21.3,44.2},{23.5,45.5},{21.6,47.9}} },
+      pts={{21.3,44.2},{18.1,42.1},{20.3,47.2},{23.3,46.6}} },
+  },
+  [2821] = {
+    { name="The Mark of Quality: Thick Yeti Hide", zone=357, r=20, loop=true,
+      objs={{i=1,kind="drop",item=8973,name="Thick Yeti Hide",npcs={5292,5293,5295}}},
+      pts={{52,58.2},{50.7,58.9},{52.3,60.1},{52.9,56.7}} },
   },
   [2869] = {
     { name="Against the Hatecrest: Hatecrest Naga Scale", zone=357, r=20, loop=true,
@@ -403,18 +445,13 @@ ns.RoamRoutes = {
   },
   [2880] = {
     { name="Troll Necklace Bounty: Troll Tribal Necklace", zone=47, r=20, loop=true,
-      objs={{i=1,kind="drop",item=9259,name="Troll Tribal Necklace",npcs={2639,2640,2641,2642,2643,2644,2645,2646,2647,2648,2649,2650}}},
-      pts={{68.2,71.3},{65.5,70.4},{61.4,68.5},{63.1,72},{65.6,74.7},{67.6,76.7}} },
+      objs={{i=1,kind="drop",item=9259,name="Troll Tribal Necklace",npcs={2639,2640,2649,2650}}},
+      pts={{22.8,57.8},{23.2,55.7},{25.1,56.9},{24.7,59.5}} },
   },
   [2974] = {
     { name="A Grim Discovery: Grimtotem Horn", zone=357, r=15, loop=true,
       objs={{i=1,kind="drop",item=9460,name="Grimtotem Horn",npcs={7725,7726,7727}}},
       pts={{69.8,38.7},{68.9,38.8},{69.1,40.3}} },
-  },
-  [3452] = {
-    { name="The Flame's Casing: Symbol of Ragnaros", zone=51, r=20, loop=true,
-      objs={{i=1,kind="drop",item=10552,name="Symbol of Ragnaros",npcs={5860,5861,5862,8419}}},
-      pts={{24.2,35.5},{16.9,34.3},{19.5,36.9},{23.5,39.7}} },
   },
   [3901] = {
     { name="Rattling the Rattlecages: Rattlecage Skeleton", zone=85, r=15, loop=true,
@@ -431,13 +468,24 @@ ns.RoamRoutes = {
       objs={{i=1,kind="drop",item=11503,name="Blood Amber",npcs={7100,7101}}},
       pts={{55.5,17.3},{57,17.7},{58.1,18.6},{57.3,19.7}} },
   },
+  [4289] = {
+    { name="The Apes of Un'Goro: Un'Goro Gorilla Pelt", zone=490, r=20, loop=true,
+      objs={{i=1,kind="drop",item=11478,name="Un'Goro Gorilla Pelt",npcs={6514}}},
+      pts={{68.3,16.7},{62.6,17.6},{65.5,15.9},{68.1,14.4}} },
+    { name="The Apes of Un'Goro: Un'Goro Stomper Pelt", zone=490, r=20, loop=true,
+      objs={{i=2,kind="drop",item=11479,name="Un'Goro Stomper Pelt",npcs={6513}}},
+      pts={{68.3,16.7},{62.6,17.6},{65.5,15.9},{68.1,14.4}} },
+    { name="The Apes of Un'Goro: Un'Goro Thunderer Pelt", zone=490, r=20, loop=true,
+      objs={{i=3,kind="drop",item=11480,name="Un'Goro Thunderer Pelt",npcs={6516}}},
+      pts={{68.3,16.7},{62.6,17.6},{65.5,15.9},{68.1,14.4}} },
+  },
   [4841] = {
     { name="Pacify the Centaur: Galak Scout", zone=400, r=15, loop=true,
       objs={{i=1,kind="kill",name="Galak Scout",npcs={4094}}},
-      pts={{41,36.2},{39.3,36.9},{40.1,34.9}} },
+      pts={{40.4,36.9},{40,34.9},{41,35.3}} },
     { name="Pacify the Centaur: Galak Windchaser", zone=400, r=15, loop=true,
       objs={{i=3,kind="kill",name="Galak Windchaser",npcs={4096}}},
-      pts={{42.6,38.4},{41.6,40.8},{41.5,38.9},{42.8,36.5}} },
+      pts={{42.8,36.5},{41.5,38.9},{41.6,40.8},{42.6,38.4}} },
   },
   [5092] = {
     { name="Clear the Way: Skeletal Flayer", zone=28, r=20, loop=true,
@@ -447,6 +495,11 @@ ns.RoamRoutes = {
       objs={{i=2,kind="kill",name="Slavering Ghoul",npcs={1791}}},
       pts={{38.5,55},{37.2,54.2},{37.2,56.9}} },
   },
+  [6142] = {
+    { name="Clam Bait: Soft-shelled Clam Meat", zone=405, r=15, loop=true,
+      objs={{i=1,kind="drop",item=15924,name="Soft-shelled Clam Meat",npcs={4711,4712,4713,4714,4718,11562,11563,12347}}},
+      pts={{32.6,23.3},{31.8,22.2},{34.7,22.3}} },
+  },
   [6161] = {
     { name="Claim Rackmore's Treasure!: Rackmore's Golden Key", zone=405, r=20, loop=true,
       objs={{i=2,kind="drop",item=15881,name="Rackmore's Golden Key",npcs={4711,4712,4713,4714,4715,4716,4718,4719}}},
@@ -455,16 +508,19 @@ ns.RoamRoutes = {
   [6441] = {
     { name="Satyr Horns: Satyr Horns", zone=331, r=20, loop=true,
       objs={{i=1,kind="drop",item=5481,name="Satyr Horns",npcs={3752,3754,3755,3757,3758,3759,3762,3763,3765,3767,3770,3771}}},
-      pts={{66.9,56.2},{66.5,54.3},{66.5,52.1},{68.4,53.7}} },
+      pts={{68.4,53.7},{66.5,52.4},{66.8,54.8},{66.7,56.6}} },
   },
-  [7844] = {
-    { name="Cannibalistic Cousins: Vilebranch Soothsayer", zone=47, r=15, loop=true,
-      objs={{i=2,kind="kill",name="Vilebranch Soothsayer",npcs={4467}}},
-      pts={{47.5,66.8},{48.4,65},{48.9,68.4}} },
+  [7842] = {
+    { name="Another Message to the Wildhammer: Long Elegant Feather", zone=47, r=15, loop=true,
+      objs={{i=1,kind="drop",item=4589,name="Long Elegant Feather",npcs={2651,2657,2658,2659}}},
+      pts={{31.1,57.9},{30,60.6},{32.7,58.3}} },
   },
-  [8365] = {
-    { name="Pirate Hats Ahoy!: Southsea Pirate Hat", zone=440, r=20, loop=true,
-      objs={{i=1,kind="drop",item=20519,name="Southsea Pirate Hat",npcs={7855,7856,7857,7858,7883}}},
-      pts={{72.2,47.2},{71.4,43.4},{72.9,45.6},{75.8,45.4},{74.1,47.6}} },
+  [8366] = {
+    { name="Southsea Shakedown: Southsea Dock Worker", zone=440, r=15, loop=true,
+      objs={{i=3,kind="kill",name="Southsea Dock Worker",npcs={7857}}},
+      pts={{74.4,47.3},{73.3,47.6},{74,48.1},{74.7,48.1}} },
+    { name="Southsea Shakedown: Southsea Swashbuckler", zone=440, r=15, loop=true,
+      objs={{i=4,kind="kill",name="Southsea Swashbuckler",npcs={7858}}},
+      pts={{75,46},{75.7,45.1},{76.3,45.5}} },
   },
 }

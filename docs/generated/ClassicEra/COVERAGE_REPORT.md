@@ -16,7 +16,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 59 (see docs/generated/ClassicEra/guide-warnings.log) |
+| Compiler warnings | 54 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)
 
