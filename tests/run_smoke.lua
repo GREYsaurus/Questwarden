@@ -170,6 +170,12 @@ if STAGE.target == "ClassicEra" then
     check(#missing == 0, "every trainer-note spell exists in the Classic trainer data (missing: " .. table.concat(missing, ", ") .. ")")
     check(ns.TrainingNotes.quest.WARRIOR and ns.TrainingNotes.quest.WARRIOR[71] ~= nil, "Defensive Stance is a warrior quest spell")
     check(not byName.DRUID["Mangle"], "Mangle (not in Classic Era) is left out of the druid trainer data")
+    -- Spells whose client level is only in SpellLevels.SpellLevel (BaseLevel 0) are trainer spells too.
+    local lvlOf = {}
+    for _, r in ipairs(ns.TrainingData.classes.DRUID) do lvlOf[r[1]] = r[2] end
+    for _, r in ipairs(ns.TrainingData.classes.ROGUE) do lvlOf[r[1]] = r[2] end
+    check(lvlOf[29166] == 40, "Innervate is a level-40 druid trainer spell")
+    check(lvlOf[8681] == 20 and lvlOf[2835] == 30, "rogue poison recipes are listed (Instant Poison 20, Deadly Poison 30)")
     -- Class advice (Classes/ClassAdvice.lua): every class has a summary, tips and trainer levels.
     local noAdvice = {}
     for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do

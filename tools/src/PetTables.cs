@@ -42,7 +42,7 @@ namespace GuideTools
             var sub = new Dictionary<int, string>();
             foreach (var r in Csv.Read(P("Spell"))) sub[Csv.I(r, "ID")] = r["NameSubtext_lang"];
             var level = new Dictionary<int, int>();
-            foreach (var r in Csv.Read(P("SpellLevels"))) if (Csv.I(r, "DifficultyID") == 0) level[Csv.I(r, "SpellID")] = Csv.I(r, "BaseLevel");
+            foreach (var r in Csv.Read(P("SpellLevels"))) if (Csv.I(r, "DifficultyID") == 0) level[Csv.I(r, "SpellID")] = TrainingTables.SpellLevel(r);
             var talent = new HashSet<int>();
             foreach (var r in Csv.Read(P("Talent"))) for (int k = 0; k < 9; k++) { int s = Csv.I(r, "SpellRank_" + k); if (s > 0) talent.Add(s); }
             var byLine = new Dictionary<int, List<int>>();

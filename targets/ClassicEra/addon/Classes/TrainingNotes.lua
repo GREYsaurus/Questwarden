@@ -85,7 +85,7 @@ ns.TrainingNotes = {
             "Soul Fire", "Howl of Terror", "Summon Felsteed" },
         DRUID = { "Wrath", "Moonfire", "Healing Touch", "Rejuvenation", "Mark of the Wild", "Thorns", "Entangling Roots",
             "Regrowth", "Cat Form", "Claw", "Rip", "Shred", "Rake", "Ferocious Bite", "Maul", "Swipe", "Demoralizing Roar",
-            "Faerie Fire", "Faerie Fire (Feral)", "Travel Form", "Dire Bear Form", "Starfire", "Insect Swarm" },
+            "Faerie Fire", "Faerie Fire (Feral)", "Travel Form", "Dire Bear Form", "Starfire", "Insect Swarm", "Innervate" },
     },
 
     optional = {

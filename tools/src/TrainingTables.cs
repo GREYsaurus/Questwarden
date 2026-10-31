@@ -5,7 +5,7 @@
 // Input (tools/upstream.json clientTables): SkillLine, SkillLineAbility, SpellLevels, SpellName,
 // Spell (rank text) and Talent.
 // Output: <add-on>/Classes/TrainingData.lua - for every class, each spell rank a trainer can teach:
-//   spell id, level it becomes available (SpellLevels.BaseLevel), rank, the previous rank's id,
+//   spell id, level it becomes available (SpellLevels.BaseLevel, or SpellLevel when that is 0), rank, the previous rank's id,
 //   the English name (documentation only; the add-on shows the client's localized name),
 //   whether the spell family comes from a talent, and the race mask when only some races get it.
 // Rules (docs/TRAINER.md):
@@ -36,6 +36,15 @@ namespace GuideTools
 {
     public static class TrainingTables
     {
+        // The level a spell becomes available: BaseLevel, or SpellLevel when BaseLevel is 0. Some trainer spells carry
+        // only SpellLevel (Classic Era's Innervate at 40, every rogue poison recipe), and reading BaseLevel alone
+        // made them look like level-1 spells. PetTables uses the same rule.
+        public static int SpellLevel(Dictionary<string, string> r)
+        {
+            int b = Csv.I(r, "BaseLevel");
+            return b > 0 ? b : Csv.I(r, "SpellLevel");
+        }
+
         static readonly Dictionary<int, string> ClassBit = new Dictionary<int, string> {
             {1,"WARRIOR"},{2,"PALADIN"},{4,"HUNTER"},{8,"ROGUE"},{16,"PRIEST"},{64,"SHAMAN"},{128,"MAGE"},{256,"WARLOCK"},{1024,"DRUID"} };
 
@@ -59,7 +68,7 @@ namespace GuideTools
             foreach (var r in Csv.Read(P("Spell"))) sub[Csv.I(r, "ID")] = r["NameSubtext_lang"];
             var level = new Dictionary<int, int>();
             foreach (var r in Csv.Read(P("SpellLevels")))
-                if (Csv.I(r, "DifficultyID") == 0) level[Csv.I(r, "SpellID")] = Csv.I(r, "BaseLevel");
+                if (Csv.I(r, "DifficultyID") == 0) level[Csv.I(r, "SpellID")] = SpellLevel(r);
             var talent = new HashSet<int>();
             var talentClass = new Dictionary<int, string>(); // spell -> class of the talent
             foreach (var r in Csv.Read(P("Talent")))

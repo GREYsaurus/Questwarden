@@ -43,6 +43,7 @@ Shipped in the same download since 2026-10-31, with TBCGuide 0.9.5's data and gu
 | Rares and dangerous mobs | **Built**: every hostile elite and rare with spawns, plus rares friendly to one faction (887 more NPCs). Danger report: 27 steps (`docs/generated/TBC/danger-near-steps.csv`); TBC has no Hardcore flavor, so it is for review only | review the report |
 | Hunting routes | **Regenerated** with `roam_propose.py TBC`: the same 185 routes in 39 zones, point for point, as TBCGuide's run. Review: `targets/TBC/roaming-overrides.csv` (TBCGuide's) | not walked in game |
 | Cross-check | no reference files for TBC | none planned |
+| Warrior *Stance Mastery* | listed by the client at level 20 (warrior skill line, not a talent), so it is now a trainer spell | check in game that the trainer offers it |
 
 ## WoW: Forever (not launched; launch 2026-11-04)
 
@@ -68,5 +69,5 @@ Classic Era, 2026-10-31: `tools/build.ps1 crosscheck -Reference <folder>` agains
 | Rares | 53 have no map position in QuestieDB (no spawns, or inside an instance); 2 sit in a neighbouring zone (Narillasanz, Volchan) | nothing to fix from our sources; check the two in game |
 | Spirit healers | 14 positions only in the reference, among them Stormwind, Ironforge and Orgrimmar; 7 of our 84 only in ours | QuestieDB lacks some graveyards: check in game, or capture (Phase 3) |
 | Flight nodes | none missing; ours also has the druid-only Nighthaven nodes and Plaguewood Tower | client tables are authoritative |
-| Trainer spells | 79 spell ids not in our trainer or pet data: starting spells, passives (Parry, Mail), talent ranks, hunter pet skill ranks (Growl, resistances), and *Innervate* (29166). 9 spells listed earlier than our trainer level (Claw, Aspect of the Cheetah, Feign Death...) | check Innervate and the pet ranks against the client tables (`TrainingTables.cs`, `PetTables.cs`), the 9 levels in game |
+| Trainer spells | 79 spell ids not in our trainer or pet data: starting spells, passives (Parry, Mail), talent ranks, hunter pet skill ranks (Growl, resistances), and *Innervate* (29166). 9 spells listed earlier than our trainer level (Claw, Aspect of the Cheetah, Feign Death...) | **Innervate fixed (our bug):** the import read only `SpellLevels.BaseLevel`, which is 0 for Innervate and for every rogue poison recipe; it now falls back to `SpellLevel`, so Innervate (40) and the poisons are listed and 21 hunter pet skill ranks got their levels. Still to check: the pet Growl and resistance ranks against `PetTables.cs`, and the 9 levels in game |
 | Mob levels and rank | 18 level ranges and 6 ranks differ from QuestieDB; 6 names unknown to it | QuestieDB is our source; check in game, the danger notes use QuestieDB's levels |

@@ -44,7 +44,7 @@ The client tables have **no trainer prices**, so a price can only come from a tr
 | SkillLine | the class spell lines (category 7, class-spec flag) plus Poisons |
 | SkillRaceClassInfo | the class of each line, for rows whose own class mask is 0 |
 | SkillLineAbility | spell, class, race mask |
-| SpellLevels | the level a rank becomes available (BaseLevel) |
+| SpellLevels | the level a rank becomes available (BaseLevel, or SpellLevel when BaseLevel is 0: Innervate on Classic Era and every rogue poison recipe carry only SpellLevel) |
 | Spell, SpellName | rank text and English name |
 | Talent | talent spells: rank 1 comes from the talent, higher ranks need the talent |
 
@@ -53,8 +53,9 @@ The client tables have **no trainer prices**, so a price can only come from a tr
 - level-1 spells (known from character creation);
 - helper and effect spells the trainer never lists (passives, "... Effect", judgement effects and a short named list in `TrainingTables.cs`);
 - rank 1 of talent spells;
-- pet, weapon and profession skills;
-- **rogue poison recipes** (Poisons-skill recipes with no level in the client tables).
+- pet, weapon and profession skills.
+
+Rogue poison recipes (the Poisons skill line) are listed since 2026-10-31: their level is in `SpellLevel`.
 
 **Kept by hand** (`addon/Classes/TrainingNotes.lua`):
 
@@ -82,5 +83,4 @@ Optional by pattern for every class: teleports, portals, Greater Blessings, trac
 - **Training costs** come only from trainer windows; prices for spells never seen at a trainer are unknown.
 - **Class-quest spells beyond the list above** may show as trainer spells. For example, whether paladin and warlock mounts come from the trainer or a quest has not been checked in 2.5.6. In-game check: `docs/COMPATIBILITY.md` → Trainer.
 - **Hunter pet skills and warlock demon grimoires** are not covered.
-- **Poison recipes** are not listed.
 - **Not run in the game yet.** Tested headless: `tests/test_trainer.lua`, with data checks and a mocked spellbook.
