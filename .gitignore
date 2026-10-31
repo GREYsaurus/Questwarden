@@ -4,3 +4,6 @@ build/
 
 .aider*
 __pycache__/
+
+# Cross-check report: quotes reference values, stays local (docs/DATA_POLICY.md)
+docs/generated/CROSSCHECK.md

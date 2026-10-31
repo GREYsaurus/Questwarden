@@ -1,6 +1,7 @@
 # Cross-check our generated data against another guide add-on's data files (docs/DATA_POLICY.md, "The cross-check
 # process"). Reads the reference files from a folder OUTSIDE the repository and writes only a comparison report,
-# docs/generated/CROSSCHECK.md. Nothing it reads from the reference files goes into the add-on: each difference is
+# docs/generated/CROSSCHECK.md (git-ignored: it quotes reference values). Nothing it reads from the reference files
+# goes into the add-on: each difference is
 # checked against our own sources or in game, and never filled with their value.
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 # SPDX-License-Identifier: GPL-3.0-only

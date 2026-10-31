@@ -46,7 +46,7 @@ Not allowed:
 - A script that reads their files and writes our data. Cross-check scripts may read both, but write only a comparison report under `docs/generated/`.
 - Anything from RestedXP's paid guide content, in any form.
 
-The reference files are **never committed** to this repository. `tools/build.ps1 crosscheck` (Phase 2) reads them from a folder outside the repository and writes only `docs/generated/CROSSCHECK.md`.
+The reference files are **never committed** to this repository. `tools/build.ps1 crosscheck` (Phase 2) reads them from a folder outside the repository and writes only `docs/generated/CROSSCHECK.md`. That report quotes some reference values (positions, names), so it **stays on the maintainer's machine** too: it is in `.gitignore` and is never committed or published (maintainer's decision, 2026-10-31). Findings go into DATA_GAPS.md in our own words, naming only our own data and game facts.
 
 The same rules apply to any other guide add-on's data, whatever its licence says, unless the maintainer has added it to the source table above.
 

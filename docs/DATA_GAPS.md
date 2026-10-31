@@ -63,7 +63,7 @@ Everything below is **unverified** and stays `v=0` until checked in the live cli
 
 ## Cross-check results
 
-Classic Era, 2026-10-31: `tools/build.ps1 crosscheck -Reference <folder>` against the maintainer's reference files (docs/DATA_POLICY.md). Full report: `docs/generated/CROSSCHECK.md`. No reference value was used; each line below is resolved from our own sources or checked in game.
+Classic Era, 2026-10-31: `tools/build.ps1 crosscheck -Reference <folder>` against the maintainer's reference files (docs/DATA_POLICY.md). The full report (`docs/generated/CROSSCHECK.md`) stays on the maintainer's machine, because it quotes reference values. No reference value was used; each line below is resolved from our own sources or checked in game.
 
 | Area | Disagreement | What we do |
 |---|---|---|
