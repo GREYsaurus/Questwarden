@@ -196,14 +196,29 @@ if STAGE.target == "ClassicEra" then
         for _, st in ipairs(fg and fg.steps or {}) do if st[1] == "fly" and st.node then flyStep = flyStep or st end end
     end
     check(flyStep and ns.Flights.nodes[flyStep.node], "route fly steps carry their flight node")
+    -- Spirit healers (Database/Questie/SpiritHealers.lua): one per graveyard, shown as map pins on request.
+    local nGy, nGyZones = 0, 0
+    for _, pts in pairs(ns.QDB.spiritHealers) do nGyZones = nGyZones + 1; nGy = nGy + #pts end
+    check(nGy >= 80 and nGyZones >= 40, "spirit healers bundled (" .. nGy .. " in " .. nGyZones .. " zones)")
+    local p = ns.db.profile
+    local realArea = ns.DB.AreaForUiMap
+    ns.DB.AreaForUiMap = function() return 12 end -- Elwynn Forest
+    p.tipsEnabled, p.trackMobsMap, p.trackTreasures, p.trackSpiritHealers = true, false, false, true
+    local gyPins, onlyGy = ns.MapExtras:Entries(1), true
+    for _, e in ipairs(gyPins) do if e.kind ~= "spirit" then onlyGy = false end end
+    check(#gyPins >= 2 and onlyGy, "Track Spirit Healers pins Elwynn's graveyards only (" .. #gyPins .. ")")
+    p.trackSpiritHealers = false
+    check(#ns.MapExtras:Entries(1) == 0, "spirit healer pins are off by default")
+    ns.DB.AreaForUiMap = realArea
     -- Dangerous mobs (questie.allDangerousMobs): every hostile rare is bundled, not only quest mobs.
     local N, nRare = ns.QDB.NPC, 0
     for _, r in pairs(ns.QDB.npcs) do
         if (r[N.RANK] == 2 or r[N.RANK] == 4) and not r[N.FRIENDLY] and r[N.SPAWNS] then nRare = nRare + 1 end
     end
     check(nRare >= 300 and ns.QDB.npcs[8301], "every hostile rare is bundled (" .. nRare .. ", incl. Clack the Reaver)")
-    local bl = ns.MapExtras:Index()[4] or {}
-    check(bl[1] and bl[1].kind == "rare", "map pins list rares before elites (Blasted Lands)")
+    local firstMob
+    for _, e in ipairs(ns.MapExtras:Index()[4] or {}) do if e.kind ~= "spirit" then firstMob = e break end end
+    check(firstMob and firstMob.kind == "rare", "map pins list rares before elites (Blasted Lands)")
     local hexx
     for _, e in ipairs(ns.MapExtras:Index()[47] or {}) do if e.id == 7995 then hexx = e end end
     check(hexx and hexx.patrols, "Vile Priestess Hexx is pinned and marked as patrolling")

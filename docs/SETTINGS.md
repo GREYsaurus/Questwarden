@@ -133,6 +133,7 @@ None of this has been tested in the game client yet.
 - **Map pins:** both come from the bundled data. On Classic Era it has every hostile elite and rare with spawns; on other targets, only quest NPCs and mobs. Rares are listed first, and patrolling mobs say so in their tooltip.
   - *Track Mobs on Map*: world map pins for elite and rare mobs in the zone shown.
   - *Track Treasures*: pins for treasure chests.
+  - *Track Spirit Healers* (off by default): pins for the spirit healers, one per graveyard, where you appear as a ghost. On Classic Era from QuestieDB's spirit healer spawns; other targets have none yet.
 - **Item Upgrade:**
   - gear scoring switches;
   - the **Spec profile** (per character; your class's profiles only);

@@ -74,6 +74,7 @@ function Load-Tools {
         [GuideTools.Ctx]::QuestiePrefix = $q.prefix; [GuideTools.Ctx]::QuestieFixes = $q.fixes
         [GuideTools.Ctx]::QuestieFixesModule = $q.fixesModule; [GuideTools.Ctx]::QuestieXp = $q.xp
         [GuideTools.Ctx]::QuestieAllDangerousMobs = [bool]$q.allDangerousMobs
+        [GuideTools.Ctx]::QuestieSpiritHealers = [bool]$q.spiritHealers
         $f = $q.npcFlags
         [GuideTools.Ctx]::FlagQuestGiver = $f.QUEST_GIVER; [GuideTools.Ctx]::FlagVendor = $f.VENDOR
         [GuideTools.Ctx]::FlagFlight = $f.FLIGHT_MASTER; [GuideTools.Ctx]::FlagTrainer = $f.TRAINER; [GuideTools.Ctx]::FlagInn = $f.INNKEEPER

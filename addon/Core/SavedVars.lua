@@ -89,6 +89,7 @@ local profileDefaults = {
         announceComplete = false, announceCollect = false, announceFlight = false,
         announceSkipQuestie = false, announceAlways = false, autoShareQuests = false,
         trackMobsMap = false, trackTreasures = false,
+        trackSpiritHealers = false, -- world map pins for spirit healers (graveyards)
         lowQuality = false,         -- slower arrow updates, fewer map pins
         preloadData = false,        -- request item data for the guide and bags at login
         auctioneer = true,          -- Upgrades tab in the auction house (UI/Auctioneer.lua); scans only on request

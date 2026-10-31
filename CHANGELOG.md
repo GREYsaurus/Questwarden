@@ -131,8 +131,9 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Add-on:** flight automation picks the step's node by its full client name first, and landing completes both the `fly` step and the `travel` step after it.
   - **Found by the check:** the Night Elf route's *fly Auberdine* from Rut'theran comes before any route learns Auberdine. The quest *Flight to Auberdine* says Vesprystus flies you there, so the step stays, marked unverified, with the boat as the fallback (10 audit warnings).
   - **Tests:** smoke checks for the graph and the route fly steps; engine tests for the exact node choice and for landing.
+- **Spirit healers.** The Classic client has no graveyard table, so they come from QuestieDB: every spawn of the Spirit Healer NPC, 84 positions, written to `Database/Questie/SpiritHealers.lua` (switched on by `questie.spiritHealers`; not cut down like `Npcs.lua`). A new *Track Spirit Healers* setting (off by default) shows them as world map pins; they come first in the pin list, so the pin cap never hides one. Smoke tests check the data and the pins.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 22 warnings, quest log peak 15/20; smoke suite 67/67); TBC suite 4,423/4,423; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 22 warnings, quest log peak 15/20; smoke suite 70/70); TBC suite 4,435/4,435; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

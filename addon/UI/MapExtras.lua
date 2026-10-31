@@ -1,4 +1,4 @@
--- ClassicGuide - world map pins for dangerous mobs (elites and rares) and treasure chests
+-- ClassicGuide - world map pins for dangerous mobs (elites and rares), treasure chests and spirit healers
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -9,7 +9,8 @@
 -- Positions come from the bundled QuestieDB-derived data. Its NPC table is the quest/service subset
 -- plus the mobs quests involve; targets with questie.allDangerousMobs (Classic Era) also keep every
 -- hostile elite and rare with spawns. The chest list is every object named "... Chest" with spawns
--- in the shown zone.
+-- in the shown zone. Spirit healers come from Database/Questie/SpiritHealers.lua (one per graveyard;
+-- empty on targets without it).
 
 local _, ns = ...
 
@@ -47,8 +48,12 @@ function MX:Index()
             end
         end
     end
-    -- Rares first, then elites, then chests, so the pin cap never hides a rare; by name within a kind.
-    local order = { rare = 1, elite = 2, treasure = 3 }
+    for zone, pts in pairs(QDB.spiritHealers or {}) do
+        for _, p in ipairs(pts) do add(zone, { kind = "spirit", name = "Spirit Healer", x = p[1], y = p[2] }) end
+    end
+    -- Spirit healers (a few per zone) and rares first, then elites, then chests, so the pin cap never
+    -- hides them; by name within a kind.
+    local order = { spirit = 0, rare = 1, elite = 2, treasure = 3 }
     for _, l in pairs(z) do
         table.sort(l, function(a, b)
             if order[a.kind] ~= order[b.kind] then return order[a.kind] < order[b.kind] end
@@ -64,13 +69,16 @@ end
 -- Entries to show on uiMap `mapId` with the current settings.
 function MX:Entries(mapId)
     local p = prof()
-    if not (p.tipsEnabled and (p.trackMobsMap or p.trackTreasures)) then return {} end
+    if not (p.tipsEnabled and (p.trackMobsMap or p.trackTreasures or p.trackSpiritHealers)) then return {} end
     local area = mapId and ns.DB.AreaForUiMap(mapId)
     local list = area and self:Index()[area] or {}
     local out = {}
     local cap = p.lowQuality and self.MAX_PINS_LOW or self.MAX_PINS
     for _, e in ipairs(list) do
-        local want = (e.kind == "treasure") and p.trackTreasures or (e.kind ~= "treasure" and p.trackMobsMap)
+        local want
+        if e.kind == "treasure" then want = p.trackTreasures
+        elseif e.kind == "spirit" then want = p.trackSpiritHealers
+        else want = p.trackMobsMap end
         if want and not (e.kind == "rare" and p.skipKilledRares and ns.char.killedRares[e.id]) then
             out[#out + 1] = e
             if #out >= cap then break end
@@ -83,6 +91,7 @@ local TEX = {
     elite = "Interface\\TargetingFrame\\UI-TargetingFrame-Skull",
     rare = "Interface\\TargetingFrame\\UI-RaidTargetingIcon_1",
     treasure = "Interface\\Icons\\INV_Box_02",
+    spirit = "Interface\\Icons\\Spell_Holy_Resurrection",
 }
 
 function MX:Pin(i)
@@ -100,6 +109,7 @@ function MX:Pin(i)
         GameTooltip:SetOwner(s, "ANCHOR_RIGHT")
         GameTooltip:AddLine(e.name)
         if e.kind == "treasure" then GameTooltip:AddLine("Treasure", 1, 0.82, 0)
+        elseif e.kind == "spirit" then GameTooltip:AddLine("Graveyard: you appear here as a ghost.", 0.6, 0.8, 1)
         else
             GameTooltip:AddLine((e.kind == "rare" and "Rare" or "Elite") .. (e.level and (", level " .. e.level) or ""), 1, 0.4, 0.3)
             if e.patrols then GameTooltip:AddLine("Patrols: it may not be where the pin is.", 1, 0.82, 0) end

@@ -226,6 +226,7 @@ pages.tips = { title = "Tips", items = function() return {
     T("trackRares", "Track Rare Mobs", { tip = "A chat alert and sound when a rare mob's nameplate appears (rares from the bundled database)." }),
     T("skipKilledRares", "Skip mobs already killed"),
     T("trackTreasures", "Track Treasures", { tip = "World map pins for treasure chests in the shown zone." }),
+    T("trackSpiritHealers", "Track Spirit Healers", { tip = "World map pins for the spirit healers (graveyards) in the shown zone, where you appear when you die." }),
     H("Item Upgrade"),
     T("gearEnabled", "Enable Item Upgrade"),
     -- Profiles of the player's own class only, so another class's profile can never be active.

@@ -32,6 +32,7 @@ Database\Questie\Quests.lua
 Database\Questie\Npcs.lua
 Database\Questie\Objects.lua
 Database\Questie\Items.lua
+Database\Questie\SpiritHealers.lua
 Database\RaceClass.lua
 Database\Flights.lua
 Database\Overrides.lua

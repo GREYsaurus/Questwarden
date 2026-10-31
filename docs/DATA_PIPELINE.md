@@ -69,6 +69,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 | `Database/Questie/Quests.lua` | QuestieDB `data/TBC/tbcQuestDB.lua` + `tbcQuestFixes.lua` | `QuestieImport.cs`, `QuestieCorrections.cs` |
 | `Database/Questie/Npcs.lua`, `Objects.lua`, `Items.lua` | QuestieDB TBC entity tables | `QuestieImport.cs` |
 | `Database/Questie/Zones.lua` | QuestieDB `support/Zones/*` | `QuestieImport.cs` |
+| `Database/Questie/SpiritHealers.lua` | QuestieDB NPC table: every spawn of NPCs named Spirit Healer (`questie.spiritHealers`) | `QuestieImport.cs` |
 | `Talents/Data/TalentTrees.lua` | client DB2 `Talent`, `TalentTab`, `SpellName` | `ClientTables.cs` |
 | `Classes/TrainingData.lua` | client DB2 `SkillLine`, `SkillRaceClassInfo`, `SkillLineAbility`, `SpellLevels`, `Spell`, `SpellName`, `Talent` | `TrainingTables.cs` (rules: docs/TRAINER.md) |
 | `Database/RaceClass.lua` | client DB2 `CharBaseInfo`, `ChrRaces` | `ClientTables.cs` |

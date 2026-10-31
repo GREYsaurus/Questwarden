@@ -20,6 +20,8 @@
     "xp": "support/QuestXP/xpDB-classic.lua",
     "_allDangerousMobs": "true: Npcs.lua also keeps every hostile elite, rare elite and rare that has spawns (map pins, rare alerts), not only the mobs quests involve.",
     "allDangerousMobs": true,
+    "_spiritHealers": "true: import-questie writes Database/Questie/SpiritHealers.lua, every Spirit Healer spawn (the Classic client has no graveyard table).",
+    "spiritHealers": true,
     "npcFlags": {
       "QUEST_GIVER": 2,
       "VENDOR": 4,

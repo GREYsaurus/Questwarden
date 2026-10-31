@@ -35,6 +35,8 @@ namespace GuideTools
         public static string QuestieFlavor = "", QuestieDataDir = "", QuestiePrefix = "", QuestieFixes = "", QuestieFixesModule = "", QuestieXp = "";
         // Also bundle every hostile elite/rare with spawns, not only the quest-related ones (target.json "questie.allDangerousMobs").
         public static bool QuestieAllDangerousMobs = false;
+        // Write Database/Questie/SpiritHealers.lua (target.json "questie.spiritHealers").
+        public static bool QuestieSpiritHealers = false;
         // NPC flag bits of this data flavor (vanilla and TBC number them differently).
         public static int FlagQuestGiver = 2, FlagVendor = 4, FlagFlight = 8, FlagTrainer = 16, FlagInn = 128;
         // Client tables (target.json "clientTables").

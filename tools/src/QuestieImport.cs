@@ -420,6 +420,33 @@ namespace GuideTools
             File.WriteAllText(Path.Combine(outDir, "Npcs.lua"), sb.ToString(), new UTF8Encoding(false));
             stats["npcs"] = npcCount;
 
+            // ---------------- Spirit healers (target.json "questie.spiritHealers") ----------------
+            // Every spawn of every NPC named "Spirit Healer": one per graveyard. Kept apart from Npcs.lua because
+            // that table trims spawns to a few zones per NPC. The Classic client has no graveyard table.
+            if (Ctx.QuestieSpiritHealers)
+            {
+                var gy = new LTable();
+                int gyCount = 0;
+                foreach (var kv in d.Npcs.OrderBy(k => k.Key))
+                {
+                    if (QuestieData.S(kv.Value, QuestieData.N_NAME) != "Spirit Healer") continue;
+                    var all = Trim(QuestieData.T(kv.Value, QuestieData.N_SPAWNS), 1000, 1000, 0);
+                    if (all == null) continue;
+                    foreach (var z in all.Pairs())
+                    {
+                        var pts = z.Value as LTable;
+                        var have = gy.Get(z.Key) as LTable;
+                        if (have == null) { have = new LTable(); gy.Set(z.Key, have); }
+                        for (int k = 1; k <= pts.Count; k++) { have.Append(pts.Get(k)); gyCount++; }
+                    }
+                }
+                sb = new StringBuilder(Hdr("spirit healer positions (one per graveyard)", provenance));
+                sb.Append("-- [zoneId] = { {x, y}, ... } in zone map percent.\n");
+                sb.Append("ns.QDB.spiritHealers = ").Append(LuaWriter.Table(gy)).Append('\n');
+                File.WriteAllText(Path.Combine(outDir, "SpiritHealers.lua"), sb.ToString(), new UTF8Encoding(false));
+                stats["spiritHealers"] = gyCount;
+            }
+
             // ---------------- Objects ----------------
             sb = new StringBuilder(Hdr("Game object records (quest subset)", provenance));
             sb.Append("local O = ns.QDB.objects\n");
