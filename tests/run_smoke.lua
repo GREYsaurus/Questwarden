@@ -168,6 +168,14 @@ if STAGE.target == "ClassicEra" then
     check(#missing == 0, "every trainer-note spell exists in the Classic trainer data (missing: " .. table.concat(missing, ", ") .. ")")
     check(ns.TrainingNotes.quest.WARRIOR and ns.TrainingNotes.quest.WARRIOR[71] ~= nil, "Defensive Stance is a warrior quest spell")
     check(not byName.DRUID["Mangle"], "Mangle (not in Classic Era) is left out of the druid trainer data")
+    -- Class advice (Classes/ClassAdvice.lua): every class has a summary, tips and trainer levels.
+    local noAdvice = {}
+    for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
+        local a = ns.ClassAdvice:For(cls)
+        if not (a and type(a.summary) == "string" and #a.tips >= 5 and ns.ClassAdvice:IsTrainingLevel(cls, 20)) then noAdvice[#noAdvice + 1] = cls end
+    end
+    check(#noAdvice == 0, "every class has Classic leveling advice (missing: " .. table.concat(noAdvice, ",") .. ")")
+    check(not ns.ClassAdvice:IsTrainingLevel("WARRIOR", 21), "trainer levels are the even levels")
     -- Escort safeguard list (Database/EscortQuests.lua): never accepted automatically.
     local nEsc = 0
     for _ in pairs(ns.EscortQuests) do nEsc = nEsc + 1 end

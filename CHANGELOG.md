@@ -114,8 +114,12 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Escort list:** `Database/EscortQuests.lua`, the never-auto-accept list, now has 52 quests. They come from the Classic data (escort wording, or the party-accept flag plus escort wording) plus two found by review. Rebuild it with `escort_notes.py --list`.
   - **Fixed:** the trainer data listed *Mangle* as a level-6 druid spell; Classic Era has no Mangle. A new `excludeSpellIds` list in `target.json` leaves it out (shown in the excluded-spells report).
   - **Smoke tests:** check that every note spell exists in the Classic trainer data, that Mangle is gone, and that the escort list and escort detection work.
+- **Classic Era class leveling advice** (`Classes/ClassAdvice.lua`, shown by `/cg class` and in the talent window): a summary and 6-7 tips for each of the nine classes, written in our own words.
+  - **Classic content only:** totem quests and no Dual Wield for shamans; pet quests and the dead zone for hunters; Felsteed trained and Dreadsteed from a quest for warlocks; no Mangle; no Felguard.
+  - **Levels checked:** every trainer level quoted was checked against the Classic trainer data, quest levels match the trainer notes, and talents are named as talents without a level. The tips are still unverified in game.
+  - **Trainer levels:** generated from the data: every even level from 4 to 60 for all classes.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 58/58); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 60/60); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 
