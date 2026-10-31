@@ -420,14 +420,28 @@ for fac, qid, r in report:
 print("placed: %d %s quests, %d chain members, XP %d" % (
     sum(1 for fac, qid in kept if qid in ROOTS), "outdoor" if OUTDOOR else "dungeon", sum(1 for fac, qid in kept if qid not in ROOTS), xp))
 # Why the rest is not on a route (docs/generated/<target>/dungeon-unplaced.csv; --why also prints it).
-rows = sorted(((fac, f(pool[qid]["q"], 3) or 0, qid, pool[qid]["q"][0], pool[qid]["d"] or "outdoors", w) for (fac, qid), w in WHY.items()
+def blocked_by(fac, qid, depth=0):
+    """For "prerequisite not placed": the first quest up the chain that is stuck for another reason, and why."""
+    for x in ids(f(T.Q[qid], 13)) + ids(f(T.Q[qid], 14)):
+        if x in used:
+            continue
+        w = WHY.get((fac, x))
+        if w == "prerequisite not placed" and depth < 10:
+            return blocked_by(fac, x, depth + 1)
+        return x, w or ("not a candidate (dungeon, instance NPC, elite, class, event or no XP)" if x not in pool else "not placed")
+    return None, "prerequisite on the route, but later or on another path"
+
+
+rows = sorted(((fac, f(pool[qid]["q"], 3) or 0, qid, pool[qid]["q"][0], pool[qid]["d"] or "outdoors", w)
+               + (blocked_by(fac, qid) if w == "prerequisite not placed" else (None, "")) for (fac, qid), w in WHY.items()
                if qid in ROOTS))
 if not DRY:
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "docs", "generated", T.name, "outdoor-unplaced.csv" if OUTDOOR else "dungeon-unplaced.csv"),
               "w", encoding="utf-8", newline="") as out:
-        out.write("faction,level,quest,title,dungeon,reason\n")
+        out.write("faction,level,quest,title,dungeon,reason,blocked_by,blocked_by_reason\n")
         for r in rows:
-            out.write('%s,%d,%d,"%s","%s","%s"\n' % (r[0], r[1], r[2], r[3].replace('"', '""'), r[4], r[5]))
+            out.write('%s,%d,%d,"%s","%s","%s",%s,"%s"\n' % (r[0], r[1], r[2], r[3].replace('"', '""'), r[4], r[5],
+                                                         r[6] if r[6] else "", r[7]))
 if "--why" in sys.argv:
     for r in rows:
         print("not placed: %s %d %s (%s) - %s" % (r[0], r[2], r[3], r[4], r[5]))

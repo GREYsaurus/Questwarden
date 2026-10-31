@@ -308,6 +308,11 @@ if txt is not None:
         if m and cur:
             mine.setdefault(cur, {})[int(m.group(1))] = int(m.group(2))
     pet = {int(x) for x in re.findall(r"\d+", ours("Classes/PetData.lua").split("ns.PetData", 1)[1])}
+    # Hunter-side Beast Training spells (Growl 14924 ...) teach a pet spell (Growl 14918); the client's learn-spell
+    # effect (Effect 36) links them, so a teaching spell counts as present when the pet spell it teaches is ours.
+    for r in csv.DictReader(open(os.path.join(DB2, "SpellEffect.csv"), encoding="utf-8")):
+        if r["Effect"] == "36" and int(r["EffectTriggerSpell"] or 0) in pet:
+            pet.add(int(r["SpellID"]))
     notours, earlier, petn, later = [], [], 0, 0
     for c in sorted(theirs):
         for sid, l in sorted(theirs[c].items(), key=lambda x: (x[1] or 0, x[0])):
@@ -326,7 +331,7 @@ if txt is not None:
                "spell our rules leave out (docs/TRAINER.md). %d spells checked." % sum(len(v) for v in theirs.values()), "",
                "- **Not in our trainer or pet data (%d):** %s" % (len(notours), more(notours)),
                "- **Listed earlier than our trainer level (%d)** (would mean our level is wrong): %s" % (len(earlier), more(earlier)),
-               "- **Hunter pet skills** (in our pet data, not the trainer data): %d." % petn,
+               "- **Hunter pet skills** (in our pet data, directly or as the Beast Training spell that teaches the pet rank): %d." % petn,
                "- **Listed later than our trainer level:** %d. Not a disagreement: a list of when to train may wait." % later, ""]
     summary.append("Class spells: %d not in our trainer or pet data, %d listed earlier than our trainer level" % (len(notours), len(earlier)))
 
