@@ -393,6 +393,11 @@ ns.RoamRoutes = {
       objs={{i=1,kind="drop",item=5481,name="Satyr Horns",npcs={3752,3754,3755,3757,3758,3759,3762,3763,3765,3767,3770,3771}}},
       pts={{68.4,53.7},{66.5,52.4},{66.8,54.8},{66.7,56.6}} },
   },
+  [1071] = {
+    { name="A Gnome's Respite: Venture Co. Logger", zone=406, r=15, loop=true,
+      objs={{i=1,kind="kill",name="Venture Co. Logger",npcs={3989}}},
+      pts={{66.3,51.7},{65.7,49.7},{66.8,49.5}} },
+  },
   [1105] = {
     { name="Hardened Shells: Hardened Tortoise Shell", zone=400, r=15, loop=true,
       objs={{i=1,kind="drop",item=5795,name="Hardened Tortoise Shell",npcs={4142,4143,4144}}},
@@ -428,6 +433,11 @@ ns.RoamRoutes = {
       objs={{i=3,kind="drop",item=7848,name="Rock Elemental Shard",npcs={92,2735,2736,2791}}},
       pts={{21.3,44.2},{18.1,42.1},{20.3,47.2},{23.3,46.6}} },
   },
+  [2521] = {
+    { name="To Serve Kum'isha: Flawless Draenethyst Sphere", zone=4, r=15, loop=true,
+      objs={{i=1,kind="drop",item=8244,name="Flawless Draenethyst Sphere",npcs={5974,5975,5976,5977,5978,5979,5981,5982,5983,5984,5985,5988}}},
+      pts={{49.2,42.2},{47.5,41.8},{47.8,44.7}} },
+  },
   [2821] = {
     { name="The Mark of Quality: Thick Yeti Hide", zone=357, r=20, loop=true,
       objs={{i=1,kind="drop",item=8973,name="Thick Yeti Hide",npcs={5292,5293,5295}}},
@@ -452,6 +462,11 @@ ns.RoamRoutes = {
     { name="A Grim Discovery: Grimtotem Horn", zone=357, r=15, loop=true,
       objs={{i=1,kind="drop",item=9460,name="Grimtotem Horn",npcs={7725,7726,7727}}},
       pts={{69.8,38.7},{68.9,38.8},{69.1,40.3}} },
+  },
+  [3501] = {
+    { name="Everything Counts In Large Amounts: Imperfect Draenethyst Fragment", zone=4, r=15, loop=true,
+      objs={{i=1,kind="drop",item=10593,name="Imperfect Draenethyst Fragment",npcs={5974,5975,5976,5977,5978,5979,5981,5982,5983,5984,5985,5988}}},
+      pts={{49.2,42.2},{47.5,41.8},{47.8,44.7}} },
   },
   [3901] = {
     { name="Rattling the Rattlecages: Rattlecage Skeleton", zone=85, r=15, loop=true,

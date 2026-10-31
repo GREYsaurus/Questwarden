@@ -42,3 +42,8 @@ quest,955,Blocked — missing evidence,"the guide text says satyrs, the quest da
 zone,46,strict,batch 6: Burning Steppes lava fields and ridges
 zone,139,reviewed,batch 6: Eastern Plaguelands
 quest,153,Blocked — missing evidence,"Defias Smugglers cluster at Jangolode Mine, partly underground; no height data"
+zone,406,strict,"batch 8 (Classic, 2026-10-31; from general game knowledge, not walked): Stonetalon Mountains peaks, canyons and the Windshear Crag slopes"
+zone,16,strict,"batch 8: Azshara cliffs, coastal terraces and ruins on several levels"
+zone,36,strict,"batch 8: Alterac Mountains snowy slopes and ridges"
+zone,4,strict,"batch 8: Blasted Lands basin ringed by ridges; Dreadmaul and Serpent's Coil areas are hilly"
+zone,1377,reviewed,"batch 8: Silithus open desert floor; the hives are caves (blocked by the cave-word check)"
