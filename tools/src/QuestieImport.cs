@@ -77,7 +77,7 @@ namespace GuideTools
 
         void LoadZones(string qdbRoot)
         {
-            string z = Path.Combine(qdbRoot, "support", "Zones");
+            string z = Path.Combine(qdbRoot, Ctx.QuestieZonesDir.Replace('/', Path.DirectorySeparatorChar));
             // uiMapIdToAreaId: [uiMap] = areaId, -- Name
             foreach (var line in File.ReadAllLines(Path.Combine(z, "uiMapIdToAreaId.lua")))
             {
@@ -127,6 +127,12 @@ namespace GuideTools
             if (t == null) return 0;
             object v = t.Get(i);
             return v is double ? (int)(double)v : 0;
+        }
+        // A number that may not fit 32 bits: Forever's race masks reach 2^33 (Skyborne).
+        public static double D(LTable t, int i)
+        {
+            object v = t == null ? null : t.Get(i);
+            return v is double ? (double)v : 0;
         }
         public static LTable T(LTable t, int i) { return t == null ? null : t.Get(i) as LTable; }
         public static List<int> Ids(LTable t) { return t == null ? new List<int>() : t.IntList(); }
@@ -264,7 +270,7 @@ namespace GuideTools
                 r.Append(name);                                                         // 1 name
                 r.Append((double)QuestieData.N(q, QuestieData.Q_REQLEVEL));               // 2 requiredLevel
                 r.Append((double)QuestieData.N(q, QuestieData.Q_LEVEL));                  // 3 questLevel
-                r.Append((double)QuestieData.N(q, QuestieData.Q_RACES));                  // 4 requiredRaces
+                r.Append(QuestieData.D(q, QuestieData.Q_RACES));                          // 4 requiredRaces
                 r.Append((double)QuestieData.N(q, QuestieData.Q_CLASSES));                // 5 requiredClasses
                 var sn = d.QuestStartNpcs(q); var so = d.QuestStartObjects(q); var si = d.QuestStartItems(q);
                 var en = d.QuestEndNpcs(q); var eo = d.QuestEndObjects(q);

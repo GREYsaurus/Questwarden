@@ -10,6 +10,38 @@
     "talents": false,
     "routes": false
   },
+  "questie": {
+    "_comment": "QuestieDB's Forever flavor (approved by the maintainer 2026-10-31): Classic Era data with coordinates converted to Forever's map frames (data/Forever/conversion.json; QuestieDB docs/forever.md), plus Forever's own quest corrections in QuestieDB's order. UNVERIFIED until checked in the live client.",
+    "flavor": "Forever",
+    "dataDir": "data/Forever",
+    "prefix": "forever",
+    "zonesDir": "support/Forever/Zones",
+    "xp": "support/Forever/QuestXP/xpDB-classic.lua",
+    "fixList": [
+      { "file": "src/corrections/Forever/legacy/classicQuestFixes.lua", "module": "QuestieQuestFixes" },
+      { "file": "src/corrections/Forever/generated/foreverBaseQuest.lua", "module": "ForeverBaseQuest" },
+      { "file": "src/corrections/Forever/traces/foreverQuestTraces.lua", "module": "ForeverQuestTraces" },
+      { "file": "src/corrections/Forever/foreverQuestFixes.lua", "module": "ForeverQuestFixes" }
+    ],
+    "allDangerousMobs": true,
+    "spiritHealers": true,
+    "npcFlags": {
+      "QUEST_GIVER": 2,
+      "VENDOR": 4,
+      "FLIGHT_MASTER": 8,
+      "TRAINER": 16,
+      "INNKEEPER": 128
+    }
+  },
+  "_guidesFrom": "Compile Classic Era's guide sources against the Forever data: same quest and NPC ids, coordinates in Forever's map frames. New Forever content (zones, Skyborne) has no routes yet. No guide loads in game while Target.Forever.lua says verified = false.",
+  "guidesFrom": "ClassicEra",
+  "clientTables": {
+    "_comment": "UNVERIFIED: wago.tools product wowf, assumed to be Forever (build 1.60.1 matches QuestieDB's Forever conversion target 1.60.1.69893 and Blizzard's forever UI source 1.60.1).",
+    "source": "https://wago.tools",
+    "product": "wowf",
+    "build": "1.60.1.70685",
+    "flights": true
+  },
   "tocExtra": [],
   "install": "UNVERIFIED - confirm the Forever AddOns path after launch (2026-11-04)",
   "evidence": [

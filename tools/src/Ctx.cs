@@ -19,6 +19,9 @@ namespace GuideTools
         public static string Root = "";               // repository root
         public static string TargetDir = "";          // targets/<Target>
         public static string GuidesSrc = "";          // targets/<Target>/guides-src
+        // Guide sources borrowed from another target (target.json guidesFrom): the quest id decides when a name
+        // differs, and a hunting route that no longer fits this target's spawns is dropped, both with a warning.
+        public static bool GuidesBorrowed = false;
         public static string ReportDir = "";          // docs/generated/<Target>
         // Game rules (Target.<Target>.lua)
         public static int MaxLevel = 60;
@@ -35,6 +38,10 @@ namespace GuideTools
         public static string QuestieFlavor = "", QuestieDataDir = "", QuestiePrefix = "", QuestieFixes = "", QuestieFixesModule = "", QuestieXp = "";
         // Also bundle every hostile elite/rare with spawns, not only the quest-related ones (target.json "questie.allDangerousMobs").
         public static bool QuestieAllDangerousMobs = false;
+        // QuestieDB zone support folder (Forever owns support/Forever/Zones) and, when set, an ordered list of
+        // quest-fix layers {file, module} applied one after another (Forever: legacy, delta-base, traces, own fixes).
+        public static string QuestieZonesDir = "support/Zones";
+        public static List<string[]> QuestieFixList = new List<string[]>();
         // Write Database/Questie/SpiritHealers.lua (target.json "questie.spiritHealers").
         public static bool QuestieSpiritHealers = false;
         // NPC flag bits of this data flavor (vanilla and TBC number them differently).

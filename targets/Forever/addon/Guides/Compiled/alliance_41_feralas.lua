@@ -1,0 +1,41 @@
+-- ClassicGuide - compiled guide data. GENERATED from guides-src/alliance/41_feralas.guide by tools/build.ps1 guides.
+-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original ClassicGuide content
+-- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.
+local _, ns = ...
+ns.Guides:Register({
+  id="A_41_Feralas", name="Feralas (48-49)", faction="Alliance", chapter="Azeroth",
+  minLevel=48, maxLevel=49, zone=357, zoneName="Feralas",
+  desc="Feralas, visit 2 of 2 on the Alliance route, levels 48-49.",
+  next={{id="A_42_DustwallowMarsh"},},
+  steps={
+    {"travel",text="Travel to Feralas",dest="Feralas",v=1},
+    {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
+    {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},
+    {"train",text="No mage trainer in this zone - train at the next town or capital.",classes={"MAGE"},v=1},
+    {"train",text="No paladin trainer in this zone - train at the next town or capital.",classes={"PALADIN"},v=1},
+    {"train",text="No priest trainer in this zone - train at the next town or capital.",classes={"PRIEST"},v=1},
+    {"train",text="No rogue trainer in this zone - train at the next town or capital.",classes={"ROGUE"},v=1},
+    {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
+    {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
+    {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
+    {"accept",q=2844,title="The Giant Guardian",npc="Rockbiter",z=357,x=42.4,y=22,text="Rockbiter at the Twin Colossals.",v=1},
+    {"turnin",q=2844,title="The Giant Guardian",npc="Shay Leafrunner",z=357,x=38.2,y=10.3,v=1},
+    {"accept",q=7003,title="Zapped Giants",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,text="Zorbin Fandazzle, the coast.",v=1},
+    {"complete",q=7003,title="Zapped Giants",text="Use the Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.",v=1},
+    {"turnin",q=7003,title="Zapped Giants",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,v=1},
+    {"accept",q=7721,title="Fuel for the Zapping",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,text="Needs level 45. If you are lower, {name} skips it and moves on.",v=1},
+    {"complete",q=7721,title="Fuel for the Zapping",text="Water elementals on the coast.",v=1},
+    {"turnin",q=7721,title="Fuel for the Zapping",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,v=1},
+    {"accept",q=7733,title="Improved Quality",npc="Pratt McGrubben",z=357,x=30.6,y=42.7,v=1},
+    {"complete",q=7733,title="Improved Quality",v=1},
+    {"turnin",q=7733,title="Improved Quality",npc="Pratt McGrubben",z=357,x=30.6,y=42.7,v=1},
+    {"note",text="The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
+    {"accept",q=2969,title="Freedom for All Creatures",npc="Kindal Moonweaver",z=357,x=65.9,y=45.6,text="Kindal Moonweaver, at the camp east.",v=1},
+    {"complete",q=2969,title="Freedom for All Creatures",text="Escort the sprite darters out of the Grimtotem compound.",group=2,v=1},
+    {"turnin",q=2969,title="Freedom for All Creatures",npc="Kindal Moonweaver",z=357,x=65.9,y=45.6,v=1},
+    {"accept",q=2970,title="Doling Justice",npc="Jer'kai Moonweaver",z=357,x=66,y=45.6,v=1},
+    {"complete",q=2970,title="Doling Justice",text="Grimtotem tauren at the compound.",v=1},
+    {"turnin",q=2970,title="Doling Justice",npc="Jer'kai Moonweaver",z=357,x=66,y=45.6,v=1},
+    {"level",text="Dustwallow Marsh starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=49,v=1},
+  },
+})

@@ -28,7 +28,7 @@ namespace GuideTools
             foreach (var kv in db.Quests)
             {
                 var r = kv.Value;
-                int races = BundledDb.Num(r, BundledDb.Q_RACES);
+                long races = BundledDb.Races(r);
                 if (races != 0 && (races & fmask) == 0) continue;
                 // Skip holiday/event quests (level -1) and repeatables: never part of a leveling route.
                 if (BundledDb.Num(r, BundledDb.Q_LEVEL) < 0 || (BundledDb.Num(r, BundledDb.Q_SPECIAL) & 1) != 0) continue;

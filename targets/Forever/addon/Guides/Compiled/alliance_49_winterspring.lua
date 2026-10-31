@@ -1,0 +1,42 @@
+-- ClassicGuide - compiled guide data. GENERATED from guides-src/alliance/49_winterspring.guide by tools/build.ps1 guides.
+-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original ClassicGuide content
+-- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.
+local _, ns = ...
+ns.Guides:Register({
+  id="A_49_Winterspring", name="Winterspring (54)", faction="Alliance", chapter="Azeroth",
+  minLevel=54, maxLevel=54, zone=618, zoneName="Winterspring",
+  desc="Winterspring, visit 1 of 2 on the Alliance route, levels 54.",
+  next={{id="A_50_Felwood"},},
+  steps={
+    {"travel",text="Travel to Winterspring",dest="Winterspring",v=1},
+    {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
+    {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},
+    {"train",text="No mage trainer in this zone - train at the next town or capital.",classes={"MAGE"},v=1},
+    {"train",text="No paladin trainer in this zone - train at the next town or capital.",classes={"PALADIN"},v=1},
+    {"train",text="No priest trainer in this zone - train at the next town or capital.",classes={"PRIEST"},v=1},
+    {"train",text="No rogue trainer in this zone - train at the next town or capital.",classes={"ROGUE"},v=1},
+    {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
+    {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
+    {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
+    {"note",text="From Nafien in north Felwood, walk through Timbermaw Hold (the tunnel behind him). The Timbermaw furbolgs inside leave you alone unless you have killed their kin. Salfa waits at the Winterspring exit.",v=1},
+    {"turnin",q=8465,title="Speak to Salfa",npc="Salfa",z=618,x=27.7,y=34.5,text="Salfa, at the Winterspring end of the tunnel.",v=1},
+    {"note",text="Ride east along the road to Everlook.",v=1},
+    {"fp",npc="Maethrya",z=618,x=62.3,y=36.6,place="Everlook",node=52,v=1},
+    {"accept",q=3783,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker, Everlook.",v=1},
+    {"accept",q=6028,title="The Everlook Report",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at Chillwind Camp (Western Plaguelands).",v=1},
+    {"accept",q=6030,title="Duke Nicholas Zverenhoff",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at Light's Hope Chapel (Eastern Plaguelands).",v=1},
+    {"accept",q=6603,title="Trouble in Winterspring!",npc="Meggi Peppinrocker",z=618,x=60.7,y=38.2,text="Meggi Peppinrocker, Everlook. Turned in to Donova Snowden on the way out.",v=1},
+    {"complete",q=3783,title="Are We There, Yeti?",text="Thick Yeti Fur from Rogue Ice Thistle yetis on the road west of Everlook.",v=1},
+    {"accept",q=5244,title="The Ruins of Kel'Theril",npc="Wynd Nightchaser",z=618,x=52,y=30.4,v=1},
+    {"turnin",q=5249,title="To Winterspring!",npc="Wynd Nightchaser",z=618,x=52,y=30.4,v=1},
+    {"turnin",q=5244,title="The Ruins of Kel'Theril",npc="Jaron Stoneshaper",z=618,x=52.1,y=30.4,v=1},
+    {"turnin",q=3783,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker, Everlook.",v=1},
+    {"turnin",q=6603,title="Trouble in Winterspring!",npc="Donova Snowden",z=618,x=31.3,y=45.2,text="Donova Snowden at the hot springs south of the tunnel exit.",v=1},
+    {"turnin",q=5083,title="Winterfall Firewater",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"accept",q=5084,title="Falling to Corruption",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"accept",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"complete",q=5082,title="Threat of the Winterfall",text="Winterfall Pathfinders, Den Watchers and Totemics in the two furbolg camps around Donova.",v=1},
+    {"turnin",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"level",text="Felwood starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=54,v=1},
+  },
+})

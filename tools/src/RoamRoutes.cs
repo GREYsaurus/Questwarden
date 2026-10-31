@@ -45,7 +45,16 @@ namespace GuideTools
             if (!Directory.Exists(dir)) return routes;
             foreach (var f in Directory.GetFiles(dir, "*.routes").OrderBy(x => x, StringComparer.Ordinal))
                 Parse(f, "routes/" + Path.GetFileName(f), res, routes);
-            foreach (var r in routes) Check(r, res);
+            foreach (var r in routes.ToList())
+            {
+                if (!Ctx.GuidesBorrowed) { Check(r, res); continue; }
+                // Borrowed sources: a route whose points no longer match this target's spawns is left out.
+                var probe = new CompileResult { Db = res.Db };
+                Check(r, probe);
+                if (probe.Errors.Count == 0) continue;
+                routes.Remove(r);
+                res.Warnings.Add(r.Where + " (" + r.Name + "): left out for " + Ctx.Target + ": " + probe.Errors[0].Substring(probe.Errors[0].IndexOf("): ", StringComparison.Ordinal) + 3));
+            }
             // A route is only useful on a guide's complete step for its quest.
             var onGuide = new HashSet<int>(res.Guides.SelectMany(g => g.Steps).Where(s => s.Kind == "complete").Select(s => s.Quest));
             foreach (var r in routes)

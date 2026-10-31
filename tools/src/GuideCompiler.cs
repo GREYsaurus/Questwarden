@@ -144,6 +144,8 @@ namespace GuideTools
 
         public static string Str(LTable t, int i) { return t == null ? null : t.Get(i) as string; }
         public static int Num(LTable t, int i) { if (t == null) return 0; object v = t.Get(i); return v is double ? (int)(double)v : 0; }
+        // Race masks can pass 32 bits: Forever's Skyborne races are bits 33 and 34.
+        public static long Races(LTable t) { if (t == null) return 0; object v = t.Get(Q_RACES); return v is double ? (long)(double)v : 0; }
         public static LTable Tab(LTable t, int i) { return t == null ? null : t.Get(i) as LTable; }
         public static List<int> Ids(LTable t, int i) { var x = Tab(t, i); return x == null ? new List<int>() : x.IntList(); }
 
@@ -830,7 +832,7 @@ namespace GuideTools
                 if (!db.Quests.TryGetValue(id, out rec)) { res.Errors.Add(where + ": quest id " + id + " is not in the " + Ctx.TargetName + " database"); return -1; }
                 string given = m.Groups[2].Value.Trim();
                 if (given.Length > 0 && BundledDb.Norm(given) != BundledDb.Norm(BundledDb.Str(rec, BundledDb.Q_NAME)))
-                    res.Errors.Add(where + ": quest " + id + " is '" + BundledDb.Str(rec, BundledDb.Q_NAME) + "', not '" + given + "'");
+                    (Ctx.GuidesBorrowed ? res.Warnings : res.Errors).Add(where + ": quest " + id + " is '" + BundledDb.Str(rec, BundledDb.Q_NAME) + "', not '" + given + "'");
                 return id;
             }
             string key = BundledDb.Norm(arg);
@@ -855,7 +857,7 @@ namespace GuideTools
             var filtered = cands.Where(id =>
             {
                 var r = db.Quests[id];
-                int qr = BundledDb.Num(r, BundledDb.Q_RACES);
+                long qr = BundledDb.Races(r);
                 if (qr != 0 && (qr & rmask) == 0) return false;
                 if (both && qr != 0 && ((qr & ALLIANCE_MASK) == 0 || (qr & HORDE_MASK) == 0)) return false;
                 int qc = BundledDb.Num(r, BundledDb.Q_CLASSES);
@@ -918,7 +920,7 @@ namespace GuideTools
 
         static void CheckQuestFit(int q, LTable rec, string where, CGuide g, CStep s, CompileResult res)
         {
-            int races = BundledDb.Num(rec, BundledDb.Q_RACES);
+            long races = BundledDb.Races(rec);
             string fac = s.Faction ?? g.Faction; // [faction=] steps in a shared guide check like that faction
             int fmask = fac == "Alliance" ? ALLIANCE_MASK : HORDE_MASK;
             if (fac == "Both")

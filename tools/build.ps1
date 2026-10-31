@@ -68,6 +68,12 @@ function Load-Tools {
         Add-Type -Path $src -ReferencedAssemblies System.Core, System.Data, System.Xml, Microsoft.VisualBasic
     }
     $info = [GuideTools.Ctx]::Load($Root, $Target, $Name)
+    # target.json guidesFrom: compile another target's guide sources against this target's data (Forever uses
+    # Classic Era's routes; QuestieDB's Forever data keeps Era's ids with Forever map coordinates).
+    if ($TargetInfo.guidesFrom) {
+        [GuideTools.Ctx]::GuidesSrc = Join-Path $Root "targets\$($TargetInfo.guidesFrom)\guides-src"
+        [GuideTools.Ctx]::GuidesBorrowed = $true
+    }
     $req = $TargetInfo.require
     [GuideTools.Ctx]::RequireDatabase = [bool]$req.database
     [GuideTools.Ctx]::RequireTalents = [bool]$req.talents
@@ -79,6 +85,9 @@ function Load-Tools {
         [GuideTools.Ctx]::QuestieFixesModule = $q.fixesModule; [GuideTools.Ctx]::QuestieXp = $q.xp
         [GuideTools.Ctx]::QuestieAllDangerousMobs = [bool]$q.allDangerousMobs
         [GuideTools.Ctx]::QuestieSpiritHealers = [bool]$q.spiritHealers
+        if ($q.zonesDir) { [GuideTools.Ctx]::QuestieZonesDir = $q.zonesDir }
+        [GuideTools.Ctx]::QuestieFixList.Clear()
+        foreach ($l in @($q.fixList)) { if ($l) { [GuideTools.Ctx]::QuestieFixList.Add([string[]]@($l.file, $l.module)) } }
         $f = $q.npcFlags
         [GuideTools.Ctx]::FlagQuestGiver = $f.QUEST_GIVER; [GuideTools.Ctx]::FlagVendor = $f.VENDOR
         [GuideTools.Ctx]::FlagFlight = $f.FLIGHT_MASTER; [GuideTools.Ctx]::FlagTrainer = $f.TRAINER; [GuideTools.Ctx]::FlagInn = $f.INNKEEPER
@@ -303,7 +312,10 @@ function Invoke-Routes {
     [GuideTools.RouteAnalyzer]::Write($Root, $a)
     $a.Errors | Select-Object -First 40 | ForEach-Object { Write-Host "  ERROR $_" -ForegroundColor Red }
     Write-Host ("routes: {0} routes walked, {1} error(s), {2} warning(s). Report: docs/generated/{3}/ROUTE_AUDIT.md" -f $a.Routes, $a.Errors.Count, $a.Warnings.Count, $Target)
-    if ($a.Errors.Count -gt 0) { throw "Route audit failed with $($a.Errors.Count) error(s)." }
+    # An unverified target (Target.<Target>.lua verified = false: Forever, until checked in the live client) gets
+    # the report without failing the build; it loads no guides in game anyway.
+    if ($a.Errors.Count -gt 0 -and [GuideTools.Ctx]::Verified) { throw "Route audit failed with $($a.Errors.Count) error(s)." }
+    if ($a.Errors.Count -gt 0) { Write-Host "routes: errors reported only ($Target is not verified)" }
 }
 
 function Invoke-Report {

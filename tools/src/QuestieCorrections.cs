@@ -40,28 +40,44 @@ namespace GuideTools
             "breadcrumbForQuestId","breadcrumbs","extraObjectives","requiredSpell","requiredSpecialization",
             "requiredMaxLevel","availableUntilCompleted","availableStartingWith","requiredRanks","disabledByQuest" };
 
+        // The fix file (target.json questie.fixes / fixesModule), or the ordered layers of questie.fixList: each
+        // later layer overrides the earlier ones, as QuestieDB applies them.
         public static CorrectionResult Apply(QuestieData d, string qdbRoot)
         {
             var res = new CorrectionResult();
-            string fixes = Path.Combine(qdbRoot, Ctx.QuestieFixes.Replace('/', Path.DirectorySeparatorChar));
-            if (!File.Exists(fixes)) { res.Skipped.Add(Ctx.QuestieFixes + " not present; no corrections applied"); return res; }
+            var layers = Ctx.QuestieFixList.Count > 0 ? Ctx.QuestieFixList : new List<string[]> { new[] { Ctx.QuestieFixes, Ctx.QuestieFixesModule } };
             var c = new QuestieCorrections();
             c.LoadEnums(qdbRoot);
-            c.t = LuaLexer.Lex(File.ReadAllText(fixes, Encoding.UTF8));
-            c.ApplyMainTable(d, res);
+            foreach (var layer in layers)
+            {
+                string fixes = Path.Combine(qdbRoot, layer[0].Replace('/', Path.DirectorySeparatorChar));
+                if (!File.Exists(fixes)) { res.Skipped.Add(layer[0] + " not present; layer skipped"); continue; }
+                c.module = layer[1];
+                c.t = LuaLexer.Lex(File.ReadAllText(fixes, Encoding.UTF8));
+                c.ApplyMainTable(d, res);
+            }
             return res;
         }
+
+        string module;
 
         void LoadEnums(string qdbRoot)
         {
             var qk = new Dictionary<string, double>();
-            for (int k = 1; k < QuestKeyNames.Length; k++) qk[QuestKeyNames[k]] = k;
+            for (int k = 1; k < QuestKeyNames.Length; k++)
+            {
+                qk[QuestKeyNames[k]] = k;
+                qk[QuestKeyNames[k] + "_add"] = AddBase + k;       // merge into the field (Forever traces and fixes)
+                qk[QuestKeyNames[k] + "_remove"] = RemoveBase + k; // take ids out of the field
+            }
             enums["questKeys"] = qk;
 
             enums["raceIDs"] = new Dictionary<string, double> {
                 {"NONE",0},{"HUMAN",1},{"ORC",2},{"DWARF",4},{"NIGHT_ELF",8},{"UNDEAD",16},{"TAUREN",32},
                 {"GNOME",64},{"TROLL",128},{"GOBLIN",256},{"BLOOD_ELF",512},{"DRAENEI",1024},
-                {"ALL_ALLIANCE",1101},{"ALL_HORDE",690} };
+                {"ALL_ALLIANCE",1101},{"ALL_HORDE",690},
+                // Forever's Skyborne (QuestieDB src/corrections/enum/expansions.lua: race ids 95 and 96)
+                {"SKYBORNE_ALLIANCE",4294967296.0},{"SKYBORNE_HORDE",8589934592.0} };
             enums["classIDs"] = new Dictionary<string, double> {
                 {"NONE",0},{"WARRIOR",1},{"PALADIN",2},{"HUNTER",4},{"ROGUE",8},{"PRIEST",16},{"SHAMAN",64},
                 {"MAGE",128},{"WARLOCK",256},{"DRUID",1024},{"ALL_CLASSES",1503} };
@@ -118,10 +134,10 @@ namespace GuideTools
             int start = -1;
             for (int k = 0; k + 3 < t.Count; k++)
             {
-                if (t[k].Text == "function" && t[k + 1].Text == Ctx.QuestieFixesModule && t[k + 2].Text == ":" && t[k + 3].Text == "Load")
+                if (t[k].Text == "function" && t[k + 1].Text == module && t[k + 2].Text == ":" && t[k + 3].Text == "Load")
                 { start = k; break; }
             }
-            if (start < 0) { res.Skipped.Add("could not locate " + Ctx.QuestieFixesModule + ":Load"); return; }
+            if (start < 0) { res.Skipped.Add("could not locate " + module + ":Load"); return; }
             int r = start;
             while (r < t.Count && !(t[r].Text == "return" && t[r + 1].Text == "{")) r++;
             if (r >= t.Count) { res.Skipped.Add("could not locate Load() return table"); return; }
@@ -164,7 +180,9 @@ namespace GuideTools
                             q = new LTable();
                             d.Quests[qid] = q;
                         }
-                        q.Set(keyv, val);
+                        int kn = (int)(double)keyv;
+                        if (kn > AddBase) Merge(q, kn % AddBase, val, kn > RemoveBase);
+                        else q.Set(keyv, val);
                         res.Applied++;
                     }
                     Sep();
@@ -178,10 +196,52 @@ namespace GuideTools
             foreach (var k in drop) { d.Quests.Remove(k); res.Skipped.Add("quest " + k + ": correction-only record without a name dropped"); }
         }
 
+        const int AddBase = 1000, RemoveBase = 2000;
+
         static string KeyName(object k)
         {
-            if (k is double) { int n = (int)(double)k; if (n > 0 && n < QuestKeyNames.Length) return QuestKeyNames[n]; }
+            if (k is double) { int n = (int)(double)k % AddBase; if (n > 0 && n < QuestKeyNames.Length) return QuestKeyNames[n]; }
             return "?";
+        }
+
+        // field_add / field_remove: QuestieDB merges these into the current value instead of replacing it. A
+        // value is either a list of ids/rows, or a table of lists ({npcs, objects, items} for startedBy and
+        // finishedBy); each list is merged position by position.
+        static void Merge(LTable q, int field, object val, bool remove)
+        {
+            var cur = q.Get(field) as LTable;
+            var add = val as LTable;
+            if (add == null) return;
+            if (cur == null) { if (!remove) q.Set((double)field, add); return; }
+            bool nested = false;
+            for (int k = 1; k <= add.Count; k++) if (add.Get(k) is LTable && cur.Get(k) is LTable) nested = true;
+            if (nested || (add.Count > 0 && (add.Get(1) == null || add.Get(1) is LTable) && !(cur.Get(1) is double)))
+            {
+                for (int k = 1; k <= Math.Max(add.Count, cur.Count); k++)
+                {
+                    var a = add.Get(k) as LTable;
+                    if (a == null) continue;
+                    var c = cur.Get(k) as LTable;
+                    if (c == null) { if (!remove) cur.Set((double)k, a); continue; }
+                    MergeList(c, a, remove);
+                }
+            }
+            else MergeList(cur, add, remove);
+        }
+
+        static void MergeList(LTable cur, LTable add, bool remove)
+        {
+            var have = new List<object>();
+            for (int k = 1; k <= cur.Count; k++) have.Add(cur.Get(k));
+            for (int k = 1; k <= add.Count; k++)
+            {
+                object v = add.Get(k);
+                int at = have.FindIndex(x => x != null && v != null && x.Equals(v));
+                if (remove) { if (at >= 0) have.RemoveAt(at); }
+                else if (at < 0 || !(v is double)) have.Add(v);
+            }
+            for (int k = cur.Count; k >= 1; k--) cur.Arr.RemoveAt(k);
+            foreach (var v in have) cur.Append(v);
         }
 
         void Sep() { if (IsOp(",") || IsOp(";")) i++; }
