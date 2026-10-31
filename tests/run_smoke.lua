@@ -181,6 +181,21 @@ if STAGE.target == "ClassicEra" then
     for _ in pairs(ns.EscortQuests) do nEsc = nEsc + 1 end
     check(nEsc >= 40 and ns.EscortQuests[155] and ns.EscortQuests[2078], "Classic escort list built (" .. nEsc .. " quests, incl. Defias Traitor and Gyromast)")
     check(ns.DB.GetEscortStatus(1560) == true, "Tooga's Quest is treated as an escort")
+    -- Flight graph (Database/Flights.lua): client taxi nodes, each tied to its flight master.
+    local nNodes, nNpc = 0, 0
+    for _, n in pairs(ns.Flights.nodes) do nNodes = nNodes + 1; if n.npc then nNpc = nNpc + 1 end end
+    check(nNodes >= 60 and nNpc >= nNodes - 3, "flight graph built (" .. nNodes .. " nodes, " .. nNpc .. " with a flight master)")
+    local aub = ns.Flights.nodes[26]
+    check(aub and aub.name == "Auberdine" and aub.faction == "A" and ns.DB.ZoneName(aub.zone) == "Darkshore", "Auberdine is an Alliance node in Darkshore")
+    local toAub = false
+    for _, l in ipairs(ns.Flights.links[27] or {}) do if l == 26 then toAub = true end end
+    check(toAub, "Rut'theran Village flies to Auberdine")
+    local flyStep
+    for _, gid in ipairs({ "A_42_DustwallowMarsh", "H_36_Desolace" }) do
+        local fg = ns.Guides:Get(gid)
+        for _, st in ipairs(fg and fg.steps or {}) do if st[1] == "fly" and st.node then flyStep = flyStep or st end end
+    end
+    check(flyStep and ns.Flights.nodes[flyStep.node], "route fly steps carry their flight node")
     -- Dangerous mobs (questie.allDangerousMobs): every hostile rare is bundled, not only quest mobs.
     local N, nRare = ns.QDB.NPC, 0
     for _, r in pairs(ns.QDB.npcs) do

@@ -12,6 +12,7 @@
 @desc Southern Barrens, visit 3 of 4 on the Horde route, levels 22-23.
 @next H_15_StonetalonMountains
 
+fly Ratchet | Take the flight from Sun Rock Retreat.
 travel The Barrens
 train
 accept 883 Lakota'mani [optional]

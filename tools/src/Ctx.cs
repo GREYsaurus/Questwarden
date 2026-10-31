@@ -39,6 +39,8 @@ namespace GuideTools
         public static int FlagQuestGiver = 2, FlagVendor = 4, FlagFlight = 8, FlagTrainer = 16, FlagInn = 128;
         // Client tables (target.json "clientTables").
         public static string ClientProduct = "", ClientTablesBuild = "";
+        // Build Database/Flights.lua from the taxi tables (target.json clientTables.flights).
+        public static bool ClientFlights = false;
         // Spells with an id at or above this are left out of the trainer and pet tables (0 = keep all).
         // Classic Era: 400000, because the 1.15 client tables also carry Season of Discovery and seasonal
         // spells (all 400000+), with no other marker. Every spell left out is listed in a report.

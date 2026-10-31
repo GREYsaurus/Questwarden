@@ -49,7 +49,9 @@
       "SpellEffect",
       "ItemEffect",
       "ItemSparse",
-      "UiMapAssignment"
+      "UiMapAssignment",
+      "TaxiNodes",
+      "TaxiPath"
     ],
     "urlTemplate": "https://wago.tools/db2/{table}/csv?build={build}",
     "_comment": "Product and build per target: targets/<Target>/target.json clientTables. Tables are cached per build in .cache/upstream/db2/<build>/."

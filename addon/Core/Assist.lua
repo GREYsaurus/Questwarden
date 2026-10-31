@@ -77,21 +77,30 @@ function A:TrainerStep()
     end
 end
 
--- Flies to the current fly step's destination when the flight map opens.
+-- Flies to the current fly step's destination when the flight map opens. With a flight graph
+-- (Database/Flights.lua) the step's node gives the client's full name ("Auberdine, Darkshore"),
+-- which is tried first; otherwise the first reachable node whose name contains the destination.
 function A:OnTaxiMap()
     local s = currentStep()
     if not (prof().flightAuto and s and s[1] == "fly" and s.dest) or shiftHeld() then return end
     if not (NumTaxiNodes and TaxiNodeName and TakeTaxiNode) then return end
+    local node = s.node and ns.Flights and ns.Flights.nodes[s.node]
+    local exact = node and string.lower(node.full)
     local want = string.lower(s.dest)
+    local pick
     for i = 1, NumTaxiNodes() or 0 do
         local name = TaxiNodeName(i)
         local kind = TaxiNodeGetType and TaxiNodeGetType(i)
-        if type(name) == "string" and (kind == nil or kind == "REACHABLE")
-            and string.find(string.lower(name), want, 1, true) then
-            ns:Print("Flying to " .. name .. " (flight path automation; hold Shift to choose yourself).")
-            TakeTaxiNode(i)
-            return true
+        if type(name) == "string" and (kind == nil or kind == "REACHABLE") then
+            local low = string.lower(name)
+            if exact and low == exact then pick = i break end
+            if not pick and string.find(low, want, 1, true) then pick = i end
         end
+    end
+    if pick then
+        ns:Print("Flying to " .. TaxiNodeName(pick) .. " (flight path automation; hold Shift to choose yourself).")
+        TakeTaxiNode(pick)
+        return true
     end
 end
 

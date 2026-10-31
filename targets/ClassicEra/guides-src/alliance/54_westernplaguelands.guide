@@ -12,6 +12,7 @@
 @desc Western Plaguelands, visit 2 of 2 on the Alliance route, levels 57-58.
 @next A_55_Felwood
 
+fly Chillwind Camp | Take the flight from Light's Hope Chapel.
 travel Western Plaguelands
 accept 5343 Barov Family Fortune [dungeon=Scholomance]
 accept 5382 Doctor Theolen Krastinov, the Butcher [dungeon=Scholomance]

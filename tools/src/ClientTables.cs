@@ -161,6 +161,12 @@ namespace GuideTools
             summary.Add("race/class combinations: " + comboCount);
             summary.Add(TrainingTables.Export(db2Dir, addOnDir, build));
             summary.Add(PetTables.Export(db2Dir, addOnDir, build));
+            if (Ctx.ClientFlights)
+            {
+                var notes = new List<string>();
+                summary.Add(FlightTables.Export(db2Dir, addOnDir, build, notes));
+                summary.AddRange(notes);
+            }
             return string.Join(Environment.NewLine, summary.ToArray());
         }
     }

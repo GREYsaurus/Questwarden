@@ -190,4 +190,4 @@ accept 6342 Flight to Auberdine [optional]
 train | Darnassus trainers (Warrior's Terrace, Cenarion Enclave).
 fp Rut'theran Village
 note Take the portal in Darnassus down to Rut'theran Village, then fly to Auberdine (Darkshore).
-fly Auberdine
+fly Auberdine [unverified] | Flight to Auberdine says Vesprystus flies you there before you have the Auberdine flight path; if he does not, take the boat from Rut'theran Village.

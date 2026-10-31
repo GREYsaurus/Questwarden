@@ -173,6 +173,19 @@ step = { "fly", dest = "Sentinel Hill" }
 A:OnTaxiMap()
 check(taken == nil, "Shift held: no automatic flight")
 MOCK.shift = false
+-- With a flight node, the client's full node name wins over a looser name match.
+function TaxiNodeName(i) return ({ "Nighthaven, Moonglade", "Moonglade" })[i] end
+local realFlights = ns.Flights
+ns.Flights = { nodes = { [49] = { name = "Moonglade", full = "Moonglade", zone = 493 } }, links = {} }
+step = { "fly", dest = "Moonglade", node = 49 }
+A:OnTaxiMap()
+check(taken == 2, "fly step with a flight node: exact node name chosen")
+taken = nil
+step = { "fly", dest = "Moonglade" }
+A:OnTaxiMap()
+check(taken == 1, "fly step without a node: first name match, as before")
+taken = nil
+ns.Flights = realFlights
 
 local options, selected = {}, {}
 C_GossipInfo.GetOptions = function() return options end

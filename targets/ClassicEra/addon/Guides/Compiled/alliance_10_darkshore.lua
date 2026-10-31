@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
-    {"fp",npc="Caylais Moonfeather",z=148,x=36.3,y=45.6,place="Auberdine",v=1},
+    {"fp",npc="Caylais Moonfeather",z=148,x=36.3,y=45.6,place="Auberdine",node=26,v=1},
     {"accept",q=947,title="Cave Mushrooms",npc="Barithras Moonshade",z=148,x=37.3,y=43.6,text="Barithras Moonshade.",v=1},
     {"complete",q=947,title="Cave Mushrooms",text="The Mist's Edge cave.",v=1},
     {"turnin",q=947,title="Cave Mushrooms",npc="Barithras Moonshade",z=148,x=37.3,y=43.6,v=1},

@@ -9,7 +9,7 @@ ns.Guides:Register({
   next={{id="H_22_ArathiHighlands"},},
   steps={
     {"travel",text="Travel to Hillsbrad Foothills",dest="Hillsbrad Foothills",v=1},
-    {"fp",npc="Zarise",z=267,x=60.1,y=18.6,place="Tarren Mill",v=1},
+    {"fp",npc="Zarise",z=267,x=60.1,y=18.6,place="Tarren Mill",node=13,v=1},
     {"accept",q=496,title="Elixir of Suffering",npc="Apothecary Lydon",z=267,x=61.4,y=19.1,text="Apothecary Lydon.",v=1},
     {"accept",q=1066,title="Blood of Innocents",npc="Apothecary Lydon",z=267,x=61.4,y=19.1,optional=true,v=1},
     {"accept",q=494,title="Time To Strike",npc="Deathstalker Lesh",z=267,x=20.8,y=47.4,text="Deathguard Lesh.",optional=true,v=1},

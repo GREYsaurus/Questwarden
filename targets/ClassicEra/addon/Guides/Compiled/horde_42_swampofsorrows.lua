@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Swamp of Sorrows, visit 2 of 2 on the Horde route, levels 48-49.",
   next={{id="H_43_DustwallowMarsh"},},
   steps={
+    {"fly",text="Take the flight from Thorium Point.",dest="Stonard",node=56,v=1},
     {"travel",text="Travel to Swamp of Sorrows",dest="Swamp of Sorrows",v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",npc="Ogromm",z=8,x=47.3,y=53.4,classes={"HUNTER"},v=1},

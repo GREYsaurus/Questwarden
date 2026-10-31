@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Stranglethorn Vale, visit 4 of 5 on the Horde route, levels 42-43.",
   next={{id="H_35_DustwallowMarsh"},},
   steps={
+    {"fly",text="Take the flight from Stonard.",dest="Grom'gol",node=20,v=1},
     {"travel",text="Travel to Stranglethorn Vale",dest="Stranglethorn Vale",v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",npc="Kragg",z=33,x=31.2,y=28.7,classes={"HUNTER"},v=1},

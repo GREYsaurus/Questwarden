@@ -12,6 +12,7 @@
 @desc Stonetalon Mountains, visit 3 of 4 on the Horde route, levels 23-25.
 @next H_16_SouthernBarrens
 
+fly Sun Rock Retreat | Take the flight from Ratchet.
 travel Stonetalon Mountains
 accept 1087 Cenarius' Legacy | Braelyn Firehand.
 accept 6393 Elemental War

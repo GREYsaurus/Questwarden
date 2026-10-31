@@ -24,7 +24,7 @@ ns.Guides:Register({
     {"accept",q=470,title="Digging Through the Ooze",npc="Sida",z=11,x=11.8,y=58,text="Sida, west Menethil.",v=1},
     {"accept",q=464,title="War Banners",npc="Captain Stoutfist",z=11,x=9.9,y=57.5,v=1},
     {"accept",q=279,title="Claws from the Deep",npc="Karl Boran",z=11,x=8.3,y=58.6,text="Karl Boran on the docks.",v=1},
-    {"fp",npc="Shellei Brondir",z=11,x=9.5,y=59.7,place="Menethil Harbor",v=1},
+    {"fp",npc="Shellei Brondir",z=11,x=9.5,y=59.7,place="Menethil Harbor",node=7,v=1},
     {"accept",q=288,title="The Third Fleet",npc="First Mate Fitzsimmons",z=11,x=10.9,y=59.6,text="First Mate Fitzsimmons in the inn.",v=1},
     {"accept",q=463,title="The Greenwarden",npc="First Mate Fitzsimmons",z=11,x=10.9,y=59.6,v=1},
     {"complete",q=288,title="The Third Fleet",text="Crocolisk meat from crocolisks around Menethil; buy the Flagon of Mead from the innkeeper.",v=1},

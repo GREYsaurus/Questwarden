@@ -457,6 +457,23 @@ ns.Engine:Refresh()
 check(countNA() == naBefore, "speed route off restores optional steps")
 ns.Engine:Load("A_Human_Elwynn")
 
+-- Landing: a fly step with a flight node completes in the node's zone, and the travel step after it too.
+do
+    local realFlights, realZone, realSub = ns.Flights, MOCK.zone, GetSubZoneText
+    local zid
+    for id, n in pairs(ns.QDB.zones.names or {}) do if n == "Darkshore" then zid = id end end
+    ns.Flights = { nodes = { [26] = { name = "Auberdine", full = "Auberdine, Darkshore", zone = zid } }, links = {} }
+    ns.Guides:Register({ id = "TEST_FlyTravel", faction = "Both", steps = {
+        { "fly", dest = "Auberdine", node = 26 }, { "travel", dest = "Darkshore" }, { "note", text = "arrived" } } })
+    ns.Engine:Load("TEST_FlyTravel", { reset = true })
+    MOCK.zone = "Darkshore"
+    GetSubZoneText = function() return "Bashal'Aran" end
+    ns.Engine:OnZoneChanged()
+    check(zid and ns.Engine.current == 3, "landing completes the fly step and the travel step after it (" .. tostring(ns.Engine.current) .. ")")
+    ns.Flights, MOCK.zone, GetSubZoneText = realFlights, realZone, realSub
+    ns.Engine:Load("A_Human_Elwynn")
+end
+
 -- Settings / saved variables --------------------------------------------------------------------
 _G[ns.svAccount].protectedItems = "garbage"
 _G[ns.svChar].junkStats = { items = "x" }

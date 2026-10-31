@@ -12,6 +12,7 @@
 @desc Stranglethorn Vale, visit 4 of 5 on the Horde route, levels 42-43.
 @next H_35_DustwallowMarsh
 
+fly Grom'gol | Take the flight from Stonard.
 travel Stranglethorn Vale
 train
 accept 621 Zanzil's Secret

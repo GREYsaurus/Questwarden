@@ -325,15 +325,20 @@ function Engine:CurrentStep()
     return self.guide and self.current and self.guide.steps[self.current]
 end
 
--- Zone-based completion for travel steps (fly/hs/travel/goto-zone).
+-- Zone-based completion for travel steps (fly/hs/travel/goto-zone). A fly step with a flight node
+-- (Database/Flights.lua) also completes in the node's zone. Several steps can complete at once:
+-- landing finishes "fly Auberdine" and the "travel Darkshore" after it.
 function Engine:OnZoneChanged()
-    local s = self:CurrentStep()
-    if not s then return end
-    if (s[1] == "fly" or s[1] == "hs" or s[1] == "travel") and s.dest then
-        local zone = string.lower(ns.Compat.GetZoneText() or "")
-        local sub = string.lower(GetSubZoneText and GetSubZoneText() or "")
+    local zone = string.lower(ns.Compat.GetZoneText() or "")
+    local sub = string.lower(GetSubZoneText and GetSubZoneText() or "")
+    for _ = 1, 3 do
+        local s = self:CurrentStep()
+        if not (s and (s[1] == "fly" or s[1] == "hs" or s[1] == "travel") and s.dest) then return end
         local dest = string.lower(s.dest)
-        if zone == dest or sub == dest then self:MarkDone(self.current) end
+        local node = s[1] == "fly" and s.node and ns.Flights and ns.Flights.nodes[s.node]
+        local nodeZone = node and ns.DB.ZoneName(node.zone)
+        if not (zone == dest or sub == dest or (nodeZone and zone == string.lower(nodeZone))) then return end
+        self:MarkDone(self.current)
     end
 end
 

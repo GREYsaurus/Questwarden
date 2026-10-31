@@ -8,7 +8,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5062 |
+| Guide steps | 5072 |
 | Quest steps (accept/complete/turn-in) | 4110 |
 | Distinct quests referenced | 1271 |
 | Steps with database-derived coordinates | 3229 |
@@ -84,15 +84,15 @@ Each race/class combination is followed from its racial start guide through the 
 | Stonetalon Mountains (20-21) | Horde | 20-21 | Stonetalon Mountains | 41 | 17 | 3 |
 | Ashenvale (21-22) | Alliance | 21-22 | Ashenvale | 38 | 15 | 9 |
 | Stonetalon Mountains (22-23) | Alliance | 22-23 | Stonetalon Mountains | 27 | 6 | 0 |
-| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 38 | 7 | 4 |
+| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 39 | 7 | 4 |
 | Darkshore (23-24) | Alliance | 23-24 | Darkshore | 3 | 0 | 0 |
-| Stonetalon Mountains (23-25) | Horde | 23-25 | Stonetalon Mountains | 15 | 4 | 0 |
+| Stonetalon Mountains (23-25) | Horde | 23-25 | Stonetalon Mountains | 16 | 4 | 0 |
 | Ashenvale (24) | Alliance | 24-24 | Ashenvale | 39 | 7 | 10 |
 | Wetlands (24-27) | Alliance | 24-27 | Wetlands | 76 | 24 | 12 |
 | Southern Barrens (25) | Horde | 25-25 | The Barrens | 10 | 5 | 3 |
 | Thousand Needles (25-26) | Horde | 25-26 | Thousand Needles | 42 | 14 | 21 |
 | Ashenvale (26-27) | Horde | 26-27 | Ashenvale | 63 | 19 | 10 |
-| Stonetalon Mountains (27-28) | Horde | 27-28 | Stonetalon Mountains | 21 | 7 | 0 |
+| Stonetalon Mountains (27-28) | Horde | 27-28 | Stonetalon Mountains | 22 | 7 | 0 |
 | Duskwood (28-29) | Alliance | 28-29 | Duskwood | 183 | 64 | 50 |
 | Thousand Needles (28-29) | Horde | 28-29 | Thousand Needles | 68 | 19 | 29 |
 | Hillsbrad Foothills (29-30) | Horde | 29-30 | Hillsbrad Foothills | 55 | 18 | 7 |
@@ -123,12 +123,12 @@ Each race/class combination is followed from its racial start guide through the 
 | Swamp of Sorrows (41-42) | Alliance | 41-42 | Swamp of Sorrows | 9 | 2 | 0 |
 | Swamp of Sorrows (41-42) | Horde | 41-42 | Swamp of Sorrows | 23 | 6 | 0 |
 | Stranglethorn Vale (42) | Alliance | 42-42 | Stranglethorn Vale | 42 | 10 | 3 |
-| Stranglethorn Vale (42-43) | Horde | 42-43 | Stranglethorn Vale | 45 | 11 | 0 |
+| Stranglethorn Vale (42-43) | Horde | 42-43 | Stranglethorn Vale | 46 | 11 | 0 |
 | Desolace (43) | Alliance | 43-43 | Desolace | 77 | 25 | 3 |
 | Tanaris (43-44) | Alliance | 43-44 | Tanaris | 36 | 11 | 3 |
 | Dustwallow Marsh (43-44) | Horde | 43-44 | Dustwallow Marsh | 20 | 6 | 0 |
 | Feralas (44-46) | Alliance | 44-46 | Feralas | 53 | 17 | 1 |
-| Desolace (44) | Horde | 44-44 | Desolace | 26 | 5 | 1 |
+| Desolace (44) | Horde | 44-44 | Desolace | 27 | 5 | 1 |
 | Tanaris (44-45) | Horde | 44-45 | Tanaris | 51 | 13 | 3 |
 | Feralas (45-46) | Horde | 45-46 | Feralas | 49 | 16 | 0 |
 | Azshara (46) | Alliance | 46-46 | Azshara | 17 | 2 | 0 |
@@ -139,9 +139,9 @@ Each race/class combination is followed from its racial start guide through the 
 | Stranglethorn Vale (47) | Horde | 47-47 | Stranglethorn Vale | 13 | 4 | 0 |
 | Searing Gorge (47-48) | Horde | 47-48 | Searing Gorge | 51 | 17 | 3 |
 | Feralas (48-49) | Alliance | 48-49 | Feralas | 29 | 6 | 1 |
-| Swamp of Sorrows (48-49) | Horde | 48-49 | Swamp of Sorrows | 34 | 9 | 3 |
-| Dustwallow Marsh (49) | Alliance | 49-49 | Dustwallow Marsh | 5 | 1 | 0 |
-| Tanaris (49-50) | Alliance | 49-50 | Tanaris | 33 | 11 | 6 |
+| Swamp of Sorrows (48-49) | Horde | 48-49 | Swamp of Sorrows | 35 | 9 | 3 |
+| Dustwallow Marsh (49) | Alliance | 49-49 | Dustwallow Marsh | 6 | 1 | 0 |
+| Tanaris (49-50) | Alliance | 49-50 | Tanaris | 34 | 11 | 6 |
 | Dustwallow Marsh (49) | Horde | 49-49 | Dustwallow Marsh | 3 | 0 | 0 |
 | Tanaris (49-50) | Horde | 49-50 | Tanaris | 27 | 9 | 6 |
 | The Hinterlands (50) | Alliance | 50-50 | The Hinterlands | 14 | 1 | 0 |
@@ -156,7 +156,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Burning Steppes (53) | Horde | 53-53 | Burning Steppes | 3 | 0 | 0 |
 | Azshara (53-54) | Horde | 53-54 | Azshara | 12 | 4 | 0 |
 | Winterspring (54) | Alliance | 54-54 | Winterspring | 27 | 7 | 0 |
-| Felwood (54-55) | Alliance | 54-55 | Felwood | 19 | 3 | 0 |
+| Felwood (54-55) | Alliance | 54-55 | Felwood | 20 | 3 | 0 |
 | Felwood (54) | Horde | 54-54 | Felwood | 35 | 9 | 0 |
 | Winterspring (54-55) | Horde | 54-55 | Winterspring | 28 | 7 | 0 |
 | Burning Steppes (55-56) | Alliance | 55-56 | Burning Steppes | 70 | 26 | 1 |
@@ -165,7 +165,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Eastern Plaguelands (56-57) | Alliance | 56-57 | Eastern Plaguelands | 41 | 10 | 1 |
 | Western Plaguelands (56) | Horde | 56-56 | Western Plaguelands | 67 | 22 | 3 |
 | Eastern Plaguelands (56-57) | Horde | 56-57 | Eastern Plaguelands | 67 | 19 | 1 |
-| Western Plaguelands (57-58) | Alliance | 57-58 | Western Plaguelands | 21 | 7 | 0 |
+| Western Plaguelands (57-58) | Alliance | 57-58 | Western Plaguelands | 22 | 7 | 0 |
 | Western Plaguelands (57-58) | Horde | 57-58 | Western Plaguelands | 14 | 5 | 0 |
 | Felwood (58) | Alliance | 58-58 | Felwood | 12 | 0 | 0 |
 | Azshara (58) | Alliance | 58-58 | Azshara | 12 | 0 | 0 |

@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Felwood, visit 2 of 3 on the Alliance route, levels 54-55.",
   next={{id="A_51_BurningSteppes"},},
   steps={
+    {"fly",text="Take the flight from Everlook.",dest="Talonbranch Glade",node=65,v=1},
     {"travel",text="Travel to Felwood",dest="Felwood",v=1},
     {"train",npc="Golhine the Hooded",z=361,x=61.9,y=24.5,classes={"DRUID"},v=1},
     {"train",npc="Kaerbrus",z=361,x=61.9,y=23.6,classes={"HUNTER"},v=1},

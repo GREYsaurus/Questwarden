@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",npc="Captain Evencane",z=15,x=67.9,y=48.4,classes={"WARRIOR"},v=1},
-    {"fp",npc="Baldruc",z=15,x=67.5,y=51.3,place="Theramore",v=1},
+    {"fp",npc="Baldruc",z=15,x=67.5,y=51.3,place="Theramore",node=32,v=1},
     {"accept",q=1282,title="They Call Him Smiling Jim",npc="Guard Byron",z=15,x=66.2,y=46.1,text="Guard Byron, at the Theramore gate.",v=1},
     {"turnin",q=1282,title="They Call Him Smiling Jim",npc="Captain Garran Vimes",z=15,x=68.2,y=48.6,text="Captain Garran Vimes, Foothold Citadel.",v=1},
     {"accept",q=1204,title="Mudrock Soup and Bugs",npc="Morgan Stern",z=15,x=66.3,y=45.5,text="Morgan Stern, by the Theramore docks.",v=1},

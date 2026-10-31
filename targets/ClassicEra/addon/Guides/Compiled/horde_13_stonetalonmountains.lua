@@ -37,7 +37,7 @@ ns.Guides:Register({
     {"turnin",q=5642,title="Shadowguard",npc="Ur'kyo",z=1637,x=35.6,y=87.8,text="Turned in at Orgrimmar.",classes={"PRIEST"},races={"Troll"},v=1},
     {"turnin",q=2458,title="Deep Cover",npc="Taskmaster Fizzule",z=17,x=55.4,y=5.6,text="Turned in at The Barrens.",classes={"ROGUE"},races={"Orc","Scourge","Troll"},v=1},
     {"accept",q=6562,title="Trouble in the Deeps",npc="Tsunaman",z=406,x=47.4,y=64.2,text="Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).",v=1},
-    {"fp",npc="Tharm",z=406,x=45.1,y=59.8,place="Sun Rock Retreat",v=1},
+    {"fp",npc="Tharm",z=406,x=45.1,y=59.8,place="Sun Rock Retreat",node=29,v=1},
     {"turnin",q=6401,title="Kaya's Alive",npc="Tammra Windfield",z=406,x=47.5,y=58.4,v=1},
     {"accept",q=6301,title="Cycle of Rebirth",npc="Tammra Windfield",z=406,x=47.5,y=58.4,v=1},
     {"complete",q=6301,title="Cycle of Rebirth",v=1},

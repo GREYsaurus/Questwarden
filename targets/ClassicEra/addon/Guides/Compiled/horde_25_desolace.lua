@@ -41,7 +41,7 @@ ns.Guides:Register({
     {"turnin",q=1366,title="Centaur Bounty",npc="Felgur Twocuts",z=405,x=56.2,y=59.6,text="Ghost Walker Post.",v=1},
     {"turnin",q=1434,title="Befouled by Satyr",npc="Takata Steelblade",z=405,x=52.6,y=54.4,v=1},
     {"note",text="Ride south-west to Shadowprey Village on the coast.",v=1},
-    {"fp",npc="Thalon",z=405,x=21.6,y=74.1,place="Shadowprey Village",v=1},
+    {"fp",npc="Thalon",z=405,x=21.6,y=74.1,place="Shadowprey Village",node=38,v=1},
     {"accept",q=6143,title="Other Fish to Fry",npc="Drulzegar Skraghook",z=405,x=23.3,y=72.9,text="Drulzegar Skraghook, Shadowprey Village.",v=1},
     {"accept",q=5763,title="Hunting in Stranglethorn",npc="Roon Wildmane",z=405,x=25,y=72.3,v=1},
     {"accept",q=6142,title="Clam Bait",npc="Mai'Lahii",z=405,x=22.6,y=72,v=1},

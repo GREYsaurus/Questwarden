@@ -21,7 +21,7 @@ ns.Guides:Register({
     {"note",text="From Nafien in north Felwood, walk through Timbermaw Hold (the tunnel behind him). The Timbermaw furbolgs inside leave you alone unless you have killed their kin. Salfa waits at the Winterspring exit.",v=1},
     {"turnin",q=8465,title="Speak to Salfa",npc="Salfa",z=618,x=27.7,y=34.5,text="Salfa, at the Winterspring end of the tunnel.",v=1},
     {"note",text="Ride east along the road to Everlook.",v=1},
-    {"fp",npc="Maethrya",z=618,x=62.3,y=36.6,place="Everlook",v=1},
+    {"fp",npc="Maethrya",z=618,x=62.3,y=36.6,place="Everlook",node=52,v=1},
     {"accept",q=3783,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker, Everlook.",v=1},
     {"accept",q=6028,title="The Everlook Report",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at Chillwind Camp (Western Plaguelands).",v=1},
     {"accept",q=6030,title="Duke Nicholas Zverenhoff",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at Light's Hope Chapel (Eastern Plaguelands).",v=1},

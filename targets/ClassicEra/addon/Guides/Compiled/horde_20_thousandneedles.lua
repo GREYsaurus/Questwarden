@@ -62,7 +62,7 @@ ns.Guides:Register({
     {"accept",q=1197,title="The Sacred Flame",npc="Rau Cliffrunner",z=400,x=46.1,y=51.7,v=1},
     {"complete",q=1197,title="The Sacred Flame",v=1},
     {"turnin",q=1197,title="The Sacred Flame",npc="Rau Cliffrunner",z=400,x=46.1,y=51.7,v=1},
-    {"fp",npc="Nyse",z=400,x=45.1,y=49.1,place="Freewind Post",v=1},
+    {"fp",npc="Nyse",z=400,x=45.1,y=49.1,place="Freewind Post",node=30,v=1},
     {"accept",q=4881,title="Assassination Plot",text="Starts from the item Assassination Note.",optional=true,v=1},
     {"turnin",q=4881,title="Assassination Plot",npc="Kanati Greycloud",z=400,x=21.2,y=32.1,optional=true,v=1},
     {"note",text=" - The next quest, Protect Kanati Greycloud, is an escort: pick it up only when you are ready to follow the NPC.",optional=true,v=1},

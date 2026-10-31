@@ -28,7 +28,7 @@ ns.Guides:Register({
     {"accept",q=5157,title="Collection of the Corrupt Water",npc="Greta Mosshoof",z=361,x=51.2,y=82.1,v=1},
     {"complete",q=5157,title="Collection of the Corrupt Water",text="Fill the vessel at the corrupted moonwell in Jaedenar.",v=1},
     {"turnin",q=5157,title="Collection of the Corrupt Water",npc="Greta Mosshoof",z=361,x=51.2,y=82.1,v=1},
-    {"fp",npc="Mishellena",z=361,x=62.5,y=24.2,place="Talonbranch Glade",v=1},
+    {"fp",npc="Mishellena",z=361,x=62.5,y=24.2,place="Talonbranch Glade",node=65,v=1},
     {"accept",q=8460,title="Timbermaw Ally",npc="Grazle",z=361,x=50.9,y=85,text="Grazle, Timbermaw Hold area.",v=1},
     {"turnin",q=8460,title="Timbermaw Ally",npc="Grazle",z=361,x=50.9,y=85,v=1},
     {"level",text="Winterspring starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=54,v=1},

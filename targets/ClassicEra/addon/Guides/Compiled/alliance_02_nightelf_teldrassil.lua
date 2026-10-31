@@ -192,8 +192,8 @@ ns.Guides:Register({
     {"train",npc="Laurna Morninglight",z=141,x=55.6,y=56.8,text="Darnassus trainers (Warrior's Terrace, Cenarion Enclave).",classes={"PRIEST"},v=1},
     {"train",npc="Jannok Breezesong",z=141,x=56.4,y=60.1,text="Darnassus trainers (Warrior's Terrace, Cenarion Enclave).",classes={"ROGUE"},v=1},
     {"train",npc="Kyra Windblade",z=141,x=56.2,y=59.2,text="Darnassus trainers (Warrior's Terrace, Cenarion Enclave).",classes={"WARRIOR"},v=1},
-    {"fp",npc="Vesprystus",z=141,x=58.4,y=94,place="Rut'theran Village",v=1},
+    {"fp",npc="Vesprystus",z=141,x=58.4,y=94,place="Rut'theran Village",node=27,v=1},
     {"note",text="Take the portal in Darnassus down to Rut'theran Village, then fly to Auberdine (Darkshore).",v=1},
-    {"fly",dest="Auberdine",v=1},
+    {"fly",text="Flight to Auberdine says Vesprystus flies you there before you have the Auberdine flight path; if he does not, take the boat from Rut'theran Village.",dest="Auberdine",node=26,v=0},
   },
 })

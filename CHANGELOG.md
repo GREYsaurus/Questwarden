@@ -123,8 +123,16 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Map pins:** rares come first, then elites, then chests, so the per-map pin cap never hides a rare. A patrolling mob's tooltip says it may not be where the pin is.
   - **Danger report:** `tools/research/danger_report.py` lists route steps with a hostile elite, a higher-level rare, or a mob 5+ levels above the step's model level within 40 yards (`docs/generated/ClassicEra/danger-near-steps.csv`). It found 13 steps in 5 places; each now has a Hardcore note: the Twilight elites around Zamael in Searing Gorge, Jintha'alor and Vile Priestess Hexx in the Hinterlands (Horde), Clack the Reaver near Kum'isha in the Blasted Lands (both factions), and the Twilight Thugs at the Master's Glaive in Darkshore.
   - **Smoke tests:** check that every hostile rare is bundled, that rares come first on the map, and that a patrolling elite is marked.
+- **Flight paths.**
+  - **Flight graph:** `import-client` now builds `Database/Flights.lua` from the client's `TaxiNodes` and `TaxiPath` tables (two more wago.tools tables, switched on by `clientTables.flights`). It has 64 Alliance, Horde and neutral nodes with 268 direct flights. Each node has its zone, map position and, for 61 of them, its flight master. TBC and Forever ship an empty graph.
+  - **Compiler:** every `fp` step is tied to its node (all 47 resolve), and a `fly` destination must be a flight node of the guide's faction.
+  - **Route audit:** a `fly` step fails when no earlier `fp` step on that route learned the destination, or when no learned flight path in the current zone connects to it.
+  - **Fly steps:** `tools/research/fly_steps.py` added 10, before visits the route can now fly to: Theramore, Gadgetzan, Talonbranch Glade and Chillwind Camp for Alliance; Ratchet, Sun Rock Retreat (twice), Grom'gol, Shadowprey Village and Stonard for Horde. Most visits still go on foot or by boat, because the destination's flight path is not learned yet or the learned paths do not connect.
+  - **Add-on:** flight automation picks the step's node by its full client name first, and landing completes both the `fly` step and the `travel` step after it.
+  - **Found by the check:** the Night Elf route's *fly Auberdine* from Rut'theran comes before any route learns Auberdine. The quest *Flight to Auberdine* says Vesprystus flies you there, so the step stays, marked unverified, with the boat as the fallback (10 audit warnings).
+  - **Tests:** smoke checks for the graph and the route fly steps; engine tests for the exact node choice and for landing.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 63/63); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 22 warnings, quest log peak 15/20; smoke suite 67/67); TBC suite 4,423/4,423; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

@@ -12,6 +12,7 @@
 @desc Felwood, visit 2 of 3 on the Alliance route, levels 54-55.
 @next A_51_BurningSteppes
 
+fly Talonbranch Glade | Take the flight from Everlook.
 travel Felwood
 train
 accept 4101 Cleansing Felwood | Arathandris Silversky.

@@ -12,6 +12,7 @@
 @desc Desolace, visit 2 of 2 on the Horde route, levels 44.
 @next H_37_Tanaris
 
+fly Shadowprey Village | Take the flight from Brackenwall Village.
 travel Desolace
 train
 turnin 5361 Family Tree [optional]

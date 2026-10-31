@@ -12,6 +12,7 @@
 @desc Stonetalon Mountains, visit 4 of 4 on the Horde route, levels 27-28.
 @next H_20_ThousandNeedles
 
+fly Sun Rock Retreat | Take the flight from Splintertree Post.
 travel Stonetalon Mountains
 turnin 1095 Further Instructions
 accept 1096 Gerenzo Wrenchwhistle

@@ -27,7 +27,7 @@ ns.Guides:Register({
     {"accept",q=164,title="Deliveries to Sven",npc="Elaine Carevin",z=10,x=75.3,y=48.8,v=1},
     {"accept",q=165,title="The Hermit",npc="Elaine Carevin",z=10,x=75.3,y=48.8,v=1},
     {"accept",q=337,title="An Old History Book",text="Starts from the item An Old History Book.",optional=true,v=1},
-    {"fp",npc="Felicia Maline",z=10,x=77.5,y=44.3,place="Darkshire",v=1},
+    {"fp",npc="Felicia Maline",z=10,x=77.5,y=44.3,place="Darkshire",node=12,v=1},
     {"accept",q=101,title="The Totem of Infliction",npc="Madame Eva",z=10,x=75.8,y=45.3,text="Madame Eva.",v=1},
     {"accept",q=56,title="The Night Watch",npc="Commander Althea Ebonlocke",z=10,x=73.5,y=46.8,text="Commander Althea Ebonlocke, Darkshire town hall.",v=1},
     {"accept",q=66,title="The Legend of Stalvan",npc="Madame Eva",z=10,x=75.8,y=45.3,text="Madame Eva, in her house in Darkshire.",v=1},

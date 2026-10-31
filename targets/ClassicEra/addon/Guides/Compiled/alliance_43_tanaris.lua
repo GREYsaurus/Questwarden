@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Tanaris, visit 2 of 3 on the Alliance route, levels 49-50.",
   next={{id="A_44_Hinterlands"},},
   steps={
+    {"fly",text="Take the flight from Theramore.",dest="Gadgetzan",node=39,v=1},
     {"travel",text="Travel to Tanaris",dest="Tanaris",v=1},
     {"accept",q=2768,title="Divino-matic Rod",npc="Chief Engineer Bilgewhizzle",z=440,x=52.5,y=28.5,dungeon="Zul'Farrak",v=1},
     {"accept",q=82,title="Noxious Lair Investigation",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},

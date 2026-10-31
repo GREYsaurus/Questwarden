@@ -79,7 +79,7 @@ ns.Guides:Register({
     {"turnin",q=186,title="Tiger Mastery",npc="Ajeck Rouack",z=33,x=35.6,y=10.6,v=1},
     {"turnin",q=191,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
     {"accept",q=187,title="Tiger Mastery",npc="Ajeck Rouack",z=33,x=35.6,y=10.6,v=1},
-    {"fp",npc="Gyll",z=33,x=27.5,y=77.8,place="Booty Bay",v=1},
+    {"fp",npc="Gyll",z=33,x=27.5,y=77.8,place="Booty Bay",node=19,v=1},
     {"turnin",q=203,title="The Second Rebellion",npc="Sergeant Yohwa",z=33,x=38,y=3.3,v=1},
     {"turnin",q=204,title="Bad Medicine",npc="Sergeant Yohwa",z=33,x=38,y=3.3,v=1},
     {"turnin",q=200,title="Bookie Herod",npc="Bookie Herod's Records",z=33,x=43.7,y=9.4,v=1},

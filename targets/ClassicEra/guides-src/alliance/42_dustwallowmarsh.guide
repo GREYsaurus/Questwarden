@@ -12,6 +12,7 @@
 @desc Dustwallow Marsh, visit 2 of 2 on the Alliance route, levels 49.
 @next A_43_Tanaris
 
+fly Theramore | Take the flight from Feathermoon.
 travel Dustwallow Marsh
 accept 2846 Tiara of the Deep [dungeon=Zul'Farrak]
 complete 2846 Tiara of the Deep [dungeon=Zul'Farrak]

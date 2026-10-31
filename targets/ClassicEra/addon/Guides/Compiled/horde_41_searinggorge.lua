@@ -10,7 +10,7 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Searing Gorge",dest="Searing Gorge",v=1},
     {"note",text="Alliance: fly to Thelsamar, ride south into the Badlands and west past Kargath (Horde town) into the Searing Gorge. Horde: fly to Kargath and ride west. Thorium Point is in the north-west of the Gorge. Most quests here need level 45.",v=1},
-    {"fp",npc="Grisha",z=51,x=34.8,y=30.9,place="Thorium Point",v=1},
+    {"fp",npc="Grisha",z=51,x=34.8,y=30.9,place="Thorium Point",node=75,v=1},
     {"accept",q=7728,title="STOLEN: Smithing Tuyere and Lookout's Spyglass",npc="Wanted/Missing/Lost & Found",z=51,x=37.6,y=26.5,text="The Wanted board at Thorium Point.",v=1},
     {"accept",q=7701,title="WANTED: Overseer Maltorius",npc="Wanted/Missing/Lost & Found",z=51,x=37.6,y=26.5,hcSkip=true,elite=true,group=true,v=1},
     {"accept",q=7729,title="JOB OPPORTUNITY: Culling the Competition",npc="Wanted/Missing/Lost & Found",z=51,x=37.6,y=26.5,text="Same board.",v=1},

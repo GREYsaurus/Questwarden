@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
-    {"fp",npc="Thyssiana",z=357,x=89.5,y=45.8,place="Feathermoon Stronghold",v=1},
+    {"fp",npc="Thyssiana",z=357,x=89.5,y=45.8,place="Feathermoon Stronghold",node=41,v=1},
     {"accept",q=2866,title="The Ruins of Solarsal",npc="Shandris Feathermoon",z=357,x=30.3,y=46.2,text="Shandris Feathermoon.",v=1},
     {"turnin",q=2866,title="The Ruins of Solarsal",npc="Solarsal Gazebo",z=357,x=26.3,y=52.3,text="The gazebo on the island south.",v=1},
     {"accept",q=2867,title="Return to Feathermoon Stronghold",npc="Solarsal Gazebo",z=357,x=26.3,y=52.3,v=1},

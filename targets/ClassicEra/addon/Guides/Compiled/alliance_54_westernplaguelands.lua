@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Western Plaguelands, visit 2 of 2 on the Alliance route, levels 57-58.",
   next={{id="A_55_Felwood"},},
   steps={
+    {"fly",text="Take the flight from Light's Hope Chapel.",dest="Chillwind Camp",node=66,v=1},
     {"travel",text="Travel to Western Plaguelands",dest="Western Plaguelands",v=1},
     {"accept",q=5343,title="Barov Family Fortune",npc="Weldon Barov",z=28,x=43.4,y=83.7,dungeon="Scholomance",v=1},
     {"accept",q=5382,title="Doctor Theolen Krastinov, the Butcher",npc="Eva Sarkhoff",z=28,x=70.2,y=73.7,dungeon="Scholomance",v=1},

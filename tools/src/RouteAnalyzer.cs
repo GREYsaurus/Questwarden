@@ -152,6 +152,22 @@ namespace GuideTools
         const double HubRadius = 3.5;
         const double ZoneChangeCost = 25;   // per-route travel: a zone change, as a fixed approximation   // map percent: steps closer than this are "the same place"
 
+        // A flight from a learned node in `zone` (or its parent zone) to `dest`, flying only between learned nodes.
+        static bool FlightReachable(BundledDb db, HashSet<int> learned, int zone, int dest)
+        {
+            var start = learned.Where(n => db.Flights.ContainsKey(n) && (db.Flights[n].Zone == zone || db.Parent(db.Flights[n].Zone) == db.Parent(zone))).ToList();
+            var seen = new HashSet<int>(start);
+            var queue = new Queue<int>(start);
+            while (queue.Count > 0)
+            {
+                int n = queue.Dequeue();
+                if (n == dest) return start.Count > 0 && !(start.Count == 1 && start[0] == dest);
+                foreach (var m in db.Flights[n].Links)
+                    if (learned.Contains(m) && db.Flights.ContainsKey(m) && seen.Add(m)) queue.Enqueue(m);
+            }
+            return false;
+        }
+
         static bool StepApplies(CStep s, string race, string cls, string faction, bool hardcore)
         {
             if (hardcore ? s.HcSkip : s.HcOnly) return false;
@@ -253,6 +269,8 @@ namespace GuideTools
                 var done = new HashSet<int>();
                 var groupQuests = new HashSet<int>(); // accepted at an elite/group/dungeon step: optional content
                 int peak = 0; string peakAt = "";
+                var learned = new HashSet<int>(); // flight nodes discovered at fp steps so far
+                int curZone = 0;
                 for (int k = 0; k < flat.Count; k++)
                 {
                     var g = flat[k].Item1; var s = flat[k].Item3; int q = s.Quest;
@@ -264,6 +282,18 @@ namespace GuideTools
                         if (!a.StepLevel.TryGetValue(sk, out cur) || lv < cur) a.StepLevel[sk] = lv;
                     }
                     if ((s.Kind == "level" || s.Kind == "grind") && s.Level > 0) { xs.Reach(s.Level); continue; }
+                    if (s.Kind == "fp" && s.Node > 0) learned.Add(s.Node);
+                    if (s.Kind == "fly" && s.Node > 0)
+                    {
+                        string fw = g.Id + " (fly " + s.Dest + ") [" + g.Source + ":" + s.Line + "]";
+                        // [unverified] fly steps (a flight a quest says is offered, say) only warn.
+                        if (!learned.Contains(s.Node))
+                            (s.Verified ? a.Errors : a.Warnings).Add(key + ": " + fw + ": the flight path is not learned on this route yet (no fp step before it)");
+                        else if (!FlightReachable(db, learned, curZone, s.Node))
+                            a.Errors.Add(key + ": " + fw + ": no learned flight path in this zone connects to it");
+                    }
+                    if (s.Zone > 0 && s.X >= 0) curZone = s.Zone;
+                    if (s.Kind == "fp" && s.Zone > 0) curZone = s.Zone;
                     if (q <= 0) continue;
                     string where = g.Id + " (" + (s.Title ?? q.ToString()) + ") [" + g.Source + ":" + s.Line + "]";
                     LTable rec; db.Quests.TryGetValue(q, out rec);

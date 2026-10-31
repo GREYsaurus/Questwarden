@@ -12,6 +12,7 @@
 @desc Tanaris, visit 2 of 3 on the Alliance route, levels 49-50.
 @next A_44_Hinterlands
 
+fly Gadgetzan | Take the flight from Theramore.
 travel Tanaris
 accept 2768 Divino-matic Rod [dungeon=Zul'Farrak]
 accept 82 Noxious Lair Investigation

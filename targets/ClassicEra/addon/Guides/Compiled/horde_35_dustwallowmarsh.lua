@@ -9,7 +9,7 @@ ns.Guides:Register({
   next={{id="H_36_Desolace"},},
   steps={
     {"travel",text="Travel to Dustwallow Marsh",dest="Dustwallow Marsh",v=1},
-    {"fp",npc="Shardi",z=15,x=35.6,y=31.9,place="Brackenwall Village",v=1},
+    {"fp",npc="Shardi",z=15,x=35.6,y=31.9,place="Brackenwall Village",node=55,v=1},
     {"accept",q=1169,title="Identifying the Brood",npc="Draz'Zilb",z=15,x=37.2,y=33.1,text="Draz'Zilb.",v=1},
     {"accept",q=1166,title="Overlord Mok'Morokk's Concern",npc="Overlord Mok'Morokk",z=15,x=36.3,y=31.4,v=1},
     {"accept",q=1168,title="Army of the Black Dragon",npc="Tharg",z=15,x=37.4,y=31.4,text="Tharg.",v=1},

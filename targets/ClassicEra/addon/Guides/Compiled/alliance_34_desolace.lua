@@ -11,7 +11,7 @@ ns.Guides:Register({
     {"travel",text="Travel to Desolace",dest="Desolace",v=1},
     {"accept",q=1453,title="Reclaimers' Business in Desolace",npc="Roetten Stonehammer",z=1537,x=70,y=21.3,text="Roetten Stonehammer in Ironforge's Hall of Explorers. Needed for the Reclaimers quests in Desolace.",v=1},
     {"note",text="From Ironforge fly to Menethil Harbor and take the boat to Auberdine. Fly to Stonetalon Peak if you have it (otherwise Astranaar, then ride west through Stonetalon) and follow the road south into Desolace. Nijel's Point is in the north-east.",v=1},
-    {"fp",npc="Baritanas Skyriver",z=405,x=64.7,y=10.5,place="Nijel's Point",v=1},
+    {"fp",npc="Baritanas Skyriver",z=405,x=64.7,y=10.5,place="Nijel's Point",node=37,v=1},
     {"accept",q=1387,title="Centaur Bounty",npc="Corporal Melkins",z=405,x=66.7,y=10.9,text="Corporal Melkins.",v=1},
     {"accept",q=1382,title="Strange Alliance",npc="Captain Pentigast",z=405,x=66.7,y=10.9,v=1},
     {"complete",q=1382,title="Strange Alliance",v=1},

@@ -34,6 +34,27 @@ namespace GuideTools
         public Dictionary<int, int> UiMap = new Dictionary<int, int>();
         public Dictionary<string, List<int>> QuestsByName = new Dictionary<string, List<int>>();
         public Dictionary<string, int> ZoneByName = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        // Flight graph (Database/Flights.lua, import-client; empty on targets without it).
+        public Dictionary<int, FlightNode> Flights = new Dictionary<int, FlightNode>();
+        static readonly Regex FlightNodeLine = new Regex(@"^N\[(\d+)\]=\{name=""([^""]*)"",full=""([^""]*)"",zone=(\d+),x=([\d.]+),y=([\d.]+),faction=""(\w+)""");
+        static readonly Regex FlightLinkLine = new Regex(@"^L\[(\d+)\]=\{([\d,]*)\}");
+
+        // The flight node a step names: same faction (or both), name equal to the place or a prefix of it
+        // ("Feathermoon" for "Feathermoon Stronghold"); in the given zone when zone > 0. 0 = none.
+        public int FlightNodeFor(string place, string faction, int zone)
+        {
+            if (string.IsNullOrEmpty(place)) return 0;
+            string p = place.Trim();
+            string fc = faction == "Alliance" ? "A" : (faction == "Horde" ? "H" : null);
+            foreach (var n in Flights.Values.OrderByDescending(n => n.Name.Length))
+            {
+                if (fc != null && n.Faction.IndexOf(fc, StringComparison.Ordinal) < 0) continue;
+                if (zone > 0 && n.Zone != zone && Parent(n.Zone) != Parent(zone)) continue;
+                if (p.Equals(n.Name, StringComparison.OrdinalIgnoreCase) || p.Equals(n.Full, StringComparison.OrdinalIgnoreCase) ||
+                    p.StartsWith(n.Name + " ", StringComparison.OrdinalIgnoreCase)) return n.Id;
+            }
+            return 0;
+        }
 
         // Positions in our generated records (Database/Schema.lua)
         public const int Q_NAME = 1, Q_REQ = 2, Q_LEVEL = 3, Q_RACES = 4, Q_CLASSES = 5, Q_SNPC = 6, Q_SOBJ = 7, Q_SITEM = 8,
@@ -83,6 +104,26 @@ namespace GuideTools
             }
             foreach (var kv in db.ZoneNames)
                 if (!db.ZoneByName.ContainsKey(kv.Value) && db.UiMap.ContainsKey(kv.Key)) db.ZoneByName[kv.Value] = kv.Key;
+            string fl = Path.Combine(addOnDir, "Database", "Flights.lua");
+            if (File.Exists(fl))
+            {
+                foreach (var line in File.ReadLines(fl))
+                {
+                    var m = FlightNodeLine.Match(line);
+                    if (m.Success)
+                    {
+                        int id = int.Parse(m.Groups[1].Value);
+                        db.Flights[id] = new FlightNode { Id = id, Name = m.Groups[2].Value, Full = m.Groups[3].Value, Zone = int.Parse(m.Groups[4].Value),
+                            X = double.Parse(m.Groups[5].Value, System.Globalization.CultureInfo.InvariantCulture),
+                            Y = double.Parse(m.Groups[6].Value, System.Globalization.CultureInfo.InvariantCulture), Faction = m.Groups[7].Value };
+                        continue;
+                    }
+                    m = FlightLinkLine.Match(line);
+                    FlightNode fn;
+                    if (m.Success && db.Flights.TryGetValue(int.Parse(m.Groups[1].Value), out fn))
+                        foreach (var x in m.Groups[2].Value.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)) fn.Links.Add(int.Parse(x));
+                }
+            }
             foreach (var kv in db.Quests)
             {
                 string n = Str(kv.Value, Q_NAME);
@@ -152,6 +193,7 @@ namespace GuideTools
         public List<string> Classes, Races;
         public int Line;
         public int NpcId;                        // giver/finisher/talk NPC chosen for the step (0 = none)
+        public int Node;                         // fp/fly: flight node (Database/Flights.lua; 0 = none or no graph)
         public int MarkIcon;                     // raid target icon 1-8 from [mark=...] (0 = none)
         public string MarkTarget;                // optional explicit target: NPC id or exact NPC name
         public List<int> MarkNpcs;               // resolved NPC ids the add-on may mark for this step
@@ -569,6 +611,7 @@ namespace GuideTools
                                 PlaceAt(res.Db.NpcSpawns(fnpc), fs, stepZone, ref tz, ref tx, ref ty);
                             }
                             else res.Warnings.Add(where + ": no " + fac + " " + (verb == "fp" ? "flight master" : "innkeeper") + " found in zone for " + arg);
+                            if (verb == "fp") FlightNodeCheck(res, fs, arg, fac, stepZone, where);
                             g.Steps.Add(fs);
                         }
                         return;
@@ -583,6 +626,7 @@ namespace GuideTools
                         PlaceAt(res.Db.NpcSpawns(npc), s, stepZone, ref lz, ref lx, ref ly);
                     }
                     else res.Warnings.Add(where + ": no " + (verb == "fp" ? "flight master" : "innkeeper") + " found in zone for " + arg);
+                    if (verb == "fp") FlightNodeCheck(res, s, arg, g.Faction, stepZone, where);
                     break;
                 }
                 case "fly":
@@ -590,6 +634,12 @@ namespace GuideTools
                 case "travel":
                     s.Dest = arg.Length > 0 ? arg : null;
                     if (verb == "travel" && s.Text == null) s.Text = "Travel to " + arg;
+                    if (verb == "fly" && res.Db.Flights.Count > 0)
+                    {
+                        // A fly destination must be a flight node of the guide's faction (any zone).
+                        s.Node = res.Db.FlightNodeFor(s.Dest, g.Faction, 0);
+                        if (s.Node == 0) res.Errors.Add(where + ": no " + g.Faction + " flight path named '" + s.Dest + "' in the flight graph");
+                    }
                     break;
                 case "level":
                     int lvl;
@@ -1077,6 +1127,14 @@ namespace GuideTools
             return best;
         }
 
+        // fp steps: the flight node the place names, in the step's zone. Only on targets with a flight graph.
+        static void FlightNodeCheck(CompileResult res, CStep s, string place, string faction, int zone, string where)
+        {
+            if (res.Db.Flights.Count == 0) return;
+            s.Node = res.Db.FlightNodeFor(place, faction, zone);
+            if (s.Node == 0) res.Warnings.Add(where + ": no " + faction + " flight path named '" + place + "' in this zone in the flight graph");
+        }
+
         static int FindService(BundledDb db, int flag, string faction, int zone, double lx, double ly, string subName)
         {
             string f = faction == "Alliance" ? "A" : faction == "Horde" ? "H" : "AH";
@@ -1166,6 +1224,7 @@ namespace GuideTools
             if (s.Text != null) sb.Append(",text=").Append(L(s.Text));
             if (s.Place != null) sb.Append(",place=").Append(L(s.Place));
             if (s.Dest != null) sb.Append(",dest=").Append(L(s.Dest));
+            if (s.Node > 0) sb.Append(",node=").Append(s.Node);
             if (s.Level > 0) sb.Append(",level=").Append(s.Level);
             if (s.GuideRef != null) sb.Append(",guide=").Append(L(s.GuideRef));
             if (s.Mobs != null) sb.Append(",mobs=").Append(LList(s.Mobs));

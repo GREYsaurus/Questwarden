@@ -9,7 +9,7 @@ ns.Guides:Register({
   next={{id="H_39_Hinterlands"},},
   steps={
     {"travel",text="Travel to Feralas",dest="Feralas",v=1},
-    {"fp",npc="Shyn",z=357,x=75.4,y=44.4,place="Camp Mojache",v=1},
+    {"fp",npc="Shyn",z=357,x=75.4,y=44.4,place="Camp Mojache",node=42,v=1},
     {"accept",q=2862,title="War on the Woodpaw",npc="Hadoken Swiftstrider",z=357,x=74.9,y=42.5,text="Hadoken Swiftstrider, Camp Mojache.",v=1},
     {"accept",q=2973,title="A New Cloak's Sheen",npc="Krueg Skullsplitter",z=357,x=75.9,y=42.7,text="Krueg Skullsplitter.",v=1},
     {"accept",q=2975,title="The Ogres of Feralas",npc="Rok Orhan",z=357,x=75.8,y=43.6,text="Rok Orhan.",v=1},

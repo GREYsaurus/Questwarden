@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
-    {"fp",npc="Guthrum Thunderfist",z=47,x=11.1,y=46.2,place="Aerie Peak",v=1},
+    {"fp",npc="Guthrum Thunderfist",z=47,x=11.1,y=46.2,place="Aerie Peak",node=43,v=1},
     {"accept",q=2880,title="Troll Necklace Bounty",npc="Fraggar Thundermantle",z=47,x=14.8,y=44.6,text="Fraggar Thundermantle.",v=1},
     {"accept",q=2877,title="Skulk Rock Clean-up",npc="Fraggar Thundermantle",z=47,x=14.8,y=44.6,v=1},
     {"accept",q=2988,title="Witherbark Cages",npc="Gryphon Master Talonaxe",z=47,x=9.8,y=44.5,text="Gryphon Master Talonaxe.",v=1},

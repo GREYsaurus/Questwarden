@@ -33,6 +33,7 @@ Database\Questie\Npcs.lua
 Database\Questie\Objects.lua
 Database\Questie\Items.lua
 Database\RaceClass.lua
+Database\Flights.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
 Database\Dungeons.lua

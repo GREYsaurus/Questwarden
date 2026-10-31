@@ -32,6 +32,8 @@
     "source": "https://wago.tools",
     "product": "wow_classic_era",
     "build": "1.15.9.70576",
+    "_flights": "true: import-client writes Database/Flights.lua (flight graph) from TaxiNodes and TaxiPath.",
+    "flights": true,
     "excludeSpellIdsFrom": 400000,
     "excludeSpellIds": [
       22570

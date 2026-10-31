@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"accept",q=4141,title="Muigin and Larion",npc="Muigin",z=490,x=42.9,y=9.6,text="Muigin, Marshal's Refuge.",v=1},
     {"turnin",q=4243,title="Chasing A-Me 01",npc="A-Me 01",z=490,x=67.7,y=16.8,v=1},
     {"accept",q=4290,title="The Fare of Lar'korwi",npc="Torwa Pathfinder",z=490,x=71.6,y=76,v=1},
-    {"fp",npc="Gryfe",z=490,x=45.2,y=5.8,place="Marshal's Refuge",v=1},
+    {"fp",npc="Gryfe",z=490,x=45.2,y=5.8,place="Marshal's Refuge",node=79,v=1},
     {"complete",q=4290,title="The Fare of Lar'korwi",text="The threshadon carcass is near Torwa.",v=1},
     {"turnin",q=4290,title="The Fare of Lar'korwi",npc="Torwa Pathfinder",z=490,x=71.6,y=76,v=1},
     {"accept",q=4291,title="The Scent of Lar'korwi",npc="Torwa Pathfinder",z=490,x=71.6,y=76,v=1},

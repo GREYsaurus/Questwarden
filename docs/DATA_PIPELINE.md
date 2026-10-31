@@ -13,6 +13,7 @@ tools/upstream.json  --fetch-->  .cache/  --import-questie-->  targets/<Target>/
                                           --import-client--->  targets/<Target>/addon/Talents/Data/TalentTrees.lua
                                                                targets/<Target>/addon/Classes/TrainingData.lua
                                                                targets/<Target>/addon/Database/RaceClass.lua
+                                                               targets/<Target>/addon/Database/Flights.lua (clientTables.flights)
 targets/<Target>/guides-src/*.guide  --guides (uses the generated DB)-->  targets/<Target>/addon/Guides/Compiled/*.lua
 ```
 
@@ -45,7 +46,7 @@ powershell -ExecutionPolicy Bypass -File tools/build.ps1 import-client
 - applies `tbcQuestFixes.lua` with a restricted static evaluator. It accepts literals, enum constants, `l10n("...")` and `+`/`-`; anything runtime-dependent is skipped and logged.
 - writes the trimmed data and `docs/generated/<Target>/questie-import.log`, which has record counts, applied and skipped corrections, and dangling references.
 
-`import-client` writes the talent trees (positions, ranks, prerequisites and spell ids per rank) and the race/class table.
+`import-client` writes the talent trees (positions, ranks, prerequisites and spell ids per rank) and the race/class table. On targets with `clientTables.flights` it also writes the flight graph: every faction flight node with at least one flight, its zone and map position (from `UiMapAssignment`), its flight master (the nearest flight-master NPC of that faction in the bundled data, within 3% of the map) and its direct flights. Transports, quest-only paths and battleground nodes are left out. Flight times are not in the client tables.
 
 ## 4. Re-validate everything
 
@@ -71,6 +72,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 | `Talents/Data/TalentTrees.lua` | client DB2 `Talent`, `TalentTab`, `SpellName` | `ClientTables.cs` |
 | `Classes/TrainingData.lua` | client DB2 `SkillLine`, `SkillRaceClassInfo`, `SkillLineAbility`, `SpellLevels`, `Spell`, `SpellName`, `Talent` | `TrainingTables.cs` (rules: docs/TRAINER.md) |
 | `Database/RaceClass.lua` | client DB2 `CharBaseInfo`, `ChrRaces` | `ClientTables.cs` |
+| `Database/Flights.lua` | client DB2 `TaxiNodes`, `TaxiPath`, `UiMapAssignment` + bundled `Npcs.lua`, `Zones.lua` | `FlightTables.cs` |
 | `Guides/Compiled/*.lua` | `guides-src/*.guide` + the files above | `GuideCompiler.cs` |
 
 ## Quest flags (0.2.0)

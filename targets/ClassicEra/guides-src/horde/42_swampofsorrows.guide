@@ -12,6 +12,7 @@
 @desc Swamp of Sorrows, visit 2 of 2 on the Horde route, levels 48-49.
 @next H_43_DustwallowMarsh
 
+fly Stonard | Take the flight from Thorium Point.
 travel Swamp of Sorrows
 train
 accept 1422 Threat From the Sea

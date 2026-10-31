@@ -42,7 +42,7 @@ ns.Guides:Register({
     {"turnin",q=7850,title="Dark Vessels",npc="Primal Torntusk",z=47,x=78.2,y=81.2,v=1},
     {"turnin",q=7861,title="Wanted: Vile Priestess Hexx and Her Minions",npc="Primal Torntusk",z=47,x=78.2,y=81.2,optional=true,v=1},
     {"turnin",q=7849,title="Separation Anxiety",npc="Huntsman Markhor",z=47,x=79.2,y=79.5,text="Huntsman Markhor.",v=1},
-    {"fp",npc="Gorkas",z=47,x=81.7,y=81.8,place="Revantusk Village",v=1},
+    {"fp",npc="Gorkas",z=47,x=81.7,y=81.8,place="Revantusk Village",node=76,v=1},
     {"accept",q=7840,title="Lard Lost His Lunch",npc="Lard",z=47,x=78.1,y=81.4,text="Lard.",v=1},
     {"complete",q=7840,title="Lard Lost His Lunch",text="The Wildhammer camp by the coast.",v=1},
     {"turnin",q=7840,title="Lard Lost His Lunch",npc="Lard",z=47,x=78.1,y=81.4,v=1},

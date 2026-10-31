@@ -18,7 +18,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
-    {"fp",npc="Bulkrek Ragefist",z=440,x=51.6,y=25.4,place="Gadgetzan",v=1},
+    {"fp",npc="Bulkrek Ragefist",z=440,x=51.6,y=25.4,place="Gadgetzan",node=40,v=1},
     {"accept",q=992,title="Gadgetzan Water Survey",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,text="Senior Surveyor Fizzledowser.",v=1},
     {"accept",q=2781,title="WANTED: Caliph Scorpidsting",npc="Wanted Poster",z=440,x=51.8,y=27,optional=true,elite=true,group=3,v=1},
     {"accept",q=2865,title="Scarab Shells",npc="Tran'rek",z=440,x=51.6,y=26.8,dungeon="Zul'Farrak",v=1},

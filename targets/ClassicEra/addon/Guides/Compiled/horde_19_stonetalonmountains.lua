@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Stonetalon Mountains, visit 4 of 4 on the Horde route, levels 27-28.",
   next={{id="H_20_ThousandNeedles"},},
   steps={
+    {"fly",text="Take the flight from Splintertree Post.",dest="Sun Rock Retreat",node=29,v=1},
     {"travel",text="Travel to Stonetalon Mountains",dest="Stonetalon Mountains",v=1},
     {"turnin",q=1095,title="Further Instructions",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
     {"accept",q=1096,title="Gerenzo Wrenchwhistle",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},

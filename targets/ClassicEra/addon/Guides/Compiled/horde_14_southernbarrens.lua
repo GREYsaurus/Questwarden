@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Southern Barrens, visit 3 of 4 on the Horde route, levels 22-23.",
   next={{id="H_15_StonetalonMountains"},},
   steps={
+    {"fly",text="Take the flight from Sun Rock Retreat.",dest="Ratchet",node=80,v=1},
     {"travel",text="Travel to The Barrens",dest="The Barrens",v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},
@@ -29,7 +30,7 @@ ns.Guides:Register({
     {"complete",q=878,title="Tribes at War",classes={"WARRIOR","HUNTER","DRUID"},races={"Tauren"},v=1},
     {"complete",q=878,title="Tribes at War",races={"Scourge"},v=1},
     {"complete",q=878,title="Tribes at War",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
-    {"fp",npc="Omusa Thunderhorn",z=17,x=44.4,y=59.2,place="Camp Taurajo",v=1},
+    {"fp",npc="Omusa Thunderhorn",z=17,x=44.4,y=59.2,place="Camp Taurajo",node=77,v=1},
     {"turnin",q=878,title="Tribes at War",npc="Mangletooth",z=17,x=44.6,y=59.3,classes={"WARRIOR","HUNTER","ROGUE","WARLOCK"},races={"Orc"},v=1},
     {"turnin",q=878,title="Tribes at War",npc="Mangletooth",z=17,x=44.6,y=59.3,classes={"WARRIOR","HUNTER","ROGUE","PRIEST","MAGE"},races={"Troll"},v=1},
     {"turnin",q=878,title="Tribes at War",npc="Mangletooth",z=17,x=44.6,y=59.3,classes={"WARRIOR","HUNTER","DRUID"},races={"Tauren"},v=1},

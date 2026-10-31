@@ -25,7 +25,7 @@ ns.Guides:Register({
     {"accept",q=147,title="Manhunt",npc="Marshal Dughan",z=12,x=42.1,y=65.9,classes={"WARLOCK"},races={"Gnome"},optional=true,v=1},
     {"complete",q=147,title="Manhunt",text="The Collector's Ring drops from Morgan the Collector.",classes={"WARLOCK"},races={"Gnome"},optional=true,v=1},
     {"turnin",q=147,title="Manhunt",npc="Marshal Dughan",z=12,x=42.1,y=65.9,text="Turned in at Elwynn Forest.",classes={"WARLOCK"},races={"Gnome"},optional=true,v=1},
-    {"fp",npc="Thorgrum Borrelson",z=38,x=33.9,y=51,place="Thelsamar",v=1},
+    {"fp",npc="Thorgrum Borrelson",z=38,x=33.9,y=51,place="Thelsamar",node=8,v=1},
     {"accept",q=418,title="Thelsamar Blood Sausages",npc="Vidra Hearthstove",z=38,x=34.8,y=49.3,v=1},
     {"turnin",q=414,title="Stout to Kadrell",npc="Mountaineer Kadrell",z=38,x=34.2,y=47.8,text="Mountaineer Kadrell, Thelsamar.",races={"Dwarf","Gnome"},v=1},
     {"accept",q=416,title="Rat Catching",npc="Mountaineer Kadrell",z=38,x=34.2,y=47.8,v=1},

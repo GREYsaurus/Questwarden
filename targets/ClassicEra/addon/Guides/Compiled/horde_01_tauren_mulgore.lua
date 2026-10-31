@@ -119,7 +119,7 @@ ns.Guides:Register({
     {"turnin",q=833,title="A Sacred Burial",npc="Lorekeeper Raintotem",z=215,x=59.9,y=25.6,v=1},
     {"turnin",q=775,title="Journey into Thunder Bluff",npc="Cairne Bloodhoof",z=1638,x=60.3,y=51.7,text="Cairne Bloodhoof, Thunder Bluff.",v=1},
     {"accept",q=776,title="Rites of the Earthmother",npc="Cairne Bloodhoof",z=1638,x=60.3,y=51.7,classes={"SHAMAN"},optional=true,v=1},
-    {"fp",npc="Tal",z=1638,x=47,y=49.8,place="Thunder Bluff",v=1},
+    {"fp",npc="Tal",z=1638,x=47,y=49.8,place="Thunder Bluff",node=22,v=1},
     {"accept",q=744,title="Preparation for Ceremony",npc="Eyahn Eagletalon",z=1638,x=37.8,y=59.6,classes={"WARRIOR","HUNTER","DRUID"},v=1},
     {"complete",q=744,title="Preparation for Ceremony",text="Azure Feather drops from Windfury Sorceress. Bronze Feather drops from Windfury Matriarch.",classes={"WARRIOR","HUNTER","DRUID"},v=1},
     {"complete",q=760,title="Wildmane Cleansing",text="The Wildmane Water Well, north.",v=1},

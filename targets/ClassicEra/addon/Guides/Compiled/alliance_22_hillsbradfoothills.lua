@@ -9,7 +9,7 @@ ns.Guides:Register({
   next={{id="A_23_ArathiHighlands"},},
   steps={
     {"travel",text="Travel to Hillsbrad Foothills",dest="Hillsbrad Foothills",v=1},
-    {"fp",npc="Darla Harris",z=267,x=49.3,y=52.3,place="Southshore",v=1},
+    {"fp",npc="Darla Harris",z=267,x=49.3,y=52.3,place="Southshore",node=14,v=1},
     {"accept",q=536,title="Down the Coast",npc="Lieutenant Farren Orinelle",z=267,x=51.5,y=58.4,text="Lieutenant Farren Orinelle, Southshore.",v=1},
     {"complete",q=536,title="Down the Coast",text="Murlocs on the coast south of Southshore.",v=1},
     {"turnin",q=536,title="Down the Coast",npc="Lieutenant Farren Orinelle",z=267,x=51.5,y=58.4,v=1},

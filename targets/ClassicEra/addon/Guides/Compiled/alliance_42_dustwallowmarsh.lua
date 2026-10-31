@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Dustwallow Marsh, visit 2 of 2 on the Alliance route, levels 49.",
   next={{id="A_43_Tanaris"},},
   steps={
+    {"fly",text="Take the flight from Feathermoon.",dest="Theramore",node=32,v=1},
     {"travel",text="Travel to Dustwallow Marsh",dest="Dustwallow Marsh",v=1},
     {"accept",q=2846,title="Tiara of the Deep",npc="Tabetha",z=15,x=46.1,y=57.1,dungeon="Zul'Farrak",v=1},
     {"complete",q=2846,title="Tiara of the Deep",dungeon="Zul'Farrak",v=1},

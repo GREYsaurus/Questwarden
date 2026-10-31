@@ -13,7 +13,7 @@ ns.Guides:Register({
     {"complete",q=642,title="The Princess Trapped",text="Kill Kobolds at Drywhisker Gorge for Iridescent Shards.",v=1},
     {"turnin",q=642,title="The Princess Trapped",npc="Iridescent Shards",z=45,x=84.3,y=31,v=1},
     {"accept",q=651,title="Stones of Binding",npc="Iridescent Shards",z=45,x=84.3,y=31,v=1},
-    {"fp",npc="Cedrik Prose",z=45,x=45.7,y=46.1,place="Refuge Pointe",v=1},
+    {"fp",npc="Cedrik Prose",z=45,x=45.7,y=46.1,place="Refuge Pointe",node=16,v=1},
     {"accept",q=684,title="Wanted!  Marez Cowl",npc="Wanted Board",z=45,x=46,y=47.8,optional=true,elite=true,group=3,v=1},
     {"accept",q=691,title="Worth Its Weight in Gold",npc="Apprentice Kryten",z=45,x=46.2,y=47.8,v=1},
     {"accept",q=658,title="Hints of a New Plague?",npc="Quae",z=45,x=60.2,y=53.8,v=1},

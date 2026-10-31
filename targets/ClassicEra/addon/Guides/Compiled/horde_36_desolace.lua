@@ -8,6 +8,7 @@ ns.Guides:Register({
   desc="Desolace, visit 2 of 2 on the Horde route, levels 44.",
   next={{id="H_37_Tanaris"},},
   steps={
+    {"fly",text="Take the flight from Brackenwall Village.",dest="Shadowprey Village",node=38,v=1},
     {"travel",text="Travel to Desolace",dest="Desolace",v=1},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},

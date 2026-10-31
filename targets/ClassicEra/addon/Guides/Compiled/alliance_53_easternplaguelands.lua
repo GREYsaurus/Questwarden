@@ -27,7 +27,7 @@ ns.Guides:Register({
     {"complete",q=6164,title="Augustus' Receipt Book",text="The book is upstairs in the inn across the road.",v=1},
     {"turnin",q=6164,title="Augustus' Receipt Book",npc="Augustus the Touched",z=139,x=14.4,y=33.5,v=1},
     {"note",text="Ride the road east across the zone to Light's Hope Chapel.",v=1},
-    {"fp",npc="Khaelyn Steelwing",z=139,x=81.6,y=59.3,place="Light's Hope Chapel",v=1},
+    {"fp",npc="Khaelyn Steelwing",z=139,x=81.6,y=59.3,place="Light's Hope Chapel",node=67,v=1},
     {"turnin",q=6030,title="Duke Nicholas Zverenhoff",npc="Duke Nicholas Zverenhoff",z=139,x=81.4,y=59.8,text="Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).",optional=true,v=1},
     {"accept",q=6021,title="Zaeldarr the Outcast",npc="Caretaker Alen",z=139,x=79.6,y=63.9,text="Caretaker Alen, Light's Hope Chapel.",v=1},
     {"complete",q=5542,title="Demon Dogs",text="Plaguehounds and Frenzied Plaguehounds around Light's Hope and the north; Plaguehound Runts in the south.",v=1},
