@@ -118,8 +118,13 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Classic content only:** totem quests and no Dual Wield for shamans; pet quests and the dead zone for hunters; Felsteed trained and Dreadsteed from a quest for warlocks; no Mangle; no Felguard.
   - **Levels checked:** every trainer level quoted was checked against the Classic trainer data, quest levels match the trainer notes, and talents are named as talents without a level. The tips are still unverified in game.
   - **Trainer levels:** generated from the data: every even level from 4 to 60 for all classes.
+- **Rares and dangerous mobs.**
+  - **All of them bundled:** `Npcs.lua` used to keep only the mobs quests involve (103 of the 270 rares in the Classic data). A new `questie.allDangerousMobs` switch in `target.json` (on for Classic Era) also keeps every hostile elite, rare elite and rare with spawns: 543 more NPCs, from the same QuestieDB data. *Track Rare Mobs* and the map pins now cover every rare.
+  - **Map pins:** rares come first, then elites, then chests, so the per-map pin cap never hides a rare. A patrolling mob's tooltip says it may not be where the pin is.
+  - **Danger report:** `tools/research/danger_report.py` lists route steps with a hostile elite, a higher-level rare, or a mob 5+ levels above the step's model level within 40 yards (`docs/generated/ClassicEra/danger-near-steps.csv`). It found 13 steps in 5 places; each now has a Hardcore note: the Twilight elites around Zamael in Searing Gorge, Jintha'alor and Vile Priestess Hexx in the Hinterlands (Horde), Clack the Reaver near Kum'isha in the Blasted Lands (both factions), and the Twilight Thugs at the Master's Glaive in Darkshore.
+  - **Smoke tests:** check that every hostile rare is bundled, that rares come first on the map, and that a patrolling elite is marked.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 60/60); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 63/63); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

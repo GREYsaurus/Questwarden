@@ -57,7 +57,7 @@ note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists arou
 accept Wanted: "Hogger" [elite; group=3; hc=skip] | ...
 ```
 
-Mark every step of a quest you leave out (accept, complete and turn-in). Base each warning on the bundled data (NPC level, rank, nearby mobs) and write it in your own words. The flags are only allowed on targets with a Hardcore ruleset (`hardcore = true` in `Target.<Target>.lua`). The route audit walks every race/class route twice, as Speed and as Hardcore, and both must pass.
+Mark every step of a quest you leave out (accept, complete and turn-in). Base each warning on the bundled data (NPC level, rank, nearby mobs) and write it in your own words. `python tools/research/danger_report.py ClassicEra` (after `routes`) lists steps with a hostile elite, a higher-level rare or a much higher mob within 40 yards, and whether a Hardcore note already stands before them (`docs/generated/<Target>/danger-near-steps.csv`). The flags are only allowed on targets with a Hardcore ruleset (`hardcore = true` in `Target.<Target>.lua`). The route audit walks every race/class route twice, as Speed and as Hardcore, and both must pass.
 
 ## Steps
 

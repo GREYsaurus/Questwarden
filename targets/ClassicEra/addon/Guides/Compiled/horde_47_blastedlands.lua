@@ -14,6 +14,7 @@ ns.Guides:Register({
     {"accept",q=2581,title="Snickerfang Jowls",npc="Bloodmage Drazial",z=4,x=50.6,y=14.2,v=1},
     {"accept",q=2583,title="A Boar's Vitality",npc="Bloodmage Drazial",z=4,x=50.6,y=14.2,v=1},
     {"accept",q=2585,title="The Decisive Striker",npc="Bloodmage Drazial",z=4,x=50.6,y=14.2,v=1},
+    {"note",text=" - Hardcore: Clack the Reaver, a level 53 rare, roams the ground around Kum'isha. Look for it before you go in and out.",hcOnly=true,v=1},
     {"accept",q=2521,title="To Serve Kum'isha",npc="Kum'isha the Collector",z=4,x=52,y=35.6,v=1},
     {"accept",q=3501,title="Everything Counts In Large Amounts",npc="Kum'isha the Collector",z=4,x=52,y=35.6,v=1},
     {"complete",q=2603,title="Vulture's Vigor",v=1},

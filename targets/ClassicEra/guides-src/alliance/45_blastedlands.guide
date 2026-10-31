@@ -19,6 +19,7 @@ accept 2601 The Basilisk's Bite
 accept 2581 Snickerfang Jowls
 accept 2583 A Boar's Vitality
 accept 2585 The Decisive Striker
+note [hc=only] | Hardcore: Clack the Reaver, a level 53 rare, roams the ground around Kum'isha. Look for it before you go in and out.
 accept 2521 To Serve Kum'isha
 accept 3501 Everything Counts In Large Amounts
 complete 2603 Vulture's Vigor
@@ -33,6 +34,7 @@ turnin 2601 The Basilisk's Bite
 turnin 2581 Snickerfang Jowls
 turnin 2583 A Boar's Vitality
 turnin 2585 The Decisive Striker
+note [hc=only] | Hardcore: on the way back to Kum'isha, look for Clack the Reaver (rare, level 53) again.
 turnin 2521 To Serve Kum'isha
 turnin 3501 Everything Counts In Large Amounts
 level 51 | Un'Goro Crater starts at 51. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

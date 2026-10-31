@@ -8,7 +8,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5056 |
+| Guide steps | 5062 |
 | Quest steps (accept/complete/turn-in) | 4110 |
 | Distinct quests referenced | 1271 |
 | Steps with database-derived coordinates | 3229 |
@@ -75,7 +75,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 224 | 71 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
 | Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 132 | 44 | 3 |
-| Darkshore (12-17) | Alliance | 12-17 | Darkshore | 137 | 40 | 48 |
+| Darkshore (12-17) | Alliance | 12-17 | Darkshore | 138 | 40 | 48 |
 | The Barrens (12-15) | Horde | 12-15 | The Barrens | 176 | 58 | 47 |
 | Stonetalon Mountains (15-16) | Horde | 15-16 | Stonetalon Mountains | 5 | 1 | 0 |
 | The Barrens (16-20) | Horde | 16-20 | The Barrens | 120 | 38 | 25 |
@@ -134,7 +134,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Azshara (46) | Alliance | 46-46 | Azshara | 17 | 2 | 0 |
 | The Hinterlands (46) | Alliance | 46-46 | The Hinterlands | 24 | 4 | 0 |
 | Stranglethorn Vale (46-47) | Alliance | 46-47 | Stranglethorn Vale | 17 | 2 | 3 |
-| Searing Gorge (47-48) | Alliance | 47-48 | Searing Gorge | 54 | 18 | 3 |
+| Searing Gorge (47-48) | Alliance | 47-48 | Searing Gorge | 55 | 18 | 3 |
 | The Hinterlands (47) | Horde | 47-47 | The Hinterlands | 30 | 9 | 0 |
 | Stranglethorn Vale (47) | Horde | 47-47 | Stranglethorn Vale | 13 | 4 | 0 |
 | Searing Gorge (47-48) | Horde | 47-48 | Searing Gorge | 51 | 17 | 3 |
@@ -145,11 +145,11 @@ Each race/class combination is followed from its racial start guide through the 
 | Dustwallow Marsh (49) | Horde | 49-49 | Dustwallow Marsh | 3 | 0 | 0 |
 | Tanaris (49-50) | Horde | 49-50 | Tanaris | 27 | 9 | 6 |
 | The Hinterlands (50) | Alliance | 50-50 | The Hinterlands | 14 | 1 | 0 |
-| Blasted Lands (50-51) | Alliance | 50-51 | Blasted Lands | 32 | 7 | 0 |
+| Blasted Lands (50-51) | Alliance | 50-51 | Blasted Lands | 34 | 7 | 0 |
 | Azshara (50) | Horde | 50-50 | Azshara | 20 | 3 | 0 |
-| The Hinterlands (50-51) | Horde | 50-51 | The Hinterlands | 38 | 9 | 3 |
+| The Hinterlands (50-51) | Horde | 50-51 | The Hinterlands | 39 | 9 | 3 |
 | Un'Goro Crater (51-52) | Alliance | 51-52 | Un'Goro Crater | 42 | 14 | 0 |
-| Blasted Lands (51-52) | Horde | 51-52 | Blasted Lands | 23 | 7 | 0 |
+| Blasted Lands (51-52) | Horde | 51-52 | Blasted Lands | 24 | 7 | 0 |
 | Un'Goro Crater (51-53) | Horde | 51-53 | Un'Goro Crater | 63 | 21 | 1 |
 | Azshara (52-53) | Alliance | 52-53 | Azshara | 17 | 2 | 0 |
 | Felwood (53-54) | Alliance | 53-54 | Felwood | 24 | 8 | 0 |

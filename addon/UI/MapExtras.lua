@@ -7,8 +7,9 @@
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
 -- Positions come from the bundled QuestieDB-derived data. Its NPC table is the quest/service subset
--- plus the mobs quests involve, so not every elite in the game is there; the chest list is every
--- object named "... Chest" with spawns in the shown zone.
+-- plus the mobs quests involve; targets with questie.allDangerousMobs (Classic Era) also keep every
+-- hostile elite and rare with spawns. The chest list is every object named "... Chest" with spawns
+-- in the shown zone.
 
 local _, ns = ...
 
@@ -33,7 +34,7 @@ function MX:Index()
                 for i, p in ipairs(pts) do
                     if i > 3 then break end -- a few points per mob type are enough on a map
                     add(zone, { kind = (rank == 1) and "elite" or "rare", name = r[N.NAME], id = id, x = p[1], y = p[2],
-                                level = r[N.MAX_LEVEL] or r[N.MIN_LEVEL], rank = rank })
+                                level = r[N.MAX_LEVEL] or r[N.MIN_LEVEL], rank = rank, patrols = r[N.PATROLS] and true or nil })
                 end
             end
         end
@@ -45,6 +46,16 @@ function MX:Index()
                 for _, p in ipairs(pts) do add(zone, { kind = "treasure", name = name, id = id, x = p[1], y = p[2] }) end
             end
         end
+    end
+    -- Rares first, then elites, then chests, so the pin cap never hides a rare; by name within a kind.
+    local order = { rare = 1, elite = 2, treasure = 3 }
+    for _, l in pairs(z) do
+        table.sort(l, function(a, b)
+            if order[a.kind] ~= order[b.kind] then return order[a.kind] < order[b.kind] end
+            if a.name ~= b.name then return tostring(a.name) < tostring(b.name) end
+            if a.x ~= b.x then return a.x < b.x end
+            return a.y < b.y
+        end)
     end
     self.byZone = z
     return z
@@ -89,7 +100,10 @@ function MX:Pin(i)
         GameTooltip:SetOwner(s, "ANCHOR_RIGHT")
         GameTooltip:AddLine(e.name)
         if e.kind == "treasure" then GameTooltip:AddLine("Treasure", 1, 0.82, 0)
-        else GameTooltip:AddLine((e.kind == "rare" and "Rare" or "Elite") .. (e.level and (", level " .. e.level) or ""), 1, 0.4, 0.3) end
+        else
+            GameTooltip:AddLine((e.kind == "rare" and "Rare" or "Elite") .. (e.level and (", level " .. e.level) or ""), 1, 0.4, 0.3)
+            if e.patrols then GameTooltip:AddLine("Patrols: it may not be where the pin is.", 1, 0.82, 0) end
+        end
         GameTooltip:Show()
     end)
     pin:SetScript("OnLeave", function() GameTooltip:Hide() end)

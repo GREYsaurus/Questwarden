@@ -13,6 +13,7 @@ ns.Guides:Register({
     {"fp",npc="Lanie Reed",z=51,x=37.9,y=30.9,place="Thorium Point",v=1},
     {"accept",q=7728,title="STOLEN: Smithing Tuyere and Lookout's Spyglass",npc="Wanted/Missing/Lost & Found",z=51,x=37.6,y=26.5,text="The Wanted board at Thorium Point.",v=1},
     {"accept",q=7701,title="WANTED: Overseer Maltorius",npc="Wanted/Missing/Lost & Found",z=51,x=37.6,y=26.5,hcSkip=true,elite=true,group=true,v=1},
+    {"note",text=" - Hardcore: Zamael stands among the Twilight Fire Guards, Geomancers and Idolaters (elites, levels 48-51), with Highlord Mastrogonde (rare elite, 51) close by. Come in from the edge, pull nothing, and leave if a patrol turns your way.",hcOnly=true,v=1},
     {"accept",q=3377,title="Prayer to Elune",npc="Zamael Lunthistle",z=51,x=29.6,y=26.3,v=1},
     {"complete",q=3377,title="Prayer to Elune",v=1},
     {"turnin",q=3377,title="Prayer to Elune",npc="Zamael Lunthistle",z=51,x=29.6,y=26.3,v=1},

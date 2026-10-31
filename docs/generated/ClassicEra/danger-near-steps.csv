@@ -1,0 +1,28 @@
+step,guide,text,modelLevel,hc,warned,kind,npc,name,rank,levels,yards,patrols
+alliance/40_searinggorge.guide:21,A_40_SearingGorge,accept 3377 Prayer to Elune,47.0,,yes,elite,8282,Highlord Mastrogonde,2,51-51,3,
+alliance/40_searinggorge.guide:21,A_40_SearingGorge,accept 3377 Prayer to Elune,47.0,,yes,elite,8419,Twilight Idolater,1,49-51,6,
+alliance/40_searinggorge.guide:21,A_40_SearingGorge,accept 3377 Prayer to Elune,47.0,,yes,elite,5861,Twilight Fire Guard,1,48-49,7,
+alliance/40_searinggorge.guide:21,A_40_SearingGorge,accept 3377 Prayer to Elune,47.0,,yes,elite,5862,Twilight Geomancer,1,49-50,9,
+alliance/40_searinggorge.guide:23,A_40_SearingGorge,turnin 3377 Prayer to Elune,47.0,,yes,elite,8282,Highlord Mastrogonde,2,51-51,3,
+alliance/40_searinggorge.guide:23,A_40_SearingGorge,turnin 3377 Prayer to Elune,47.0,,yes,elite,8419,Twilight Idolater,1,49-51,6,
+alliance/40_searinggorge.guide:23,A_40_SearingGorge,turnin 3377 Prayer to Elune,47.0,,yes,elite,5861,Twilight Fire Guard,1,48-49,7,
+alliance/40_searinggorge.guide:23,A_40_SearingGorge,turnin 3377 Prayer to Elune,47.0,,yes,elite,5862,Twilight Geomancer,1,49-50,9,
+horde/46_hinterlands.guide:31,H_46_Hinterlands,turnin 7845 Kidnapped Elder Torntusk!,50.2,,yes,elite,7995,Vile Priestess Hexx,1,51-51,15,yes
+horde/46_hinterlands.guide:31,H_46_Hinterlands,turnin 7845 Kidnapped Elder Torntusk!,50.2,,yes,elite,2681,Vilebranch Raiding Wolf,1,50-51,19,
+horde/46_hinterlands.guide:31,H_46_Hinterlands,turnin 7845 Kidnapped Elder Torntusk!,50.2,,yes,elite,2648,Vilebranch Aman'zasi Guard,1,50-51,30,
+horde/46_hinterlands.guide:32,H_46_Hinterlands,accept 7846 Recover the Key!,50.2,,yes,elite,7995,Vile Priestess Hexx,1,51-51,15,yes
+horde/46_hinterlands.guide:32,H_46_Hinterlands,accept 7846 Recover the Key!,50.2,,yes,elite,2681,Vilebranch Raiding Wolf,1,50-51,19,
+horde/46_hinterlands.guide:32,H_46_Hinterlands,accept 7846 Recover the Key!,50.2,,yes,elite,2648,Vilebranch Aman'zasi Guard,1,50-51,30,
+horde/46_hinterlands.guide:34,H_46_Hinterlands,turnin 7846 Recover the Key!,50.2,,yes,elite,7995,Vile Priestess Hexx,1,51-51,15,yes
+horde/46_hinterlands.guide:34,H_46_Hinterlands,turnin 7846 Recover the Key!,50.2,,yes,elite,2681,Vilebranch Raiding Wolf,1,50-51,19,
+horde/46_hinterlands.guide:34,H_46_Hinterlands,turnin 7846 Recover the Key!,50.2,,yes,elite,2648,Vilebranch Aman'zasi Guard,1,50-51,30,
+horde/46_hinterlands.guide:35,H_46_Hinterlands,accept 7847 Return to Primal Torntusk,50.3,,yes,elite,7995,Vile Priestess Hexx,1,51-51,15,yes
+horde/46_hinterlands.guide:35,H_46_Hinterlands,accept 7847 Return to Primal Torntusk,50.3,,yes,elite,2681,Vilebranch Raiding Wolf,1,50-51,19,
+horde/46_hinterlands.guide:35,H_46_Hinterlands,accept 7847 Return to Primal Torntusk,50.3,,yes,elite,2648,Vilebranch Aman'zasi Guard,1,50-51,30,
+alliance/45_blastedlands.guide:23,A_45_BlastedLands,accept 2521 To Serve Kum'isha,50.0,,yes,rare,8301,Clack the Reaver,4,53-53,32,
+alliance/45_blastedlands.guide:24,A_45_BlastedLands,accept 3501 Everything Counts In Large Amounts,50.0,,yes,rare,8301,Clack the Reaver,4,53-53,32,
+alliance/45_blastedlands.guide:37,A_45_BlastedLands,turnin 2521 To Serve Kum'isha,50.2,,,rare,8301,Clack the Reaver,4,53-53,32,
+alliance/45_blastedlands.guide:38,A_45_BlastedLands,turnin 3501 Everything Counts In Large Amounts,50.3,,,rare,8301,Clack the Reaver,4,53-53,32,
+horde/47_blastedlands.guide:22,H_47_BlastedLands,accept 2521 To Serve Kum'isha,51.0,,yes,rare,8301,Clack the Reaver,4,53-53,32,
+horde/47_blastedlands.guide:23,H_47_BlastedLands,accept 3501 Everything Counts In Large Amounts,51.0,,yes,rare,8301,Clack the Reaver,4,53-53,32,
+alliance/10_darkshore.guide:38,A_10_Darkshore,turnin 949 The Twilight Camp,11.9,,yes,high,2339,Twilight Thug,0,17-18,4,

@@ -1,6 +1,6 @@
 guide,source,quest,title,requiredLevel,modelLevel,questsOnlyLevel,route
-"A_10_Darkshore","alliance/10_darkshore.guide:79","1138","Fruit of the Sea","15","14.1","13","Human/WARRIOR"
-"A_10_Darkshore","alliance/10_darkshore.guide:88","4740","WANTED: Murkdeep!","15","14.3","13","Human/WARRIOR"
+"A_10_Darkshore","alliance/10_darkshore.guide:80","1138","Fruit of the Sea","15","14.1","13","Human/WARRIOR"
+"A_10_Darkshore","alliance/10_darkshore.guide:89","4740","WANTED: Murkdeep!","15","14.3","13","Human/WARRIOR"
 "A_17_Wetlands","alliance/17_wetlands.guide:19","472","Fall of Dun Modr","25","24.7","24","Human/WARRIOR"
 "H_20_ThousandNeedles","horde/20_thousandneedles.guide:51","1176","Load Lightening","29","29.0","28","Orc/WARRIOR"
 "H_12_Barrens","horde/12_barrens.guide:94","1510","News of Dogran","20","18.3","17","Orc/WARLOCK"
@@ -12,6 +12,6 @@ guide,source,quest,title,requiredLevel,modelLevel,questsOnlyLevel,route
 "A_10_Darkshore","alliance/10_darkshore.guide:32","944","The Master's Glaive","12","11.8","11","Dwarf/WARRIOR"
 "A_10_Darkshore","alliance/10_darkshore.guide:35","4730","Beached Sea Creature","12","11.9","11","Dwarf/WARRIOR"
 "A_10_Darkshore","alliance/10_darkshore.guide:36","949","The Twilight Camp","12","11.9","11","Dwarf/WARRIOR"
-"A_10_Darkshore","alliance/10_darkshore.guide:67","982","Deep Ocean, Vast Sea","13","13.0","12","Dwarf/WARRIOR"
+"A_10_Darkshore","alliance/10_darkshore.guide:68","982","Deep Ocean, Vast Sea","13","13.0","12","Dwarf/WARRIOR"
 "H_10_Barrens","horde/10_barrens.guide:56","867","Harpy Raiders","12","11.8","11","Scourge/WARRIOR"
 "H_12_Barrens","horde/12_barrens.guide:92","5642","Shadowguard","20","18.3","17","Troll/PRIEST"

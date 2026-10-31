@@ -30,6 +30,7 @@ ns.Guides:Register({
     {"complete",q=7849,title="Separation Anxiety",text="Huntsman Malkhor's Skull and Bones, in the piles of skulls and bones in the Vilebranch camps.",v=1},
     {"complete",q=7861,title="Wanted: Vile Priestess Hexx and Her Minions",text="Vile Priestess Hexx and her Aman'zasi Guards at the temple south of the troll camps.",optional=true,v=1},
     {"turnin",q=7815,title="Snapjaws, Mon!",npc="Katoom the Angler",z=47,x=80.3,y=81.5,v=1},
+    {"note",text=" - Hardcore: Elder Torntusk is held at Jintha'alor among Vilebranch elites (levels 50-51). Vile Priestess Hexx (elite, 51) walks through the area and Raiding Wolves stand nearby. Clear a path one pull at a time, and leave it if you are below 51.",hcOnly=true,v=1},
     {"complete",q=7845,title="Kidnapped Elder Torntusk!",text="Elder Torntusk is held in the Vilebranch area.",v=1},
     {"turnin",q=7845,title="Kidnapped Elder Torntusk!",npc="Elder Torntusk",z=47,x=59.7,y=77.8,v=1},
     {"accept",q=7846,title="Recover the Key!",npc="Elder Torntusk",z=47,x=59.7,y=77.8,v=1},

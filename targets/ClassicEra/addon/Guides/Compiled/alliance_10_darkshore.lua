@@ -38,6 +38,7 @@ ns.Guides:Register({
     {"turnin",q=944,title="The Master's Glaive",npc="Scrying Bowl",v=1},
     {"accept",q=4730,title="Beached Sea Creature",npc="Beached Sea Creature",z=148,x=32.7,y=80.8,v=1},
     {"accept",q=949,title="The Twilight Camp",npc="Scrying Bowl",v=1},
+    {"note",text=" - Hardcore: Twilight Thugs (level 17-18) stand around the clue at the Master's Glaive, far above your level here. Reach it without a fight, or come back later.",hcOnly=true,v=1},
     {"turnin",q=949,title="The Twilight Camp",npc="Twilight Tome",z=148,x=38.5,y=86,v=1},
     {"accept",q=950,title="Return to Onu",npc="Twilight Tome",z=148,x=38.5,y=86,v=1},
     {"turnin",q=950,title="Return to Onu",npc="Onu",z=148,x=43.6,y=76.3,v=1},

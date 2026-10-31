@@ -23,7 +23,7 @@ No baseline file found.
 
 | Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A_10_Darkshore | 137 | 40 | 337 | 366 | 9 | 0 | 8 | 0 | 0 | 0 |
+| A_10_Darkshore | 138 | 40 | 337 | 366 | 9 | 0 | 8 | 0 | 0 | 0 |
 | A_11_LochModan | 89 | 28 | 167 | 406 | 4 | 5 | 0 | 0 | 0 | 0 |
 | A_12_Darkshore | 78 | 18 | 509 | 550 | 7 | 0 | 0 | 0 | 5 | 3 |
 | A_13_Ashenvale | 38 | 15 | 85 | 183 | 2 | 0 | 0 | 0 | 0 | 0 |
@@ -53,12 +53,12 @@ No baseline file found.
 | A_37_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_38_Hinterlands | 24 | 4 | 14 | 14 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_39_StranglethornVale | 17 | 2 | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_40_SearingGorge | 54 | 18 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
+| A_40_SearingGorge | 55 | 18 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
 | A_41_Feralas | 29 | 6 | 96 | 96 | 0 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_43_Tanaris | 33 | 11 | 151 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
 | A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_45_BlastedLands | 32 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 421 | 421 | 7 | 0 | 0 | 0 | 3 | 0 |
 | A_47_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_48_Felwood | 24 | 8 | 197 | 197 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -114,8 +114,8 @@ No baseline file found.
 | H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_44_Tanaris | 27 | 9 | 142 | 142 | 3 | 0 | 0 | 0 | 1 | 0 |
 | H_45_Azshara | 20 | 3 | 58 | 58 | 1 | 0 | 0 | 0 | 0 | 0 |
-| H_46_Hinterlands | 38 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_47_BlastedLands | 23 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_46_Hinterlands | 39 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_47_BlastedLands | 24 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_48_UnGoroCrater | 63 | 21 | 683 | 683 | 14 | 0 | 0 | 0 | 4 | 1 |
 | H_49_BurningSteppes | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_50_Azshara | 12 | 4 | 69 | 69 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -174,12 +174,12 @@ None.
 
 - A_10_Darkshore: level-gated pickup: Beached Sea Creature (4730) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:35, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Cave Mushrooms (947) needs 12, model level 11.0 (quests only: 11) [alliance/10_darkshore.guide:18, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: Deep Ocean, Vast Sea (982) needs 13, model level 13.0 (quests only: 12) [alliance/10_darkshore.guide:67, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: Fruit of the Sea (1138) needs 15, model level 14.1 (quests only: 13) [alliance/10_darkshore.guide:79, Human/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Deep Ocean, Vast Sea (982) needs 13, model level 13.0 (quests only: 12) [alliance/10_darkshore.guide:68, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Fruit of the Sea (1138) needs 15, model level 14.1 (quests only: 13) [alliance/10_darkshore.guide:80, Human/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Onu (948) needs 12, model level 11.2 (quests only: 11) [alliance/10_darkshore.guide:21, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: The Master's Glaive (944) needs 12, model level 11.8 (quests only: 11) [alliance/10_darkshore.guide:32, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: The Twilight Camp (949) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:36, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: WANTED: Murkdeep! (4740) needs 15, model level 14.3 (quests only: 13) [alliance/10_darkshore.guide:88, Human/WARRIOR]
+- A_10_Darkshore: level-gated pickup: WANTED: Murkdeep! (4740) needs 15, model level 14.3 (quests only: 13) [alliance/10_darkshore.guide:89, Human/WARRIOR]
 - A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 17.7
 - A_11_LochModan: reduced-XP quest: Honor Students (6387, level 10) at estimated level 17.2
 - A_11_LochModan: reduced-XP quest: Rat Catching (416, level 11) at estimated level 17.2

@@ -374,6 +374,22 @@ namespace GuideTools
                 if ((fl & (FLAG_TRAINER | FLAG_FLIGHTMASTER | FLAG_INNKEEPER)) != 0) needNpc.Add(kv.Key);
             }
 
+            // Dangerous mobs (target.json "questie.allDangerousMobs"): every hostile elite, rare elite and rare
+            // with spawns, for the map pins and rare alerts, whether or not a quest involves it.
+            if (Ctx.QuestieAllDangerousMobs)
+            {
+                int added = 0;
+                foreach (var kv in d.Npcs)
+                {
+                    int rank = QuestieData.N(kv.Value, QuestieData.N_RANK);
+                    if (rank != 1 && rank != 2 && rank != 4) continue;
+                    if (QuestieData.S(kv.Value, QuestieData.N_FRIENDLY) != null) continue;
+                    if (QuestieData.T(kv.Value, QuestieData.N_SPAWNS) == null) continue;
+                    if (needNpc.Add(kv.Key)) added++;
+                }
+                stats["dangerAdded"] = added;
+            }
+
             // ---------------- NPCs ----------------
             sb = new StringBuilder(Hdr("NPC records (quest/service subset)", provenance));
             sb.Append("local N = ns.QDB.npcs\n");

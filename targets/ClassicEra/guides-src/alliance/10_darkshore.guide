@@ -34,6 +34,7 @@ complete 944 The Master's Glaive | The Master's Glaive in the south.
 turnin 944 The Master's Glaive
 accept 4730 Beached Sea Creature
 accept 949 The Twilight Camp
+note [hc=only] | Hardcore: Twilight Thugs (level 17-18) stand around the clue at the Master's Glaive, far above your level here. Reach it without a fight, or come back later.
 turnin 949 The Twilight Camp
 accept 950 Return to Onu
 turnin 950 Return to Onu

@@ -181,6 +181,17 @@ if STAGE.target == "ClassicEra" then
     for _ in pairs(ns.EscortQuests) do nEsc = nEsc + 1 end
     check(nEsc >= 40 and ns.EscortQuests[155] and ns.EscortQuests[2078], "Classic escort list built (" .. nEsc .. " quests, incl. Defias Traitor and Gyromast)")
     check(ns.DB.GetEscortStatus(1560) == true, "Tooga's Quest is treated as an escort")
+    -- Dangerous mobs (questie.allDangerousMobs): every hostile rare is bundled, not only quest mobs.
+    local N, nRare = ns.QDB.NPC, 0
+    for _, r in pairs(ns.QDB.npcs) do
+        if (r[N.RANK] == 2 or r[N.RANK] == 4) and not r[N.FRIENDLY] and r[N.SPAWNS] then nRare = nRare + 1 end
+    end
+    check(nRare >= 300 and ns.QDB.npcs[8301], "every hostile rare is bundled (" .. nRare .. ", incl. Clack the Reaver)")
+    local bl = ns.MapExtras:Index()[4] or {}
+    check(bl[1] and bl[1].kind == "rare", "map pins list rares before elites (Blasted Lands)")
+    local hexx
+    for _, e in ipairs(ns.MapExtras:Index()[47] or {}) do if e.id == 7995 then hexx = e end end
+    check(hexx and hexx.patrols, "Vile Priestess Hexx is pinned and marked as patrolling")
     -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
     local g = ns.Guides:Get("A_Human_Elwynn")
     local hogger

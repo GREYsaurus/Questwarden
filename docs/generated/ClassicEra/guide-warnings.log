@@ -25,7 +25,7 @@ horde/27_arathihighlands.guide:45: 'Guile of the Raptor' has no objective locati
 horde/27_arathihighlands.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:24: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
-horde/46_hinterlands.guide:29: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
+horde/46_hinterlands.guide:30: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
 alliance/01_dwarf_gnome_dunmorogh.guide:98 (The Reports): prerequisite 287 'Frostmane Hold' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/02_nightelf_teldrassil.guide:71 (Ferocitas the Dream Eater): prerequisite 2438 'The Emerald Dreamcatcher' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/02_nightelf_teldrassil.guide:129 (Destiny Calls): prerequisite 2241 'The Apple Falls' is not turned in anywhere on Alliance routes (one of several alternatives)
