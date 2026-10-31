@@ -8,8 +8,8 @@ ns.Guides:Register({
   desc="Gadgetzan's neutral quest hub: the Wastewander bandits, the water survey, the pirates of Lost Rigger Cove and Steamwheedle Port. Zul'Farrak (dungeon) quests are optional.",
   next={{id="A_Feralas",faction="Alliance"},{id="H_Feralas",faction="Horde"},},
   steps={
-    {"fp",npc="Bera Stonehammer",z=440,x=51,y=29.3,place="Gadgetzan",faction="Alliance",v=1},
-    {"fp",npc="Bulkrek Ragefist",z=440,x=51.6,y=25.4,place="Gadgetzan",faction="Horde",v=1},
+    {"fp",npc="Bera Stonehammer",z=440,x=51,y=29.3,place="Gadgetzan",node=39,faction="Alliance",v=1},
+    {"fp",npc="Bulkrek Ragefist",z=440,x=51.6,y=25.4,place="Gadgetzan",node=40,faction="Horde",v=1},
     {"bind",npc="Innkeeper Fizzgrimble",z=440,x=52.5,y=27.9,place="Gadgetzan",faction="Alliance",npcId=7733,areas={976},v=1},
     {"bind",npc="Innkeeper Fizzgrimble",z=440,x=52.5,y=27.9,place="Gadgetzan",faction="Horde",npcId=7733,areas={976},v=1},
     {"accept",q=992,title="Gadgetzan Water Survey",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,text="Senior Surveyor Fizzledowser.",v=1},

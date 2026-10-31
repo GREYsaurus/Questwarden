@@ -10,9 +10,9 @@ ns.Guides:Register({
   steps={
     {"accept",q=10210,title="A'dal",npc="Haggard War Veteran",z=3703,x=61.8,y=9.9,text="Khadgar's servant brings you to A'dal in Shattrath (opens the Aldor/Scryer choice).",optional=true,v=1},
     {"turnin",q=10210,title="A'dal",npc="A'dal",z=3703,x=54,y=44.8,text="Turned in at Shattrath City.",optional=true,v=1},
-    {"fp",npc="Furnan Skysoar",z=3519,x=59.4,y=55.4,place="Shattrath City",v=1},
+    {"fp",npc="Furnan Skysoar",z=3519,x=59.4,y=55.4,place="Shattrath City",node=128,v=1},
     {"note",text="In Shattrath, pick the Aldor or the Scryers. Either is fine for leveling; it only affects later rewards.",v=1},
-    {"fp",npc="Furnan Skysoar",z=3519,x=59.4,y=55.4,place="Allerian Stronghold",v=1},
+    {"fp",npc="Furnan Skysoar",z=3519,x=59.4,y=55.4,place="Allerian Stronghold",node=121,v=1},
     {"accept",q=9998,title="Unruly Neighbors",npc="Bertelm",z=3519,x=58.3,y=54.8,text="Bertelm.",v=1},
     {"accept",q=10016,title="Timber Worg Tails",npc="Bertelm",z=3519,x=58.3,y=54.8,v=1},
     {"accept",q=10869,title="Thin the Flock",npc="Lieutenant Gravelhammer",z=3519,x=57.5,y=55.8,text="Lieutenant Gravelhammer, Allerian Stronghold.",v=1},

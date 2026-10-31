@@ -9,7 +9,7 @@ ns.Guides:Register({
   next={{id="H_Stranglethorn"},},
   steps={
     {"note",text="Kargath has no flight path until you reach it. From Hammerfall cross Thandol Span into the Wetlands and ride east through Loch Modan into the Badlands (Alliance zones: keep off the roads). Kargath is on the west edge of the Badlands.",v=1},
-    {"fp",npc="Gorrik",z=3,x=4,y=44.8,place="Kargath",v=1},
+    {"fp",npc="Gorrik",z=3,x=4,y=44.8,place="Kargath",node=21,v=1},
     {"accept",q=2258,title="Badlands Reagent Run",npc="Jarkal Mossmeld",z=3,x=2.4,y=46.1,text="Jarkal Mossmeld, Kargath. Needs level 36.",v=1},
     {"accept",q=1419,title="Coyote Thieves",npc="Neeka Bloodscar",z=3,x=6.5,y=47.2,text="Neeka Bloodscar.",v=1},
     {"accept",q=9439,title="Unclaimed Baggage",npc="Advisor Sarophas",z=3,x=6,y=48.1,text="Advisor Sarophas. Needs level 36.",v=1},

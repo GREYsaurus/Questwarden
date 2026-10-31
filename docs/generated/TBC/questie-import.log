@@ -1,9 +1,11 @@
 ﻿QuestieDB import - QuestieDB commit 7901fee2753cecb577a72c2e4b7126198e05baec (QuestieDB v1.0.9 (shipped in Questie bundle/v12.3.1+v1.0.9, published 2026-10-26)), flavor TBC.
 
+dangerAdded: 887
 items: 3919
-npcs: 7302
+npcs: 8189
 objects: 1325
 quests: 6648
+spiritHealers: 154
 subzones: 121
 warnings: 25
 zones: 312

@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Theramore Isle and the updated Dustwallow quest hubs: the deserters, the lighthouse, the Grimtotems and Mudsprocket.",
   next={{id="Both_Tanaris"},},
   steps={
-    {"fp",npc="Baldruc",z=15,x=67.5,y=51.3,place="Theramore",v=1},
+    {"fp",npc="Baldruc",z=15,x=67.5,y=51.3,place="Theramore",node=32,v=1},
     {"bind",npc="Innkeeper Janene",z=15,x=66.6,y=45.2,place="Theramore",npcId=6272,areas={513},v=1},
     {"accept",q=11137,title="Defias in Dustwallow?",npc="Captain Wymor",z=15,x=59.7,y=41.1,text="Captain Wymor.",v=1},
     {"turnin",q=11137,title="Defias in Dustwallow?",npc="Captain Wymor",z=15,x=59.7,y=41.1,text="Captain Wymor.",v=1},
@@ -80,7 +80,7 @@ ns.Guides:Register({
     {"turnin",q=11207,title="Secure the Cargo!",npc="Moxie Steelgrille",z=15,x=53.6,y=56.9,v=1},
     {"accept",q=11211,title="Help for Mudsprocket",npc="Tabetha",z=15,x=46.1,y=57.1,text="Tabetha, at her farm.",v=1},
     {"turnin",q=11211,title="Help for Mudsprocket",npc="Drazzit Dripvalve",z=15,x=42.3,y=72.9,text="Drazzit Dripvalve, Mudsprocket (the goblin camp south of the marsh).",v=1},
-    {"fp",npc="Dyslix Silvergrub",z=15,x=42.8,y=72.4,place="Mudsprocket",v=1},
+    {"fp",npc="Dyslix Silvergrub",z=15,x=42.8,y=72.4,place="Mudsprocket",node=179,v=1},
     {"accept",q=11158,title="Bloodfen Feathers",npc="Brogg",z=15,x=41.9,y=74,text="Brogg, Mudsprocket.",v=1},
     {"accept",q=11184,title="WANTED: Goreclaw the Ravenous",npc="Wanted Poster",z=15,x=41.8,y=73.1,text="The wanted poster in Mudsprocket.",v=1},
     {"accept",q=11217,title="Catch a Dragon by the Tail",npc="Gizzix Grimegurgle",z=15,x=41.5,y=73,text="Gizzix Grimegurgle.",v=1},

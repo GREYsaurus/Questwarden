@@ -31,7 +31,7 @@ ns.Guides:Register({
     {"turnin",q=109,title="Report to Gryan Stoutmantle",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,text="Sentinel Hill tower.",mark={i=1,npcs={234}},v=1},
     {"accept",q=12,title="The People's Militia",npc="Gryan Stoutmantle",z=40,x=56.3,y=47.5,v=1},
     {"accept",q=102,title="Patrolling Westfall",npc="Captain Danuvin",z=40,x=56.4,y=47.6,v=1},
-    {"fp",npc="Thor",z=40,x=56.6,y=52.6,place="Sentinel Hill",v=1},
+    {"fp",npc="Thor",z=40,x=56.6,y=52.6,place="Sentinel Hill",node=4,v=1},
     {"turnin",q=6181,title="A Swift Message",npc="Thor",z=40,x=56.6,y=52.6,races={"Human"},optional=true,v=1},
     {"accept",q=6281,title="Continue to Stormwind",npc="Thor",z=40,x=56.6,y=52.6,races={"Human"},v=1},
     {"accept",q=153,title="Red Leather Bandanas",npc="Scout Galiaan",z=40,x=54,y=53,v=1},
@@ -85,6 +85,6 @@ ns.Guides:Register({
     {"train",text="Train in Stormwind or Goldshire before leaving.",classes={"WARLOCK"},v=1},
     {"train",text="Train in Stormwind or Goldshire before leaving.",classes={"WARRIOR"},v=1},
     {"note",text="The Deadmines (dungeon, 17-21) starts in Moonbrook. Most of its quests come later with the Defias Brotherhood chain.",v=1},
-    {"fly",text="Walk from Elwynn's east road into Redridge, or fly if you already have the Lakeshire flight path.",dest="Lakeshire",v=1},
+    {"travel",text="Walk from Elwynn's east road into Redridge, or fly to Lakeshire if you already have its flight path.",dest="Redridge Mountains",v=1},
   },
 })

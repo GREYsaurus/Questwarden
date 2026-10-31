@@ -10,7 +10,7 @@ ns.Guides:Register({
   steps={
     {"note",text="From Grom'gol ride north through Duskwood (Alliance zone: keep off the roads) and east through Deadwind Pass into the Swamp of Sorrows.",v=1},
     {"accept",q=1389,title="Draenethyst Crystals",npc="Magtoor",z=8,x=26,y=31.4,text="Magtoor, a Lost One in the hut at the west end of the swamp. He is friendly.",v=1},
-    {"fp",npc="Breyk",z=8,x=46.1,y=54.8,place="Stonard",v=1},
+    {"fp",npc="Breyk",z=8,x=46.1,y=54.8,place="Stonard",node=56,v=1},
     {"accept",q=9440,title="Little Morsels",npc="Cersei Dusksinger",z=8,x=47.8,y=55,text="Cersei Dusksinger, Stonard.",v=1},
     {"accept",q=1424,title="Pool of Tears",npc="Fel'zerul",z=8,x=47.9,y=54.8,text="Fel'zerul, Stonard.",v=1},
     {"accept",q=698,title="Lack of Surplus",npc="Dar",z=8,x=44.7,y=57.2,text="Dar, just outside Stonard.",v=1},

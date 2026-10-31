@@ -124,7 +124,7 @@ ns.Guides:Register({
     {"train",npc="Rupert Boch",z=85,x=61.6,y=52.4,text="Undercity trainers (west of Brill).",classes={"WARLOCK"},v=1},
     {"train",npc="Austil de Mon",z=85,x=61.8,y=52.5,text="Undercity trainers (west of Brill).",classes={"WARRIOR"},v=1},
     {"accept",q=445,title="Delivery to Silverpine Forest",npc="Apothecary Johaan",z=85,x=59.4,y=52.4,text="Apothecary Johaan.",v=1},
-    {"fp",npc="Michael Garrett",z=1497,x=63.2,y=48.6,place="Undercity",v=1},
+    {"fp",npc="Michael Garrett",z=1497,x=63.2,y=48.6,place="Undercity",node=11,v=1},
     {"level",level=11,v=1},
     {"note",text="Ride south into Silverpine Forest; The Sepulcher is the Horde town.",v=1},
   },

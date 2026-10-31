@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Grom'gol Base Camp, Nesingwary's Expedition, the Bloodscalp and Skullsplitter trolls, and Booty Bay. A contested zone - watch for Alliance players.",
   next={{id="H_SwampOfSorrows"},},
   steps={
-    {"fp",npc="Thysta",z=33,x=32.5,y=29.4,place="Grom'gol",v=1},
+    {"fp",npc="Thysta",z=33,x=32.5,y=29.4,place="Grom'gol",node=20,v=1},
     {"bind",npc="Innkeeper Thulbek",z=33,x=31.5,y=29.8,place="Grom'gol",npcId=5814,areas={117},v=1},
     {"accept",q=570,title="Mok'thardin's Enchantment",npc="Far Seer Mok'thardin",z=33,x=32.1,y=29.2,text="Far Seer Mok'thardin.",v=1},
     {"accept",q=568,title="The Defense of Grom'gol",npc="Commander Aggro'gosh",z=33,x=32.2,y=28.9,text="Commander Aggro'gosh.",v=1},
@@ -48,7 +48,7 @@ ns.Guides:Register({
     {"turnin",q=582,title="Headhunting",npc="Nimboya",z=33,x=32.2,y=27.7,v=1},
     {"turnin",q=569,title="The Defense of Grom'gol",npc="Commander Aggro'gosh",z=33,x=32.2,y=28.9,v=1},
     {"turnin",q=570,title="Mok'thardin's Enchantment",npc="Far Seer Mok'thardin",z=33,x=32.1,y=29.2,v=1},
-    {"fp",npc="Thysta",z=33,x=32.5,y=29.4,place="Booty Bay",v=1},
+    {"fp",npc="Thysta",z=33,x=32.5,y=29.4,place="Booty Bay",node=18,v=1},
     {"accept",q=605,title="Singing Blue Shards",npc="Crank Fizzlebub",z=33,x=27.1,y=77.2,text="Crank Fizzlebub.",v=1},
     {"accept",q=606,title="Scaring Shaky",npc="\"Sea Wolf\" MacKinley",z=33,x=27.8,y=77.1,text="\"Sea Wolf\" MacKinley.",v=1},
     {"accept",q=575,title="Supply and Demand",npc="Drizzlik",z=33,x=28.3,y=77.6,text="Drizzlik, Booty Bay.",v=1},

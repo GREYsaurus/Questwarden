@@ -16,7 +16,7 @@ ns.Guides:Register({
     {"turnin",q=473,title="Report to Captain Stoutfist",npc="Captain Stoutfist",z=11,x=9.9,y=57.5,v=1},
     {"accept",q=464,title="War Banners",npc="Captain Stoutfist",z=11,x=9.9,y=57.5,v=1},
     {"accept",q=279,title="Claws from the Deep",npc="Karl Boran",z=11,x=8.3,y=58.6,text="Karl Boran on the docks.",v=1},
-    {"fp",npc="Shellei Brondir",z=11,x=9.5,y=59.7,place="Menethil Harbor",v=1},
+    {"fp",npc="Shellei Brondir",z=11,x=9.5,y=59.7,place="Menethil Harbor",node=7,v=1},
     {"accept",q=288,title="The Third Fleet",npc="First Mate Fitzsimmons",z=11,x=10.9,y=59.6,text="First Mate Fitzsimmons in the inn.",v=1},
     {"accept",q=463,title="The Greenwarden",npc="First Mate Fitzsimmons",z=11,x=10.9,y=59.6,v=1},
     {"bind",npc="Innkeeper Helbrek",z=11,x=10.7,y=61,place="Menethil Harbor",npcId=1464,areas={150,2104},v=1},

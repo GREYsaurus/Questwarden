@@ -32,7 +32,7 @@ ns.Guides:Register({
     {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,races={"Scourge","BloodElf"},optional=true,v=1},
     {"accept",q=4542,title="Message to Freewind Post",npc="Brave Moonhorn",z=400,x=32.2,y=22.2,text="Brave Moonhorn at the Great Lift, on the Barrens side.",v=1},
     {"accept",q=1718,title="The Islander",npc="Torm Ragetotem",z=1638,x=57.2,y=87.4,classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},optional=true,v=1},
-    {"fp",npc="Nyse",z=400,x=45.1,y=49.1,place="Freewind Post",v=1},
+    {"fp",npc="Nyse",z=400,x=45.1,y=49.1,place="Freewind Post",node=30,v=1},
     {"accept",q=4881,title="Assassination Plot",text="Starts from the item Assassination Note.",optional=true,v=1},
     {"accept",q=9431,title="A Different Approach",npc="Magistrix Elosai",z=400,x=46.2,y=50.4,v=1},
     {"turnin",q=4542,title="Message to Freewind Post",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,text="Cliffwatcher Longhorn.",v=1},

@@ -96,7 +96,7 @@ ns.Guides:Register({
     {"turnin",q=9699,title="Truth or Fiction",npc="Vindicator Boros",z=3525,x=55.4,y=55.3,v=1},
     {"accept",q=9700,title="I Shoot Magic Into the Darkness",npc="Vindicator Boros",z=3525,x=55.4,y=55.3,v=1},
     {"accept",q=10063,title="Explorers' League, Is That Something for Gnomes?",npc="Prospector Nachlan",z=3525,x=56.3,y=54.2,v=1},
-    {"fp",npc="Laando",z=3525,x=57.7,y=53.9,place="Blood Watch",v=1},
+    {"fp",npc="Laando",z=3525,x=57.7,y=53.9,place="Blood Watch",node=93,v=1},
     {"accept",q=9604,title="On the Wings of a Hippogryph",npc="Laando",z=3525,x=57.7,y=53.9,v=1},
     {"accept",q=9687,title="Restoring Sanctity",npc="Prince Toreth",z=3525,x=74.5,y=33.5,text="Needs level 15. If you are lower, {name} skips it and moves on.",v=1},
     {"turnin",q=9600,title="Redemption",npc="Jol",z=3557,x=38.4,y=82.6,text="Turned in at The Exodar.",classes={"PALADIN"},v=1},

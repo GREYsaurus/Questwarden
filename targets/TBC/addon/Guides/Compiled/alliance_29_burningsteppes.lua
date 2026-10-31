@@ -21,7 +21,7 @@ ns.Guides:Register({
     {"accept",q=3825,title="Ogre Head On A Stick = Party",npc="Oralius",z=46,x=84.6,y=68.7,v=1},
     {"complete",q=3825,title="Ogre Head On A Stick = Party",text="Click Soft Dirt Mound.",v=1},
     {"turnin",q=3825,title="Ogre Head On A Stick = Party",npc="Oralius",z=46,x=84.6,y=68.7,v=1},
-    {"fp",npc="Borgus Stoutarm",z=46,x=84.3,y=68.3,place="Morgan's Vigil",v=1},
+    {"fp",npc="Borgus Stoutarm",z=46,x=84.3,y=68.3,place="Morgan's Vigil",node=71,v=1},
     {"turnin",q=4183,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,text="Magistrate Solomon in Lakeshire.",v=1},
     {"accept",q=4184,title="The True Masters",npc="Magistrate Solomon",z=44,x=30,y=44.4,v=1},
     {"accept",q=4726,title="Broodling Essence",npc="Tinkee Steamboil",z=46,x=65.2,y=24,text="Tinkee Steamboil, Flame Crest.",v=1},

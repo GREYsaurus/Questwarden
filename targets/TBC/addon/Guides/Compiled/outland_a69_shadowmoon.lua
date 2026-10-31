@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Wildhammer Stronghold: the Legion Hold chain, the Deathforge, the Netherwing ledge approach and the Hand of Gul'dan. Ends at 70.",
   next={},
   steps={
-    {"fp",npc="Brubeck Stormfoot",z=3520,x=37.6,y=55.4,place="Wildhammer Stronghold",v=1},
+    {"fp",npc="Brubeck Stormfoot",z=3520,x=37.6,y=55.4,place="Wildhammer Stronghold",node=124,v=1},
     {"bind",npc="Dreg Cloudsweeper",z=3520,x=37.1,y=58.3,place="Wildhammer Stronghold",npcId=19352,areas={3745},v=1},
     {"accept",q=10703,title="Put On Yer Kneepads...",npc="Thane Yoregar",z=3520,x=36.2,y=56.9,text="Thane Yoregar.",v=1},
     {"accept",q=10661,title="Spleendid!",npc="Gnomus",z=3520,x=36.5,y=55.2,text="Gnomus.",v=1},

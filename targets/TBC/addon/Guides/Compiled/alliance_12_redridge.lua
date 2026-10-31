@@ -45,7 +45,7 @@ ns.Guides:Register({
     {"turnin",q=6661,title="Deeprun Rat Roundup",npc="Monty",classes={"PALADIN","PRIEST","SHAMAN","MAGE"},races={"Draenei"},optional=true,v=1},
     {"turnin",q=6661,title="Deeprun Rat Roundup",npc="Monty",classes={"PRIEST","DRUID"},races={"NightElf"},optional=true,v=1},
     {"accept",q=246,title="Assessing the Threat",npc="Deputy Feldon",z=44,x=30.7,y=60,v=1},
-    {"fp",npc="Ariena Stormfeather",z=44,x=30.6,y=59.4,place="Lakeshire",v=1},
+    {"fp",npc="Ariena Stormfeather",z=44,x=30.6,y=59.4,place="Lakeshire",node=5,v=1},
     {"turnin",q=1738,title="Heartswood",npc="Gakin the Darkbinder",z=1519,x=25.2,y=78.6,text="Turned in at Stormwind City.",classes={"WARLOCK"},races={"Human","Gnome"},optional=true,v=1},
     {"accept",q=1739,title="The Binding",npc="Gakin the Darkbinder",z=1519,x=25.2,y=78.6,text="Needs level 20. If you are lower, {name} skips it and moves on.",classes={"WARLOCK"},races={"Human","Gnome"},optional=true,v=1},
     {"complete",q=1739,title="The Binding",classes={"WARLOCK"},races={"Human","Gnome"},optional=true,v=1},

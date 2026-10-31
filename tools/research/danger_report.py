@@ -49,10 +49,14 @@ PATROL = {k for k, v in T._raw("NpcDB.lua", "QuestieDB.npcData").items() if len(
 
 # zone -> [(npc id, (x, y))] for every hostile mob with spawns, plus rares friendly to one faction only (Watch
 # Commander Zalaphil is dangerous to Horde). Other one-faction NPCs (flight masters, guards in their towns) are
-# not route dangers. Each step keeps the ones hostile to its guide's faction.
+# not route dangers. Each step keeps the ones hostile to its guide's faction. Invisible helper NPCs (event and
+# spell triggers such as "Headless Horseman - Fire (DND)" or "Flame Bunny") are not mobs.
+HELPER = re.compile(r"\(|\b(Bunny|Trigger|Invisible|Dummy)\b")
 BY_ZONE = {}
 for nid, r in T.N.items():
     if r[6] and ((r[3] or 0) not in (2, 4) or ("A" in r[6] and "H" in r[6])):
+        continue
+    if HELPER.search(r[0] or ""):
         continue
     for z, pts in hsh(r[5]).items():
         for p in arr(pts):

@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Telaar, the Nesingwary safari, the Throne of the Elements, the Burning Blade and the Kil'sorrow chain, and the Ring of Blood.",
   next={{id="A_BladesEdge"},},
   steps={
-    {"fp",npc="Furgu",z=3518,x=54.2,y=75.1,place="Telaar",v=1},
+    {"fp",npc="Furgu",z=3518,x=54.2,y=75.1,place="Telaar",node=119,v=1},
     {"bind",npc="Caregiver Isel",z=3518,x=54.2,y=76.1,place="Telaar",npcId=18914,areas={3626},v=1},
     {"accept",q=9956,title="The Ravaged Caravan",npc="Huntress Kima",z=3518,x=54.2,y=72.3,text="Huntress Kima.",v=1},
     {"complete",q=9956,title="The Ravaged Caravan",text="Telaar Supply Crate: loot Telaar Supply Crate.",v=1},

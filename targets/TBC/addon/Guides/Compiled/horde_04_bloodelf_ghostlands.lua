@@ -24,7 +24,7 @@ ns.Guides:Register({
     {"accept",q=9152,title="Tomber's Supplies",npc="Rathis Tomber",z=3433,x=47.2,y=28.6,classes={"PALADIN","ROGUE","PRIEST","MAGE","WARLOCK"},optional=true,v=1},
     {"turnin",q=9758,title="Return to Arcanist Vandril",npc="Arcanist Vandril",z=3433,x=46.6,y=28.4,v=1},
     {"accept",q=9138,title="Suncrown Village",npc="Arcanist Vandril",z=3433,x=46.6,y=28.4,v=1},
-    {"fp",npc="Skymaster Sunwing",z=3433,x=45.4,y=30.5,place="Tranquillien",v=1},
+    {"fp",npc="Skymaster Sunwing",z=3433,x=45.4,y=30.5,place="Tranquillien",node=83,v=1},
     {"turnin",q=9130,title="Goods from Silvermoon City",npc="Skymaster Sunwing",z=3433,x=45.4,y=30.5,classes={"HUNTER"},v=1},
     {"turnin",q=9130,title="Goods from Silvermoon City",npc="Skymaster Sunwing",z=3433,x=45.4,y=30.5,classes={"PALADIN","ROGUE","PRIEST","MAGE","WARLOCK"},v=1},
     {"accept",q=9133,title="Fly to Silvermoon City",npc="Skymaster Sunwing",z=3433,x=45.4,y=30.5,classes={"HUNTER"},v=1},

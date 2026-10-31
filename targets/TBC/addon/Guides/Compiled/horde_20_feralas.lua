@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Camp Mojache: the Woodpaw gnolls and the Zukk'ash hive to the south-east, the Grimtotem and the Gordunni ogres to the north, then the yetis, the Gordunni camp, the Twin Colossals giants and the Northspring harpies to the west.",
   next={{id="H_Hinterlands"},},
   steps={
-    {"fp",npc="Shyn",z=357,x=75.4,y=44.4,place="Camp Mojache",v=1},
+    {"fp",npc="Shyn",z=357,x=75.4,y=44.4,place="Camp Mojache",node=42,v=1},
     {"bind",npc="Innkeeper Greul",z=357,x=74.8,y=45.2,place="Camp Mojache",npcId=7737,areas={1099},v=1},
     {"accept",q=2862,title="War on the Woodpaw",npc="Hadoken Swiftstrider",z=357,x=74.9,y=42.5,text="Hadoken Swiftstrider, Camp Mojache.",v=1},
     {"accept",q=2973,title="A New Cloak's Sheen",npc="Krueg Skullsplitter",z=357,x=75.9,y=42.7,text="Krueg Skullsplitter.",v=1},

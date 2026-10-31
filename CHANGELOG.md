@@ -141,6 +141,13 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Tested through each TOC:** the Classic Era smoke suite and the full TBC engine suite run against the assembled folder before it is zipped. The test runners take the TOC and data location from `stage.lua`.
   - **TBCGuide:** the README says not to run both on TBC. The conflict check does not name it, because the lint gate keeps the old name out of shipped code.
   - **Not yet for TBC:** flight graph, spirit healers, the full rare list and regenerated hunting routes (DATA_GAPS.md).
+- **TBC data brought up to the Classic Era standard.**
+  - **Flight graph:** 107 nodes and 460 direct flights from the 2.5.6 client, Outland included. The importer now also takes Outland (map 530) and leaves out scripted quest flights, PvP bombing runs and teleports, which share the taxi tables ("Quest - …", "Nagrand - PvP - …"). A flight-path name can match outside the step's zone when exactly one node of that faction has it, as with Shattrath.
+  - **Guide fixes found by the graph:** three `fp` steps named flight paths the client does not have (Fairbreeze Village; Cenarion Refuge for both factions) and are removed. Westfall's conditional *fly Lakeshire* is now a `travel` step. The three quest flights, Honor Hold, Thrallmar and Auberdine, are marked unverified, with their quest text as the reason.
+  - **Spirit healers** (154) and **every hostile rare and elite** (887 more NPCs) for TBC, with the same switches as Classic Era.
+  - **Hunting routes:** TBC gets its own review file. Regenerating gives the same 185 routes, which checks the generator.
+  - **Danger report** for TBC (27 steps; review only, since TBC has no Hardcore flavor). The report now skips invisible helper NPCs such as Hallow's End's "Headless Horseman - Fire (DND)", which had flagged 225 rows.
+  - **Tested:** TBC suite 4,435/4,435, route audit 0 errors (88 warnings, 57 of them the unverified quest flights); the combined download passes through both TOCs.
 - **Spirit healers.** The Classic client has no graveyard table, so they come from QuestieDB: every spawn of the Spirit Healer NPC, 84 positions, written to `Database/Questie/SpiritHealers.lua` (switched on by `questie.spiritHealers`; not cut down like `Npcs.lua`). A new *Track Spirit Healers* setting (off by default) shows them as world map pins; they come first in the pin list, so the pin cap never hides one. Smoke tests check the data and the pins.
 
 Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 22 warnings, quest log peak 15/20; smoke suite 71/71); TBC suite 4,435/4,435; Forever 29/29. Nothing has been run in the game client.

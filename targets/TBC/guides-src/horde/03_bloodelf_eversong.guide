@@ -232,7 +232,6 @@ accept 9678 The First Trial [class=Paladin; optional]
 turnin 9673 Beast Training [class=Hunter] | Turned in at Silvermoon City.
 turnin 9403 The Purest Water [class=Mage]
 accept 9404 Recently Living [class=Mage]
-fp Fairbreeze Village [optional]
 complete 9404 Recently Living [class=Mage] | Living Branch drops from Eversong Green Keeper.
 train | Silvermoon City trainers.
 fp Silvermoon City

@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Shadowmoon Village: the Legion Hold chain, the Deathforge, the Hand of Gul'dan approach and the Illidari quests. Ends at 70.",
   next={},
   steps={
-    {"fp",npc="Drek'Gol",z=3520,x=30.4,y=29.2,place="Shadowmoon Village",v=1},
+    {"fp",npc="Drek'Gol",z=3520,x=30.4,y=29.2,place="Shadowmoon Village",node=123,v=1},
     {"bind",npc="Innkeeper Darg Bloodclaw",z=3520,x=30.2,y=27.7,place="Shadowmoon Village",npcId=19319,areas={3744},v=1},
     {"accept",q=10702,title="A Grunt's Work...",npc="Overlord Or'barokh",z=3520,x=28.4,y=26.5,text="Overlord Or'barokh.",v=1},
     {"accept",q=10624,title="A Haunted History",npc="Chief Apothecary Hildagard",z=3520,x=30,y=27.8,text="Chief Apothecary Hildagard.",v=1},

@@ -19,6 +19,8 @@
     "fixes": "src/corrections/Tbc/tbcQuestFixes.lua",
     "fixesModule": "QuestieTBCQuestFixes",
     "xp": "support/QuestXP/xpDB-tbc.lua",
+    "allDangerousMobs": true,
+    "spiritHealers": true,
     "npcFlags": {
       "QUEST_GIVER": 2,
       "VENDOR": 128,
@@ -30,7 +32,8 @@
   "clientTables": {
     "source": "https://wago.tools",
     "product": "wow_anniversary",
-    "build": "2.5.6.70577"
+    "build": "2.5.6.70577",
+    "flights": true
   },
   "tocExtra": [],
   "install": "",

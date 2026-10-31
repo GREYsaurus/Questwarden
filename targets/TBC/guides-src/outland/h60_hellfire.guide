@@ -15,7 +15,7 @@ turnin Through the Dark Portal [optional] | Lieutenant General Orion at the Stai
 accept Arrival in Outland
 turnin Arrival in Outland | Vlagga Freyfeather, wind rider master on the Stair.
 accept Journey to Thrallmar
-fly Thrallmar
+fly Thrallmar [unverified] | Journey to Thrallmar sends you on Vlagga Freyfeather's wind rider before you have the Thrallmar flight path.
 fp Thrallmar
 turnin Journey to Thrallmar | General Krakork.
 accept Report to Nazgrel [optional]

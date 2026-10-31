@@ -8,8 +8,8 @@
 // Output: <add-on>/Database/Flights.lua
 //   nodes[id] = { name, full, zone, x, y, faction ("A", "H" or "AH"), npc }  (x, y in zone map percent)
 //   links[id] = { ids of the nodes it has a direct flight to }
-// Kept: nodes with a faction flag, at least one flight and a place on Eastern Kingdoms or Kalimdor. Left out:
-// transports, zeppelin targets, quest-only paths and battleground nodes. Flight times are not in the client
+// Kept: nodes with a faction flag, at least one flight and a place on Eastern Kingdoms, Kalimdor or Outland. Left out:
+// transports, zeppelin targets, scripted quest/PvP flights and teleports, and battleground nodes. Flight times are not in the client
 // tables; Core/FlightTimer.lua measures them in game.
 
 using System;
@@ -32,6 +32,12 @@ namespace GuideTools
     public static class FlightTables
     {
         const double NpcMatch = 3.0; // map percent between a node and its flight master
+        // Eastern Kingdoms, Kalimdor and Outland; battleground maps (Alterac Valley's nodes) are left out.
+        static readonly HashSet<int> Continents = new HashSet<int> { 0, 1, 530 };
+        // Scripted quest flights, PvP bombing runs and teleports share the taxi tables: "Quest Path 9571",
+        // "Quest - Nethrandamus Start", "Nagrand - PvP - Attack Run Start 1", "Eversong - Duskwither Teleport".
+        static readonly System.Text.RegularExpressions.Regex ScriptedFlight =
+            new System.Text.RegularExpressions.Regex(@"\b(Quest|PvP|Teleport)\b");
 
         public static string Export(string db2Dir, string addOnDir, string build, List<string> report)
         {
@@ -67,8 +73,8 @@ namespace GuideTools
             {
                 int id = Csv.I(r, "ID"), flags = Csv.I(r, "Flags"), cont = Csv.I(r, "ContinentID");
                 string full = r["Name_lang"];
-                if ((flags & 3) == 0 || !hasPath.Contains(id) || (cont != 0 && cont != 1)) continue;
-                if (full.StartsWith("Transport", StringComparison.Ordinal) || full.StartsWith("Quest Path", StringComparison.Ordinal)) continue;
+                if ((flags & 3) == 0 || !hasPath.Contains(id) || !Continents.Contains(cont)) continue;
+                if (full.StartsWith("Transport", StringComparison.Ordinal) || ScriptedFlight.IsMatch(full)) continue;
                 int comma = full.IndexOf(", ", StringComparison.Ordinal);
                 nodes[id] = new FlightNode
                 {

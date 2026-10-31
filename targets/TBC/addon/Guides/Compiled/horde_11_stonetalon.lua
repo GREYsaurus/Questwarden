@@ -33,7 +33,7 @@ ns.Guides:Register({
     {"turnin",q=2458,title="Deep Cover",npc="Taskmaster Fizzule",z=17,x=55.4,y=5.6,text="Turned in at The Barrens.",classes={"ROGUE"},races={"Orc","Scourge","Troll","BloodElf"},v=1},
     {"accept",q=6562,title="Trouble in the Deeps",npc="Tsunaman",z=406,x=47.4,y=64.2,text="Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).",v=1},
     {"accept",q=1087,title="Cenarius' Legacy",npc="Braelyn Firehand",z=406,x=45.9,y=60.4,text="Braelyn Firehand.",v=1},
-    {"fp",npc="Tharm",z=406,x=45.1,y=59.8,place="Sun Rock Retreat",v=1},
+    {"fp",npc="Tharm",z=406,x=45.1,y=59.8,place="Sun Rock Retreat",node=29,v=1},
     {"turnin",q=6401,title="Kaya's Alive",npc="Tammra Windfield",z=406,x=47.5,y=58.4,v=1},
     {"turnin",q=6284,title="Arachnophobia",npc="Maggran Earthbinder",z=406,x=47.2,y=61.2,classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
     {"accept",q=6282,title="Harpies Threaten",npc="Maggran Earthbinder",z=406,x=47.2,y=61.2,text="Maggran Earthbinder, Sun Rock Retreat.",v=1},

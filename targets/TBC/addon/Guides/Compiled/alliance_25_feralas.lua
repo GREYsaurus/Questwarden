@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Feathermoon Stronghold, the Hatecrest naga, the missing courier chain and the Grimtotem and gnoll camps.",
   next={{id="A_Hinterlands"},},
   steps={
-    {"fp",npc="Thyssiana",z=357,x=89.5,y=45.8,place="Feathermoon Stronghold",v=1},
+    {"fp",npc="Thyssiana",z=357,x=89.5,y=45.8,place="Feathermoon Stronghold",node=41,v=1},
     {"bind",npc="Innkeeper Shyria",z=357,x=31,y=43.5,place="Feathermoon Stronghold",npcId=7736,areas={1116},v=1},
     {"accept",q=2866,title="The Ruins of Solarsal",npc="Shandris Feathermoon",z=357,x=30.3,y=46.2,text="Shandris Feathermoon.",v=1},
     {"turnin",q=2866,title="The Ruins of Solarsal",npc="Solarsal Gazebo",z=357,x=26.3,y=52.3,text="The gazebo on the island south.",v=1},

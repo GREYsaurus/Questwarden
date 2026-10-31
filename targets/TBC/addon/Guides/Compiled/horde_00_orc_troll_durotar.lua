@@ -209,7 +209,7 @@ ns.Guides:Register({
     {"train",npc="Tarshaw Jaggedscar",z=14,x=54.2,y=42.5,text="Orgrimmar trainers.",classes={"WARRIOR"},v=1},
     {"accept",q=1505,title="Veteran Uzzek",npc="Sorek",z=1637,x=80.4,y=32.4,classes={"WARRIOR"},v=1},
     {"accept",q=840,title="Conscript of the Horde",npc="Takrin Pathseeker",z=14,x=50.8,y=43.6,text="Takrin Pathseeker, outside the western gate.",v=1},
-    {"fp",npc="Doras",z=1637,x=45.1,y=63.9,place="Orgrimmar",v=1},
+    {"fp",npc="Doras",z=1637,x=45.1,y=63.9,place="Orgrimmar",node=23,v=1},
     {"level",level=11,v=1},
     {"turnin",q=840,title="Conscript of the Horde",npc="Kargal Battlescar",z=17,x=62.3,y=19.4,text="Kargal Battlescar at the Barrens border.",v=1},
     {"accept",q=842,title="Crossroads Conscription",npc="Kargal Battlescar",z=17,x=62.3,y=19.4,v=1},

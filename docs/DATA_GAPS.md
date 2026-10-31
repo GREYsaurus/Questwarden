@@ -38,9 +38,10 @@ Shipped in the same download since 2026-10-31, with TBCGuide 0.9.5's data and gu
 |---|---|---|
 | One download for both games | `ClassicGuide_Vanilla.toc` and `ClassicGuide_TBC.toc` in one folder. Blizzard's 1.15.9 and 2.5.6 UI source ship add-ons the same way (`_Vanilla.toc` / `_TBC.toc` only, with `AllowLoadGameType`) | load the folder in both clients and check each picks its own TOC |
 | AddOns folder | unknown for the Anniversary client | confirm in game |
-| Flight graph, spirit healers | empty for TBC (`Database/Flights.lua`, `SpiritHealers.lua` stubs) | switch on `clientTables.flights` and `questie.spiritHealers` for TBC and import |
-| Rares and dangerous mobs | only the mobs quests involve (TBCGuide's import) | switch on `questie.allDangerousMobs` for TBC |
-| Hunting routes | TBCGuide's run of the generator | regenerate with `roam_propose.py TBC` |
+| Flight graph | **Built** from the 2.5.6 client's TaxiNodes/TaxiPath: 107 nodes (Outland included), 460 direct flights; scripted quest and PvP flights left out. 6 nodes have no flight master in the data (druid Nighthaven, Plaguewood Tower, Skettis, and two Hellfire quest landings: Reaver's Fall, Force Camp Beach Head). The check removed three `fp` steps for flight paths the client does not have (Fairbreeze Village, Cenarion Refuge twice) | the quest flights *Journey to Honor Hold*, *Journey to Thrallmar* and *Flight to Auberdine* fly before the destination is learned, as their quest texts say: marked unverified (57 audit warnings); check in game |
+| Spirit healers | **Built**: 154 positions from QuestieDB's TBC data (pins only) | check a few in game |
+| Rares and dangerous mobs | **Built**: every hostile elite and rare with spawns, plus rares friendly to one faction (887 more NPCs). Danger report: 27 steps (`docs/generated/TBC/danger-near-steps.csv`); TBC has no Hardcore flavor, so it is for review only | review the report |
+| Hunting routes | **Regenerated** with `roam_propose.py TBC`: the same 185 routes in 39 zones, point for point, as TBCGuide's run. Review: `targets/TBC/roaming-overrides.csv` (TBCGuide's) | not walked in game |
 | Cross-check | no reference files for TBC | none planned |
 
 ## WoW: Forever (not launched; launch 2026-11-04)

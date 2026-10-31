@@ -10,7 +10,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 |---|---|
 | Routes walked | 52 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
-| Warnings | 31 |
+| Warnings | 88 |
 | Peak quest log (worst route) | 22 / 25 |
 | Reduced-XP pickups (6+ levels below estimate) | 32 |
 | Level-gated pickups | 139 |
@@ -51,7 +51,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | A_WesternPlaguelands | 82 (41) | 27 (12) | 453 (288) | 528 | 9 (5) | 0 | 0 | 0 (3) | 0 | 0 |
 | A_Westfall | 78 (56) | 27 (16) | 83 (253) | 167 | 5 (7) | 0 | 2 (0) | 0 | 0 | 2 |
 | A_Wetlands | 113 (79) | 41 (26) | 229 (255) | 429 | 8 (9) | 0 | 8 (0) | 0 (2) | 0 | 0 |
-| A_Zangarmarsh | 117 (115) | 39 (41) | 174 (365) | 174 | 3 (9) | 0 | 0 | 0 (5) | 1 (2) | 0 (1) |
+| A_Zangarmarsh | 116 (115) | 39 (41) | 174 (365) | 174 | 3 (9) | 0 | 0 | 0 (5) | 1 (2) | 0 (1) |
 | Both_EasternPlaguelands | 45 | 11 | 280 | 300 | 3 | 0 | 0 | 0 | 0 | 0 |
 | Both_Netherstorm | 105 (107) | 35 (37) | 220 (440) | 220 | 7 (14) | 0 | 0 | 0 (2) | 0 (1) | 1 |
 | Both_SearingGorge | 50 | 13 | 33 | 30 | 1 | 0 | 0 | 0 | 2 | 0 |
@@ -63,7 +63,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Badlands | 33 | 6 | 91 | 91 | 3 | 0 | 2 | 0 | 0 | 0 |
 | H_Barrens | 323 (117) | 111 (41) | 474 (299) | 740 | 26 (13) | 14 (0) | 14 (0) | 0 (7) | 2 (1) | 1 |
 | H_BladesEdge | 79 (51) | 25 (16) | 192 (245) | 192 | 4 (8) | 0 | 0 | 0 (1) | 1 | 0 |
-| H_BloodElf_Eversong | 243 (118) | 93 (41) | 442 (583) | 520 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
+| H_BloodElf_Eversong | 242 (118) | 93 (41) | 441 (583) | 513 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
 | H_BloodElf_Ghostlands | 193 (103) | 70 (35) | 396 (440) | 498 | 18 (16) | 0 | 4 (1) | 0 (1) | 1 (0) | 1 |
 | H_Desolace | 35 | 7 | 212 | 212 | 4 | 0 | 0 | 0 | 0 | 0 |
 | H_Dustwallow | 109 (90) | 35 (29) | 286 (301) | 336 | 11 (12) | 0 | 0 | 0 (1) | 0 | 0 |
@@ -84,7 +84,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_ThousandNeedles | 135 (56) | 42 (16) | 146 (246) | 473 | 8 | 0 | 0 | 0 (2) | 4 (1) | 0 |
 | H_Undead_Tirisfal | 119 (97) | 40 (30) | 119 (216) | 177 | 7 (5) | 0 | 4 (0) | 0 | 0 | 0 |
 | H_WesternPlaguelands | 64 (47) | 21 (14) | 31 (10) | 256 | 4 (7) | 0 | 0 | 0 | 1 | 0 |
-| H_Zangarmarsh | 111 (108) | 37 (38) | 251 (397) | 251 | 6 (10) | 0 | 0 | 0 (3) | 1 | 0 |
+| H_Zangarmarsh | 110 (108) | 37 (38) | 251 (397) | 251 | 6 (10) | 0 | 0 | 0 (3) | 1 | 0 |
 
 ## Peak quest log per route
 
@@ -112,37 +112,94 @@ None.
 
 ## Warnings
 
+- Human/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Human/PALADIN: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Human/ROGUE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Human/PRIEST: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Human/MAGE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Human/WARLOCK: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Orc/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Orc/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Orc/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Orc/SHAMAN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Orc/WARLOCK: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/PALADIN: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/PALADIN: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/HUNTER: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/HUNTER: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/ROGUE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/PRIEST: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Dwarf/PRIEST: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/WARRIOR: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:184]: the flight path is not learned on this route yet (no fp step before it)
 - NightElf/WARRIOR: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - NightElf/WARRIOR: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- NightElf/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/HUNTER: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:184]: the flight path is not learned on this route yet (no fp step before it)
 - NightElf/HUNTER: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - NightElf/HUNTER: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- NightElf/HUNTER: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/ROGUE: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:184]: the flight path is not learned on this route yet (no fp step before it)
 - NightElf/ROGUE: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - NightElf/ROGUE: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- NightElf/ROGUE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/PRIEST: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:184]: the flight path is not learned on this route yet (no fp step before it)
 - NightElf/PRIEST: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - NightElf/PRIEST: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- NightElf/PRIEST: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/DRUID: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:184]: the flight path is not learned on this route yet (no fp step before it)
 - NightElf/DRUID: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - NightElf/DRUID: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- NightElf/DRUID: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Scourge/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Scourge/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Scourge/PRIEST: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Scourge/MAGE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Scourge/WARLOCK: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Tauren/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Tauren/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Tauren/SHAMAN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Tauren/DRUID: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Gnome/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Gnome/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Gnome/ROGUE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Gnome/ROGUE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Gnome/MAGE: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Gnome/MAGE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Gnome/WARLOCK: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
+- Gnome/WARLOCK: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/PRIEST: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/SHAMAN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- Troll/MAGE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/PALADIN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/PRIEST: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/MAGE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
+- BloodElf/WARLOCK: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/WARRIOR: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/WARRIOR: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/PALADIN: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/PALADIN: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/PALADIN: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/HUNTER: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/HUNTER: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/HUNTER: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/PRIEST: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/PRIEST: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/PRIEST: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/SHAMAN: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/SHAMAN: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/SHAMAN: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Draenei/MAGE: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/MAGE: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
+- Draenei/MAGE: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 
 ## Findings (per guide)
 

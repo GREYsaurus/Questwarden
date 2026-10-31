@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Southshore quests: the coast, the Syndicate, the Crushridge ogres and the yetis. A short stop before Arathi.",
   next={{id="A_Arathi"},},
   steps={
-    {"fp",npc="Darla Harris",z=267,x=49.3,y=52.3,place="Southshore",v=1},
+    {"fp",npc="Darla Harris",z=267,x=49.3,y=52.3,place="Southshore",node=14,v=1},
     {"bind",npc="Innkeeper Anderson",z=267,x=51.2,y=58.9,place="Southshore",npcId=2352,areas={271},v=1},
     {"accept",q=9435,title="Missing Crystals",npc="Huraan",z=267,x=51,y=58.7,v=1},
     {"accept",q=536,title="Down the Coast",npc="Lieutenant Farren Orinelle",z=267,x=51.5,y=58.4,text="Lieutenant Farren Orinelle, Southshore.",v=1},

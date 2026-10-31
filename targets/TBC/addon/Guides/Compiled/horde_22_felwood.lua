@@ -20,7 +20,7 @@ ns.Guides:Register({
     {"accept",q=4506,title="Corrupted Sabers",npc="Winna Hazzard",z=361,x=34.2,y=52.3,text="Escort quest: start it when you are ready to follow.",v=1},
     {"complete",q=4506,title="Corrupted Sabers",text="Use the cage on a corrupted saber.",v=1},
     {"turnin",q=4506,title="Corrupted Sabers",npc="Winna Hazzard",z=361,x=34.2,y=52.3,v=1},
-    {"fp",npc="Brakkar",z=361,x=34.4,y=54,place="Bloodvenom Post",v=1},
+    {"fp",npc="Brakkar",z=361,x=34.4,y=54,place="Bloodvenom Post",node=48,v=1},
     {"accept",q=4102,title="Cleansing Felwood",npc="Maybess Riverbreeze",z=361,x=46.8,y=83.1,text="Maybess Riverbreeze, Emerald Sanctuary.",v=1},
     {"complete",q=4102,title="Cleansing Felwood",text="Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.",v=1},
     {"turnin",q=4102,title="Cleansing Felwood",npc="Maybess Riverbreeze",z=361,x=46.8,y=83.1,v=1},

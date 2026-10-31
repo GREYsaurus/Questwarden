@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 62 (49 Azeroth, 13 Outland) |
-| Guide steps | 6359 |
+| Guide steps | 6356 |
 | Quest steps (accept/complete/turn-in) | 5609 |
 | Distinct quests referenced | 1889 |
-| Steps with database-derived coordinates | 4438 |
+| Steps with database-derived coordinates | 4435 |
 | Steps with hand-written coordinates (unverified) | 1 |
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
@@ -88,7 +88,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 215 | 70 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 162 | 60 | 24 |
 | Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 119 | 40 | 3 |
-| Sunstrider Isle & Eversong Woods | Horde | 1-11 | Eversong Woods | 243 | 93 | 31 |
+| Sunstrider Isle & Eversong Woods | Horde | 1-11 | Eversong Woods | 242 | 93 | 30 |
 | Bloodmyst Isle | Alliance | 10-20 | Bloodmyst Isle | 205 | 78 | 14 |
 | Westfall | Alliance | 10-16 | Westfall | 78 | 27 | 17 |
 | Ghostlands (Tranquillien) | Horde | 10-20 | Ghostlands | 193 | 70 | 49 |
@@ -132,8 +132,8 @@ Each race/class combination is followed from its racial start guide through the 
 | Eastern Plaguelands (Light's Hope) | Both | 56-58 | Eastern Plaguelands | 45 | 11 | 1 |
 | Hellfire Peninsula (Honor Hold) | Alliance | 58-62 | Hellfire Peninsula | 177 | 60 | 4 |
 | Hellfire Peninsula (Thrallmar) | Horde | 58-62 | Hellfire Peninsula | 142 | 51 | 4 |
-| Zangarmarsh (Telredor) | Alliance | 61-64 | Zangarmarsh | 117 | 39 | 4 |
-| Zangarmarsh (Zabra'jin) | Horde | 61-64 | Zangarmarsh | 111 | 37 | 3 |
+| Zangarmarsh (Telredor) | Alliance | 61-64 | Zangarmarsh | 116 | 39 | 4 |
+| Zangarmarsh (Zabra'jin) | Horde | 61-64 | Zangarmarsh | 110 | 37 | 3 |
 | Terokkar Forest (Allerian Stronghold) | Alliance | 63-65 | Terokkar Forest | 108 | 37 | 9 |
 | Terokkar Forest (Stonebreaker Hold) | Horde | 63-65 | Terokkar Forest | 107 | 37 | 8 |
 | Nagrand (Telaar) | Alliance | 64-67 | Nagrand | 126 | 43 | 4 |

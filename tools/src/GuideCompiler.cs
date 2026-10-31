@@ -40,20 +40,20 @@ namespace GuideTools
         static readonly Regex FlightLinkLine = new Regex(@"^L\[(\d+)\]=\{([\d,]*)\}");
 
         // The flight node a step names: same faction (or both), name equal to the place or a prefix of it
-        // ("Feathermoon" for "Feathermoon Stronghold"); in the given zone when zone > 0. 0 = none.
+        // ("Feathermoon" for "Feathermoon Stronghold"); in the given zone when zone > 0, or else the only node of
+        // that name for the faction (Shattrath's node is in the Shattrath City zone, its fp step in Terokkar). 0 = none.
         public int FlightNodeFor(string place, string faction, int zone)
         {
             if (string.IsNullOrEmpty(place)) return 0;
             string p = place.Trim();
             string fc = faction == "Alliance" ? "A" : (faction == "Horde" ? "H" : null);
-            foreach (var n in Flights.Values.OrderByDescending(n => n.Name.Length))
-            {
-                if (fc != null && n.Faction.IndexOf(fc, StringComparison.Ordinal) < 0) continue;
-                if (zone > 0 && n.Zone != zone && Parent(n.Zone) != Parent(zone)) continue;
-                if (p.Equals(n.Name, StringComparison.OrdinalIgnoreCase) || p.Equals(n.Full, StringComparison.OrdinalIgnoreCase) ||
-                    p.StartsWith(n.Name + " ", StringComparison.OrdinalIgnoreCase)) return n.Id;
-            }
-            return 0;
+            var named = Flights.Values.OrderByDescending(n => n.Name.Length).Where(n =>
+                (fc == null || n.Faction.IndexOf(fc, StringComparison.Ordinal) >= 0) &&
+                (p.Equals(n.Name, StringComparison.OrdinalIgnoreCase) || p.Equals(n.Full, StringComparison.OrdinalIgnoreCase) ||
+                 p.StartsWith(n.Name + " ", StringComparison.OrdinalIgnoreCase))).ToList();
+            var here = named.FirstOrDefault(n => zone <= 0 || n.Zone == zone || Parent(n.Zone) == Parent(zone));
+            if (here != null) return here.Id;
+            return named.Select(n => n.Name).Distinct(StringComparer.OrdinalIgnoreCase).Count() == 1 && named.Count == 1 ? named[0].Id : 0;
         }
 
         // Positions in our generated records (Database/Schema.lua)

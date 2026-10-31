@@ -8,7 +8,7 @@ ns.Guides:Register({
   desc="Brackenwall Village and the updated Dustwallow hubs: the Shady Rest Inn, the Grimtotem plot, Mudsprocket and the Black Dragonflight.",
   next={{id="Both_Tanaris"},},
   steps={
-    {"fp",npc="Shardi",z=15,x=35.6,y=31.9,place="Brackenwall Village",v=1},
+    {"fp",npc="Shardi",z=15,x=35.6,y=31.9,place="Brackenwall Village",node=55,v=1},
     {"bind",npc="\"Little\" Logok",z=15,x=36.9,y=32.4,place="Brackenwall Village",npcId=24208,areas={496},v=1},
     {"accept",q=11124,title="Inspecting the Ruins",npc="Krog",z=15,x=36.4,y=31.9,text="Krog, Brackenwall.",v=1},
     {"accept",q=1169,title="Identifying the Brood",npc="Draz'Zilb",z=15,x=37.2,y=33.1,text="Draz'Zilb.",v=1},
@@ -96,7 +96,7 @@ ns.Guides:Register({
     {"turnin",q=11207,title="Secure the Cargo!",npc="Moxie Steelgrille",z=15,x=53.6,y=56.9,v=1},
     {"accept",q=11211,title="Help for Mudsprocket",npc="Tabetha",z=15,x=46.1,y=57.1,text="Tabetha, at her farm.",v=1},
     {"turnin",q=11211,title="Help for Mudsprocket",npc="Drazzit Dripvalve",z=15,x=42.3,y=72.9,text="Drazzit Dripvalve, Mudsprocket (the goblin camp south of the marsh).",v=1},
-    {"fp",npc="Dyslix Silvergrub",z=15,x=42.8,y=72.4,place="Mudsprocket",v=1},
+    {"fp",npc="Dyslix Silvergrub",z=15,x=42.8,y=72.4,place="Mudsprocket",node=179,v=1},
     {"accept",q=11158,title="Bloodfen Feathers",npc="Brogg",z=15,x=41.9,y=74,text="Brogg, Mudsprocket.",v=1},
     {"accept",q=11184,title="WANTED: Goreclaw the Ravenous",npc="Wanted Poster",z=15,x=41.8,y=73.1,text="The wanted poster in Mudsprocket.",v=1},
     {"accept",q=11217,title="Catch a Dragon by the Tail",npc="Gizzix Grimegurgle",z=15,x=41.5,y=73,text="Gizzix Grimegurgle.",v=1},

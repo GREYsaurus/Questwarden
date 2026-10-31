@@ -103,7 +103,7 @@ ns.Guides:Register({
     {"turnin",q=191,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
     {"accept",q=187,title="Tiger Mastery",npc="Ajeck Rouack",z=33,x=35.6,y=10.6,v=1},
     {"accept",q=192,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
-    {"fp",npc="Nizzle",z=33,x=38.2,y=4,place="Booty Bay",v=1},
+    {"fp",npc="Nizzle",z=33,x=38.2,y=4,place="Booty Bay",node=19,v=1},
     {"turnin",q=203,title="The Second Rebellion",npc="Sergeant Yohwa",z=33,x=38,y=3.3,v=1},
     {"turnin",q=204,title="Bad Medicine",npc="Sergeant Yohwa",z=33,x=38,y=3.3,v=1},
     {"accept",q=574,title="Special Forces",npc="Sergeant Yohwa",z=33,x=38,y=3.3,v=1},

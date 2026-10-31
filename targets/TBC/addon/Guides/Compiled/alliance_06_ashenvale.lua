@@ -20,7 +20,7 @@ ns.Guides:Register({
     {"complete",q=970,title="The Tower of Althalaxx",text="Dark Strand cultists at Ordil'Aran.",optional=true,v=1},
     {"turnin",q=970,title="The Tower of Althalaxx",npc="Delgren the Purifier",z=331,x=26.2,y=38.7,optional=true,v=1},
     {"accept",q=973,title="The Tower of Althalaxx",npc="Delgren the Purifier",z=331,x=26.2,y=38.7,optional=true,v=1},
-    {"fp",npc="Daelyshia",z=331,x=34.4,y=48,place="Astranaar",v=1},
+    {"fp",npc="Daelyshia",z=331,x=34.4,y=48,place="Astranaar",node=28,v=1},
     {"turnin",q=10752,title="Onward to Ashenvale",npc="Raene Wolfrunner",z=331,x=36.6,y=49.6,text="Astranaar.",optional=true,v=1},
     {"bind",npc="Innkeeper Kimlya",z=331,x=37,y=49.2,place="Astranaar",npcId=6738,areas={415},v=1},
     {"accept",q=991,title="Raene's Cleansing",npc="Raene Wolfrunner",z=331,x=36.6,y=49.6,text="Raene Wolfrunner, Astranaar.",v=1},
