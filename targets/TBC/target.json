@@ -1,9 +1,10 @@
 {
-  "_comment": "TEST FIXTURE, never packaged: TBCGuide 0.9.5's TBC Anniversary data and guides, kept so the engine tests (tests/run_tests.lua) exercise real data until the Classic Era data exists. Removed in Phase 2 once the tests run on Classic Era data.",
+  "_comment": "TBC Classic Anniversary: TBCGuide 0.9.5's data and guides (1-70), shipped in the same download as Classic Era (maintainer's decision, 2026-10-31). Also the data the full engine suite (tests/run_tests.lua) runs on.",
   "id": "TBC",
-  "title": "TBC Classic Anniversary 2.5.6 (test fixture)",
+  "title": "TBC Classic Anniversary 2.5.6",
   "interface": "20506",
-  "shipped": false,
+  "shipped": true,
+  "tocSuffix": "TBC",
   "require": {
     "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
     "database": true,

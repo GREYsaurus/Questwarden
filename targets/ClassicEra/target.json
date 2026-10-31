@@ -4,6 +4,8 @@
   "title": "WoW Classic Era 1.15.9",
   "interface": "11509",
   "shipped": true,
+  "_tocSuffix": "The packaged add-on is one folder for every shipped target; each gets <name>_<tocSuffix>.toc, which the client picks by game type (Blizzard's own UI ships _Vanilla.toc and _TBC.toc files with AllowLoadGameType vanilla / tbc).",
+  "tocSuffix": "Vanilla",
   "require": {
     "_comment": "Coverage the validator enforces. Switch each on when its data exists (docs/DEVELOPER.md).",
     "database": true,

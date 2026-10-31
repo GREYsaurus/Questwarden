@@ -19,7 +19,9 @@ local function check(cond, msg)
 end
 
 -- The client this target is built for (interface and version from the staged Config/Target.lua).
-local targetChunk = assert(loadfile(root .. "Config/Target.lua"))
+-- STAGE.toc / STAGE.data: the TOC to load and where the target's data sits (the packaged download keeps it
+-- under Targets/<Target>/; a single-target stage has it at the root).
+local targetChunk = assert(loadfile(root .. (STAGE.data or "") .. "Config/Target.lua"))
 local probe = {}
 targetChunk(ADDON, probe)
 local T = probe.Target
@@ -40,7 +42,7 @@ local function loadXml(path, dir)
     f:close()
     for file in string.gmatch(text, '<Script%s+file="([^"]+)"') do loadFile(dir .. file:gsub("\\", "/")) end
 end
-local toc = assert(io.open(root .. ADDON .. ".toc", "r"))
+local toc = assert(io.open(root .. (STAGE.toc or (ADDON .. ".toc")), "r"))
 local tocText = toc:read("*a")
 toc:close()
 for line in string.gmatch(tocText, "[^\r\n]+") do

@@ -36,7 +36,7 @@ local function loadXml(path, dir)
     end
 end
 
-local toc = assert(io.open(root .. ADDON .. ".toc", "r"))
+local toc = assert(io.open(root .. (STAGE.toc or (ADDON .. ".toc")), "r")) -- the packaged download names it <name>_<suffix>.toc
 for line in toc:lines() do
     line = line:gsub("\r", "")
     if line ~= "" and not line:match("^#") then

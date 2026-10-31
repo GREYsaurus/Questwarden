@@ -1,6 +1,6 @@
 # ClassicGuide
 
-A **free** leveling guide and talent add-on for **World of Warcraft Classic Era** (client 1.15.9, interface `11509`), built so it can also target **World of Warcraft: Forever** once that game is live and its data has been checked.
+A **free** leveling guide and talent add-on for **World of Warcraft Classic Era** (client 1.15.9, interface `11509`) and **TBC Classic Anniversary** (client 2.5.6, interface `20506`), in one download, built so it can also target **World of Warcraft: Forever** once that game is live and its data has been checked.
 
 ClassicGuide is a sibling of [TBCGuide](https://github.com/GREYsaurus/TBCGuide) (the TBC Classic Anniversary guide). It forks TBCGuide's engine, interface, compatibility layer, tests and build tools, and adds its own data for each game version.
 
@@ -16,14 +16,14 @@ ClassicGuide is a sibling of [TBCGuide](https://github.com/GREYsaurus/TBCGuide) 
 - **Talent guide and calculator** from client data, with leveling and level-60 builds (tank, healer and DPS where relevant), each checked point by point against the 51-point Classic trees.
 - **Quest automation** that never auto-accepts escort quests and never picks rewards for you, junk selling (off by default), orphaned-quest finder, raid markers, gear scoring with researched stat weights, auto-equip (never Bind-on-Equip), bag-addon markers, an auction house Upgrades tab, flight/inn/gossip automation, a leveling tracker, and a settings window with profiles.
 
-Wrong game version? Each build is made for one client. Loaded on another (for example the Classic Era build on a Forever client), it says so at login and loads no guides, because their quests and coordinates would be wrong there.
+**One download, two games.** The add-on folder has a `ClassicGuide_Vanilla.toc` for Classic Era and a `ClassicGuide_TBC.toc` for TBC Classic Anniversary; each client loads its own file, with its own quest data, guides (1-60 on Classic Era, TBCGuide's 1-70 routes on TBC) and talent trees. The TBC data and guides are those of TBCGuide 0.9.5; do not run TBCGuide and ClassicGuide together: both would act on the same quests and NPCs. If a build still meets the wrong client, it says so at login and loads no guides.
 
 ## Install
 
-See [INSTALL.md](INSTALL.md). In short: copy the `ClassicGuide` folder (the one containing `ClassicGuide.toc`) to
+See [INSTALL.md](INSTALL.md). In short: copy the `ClassicGuide` folder (the one containing `ClassicGuide_Vanilla.toc` and `ClassicGuide_TBC.toc`) into the game's `Interface\AddOns` folder, for example
 
 ```
-World of Warcraft\_classic_era_\Interface\AddOns\ClassicGuide\ClassicGuide.toc
+World of Warcraft\_classic_era_\Interface\AddOns\ClassicGuide\ClassicGuide_Vanilla.toc
 ```
 
 ## Use

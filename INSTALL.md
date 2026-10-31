@@ -2,15 +2,15 @@
 
 > 0.1.0 is in development and has **no guides yet** (Phase 1). These steps are for testing builds.
 
-## Players (WoW Classic Era)
+## Players (WoW Classic Era and TBC Classic Anniversary)
 
-1. Download `ClassicGuide-<version>-ClassicEra.zip` from the GitHub **Releases** page, or build it yourself (it lands in `dist/`). The zip already contains the right folder. Do **not** copy the repository's `addon/` folder: it is not a complete add-on until the build has staged it.
+1. Download `ClassicGuide-<version>.zip` from the GitHub **Releases** page, or build it yourself (it lands in `dist/`). The same zip serves both games. Do **not** copy the repository's `addon/` folder: it is not a complete add-on until the build has staged it.
 2. Close World of Warcraft.
-3. Extract the zip so that this file exists:
+3. Extract the zip into the game's `Interface\AddOns` folder, so that the `ClassicGuide` folder holds `ClassicGuide_Vanilla.toc` and `ClassicGuide_TBC.toc`. For Classic Era:
    ```
-   World of Warcraft\_classic_era_\Interface\AddOns\ClassicGuide\ClassicGuide.toc
+   World of Warcraft\_classic_era_\Interface\AddOns\ClassicGuide\ClassicGuide_Vanilla.toc
    ```
-   Create `Interface\AddOns` if it does not exist yet. The folder must be named exactly `ClassicGuide`.
+   For TBC Classic Anniversary, use that game's own `Interface\AddOns` folder (its folder name is not confirmed in this project yet). Create `Interface\AddOns` if it does not exist yet. The folder must be named exactly `ClassicGuide`. Each game loads only its own TOC and data.
 4. Start the game. On the character screen, open **AddOns** and make sure **ClassicGuide** is enabled.
 5. Log in. Type `/cg help` for commands, and `/cg debug` to see which client the build was made for.
 
@@ -36,9 +36,9 @@ powershell -ExecutionPolicy Bypass -File tools/build.ps1 all
 
 This stages the Classic Era add-on in `build/ClassicEra/ClassicGuide/`, compiles the guides, lints all Lua, validates the content, runs the route audit and the tests, writes reports to `docs/generated/ClassicEra/`, and produces:
 
-- `dist/ClassicGuide-<version>-ClassicEra.zip`: the installable add-on (licence and notices included)
+- `dist/ClassicGuide-<version>.zip`: the installable add-on for every shipped game (Classic Era and TBC Classic Anniversary), licence and notices included. `tools/build.ps1 package` builds it from both targets' staged folders and runs the tests through each TOC first
 - `dist/ClassicGuide-<version>-source.zip`: the corresponding source (shared code, all targets, tools, tests, docs)
 
 For development, point the game at the staged folder instead of copying zips: run `tools/build.ps1 stage`, then copy (or link) `build\ClassicEra\ClassicGuide` into `Interface\AddOns`.
 
-Other targets: `-Target Forever` (skeleton, never packaged) and `-Target TBC` (test fixture, never packaged). The data import steps (`fetch`, `import-questie`, `import-client`) only run when refreshing upstream data: docs/DATA_PIPELINE.md.
+Other targets: `-Target TBC` (TBC Classic Anniversary; staged in `build\TBC\ClassicGuide`) and `-Target Forever` (skeleton, never packaged). The data import steps (`fetch`, `import-questie`, `import-client`) only run when refreshing upstream data: docs/DATA_PIPELINE.md.

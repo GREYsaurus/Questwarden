@@ -30,6 +30,19 @@ Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest databa
 The data has no unused or better-fitting quests for them. About 10 more visits hold only 1-2 quests. **Westfall, Redridge and Silverpine** are not in the order, so their quests are gone (`zone-order-dropped.csv`). Hunting routes (`guides-src/routes`) were regenerated from Classic spawns (107 routes, 27 zones). The zone reviews were carried over from TBCGuide, plus Stonetalon, Azshara, Alterac, Blasted Lands and Silithus reviewed from general knowledge of the terrain (batch 8, not walked). Not timed or played |
 | Warrior Defensive Stance | **Answered from client data:** *Path of Defense* (8121), the level-10 class quest's teaching spell, teaches Defensive Stance, Taunt and Sunder Armor together. *Path of the Berserker* (8616) teaches Berserker Stance and Intercept. All are marked as quest spells | confirm in game |
 
+## TBC Classic Anniversary (2.5.6)
+
+Shipped in the same download since 2026-10-31, with TBCGuide 0.9.5's data and guides.
+
+| Item | Status | How to close it |
+|---|---|---|
+| One download for both games | `ClassicGuide_Vanilla.toc` and `ClassicGuide_TBC.toc` in one folder. Blizzard's 1.15.9 and 2.5.6 UI source ship add-ons the same way (`_Vanilla.toc` / `_TBC.toc` only, with `AllowLoadGameType`) | load the folder in both clients and check each picks its own TOC |
+| AddOns folder | unknown for the Anniversary client | confirm in game |
+| Flight graph, spirit healers | empty for TBC (`Database/Flights.lua`, `SpiritHealers.lua` stubs) | switch on `clientTables.flights` and `questie.spiritHealers` for TBC and import |
+| Rares and dangerous mobs | only the mobs quests involve (TBCGuide's import) | switch on `questie.allDangerousMobs` for TBC |
+| Hunting routes | TBCGuide's run of the generator | regenerate with `roam_propose.py TBC` |
+| Cross-check | no reference files for TBC | none planned |
+
 ## WoW: Forever (not launched; launch 2026-11-04)
 
 Everything below is **unverified** and stays `v=0` until checked in the live client.
