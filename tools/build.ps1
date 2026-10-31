@@ -426,7 +426,14 @@ function Invoke-Package {
     # GPL: the full corresponding source alongside the add-on.
     $srcStage = Join-Path $stage "$Name-source"
     New-Item -ItemType Directory -Force $srcStage | Out-Null
-    foreach ($d in "addon", "targets", "tools", "tests", "docs") { Copy-Tree (Join-Path $Root $d) (Join-Path $srcStage $d) }
+    # Only files git tracks: ignored local files (the cross-check report, caches) never reach the source zip.
+    $tracked = @(git -C $Root ls-files -- addon targets tools tests docs)
+    if ($LASTEXITCODE -ne 0 -or $tracked.Count -eq 0) { throw "git ls-files failed; the source zip is built from tracked files only." }
+    foreach ($rel in $tracked) {
+        $dest = Join-Path $srcStage $rel
+        New-Item -ItemType Directory -Force (Split-Path $dest) | Out-Null
+        Copy-Item (Join-Path $Root $rel) $dest -Force
+    }
     foreach ($f in "LICENSE", "COPYING", "NOTICE.md", "THIRD_PARTY_LICENSES.md", "README.md", "INSTALL.md", "CHANGELOG.md", ".gitignore") {
         Copy-Item (Join-Path $Root $f) (Join-Path $srcStage $f)
     }

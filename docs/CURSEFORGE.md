@@ -17,7 +17,7 @@ Sign in at <https://authors.curseforge.com> and start a new project:
 | Main category | Quests & Leveling |
 | Other categories (optional) | Map & Minimap, Class |
 | License | GNU General Public License version 3 (GPLv3) |
-| Logo / avatar | your own image (400×400); none is in the repository yet |
+| Logo / avatar | `docs/curseforge/logo.png` (400×400, original artwork: a shield holding a dotted route and a waypoint arrow; source `docs/curseforge/logo.py`) |
 | Source URL | https://github.com/GREYsaurus/Questwarden |
 | Issues URL | https://github.com/GREYsaurus/Questwarden/issues |
 
