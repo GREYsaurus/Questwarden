@@ -17,6 +17,7 @@ note From Grom'gol ride north through Duskwood (Alliance zone: keep off the road
 accept 1389 Draenethyst Crystals | Magtoor, a Lost One in the hut at the west end of the swamp. He is friendly.
 fp Stonard
 accept 1424 Pool of Tears | Fel'zerul, Stonard.
+turnin 1420 Report to Helgrum
 note The next quest, Galen's Escape, is an escort: pick it up only when you are ready to follow the NPC.
 accept 1393 Galen's Escape
 complete 1393 Galen's Escape | Escort: stay close; it fails if the NPC dies.

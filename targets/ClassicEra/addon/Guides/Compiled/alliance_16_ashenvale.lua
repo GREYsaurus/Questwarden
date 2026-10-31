@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=1009,title="Ruuzel",npc="Talen",z=331,x=14.8,y=31.3,v=1},
     {"accept",q=1054,title="Culling the Threat",npc="Raene Wolfrunner",z=331,x=36.6,y=49.6,v=1},
+    {"turnin",q=1134,title="Pridewings of Stonetalon",npc="Shindrell Swiftfire",z=331,x=34.7,y=48.8,v=1},
     {"complete",q=1009,title="Ruuzel",text="Ruuzel patrols the island off the strand.",group=2,v=1},
     {"turnin",q=1009,title="Ruuzel",npc="Talen",z=331,x=14.8,y=31.3,v=1},
     {"complete",q=1054,title="Culling the Threat",v=1},

@@ -15,9 +15,12 @@
 travel Western Plaguelands
 train
 accept 5094 A Call to Arms: The Plaguelands! [zone=Undercity] | Harbinger Balthazad in the Undercity (Warcaller Gorlach in Orgrimmar has the same quest). Needed for the Bulwark chain.
+accept 5961 The Champion of the Banshee Queen
 turnin 5094 A Call to Arms: The Plaguelands! [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
+accept 5405 Argent Dawn Commission
 turnin 6029 The Everlook Report [zone=Tirisfal Glades; optional] | Argent Officer Garush, the Bulwark (from Winterspring).
 accept 5096 Scarlet Diversions [zone=Tirisfal Glades] | High Executor Derrington, the Bulwark.
+turnin 5405 Argent Dawn Commission
 complete 5096 Scarlet Diversions | Plant the banner at the Scarlet camp in the north and kill Scarlet troops.
 turnin 5096 Scarlet Diversions [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept 5098 All Along the Watchtowers [zone=Tirisfal Glades] | High Executor Derrington.
@@ -38,9 +41,13 @@ complete 4972 Counting Out Time | Andorhal Watches from the small lockboxes in t
 turnin 4972 Counting Out Time
 turnin 5230 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 turnin 5098 All Along the Watchtowers [zone=Tirisfal Glades]
+accept 838 Scholomance
 accept 5231 Target: Dalson's Tears [zone=Tirisfal Glades]
+turnin 838 Scholomance
+accept 964 Skeletal Fragments
 complete 5231 Target: Dalson's Tears | The cauldron at Dalson's Tears.
 turnin 5231 Target: Dalson's Tears
+complete 964 Skeletal Fragments
 accept 5058 Mrs. Dalson's Diary [optional] | The diary in the Dalson farmhouse.
 turnin 5058 Mrs. Dalson's Diary [optional]
 accept 5060 Locked Away | The locked cabinet in the farmhouse.
@@ -48,6 +55,7 @@ complete 5060 Locked Away | Farmer Dalson, upstairs in the barn, drops the cabin
 turnin 5060 Locked Away
 accept 5232 Return to the Bulwark
 turnin 5232 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+turnin 964 Skeletal Fragments
 accept 5233 Target: Writhing Haunt [zone=Tirisfal Glades]
 complete 5233 Target: Writhing Haunt | The cauldron at the Writhing Haunt.
 accept 4984 The Wildlife Suffers Too | Mulgris Deepriver, the Weeping Cave.
@@ -61,9 +69,12 @@ accept 5234 Return to the Bulwark
 accept 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Mickey Levine, the Bulwark.
 complete 5901 A Plague Upon Thee | Termite barrels at the Northridge Lumber Camp.
 turnin 5901 A Plague Upon Thee [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
+accept 5902 A Plague Upon Thee
 turnin 5234 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept 5021 Better Late Than Never
 accept 6004 Unfinished Business
+turnin 5902 A Plague Upon Thee
+accept 6390 A Plague Upon Thee
 complete 6004 Unfinished Business
 turnin 5021 Better Late Than Never
 turnin 6004 Unfinished Business

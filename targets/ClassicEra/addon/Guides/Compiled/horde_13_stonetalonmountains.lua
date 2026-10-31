@@ -32,6 +32,7 @@ ns.Guides:Register({
     {"turnin",q=1512,title="Love's Gift",npc="Gan'rul Bloodeye",z=1637,x=48.2,y=45.3,text="Turned in at Orgrimmar.",classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
     {"accept",q=2458,title="Deep Cover",npc="Shenthul",z=1637,x=43,y=53.7,classes={"ROGUE"},races={"Orc","Scourge","Troll"},v=1},
     {"turnin",q=1063,title="The Elder Crone",npc="Magatha Grimtotem",z=1638,x=69.8,y=30.9,text="Turned in at Thunder Bluff.",v=1},
+    {"turnin",q=1489,title="Hamuul Runetotem",npc="Arch Druid Hamuul Runetotem",z=1638,x=78.6,y=28.6,v=1},
     {"accept",q=1064,title="Forsaken Aid",npc="Magatha Grimtotem",z=1638,x=69.8,y=30.9,optional=true,v=1},
     {"turnin",q=1064,title="Forsaken Aid",npc="Apothecary Zamah",z=1638,x=22.8,y=20.9,text="Turned in at Thunder Bluff.",optional=true,v=1},
     {"turnin",q=5642,title="Shadowguard",npc="Ur'kyo",z=1637,x=35.6,y=87.8,text="Turned in at Orgrimmar.",classes={"PRIEST"},races={"Troll"},v=1},

@@ -137,7 +137,9 @@ accept 2518 Tears of the Moon [class=Rogue]
 complete 2518 Tears of the Moon | Silvery Spinnerets drops from Lady Sathrah.
 complete 923 Tumors | Mossy Tumor drops from Elder Timberling, Timberling Mire Beast and Timberling Trampler.
 turnin 2518 Tears of the Moon | Turned in at Darnassus.
+accept 2519 The Temple of the Moon
 accept 2520 Sathrah's Sacrifice
+turnin 2519 The Temple of the Moon
 complete 2520 Sathrah's Sacrifice
 turnin 2520 Sathrah's Sacrifice | Turned in at Darnassus.
 turnin 931 The Shimmering Frond [class=Warrior,Hunter,Priest,Druid]
@@ -150,9 +152,12 @@ turnin 927 The Moss-twined Heart [class=Warrior,Hunter,Priest,Druid; optional]
 turnin 927 The Moss-twined Heart [class=Rogue; optional]
 complete 2242 Destiny Calls [class=Rogue]
 turnin Timberling Sprouts
+accept 2399 The Sprouted Fronds
 accept 941 Planting the Heart
+turnin 2399 The Sprouted Fronds
 turnin 2242 Destiny Calls [class=Rogue] | Turned in at Darnassus.
 turnin 923 Tumors | Turned in at Darnassus.
+accept 2498 Return to Denalan
 turnin 940 Teldrassil [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.
 turnin 940 Teldrassil [class=Rogue] | Turned in at Darnassus.
 turnin 935 Crown of the Earth
@@ -175,6 +180,7 @@ turnin 6102 Taming the Beast [class=Hunter]
 accept 6103 Training the Beast [class=Hunter]
 turnin 489 Seek Redemption! [optional]
 turnin 941 Planting the Heart
+turnin 2498 Return to Denalan
 turnin 5931 Back to Darnassus [class=Druid] | Turned in at Darnassus.
 accept 6001 Body and Heart [class=Druid; optional]
 turnin 6103 Training the Beast [class=Hunter] | Turned in at Darnassus.

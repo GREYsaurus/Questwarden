@@ -10,10 +10,12 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Felwood",dest="Felwood",v=1},
     {"accept",q=8461,title="Deadwood of the North",npc="Nafien",z=361,x=64.8,y=8.1,text="Nafien.",v=1},
+    {"accept",q=5083,title="Winterfall Firewater",text="Starts from the item Empty Firewater Flask.",v=1},
     {"complete",q=8461,title="Deadwood of the North",text="Deadwood furbolgs in northern Felwood.",v=1},
     {"turnin",q=8461,title="Deadwood of the North",npc="Nafien",z=361,x=64.8,y=8.1,v=1},
     {"accept",q=8465,title="Speak to Salfa",npc="Nafien",z=361,x=64.8,y=8.1,text="Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.",v=1},
     {"accept",q=4421,title="The Corruption of the Jadefire",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,text="Eridan Bluewind.",v=1},
+    {"accept",q=5249,title="To Winterspring!",npc="Ivy Leafrunner",z=361,x=51,y=81.6,v=1},
     {"complete",q=4421,title="The Corruption of the Jadefire",text="Jadefire satyrs at Jadefire Glen.",v=1},
     {"turnin",q=4421,title="The Corruption of the Jadefire",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,v=1},
     {"accept",q=4906,title="Further Corruption",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,v=1},

@@ -33,8 +33,15 @@
 # Every step of a chain is [dungeon=<instance>] (off unless "Include Dungeon Quests" is on, and never counted
 # as solo XP); steps in a later guide than the accept are [optional]; shared guides get [faction=...].
 # A chain member nothing dungeon-bound follows on from is dropped. At most MAX_PER dungeon quests per guide.
+#
+# --outdoor plans solo cross-zone chains the same way: roots are unused outdoor and talk-only quests (XP, no
+# hostile elite among the objectives, giver and finisher outdoors, not a seasonal or event quest), with their
+# unused outdoor/talk lead-ins.
+# Their steps are ordinary solo steps (no [dungeon=], not optional: every path into the turn-in guide passes
+# the pickup guide), the objectives must be reached at a model level of at least quest level - 2, and at
+# most MAX_PER of them go into one guide. Unplaced roots: docs/generated/<target>/outdoor-unplaced.csv.
 # Writes guide sources. Run guides + routes afterwards.
-# Usage: python tools/research/dungeon_cross.py ClassicEra [--dry-run]
+# Usage: python tools/research/dungeon_cross.py ClassicEra [--outdoor] [--dry-run] [--why]
 import json
 import os
 import re
@@ -46,6 +53,7 @@ from qdb import ESCORT_STEP, Target, VERB_RE, centroid, dist, escort, escort_not
 args = [x for x in sys.argv[1:] if not x.startswith("--")]
 T = Target(args[0] if args else "ClassicEra")
 DRY = "--dry-run" in sys.argv
+OUTDOOR = "--outdoor" in sys.argv
 MAX_PER, MAX_SPAN, NEAR = 6, 2, 6.0
 EXCLUDE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "quest_exclude.json"), encoding="utf-8")).get(T.name, {})
 MASK = {"Alliance": 77, "Horde": 178}
@@ -180,6 +188,12 @@ def member(qid, d):
             return None  # an NPC in a different instance than the chain's
     if m["kind"] == "outdoor" and (m["giv_in"] or m["fin_in"]):
         return None
+    if OUTDOOR and (m["kind"] == "dungeon" or m["giv_in"] or m["fin_in"]):
+        return None  # solo chains stay outdoors
+    if OUTDOOR and (f(q, 15) or 0) < 0:
+        return None  # a negative zone/sort is a category: seasonal events (-22), the Ahn'Qiraj war effort (-365)...
+    if OUTDOOR and m["kind"] == "outdoor" and any(T.hostile_elite(n) for n in ids(hsh(f(q, 12)).get("c")) + ids(hsh(f(q, 12)).get("k"))):
+        return None  # elite targets are group content
     return m
 
 
@@ -188,8 +202,9 @@ for qid, q in T.Q.items():
     if qid in used or not T.xp.get(qid):
         continue
     m = member(qid, None)
-    if m and m["kind"] == "dungeon":
+    if m and (m["kind"] != "dungeon" if OUTDOOR else m["kind"] == "dungeon"):
         pool[qid] = m
+ROOTS = set(pool)
 roots = len(pool)
 
 
@@ -207,7 +222,7 @@ def lead_ins(qid, d, depth=0):
 
 for qid in list(pool):
     lead_ins(qid, pool[qid]["d"])
-print("unused dungeon quests:", roots, "- with chain members:", len(pool))
+print("unused %s quests:" % ("outdoor/talk" if OUTDOOR else "dungeon"), roots, "- with chain members:", len(pool))
 
 report, WHY = [], {}
 for fac in ("Alliance", "Horde"):
@@ -284,7 +299,7 @@ for fac in ("Alliance", "Horde"):
                     continue
             else:
                 for g in seq:
-                    if (p["kind"] == "dungeon" and g["added"] >= MAX_PER) or req > g["max"] + 1 or lvl < g["min"] - 2:
+                    if ((p["kind"] == "dungeon" or OUTDOOR) and g["added"] >= MAX_PER) or req > g["max"] + 1 or lvl < g["min"] - 2:
                         continue
                     cand = [an for an in g["anchors"] if near(an, p["giv"])
                             and all(before(done[x], g["id"], an[0]) for x in pg)
@@ -303,7 +318,8 @@ for fac in ("Alliance", "Horde"):
             if escort(q) and p["kind"] != "dungeon":
                 c = a  # an escort starts at the giver
             elif p["kind"] == "outdoor":
-                c = next(((gid, an[0]) for gid, an in ahead(*a) if near_any(an, p["obj"])), None)
+                c = next(((gid, an[0]) for gid, an in ahead(*a) if near_any(an, p["obj"])
+                          and (not OUTDOOR or (T.level_at(mine[gid]["file"], an[0]) or 0) + 2 >= lvl)), None)
                 if not c:
                     WHY[(fac, qid)] = "objectives not visited after the pickup"
                     continue
@@ -349,28 +365,29 @@ for fac in ("Alliance", "Horde"):
                     runs[qid] = run
             for (gid, ln), k, verb in steps:
                 gg = mine[gid]
-                flags = ["dungeon=" + p["d"]]
+                flags = ["dungeon=" + p["d"]] if p["d"] else []
                 if gg["faction"] == "Both":
                     flags.append("faction=" + fac)
-                if verb != "accept" and gid != a[0]:
+                if verb != "accept" and gid != a[0] and not OUTDOOR:
                     flags.append("optional")
-                txt = "%s %d %s [%s]" % (verb, qid, q[0], "; ".join(flags))
+                txt = "%s %d %s" % (verb, qid, q[0]) + (" [%s]" % "; ".join(flags) if flags else "")
                 if escort(q) and verb == "accept":
                     gg["inserts"].append((ln, k - 0.0005, escort_note(q, flags), fac, qid))
                 if escort(q) and verb == "complete":
                     txt += " | " + ESCORT_STEP
                 gg["inserts"].append((ln, k, txt, fac, qid))
-            if p["kind"] == "dungeon" and not p["giv_in"]:
+            if (p["kind"] == "dungeon" or OUTDOOR) and not p["giv_in"]:
                 mine[a[0]]["added"] += 1
             done[qid] = [t]
             WHY.pop((fac, qid), None)
             todo.remove(qid)
             progress = True
             report.append((fac, qid, "%s: %d %s (%d XP) - %s %s; pick up in %s, turn in in %s" % (
-                fac, qid, q[0], T.xp.get(qid, 0), p["d"], p["kind"], a[0], t[0])))
+                fac, qid, q[0], T.xp.get(qid, 0), p["d"] or "outdoors", p["kind"], a[0], t[0])))
 
-# Keep the dungeon quests and every chain member something kept follows on from.
-kept = {(fac, qid) for fac, qid, _ in report if pool[qid]["kind"] == "dungeon"}
+# Keep the roots (dungeon quests, or with --outdoor the cross-zone quests) and every chain member something kept
+# follows on from.
+kept = {(fac, qid) for fac, qid, _ in report if qid in ROOTS}
 changed = True
 while changed:
     changed = False
@@ -400,13 +417,13 @@ for fac, qid, r in report:
     if (fac, qid) in kept:
         print(r)
         xp += T.xp.get(qid, 0)
-print("placed: %d dungeon quests, %d chain members, XP %d" % (
-    sum(1 for fac, qid in kept if pool[qid]["kind"] == "dungeon"), sum(1 for fac, qid in kept if pool[qid]["kind"] != "dungeon"), xp))
+print("placed: %d %s quests, %d chain members, XP %d" % (
+    sum(1 for fac, qid in kept if qid in ROOTS), "outdoor" if OUTDOOR else "dungeon", sum(1 for fac, qid in kept if qid not in ROOTS), xp))
 # Why the rest is not on a route (docs/generated/<target>/dungeon-unplaced.csv; --why also prints it).
-rows = sorted(((fac, f(pool[qid]["q"], 3) or 0, qid, pool[qid]["q"][0], pool[qid]["d"], w) for (fac, qid), w in WHY.items()
-               if pool[qid]["kind"] == "dungeon"))
+rows = sorted(((fac, f(pool[qid]["q"], 3) or 0, qid, pool[qid]["q"][0], pool[qid]["d"] or "outdoors", w) for (fac, qid), w in WHY.items()
+               if qid in ROOTS))
 if not DRY:
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "docs", "generated", T.name, "dungeon-unplaced.csv"),
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "docs", "generated", T.name, "outdoor-unplaced.csv" if OUTDOOR else "dungeon-unplaced.csv"),
               "w", encoding="utf-8", newline="") as out:
         out.write("faction,level,quest,title,dungeon,reason\n")
         for r in rows:

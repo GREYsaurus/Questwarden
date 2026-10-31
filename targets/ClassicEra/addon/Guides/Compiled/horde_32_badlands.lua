@@ -21,6 +21,7 @@ ns.Guides:Register({
     {"note",text="Kargath has no flight path until you reach it. From Hammerfall cross Thandol Span into the Wetlands and ride east through Loch Modan into the Badlands (Alliance zones: keep off the roads). Kargath is on the west edge of the Badlands.",v=1},
     {"fp",npc="Gorrik",z=3,x=4,y=44.8,place="Kargath",node=21,v=1},
     {"accept",q=2258,title="Badlands Reagent Run",npc="Jarkal Mossmeld",z=3,x=2.4,y=46.1,text="Jarkal Mossmeld, Kargath. Needs level 36.",v=1},
+    {"accept",q=1420,title="Report to Helgrum",npc="Neeka Bloodscar",z=3,x=6.5,y=47.2,v=1},
     {"accept",q=1419,title="Coyote Thieves",npc="Neeka Bloodscar",z=3,x=6.5,y=47.2,text="Neeka Bloodscar.",v=1},
     {"accept",q=710,title="Study of the Elements: Rock",npc="Lotwil Veriatus",z=3,x=26,y=44.9,text="Lotwil Veriatus, east of Kargath.",v=1},
     {"complete",q=710,title="Study of the Elements: Rock",text="Lesser Rock Elementals around Lotwil's camp.",v=1},

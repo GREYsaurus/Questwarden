@@ -18,6 +18,7 @@ ns.Guides:Register({
     {"complete",q=1719,title="The Affray",classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},v=1},
     {"turnin",q=1719,title="The Affray",npc="Klannoc Macleod",z=17,x=68.6,y=49.2,text="Turned in at The Barrens.",classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},v=1},
     {"accept",q=1145,title="The Swarm Grows",npc="Korran",z=17,x=51.1,y=29.6,v=1},
+    {"accept",q=1362,title="The Kolkar of Desolace",npc="Regthar Deathgate",z=17,x=45.3,y=28.4,v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"WARRIOR"},races={"Orc","Scourge","Tauren","Troll"},v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"ROGUE","PRIEST","MAGE","WARLOCK"},races={"Scourge"},v=1},
     {"turnin",q=1145,title="The Swarm Grows",npc="Belgrom Rockmaul",z=1637,x=75.2,y=34.2,text="Turned in at Orgrimmar.",classes={"HUNTER","ROGUE","SHAMAN","WARLOCK"},races={"Orc"},v=1},

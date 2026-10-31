@@ -13,6 +13,7 @@ ns.Guides:Register({
     {"complete",q=5341,title="Barov Family Fortune",dungeon="Scholomance",v=1},
     {"turnin",q=5341,title="Barov Family Fortune",npc="Alexi Barov",z=85,x=83.1,y=71.6,dungeon="Scholomance",v=1},
     {"accept",q=5235,title="Target: Gahrron's Withering",npc="Shadow Priestess Vandis",z=85,x=83,y=71.9,v=1},
+    {"turnin",q=6390,title="A Plague Upon Thee",npc="Mickey Levine",z=85,x=83.3,y=72.3,v=1},
     {"complete",q=5235,title="Target: Gahrron's Withering",text="The cauldron at Gahrron's Withering.",v=1},
     {"turnin",q=5235,title="Target: Gahrron's Withering",npc="Scourge Cauldron",z=28,x=62.5,y=58.5,v=1},
     {"accept",q=5236,title="Return to the Bulwark",npc="Scourge Cauldron",z=28,x=62.5,y=58.5,v=1},

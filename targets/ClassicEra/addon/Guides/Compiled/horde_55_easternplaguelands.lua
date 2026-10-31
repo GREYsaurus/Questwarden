@@ -42,6 +42,7 @@ ns.Guides:Register({
     {"accept",q=5241,title="Uncle Carlin",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
     {"complete",q=6021,title="Zaeldarr the Outcast",text="Zaeldarr in the Darrowshire crypt, west side of the village.",v=1},
     {"accept",q=6022,title="To Kill With Purpose",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,text="Nathanos Blightcaller at Marris Stead, west of Darrowshire.",v=1},
+    {"turnin",q=5961,title="The Champion of the Banshee Queen",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,v=1},
     {"accept",q=6024,title="Hameya's Plea",npc="Torn Scroll",z=139,x=27.3,y=85.2,v=1},
     {"accept",q=6133,title="The Ranger Lord's Behest",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,v=1},
     {"accept",q=6042,title="Un-Life's Little Annoyances",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,text="Nathanos Blightcaller.",v=1},

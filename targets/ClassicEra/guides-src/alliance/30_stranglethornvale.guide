@@ -26,6 +26,9 @@ turnin 340 Chapter II
 turnin 341 Chapter III
 turnin 342 Chapter IV
 accept 606 Scaring Shaky | "Sea Wolf" MacKinley.
+turnin 627 Favor for Krazek
+turnin 669 Sunken Treasure
+accept 622 Return to Corporal Kaleb
 accept 595 The Bloodsail Buccaneers
 complete 606 Scaring Shaky | Mistvale gorillas.
 turnin 606 Scaring Shaky
@@ -43,6 +46,7 @@ accept 202 Colonel Kurzen [elite; group; hc=skip]
 complete 202 Colonel Kurzen [elite; group; hc=skip]
 turnin 202 Colonel Kurzen [elite; group; hc=skip]
 accept 205 Troll Witchery
+turnin 622 Return to Corporal Kaleb
 complete 205 Troll Witchery
 turnin 205 Troll Witchery
 level 40 | Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

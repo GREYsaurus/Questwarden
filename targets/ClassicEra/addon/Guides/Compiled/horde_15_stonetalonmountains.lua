@@ -11,6 +11,7 @@ ns.Guides:Register({
     {"fly",text="Take the flight from Ratchet.",dest="Sun Rock Retreat",node=29,v=1},
     {"travel",text="Travel to Stonetalon Mountains",dest="Stonetalon Mountains",v=1},
     {"accept",q=1087,title="Cenarius' Legacy",npc="Braelyn Firehand",z=406,x=45.9,y=60.4,text="Braelyn Firehand.",v=1},
+    {"accept",q=5881,title="Calling in the Reserves",npc="Maggran Earthbinder",z=406,x=47.2,y=61.2,v=1},
     {"accept",q=6393,title="Elemental War",npc="Tsunaman",z=406,x=47.4,y=64.2,v=1},
     {"complete",q=1087,title="Cenarius' Legacy",v=1},
     {"turnin",q=1087,title="Cenarius' Legacy",npc="Braelyn Firehand",z=406,x=45.9,y=60.4,v=1},

@@ -28,6 +28,7 @@ accept 1512 Love's Gift [class=Warlock; race=Orc,Undead]
 turnin 1512 Love's Gift [class=Warlock; race=Orc,Undead] | Turned in at Orgrimmar.
 accept 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll]
 turnin 1063 The Elder Crone | Turned in at Thunder Bluff.
+turnin 1489 Hamuul Runetotem
 accept 1064 Forsaken Aid [optional]
 turnin 1064 Forsaken Aid [optional] | Turned in at Thunder Bluff.
 turnin 5642 Shadowguard [class=Priest; race=Troll] | Turned in at Orgrimmar.

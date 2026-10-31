@@ -23,6 +23,7 @@ ns.Guides:Register({
     {"complete",q=849,title="Revenge of Gann",text="Click Bael Modan Flying Machine.",optional=true,v=1},
     {"turnin",q=849,title="Revenge of Gann",npc="Gann Stonespire",z=17,x=45.9,y=77,text="Turned in at The Barrens.",optional=true,v=1},
     {"accept",q=4542,title="Message to Freewind Post",npc="Brave Moonhorn",z=400,x=32.2,y=22.2,text="Brave Moonhorn at the Great Lift, on the Barrens side.",v=1},
+    {"turnin",q=5881,title="Calling in the Reserves",npc="Grish Longrunner",z=400,x=31.9,y=21.7,v=1},
     {"turnin",q=4542,title="Message to Freewind Post",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,text="Cliffwatcher Longhorn.",v=1},
     {"accept",q=4841,title="Pacify the Centaur",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,text="Cliffwatcher Longhorn.",v=1},
     {"complete",q=4841,title="Pacify the Centaur",text="Galak centaur west of Freewind.",v=1},

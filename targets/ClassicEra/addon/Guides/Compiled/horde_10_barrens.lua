@@ -183,6 +183,7 @@ ns.Guides:Register({
     {"accept",q=3922,title="Nugget Slugs",npc="Wenikee Boltbucket",z=17,x=49,y=11.2,v=1},
     {"complete",q=3922,title="Nugget Slugs",v=1},
     {"turnin",q=3922,title="Nugget Slugs",npc="Wenikee Boltbucket",z=17,x=49,y=11.2,v=1},
+    {"accept",q=3923,title="Rilli Greasygob",npc="Wenikee Boltbucket",z=17,x=49,y=11.2,v=1},
     {"level",text="Stonetalon Mountains starts at 15. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=15,v=1},
   },
 })

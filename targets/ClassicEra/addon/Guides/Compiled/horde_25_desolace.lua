@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"note",text="From Freewind Post fly to the Crossroads and ride west through Stonetalon Mountains (or fly to Sun Rock Retreat if you have it) and take the road south into Desolace. Ghost Walker Post is in the middle of the zone.",v=1},
     {"accept",q=1365,title="Khan Dez'hepah",npc="Felgur Twocuts",z=405,x=56.2,y=59.6,text="Felgur Twocuts, Ghost Walker Post.",v=1},
+    {"turnin",q=1362,title="The Kolkar of Desolace",npc="Felgur Twocuts",z=405,x=56.2,y=59.6,v=1},
     {"accept",q=1367,title="Magram Alliance",npc="Gurda Wildmane",z=405,x=56.3,y=59.7,v=1},
     {"accept",q=1368,title="Gelkis Alliance",npc="Gurda Wildmane",z=405,x=56.3,y=59.7,v=1},
     {"complete",q=1367,title="Magram Alliance",v=1},

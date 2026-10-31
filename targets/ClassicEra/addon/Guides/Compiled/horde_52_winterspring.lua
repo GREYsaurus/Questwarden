@@ -32,6 +32,8 @@ ns.Guides:Register({
     {"complete",q=3783,title="Are We There, Yeti?",text="Thick Yeti Fur from Rogue Ice Thistle yetis on the road west of Everlook.",v=1},
     {"turnin",q=3783,title="Are We There, Yeti?",npc="Umi Rumplesnicker",z=618,x=60.9,y=37.6,text="Umi Rumplesnicker, Everlook.",v=1},
     {"turnin",q=6603,title="Trouble in Winterspring!",npc="Donova Snowden",z=618,x=31.3,y=45.2,text="Donova Snowden at the hot springs south of the tunnel exit.",v=1},
+    {"turnin",q=5083,title="Winterfall Firewater",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"accept",q=5084,title="Falling to Corruption",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"accept",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"complete",q=5082,title="Threat of the Winterfall",text="Winterfall Pathfinders, Den Watchers and Totemics in the two furbolg camps around Donova.",v=1},
     {"turnin",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},

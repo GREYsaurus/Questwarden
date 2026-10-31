@@ -110,6 +110,7 @@ turnin 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional]
 accept 6401 Kaya's Alive
 turnin 27 A Lesson to Learn [class=Druid; race=Tauren] | Turned in at Moonglade.
 accept 1061 The Spirits of Stonetalon
+turnin 3923 Rilli Greasygob
 turnin 1061 The Spirits of Stonetalon
 accept 895 WANTED: Baron Longshore
 complete 895 WANTED: Baron Longshore | Baron Longshore's Head drops from Baron Longshore.
@@ -120,6 +121,7 @@ turnin 877 The Stagnant Oasis
 accept 880 Altered Beings
 complete 880 Altered Beings | Oasis creatures.
 turnin 880 Altered Beings
+accept 1489 Hamuul Runetotem
 accept 888 Stolen Booty
 complete 888 Stolen Booty | Back to the pirate camp north of Ratchet for Tazan.
 turnin 888 Stolen Booty

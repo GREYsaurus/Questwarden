@@ -12,6 +12,7 @@ ns.Guides:Register({
     {"accept",q=642,title="The Princess Trapped",npc="Shards of Myzrael",z=45,x=62.5,y=33.7,text="The Shards of Myzrael object, south-east of Refuge Pointe.",v=1},
     {"complete",q=642,title="The Princess Trapped",text="Kill Kobolds at Drywhisker Gorge for Iridescent Shards.",v=1},
     {"turnin",q=642,title="The Princess Trapped",npc="Iridescent Shards",z=45,x=84.3,y=31,v=1},
+    {"complete",q=627,title="Favor for Krazek",v=1},
     {"accept",q=651,title="Stones of Binding",npc="Iridescent Shards",z=45,x=84.3,y=31,v=1},
     {"fp",npc="Cedrik Prose",z=45,x=45.7,y=46.1,place="Refuge Pointe",node=16,v=1},
     {"accept",q=684,title="Wanted!  Marez Cowl",npc="Wanted Board",z=45,x=46,y=47.8,optional=true,elite=true,group=3,v=1},
@@ -60,6 +61,7 @@ ns.Guides:Register({
     {"turnin",q=666,title="Sunken Treasure",npc="Doctor Draxlegauge",z=45,x=33.9,y=80.4,v=1},
     {"accept",q=668,title="Sunken Treasure",npc="Doctor Draxlegauge",z=45,x=33.9,y=80.4,v=1},
     {"turnin",q=668,title="Sunken Treasure",npc="Shakes O'Breen",z=45,x=32.3,y=81.4,v=1},
+    {"accept",q=669,title="Sunken Treasure",npc="Shakes O'Breen",z=45,x=32.3,y=81.4,v=1},
     {"level",text="Dustwallow Marsh starts at 38. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=38,v=1},
   },
 })

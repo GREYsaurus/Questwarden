@@ -16,6 +16,7 @@ travel Arathi Highlands
 accept 642 The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
 complete 642 The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent Shards.
 turnin 642 The Princess Trapped
+complete 627 Favor for Krazek
 accept 651 Stones of Binding
 fp Refuge Pointe
 accept 684 Wanted!  Marez Cowl [elite; group=3; optional]
@@ -64,4 +65,5 @@ complete 666 Sunken Treasure
 turnin 666 Sunken Treasure
 accept 668 Sunken Treasure
 turnin 668 Sunken Treasure
+accept 669 Sunken Treasure
 level 38 | Dustwallow Marsh starts at 38. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -19,7 +19,12 @@ turnin 8460 Timbermaw Ally
 accept 5155 Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.
 accept 5156 Verifying the Corruption | Taronn Redfeather.
 accept 4505 Well of Corruption | Winna Hazzard, Bloodvenom Post.
+accept 5202 A Strange Red Key
 accept 6162 A Husband's Last Battle
+turnin 5202 A Strange Red Key
+note The next quest, Rescue From Jaedenar, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5203 Rescue From Jaedenar
+complete 5203 Rescue From Jaedenar | Escort: stay close; it fails if the NPC dies.
 complete 4505 Well of Corruption | Fill the flask at the Irontree moonwell.
 complete 5155 Forces of Jaedenar | Jaedenar cultists.
 complete 5156 Verifying the Corruption | Explore north of Shatter Scar Vale.
@@ -30,11 +35,13 @@ turnin 4506 Corrupted Sabers
 complete 6162 A Husband's Last Battle
 turnin 6162 A Husband's Last Battle
 turnin 5155 Forces of Jaedenar
+turnin 5203 Rescue From Jaedenar
 accept 5157 Collection of the Corrupt Water
 complete 5157 Collection of the Corrupt Water | The corrupted moonwell in Jaedenar.
 turnin 5157 Collection of the Corrupt Water
 turnin 5156 Verifying the Corruption
 accept 8461 Deadwood of the North | Nafien.
+accept 5083 Winterfall Firewater
 complete 8461 Deadwood of the North | Deadwood furbolgs.
 turnin 8461 Deadwood of the North
 accept 8465 Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.

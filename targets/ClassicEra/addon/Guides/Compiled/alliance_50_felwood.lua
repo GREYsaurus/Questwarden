@@ -27,6 +27,7 @@ ns.Guides:Register({
     {"turnin",q=5882,title="Salve via Hunting",npc="Arathandris Silversky",z=361,x=54.2,y=86.8,v=1},
     {"accept",q=8462,title="Speak to Nafien",npc="Grazle",z=361,x=50.9,y=85,v=1},
     {"turnin",q=8462,title="Speak to Nafien",npc="Nafien",z=361,x=64.8,y=8.1,v=1},
+    {"turnin",q=5084,title="Falling to Corruption",npc="Deadwood Cauldron",z=361,x=60.2,y=5.8,v=1},
     {"level",text="Burning Steppes starts at 55. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=55,v=1},
   },
 })

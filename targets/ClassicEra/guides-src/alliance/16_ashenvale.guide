@@ -16,6 +16,7 @@ travel Ashenvale
 train
 accept 1009 Ruuzel
 accept 1054 Culling the Threat
+turnin 1134 Pridewings of Stonetalon
 complete 1009 Ruuzel [group=2] | Ruuzel patrols the island off the strand.
 turnin 1009 Ruuzel
 complete 1054 Culling the Threat

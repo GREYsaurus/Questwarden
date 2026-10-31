@@ -64,6 +64,7 @@ accept 293 Cleansing the Eye [optional]
 accept 322 Blessed Arm [optional]
 turnin 321 Lightforge Iron [optional]
 turnin 686 A King's Tribute | Turned in at Ironforge.
+accept 525 Further Mysteries
 complete 1050 Mythology of the Titans [dungeon=Scarlet Monastery]
 complete 2924 Essential Artificials [dungeon=Gnomeregan]
 complete 2929 The Grand Betrayal [dungeon=Gnomeregan]
@@ -73,5 +74,6 @@ turnin 2929 The Grand Betrayal [dungeon=Gnomeregan]
 complete 659 Hints of a New Plague? | Forsaken courier on the road (patrols).
 turnin 659 Hints of a New Plague?
 accept 1658 Crashing the Wickerman Festival
+turnin 525 Further Mysteries
 turnin 1658 Crashing the Wickerman Festival
 level 32 | Arathi Highlands starts at 32. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -159,7 +159,13 @@ accept 5635 Desperate Prayer [class=Priest] | Priestess Josetta, Goldshire.
 accept 1685 Gakin's Summons [class=Warlock] | Remen Marcot, Goldshire.
 travel Stormwind City
 turnin 61 Shipment to Stormwind | Morgan Pestle, Trade District.
+accept 332 Wine Shop Advert
+accept 333 Harlan Needs a Resupply
+accept 334 Package for Thurman
 turnin 1097 Elmore's Task | Grimand Elmore, Dwarven District.
+turnin 332 Wine Shop Advert
+turnin 333 Harlan Needs a Resupply
+turnin 334 Package for Thurman
 turnin 1638 A Warrior's Training [class=Warrior] | Harry Burlguard, Old Town.
 accept 1639 Bartleby the Drunk [class=Warrior]
 turnin 1639 Bartleby the Drunk [class=Warrior] | Bartleby is just outside.

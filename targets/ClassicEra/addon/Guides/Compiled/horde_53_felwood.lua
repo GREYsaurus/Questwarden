@@ -11,6 +11,7 @@ ns.Guides:Register({
     {"travel",text="Travel to Felwood",dest="Felwood",v=1},
     {"accept",q=8462,title="Speak to Nafien",npc="Grazle",z=361,x=50.9,y=85,v=1},
     {"turnin",q=8462,title="Speak to Nafien",npc="Nafien",z=361,x=64.8,y=8.1,v=1},
+    {"turnin",q=5084,title="Falling to Corruption",npc="Deadwood Cauldron",z=361,x=60.2,y=5.8,v=1},
     {"fp",npc="Brakkar",z=361,x=34.4,y=54,place="Bloodvenom Post",node=48,v=1},
     {"accept",q=4102,title="Cleansing Felwood",npc="Maybess Riverbreeze",z=361,x=46.8,y=83.1,text="Maybess Riverbreeze, Emerald Sanctuary.",v=1},
     {"complete",q=4102,title="Cleansing Felwood",text="Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.",v=1},

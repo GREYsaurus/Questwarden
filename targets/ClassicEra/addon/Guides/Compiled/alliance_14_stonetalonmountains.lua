@@ -19,6 +19,8 @@ ns.Guides:Register({
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=1093,title="Super Reaper 6000",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
+    {"turnin",q=1070,title="On Guard in Stonetalon",npc="Kaela Shadowspear",z=406,x=59.9,y=66.8,v=1},
+    {"complete",q=1134,title="Pridewings of Stonetalon",v=1},
     {"accept",q=1085,title="On Guard in Stonetalon",npc="Kaela Shadowspear",z=406,x=59.9,y=66.8,v=1},
     {"accept",q=1090,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
     {"accept",q=1057,title="Reclaiming the Charred Vale",npc="Keeper Albagorm",z=406,x=37.1,y=8.1,v=1},

@@ -16,6 +16,7 @@ travel Desolace
 train
 note From Freewind Post fly to the Crossroads and ride west through Stonetalon Mountains (or fly to Sun Rock Retreat if you have it) and take the road south into Desolace. Ghost Walker Post is in the middle of the zone.
 accept 1365 Khan Dez'hepah | Felgur Twocuts, Ghost Walker Post.
+turnin 1362 The Kolkar of Desolace
 accept 1367 Magram Alliance
 accept 1368 Gelkis Alliance
 complete 1367 Magram Alliance

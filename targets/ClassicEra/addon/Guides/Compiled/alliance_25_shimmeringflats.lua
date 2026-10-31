@@ -10,6 +10,7 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Thousand Needles",dest="Thousand Needles",v=1},
     {"accept",q=1105,title="Hardened Shells",npc="Wizzle Brassbolts",z=400,x=78.1,y=77.1,v=1},
+    {"accept",q=5762,title="Hemet Nesingwary",npc="Kravel Koalbeard",z=400,x=77.8,y=77.3,v=1},
     {"accept",q=1104,title="Salt Flat Venom",npc="Fizzle Brassbolts",z=400,x=78.1,y=77.1,v=1},
     {"accept",q=1110,title="Rocket Car Parts",npc="Kravel Koalbeard",z=400,x=77.8,y=77.3,v=1},
     {"accept",q=1176,title="Load Lightening",npc="Pozzik",z=400,x=80.2,y=75.9,v=1},

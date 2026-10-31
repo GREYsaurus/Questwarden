@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"fp",npc="Urda",z=45,x=73,y=32.7,place="Hammerfall",node=17,v=1},
     {"accept",q=655,title="Hammerfall",npc="Gor'mul",z=45,x=72.6,y=33.9,text="Gor'mul.",v=1},
+    {"turnin",q=638,title="Trollbane",npc="Zengu",z=45,x=73.8,y=34,v=1},
     {"accept",q=642,title="The Princess Trapped",npc="Shards of Myzrael",z=45,x=62.5,y=33.7,text="The Shards of Myzrael, south-east.",v=1},
     {"accept",q=671,title="Foul Magics",npc="Tor'gan",z=45,x=74.7,y=36.3,v=1},
     {"turnin",q=655,title="Hammerfall",npc="Tor'gan",z=45,x=74.7,y=36.3,text="Tor'gan.",v=1},

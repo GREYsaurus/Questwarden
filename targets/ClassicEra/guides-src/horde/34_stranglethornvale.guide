@@ -17,10 +17,14 @@ travel Stranglethorn Vale
 train
 accept 621 Zanzil's Secret
 accept 617 Akiris by the Bundle
+accept 8552 The Monogrammed Sash
 complete 621 Zanzil's Secret
 complete 617 Akiris by the Bundle
 accept 609 Voodoo Dues
+turnin 8552 The Monogrammed Sash
+accept 8553 The Captain's Cutlass
 turnin 621 Zanzil's Secret
+turnin 8553 The Captain's Cutlass
 turnin 617 Akiris by the Bundle
 complete 609 Voodoo Dues
 turnin 609 Voodoo Dues

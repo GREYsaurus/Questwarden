@@ -13,6 +13,7 @@ ns.Guides:Register({
     {"accept",q=1389,title="Draenethyst Crystals",npc="Magtoor",z=8,x=26,y=31.4,text="Magtoor, a Lost One in the hut at the west end of the swamp. He is friendly.",v=1},
     {"fp",npc="Breyk",z=8,x=46.1,y=54.8,place="Stonard",node=56,v=1},
     {"accept",q=1424,title="Pool of Tears",npc="Fel'zerul",z=8,x=47.9,y=54.8,text="Fel'zerul, Stonard.",v=1},
+    {"turnin",q=1420,title="Report to Helgrum",npc="Helgrum the Swift",z=8,x=47.7,y=55.2,v=1},
     {"note",text="The next quest, Galen's Escape, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
     {"accept",q=1393,title="Galen's Escape",npc="Galen Goodward",z=8,x=65.5,y=18.2,v=1},
     {"complete",q=1393,title="Galen's Escape",text="Escort: stay close; it fails if the NPC dies.",v=1},
