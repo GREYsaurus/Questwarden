@@ -14,7 +14,9 @@
 --
 -- Signals: GetBuildInfo's interface number and version string, compared with the target's
 -- minInterface/maxInterface and versionPrefix. A client that reports no interface (0) only gets a
--- warning. WOW_PROJECT_ID and C_GameRules (Hardcore) are not on the API allowlist yet.
+-- warning. WOW_PROJECT_ID tells Forever apart: WOW_PROJECT_CAMELOT exists only on the Forever client, so a
+-- Forever client running a Classic Era or TBC build (or the reverse) is refused even if interface numbers
+-- overlap.
 
 local _, ns = ...
 
@@ -36,6 +38,14 @@ function TC:Evaluate()
             ns.name, T.name, T.interface, tostring(version), iface, ns.name)
         return false
     end
+    local forever = TC.IsForeverClient()
+    if forever ~= nil and forever ~= (T.id == "Forever") then
+        self.ok = false
+        self.reason = string.format("this %s build is for %s, but this client is %s. "
+            .. "No guides were loaded, because their quests and coordinates would be wrong here.",
+            ns.name, T.name, forever and "World of Warcraft: Forever" or "not World of Warcraft: Forever")
+        return false
+    end
     if T.verified == false then
         self.ok = false
         self.reason = string.format("%s data for %s has not been verified in the live game yet, so no guides are loaded. "
@@ -43,6 +53,12 @@ function TC:Evaluate()
         return false
     end
     return true
+end
+
+-- true on the Forever client, false on another client that reports a project id, nil when it cannot tell.
+function TC.IsForeverClient()
+    if type(WOW_PROJECT_ID) ~= "number" then return nil end
+    return WOW_PROJECT_CAMELOT ~= nil and WOW_PROJECT_ID == WOW_PROJECT_CAMELOT
 end
 
 -- One chat line at login (Core/Boot.lua), and the same text in /cg debug.
@@ -53,8 +69,14 @@ end
 
 TC:Evaluate()
 
--- Is this character on the Hardcore ruleset? The player says so in Settings -> Guide Routing (per character).
--- Detecting Hardcore realms needs C_GameRules.IsHardcoreActive, which is not on the API allowlist yet.
+-- Is this character on the Hardcore ruleset? On a Hardcore realm the client says so (C_GameRules.IsHardcoreActive);
+-- anywhere else the player can still choose it in Settings -> Guide Routing (per character), for self-imposed
+-- Hardcore runs. Only targets with a Hardcore ruleset (Target.hardcore) have the Hardcore route flavor.
+function TC.HardcoreRealm()
+    return C_GameRules and type(C_GameRules.IsHardcoreActive) == "function" and C_GameRules.IsHardcoreActive() == true or false
+end
+
 function ns:IsHardcore()
-    return ns.Target.hardcore and ns.char and ns.char.hardcore == true or false
+    if not ns.Target.hardcore then return false end
+    return TC.HardcoreRealm() or (ns.char and ns.char.hardcore == true) or false
 end

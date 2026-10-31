@@ -256,12 +256,29 @@ if STAGE.target == "ClassicEra" then
     ns.Engine:Refresh()
     check(ns:IsHardcore() and ns.Engine.status[hogger] == "na", "Hardcore route leaves the Hogger pickup out")
     ns.char.hardcore = false
+    -- A Hardcore realm turns the Hardcore route on without the setting (C_GameRules.IsHardcoreActive).
+    local realGR = C_GameRules
+    C_GameRules = { IsHardcoreActive = function() return true end }
+    check(ns:IsHardcore(), "a Hardcore realm turns the Hardcore route on")
+    C_GameRules = { IsHardcoreActive = function() return false end }
+    check(not ns:IsHardcore(), "a normal realm leaves it to the setting")
+    C_GameRules = realGR
     ns.db.profile.showElite = false
     ns.Engine:Refresh()
 end
 
 -- Detection ---------------------------------------------------------------------------------------
 local TC = ns.TargetCheck
+-- WOW_PROJECT_CAMELOT exists only on the Forever client.
+do
+    local pid, cam = WOW_PROJECT_ID, WOW_PROJECT_CAMELOT
+    WOW_PROJECT_ID, WOW_PROJECT_CAMELOT = 18, 18
+    local onForever = TC:Evaluate()
+    WOW_PROJECT_ID, WOW_PROJECT_CAMELOT = 2, nil
+    check(TC.IsForeverClient() == false and (ns.Target.id == "Forever" or not onForever), "a non-Forever build refuses the Forever client (project id)")
+    WOW_PROJECT_ID, WOW_PROJECT_CAMELOT = pid, cam
+    TC:Evaluate()
+end
 if ns.Target.verified then
     check(TC.ok, "the target's own client is accepted")
     check(ns.Guides.refused == 0, "no guides refused on the right client")

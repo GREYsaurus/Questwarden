@@ -311,3 +311,42 @@ ChatEdit_InsertLink               # shift-click an active item to link it in cha
 UnitIsGhost                       # corpse waypoint: only while a ghost (Core/Corpse.lua)
 C_DeathInfo                       # corpse position (Core/Corpse.lua)
 C_DeathInfo.GetCorpseMapPosition  # corpse position on a uiMap, nil when the corpse is not on it
+
+# --- reached by name through Compat.has / guarded calls (inherited from TBCGuide; approved by the maintainer 2026-10-31) ---
+C_AddOns.GetAddOnMetadata         # modern namespace; add-on version (guarded, falls back to GetAddOnMetadata)
+GetAddOnMetadata                  # core; fallback
+C_QuestLog.IsQuestFlaggedCompleted# classic; completed-quest check (guarded)
+IsQuestFlaggedCompleted           # core; fallback
+C_Container.GetContainerNumSlots  # classic; bag size (guarded)
+GetContainerNumSlots              # core; fallback
+C_Container.UseContainerItem      # classic; use a bag item (guarded)
+UseContainerItem                  # core; fallback
+C_Container.GetContainerItemQuestInfo# classic; quest items in bags (guarded)
+GetContainerItemQuestInfo         # core; fallback
+C_Container.PickupContainerItem   # classic; auto-equip picks the item up (guarded)
+C_Container.GetContainerNumFreeSlots# classic; free bag space for auto-equip (guarded)
+C_Container.GetItemCooldown       # classic; active-item cooldowns (guarded)
+GetItemCooldown                   # core; fallback
+C_Item.GetItemInfo                # modern namespace; item info (guarded, falls back to GetItemInfo)
+GetItemInfo                       # core; fallback
+C_Item.GetItemStats               # modern namespace; gear scoring (guarded); check in game how Classic reports hit and crit
+GetItemStats                      # core; fallback
+C_Item.RequestLoadItemDataByID    # modern namespace; preload item data (guarded)
+C_Item.GetItemSpell               # modern namespace; active items (guarded)
+GetItemSpell                      # core; fallback
+C_Item.GetItemIconByID            # modern namespace; active-item icons (guarded)
+GetItemIcon                       # core; fallback
+GetCombatRating                   # TBC+; gear scoring on TBC (guarded: not on Classic Era)
+GetInventoryItemLink              # core; equipped item links (guarded)
+GetInventoryItemID                # core; equipped item ids (guarded)
+IsEquippableItem                  # core; upgrade checks (guarded)
+EquipCursorItem                   # core; auto-equip (guarded)
+CanSendAuctionQuery               # core; auction Upgrades tab (guarded)
+GetNumAuctionItems                # core; auction Upgrades tab (guarded)
+GetAuctionItemInfo                # core; auction Upgrades tab (guarded)
+GetAuctionItemLink                # core; auction Upgrades tab (guarded)
+# --- client and ruleset detection (approved by the maintainer 2026-10-31; Blizzard UI source 1.15.9, 2.5.6, Forever 1.60.1) ---
+WOW_PROJECT_ID                    # core constant; which game this client is
+WOW_PROJECT_CAMELOT               # Forever only (= 18); nil on other clients, always checked
+C_GameRules                       # classic namespace; present on Classic Era, TBC Anniversary and Forever
+C_GameRules.IsHardcoreActive      # true on a Hardcore realm (guarded)
