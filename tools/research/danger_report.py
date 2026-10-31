@@ -47,10 +47,12 @@ def zone_sizes():
 SIZE = zone_sizes()
 PATROL = {k for k, v in T._raw("NpcDB.lua", "QuestieDB.npcData").items() if len(v) > 7 and v[7]}
 
-# zone -> [(npc id, (x, y))] for every hostile mob with spawns
+# zone -> [(npc id, (x, y))] for every hostile mob with spawns, plus rares friendly to one faction only (Watch
+# Commander Zalaphil is dangerous to Horde). Other one-faction NPCs (flight masters, guards in their towns) are
+# not route dangers. Each step keeps the ones hostile to its guide's faction.
 BY_ZONE = {}
 for nid, r in T.N.items():
-    if r[6]:
+    if r[6] and ((r[3] or 0) not in (2, 4) or ("A" in r[6] and "H" in r[6])):
         continue
     for z, pts in hsh(r[5]).items():
         for p in arr(pts):
@@ -105,8 +107,9 @@ for gid, g in sorted(T.guides.items()):
             continue
         mine = own_npcs(T.Q.get(s["q"]))
         best = {}
+        side = g["faction"][0]
         for nid, p in BY_ZONE.get(s["z"], ()):
-            if nid in mine:
+            if nid in mine or side in (T.N[nid][6] or ""):
                 continue
             d = yd(size, (s["x"], s["y"]), p)
             if d > RADIUS or (nid in best and best[nid] <= d):

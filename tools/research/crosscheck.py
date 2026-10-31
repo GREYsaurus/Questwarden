@@ -170,7 +170,7 @@ if txt is not None:
     N = T._bundled("Npcs.lua", "N")
     mine = {}  # our zone name -> bundled hostile rare names
     for nid, r in N.items():
-        if r[3] in (2, 4) and not r[6]:
+        if r[3] in (2, 4) and r[6] != "AH":  # rares friendly to one faction are kept for the other
             # zone 1 (Dun Morogh) is written as the table's array part: {{x,y},...} instead of [1]=...
             for z in list(hsh(r[5])) + list(range(1, len(arr(r[5])) + 1)):
                 mine.setdefault(ZNAME.get(z, str(z)), set()).add(r[0])

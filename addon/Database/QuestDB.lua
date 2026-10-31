@@ -156,6 +156,15 @@ end
 
 -- NPCs / objects / items -----------------------------------------------------------------------
 
+-- True when an NPC record's friendlyToFaction ("A", "H", "AH" or nil) does not include the player's
+-- faction: a rare friendly to Alliance only is still dangerous to a Horde player.
+function DB.HostileToPlayer(friendly)
+    if not friendly then return true end
+    local f = ns.Compat.PlayerInfo().faction
+    local side = (f == "Alliance" and "A") or (f == "Horde" and "H") or nil
+    return side ~= nil and not string.find(friendly, side, 1, true)
+end
+
 function DB.GetNPCByID(npcId)
     local r = npcId and QDB.npcs[npcId]
     if not r then return nil end

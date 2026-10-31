@@ -222,7 +222,8 @@ function A:OnUnitSeen(unit)
     end
     if p.tipsEnabled and p.trackRares and guid and not self.rareSeen[guid] then
         local npc = ns.DB.GetNPCByID(id)
-        if npc and (npc.rank == 2 or npc.rank == 4) and not (p.skipKilledRares and ns.char.killedRares[id]) then
+        if npc and (npc.rank == 2 or npc.rank == 4) and ns.DB.HostileToPlayer(npc.friendly)
+            and not (p.skipKilledRares and ns.char.killedRares[id]) then
             self.rareSeen[guid] = true
             ns:Print("|cffff7744Rare:|r " .. tostring(npc.name) .. " is nearby.")
             if PlaySound and SOUNDKIT and SOUNDKIT.RAID_WARNING then PlaySound(SOUNDKIT.RAID_WARNING) end

@@ -219,6 +219,20 @@ if STAGE.target == "ClassicEra" then
     local firstMob
     for _, e in ipairs(ns.MapExtras:Index()[4] or {}) do if e.kind ~= "spirit" then firstMob = e break end end
     check(firstMob and firstMob.kind == "rare", "map pins list rares before elites (Blasted Lands)")
+    -- A rare friendly to one faction only is a danger to the other (Watch Commander Zalaphil, Durotar).
+    local function zalaphilPinned()
+        ns.MapExtras.byZone = nil
+        for _, e in ipairs(ns.MapExtras:Index()[14] or {}) do if e.id == 5809 then return true end end
+        return false
+    end
+    local realFaction = MOCK.player.faction
+    MOCK.player.faction = "Horde"
+    local forHorde = zalaphilPinned() and ns.DB.HostileToPlayer("A")
+    MOCK.player.faction = "Alliance"
+    local forAlliance = zalaphilPinned() or ns.DB.HostileToPlayer("A")
+    MOCK.player.faction = realFaction
+    ns.MapExtras.byZone = nil
+    check(ns.QDB.npcs[5809] and forHorde and not forAlliance, "a rare friendly to Alliance only is pinned for Horde, not Alliance")
     local hexx
     for _, e in ipairs(ns.MapExtras:Index()[47] or {}) do if e.id == 7995 then hexx = e end end
     check(hexx and hexx.patrols, "Vile Priestess Hexx is pinned and marked as patrolling")

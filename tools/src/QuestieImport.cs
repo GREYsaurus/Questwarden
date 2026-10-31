@@ -375,7 +375,9 @@ namespace GuideTools
             }
 
             // Dangerous mobs (target.json "questie.allDangerousMobs"): every hostile elite, rare elite and rare
-            // with spawns, for the map pins and rare alerts, whether or not a quest involves it.
+            // with spawns, for the map pins and rare alerts, whether or not a quest involves it. Rares friendly to one
+            // faction only (Watch Commander Zalaphil) are kept too: they are hostile to the other one. Rares marked
+            // friendly to both are left out (likely data errors, checked in game: docs/DATA_GAPS.md).
             if (Ctx.QuestieAllDangerousMobs)
             {
                 int added = 0;
@@ -383,7 +385,8 @@ namespace GuideTools
                 {
                     int rank = QuestieData.N(kv.Value, QuestieData.N_RANK);
                     if (rank != 1 && rank != 2 && rank != 4) continue;
-                    if (QuestieData.S(kv.Value, QuestieData.N_FRIENDLY) != null) continue;
+                    string fr = QuestieData.S(kv.Value, QuestieData.N_FRIENDLY);
+                    if (fr != null && (rank == 1 || (fr.Contains("A") && fr.Contains("H")))) continue;
                     if (QuestieData.T(kv.Value, QuestieData.N_SPAWNS) == null) continue;
                     if (needNpc.Add(kv.Key)) added++;
                 }

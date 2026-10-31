@@ -30,7 +30,10 @@ function MX:Index()
     local function add(zone, e) z[zone] = z[zone] or {} table.insert(z[zone], e) end
     for id, r in pairs(QDB.npcs) do
         local rank = r[N.RANK] or 0
-        if (rank == 1 or rank == 2 or rank == 4) and not r[N.FRIENDLY] then
+        -- Elites hostile to everyone; rares also when friendly to the other faction only (Watch Commander
+        -- Zalaphil for a Horde player). One-faction elites are guards and flight masters, not field dangers.
+        local fr = r[N.FRIENDLY]
+        if (rank == 1 and not fr) or ((rank == 2 or rank == 4) and ns.DB.HostileToPlayer(fr)) then
             for zone, pts in pairs(r[N.SPAWNS] or {}) do
                 for i, p in ipairs(pts) do
                     if i > 3 then break end -- a few points per mob type are enough on a map

@@ -129,7 +129,7 @@ None of this has been tested in the game client yet.
 ### Tips
 - **Drowning:** warning, sound, threshold, screen-edge flash.
 - **Emergency Actions:** low-health warning, threshold, sound, flash.
-- **Rare mobs:** *Track Rare Mobs* gives a chat alert and sound when a rare's nameplate appears (rares from the bundled database: on Classic Era, every hostile rare). It can skip rares this character already killed.
+- **Rare mobs:** *Track Rare Mobs* gives a chat alert and sound when a rare's nameplate appears (rares from the bundled database: on Classic Era, every rare hostile to your faction). It can skip rares this character already killed.
 - **Map pins:** both come from the bundled data. On Classic Era it has every hostile elite and rare with spawns; on other targets, only quest NPCs and mobs. Rares are listed first, and patrolling mobs say so in their tooltip.
   - *Track Mobs on Map*: world map pins for elite and rare mobs in the zone shown.
   - *Track Treasures*: pins for treasure chests.

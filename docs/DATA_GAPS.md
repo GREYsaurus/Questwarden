@@ -50,7 +50,7 @@ Classic Era, 2026-10-31: `tools/build.ps1 crosscheck -Reference <folder>` agains
 
 | Area | Disagreement | What we do |
 |---|---|---|
-| Rares | 27 rares QuestieDB marks friendly are left out of our pins and alerts. 17 are friendly to one faction only (Watch Commander Zalaphil, Tamra Stormpike...): they are hostile to the other faction | **our bug:** the "hostile" rule must mean hostile to the player's faction. The 10 marked friendly to both (7:XT, Cranky Benj...) look like QuestieDB errors: check in game |
+| Rares | 27 rares QuestieDB marks friendly were left out of our pins and alerts. 17 are friendly to one faction only (Watch Commander Zalaphil, Tamra Stormpike...) and hostile to the other | **fixed (our bug):** rares now count when hostile to the player's faction; 12 more bundled. The 10 marked friendly to both (7:XT, Cranky Benj...) look like QuestieDB errors and stay out: check in game |
 | Rares | 53 have no map position in QuestieDB (no spawns, or inside an instance); 2 sit in a neighbouring zone (Narillasanz, Volchan) | nothing to fix from our sources; check the two in game |
 | Spirit healers | 14 positions only in the reference, among them Stormwind, Ironforge and Orgrimmar; 7 of our 84 only in ours | QuestieDB lacks some graveyards: check in game, or capture (Phase 3) |
 | Flight nodes | none missing; ours also has the druid-only Nighthaven nodes and Plaguewood Tower | client tables are authoritative |
