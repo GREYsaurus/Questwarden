@@ -151,6 +151,28 @@ if STAGE.target == "ClassicEra" then
     check(#missLvl == 0, "every class with a sourced leveling priority has a leveling profile (missing: " .. table.concat(missLvl, ",") .. ")")
     local wp = ns.Gear:SelectProfile({ class = "WARRIOR", level = 20 })
     check(wp and wp.id == "warrior_leveling_early", "a level-20 warrior gets the early leveling profile (" .. tostring(wp and wp.id) .. ")")
+    -- Trainer notes point at real Classic trainer data (Classes/TrainingNotes.lua, TrainingData.lua).
+    local byId, byName, missing = {}, {}, {}
+    for cls, list in pairs(ns.TrainingData.classes) do
+        byId[cls], byName[cls] = {}, {}
+        for _, r in ipairs(list) do byId[cls][r[1]] = true; byName[cls][r[5]] = true end
+    end
+    for cls, q in pairs(ns.TrainingNotes.quest) do
+        for sid in pairs(q) do if not (byId[cls] and byId[cls][sid]) then missing[#missing + 1] = cls .. " " .. sid end end
+    end
+    for _, key in ipairs({ "important", "optional" }) do
+        for cls, list in pairs(ns.TrainingNotes[key]) do
+            for _, n in ipairs(list) do if not (byName[cls] and byName[cls][n]) then missing[#missing + 1] = cls .. " " .. n end end
+        end
+    end
+    check(#missing == 0, "every trainer-note spell exists in the Classic trainer data (missing: " .. table.concat(missing, ", ") .. ")")
+    check(ns.TrainingNotes.quest.WARRIOR and ns.TrainingNotes.quest.WARRIOR[71] ~= nil, "Defensive Stance is a warrior quest spell")
+    check(not byName.DRUID["Mangle"], "Mangle (not in Classic Era) is left out of the druid trainer data")
+    -- Escort safeguard list (Database/EscortQuests.lua): never accepted automatically.
+    local nEsc = 0
+    for _ in pairs(ns.EscortQuests) do nEsc = nEsc + 1 end
+    check(nEsc >= 40 and ns.EscortQuests[155] and ns.EscortQuests[2078], "Classic escort list built (" .. nEsc .. " quests, incl. Defias Traitor and Gyromast)")
+    check(ns.DB.GetEscortStatus(1560) == true, "Tooga's Quest is treated as an escort")
     -- Hardcore flavor: Hogger (level 11 elite) is not on the Hardcore route.
     local g = ns.Guides:Get("A_Human_Elwynn")
     local hogger

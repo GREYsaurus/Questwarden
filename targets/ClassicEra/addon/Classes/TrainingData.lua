@@ -8,7 +8,6 @@ ns.TrainingData = {
     DRUID = {
       {8921,4,1,0,"Moonfire",0,0},
       {774,4,1,0,"Rejuvenation",0,0},
-      {22570,6,1,0,"Mangle",0,0},
       {467,6,1,0,"Thorns",0,0},
       {5177,6,2,5176,"Wrath",0,0},
       {339,8,1,0,"Entangling Roots",0,0},

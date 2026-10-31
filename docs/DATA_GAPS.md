@@ -10,7 +10,7 @@ Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest databa
 |---|---|---|
 | Quest, NPC, object, item and zone data | **Built**: 4,257 quests, 4,835 NPCs, 852 objects, 2,865 items; 3,041 corrections applied | 23 corrections skipped (profession specializations and one rank expression; `docs/generated/ClassicEra/questie-import.log`); only quest corrections are applied, not QuestieDB's NPC, object or item fixes |
 | Talent trees (51 points), race/class table | **Built**: 432 talents in 27 trees (7 tiers), 8 races, 40 combinations | check in game with `/cg debug talents` |
-| Trainer spells, pet and demon skills | **Built**: 1,330 trainer ranks, 19 hunter pet families, 63 demon skills | 1,334 seasonal spells (ids 400000+) left out by rule; spot-check `docs/generated/ClassicEra/client-excluded-spells.csv` in game. Which spells come from class quests instead of the trainer is not in the client data (Classes/TrainingNotes.lua is still empty) |
+| Trainer spells, pet and demon skills | **Built**: 1,329 trainer ranks, 19 hunter pet families, 63 demon skills. Trainer notes (`Classes/TrainingNotes.lua`) mark 22 class-quest spells and list important and optional spells. The escort safeguard list (`Database/EscortQuests.lua`) holds 52 quests | Seasonal spells (ids 400000+) are left out by rule, and so is Mangle (22570): the 1.15.9 tables list it at druid level 6, but Classic Era has no Mangle. Spot-check `docs/generated/ClassicEra/client-excluded-spells.csv` in game. The quest-spell bundles come from the client's own teaching spells; the quest names and levels are unverified in game. *Summon Incubus* (level 20) is in the client tables, so it is kept; check in game that Era warlocks can learn it |
 | Flight-path graph, spirit healers | Not built yet | client tables; flight **times** need in-game captures |
 | Gear stat priorities | **Built**, priority-only (`Gear/Profiles.lua`, GEAR_RESEARCH_CLASSIC.md): 14 leveling profiles for 7 classes and 19 level-60 profiles for every spec Icy Veins covers. No Classic source publishes numeric weights | **Rogue and Hunter have no leveling profile:** no usable source ranks their leveling stats. **Warlock leveling** comes from the Hardcore page. Check in game how `GetItemStats` reports Classic hit and crit (percent) |
 | Rares and dangerous mobs | Not built yet (Phase 2) | QuestieDB NPC data plus our own criteria (elite, rare, level above the route's expected level, patrols) |
@@ -27,7 +27,7 @@ Status: **0.1.0 development, Phase 2 in progress.** The Classic Era quest databa
 - Horde: Dustwallow 49 and Burning Steppes 53.
 
 The data has no unused or better-fitting quests for them. About 10 more visits hold only 1-2 quests. **Westfall, Redridge and Silverpine** are not in the order, so their quests are gone (`zone-order-dropped.csv`). Hunting routes (`guides-src/routes`) were generated from TBC spawn data; the compiler re-checks every drop and spawn against Classic data, but they have not been regenerated from Classic spawns. Not timed or played |
-| Warrior Defensive Stance | Client tables list it as a level-10 trainer spell | whether a class quest gates it on Classic Era is not in the data; check in game |
+| Warrior Defensive Stance | **Answered from client data:** *Path of Defense* (8121), the level-10 class quest's teaching spell, teaches Defensive Stance, Taunt and Sunder Armor together. *Path of the Berserker* (8616) teaches Berserker Stance and Intercept. All are marked as quest spells | confirm in game |
 
 ## WoW: Forever (not launched; launch 2026-11-04)
 

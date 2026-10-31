@@ -108,8 +108,14 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **All priority-only:** no Classic source publishes numeric weights. Items are compared stat by stat; automatic upgrades use labelled estimates.
   - **Gaps:** Rogue and Hunter have no leveling profile, because no usable source ranks their leveling stats.
   - **Smoke tests:** check that the profiles are priority-only and sourced, that every class has a level-60 profile, and that leveling profiles are chosen by level.
+- **Classic Era trainer notes and escort list.**
+  - **Quest spells:** `Classes/TrainingNotes.lua` marks 22 spells that come from class quests, not the trainer. The client's own teaching spells back them: *Path of Defense* teaches Defensive Stance, Taunt and Sunder Armor; *Path of the Berserker* teaches Berserker Stance and Intercept; Beast Training and Tame Beast teach the hunter pet spells; Bear Form teaches Maul and Growl; the warlock "Teach Summon" spells teach the demons. This answers the Defensive Stance question in DATA_GAPS.
+  - **Important and optional spells:** the leveling lists carried over from TBC, limited to spells Classic trainers teach. TBC-only spells are gone, and so are Classic talents such as Innervate and Ice Block.
+  - **Escort list:** `Database/EscortQuests.lua`, the never-auto-accept list, now has 52 quests. They come from the Classic data (escort wording, or the party-accept flag plus escort wording) plus two found by review. Rebuild it with `escort_notes.py --list`.
+  - **Fixed:** the trainer data listed *Mangle* as a level-6 druid spell; Classic Era has no Mangle. A new `excludeSpellIds` list in `target.json` leaves it out (shown in the excluded-spells report).
+  - **Smoke tests:** check that every note spell exists in the Classic trainer data, that Mangle is gone, and that the escort list and escort detection work.
 
-Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 53/53); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
+Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed and Hardcore: 0 errors, 12 warnings, quest log peak 15/20; smoke suite 58/58); TBC suite 4,420/4,420; Forever 29/29. Nothing has been run in the game client.
 
 ---
 

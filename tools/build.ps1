@@ -85,6 +85,8 @@ function Load-Tools {
         [GuideTools.Ctx]::ClientProduct = $TargetInfo.clientTables.product
         [GuideTools.Ctx]::ClientTablesBuild = $TargetInfo.clientTables.build
         if ($TargetInfo.clientTables.excludeSpellIdsFrom) { [GuideTools.Ctx]::ExcludeSpellIdsFrom = [int]$TargetInfo.clientTables.excludeSpellIdsFrom }
+        [GuideTools.Ctx]::ExcludeSpellIds.Clear()
+        foreach ($s in @($TargetInfo.clientTables.excludeSpellIds)) { if ($s) { [void][GuideTools.Ctx]::ExcludeSpellIds.Add([int]$s) } }
     }
     New-Item -ItemType Directory -Force $Reports | Out-Null
     if (-not $script:ToolsAnnounced) { Write-Host "info  $info"; $script:ToolsAnnounced = $true }
@@ -231,7 +233,7 @@ function Invoke-ImportClient {
     Write-Host $r
     $ex = Join-Path $Reports "client-excluded-spells.csv"
     (@("table,spell,name") + @([GuideTools.Ctx]::ExcludedSpells)) | Set-Content $ex -Encoding UTF8
-    Write-Host ("left out (spell id >= {0}): {1} (list: docs/generated/{2}/client-excluded-spells.csv)" -f [GuideTools.Ctx]::ExcludeSpellIdsFrom, [GuideTools.Ctx]::ExcludedSpells.Count, $Target)
+    Write-Host ("left out (spell id >= {0}, or in excludeSpellIds): {1} (list: docs/generated/{2}/client-excluded-spells.csv)" -f [GuideTools.Ctx]::ExcludeSpellIdsFrom, [GuideTools.Ctx]::ExcludedSpells.Count, $Target)
 }
 
 function Write-Csv([string]$path, [string]$header, $rows) {

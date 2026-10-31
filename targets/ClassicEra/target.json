@@ -31,7 +31,11 @@
     "product": "wow_classic_era",
     "build": "1.15.9.70576",
     "excludeSpellIdsFrom": 400000,
-    "_comment": "The 1.15 client tables are shared with Season of Discovery and seasonal realms and carry their spells too, with no marker; all of those have ids of 400000 or more. Spells from 400000 are left out of trainer and pet data and listed in docs/generated/ClassicEra/client-excluded-spells.csv. Talent trees are not filtered."
+    "excludeSpellIds": [
+      22570
+    ],
+    "_comment": "The 1.15 client tables are shared with Season of Discovery and seasonal realms and carry their spells too, with no marker; all of those have ids of 400000 or more. Spells from 400000 are left out of trainer and pet data and listed in docs/generated/ClassicEra/client-excluded-spells.csv. Talent trees are not filtered.",
+    "_excludeSpellIds": "22570 Mangle: the 1.15.9 tables list it as a level-6 druid Feral spell, but Classic Era druids cannot learn it (Mangle is not in the game until TBC; the id below 400000 escapes the seasonal rule)."
   },
   "tocExtra": [],
   "install": "World of Warcraft\\_classic_era_\\Interface\\AddOns\\",

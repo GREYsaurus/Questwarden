@@ -1,4 +1,5 @@
-# Put the escort note before every escort pickup in a target's guides (docs/GUIDE_FORMAT.md, "Escort quests").
+# Put the escort note before every escort pickup in a target's guides (docs/GUIDE_FORMAT.md, "Escort quests"),
+# or (--list) rebuild the never-auto-accept escort list.
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 # SPDX-License-Identifier: GPL-3.0-only
 #
@@ -7,7 +8,9 @@
 # faction, optional, Hardcore, dungeon...) so the note shows exactly when the pickup does. Steps whose text
 # calls the quest an escort while the data does not are listed for review, not changed.
 # Writes guide sources. Run guides + routes afterwards.
-# Usage: python tools/research/escort_notes.py ClassicEra [--dry-run]
+# --list instead rewrites the body of the target's Database/EscortQuests.lua (the never-auto-accept list):
+# every quest whose objective or trigger text says "escort", every escort() quest, and REVIEWED below.
+# Usage: python tools/research/escort_notes.py ClassicEra [--dry-run] [--list]
 import os
 import re
 import sys
@@ -15,11 +18,29 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from qdb import Target, VERB_RE, escort, escort_note, f  # noqa: E402
 
-
 args = [x for x in sys.argv[1:] if not x.startswith("--")]
 T = Target(args[0] if args else "ClassicEra")
 DRY = "--dry-run" in sys.argv
 FLAGS_RE = re.compile(r"^\w+\s+[^|\[]*\[([^\]]*)\]")
+REVIEWED = (2078, 4122)  # escorts whose data carries neither the flag nor the word
+
+if "--list" in sys.argv:
+    rows = {}
+    for qid, q in T.Q.items():
+        text = (f(q, 11) or "") + " " + str(f(q, 21) or "")
+        if re.search(r"\bescort", text, re.I) or escort(q):
+            rows[qid] = q[0]
+    for qid in REVIEWED:
+        if qid in T.Q:
+            rows[qid] = T.Q[qid][0]
+    fn = os.path.join(T.dir, "addon", "Database", "EscortQuests.lua")
+    src = open(fn, encoding="utf-8").read()
+    body = "".join("    [%d] = true, -- %s\n" % (qid, rows[qid].replace("\n", " ")) for qid in sorted(rows))
+    new = re.sub(r"(ns\.EscortQuests = \{\n).*?(\}\s*)$", lambda m: m.group(1) + body + m.group(2), src, flags=re.S)
+    if not DRY:
+        open(fn, "w", encoding="utf-8", newline="\n").write(new)
+    print("escort list:", len(rows), "quests", "(dry run)" if DRY else "-> " + os.path.relpath(fn))
+    sys.exit(0)
 
 added, review = [], []
 for gid, g in sorted(T.guides.items()):
