@@ -25,7 +25,7 @@ New projects, and each uploaded file, are reviewed by CurseForge moderation befo
 
 ## 2. Connect GitHub (once)
 
-1. Note the **project ID** shown on the new project's page.
+1. Note the **project ID** shown on the new project's page. Questwarden's is **1776364** (https://www.curseforge.com/wow/addons/questwarden, created 2026-10-31); it is set as the repository variable `CURSEFORGE_PROJECT_ID`.
 2. Create an API token: CurseForge account settings, then **API tokens**.
 3. In GitHub, open the repository's **Settings > Secrets and variables > Actions**:
    - add the **secret** `CF_API_KEY` with the token;
