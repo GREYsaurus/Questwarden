@@ -14,7 +14,7 @@ namespace GuideTools
 {
     public static class Ctx
     {
-        public static string Name = "ClassicGuide";   // tools/addon.json "name"
+        public static string Name = "Questwarden";   // tools/addon.json "name"
         public static string Target = "";             // -Target
         public static string Root = "";               // repository root
         public static string TargetDir = "";          // targets/<Target>

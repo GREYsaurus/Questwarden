@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests for tooltip locales, bag add-on adapters and first-login setup
+-- Questwarden - headless tests for tooltip locales, bag add-on adapters and first-login setup
 -- (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

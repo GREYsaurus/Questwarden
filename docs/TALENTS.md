@@ -1,6 +1,6 @@
 # Talents (WoW Classic Era)
 
-ClassicGuide's talent calculator and talent-window suggestions use the 51-point Classic Era trees, generated from the 1.15.9 client tables (`targets/ClassicEra/addon/Talents/Data/TalentTrees.lua`: 432 talents in 27 trees, 7 tiers). How the calculator and the talent-window markers work is unchanged from TBCGuide ([tbcguide/TALENTS.md](tbcguide/TALENTS.md)).
+Questwarden's talent calculator and talent-window suggestions use the 51-point Classic Era trees, generated from the 1.15.9 client tables (`targets/ClassicEra/addon/Talents/Data/TalentTrees.lua`: 432 talents in 27 trees, 7 tiers). How the calculator and the talent-window markers work is unchanged from TBCGuide ([tbcguide/TALENTS.md](tbcguide/TALENTS.md)).
 
 ## Talent plans
 
@@ -18,7 +18,7 @@ There are **28 plans**, one for every spec Icy Veins publishes a Classic levelin
 | Warlock | Affliction (30/21/0), Demonology (16/35/0), Destruction (17/0/34) |
 | Druid | Feral (14/32/5), Balance (36/0/15), Restoration (19/0/32) |
 
-The default plan for a class (used until you pick another in `/cg talents`) is the first in its row.
+The default plan for a class (used until you pick another in `/qw talents`) is the first in its row.
 
 ## Sources
 

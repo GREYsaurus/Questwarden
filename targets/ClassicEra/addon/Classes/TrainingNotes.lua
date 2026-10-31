@@ -1,4 +1,4 @@
--- ClassicGuide - hand-kept notes on class trainer spells for WoW Classic Era (priorities, quest spells)
+-- Questwarden - hand-kept notes on class trainer spells for WoW Classic Era (priorities, quest spells)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --
@@ -14,7 +14,7 @@
 -- quest names and levels are general game knowledge (status: unverified in game).
 --
 -- important / optional: spell names (English, matched against TrainingData names; the add-on still shows
--- the localized name). Anything not listed is "useful". These are ClassicGuide's own leveling judgement,
+-- the localized name). Anything not listed is "useful". These are Questwarden's own leveling judgement,
 -- carried over from the TBC lists and limited to spells the Classic Era trainers teach.
 
 local _, ns = ...

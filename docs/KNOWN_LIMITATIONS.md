@@ -13,7 +13,7 @@ Stated plainly, so nobody mistakes "files exist" for "finished and tested". This
 
 ## Testing
 
-- **Nothing in ClassicGuide has been run in the game client.** Everything is checked offline: Lua 5.1 lint, the guide compiler, the validator, the route audit, the build-tool self-test (21 checks), the full engine suite on the TBC fixture (4,420 checks) and the smoke suites on the Classic Era (33) and Forever (29) targets, all under a real Lua 5.1 interpreter with mocked client APIs. The mocks model the APIs as documented; the real client may differ. Checklist: docs/COMPATIBILITY.md.
+- **Nothing in Questwarden has been run in the game client.** Everything is checked offline: Lua 5.1 lint, the guide compiler, the validator, the route audit, the build-tool self-test (21 checks), the full engine suite on the TBC fixture (4,420 checks) and the smoke suites on the Classic Era (33) and Forever (29) targets, all under a real Lua 5.1 interpreter with mocked client APIs. The mocks model the APIs as documented; the real client may differ. Checklist: docs/COMPATIBILITY.md.
 - **API availability on 1.15.9** comes from Blizzard's UI source, not from the client. 35 audited names were not found there (docs/generated/ClassicEra/api-audit.md); the call sites are guarded, but `GetPlayerFacing` (arrow), `GetMacroIndexByName` (targeting macro) and `GetItemStats` (gear scoring) need a check in the game.
 - **32 APIs reached by name through `Compat.has` are not on the API allowlist** (inherited from TBCGuide; lint warns about them). They wait for review.
 

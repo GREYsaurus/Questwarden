@@ -1,4 +1,4 @@
--- ClassicGuide - talent suggestions inside the Blizzard talent window
+-- Questwarden - talent suggestions inside the Blizzard talent window
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -12,7 +12,7 @@
 --   - a small panel: the build, the next picks, deviations, and the source,
 --   - a tooltip line on every talent the build uses.
 -- Talents are matched by tier and column, never by name, so any client language works.
--- Nothing here spends a talent point: there is no call to LearnTalent anywhere in ClassicGuide.
+-- Nothing here spends a talent point: there is no call to LearnTalent anywhere in Questwarden.
 -- Everything is post-hooked (hooksecurefunc) or added on top; Blizzard's frames are not replaced.
 
 local _, ns = ...
@@ -26,7 +26,7 @@ local function prof() return ns.db.profile end
 function TH:Enabled() return prof().showTalentSuggestions ~= false end
 
 -- The build to follow: the spec profile's plan; without a spec profile, the build chosen in the
--- ClassicGuide talent window (or the class's leveling build).
+-- Questwarden talent window (or the class's leveling build).
 function TH:Build()
     local info = ns.Compat.PlayerInfo()
     local p = ns.char.gearProfile and ns.Gear:ProfileById(ns.char.gearProfile)

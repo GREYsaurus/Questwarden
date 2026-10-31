@@ -1,4 +1,4 @@
--- ClassicGuide - guide progression engine
+-- Questwarden - guide progression engine
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -30,7 +30,7 @@ local COMPLETERS = {
         return T:IsComplete(s.q)
     end,
     level = function(s) return (UnitLevel("player") or 1) >= (s.level or 1) end,
-    -- The step's [area=] names in the client's language (Core/Bind.lua), or a bind ClassicGuide verified.
+    -- The step's [area=] names in the client's language (Core/Bind.lua), or a bind Questwarden verified.
     bind = function(s) return ns.Bind:IsBoundFor(s) end,
 }
 -- A grind step ends exactly like a level step: when the player reaches s.level. (UnitXP only

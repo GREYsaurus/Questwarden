@@ -1,4 +1,4 @@
--- ClassicGuide - headless smoke tests for a target without guide data yet (Lua 5.1).
+-- Questwarden - headless smoke tests for a target without guide data yet (Lua 5.1).
 -- Run from the repository root:  tools/build.ps1 test -Target ClassicEra   (or -Target Forever)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

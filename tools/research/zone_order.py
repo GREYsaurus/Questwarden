@@ -226,10 +226,10 @@ for fac in ("Alliance", "Horde"):
         name = v["label"] or v["zone"]
         lv = "%d-%d" % (v["lo"], v["hi"]) if v["lo"] != v["hi"] else str(v["lo"])
         nxt = ids_[v["i"] + 1] if v["i"] + 1 < len(ids_) else None
-        head = ["# ClassicGuide - %s (%s), %s, WoW Classic Era" % (name, lv, fac),
+        head = ["# Questwarden - %s (%s), %s, WoW Classic Era" % (name, lv, fac),
                 "# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.",
                 "# Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);",
-                "# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.",
+                "# quest steps re-cut from the earlier Questwarden routes by tools/research/zone_order.py.",
                 "", "@guide " + gid, "@name %s (%s)" % (name, lv), "@faction " + fac, "@levels %d-%d" % (v["lo"], v["hi"]),
                 "@zone " + v["zone"], "@chapter Azeroth",
                 "@desc %s, visit %d of %d on the %s route, levels %s." % (name, seen[v["zone"]], count[v["zone"]], fac, lv)]

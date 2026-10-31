@@ -1,8 +1,8 @@
 # Roaming hunting routes
 
-On a kill step with a verified route, the waypoint arrow walks a loop of points through the area where the target mobs are known to spawn. When there's no route, it points at one spot. This is navigation only. ClassicGuide never moves the character, targets mobs, starts combat or completes a step because you reached a point.
+On a kill step with a verified route, the waypoint arrow walks a loop of points through the area where the target mobs are known to spawn. When there's no route, it points at one spot. This is navigation only. Questwarden never moves the character, targets mobs, starts combat or completes a step because you reached a point.
 
-Setting: **Roaming Waypoints for Kill Objectives** (Settings → General → Features, on by default). Buttons: *Next patrol point* and *Normal objective waypoint*. Commands: `/cg route next | off | on`, plus the key binding *Next hunting route point*.
+Setting: **Roaming Waypoints for Kill Objectives** (Settings → General → Features, on by default). Buttons: *Next patrol point* and *Normal objective waypoint*. Commands: `/qw route next | off | on`, plus the key binding *Next hunting route point*.
 
 ## Coverage
 
@@ -65,7 +65,7 @@ The per-objective record, with targets, zone, route name, coverage, path check, 
   - you choose *Normal objective waypoint*.
 
   It then hands the arrow back to the normal step waypoint.
-- **Who controls the arrow** (`Nav.owner`): `step`, `route` or `manual`. A waypoint you asked for, such as `/cg train waypoint`, is never replaced by a route or by the periodic objective retargeting. `/cg route on` takes the arrow back.
+- **Who controls the arrow** (`Nav.owner`): `step`, `route` or `manual`. A waypoint you asked for, such as `/qw train waypoint`, is never replaced by a route or by the periodic objective retargeting. `/qw route on` takes the arrow back.
 - **Reloads:** nothing is saved. After a reload or login, the route is rebuilt from the quest log, the current step and the nearest point.
 - **Cost:** a 0.5-second position check runs only while a route is active. Quest updates come from the quest tracker's events. Route data is static and loaded once.
 - **Map:** route points aren't drawn on the world map; the existing map pin shows the current point.
@@ -174,4 +174,4 @@ The tool applies the same standard to every candidate objective. It makes no dec
 - **No drop source in the guide's zone** (54 objectives): some items drop from NPCs in a neighbouring zone, or from sub-zone ids the spawn data files elsewhere. These need a per-quest look.
 - **Guide text disagrees with the quest data** (3 quests): check in game which mobs drop the item, then fix the guide text or the data.
 - **Map display:** route points aren't drawn on the world map; only the current point is.
-- **Language:** new chat and step-window text is English, like the rest of ClassicGuide's own text. The objective text in the label comes from the client.
+- **Language:** new chat and step-window text is English, like the rest of Questwarden's own text. The objective text in the label comes from the client.

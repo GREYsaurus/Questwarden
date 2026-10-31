@@ -1,4 +1,4 @@
-# ClassicGuide - client globals the add-on is allowed to reference.
+# Questwarden - client globals the add-on is allowed to reference.
 # SPDX-License-Identifier: GPL-3.0-only
 #
 # tools/build.ps1 lint fails on any global read that is not a Lua builtin, one of our own
@@ -149,7 +149,7 @@ QuestLogFrame                     # core frame; guarded (button is skipped if mi
 # Marker.lua detects ADDON_ACTION_BLOCKED/FORBIDDEN and falls back to the secure marker bar.
 SetRaidTarget                     # core; called via Compat (pcall) and from secure macro buttons
 GetRaidTargetIndex                # core
-CombatLogGetCurrentEventInfo      # classic (1.13+/2.5+); guarded; only UNIT_DIED of units ClassicGuide marked is read
+CombatLogGetCurrentEventInfo      # classic (1.13+/2.5+); guarded; only UNIT_DIED of units Questwarden marked is read
 UnitGUID                          # core
 strsplit                          # core string helper
 UnitIsDead                        # core
@@ -229,7 +229,7 @@ SaveBindings                      # core
 GetCurrentBindingSet              # core
 GetContainerNumFreeSlots          # legacy fallback (guarded)
 PickupContainerItem               # legacy fallback (guarded)
-DeleteCursorItem                  # core; deletes only the junk item ClassicGuide just picked up
+DeleteCursorItem                  # core; deletes only the junk item Questwarden just picked up
 ContainerFrameItemButton_OnModifiedClick # core; hooked with hooksecurefunc only
 C_AddOns                          # classic namespace (guarded)
 C_AddOns.IsAddOnLoaded
@@ -263,7 +263,7 @@ MerchantFrame.page                # core field
 MerchantFrame.selectedTab         # core field
 MerchantFrame_UpdateMerchantInfo  # core; hooked with hooksecurefunc only, guarded
 RequestTimePlayed                 # core; guarded
-ChatFrame_DisplayTimePlayed       # core; wrapped once to hide the login /played lines ClassicGuide asks for
+ChatFrame_DisplayTimePlayed       # core; wrapped once to hide the login /played lines Questwarden asks for
 write:ChatFrame_DisplayTimePlayed # the wrapper passes every other call through unchanged
 CharacterFrame                    # core frame; guarded
 CharacterFrame.HookScript         # core

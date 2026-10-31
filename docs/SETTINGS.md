@@ -1,6 +1,6 @@
 # Settings window
 
-`/cg options`, or left-click the minimap button, opens the ClassicGuide settings window. It has one row of tabs: **General, Guide Routing, Targeting, Leveling Tracker, Communications, Tips, Advanced Settings, Profiles, Help**. Escape closes it. Changes apply immediately and are saved in your current profile.
+`/qw options`, or left-click the minimap button, opens the Questwarden settings window. It has one row of tabs: **General, Guide Routing, Targeting, Leveling Tracker, Communications, Tips, Advanced Settings, Profiles, Help**. Escape closes it. Changes apply immediately and are saved in your current profile.
 
 Under the title bar are five buttons:
 - **Guide Browser** opens the guide browser.
@@ -13,21 +13,21 @@ Every option in the window works; none is a greyed-out placeholder.
 
 None of this has been tested in the game client yet.
 
-**Look:** every ClassicGuide window shares one flat dark style with a blue accent. The colours are in one table, `W.THEME` in `addon/UI/Widgets.lua`.
+**Look:** every Questwarden window shares one flat dark style with a blue accent. The colours are in one table, `W.THEME` in `addon/UI/Widgets.lua`.
 
 ## What each tab controls
 
 ### General
-- **First-login setup:** a new character gets a short setup window: guide, spec profile, and an explicit opt-in for automatic upgrades (off unless ticked, and only with a spec profile). Saved per character. *Skip* keeps the defaults; closing it keeps the choices for next time. *Open setup* (General) reopens it. Characters that already used ClassicGuide are not asked.
+- **First-login setup:** a new character gets a short setup window: guide, spec profile, and an explicit opt-in for automatic upgrades (off unless ticked, and only with a spec profile). Saved per character. *Skip* keeps the defaults; closing it keeps the choices for next time. *Open setup* (General) reopens it. Characters that already used Questwarden are not asked.
 - **Window Management:** *Show all Enabled Frames* hides the guide window and arrow together when off. *Lock Frames* and *Autohide in Raids* do what they say.
 - **Features:** minimap button, world map button (opens the guide browser), *Hide Window* and *Hide waypoint arrow*.
-- **Automatically Navigate to Corpse** (on): after you release your spirit, the arrow points to your corpse until you are alive again, then returns to the guide. It uses the game's own corpse position and asks the map you died on, then your current map and its parents, without opening or changing the map. No position means no arrow (never a guessed one). Inside dungeons, raids and battlegrounds there is no outdoor position: you get a note, not an arrow. `/cg corpse off` hands the arrow back to the guide; `/cg corpse on` brings it back.
-- **Roaming Waypoints for Kill Objectives** (on): cycles through verified hunting-area waypoints until the objective is complete. The points cover where the mobs are known to spawn, not where they are now. Only quests with a verified route use it; the others keep their normal waypoint. *Next patrol point* moves the arrow to the next point (also `/cg route next` and a key binding); *Normal objective waypoint* turns the route off for the current step (`/cg route off`, back with `/cg route on`). Details: docs/ROAMING.md.
+- **Automatically Navigate to Corpse** (on): after you release your spirit, the arrow points to your corpse until you are alive again, then returns to the guide. It uses the game's own corpse position and asks the map you died on, then your current map and its parents, without opening or changing the map. No position means no arrow (never a guessed one). Inside dungeons, raids and battlegrounds there is no outdoor position: you get a note, not an arrow. `/qw corpse off` hands the arrow back to the guide; `/qw corpse on` brings it back.
+- **Roaming Waypoints for Kill Objectives** (on): cycles through verified hunting-area waypoints until the objective is complete. The points cover where the mobs are known to spawn, not where they are now. Only quests with a verified route use it; the others keep their normal waypoint. *Next patrol point* moves the arrow to the next point (also `/qw route next` and a key binding); *Normal objective waypoint* turns the route off for the current step (`/qw route off`, back with `/qw route on`). Details: docs/ROAMING.md.
 - **Automation:**
 
   | Option | Default | What it does |
   |---|---|---|
-  | Quest auto accept/turn in | on | Guide quests only. More options: `/cg automation` |
+  | Quest auto accept/turn in | on | Guide quests only. More options: `/qw automation` |
   | Quest auto rewards | off | Takes a reward only when gear scoring shows one clear upgrade, or when your class can use none of them (then the most valuable). Otherwise you choose |
   | Class Trainer Suggestions | Important only | Off / Important only / All: what your trainer has for you, checked against your spellbook; train steps with nothing new are skipped. Never buys (docs/TRAINER.md) |
   | Trainer automation | off | Learns every spell you can afford at your class trainer; spends gold |
@@ -41,7 +41,7 @@ None of this has been tested in the game client yet.
   - *Toggle junk with modified right click*: modifier + right-click a bag item adds it to, or removes it from, your junk list. You pick the modifier.
   - *Auto Sell Junk*.
   - *Discard junk if bag is full* (off by default): when your bags are full, the junk item worth least at a vendor is destroyed (gone, not sold) on your next click in the game world, key press or loot-window click. One item per click or key press; there is no confirmation.
-    - **Why it waits for your input:** WoW only lets add-ons destroy an item during a click or key press, one item each time (`DeleteCursorItem` needs a hardware event on every Classic-engine client, TBC 2.5 included). ClassicGuide listens to your own clicks and key presses (key presses still reach the game as normal); it never simulates input.
+    - **Why it waits for your input:** WoW only lets add-ons destroy an item during a click or key press, one item each time (`DeleteCursorItem` needs a hardware event on every Classic-engine client, TBC 2.5 included). Questwarden listens to your own clicks and key presses (key presses still reach the game as normal); it never simulates input.
     - **Checks before each item:** each attempt re-reads the bag slot (same item, same stack, not locked) and re-checks the junk rules: grey or on your junk list; never quest, quest-starting, guide-needed or protected items; never items whose data is not loaded.
     - **When it waits:** in combat, with something on the cursor, or with a merchant, trade, bank, mail or auction window open, the item stays chosen and is destroyed on your first input after that.
     - **Failures:** a failed item is not tried again this session.
@@ -52,7 +52,7 @@ None of this has been tested in the game client yet.
 - **Features:**
   - *Hide Active Item window* (off by default): buttons for usable quest items in your bags. Click one to use the item. They update after combat, because secure buttons can't change in combat.
   - *Enable Vendor Treasures* (on): when a merchant opens, lists and marks items it sells that are upgrades for your spec profile, the same estimate as automatic upgrades. Needs a spec profile.
-  - *Show Flight Timers* (on): a bar with the time left on a flight. ClassicGuide ships no flight data, so each route is timed the first time you fly it and counts down after that.
+  - *Show Flight Timers* (on): a bar with the time left on a flight. Questwarden ships no flight data, so each route is timed the first time you fly it and counts down after that.
   - *Enable Group Settings* (off): master switch for the party features on the Communications tab and the leader's target on the Targeting tab.
 - **Window:**
   - *Guide Window Scale* (60-160%);
@@ -64,14 +64,14 @@ None of this has been tested in the game client yet.
 - **Talents:**
   - *Show Talent Suggestions* (on): markers, a panel and tooltip lines in the default talent window for your spec profile's plan. Never spends points (docs/tbcguide/TALENTS.md).
   - *Enable Talents Guides* turns on the chat reminders to spend talent points.
-  - *Enable Talent Plan* and *Talent Plan Number* add your build's next picks to those reminders. `/cg talents plan` shows them any time.
+  - *Enable Talent Plan* and *Talent Plan Number* add your build's next picks to those reminders. `/qw talents plan` shows them any time.
 
 ### Guide Routing
 - *Skip overleveled steps* (on) skips picking up quests that are grey for your level, unless a later quest in the guide needs them.
 - *Show Group Quests*, *Maximum-speed route*, *Advance steps automatically* and *Pick a guide on first login*.
 - **Include Dungeon Quests** (on by default). Off leaves out every step tagged as a dungeon quest: its pickup, objective and turn-in.
   - **Follow-ups** that need an excluded dungeon quest are skipped too, with the reason shown, and the guide continues with the next step.
-  - **Already in your log:** a dungeon quest you have already accepted keeps its steps, and ClassicGuide never abandons quests.
+  - **Already in your log:** a dungeon quest you have already accepted keeps its steps, and Questwarden never abandons quests.
   - **Applies immediately,** and turning it back on restores the steps without touching your progress.
   - **Tagged today:** only Horde Ashenvale *Amongst the Ruins* (Blackfathom Deeps), because it's the only guide quest that needs an instance.
 - **Single dungeons:** one switch per dungeon of your faction. A dungeon marked * has quests in the guides; today that's only Blackfathom Deeps.
@@ -89,7 +89,7 @@ None of this has been tested in the game client yet.
   - *Enable Target Markers (Group)*.
   - Replace and clear options, and the default marker. See [RAID_MARKERS.md](RAID_MARKERS.md).
 - **Targeting Macro:**
-  - *Create Targeting Macro* keeps a "ClassicGuide" macro with `/tar` lines for the current step's NPCs. Drag it to an action bar from the Macros window, General tab. It's never edited in combat.
+  - *Create Targeting Macro* keeps a "Questwarden" macro with `/tar` lines for the current step's NPCs. Drag it to an action bar from the Macros window, General tab. It's never edited in combat.
   - *Notify on new target* prints one chat line when a current-step NPC first comes into view.
 - **Raid Marker Bar:** shows or hides the marker bar.
 - **Active Target Frame:** click-to-target buttons (`/tar <name>`) for the current step's NPCs.
@@ -101,7 +101,7 @@ None of this has been tested in the game client yet.
 ### Leveling Tracker
 - **What it tracks:** how long each level takes, using played time from the server (asked for quietly at login), and your XP per hour this session.
   - Levels finished before this version show as `-`.
-- **Leveling report:** `/cg tracker` or the button at the top of the window. It shows:
+- **Leveling report:** `/qw tracker` or the button at the top of the window. It shows:
   - the current level's time;
   - XP per hour, and an estimate of when you'll level;
   - total played time;
@@ -114,16 +114,16 @@ None of this has been tested in the game client yet.
   - Also: total time, font size, opacity and hiding the background.
 
 ### Communications
-- **Enable Addon Version Checks** (on): tells you once when a group or guild member runs a newer ClassicGuide.
+- **Enable Addon Version Checks** (on): tells you once when a group or guild member runs a newer Questwarden.
   - Uses hidden add-on messages; nothing appears in chat.
-  - It's also how ClassicGuide knows which party members use it.
+  - It's also how Questwarden knows which party members use it.
 - **Level-up announcements** to emote, party or guild chat. All are off by default.
 - **Party announcements** (all off by default, and all need *Enable Group Settings*):
   - *Announce Step completion*: a guide quest's objectives are all done.
   - *Announce Step collection*: progress, such as *Wolf Meat: 3/8*.
   - *Announce Step flying timers*: you took a flight, with the arrival time once the route is known.
   - *Don't announce when Questie is loaded*: avoids double messages, since Questie can announce progress itself.
-  - **Never in raids.** They are only sent when another party member runs ClassicGuide, unless *Send announcements without another ClassicGuide user in group* is on.
+  - **Never in raids.** They are only sent when another party member runs Questwarden, unless *Send announcements without another Questwarden user in group* is on.
 - *Automatic quest sharing*: shares a guide quest with your party right after you accept it.
 
 ### Tips
@@ -180,7 +180,7 @@ None of this has been tested in the game client yet.
 - arrow scale;
 - map pin and TomTom.
 
-**Options with nothing to act on in ClassicGuide** were removed:
+**Options with nothing to act on in Questwarden** were removed:
 - *Detect Rate* and *Experience rates*;
 - *Solo Self Found Mode*;
 - *Enable Beta Features*;

@@ -1,4 +1,4 @@
--- ClassicGuide - flight timers
+-- Questwarden - flight timers
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,7 +6,7 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- No flight-time data ships with ClassicGuide. Each flight you take is timed and saved (account-wide,
+-- No flight-time data ships with Questwarden. Each flight you take is timed and saved (account-wide,
 -- per origin -> destination), so the next time the bar counts down; the first time it counts up.
 
 local _, ns = ...

@@ -4,12 +4,12 @@ The BoE upgrade arrow and the junk coin (Tips → Automatic Upgrades / Inventory
 
 ## Compatibility
 
-| Bag add-on | Version read | How ClassicGuide attaches | Arrow | Junk | Tooltip lines | Tested in game |
+| Bag add-on | Version read | How Questwarden attaches | Arrow | Junk | Tooltip lines | Tested in game |
 |---|---|---|---|---|---|---|
 | Default bags | client 2.5.6 | `ContainerFrame1..13`, bags 0-4 only | yes | yes | yes | yes (0.7.0) |
 | Bagnon | 12.1.7 (TOC 20506) | post-hook on `BagBrother.ContainerItem:Update` (`hooksecurefunc`) | yes | yes | yes | **no** |
 | AdiBags | 1.10.29 (TBC TOC says **20504**) | an AdiBags module listening to `AdiBags_UpdateButton` | yes | yes | yes | **no** |
-| Baganator | 839 (TOC lists 20506) | public API: `RegisterCornerWidget` (arrow), `RegisterJunkPlugin` (junk) | yes (Baganator draws it) | Baganator's own junk coin, fed by ClassicGuide's junk rules (choose "ClassicGuide" in its junk setting) | yes | **no** |
+| Baganator | 839 (TOC lists 20506) | public API: `RegisterCornerWidget` (arrow), `RegisterJunkPlugin` (junk) | yes (Baganator draws it) | Baganator's own junk coin, fed by Questwarden's junk rules (choose "Questwarden" in its junk setting) | yes | **no** |
 | Other bag add-ons | - | none | no | no | no | - |
 
 Each version was read from its source: Bagnon from the installed copy, AdiBags and Baganator from the release archives. A different version may rename what the adapter uses. If so, the adapter does nothing (every entry point is checked before use) and the default bags keep working.
@@ -25,7 +25,7 @@ Each version was read from its source: Bagnon from the installed copy, AdiBags a
 ## Known issues
 
 - **AdiBags** 1.10.29 lists interface 20504 for TBC; on a 20506 client it may need "Load out of date AddOns".
-- **Baganator** shows the arrow in a corner chosen in its own Icons settings (default top-left). Its junk coin appears only if "ClassicGuide" is picked as its junk source.
-- None of the three has been run in the game with ClassicGuide yet. In-game checklist: `docs/COMPATIBILITY.md` → Bag add-ons.
+- **Baganator** shows the arrow in a corner chosen in its own Icons settings (default top-left). Its junk coin appears only if "Questwarden" is picked as its junk source.
+- None of the three has been run in the game with Questwarden yet. In-game checklist: `docs/COMPATIBILITY.md` → Bag add-ons.
 
 Tests: `tests/test_locales_bags_setup.lua` (stand-ins with the same entry points).

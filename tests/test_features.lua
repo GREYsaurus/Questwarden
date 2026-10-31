@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: settings-window features (dungeons, group, flights, tracker, active
+-- Questwarden - headless tests: settings-window features (dungeons, group, flights, tracker, active
 -- items/targets, junk indicator, vendor treasures, map pins, talent plan, low quality, preload)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

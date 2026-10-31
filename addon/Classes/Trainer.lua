@@ -1,4 +1,4 @@
--- ClassicGuide - class trainer suggestions
+-- Questwarden - class trainer suggestions
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -13,7 +13,7 @@
 --   - Spells from class quests are listed apart and never count as a reason to visit a trainer.
 --   - Race-only spells are listed only for that race.
 -- Suggestions only inform. Nothing is bought here; the separate, opt-in "Auto-train" assist is the
--- only thing in ClassicGuide that ever spends money at a trainer.
+-- only thing in Questwarden that ever spends money at a trainer.
 
 local _, ns = ...
 
@@ -175,7 +175,7 @@ end
 --   "current": the class trainer you have open right now (GetTrainerServiceCost, which already
 --              includes any reputation discount you get there);
 --   "seen":    what a class trainer charged a character of this account before (saved in
---              ClassicGuideDB.trainCosts); another trainer or reputation can change it;
+--              QuestwardenDB.trainCosts); another trainer or reputation can change it;
 --   nil:       unknown - never guessed.
 -- Amounts are integer copper. Nothing here buys anything.
 TR.live = {}

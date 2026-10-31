@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests for talent suggestions in the default talent window
+-- Questwarden - headless tests for talent suggestions in the default talent window
 -- (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

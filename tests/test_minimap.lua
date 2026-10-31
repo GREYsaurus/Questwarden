@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: minimap button (loaded by run_tests.lua)
+-- Questwarden - headless tests: minimap button (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 
@@ -18,7 +18,7 @@ check(ns.db.minimap.angle == MB.DEFAULT_ANGLE and b.point and b.point[1] == "CEN
 local r = math.rad(MB.DEFAULT_ANGLE)
 check(math.abs(b.point[4] - math.cos(r) * 80) < 1e-6 and math.abs(b.point[5] - math.sin(r) * 80) < 1e-6, "sits on the minimap edge (radius 70 + 10)")
 
--- Left-click opens the ClassicGuide settings window; a second click closes it --------------------------
+-- Left-click opens the Questwarden settings window; a second click closes it --------------------------
 local cfg = ns.Config.frame
 local function settingsShown() return cfg:IsShown() end
 cfg:Hide()

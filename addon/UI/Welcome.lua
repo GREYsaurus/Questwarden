@@ -1,4 +1,4 @@
--- ClassicGuide - first-login setup: starting guide, spec profile, automatic upgrades (explicit choice)
+-- Questwarden - first-login setup: starting guide, spec profile, automatic upgrades (explicit choice)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,7 +6,7 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- Shown once per character (ns.char.setupDone). Characters that already use ClassicGuide (a guide,
+-- Shown once per character (ns.char.setupDone). Characters that already use Questwarden (a guide,
 -- progress or a spec profile) are marked done silently. Choices are kept in ns.char.setupDraft until
 -- Finish, so closing the window or logging out loses nothing; nothing is applied before Finish.
 -- Automatic upgrades use the real setting (profile autoEquip) and stay off unless ticked.
@@ -20,7 +20,7 @@ local W = ns.Widgets
 local function prof() return ns.db.profile end
 
 -- Existing users are never interrupted: runs before the first-login guide is picked, so a guide,
--- progress or spec profile here means the character already used ClassicGuide.
+-- progress or spec profile here means the character already used Questwarden.
 function WL:Migrate()
     local c = ns.char
     if c.setupDone then return end

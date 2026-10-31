@@ -1,4 +1,4 @@
--- ClassicGuide - auction house upgrades: a user-started scan and an "Upgrades" tab in the auction window
+-- Questwarden - auction house upgrades: a user-started scan and an "Upgrades" tab in the auction window
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,8 +6,8 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- ClassicGuide's own feature (ns.AHUpgrades); unrelated to the third-party "Auctioneer" add-on and
--- uses no global names besides its frames (ClassicGuideAH*) and the tab the auction UI requires
+-- Questwarden's own feature (ns.AHUpgrades); unrelated to the third-party "Auctioneer" add-on and
+-- uses no global names besides its frames (QuestwardenAH*) and the tab the auction UI requires
 -- (AuctionFrameTab<n>, the next free number).
 --
 -- The TBC Classic client has the legacy auction API: QueryAuctionItems (50 results per page,

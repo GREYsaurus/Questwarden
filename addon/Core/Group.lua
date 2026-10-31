@@ -1,4 +1,4 @@
--- ClassicGuide - group features: version checks, party announcements, automatic quest sharing
+-- Questwarden - group features: version checks, party announcements, automatic quest sharing
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,10 +6,10 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- Addon messages (prefix "ClassicGuide"): "V:<version>" announces our version to the party/raid and
--- guild; members who run ClassicGuide answer once. That tells us who else uses ClassicGuide, so party
+-- Addon messages (prefix "Questwarden"): "V:<version>" announces our version to the party/raid and
+-- guild; members who run Questwarden answer once. That tells us who else uses Questwarden, so party
 -- announcements are only sent when someone else can see them (unless "Send announcements without
--- another ClassicGuide user" is on). Everything in the Grouping section needs "Enable Group Settings".
+-- another Questwarden user" is on). Everything in the Grouping section needs "Enable Group Settings".
 
 local _, ns = ...
 
@@ -66,7 +66,7 @@ function G:OnAddonMessage(prefix, msg, channel, sender)
     end
 end
 
--- Whether another party member runs ClassicGuide (as far as we have heard).
+-- Whether another party member runs Questwarden (as far as we have heard).
 function G:OthersInGroup()
     local n = GetNumGroupMembers and GetNumGroupMembers() or 0
     for i = 1, math.max(n - 1, 0) do

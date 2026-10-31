@@ -1,4 +1,4 @@
--- ClassicGuide - convenience features behind the settings window (UI/Config.lua)
+-- Questwarden - convenience features behind the settings window (UI/Config.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -9,7 +9,7 @@
 -- Every feature here is gated by its own profile setting and does nothing when it is off:
 --   frames      showAllFrames / hideWindow / autohideRaid gate the guide window and the arrow
 --   NPCs        trainerAuto, flightAuto, skipGossip (hold Shift to skip once); bindAuto is Core/Bind.lua
---   targeting   targetMacro (a "ClassicGuide" macro), targetNotify, maxNameplateDistance (CVar)
+--   targeting   targetMacro (a "Questwarden" macro), targetNotify, maxNameplateDistance (CVar)
 --   group chat  announceLevelEmote / Party / Guild on level-up
 --   tips        drowning and low-health warnings, rare-mob alerts
 --   junk        junk list (modifier + right-click in bags), delete cheapest junk (key binding),

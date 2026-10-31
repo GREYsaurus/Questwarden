@@ -1,4 +1,4 @@
--- ClassicGuide - active target frame: click-to-target buttons for the current step's NPCs
+-- Questwarden - active target frame: click-to-target buttons for the current step's NPCs
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

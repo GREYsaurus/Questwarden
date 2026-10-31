@@ -1,4 +1,4 @@
--- ClassicGuide - hand-kept notes on class trainer spells (priorities, quest spells)
+-- Questwarden - hand-kept notes on class trainer spells (priorities, quest spells)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -17,7 +17,7 @@
 -- general game knowledge.
 --
 -- important / optional: spell names (English, matched against TrainingData names; the add-on
--- still shows the localized name). Anything not listed is "useful". These are ClassicGuide's own
+-- still shows the localized name). Anything not listed is "useful". These are Questwarden's own
 -- leveling judgement: the ranks that change how fast you kill or how safely you level are
 -- important; utility you rarely need while questing is optional.
 

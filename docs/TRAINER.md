@@ -1,18 +1,18 @@
 # Class trainer suggestions
 
-Setting: **Class Trainer Suggestions** (General → Automation): *Off*, *Important only* (default) or *All*. Command: `/cg train` (list), `/cg train defer` (hide until your next level), `/cg train waypoint` (arrow to the nearest class trainer of your faction).
+Setting: **Class Trainer Suggestions** (General → Automation): *Off*, *Important only* (default) or *All*. Command: `/qw train` (list), `/qw train defer` (hide until your next level), `/qw train waypoint` (arrow to the nearest class trainer of your faction).
 
 ## What it does
 
 - **Train steps** list what the trainer has for you now, grouped per spell ("Rend (Rank 2, 3)"). A train step with nothing new for the chosen setting is skipped with the reason ("nothing important to train yet"). *Off* keeps the old train steps unchanged.
-- **Level-up:** when new **important** ranks become available, one chat line names them and the next train step on your route (or points to `/cg train waypoint` when the route has none).
+- **Level-up:** when new **important** ranks become available, one chat line names them and the next train step on your route (or points to `/qw train waypoint` when the route has none).
 - **Live eligibility:** every rank is checked against your spellbook with `IsSpellKnown` when the list is built, and again when you learn a spell (`LEARNED_SPELL_IN_TAB`) or level up. Known ranks are never suggested again.
 - **Talent ranks** (Mortal Strike 2+, Pyroblast 2+, ...) are listed only once you know the rank before them, so only after you take the talent.
 - **Class quest spells** (Defensive Stance, Bear Form, Summon Voidwalker, ...) are listed apart, "from a class quest", and are never a reason to visit the trainer.
 - **Race-only spells** (priest racials, faction portals) are listed only for races that get them.
 - **Names** come from the client (`GetSpellInfo`), so they show in your client's language. The word "Rank" in the grouped line is English.
-- **Never spends gold.** Suggestions only inform. The separate, opt-in *Trainer automation* option is the only ClassicGuide feature that buys at a trainer.
-- **Defer and view again:** `/cg train defer` hides the lists until your next level; `/cg train` shows them again at once. Saved per character.
+- **Never spends gold.** Suggestions only inform. The separate, opt-in *Trainer automation* option is the only Questwarden feature that buys at a trainer.
+- **Defer and view again:** `/qw train defer` hides the lists until your next level; `/qw train` shows them again at once. Saved per character.
 
 ## Training costs
 
@@ -23,7 +23,7 @@ The client tables have **no trainer prices**, so a price can only come from a tr
 | Price shown | Comes from |
 |---|---|
 | current | The class trainer you have open (`GetTrainerServiceCost`). It already includes any reputation discount there. |
-| last seen | What a class trainer charged a character on this account before (`ClassicGuideDB.trainCosts`, in copper). Another trainer or reputation can change it. |
+| last seen | What a class trainer charged a character on this account before (`QuestwardenDB.trainCosts`, in copper). Another trainer or reputation can change it. |
 | unknown | Never guessed. |
 
 **How totals work:**
@@ -31,7 +31,7 @@ The client tables have **no trainer prices**, so a price can only come from a tr
 - **Affordability:** a complete total says whether your gold covers it.
 - **What's counted:** known ranks and spells above your level are never in the total.
 - **Profession trainers** are not read.
-- **Never buys:** nothing is ever bought. ClassicGuide has no gold-reserve setting, so none is applied.
+- **Never buys:** nothing is ever bought. Questwarden has no gold-reserve setting, so none is applied.
 
 **Pet and demon skills:** train steps also list a few pet or demon skills; see docs/PETS.md.
 
@@ -60,7 +60,7 @@ Rogue poison recipes (the Poisons skill line) are listed since 2026-10-31: their
 **Kept by hand** (`addon/Classes/TrainingNotes.lua`):
 
 - **Which spells come from class quests.** The client tables do not say. Every listed spell has a client "teach" spell (Path of Defense, Path of the Berserker, Tame Beast, Beast Training, Teach Summon ...), and the tests check each id exists.
-- **The important and optional lists**, which are ClassicGuide's own leveling judgement. Everything else counts as useful.
+- **The important and optional lists**, which are Questwarden's own leveling judgement. Everything else counts as useful.
 
 ### Inventory (this build)
 

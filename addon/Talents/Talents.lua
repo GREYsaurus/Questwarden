@@ -1,4 +1,4 @@
--- ClassicGuide - talent engine: build expansion, validation, live talent reading
+-- Questwarden - talent engine: build expansion, validation, live talent reading
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -270,7 +270,7 @@ end
 
 -- Spec profile -> talent plan (the mapping is target data, Talents/ProfileBuilds.lua) ------------------
 -- The plan for a spec profile, or nil and why ("no spec profile" / "no plan").
--- A variant chosen in the ClassicGuide talent window (ns.char.talentBuild) wins when it belongs to the spec.
+-- A variant chosen in the Questwarden talent window (ns.char.talentBuild) wins when it belongs to the spec.
 function ns.Talents:BuildForProfile(profile)
     if not profile then return nil, "no spec profile" end
     local m = ns.TalentProfileBuilds.specs[profile.class]
@@ -287,7 +287,7 @@ function ns.Talents:BuildForProfile(profile)
     return b
 end
 
--- One line on where a plan comes from (shown in the talent window panel and the ClassicGuide window).
+-- One line on where a plan comes from (shown in the talent window panel and the Questwarden window).
 function ns.Talents:SourceLine(b)
     local s = b and b.source
     if not s then return "Source unknown." end

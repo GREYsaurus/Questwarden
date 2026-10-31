@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests for hearthstone binding on guide bind steps (loaded by run_tests.lua)
+-- Questwarden - headless tests for hearthstone binding on guide bind steps (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 

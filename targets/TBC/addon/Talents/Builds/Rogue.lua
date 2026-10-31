@@ -1,4 +1,4 @@
--- ClassicGuide - Assassination Rogue talent plan (Wowhead TBC leveling build; validated against client talent data)
+-- Questwarden - Assassination Rogue talent plan (Wowhead TBC leveling build; validated against client talent data)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -10,12 +10,12 @@
 -- (https://www.wowhead.com/tbc/guide/classes/rogue/assassination/leveling-tips), read 2026-10-29. The
 -- Icy Veins leveling index has no Assassination guide; Wowhead was approved for this one profile.
 --   * Levels 10-60: the source gives the level-60 build only (talent calculator rogue/
---     205323105002132501051-005-05, 41/5/5). The order of those 51 points is ClassicGuide's own, chosen
+--     205323105002132501051-005-05, 41/5/5). The order of those 51 points is Questwarden's own, chosen
 --     to reach Mutilate at 50 and to keep every point legal.
 --   * Levels 61-69: the source's own order (Precision 61-65, Improved Slice and Dice 66-68,
 --     Improved Eviscerate 69).
---   * Level 70: the source says to respec into a level-70 build. ClassicGuide never respecs; the 61st
---     point (Remorseless Attacks 1/2) is ClassicGuide's choice so the plan stays continuous.
+--   * Level 70: the source says to respec into a level-70 build. Questwarden never respecs; the 61st
+--     point (Remorseless Attacks 1/2) is Questwarden's choice so the plan stays continuous.
 -- Picks are client talent ids {talentId, points}; names are for reading only.
 
 local _, ns = ...
@@ -52,7 +52,7 @@ ns.RegisterTalentBuilds("ROGUE", {
             { 181, 5 }, -- Precision (61-65)         source order
             { 1827, 3 }, -- Improved Slice and Dice (66-68)  source order
             { 276, 1 }, -- Improved Eviscerate 3/3 (69)  source order
-            { 272, 1 }, -- Remorseless Attacks 1/2 (70)  ClassicGuide's choice instead of the source's respec
+            { 272, 1 }, -- Remorseless Attacks 1/2 (70)  Questwarden's choice instead of the source's respec
         },
     },
 })

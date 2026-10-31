@@ -1,4 +1,4 @@
--- ClassicGuide - saved variables, defaults and migrations
+-- Questwarden - saved variables, defaults and migrations
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,14 +6,14 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- ClassicGuideDB      (account-wide): settings profiles, protection lists, frame positions
+-- QuestwardenDB      (account-wide): settings profiles, protection lists, frame positions
 --   .profiles[name]       one table per profile (the settings below)
 --   .profileKeys[char]    "Name - Realm" -> profile name used by that character
 --   .defaultProfile       profile new characters start with
--- ClassicGuideCharDB  (per character): active guide, per-guide progress, simulated talents
+-- QuestwardenCharDB  (per character): active guide, per-guide progress, simulated talents
 -- Both are validated on load; anything malformed is reset field-by-field, never wholesale.
--- ns.db is a view of ClassicGuideDB whose `profile` field is the active profile; every other field
--- reads and writes ClassicGuideDB itself, so the profile table is never saved twice.
+-- ns.db is a view of QuestwardenDB whose `profile` field is the active profile; every other field
+-- reads and writes QuestwardenDB itself, so the profile table is never saved twice.
 
 local _, ns = ...
 
@@ -85,7 +85,7 @@ local profileDefaults = {
         trackerWithCharacter = false,
         splitsEnabled = false, splitsCompare = false, splitsTotal = true, splitsHideBg = false,
         splitsHistory = 10, splitsFont = 11, splitsAlpha = 0.9,
-        versionCheck = true,        -- tell me when a group or guild member has a newer ClassicGuide
+        versionCheck = true,        -- tell me when a group or guild member has a newer Questwarden
         announceComplete = false, announceCollect = false, announceFlight = false,
         announceSkipQuestie = false, announceAlways = false, autoShareQuests = false,
         trackMobsMap = false, trackTreasures = false,
@@ -97,7 +97,7 @@ local profileDefaults = {
         showAllFrames = true,       -- master switch for the guide window and arrow
         hideWindow = false,
         autohideRaid = false,       -- hide the guide window and arrow while in a raid group
-        worldMapButton = true,      -- ClassicGuide button on the world map
+        worldMapButton = true,      -- Questwarden button on the world map
         autoReward = false,         -- choose a quest reward when gear scoring finds a clear winner
         trainerAuto = false,        -- learn affordable spells at your class trainer
         trainerSuggestions = "important", -- Class Trainer Suggestions: "off", "important", "all" (docs/TRAINER.md)
@@ -115,7 +115,7 @@ local profileDefaults = {
         maxNameplateDistance = false, -- raise the nameplate CVar to its maximum (41 yards)
         markFriendly = true,        -- also mark the quest giver/finisher of the current step
         markInGroup = true,         -- allow automatic marking while in a group
-        targetMacro = true,         -- keep a "ClassicGuide" macro targeting the current step's NPCs
+        targetMacro = true,         -- keep a "Questwarden" macro targeting the current step's NPCs
         targetNotify = true,        -- chat note when a current-step mob or NPC first comes into view
         announceLevelEmote = false, announceLevelParty = false, announceLevelGuild = false,
         tipsEnabled = true,
@@ -217,7 +217,7 @@ function ns:InitSavedVariables()
     local fresh = type(_G[ns.svAccount]) ~= "table" or next(_G[ns.svAccount]) == nil
     if type(_G[ns.svAccount]) ~= "table" then _G[ns.svAccount] = {} end
     if type(_G[ns.svChar]) ~= "table" then _G[ns.svChar] = {} end
-    -- Before 0.5.0 there was a single ClassicGuideDB.profile; it becomes the "Default" profile.
+    -- Before 0.5.0 there was a single QuestwardenDB.profile; it becomes the "Default" profile.
     local legacy = type(_G[ns.svAccount].profile) == "table" and _G[ns.svAccount].profile or nil
     _G[ns.svAccount].profile = nil
     ns.Merge(_G[ns.svAccount], accountDefaults)
@@ -289,14 +289,14 @@ function ns:InitSavedVariables()
     if _G[ns.svChar].activeGuide ~= nil and type(_G[ns.svChar].activeGuide) ~= "string" then
         _G[ns.svChar].activeGuide = nil
     end
-    -- Future migrations: if ClassicGuideDB.schema < N then ... end
+    -- Future migrations: if QuestwardenDB.schema < N then ... end
     _G[ns.svAccount].schema = SCHEMA
     _G[ns.svChar].schema = SCHEMA
     ns:SetActiveProfile(active)
     ns.char = _G[ns.svChar]
 end
 
--- Points ns.db at ClassicGuideDB with `profile` = the named profile (which must exist).
+-- Points ns.db at QuestwardenDB with `profile` = the named profile (which must exist).
 function ns:SetActiveProfile(name)
     ns.db = setmetatable({ profile = _G[ns.svAccount].profiles[name], profileName = name }, {
         __index = _G[ns.svAccount],

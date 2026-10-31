@@ -1,4 +1,4 @@
--- ClassicGuide - settings window: tabs, sections and widgets built from declarative page data
+-- Questwarden - settings window: tabs, sections and widgets built from declarative page data
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -11,14 +11,14 @@
 --   { type = "toggle", key | get/set, label, invert, tip, planned }
 --   { type = "range", key | get/set, label, min, max, step, percent }
 --   { type = "select", key | get/set, label, values = function() return { {value, text}, ... } end }
---   { type = "button", label, func, span }           (flat ClassicGuide button, UI/Widgets.lua)
+--   { type = "button", label, func, span }           (flat Questwarden button, UI/Widgets.lua)
 --   { type = "color", key, label }
 --   { type = "input", label, func(text), span }
 --   { type = "keybind", label, get, set }
 --   { type = "desc", text }                          full-width paragraph
 --   { type = "newline" }
 -- Items flow left to right in three columns. `planned = true` shows the control disabled with a
--- "not in ClassicGuide yet" tooltip: nothing pretends to work that does not.
+-- "not in Questwarden yet" tooltip: nothing pretends to work that does not.
 
 local _, ns = ...
 
@@ -410,7 +410,7 @@ function CF:Create()
     self.frame = f
     tinsert(UISpecialFrames, ns.name .. "ConfigFrame") -- Escape closes it
 
-    -- Title bar with the ClassicGuide icon and version.
+    -- Title bar with the Questwarden icon and version.
     self.title = W.TitleBar(f, "")
     local icon = f:CreateTexture(nil, "ARTWORK")
     icon:SetSize(18, 18)

@@ -1,4 +1,4 @@
--- ClassicGuide - BoE upgrade markers on bag buttons, upgrade lines on bag tooltips, equip notifications
+-- Questwarden - BoE upgrade markers on bag buttons, upgrade lines on bag tooltips, equip notifications
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

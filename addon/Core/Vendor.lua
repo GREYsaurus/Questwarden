@@ -1,4 +1,4 @@
--- ClassicGuide - automatic junk selling at vendors
+-- Questwarden - automatic junk selling at vendors
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -96,7 +96,7 @@ function Vendor:Classify(item, info, guideItems, isQuestSlot)
     return true
 end
 
--- Whether the item in a player-bag slot is junk by ClassicGuide's rules (grey or on the junk list, and
+-- Whether the item in a player-bag slot is junk by Questwarden's rules (grey or on the junk list, and
 -- not a quest, guide-needed or protected item). Used by the bag markers and bag add-on plugins.
 function Vendor:IsJunkAt(bag, slot)
     local C = ns.Compat

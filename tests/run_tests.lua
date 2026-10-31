@@ -1,4 +1,4 @@
--- ClassicGuide - headless test runner (Lua 5.1). Run from the repository root:
+-- Questwarden - headless test runner (Lua 5.1). Run from the repository root:
 --     tools/build.ps1 test -Target TBC     (stages the add-on, then runs this file)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

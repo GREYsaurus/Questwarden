@@ -1,4 +1,4 @@
--- ClassicGuide - hunter pet and warlock demon skill guidance
+-- Questwarden - hunter pet and warlock demon skill guidance
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -10,11 +10,11 @@
 --   Hunter pets: the HUNTER first learns a skill rank (taming a beast that already knows it, or for
 --     the general skills such as Growl, from a pet trainer); the PET then learns it in the Beast
 --     Training window for training points. What the hunter knows and the training-point costs are
---     only visible while Beast Training is open; ClassicGuide remembers them per character.
+--     only visible while Beast Training is open; Questwarden remembers them per character.
 --   Warlock demons: each rank after the first is taught by a Grimoire bought from a demon trainer and
 --     used while that demon is summoned. A demon's known skills are only visible while it is out;
---     ClassicGuide remembers what it saw per character.
--- Advice only: nothing is bought, used, summoned, tamed, stabled or abandoned by ClassicGuide.
+--     Questwarden remembers what it saw per character.
+-- Advice only: nothing is bought, used, summoned, tamed, stabled or abandoned by Questwarden.
 
 local _, ns = ...
 

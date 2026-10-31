@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests for the corpse waypoint (loaded by run_tests.lua)
+-- Questwarden - headless tests for the corpse waypoint (loaded by run_tests.lua)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 

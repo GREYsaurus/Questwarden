@@ -1,4 +1,4 @@
--- ClassicGuide - gear scoring profiles for WoW Classic Era (data only; no logic)
+-- Questwarden - gear scoring profiles for WoW Classic Era (data only; no logic)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --
@@ -165,7 +165,7 @@ ns.GearProfiles = {
     },
 
     -- Heuristic layer for AUTOMATIC UPGRADES ONLY (Gear/Upgrade.lua). NOT from any source: these are
-    -- ClassicGuide's own estimates, shown as "estimated" wherever they are used (docs/AUTO_EQUIP.md).
+    -- Questwarden's own estimates, shown as "estimated" wherever they are used (docs/AUTO_EQUIP.md).
     -- Tooltips and quest rewards keep using the sourced priorities above unchanged.
     heuristic = {
         -- Priority-only profiles: weight = budget[stat] x rank factor. The first listed stat gets

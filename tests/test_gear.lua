@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: gear scoring (profiles, engine, tooltip, quest rewards, /cg gear)
+-- Questwarden - headless tests: gear scoring (profiles, engine, tooltip, quest rewards, /cg gear)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.

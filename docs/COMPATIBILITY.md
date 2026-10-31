@@ -2,7 +2,7 @@
 
 ## Targets
 
-ClassicGuide is built for one client at a time (`tools/build.ps1 -Target <name>`, docs/DEVELOPER.md). Each target's game rules live in `targets/<Target>/Target.<Target>.lua`, which the build ships as `Config/Target.lua`.
+Questwarden is built for one client at a time (`tools/build.ps1 -Target <name>`, docs/DEVELOPER.md). Each target's game rules live in `targets/<Target>/Target.<Target>.lua`, which the build ships as `Config/Target.lua`.
 
 | Target | Client | Interface | Shipped | Evidence (checked 2026-10-29) |
 |---|---|---|---|---|
@@ -19,7 +19,7 @@ Classic Era rules from these sources: level cap 60, 51 talent points (first at 1
 - It compares `GetBuildInfo()`'s interface number and version string with the target's `minInterface`/`maxInterface` and `versionPrefix`. **Any other client:** no guide is registered, and login prints one line naming both versions (for example, the Classic Era build loaded on a Forever client). The talent calculator, settings and other tools still load.
 - **Interface 0** (client did not report one): a warning only.
 - **Unverified target** (`verified = false`, as for Forever now): guides are refused with a message saying the data has not been checked in the live game.
-- `/cg debug` repeats the result.
+- `/qw debug` repeats the result.
 
 Not used yet, because they are not on the API allowlist (awaiting approval): `WOW_PROJECT_ID` and the Forever-only `WOW_PROJECT_CAMELOT` (a second detection signal), and `C_GameRules.IsHardcoreActive` (Hardcore realms). Blizzard's UI calls all three on both clients. Until approved, Hardcore is a per-character setting (Settings → Guide Routing → *Hardcore character*), and Season of Discovery is not detected (out of scope).
 
@@ -40,7 +40,7 @@ Reports: [Classic Era](generated/ClassicEra/api-audit.md), [Forever](generated/F
 
 On Classic Era, Blizzard flags two allowlisted APIs, and both were already handled:
 
-| API | Flag | How ClassicGuide uses it |
+| API | Flag | How Questwarden uses it |
 |---|---|---|
 | `SetRaidTarget` | restricted | automatic marking through Compat with `pcall`; if refused, automatic marking switches off and the click-driven marker bar (secure buttons) stays (docs/RAID_MARKERS.md) |
 | `DeleteCursorItem` | restricted | junk discard only runs during the player's own click or key press, re-checks the slot first, and waits in combat (0.9.3) |
@@ -54,19 +54,19 @@ Nearly all are guarded legacy fallbacks (old gossip, container and options funct
 
 ### Forever
 
-The Forever UI source is the modern client's code with a Camelot (Forever) overlay. 21 APIs that ClassicGuide uses on Classic Era are absent there, including the classic talent functions, `AbandonQuest`, `ConfirmBinder`, the old auction house, some item functions (`GetItemSpell`, `GetItemCooldown`, `IsEquippableItem`), pet training points and crafting. Phase 3 adds Forever adapters in `Compat/Compat.lua` (docs/DATA_GAPS.md).
+The Forever UI source is the modern client's code with a Camelot (Forever) overlay. 21 APIs that Questwarden uses on Classic Era are absent there, including the classic talent functions, `AbandonQuest`, `ConfirmBinder`, the old auction house, some item functions (`GetItemSpell`, `GetItemCooldown`, `IsEquippableItem`), pet training points and crafting. Phase 3 adds Forever adapters in `Compat/Compat.lua` (docs/DATA_GAPS.md).
 
 ## In-game verification checklist (Classic Era)
 
 None of these has been done yet. Tick them off on a real 1.15.9 client:
 
-- [ ] The add-on appears in the AddOns list as up to date (interface 11509) and loads with no Lua errors (`/console scriptErrors 1`); `/cg debug errors` is empty.
-- [ ] `/cg debug` reports the client as 1.15.9 / 11509 and no target warning.
-- [ ] `/cg debug api`: every listed API reports `yes`, or its fallback works. Check `GetPlayerFacing`, `GetMacroIndexByName` and `GetItemStats` especially.
+- [ ] The add-on appears in the AddOns list as up to date (interface 11509) and loads with no Lua errors (`/console scriptErrors 1`); `/qw debug errors` is empty.
+- [ ] `/qw debug` reports the client as 1.15.9 / 11509 and no target warning.
+- [ ] `/qw debug api`: every listed API reports `yes`, or its fallback works. Check `GetPlayerFacing`, `GetMacroIndexByName` and `GetItemStats` especially.
 - [ ] Loading the Classic Era build on another client (for example TBC Anniversary with "Load out of date AddOns") prints the wrong-client message and loads no guides.
-- [ ] `/cg`, `/classicguide` and `/cggear` open the right windows; key bindings show under *ClassicGuide*.
+- [ ] `/qw`, `/questwarden` and `/qwgear` open the right windows; key bindings show under *Questwarden*.
 - [ ] Settings → Guide Routing shows *Hardcore character*, and the choice survives `/reload` on that character only.
 - [ ] The talent calculator shows 51 points at 60 (simulated mode works without talent data).
-- [ ] `/reload` and logout/login keep settings (SavedVariables `ClassicGuideDB` / `ClassicGuideCharDB`).
+- [ ] `/reload` and logout/login keep settings (SavedVariables `QuestwardenDB` / `QuestwardenCharDB`).
 
 The TBCGuide 2.5.6 checklist (automation, markers, binding, hunting routes, active items, corpse arrow) is in [tbcguide/COMPATIBILITY_2.5.6.md](tbcguide/COMPATIBILITY_2.5.6.md). It applies again once Classic Era guides exist (Phase 2).

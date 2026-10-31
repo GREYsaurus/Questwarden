@@ -1,4 +1,4 @@
--- ClassicGuide - locale-aware reading of item tooltip lines (binding, effects, unusable)
+-- Questwarden - locale-aware reading of item tooltip lines (binding, effects, unusable)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -14,7 +14,7 @@
 --      tooltip text in every client language because the client itself builds the tooltip from them.
 --   3. English stat-line patterns, ONLY on English clients (enUS/enGB), where they were verified.
 --      Elsewhere an "Equip:" line is explained by counting: GetItemStats reports the stats the client
---      shows as "Equip:" lines; more lines than stats means an effect ClassicGuide cannot score, which
+--      shows as "Equip:" lines; more lines than stats means an effect Questwarden cannot score, which
 --      makes the comparison uncertain. Nothing unparsed is ever treated as a confirmed zero.
 -- Binding never comes from a guess: no match leaves it unknown (nil), and unknown never equips.
 

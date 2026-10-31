@@ -1,4 +1,4 @@
--- ClassicGuide - escort / scripted-event quest safeguard list for WoW Classic Era
+-- Questwarden - escort / scripted-event quest safeguard list for WoW Classic Era
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --

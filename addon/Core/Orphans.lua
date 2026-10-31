@@ -1,4 +1,4 @@
--- ClassicGuide - orphaned quests: quests in the log that the guide route will never finish
+-- Questwarden - orphaned quests: quests in the log that the guide route will never finish
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

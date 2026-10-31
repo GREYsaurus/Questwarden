@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: auction house upgrades (scan, cache, Upgrades tab), Window settings,
+-- Questwarden - headless tests: auction house upgrades (scan, cache, Upgrades tab), Window settings,
 -- removed placeholder options
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only

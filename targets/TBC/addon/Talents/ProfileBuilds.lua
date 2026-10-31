@@ -1,4 +1,4 @@
--- ClassicGuide - which talent plan each spec profile follows
+-- Questwarden - which talent plan each spec profile follows
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -11,7 +11,7 @@
 -- Classic leveling guides (Talents/Builds/IcyVeins.lua); Assassination, which has no Icy Veins build,
 -- uses Wowhead's TBC Assassination leveling build (Talents/Builds/Rogue.lua, an approved exception).
 -- Mapping and source record: docs/TALENTS.md.
---   plan: the default; variants: other plans for the same spec the player may pick in the ClassicGuide
+--   plan: the default; variants: other plans for the same spec the player may pick in the Questwarden
 --   talent window (/cg talents). A spec missing here has no plan and the window says so.
 -- The talent plan never changes gear scoring: weights belong to the spec profile alone.
 

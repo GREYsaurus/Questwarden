@@ -1,4 +1,4 @@
--- ClassicGuide - project-owned corrections applied over the imported quest database
+-- Questwarden - project-owned corrections applied over the imported quest database
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

@@ -25,7 +25,7 @@ Files are compiled in path order (`alliance/`, `horde/`, `outland/`, `shared/`, 
 
 ## Text: the add-on's name
 
-Never write the add-on's name or slash command in a note: write `{name}` and `{slash}`. They are filled in when the guide loads (`{name} skips it` → *ClassicGuide skips it*, `/{slash} talents` → */cg talents*), so a rename needs no guide edits. The lint gate rejects the spelled-out name.
+Never write the add-on's name or slash command in a note: write `{name}` and `{slash}`. They are filled in when the guide loads (`{name} skips it` → *Questwarden skips it*, `/{slash} talents` → */qw talents*), so a rename needs no guide edits. The lint gate rejects the spelled-out name.
 
 ## Group content
 
@@ -75,7 +75,7 @@ Mark every step of a quest you leave out (accept, complete and turn-in). Base ea
 | `train` | - (expands to one step per class, with that class's trainer from the database) | trainer window closed |
 | `fp` | place name | "New flight path discovered" or taxi map opened |
 | `fly` / `hs` / `travel` | destination zone/subzone name | zone change to the destination, or manual. With a flight graph (`Database/Flights.lua`), a `fly` destination must be a flight node of the guide's faction (`fly Auberdine`; a name the place starts with also matches, so `fp Feathermoon Stronghold` is the *Feathermoon* node), and the step also completes in the node's zone. The route audit fails a `fly` step whose flight path no earlier `fp` step learned, or that no learned flight path in the current zone connects to; an `[unverified]` fly step only warns. `tools/research/fly_steps.py` adds `fly` steps before `travel` steps where the route can fly |
-| `bind` | inn location name, plus required `[area=<id>,...]` | `GetBindLocation()` equals one of the areas' names in the client's language, or a bind ClassicGuide verified at this step's innkeeper |
+| `bind` | inn location name, plus required `[area=<id>,...]` | `GetBindLocation()` equals one of the areas' names in the client's language, or a bind Questwarden verified at this step's innkeeper |
 | `level` | level | player level reached |
 | `grind` | `<level> <Mob>[, <Mob>...] [@ location]` | player level reached (same as `level`). Each mob must exist in the database and spawn in the step's zone, or the build fails. The arrow points at the spawn nearest the previous step unless `[at=x,y]` is given. Example: `grind 10 Riverpaw Outrunner, Riverpaw Runt @ south of Westbrook Garrison [at=27.8,81.2] \| note` |
 | `note` / `buy` / `use` / `collect` | text | manual (`buy` also completes on closing a vendor) |

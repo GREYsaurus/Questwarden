@@ -1,4 +1,4 @@
--- ClassicGuide - escort / scripted-event quest safeguard list
+-- Questwarden - escort / scripted-event quest safeguard list
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -8,7 +8,7 @@
 --
 -- Quests that must NEVER be accepted automatically. This list is one of several independent
 -- signals (see DB.GetEscortStatus); a quest is manual-only if ANY signal fires:
---   1. this list, plus the per-account list ClassicGuideDB.escortExtra (/cg escort add <id>);
+--   1. this list, plus the per-account list QuestwardenDB.escortExtra (/cg escort add <id>);
 --   2. questFlags PARTY_ACCEPT (2) in the bundled QuestieDB data (cmangos marks escort-type
 --      quests with it; it also covers some scripted "defend/wait" events, which stay manual too).
 --      specialFlags NEEDS_EVENT is NOT used: reviewed 2026-10-28, all 67 TBC quests carrying only

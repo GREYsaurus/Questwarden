@@ -1,4 +1,4 @@
--- ClassicGuide - active item window: one-click buttons for usable quest items in your bags
+-- Questwarden - active item window: one-click buttons for usable quest items in your bags
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

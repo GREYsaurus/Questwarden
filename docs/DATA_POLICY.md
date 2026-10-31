@@ -1,6 +1,6 @@
 # Data policy: facts only, rebuilt from our own sources
 
-ClassicGuide is GPL-3.0-only. Everything it ships must be either our own work or come from a source whose licence lets us ship it under the GPL. This page says where data may come from, what is never allowed, and how we check our data against other people's without copying it. **Contributors follow it too.** It is a cautious project policy, not legal advice.
+Questwarden is GPL-3.0-only. Everything it ships must be either our own work or come from a source whose licence lets us ship it under the GPL. This page says where data may come from, what is never allowed, and how we check our data against other people's without copying it. **Contributors follow it too.** It is a cautious project policy, not legal advice.
 
 ## The short version
 

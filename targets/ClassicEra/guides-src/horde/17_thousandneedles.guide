@@ -1,7 +1,7 @@
-# ClassicGuide - Thousand Needles (25-26), Horde, WoW Classic Era
+# Questwarden - Thousand Needles (25-26), Horde, WoW Classic Era
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route and notes.
 # Zone and level range from targets/ClassicEra/zone-order.json (maintainer-supplied zone order);
-# quest steps re-cut from the earlier ClassicGuide routes by tools/research/zone_order.py.
+# quest steps re-cut from the earlier Questwarden routes by tools/research/zone_order.py.
 
 @guide H_17_ThousandNeedles
 @name Thousand Needles (25-26)

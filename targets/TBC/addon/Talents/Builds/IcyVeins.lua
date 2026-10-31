@@ -1,4 +1,4 @@
--- ClassicGuide - talent plans from the Icy Veins TBC Classic leveling guides
+-- Questwarden - talent plans from the Icy Veins TBC Classic leveling guides
 -- GENERATED from the guides' talent-calculator links (docs/TALENTS.md). One entry per point, in the
 -- order the source's calculator records them; picks are client talent ids {talentId, points}.
 -- Talent allocations: Icy Veins (https://www.icy-veins.com/tbc-classic/leveling-guides). No guide

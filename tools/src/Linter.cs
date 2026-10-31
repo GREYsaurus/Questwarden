@@ -43,13 +43,13 @@ namespace GuideTools
         static readonly HashSet<string> OwnGlobalsWrite = new HashSet<string>();
 
         // The add-on's name lives only in tools/addon.json. Shipped code must not spell it (or the old
-        // TBCGuide name) in an identifier or string: use ns.name, ns.key, ns.slash, ns.svAccount, ...
-        // Comments may mention it. Returns the offending token text, or null.
+        // TBCGuide and ClassicGuide names) in an identifier or string: use ns.name, ns.key, ns.slash,
+        // ns.svAccount, ... Comments may mention it. Returns the offending token text, or null.
         static string HardCodedName(Token t)
         {
             if (t.Kind != TK.Name && t.Kind != TK.String) return null;
             string v = t.Text ?? "";
-            foreach (var n in new[] { Ctx.Name, "TBCGuide", "TBCG_", "tbcg" })
+            foreach (var n in new[] { Ctx.Name, "TBCGuide", "TBCG_", "tbcg", "ClassicGuide" })
                 if (n.Length > 0 && v.IndexOf(n, StringComparison.OrdinalIgnoreCase) >= 0) return v;
             return null;
         }

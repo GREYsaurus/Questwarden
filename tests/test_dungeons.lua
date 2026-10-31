@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: "Include Dungeon Quests" (steps tagged [dungeon=...])
+-- Questwarden - headless tests: "Include Dungeon Quests" (steps tagged [dungeon=...])
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -62,7 +62,7 @@ CF.frame:Hide()
 ns:InitSavedVariables()
 check(ns.db.profile.showDungeonSteps == false, "the setting survives a reload")
 
--- a dungeon quest already in the log is never dropped (ClassicGuide does not abandon quests)
+-- a dungeon quest already in the log is never dropped (Questwarden does not abandon quests)
 table.insert(MOCK.questLog, { id = 6921, title = "Amongst the Ruins", complete = false, objectives = {} })
 ns.Tracker:Scan()
 E:Refresh()

@@ -1,6 +1,6 @@
 # NOTICE
 
-**ClassicGuide**: free leveling and talent guide add-on for World of Warcraft Classic Era, prepared for World of Warcraft: Forever. A fork of TBCGuide (https://github.com/GREYsaurus/TBCGuide, same author).
+**Questwarden**: free leveling and talent guide add-on for World of Warcraft Classic Era, prepared for World of Warcraft: Forever. A fork of TBCGuide (https://github.com/GREYsaurus/TBCGuide, same author).
 
 Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus).
 
@@ -15,7 +15,7 @@ Releases include data derived from **QuestieDB** (from Phase 2; the 0.1.0 develo
 - Redistributed under the GPLv3 terms the Questie team offers. The upstream licence statement is reproduced verbatim in `Database/Questie/UPSTREAM_LICENSE.md` (in each target's data), and the import history in `UPSTREAM_PROVENANCE.md`.
 - The data was transformed (trimmed, re-keyed and corrections applied) by `tools/src/QuestieImport.cs` and `tools/src/QuestieCorrections.cs`.
 
-ClassicGuide is not affiliated with the Questie project and does not use the Questie name or logo as its own.
+Questwarden is not affiliated with the Questie project and does not use the Questie name or logo as its own.
 
 Talent-tree layouts and race/class combinations are read from World of Warcraft client tables for each target's build (Classic Era 1.15.9 from Phase 2). World of Warcraft and The Burning Crusade are trademarks of Blizzard Entertainment, Inc. This add-on is not affiliated with or endorsed by Blizzard Entertainment.
 

@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: settings window, profiles and the features behind it
+-- Questwarden - headless tests: settings window, profiles and the features behind it
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.
@@ -480,7 +480,7 @@ local title = ns.StepText:Title({ "accept", q = 783, title = "A Threat Within" }
 check(string.find(title, "|cffff0000", 1, true), "quest colour comes from the profile")
 prof().colorQuest = { r = 1, g = 0.82, b = 0 }
 
--- Help and profile pages show ClassicGuide's own commands -----------------------------------------------------
+-- Help and profile pages show Questwarden's own commands -----------------------------------------------------
 local helpText = ""
 for _, it in ipairs(ns.ConfigPages.help.items(CF)) do if it.text then helpText = helpText .. it.text end end
 check(string.find(helpText, "/" .. ns.slash, 1, true) and not string.find(helpText, "/rxp", 1, true), "help lists " .. ns.name .. " commands")

@@ -1,4 +1,4 @@
--- ClassicGuide - leveling tracker: played time per level, a leveling report and a level splits window
+-- Questwarden - leveling tracker: played time per level, a leveling report and a level splits window
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -8,7 +8,7 @@
 --
 -- Played time comes from the server (TIME_PLAYED_MSG: total, and time at the current level), asked
 -- for quietly at login; after that it is counted locally. Each level-up saves how long that level
--- took (ClassicGuideCharDB.levelLog[level] = seconds played at that level). Levels finished before the
+-- took (QuestwardenCharDB.levelLog[level] = seconds played at that level). Levels finished before the
 -- tracker existed are unknown and shown as such.
 
 local _, ns = ...

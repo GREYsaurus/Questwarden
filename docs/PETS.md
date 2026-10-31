@@ -1,13 +1,13 @@
 # Hunter pet skills and warlock demon skills
 
 **Commands:**
-- `/cg pet` shows the list.
-- `/cg pet defer` hides reminders until your next level.
-- `/cg pet waypoint` points the arrow at the nearest pet trainer (hunter) or demon trainer (warlock).
+- `/qw pet` shows the list.
+- `/qw pet defer` hides reminders until your next level.
+- `/qw pet waypoint` points the arrow at the nearest pet trainer (hunter) or demon trainer (warlock).
 
 **Where it shows:** train steps also list up to three entries, under the same setting as the class trainer suggestions (*Class Trainer Suggestions*: Off / Important only / All).
 
-**Advice only:** ClassicGuide never tames, stables, abandons or summons pets, and never buys or uses Grimoires.
+**Advice only:** Questwarden never tames, stables, abandons or summons pets, and never buys or uses Grimoires.
 
 ## How each class learns them (client 2.5.6)
 
@@ -31,7 +31,7 @@
 
 Old Grimoire items that teach nothing in this client are ignored. Helper spells, scaling auras, the old pet talents and hunter talents are left out.
 
-## What ClassicGuide can see, and what it cannot
+## What Questwarden can see, and what it cannot
 
 | State | How | If unavailable |
 |---|---|---|
@@ -49,7 +49,7 @@ Grimoire prices are the item's **base** price from the client data. A reputation
 
 ## Limitations
 
-- **Beast sources:** which beasts teach which hunter skill rank is not in the client tables, so ClassicGuide names no specific beast to tame.
+- **Beast sources:** which beasts teach which hunter skill rank is not in the client tables, so Questwarden names no specific beast to tame.
 - **Untested here:** the pet trainer list of general skills is general game knowledge, untested in 2.5.6.
 - **Family detection:** a hunter pet with no family-only skill yet, on a non-English client, gets general-skill advice only.
 - **Not in game yet:** none of this has been run in the game. Tests: `tests/test_costs_pets.lua`, against mocked pet spellbook, Beast Training and bag APIs.

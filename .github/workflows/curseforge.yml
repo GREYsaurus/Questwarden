@@ -1,18 +1,20 @@
 # Publishes each GitHub release's add-on zip to CurseForge.
 # SPDX-License-Identifier: GPL-3.0-only
 #
-# Uploads exactly the ClassicGuide-<version>-ClassicEra.zip attached to the release (built and checked by
-# tools/build.ps1 all); nothing is rebuilt here. GitHub pre-releases go up as CurseForge "beta",
+# Uploads exactly the Questwarden-<version>.zip attached to the release (built and checked by
+# tools/build.ps1 package: one folder for Classic Era and TBC Classic Anniversary, a TOC for each); nothing is
+# rebuilt here. A tag with "alpha" goes up as CurseForge "alpha", other GitHub pre-releases as "beta",
 # normal releases as "release".
 #
 # One-time setup (see docs/CURSEFORGE.md):
 #   - repository variable CURSEFORGE_PROJECT_ID = the numeric project ID from the CurseForge page
 #   - repository secret   CF_API_KEY            = a CurseForge API token (authors.curseforge.com > API tokens)
-# Optional variable CURSEFORGE_GAME_VERSION (default 1.15.9) picks the CurseForge game version.
-# Optional variable ADDON_NAME (default ClassicGuide) must match tools/addon.json "name".
+# Optional variable CURSEFORGE_GAME_VERSIONS (default "1.15.9,2.5.6"): the CurseForge game versions the file
+# is for, comma-separated, each matched by exact name.
+# Optional variable ADDON_NAME (default Questwarden) must match tools/addon.json "name".
 # Without the variable and secret the workflow skips the upload instead of failing.
 #
-# Re-run for an existing release: Actions > "Publish to CurseForge" > Run workflow > tag, e.g. v0.2.0.
+# Re-run for an existing release: Actions > "Publish to CurseForge" > Run workflow > tag, e.g. v0.1.0-alpha.1.
 
 name: Publish to CurseForge
 
@@ -22,7 +24,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag to upload (e.g. v0.2.0)"
+        description: "Release tag to upload (e.g. v0.1.0-alpha.1)"
         required: true
 
 permissions:
@@ -34,11 +36,11 @@ jobs:
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
       CF_PROJECT: ${{ vars.CURSEFORGE_PROJECT_ID }}
-      CF_GAME_VERSION: ${{ vars.CURSEFORGE_GAME_VERSION || '1.15.9' }}
+      CF_GAME_VERSIONS: ${{ vars.CURSEFORGE_GAME_VERSIONS || '1.15.9,2.5.6' }}
       CF_HOST: https://wow.curseforge.com
       GH_TOKEN: ${{ github.token }}
       TAG: ${{ github.event.release.tag_name || inputs.tag }}
-      ADDON: ${{ vars.ADDON_NAME || 'ClassicGuide' }}
+      ADDON: ${{ vars.ADDON_NAME || 'Questwarden' }}
     steps:
       - name: Check configuration
         id: cfg
@@ -53,23 +55,28 @@ jobs:
         run: |
           set -euo pipefail
           VERSION="${TAG#v}"
-          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "${ADDON}-${VERSION}-ClassicEra.zip" --dir dist
-          test -s "dist/${ADDON}-${VERSION}-ClassicEra.zip"
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "${ADDON}-${VERSION}.zip" --dir dist
+          test -s "dist/${ADDON}-${VERSION}.zip"
           gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body,isPrerelease,name > release.json
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
-      - name: Resolve CurseForge game version
+      - name: Resolve CurseForge game versions
         if: steps.cfg.outputs.skip != 'true'
         run: |
           set -euo pipefail
           curl -sSf -H "X-Api-Token: $CF_API_KEY" "$CF_HOST/api/game/versions" > versions.json
-          IDS=$(jq -c --arg n "$CF_GAME_VERSION" '[.[] | select(.name == $n) | .id]' versions.json)
-          echo "Game versions named $CF_GAME_VERSION: $IDS"
-          if [ "$(jq length <<< "$IDS")" -ne 1 ]; then
-            echo "::error::Expected exactly one CurseForge game version named '$CF_GAME_VERSION', found $IDS. Set CURSEFORGE_GAME_VERSION to the right name."
-            jq -c --arg n "$CF_GAME_VERSION" '.[] | select(.name | startswith($n[0:3]))' versions.json | head -20
-            exit 1
-          fi
+          IDS="[]"
+          IFS=',' read -ra WANT <<< "$CF_GAME_VERSIONS"
+          for v in "${WANT[@]}"; do
+            ONE=$(jq -c --arg n "$v" '[.[] | select(.name == $n) | .id]' versions.json)
+            echo "Game versions named $v: $ONE"
+            if [ "$(jq length <<< "$ONE")" -ne 1 ]; then
+              echo "::error::Expected exactly one CurseForge game version named '$v', found $ONE. Set CURSEFORGE_GAME_VERSIONS to the right names."
+              jq -c --arg n "$v" '.[] | select(.name | startswith($n[0:3]))' versions.json | head -20
+              exit 1
+            fi
+            IDS=$(jq -c --argjson a "$IDS" --argjson b "$ONE" -n '$a + $b')
+          done
           echo "GAME_VERSION_IDS=$IDS" >> "$GITHUB_ENV"
 
       - name: Upload to CurseForge
@@ -78,17 +85,18 @@ jobs:
           set -euo pipefail
           jq -n \
             --arg name "$ADDON $VERSION" \
+            --arg tag "$TAG" \
             --argjson versions "$GAME_VERSION_IDS" \
             --slurpfile rel release.json \
             '{displayName: $name,
               changelog: $rel[0].body,
               changelogType: "markdown",
               gameVersions: $versions,
-              releaseType: (if $rel[0].isPrerelease then "beta" else "release" end),
+              releaseType: (if ($tag | test("alpha")) then "alpha" elif $rel[0].isPrerelease then "beta" else "release" end),
               relations: {projects: [{slug: "tomtom", type: "optionalDependency"}]}}' > metadata.json
           cat metadata.json | jq 'del(.changelog)'
           curl -sSf -H "X-Api-Token: $CF_API_KEY" \
             -F "metadata=<metadata.json" \
-            -F "file=@dist/${ADDON}-${VERSION}-ClassicEra.zip" \
+            -F "file=@dist/${ADDON}-${VERSION}.zip" \
             "$CF_HOST/api/projects/$CF_PROJECT/upload-file" | tee response.json
           echo "::notice::Uploaded $ADDON $VERSION to CurseForge (file id $(jq -r .id response.json)). New files go through CurseForge moderation before they are public."

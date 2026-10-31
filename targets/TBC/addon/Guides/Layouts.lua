@@ -1,4 +1,4 @@
--- ClassicGuide - guide step layouts (saved-progress compatibility)
+-- Questwarden - guide step layouts (saved-progress compatibility)
 -- GENERATED from the guide history (0.7.0 -> 0.9.0 -> 0.9.1 -> current). For each guide whose steps were
 -- reordered: its layout number and, per change, a map old step index -> new step index.
 -- ns:ApplyLayout (Core/SavedVars.lua) walks the maps from the layout a character saved with.

@@ -1,4 +1,4 @@
--- ClassicGuide - bag add-on adapters for the BoE upgrade and junk markers
+-- Questwarden - bag add-on adapters for the BoE upgrade and junk markers
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.

@@ -1,4 +1,4 @@
--- ClassicGuide - shared UI helpers and the ClassicGuide look (flat, dark, one accent colour)
+-- Questwarden - shared UI helpers and the Questwarden look (flat, dark, one accent colour)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -6,7 +6,7 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- Uses only stock client textures/fonts, so nothing proprietary is shipped. Every ClassicGuide window
+-- Uses only stock client textures/fonts, so nothing proprietary is shipped. Every Questwarden window
 -- is built from these helpers, so the theme below is the one place to change colours.
 
 local _, ns = ...

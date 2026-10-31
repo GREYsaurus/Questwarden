@@ -1,8 +1,10 @@
 # Changelog
 
-## 0.1.0 (in development)
+## 0.1.0-alpha.1 (in development)
 
-ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), forked from TBCGuide 0.9.5, and designed to target **WoW: Forever** later. Phase 1 of 3 builds the multi-target foundation; there are no Classic Era guides or data yet.
+**Renamed to Questwarden** (from ClassicGuide) on 2026-10-31, before the first release: the name covers Classic Era, TBC and Forever alike. Slash commands `/qw`, `/questwarden`, `/qwgear`; saved settings `QuestwardenDB`. Entries below that were written before the rename use the new name.
+
+Questwarden is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), forked from TBCGuide 0.9.5, and designed to target **WoW: Forever** later. Phase 1 of 3 builds the multi-target foundation; there are no Classic Era guides or data yet.
 
 ### Phase 1: fork and multi-target scaffolding
 
@@ -11,7 +13,7 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **ClassicEra:** level cap 60, 51 talent points, quest log 20, Azeroth only, interface 11509 (confirmed from the wago.tools build list, Questie's release.json and Blizzard's 1.15.9 UI source). Empty data, ready for Phase 2.
   - **Forever:** skeleton with unverified rules (interface 16001, build 1.60.1) and empty data. Marked unverified, so it never loads guides, and it is never packaged.
   - **TBC:** TBCGuide 0.9.5's data and guides, kept only as the engine's test fixture. Never packaged; removed in Phase 2.
-- **One name, one place.** The name (`ClassicGuide`) and slash command (`/cg`, also `/classicguide` and `/cggear`) are set only in `tools/addon.json`. The build writes the TOC, bindings and SavedVariables (`ClassicGuideDB`, `ClassicGuideCharDB`) from it, the Lua code derives every global name at runtime, and the lint gate fails on a hard-coded name. `tools/build.ps1 rename <Name> [<slash>]` changes it; renaming was tested end to end.
+- **One name, one place.** The name (`Questwarden`) and slash command (`/qw`, also `/questwarden` and `/qwgear`) are set only in `tools/addon.json`. The build writes the TOC, bindings and SavedVariables (`QuestwardenDB`, `QuestwardenCharDB`) from it, the Lua code derives every global name at runtime, and the lint gate fails on a hard-coded name. `tools/build.ps1 rename <Name> [<slash>]` changes it; renaming was tested end to end.
 - **Wrong-client detection.** A build loaded on a different game version (checked from the client's interface number and version) says so at login and loads no guides, because their quests and coordinates would be wrong. Unverified targets refuse guides too.
 - **Hardcore character** setting (Settings → Guide Routing), saved per character, for the Phase 2 Hardcore route flavor.
 - **Target rules everywhere.** Talent points, level cap, quest-log size, guide chapters and level ranges come from the target in the add-on, the guide compiler, the validator and the route audit (which now warns at 3 below the target's quest-log cap). The validator's coverage checks are switched on per target (`target.json` `require`).
@@ -114,7 +116,7 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **Escort list:** `Database/EscortQuests.lua`, the never-auto-accept list, now has 52 quests. They come from the Classic data (escort wording, or the party-accept flag plus escort wording) plus two found by review. Rebuild it with `escort_notes.py --list`.
   - **Fixed:** the trainer data listed *Mangle* as a level-6 druid spell; Classic Era has no Mangle. A new `excludeSpellIds` list in `target.json` leaves it out (shown in the excluded-spells report).
   - **Smoke tests:** check that every note spell exists in the Classic trainer data, that Mangle is gone, and that the escort list and escort detection work.
-- **Classic Era class leveling advice** (`Classes/ClassAdvice.lua`, shown by `/cg class` and in the talent window): a summary and 6-7 tips for each of the nine classes, written in our own words.
+- **Classic Era class leveling advice** (`Classes/ClassAdvice.lua`, shown by `/qw class` and in the talent window): a summary and 6-7 tips for each of the nine classes, written in our own words.
   - **Classic content only:** totem quests and no Dual Wield for shamans; pet quests and the dead zone for hunters; Felsteed trained and Dreadsteed from a quest for warlocks; no Mangle; no Felguard.
   - **Levels checked:** every trainer level quoted was checked against the Classic trainer data, quest levels match the trainer notes, and talents are named as talents without a level. The tips are still unverified in game.
   - **Trainer levels:** generated from the data: every even level from 4 to 60 for all classes.
@@ -137,7 +139,7 @@ ClassicGuide is a new add-on for **WoW Classic Era** (1.15.9, interface 11509), 
   - **New:** Un'Goro Crater and Wetlands.
   - **Review:** Classic gets its own `targets/ClassicEra/roaming-overrides.csv`, carried over from TBCGuide's zone review (same old-world terrain; Outland and TBC-race zones dropped). The five zones TBCGuide never reviewed (Stonetalon Mountains, Azshara, Alterac Mountains, Blasted Lands, Silithus) were then reviewed from general knowledge of their terrain, not walked: the first four strict, Silithus normal. That gave routes for *A Gnome's Respite* and the two Kum'isha quests, for 107 routes in 27 zones covering 124 objectives in 101 quests. Records: `docs/generated/ClassicEra/roaming-dispositions.csv`.
 - **One download for Classic Era and TBC Classic Anniversary** (maintainer's decision). The TBC target, TBCGuide 0.9.5's data and 1-70 guides, is no longer a test fixture: it ships in the same zip as Classic Era.
-  - **How:** `tools/build.ps1 package` now builds `dist/ClassicGuide-<version>.zip` from every shipped target. The shared code sits once at the root of the folder and each game's data under `Targets/<Target>/`, with `ClassicGuide_Vanilla.toc` (interface 11509) and `ClassicGuide_TBC.toc` (interface 20506) each listing its own data. Each client loads the TOC for its game type, as Blizzard's own 1.15.9 and 2.5.6 UI add-ons do. A shared file that differs between targets stops the build.
+  - **How:** `tools/build.ps1 package` now builds `dist/Questwarden-<version>.zip` from every shipped target. The shared code sits once at the root of the folder and each game's data under `Targets/<Target>/`, with `Questwarden_Vanilla.toc` (interface 11509) and `Questwarden_TBC.toc` (interface 20506) each listing its own data. Each client loads the TOC for its game type, as Blizzard's own 1.15.9 and 2.5.6 UI add-ons do. A shared file that differs between targets stops the build.
   - **Tested through each TOC:** the Classic Era smoke suite and the full TBC engine suite run against the assembled folder before it is zipped. The test runners take the TOC and data location from `stage.lua`.
   - **TBCGuide:** the README says not to run both on TBC. The conflict check does not name it, because the lint gate keeps the old name out of shipped code.
   - **Not yet for TBC:** flight graph, spirit healers, the full rare list and regenerated hunting routes (DATA_GAPS.md).
@@ -175,7 +177,7 @@ Tested offline: ClassicEra build all passes (107 guides; 80 route walks, Speed a
 
 ---
 
-# TBCGuide history (the add-on ClassicGuide was forked from)
+# TBCGuide history (the add-on Questwarden was forked from)
 
 ## 0.9.5
 

@@ -1,5 +1,5 @@
--- ClassicGuide - compiled guide data. GENERATED from guides-src/alliance/37_azshara.guide by tools/build.ps1 guides.
--- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original ClassicGuide content
+-- Questwarden - compiled guide data. GENERATED from guides-src/alliance/37_azshara.guide by tools/build.ps1 guides.
+-- DO NOT EDIT: edit the .guide source and rebuild. Guide routes and notes are original Questwarden content
 -- (GPL-3.0-only); quest ids, NPC names and coordinates were looked up in the bundled QuestieDB-derived data.
 local _, ns = ...
 ns.Guides:Register({

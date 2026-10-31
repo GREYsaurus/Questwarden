@@ -1,6 +1,6 @@
 # Gear scoring
 
-ClassicGuide compares items with what you wear: on item tooltips, for quest rewards (ranked in chat when a quest offers a choice), and with `/cg gear` (also `/cggear`). Nothing on this page equips, buys or chooses anything. Quest rewards are picked by you unless you turn on *Quest auto rewards*.
+Questwarden compares items with what you wear: on item tooltips, for quest rewards (ranked in chat when a quest offers a choice), and with `/qw gear` (also `/qwgear`). Nothing on this page equips, buys or chooses anything. Quest rewards are picked by you unless you turn on *Quest auto rewards*.
 
 **Automatic upgrades** (opt-in) and the Bind-on-Equip bag markers use a separate evaluator with the profile you choose. For priority-only profiles it uses **estimated** weights, labelled as such. See [AUTO_EQUIP.md](AUTO_EQUIP.md).
 
@@ -16,7 +16,7 @@ Nothing has been tested in the game client yet.
    - Your **main talent tree** picks the spec. A Feral druid gets the cat profile unless you choose the bear profile.
    - Only profiles whose **level range** contains your level are used, so **level-70 weights are never applied to a leveling character automatically**.
    - At 70, a pre-raid profile is preferred over a raid profile when both exist (Rogue only).
-   - `/cg gear profile <id>` or *Next profile* on the settings page overrides this; `auto` goes back to detection. A profile made for a higher level says so.
+   - `/qw gear profile <id>` or *Next profile* on the settings page overrides this; `auto` goes back to detection. A profile made for a higher level says so.
    - No matching profile means no score, and the tooltip says why.
 2. **Numeric profiles** (`weights`):
    - `score = sum(stat amount × weight)` over the stats the profile weights.
@@ -45,12 +45,12 @@ Nothing has been tested in the game client yet.
 
 ## Settings
 
-The *Gear* page under ClassicGuide in the game options has:
+The *Gear* page under Questwarden in the game options has:
 - on/off switches for gear scoring, tooltips, quest-reward ranking, percentages and confidence;
 - profile choice;
 - *Reset gear settings*.
 
-From chat: `/cg set gearTooltip off`, and the same for `gearEnabled`, `gearQuestRewards`, `gearShowPercent` and `gearShowConfidence`.
+From chat: `/qw set gearTooltip off`, and the same for `gearEnabled`, `gearQuestRewards`, `gearShowPercent` and `gearShowConfidence`.
 
 ## Updating profiles
 

@@ -1,4 +1,4 @@
--- ClassicGuide - minimap button: left-click opens settings, right-click toggles the guide window
+-- Questwarden - minimap button: left-click opens settings, right-click toggles the guide window
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -52,7 +52,7 @@ function MB:CursorAngle()
     return math.deg(math.atan2(cy / scale - my, cx / scale - mx)) % 360
 end
 
--- Left-click toggles the ClassicGuide settings window (UI/Config.lua).
+-- Left-click toggles the Questwarden settings window (UI/Config.lua).
 function MB:OnClick(button)
     if self.dragged then self.dragged = false return end -- releasing a drag is not a click
     if button == "RightButton" then

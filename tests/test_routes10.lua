@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: 1.0 route pass (saved-progress remap, under-level pickups, notes)
+-- Questwarden - headless tests: 1.0 route pass (saved-progress remap, under-level pickups, notes)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.

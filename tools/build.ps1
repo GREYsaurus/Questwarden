@@ -1,4 +1,4 @@
-# ClassicGuide build script (Windows PowerShell 5.1+ / PowerShell 7).
+# Questwarden build script (Windows PowerShell 5.1+ / PowerShell 7).
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 # SPDX-License-Identifier: GPL-3.0-only
 #

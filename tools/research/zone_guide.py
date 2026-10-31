@@ -228,7 +228,7 @@ chapter = re.search(r"^@chapter (.+)$", s0, re.M).group(1).strip()
 nexts = re.findall(r"^@next .+$", s0, re.M)
 new_id = base["id"] + "_Late"
 pre = {"Alliance": "A", "Horde": "H", "Both": "Both"}[FAC]
-head = ["# ClassicGuide - %s return visit (%d-%d), %s, WoW Classic Era" % (zname, LO, HI, FAC),
+head = ["# Questwarden - %s return visit (%d-%d), %s, WoW Classic Era" % (zname, LO, HI, FAC),
         "# Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus) - GPL-3.0-only. Original route.",
         "# GENERATED as a starting point by tools/research/zone_guide.py (quests no other guide uses, in waves);",
         "# edit freely: it is a normal guide source from here on.",

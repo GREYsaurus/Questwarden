@@ -1,4 +1,4 @@
-# ClassicGuide - self-tests for the build tooling (runs without a Lua interpreter).
+# Questwarden - self-tests for the build tooling (runs without a Lua interpreter).
 # Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 # SPDX-License-Identifier: GPL-3.0-only
 #
@@ -38,12 +38,12 @@ Check ([GuideTools.LuaWriter]::Value($t2) -eq $lua) "literal round trip: $lua"
 Check ($t.Get(1) -eq 1 -and $null -eq $t.Get(2) -and $t.Get(4) -eq 's"q') "positional values with holes"
 
 # Target rules parse from the same Target.<Target>.lua the add-on ships (tools/src/Ctx.cs)
-[void][GuideTools.Ctx]::Load($Root, "ClassicEra", "ClassicGuide")
+[void][GuideTools.Ctx]::Load($Root, "ClassicEra", "Questwarden")
 Check ([GuideTools.Ctx]::MaxLevel -eq 60 -and [GuideTools.Ctx]::QuestLogMax -eq 20 -and [GuideTools.Ctx]::TalentPoints -eq 51) "Classic Era rules: 60, quest log 20, 51 points"
 Check ([GuideTools.Ctx]::Verified -and [GuideTools.Ctx]::Chapters.Count -eq 1) "Classic Era: verified, one chapter"
-[void][GuideTools.Ctx]::Load($Root, "Forever", "ClassicGuide")
+[void][GuideTools.Ctx]::Load($Root, "Forever", "Questwarden")
 Check (-not [GuideTools.Ctx]::Verified) "Forever is unverified"
-[void][GuideTools.Ctx]::Load($Root, "TBC", "ClassicGuide")
+[void][GuideTools.Ctx]::Load($Root, "TBC", "Questwarden")
 Check ([GuideTools.Ctx]::MaxLevel -eq 70 -and [GuideTools.Ctx]::QuestLogMax -eq 25 -and [GuideTools.Ctx]::TalentPoints -eq 61) "TBC fixture rules: 70, quest log 25, 61 points"
 
 # Target data parses and has expected shape (TBC fixture)

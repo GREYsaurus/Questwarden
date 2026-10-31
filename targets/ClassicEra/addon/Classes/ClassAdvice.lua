@@ -1,4 +1,4 @@
--- ClassicGuide - class leveling advice for WoW Classic Era
+-- Questwarden - class leveling advice for WoW Classic Era
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 --

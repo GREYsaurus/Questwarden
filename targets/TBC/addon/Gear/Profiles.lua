@@ -1,4 +1,4 @@
--- ClassicGuide - gear scoring profiles (data only; no logic)
+-- Questwarden - gear scoring profiles (data only; no logic)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -219,7 +219,7 @@ ns.GearProfiles = {
     },
 
     -- Heuristic layer for AUTOMATIC UPGRADES ONLY (Gear/Upgrade.lua). NOT from any source: these are
-    -- ClassicGuide's own estimates, shown as "estimated" wherever they are used, and kept here so they can
+    -- Questwarden's own estimates, shown as "estimated" wherever they are used, and kept here so they can
     -- be edited in one place (docs/AUTO_EQUIP.md explains them). Tooltips and quest rewards keep using
     -- the sourced data above unchanged.
     heuristic = {

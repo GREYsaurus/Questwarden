@@ -1,4 +1,4 @@
--- ClassicGuide - headless tests: automatic upgrades, BoE bag markers, equip notifications
+-- Questwarden - headless tests: automatic upgrades, BoE bag markers, equip notifications
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Loaded by tests/run_tests.lua after boot; uses TEST.check and TEST.ns.

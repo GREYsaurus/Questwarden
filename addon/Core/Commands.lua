@@ -1,4 +1,4 @@
--- ClassicGuide - slash commands
+-- Questwarden - slash commands
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -227,7 +227,7 @@ local function dispatch(msg)
 end
 
 function ns:RegisterCommands()
-    -- Only claim /cg and /classicguide; warn if another add-on already registered either.
+    -- Only claim /cg and /questwarden; warn if another add-on already registered either.
     for key, value in pairs(_G) do
         if type(key) == "string" and string.sub(key, 1, 6) == "SLASH_" and string.sub(key, 1, 6 + #ns.key) ~= "SLASH_" .. ns.key
             and type(value) == "string" then
