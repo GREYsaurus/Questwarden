@@ -19,6 +19,8 @@
 #   lint             Lua 5.1 syntax check + global usage audit of every shipped .lua file
 #   validate         Content validation (guides, talents, coverage, manifest)
 #   report           Write docs/generated/<Target>/COVERAGE_REPORT.md
+#   crosscheck       Compare our data with a reference add-on's data files: -Reference <folder outside the
+#                    repository>. Writes only docs/generated/CROSSCHECK.md (docs/DATA_POLICY.md)
 #   routes           Route model: walk every race/class route, write docs/generated/<Target>/ROUTE_AUDIT.md
 #                    (fails on impossible quest order / quest-log overflow)
 #   test             Headless Lua 5.1 tests against the staged add-on (lua5.1, or Python's lupa package)
@@ -34,7 +36,8 @@ param(
     [Parameter(Position = 0)][string]$Command = "all",
     [Parameter(Position = 1)][string]$Arg1,
     [Parameter(Position = 2)][string]$Arg2,
-    [string]$Target = "ClassicEra"
+    [string]$Target = "ClassicEra",
+    [string]$Reference = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -228,6 +231,12 @@ function Invoke-ImportQuestie {
     Write-Host "Wrote $out (log: $log)"
 }
 
+function Invoke-Crosscheck {
+    if (-not $Reference) { throw "crosscheck needs -Reference <folder outside the repository> (docs/DATA_POLICY.md)." }
+    python (Join-Path $PSScriptRoot "research\crosscheck.py") $Target $Reference
+    if ($LASTEXITCODE -ne 0) { throw "crosscheck failed." }
+}
+
 function Invoke-ImportClient {
     Load-Tools
     $dd = Get-Db2Root
@@ -383,6 +392,7 @@ switch ($Command) {
     "fetch" { Invoke-Fetch }
     "import-questie" { Invoke-ImportQuestie }
     "import-client" { Invoke-ImportClient }
+    "crosscheck" { Invoke-Crosscheck }
     "guides" { Invoke-Guides }
     "lint" { Invoke-Lint }
     "validate" { Invoke-Validate }

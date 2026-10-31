@@ -46,4 +46,13 @@ Everything below is **unverified** and stays `v=0` until checked in the live cli
 
 ## Cross-check results
 
-None yet. `tools/build.ps1 crosscheck` arrives with the Phase 2 data pipeline; its report will be `docs/generated/CROSSCHECK.md`, and disagreements will be listed here.
+Classic Era, 2026-10-31: `tools/build.ps1 crosscheck -Reference <folder>` against the maintainer's reference files (docs/DATA_POLICY.md). Full report: `docs/generated/CROSSCHECK.md`. No reference value was used; each line below is resolved from our own sources or checked in game.
+
+| Area | Disagreement | What we do |
+|---|---|---|
+| Rares | 27 rares QuestieDB marks friendly are left out of our pins and alerts. 17 are friendly to one faction only (Watch Commander Zalaphil, Tamra Stormpike...): they are hostile to the other faction | **our bug:** the "hostile" rule must mean hostile to the player's faction. The 10 marked friendly to both (7:XT, Cranky Benj...) look like QuestieDB errors: check in game |
+| Rares | 53 have no map position in QuestieDB (no spawns, or inside an instance); 2 sit in a neighbouring zone (Narillasanz, Volchan) | nothing to fix from our sources; check the two in game |
+| Spirit healers | 14 positions only in the reference, among them Stormwind, Ironforge and Orgrimmar; 7 of our 84 only in ours | QuestieDB lacks some graveyards: check in game, or capture (Phase 3) |
+| Flight nodes | none missing; ours also has the druid-only Nighthaven nodes and Plaguewood Tower | client tables are authoritative |
+| Trainer spells | 79 spell ids not in our trainer or pet data: starting spells, passives (Parry, Mail), talent ranks, hunter pet skill ranks (Growl, resistances), and *Innervate* (29166). 9 spells listed earlier than our trainer level (Claw, Aspect of the Cheetah, Feign Death...) | check Innervate and the pet ranks against the client tables (`TrainingTables.cs`, `PetTables.cs`), the 9 levels in game |
+| Mob levels and rank | 18 level ranges and 6 ranks differ from QuestieDB; 6 names unknown to it | QuestieDB is our source; check in game, the danger notes use QuestieDB's levels |
