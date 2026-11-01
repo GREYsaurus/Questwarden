@@ -248,6 +248,7 @@ end
 function U.PctText(e)
     if e.kind == "empty" then return "Empty slot filled" end
     if e.armorOnly then return string.format("+%d armor (neither item has other stats)", e.armorOnly) end
+    if e.weaponOnly then return string.format("+%.1f weapon DPS (same other stats)", e.weaponOnly) end
     local pct = e.pct
     if not pct or pct ~= pct or pct == math.huge or pct == -math.huge then return "Upgrade - percentage unavailable" end
     return string.format("%+.1f%% estimated spec score", pct)
@@ -356,10 +357,15 @@ function U:Evaluate(d, ctx)
         end
     else
         local gain = self:ArmorOnlyGain(d, best.replaced)
+        local dps = not gain and self:WeaponOnlyGain(d, best.replaced)
         if gain then
             -- Score says nothing (neither item has a stat the profile weighs), but the new one has more armor.
             e.kind, e.armorOnly, e.pct = "upgrade", gain, nil
             e.delta = gain * EPS -- ranks below every real score upgrade
+        elseif dps then
+            -- Same secondary stats as the equipped weapon (or none on either), more weapon DPS.
+            e.kind, e.weaponOnly, e.pct = "upgrade", dps, nil
+            e.delta = dps * EPS
         else
             e.reason = (math.abs(best.delta) <= EPS) and "same score as equipped" or "not an upgrade"
         end
@@ -380,6 +386,32 @@ function U:ArmorOnlyGain(d, replaced)
     if string.find(loc, "WEAPON", 1, true) or loc == "INVTYPE_RANGED" or loc == "INVTYPE_RANGEDRIGHT" or loc == "INVTYPE_THROWN" then return nil end
     local gain = ((d.stats or {}).armor or 0) - ((replaced[1].stats or {}).armor or 0)
     return gain > 0 and gain or nil
+end
+
+-- Weapons: the same weapon kind (two-hander for two-hander, one-hander for one-hander, ranged for ranged) with exactly
+-- the same secondary stats as the one it replaces (or none on either), no effects on either, and more weapon DPS: the
+-- DPS it adds, or nil. Armor is not compared.
+local WEAPON_KIND = {
+    INVTYPE_2HWEAPON = "2h", INVTYPE_WEAPON = "1h", INVTYPE_WEAPONMAINHAND = "1h", INVTYPE_WEAPONOFFHAND = "1h",
+    INVTYPE_RANGED = "ranged", INVTYPE_RANGEDRIGHT = "ranged", INVTYPE_THROWN = "ranged",
+}
+local function noEffects(d)
+    return not (d.tip and ((d.tip.effects and #d.tip.effects > 0) or (d.tip.schoolDmg and next(d.tip.schoolDmg))))
+end
+local function sameStats(a, b)
+    for k, v in pairs(a.stats or {}) do if k ~= "armor" and v ~= 0 and (b.stats or {})[k] ~= v then return false end end
+    for k, v in pairs(b.stats or {}) do if k ~= "armor" and v ~= 0 and (a.stats or {})[k] ~= v then return false end end
+    return true
+end
+function U:WeaponOnlyGain(d, replaced)
+    if not replaced or #replaced ~= 1 then return nil end
+    local old = replaced[1]
+    local kind = WEAPON_KIND[d.equipLoc or ""]
+    if not kind or kind ~= WEAPON_KIND[old.equipLoc or ""] then return nil end
+    if type(d.dps) ~= "number" or type(old.dps) ~= "number" then return nil end
+    if not (noEffects(d) and noEffects(old) and sameStats(d, old)) then return nil end
+    local gain = d.dps - old.dps
+    return gain > 0.05 and gain or nil
 end
 
 -- Context for one pass: profile, weights, equipped items and rating base. Returns ctx or nil, why

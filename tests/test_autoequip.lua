@@ -365,6 +365,33 @@ check(equipped(95030) == 9 and #sounds == soundsBefore, "with the sound setting 
 PlaySound = realPlay
 MOCK.equipped[9], MOCK.equipped[15] = nil, nil
 
+-- Weapons: same secondary stats (or none on either), more DPS -------------------------------------------------------
+local function w(loc, dps, stats, tip) return { equipLoc = loc, dps = dps, stats = stats or {}, tip = tip } end
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 14), { w("INVTYPE_WEAPON", 10) }) == 4, "a bare one-hander with more DPS replaces a bare one-hander")
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 13, { str = 5 }), { w("INVTYPE_WEAPON", 10, { str = 5 }) }) == 3, "same secondary stats on both, more DPS: an upgrade")
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 20, { str = 3 }), { w("INVTYPE_WEAPON", 10) }) == nil, "different secondary stats: not decided by DPS")
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 20), { w("INVTYPE_WEAPON", 10, { agi = 4 }) }) == nil, "a bare weapon never replaces one with stats")
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 9), { w("INVTYPE_WEAPON", 10) }) == nil, "less DPS: not an upgrade")
+check(U:WeaponOnlyGain(w("INVTYPE_2HWEAPON", 30), { w("INVTYPE_WEAPON", 10) }) == nil, "a two-hander is not compared with a one-hander")
+check(U:WeaponOnlyGain(w("INVTYPE_RANGEDRIGHT", 12), { w("INVTYPE_RANGED", 8) }) == 4, "ranged weapons compare with ranged weapons (gun and bow)")
+check(U:WeaponOnlyGain(w("INVTYPE_WEAPON", 20, nil, { effects = { "Chance on hit" } }), { w("INVTYPE_WEAPON", 10) }) == nil, "an effect it cannot score: not decided by DPS")
+check(U:WeaponOnlyGain(w("INVTYPE_HEAD", 20), { w("INVTYPE_HEAD", 10) }) == nil, "not a weapon: not this rule")
+-- Through automatic equipping, with a profile that weighs nothing here (Classic's priority-only profiles)
+item(95040, { name = "Plain Blade", classID = 2, subclassID = 7, equipLoc = "INVTYPE_WEAPON", bindType = 1, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 10 } })
+item(95041, { name = "Sharper Blade", classID = 2, subclassID = 7, equipLoc = "INVTYPE_WEAPON", bindType = 1, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 14 } })
+local realScore = U.ScoreSet
+U.ScoreSet = function() return 0 end
+MOCK.equipped = { [16] = 95040, [17] = 95021 } -- off hand filled (a dual wielder would fill an empty one first)
+bag({ { 95041, true } })
+AE.failed, AE.displaced = {}, {}
+AE:OnProfileChanged()
+settle(10)
+check(equipped(95041) == 16 and inBags(95040), "a bare weapon with more DPS is equipped over a bare weapon")
+local dpsNote = false
+for _, m in ipairs(MOCK.printed) do if string.find(m, "+4.0 weapon DPS", 1, true) then dpsNote = true end end
+check(dpsNote, "the notification says how much weapon DPS was gained")
+U.ScoreSet = realScore
+
 -- The chat line for automatic equips: on by default, local only, old "off" switched on once
 check(ns.PROFILE_DEFAULTS.equipChat == true, "the equip chat line is on by default")
 local sentToOthers = 0

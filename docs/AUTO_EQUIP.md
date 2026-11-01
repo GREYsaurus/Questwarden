@@ -61,6 +61,14 @@ One evaluator (`addon/Gear/Upgrade.lua`) is used for automatic equipping, bag ma
 
 **Armor-only items.** An item with no stats except armor (no weapon damage, no effects) that replaces one equally bare item counts as an upgrade when it has more armor, even though its spec score is the same. It ranks below every real score upgrade. An armor-only item never replaces an item with stats, and weapons never count.
 
+**Weapons by DPS.** When the score sees no difference, a weapon counts as an upgrade when:
+- it has exactly the same secondary stats as the weapon it replaces, or neither has any;
+- neither has an effect Questwarden cannot score (on-hit procs, spell damage);
+- it is the same kind (two-hander for two-hander, one-hander for one-hander, ranged for ranged);
+- its weapon DPS is higher.
+
+It ranks below every real score upgrade. A weapon with fewer or different stats is never equipped just for its DPS, and weapon skill (an untrained weapon type) is not checked; your class must be able to use the weapon type at all.
+
 **Upgrade %:** (new − current) / current × 100, shown to one decimal as *estimated spec score*. It's not a promise of more DPS, healing or survival.
 - **Empty slot:** shows *Empty slot filled*.
 - **Current score of 0:** shows *Upgrade - percentage unavailable*.
@@ -165,6 +173,7 @@ After a confirmed change, a message with the item's icon appears at the top of t
 - *Auto-equipped: [Item] - +8.4% estimated spec score (Frost)*
 - *Auto-equipped: [Item] - Empty slot filled (Head)*
 - *Auto-equipped: [Item] - +15 armor (neither item has other stats)*
+- *Auto-equipped: [Item] - +4.0 weapon DPS (same other stats)*
 
 **Sound:** the level-up sound plays after each confirmed automatic equip (*Play a sound on automatic upgrades*, on by default). It is sound kit 888, which plays `sound/spells/levelup.ogg` in both the 1.15.9 and 2.5.6 client tables.
 
