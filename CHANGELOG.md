@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.12 (2026-11-01)
+
+- **Fix: "Target is inside" for mobs that are outside** (Kobold Workers at Echo Ridge Mine). A place named in the step text ("Echo Ridge Mine is north of the abbey") no longer counts as indoors; the text has to put the target inside ("inside", "in the cave", "at the back of the cave", "top of the tower"). Hints from step text now say "may be inside"; only spots learned by standing there indoors say "is inside".
+
+**Tested:** offline only (TBC suite 4,829/4,829, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
+
 ## 0.1.0-alpha.11 (2026-11-01)
 
 - **Fix: a black square around the waypoint pins** on the minimap and world map. The glow behind the diamond is now drawn additively, as the game draws that texture.
