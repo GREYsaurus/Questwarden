@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.9 (2026-11-01)
+
+- **Fix: an NPC by a door was called "inside".** Deputy Willem at Northshire Abbey was remembered as indoors because the player accepted his quest from just inside the abbey (the old 12-yard arrival radius). Spots are now learned only within 5 yards of the target, and a spot ever seen outdoors never counts as inside. Spots learned by 0.1.0-alpha.8 are cleared once.
+- **Raid markers by macro** (docs/RAID_MARKERS.md): the "Questwarden" targeting macro now also marks. One press targets the nearest visible mob of each kind the guide wants and gives it that kind's raid icon. Each press re-picks the nearest living mob, so a marker moves on after a kill or to a nearer mob instead of sticking to the first one. Questwarden no longer marks by itself while this is on (setting *Mark with the Targeting Macro*, on by default; off brings back the automatic marking).
+- **Chat line for automatic equips** is now on by default (only you see it). Settings saved as "off" are switched on once.
+- **"Find the way out" now shows from 15 yards** (was 40), so it appears when you stand inside a building next to an outdoor target, as in Northshire Abbey.
+
+**Tested:** offline only (TBC suite 4,780/4,780, Classic Era smoke 88/88, Forever 31/31, route audits 0 errors). Not checked in the live game: the macro marking and the indoor hints need an in-game check.
+
 ## 0.1.0-alpha.8 (2026-11-01)
 
 - **Fix: mobs that drop a quest item were not targets.** For example the wolves for *Wolves Across the Border*. The target list, the target macro and raid marking now include the NPCs that drop a quest's items: all of them when up to 6 kinds drop it, otherwise those in your zone. Before, the list had kill objectives only and marking needed 3 or fewer droppers.
