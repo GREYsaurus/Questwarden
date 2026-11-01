@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-alpha.10 (2026-11-01)
+
+- **Raid markers are automatic again, and move:**
+  - Icons go to the mob you target or mouse over.
+  - When the marked mob dies or leaves your view (its nameplate goes away), the icon moves to the next visible mob of the step by itself; you don't have to look at it.
+  - An icon is held only while its mob is visible and alive (before: up to 60 seconds after it left view, which kept icons stuck on the first mob).
+  - A nameplate coming into view still never takes an icon from a visible living mob, so icons don't jump around on their own.
+- **Marking with the macro is optional again** (*Mark with the Targeting Macro*, now off by default; alpha.9's saved "on" is switched back once). The macro still targets the step's mobs.
+- **README** updated for the current alpha: status, downloads, features and commands.
+
+**Tested:** offline only (TBC suite 4,785/4,785, Classic Era smoke 88/88, Forever 31/31, route audits 0 errors). Not checked in the live game: how the icons move in a real fight needs an in-game check.
+
 ## 0.1.0-alpha.9 (2026-11-01)
 
 - **Fix: an NPC by a door was called "inside".** Deputy Willem at Northshire Abbey was remembered as indoors because the player accepted his quest from just inside the abbey (the old 12-yard arrival radius). Spots are now learned only within 5 yards of the target, and a spot ever seen outdoors never counts as inside. Spots learned by 0.1.0-alpha.8 are cleared once.
