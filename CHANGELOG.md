@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.16 (2026-11-01)
 
 - **Train steps suggest a flight when your zone has no class trainer.** The step names the cheapest flight path you know from your zone to a zone with your class trainer (Sentinel Hill to Stormwind, for example) and points the arrow at the flight master. Known flight paths and prices are saved per character each time you open a flight map; a price you have not seen yet is shown as "price not seen yet", never guessed. With no known flight, the step uses the trainer the guide names as before.
+
+**Tested:** offline only (TBC suite 4,876/4,876, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.15 (2026-11-01)
 
