@@ -309,7 +309,11 @@ function M:Consider(unit)
     end
     -- One attempt per unit, except when it now outranks the holder (targeted, moused over, or the holder left).
     if self.tried[guid] and not moving then return self:Note("already tried this unit", name) end
-    if self.holder[icon] then self:Release(self.holder[icon]) end
+    -- Moving the icon: every unit we marked with it lets go first (not only the recorded holder: a mob that went out
+    -- of sight still wears it in the game), so the game taking it off that mob is never read as someone else's change.
+    for g, ic in pairs(self.marked) do
+        if ic == icon and g ~= guid then self:Release(g) end
+    end
     local can, why = C.CanMark()
     if not can then
         self:Note("not permitted: " .. why, name, true)
@@ -337,6 +341,8 @@ end
 function M:Verify(guid, gen, icon, id, name)
     if self.pending then self.pending[guid] = nil end
     if self.gen ~= gen then return end
+    -- We moved the icon on to another mob before this check (quick retargeting): not a failure.
+    if self.marked[guid] ~= icon then return end
     local u = self:UnitFor(guid)
     if not u then return end -- out of sight: result unknown, claim nothing
     if C.GetRaidTargetIndex(u) == icon then
@@ -368,11 +374,18 @@ end
 -- the rest of this step, so the player's choice is not undone on the next mob either. A dead unit
 -- simply lost its icon by dying.
 function M:OnRaidTargetUpdate()
+    -- Which of our icons now sit on another unit we marked: the icon moved there by our own doing.
+    local onOther = {}
+    for g, ic in pairs(self.marked) do
+        local u = self:UnitFor(g)
+        if u and C.GetRaidTargetIndex(u) == ic then onOther[ic] = g end
+    end
     for guid, icon in pairs(self.marked) do
         local u = not (self.pending and self.pending[guid]) and self:UnitFor(guid) -- a mark not confirmed yet is not checked
         if u and C.GetRaidTargetIndex(u) ~= icon then
             self:Release(guid)
-            if not (UnitIsDead and UnitIsDead(u)) then
+            local movedByUs = onOther[icon] and onOther[icon] ~= guid
+            if not movedByUs and not (UnitIsDead and UnitIsDead(u)) then
                 self.handsOff[guid] = true
                 self.stopped = true
                 self:Note("an icon we set was changed by someone else; paused for this step", nil, true)

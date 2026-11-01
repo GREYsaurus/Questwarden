@@ -277,6 +277,34 @@ MOCK.kill(fifth)
 MOCK.tick(0.6)
 check(iconOf(sixth) == prof.defaultMarker, "after a kill the icon moves to the next visible mob by itself")
 MOCK.units.nameplate2, MOCK.units.nameplate3, MOCK.units.target = nil, nil, nil
+-- The real-game case behind "paused for this step": the marked mob goes out of sight (its icon stays on it in the
+-- game), comes back into view, and you target another mob of the step. Moving the icon must not pause marking.
+reset()
+ns.Engine:Refresh()
+M:OnStep()
+local m1 = MOCK.creature(objMob, 61, "objective mob")
+local m2 = MOCK.creature(objMob, 62, "objective mob")
+target(m1)
+check(iconOf(m1) == prof.defaultMarker, "first mob marked")
+MOCK.units.target = nil
+MOCK.units.nameplate5 = m1
+MOCK.fire("NAME_PLATE_UNIT_REMOVED", "nameplate5") -- out of sight: the game keeps the icon on it
+MOCK.units.nameplate5 = nil
+MOCK.tick(0.6)
+MOCK.units.nameplate5 = m1 -- back in view
+target(m2)
+check(iconOf(m2) == prof.defaultMarker and iconOf(m1) == nil and not M.stopped, "targeting another mob moves the icon; our own move never pauses marking")
+-- Quick retargeting before a mark is checked is not a failure
+local m3 = MOCK.creature(objMob, 63, "objective mob")
+local before = M.failures
+MOCK.units.target = m3
+M:Consider("target")
+MOCK.units.target = m2
+M:Consider("target")
+MOCK.tick(0.6)
+check(not M.stopped and M.failures == before and iconOf(m2) == prof.defaultMarker, "retargeting quickly: no failure, no pause, the icon ends on your target")
+MOCK.units.nameplate5, MOCK.units.target = nil, nil
+
 -- an icon change elsewhere while a mark is still on its way is not taken for "someone changed our icon"
 local slow = MOCK.creature(objMob, 48, "objective mob")
 MOCK.markDenied = true -- the icon does not show up at once
