@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.0-alpha.8 (2026-11-01)
+
+- **Fix: mobs that drop a quest item were not targets.** For example the wolves for *Wolves Across the Border*. The target list, the target macro and raid marking now include the NPCs that drop a quest's items: all of them when up to 6 kinds drop it, otherwise those in your zone. Before, the list had kill objectives only and marking needed 3 or fewer droppers.
+- **Raid marker follows your target:** targeting another mob of the current step moves the step's icon to it. Mobs only moused over or seen by nameplate still never take it from a living mob.
+- **Armor-only upgrades:** an item with nothing but armor is equipped automatically over an equally bare item with less armor. It never replaces an item with stats.
+- **Level-up sound on automatic upgrades** (setting *Play a sound on automatic upgrades*, on by default).
+- **City, building and cave hints** (docs/SETTINGS.md, "Navigation hints"): the arrow points in a straight line, so the guide now warns when that will mislead you.
+  - **Target in a capital:** follow the streets.
+  - **You are in a capital and the target is outside it:** leave the city first.
+  - **You are indoors and the target is not nearby:** find the way out first.
+  - **Target inside a building, cave or mine:** look for the entrance. Known from the step's own text, or learned the first time you arrive there indoors.
+  - Each hint shows in the step text, and the most pressing one also shows under the arrow. There are no paths through cities or buildings: the add-on has no data for them.
+- **Waypoint pins:**
+  - The minimap and world-map pins are now a purple diamond with a glow, so they no longer look like quest-giver "!" icons.
+  - The world-map pin stays in the map canvas's own layer and is placed again while the map is open.
+  - `/qw debug nav` shows what the pins see.
+
+**Tested:** offline only (TBC suite 4,744/4,744, Classic Era smoke 88/88, Forever 31/31, route audits 0 errors). Not checked in the live game: the pins, the marker move, armor-only equips, the sound and the hints need an in-game check.
+
 ## 0.1.0-alpha.7 (2026-11-01)
 
 - **Navigation arrow:** about a third larger, with a larger distance label. *Arrow Scale* still resizes it.
