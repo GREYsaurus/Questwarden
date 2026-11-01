@@ -108,6 +108,11 @@ function D:Run(arg)
     if cmd == "api" then return self:Api() end
     if cmd == "talents" then return self:TalentCheck() end
     if cmd == "quest" then return self:Quest(rest) end
+    if cmd == "nav" then
+        ns:Print("navigation:")
+        for _, l in ipairs(ns.Nav:DebugLines()) do line(l) end
+        return
+    end
     if cmd == "marks" then
         local M = ns.Marker
         local r = M.rule

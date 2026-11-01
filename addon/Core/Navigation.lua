@@ -139,13 +139,21 @@ function Nav:UpdateMinimapPin()
     pin:Show()
 end
 
-local function createMinimapPin()
-    local pin = CreateFrame("Frame", ns.name .. "MinimapPin", Minimap)
-    pin:SetSize(14, 14)
-    pin:SetFrameLevel((Minimap:GetFrameLevel() or 1) + 5)
+-- The waypoint look, shared by the minimap and world map pins: a purple raid-target diamond on a soft glow, so it
+-- stands apart from quest-giver "!" and "?" icons (ours, the game's or another add-on's). Stock client textures.
+local function waypointPin(name, parent, size)
+    local pin = CreateFrame("Frame", name, parent)
+    pin:SetSize(size, size)
+    local glow = pin:CreateTexture(nil, "BACKGROUND")
+    glow:SetPoint("CENTER")
+    glow:SetSize(size * 1.9, size * 1.9)
+    glow:SetTexture("Interface\\WorldMap\\UI-QuestPoi-IconGlow")
+    glow:SetVertexColor(0.8, 0.5, 1)
     local tex = pin:CreateTexture(nil, "OVERLAY")
     tex:SetAllPoints()
-    tex:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon") -- stock client texture, as on the world map
+    tex:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcons")
+    tex:SetTexCoord(0.5, 0.75, 0, 0.25) -- the diamond
+    pin.tex, pin.glow = tex, glow
     pin:EnableMouse(true)
     pin:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -155,6 +163,12 @@ local function createMinimapPin()
     end)
     pin:SetScript("OnLeave", function() GameTooltip:Hide() end)
     pin:Hide()
+    return pin
+end
+
+local function createMinimapPin()
+    local pin = waypointPin(ns.name .. "MinimapPin", Minimap, 16)
+    pin:SetFrameLevel((Minimap:GetFrameLevel() or 1) + 10)
     -- Repositioned as the player moves and turns (on a separate frame, so it keeps running while hidden).
     local acc = 0
     local ticker = CreateFrame("Frame")
@@ -180,33 +194,21 @@ function Nav:UpdateMapPin()
     local shownMap = WorldMapFrame.GetMapID and WorldMapFrame:GetMapID()
     local canvas = WorldMapFrame.GetCanvas and WorldMapFrame:GetCanvas()
     if not canvas or shownMap ~= t.mapId then pin:Hide() return end
+    -- A child of the map canvas, in the canvas's own strata (the world map draws into a frame buffer, so a
+    -- frame in another strata may not show), above the map's own pins.
     if pin:GetParent() ~= canvas then pin:SetParent(canvas) end
+    pin:SetFrameStrata(canvas:GetFrameStrata())
+    pin:SetFrameLevel((canvas:GetFrameLevel() or 1) + 2000)
     local w, h = canvas:GetWidth(), canvas:GetHeight()
     pin:ClearAllPoints()
     pin:SetPoint("CENTER", canvas, "TOPLEFT", w * t.x / 100, -h * t.y / 100)
     local scale = 1 / (canvas:GetEffectiveScale() / UIParent:GetEffectiveScale())
     pin:SetScale(math.max(scale, 0.6))
-    pin:SetFrameStrata("HIGH")
     pin:Show()
 end
 
 local function createPin()
-    local pin = CreateFrame("Frame", ns.name .. "MapPin", UIParent)
-    pin:SetSize(20, 20)
-    local tex = pin:CreateTexture(nil, "OVERLAY")
-    tex:SetAllPoints()
-    tex:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon") -- stock client texture
-    pin.tex = tex
-    pin:EnableMouse(true)
-    pin:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:AddLine(ns.name)
-        GameTooltip:AddLine(Nav.target and Nav.target.label or "", 1, 1, 1)
-        GameTooltip:Show()
-    end)
-    pin:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    pin:Hide()
-    return pin
+    return waypointPin(ns.name .. "MapPin", UIParent, 22)
 end
 
 -- Time to arrival ------------------------------------------------------------------------------
@@ -335,5 +337,29 @@ function Nav:Init()
         t = 0
         local s = ns.Engine:CurrentStep()
         if s and s[1] == "complete" and not s.x and Nav.owner ~= "manual" and not ns.Roam.active then Nav:FromStep(s) end
+        -- The map can change zone or zoom without OnMapChanged reaching us (or open before its map id is set),
+        -- so the pin is placed again a few times a second while the map is open.
+        local macc = 0
+        WorldMapFrame:HookScript("OnUpdate", function(_, elapsed)
+            macc = macc + elapsed
+            if macc < 0.2 then return end
+            macc = 0
+            Nav:UpdateMapPin()
+        end)
     end)
+end
+
+-- /qw debug nav: what the waypoint pins see (for reports when a pin does not show).
+function Nav:DebugLines()
+    local t, out = self.target, {}
+    out[#out + 1] = t and string.format("target: %s (map %s, %.1f, %.1f), owner %s", tostring(t.label), tostring(t.mapId), t.x, t.y, tostring(self.owner)) or "target: none"
+    local pMap, px, py = C.GetPlayerMapPosition()
+    out[#out + 1] = string.format("player: map %s %s", tostring(pMap), px and string.format("%.1f, %.1f", px, py) or "no position")
+    local rx, ry, edge = self:MinimapOffset()
+    out[#out + 1] = string.format("minimap pin: setting %s, offset %s, %s", tostring(ns.db.profile.showMinimapPin),
+        rx and string.format("%.0f, %.0f%s", rx, ry, edge and " (edge)" or "") or "none", self.mpin and (self.mpin:IsShown() and "shown" or "hidden") or "not created")
+    local shown = WorldMapFrame and WorldMapFrame:IsShown()
+    out[#out + 1] = string.format("world map pin: setting %s, map open %s, map shown %s, %s", tostring(ns.db.profile.showMapPins), tostring(shown),
+        tostring(shown and WorldMapFrame.GetMapID and WorldMapFrame:GetMapID()), self.pin and (self.pin:IsShown() and "shown" or "hidden") or "not created")
+    return out
 end
