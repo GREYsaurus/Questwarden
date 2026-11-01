@@ -20,6 +20,8 @@ accept 8284 The Twilight Mystery
 accept 8318 Secret Communication
 accept 8304 Dearest Natalia
 accept 9422 Scouring the Desert
+accept 8308 Brann Bronzebeard's Lost Letter [iffound] | Shown only if you find Brann Bronzebeard's Lost Letter.
+turnin 8308 Brann Bronzebeard's Lost Letter [iffound]
 complete 9422 Scouring the Desert
 complete 8304 Dearest Natalia
 complete 8318 Secret Communication

@@ -49,6 +49,8 @@ ns.Guides:Register({
     {"turnin",q=7844,title="Cannibalistic Cousins",npc="Mystic Yayo'jin",z=47,x=78.8,y=78.2,v=1},
     {"complete",q=7845,title="Kidnapped Elder Torntusk!",text="Elder Torntusk is held in the Vilebranch area.",v=1},
     {"turnin",q=7845,title="Kidnapped Elder Torntusk!",npc="Elder Torntusk",z=47,x=59.7,y=77.8,v=1},
+    {"accept",q=485,title="Find OOX-09/HL!",text="Shown only if you find OOX-09/HL Distress Beacon.",starter=8704,drops={2505,2639,2640,2641,2642,2643,2644,2645},ifFound=true,v=1},
+    {"turnin",q=485,title="Find OOX-09/HL!",npc="Homing Robot OOX-09/HL",z=47,x=49.4,y=37.7,ifFound=true,v=1},
     {"accept",q=7846,title="Recover the Key!",npc="Elder Torntusk",z=47,x=59.7,y=77.8,v=1},
     {"complete",q=7846,title="Recover the Key!",text="Shackle Key drops from Hitah'ya the Keeper.",v=1},
     {"turnin",q=7846,title="Recover the Key!",npc="Elder Torntusk",z=47,x=59.7,y=77.8,v=1},

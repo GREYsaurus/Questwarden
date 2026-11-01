@@ -167,6 +167,33 @@ check(E.current == 1 and string.find(table.concat(ns.StepText:Details(E.guide.st
     "an item in your bags for a later pickup is pointed out")
 bags(nil)
 
+-- [iffound]: an item many kinds of mob drop. Hidden (and not counted) until the item or the quest turns up
+setLog({})
+bags(nil)
+steps = { { "note", text = "first" }, { "accept", q = IQ, starter = ITEM, drops = acc.drops, ifFound = true },
+          { "complete", q = IQ, ifFound = true }, { "turnin", q = IQ, ifFound = true }, { "note", text = "last" } }
+ns.Guides:RegisterDynamic({ id = "TEST_ItemStarts", name = "Item starts", faction = "Both", minLevel = 1, maxLevel = 60, dynamic = true, steps = steps })
+E:Load("TEST_ItemStarts", { reset = true })
+local _, total = E:Counts()
+check(E.status[2] == "na" and E.status[3] == "na" and E.status[4] == "na", "iffound: no item, no quest: its steps are hidden")
+check(total == 2, "and not counted in the guide's progress")
+E.progress.done[1] = true
+E:Refresh()
+check(E.current == 5, "the route goes past them: never waited for, never farmed")
+bags(ITEM)
+check(E.current == 2 and IS:State(E.guide.steps[2]) == "have", "the item in your bags: the pickup appears and is current")
+local d = table.concat(ns.StepText:Details(E.guide.steps[2]), " ")
+check(string.find(d, "right-click it, then click Accept", 1, true) and string.find(d, "only because you found the item", 1, true),
+    "it says to use the item, and why the step appeared")
+check(E.status[3] == "na", "its objective stays hidden until the quest is taken")
+setLog({ IQ })
+bags(nil)
+E:Refresh()
+check(E.status[2] == "done" and E.status[3] ~= "na" and E.status[4] ~= "na" and E.current == 3, "accepted: its objective and turn-in are in the route")
+setLog({})
+E:Refresh()
+check(E.status[3] == "na" and E.current == 5, "abandoned without the item: hidden again")
+
 -- Completionist ------------------------------------------------------------------------------------------
 local CM, QDB = ns.Completionist, ns.QDB
 local saved = { quests = QDB.quests, npcs = QDB.npcs, objects = QDB.objects, items = QDB.items, names = QDB.zones.names,

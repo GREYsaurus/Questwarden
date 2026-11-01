@@ -42,6 +42,8 @@ ns.Guides:Register({
     {"complete",q=8281,title="Stepping Up Security",v=1},
     {"complete",q=8278,title="Noggle's Last Hope",v=1},
     {"turnin",q=8285,title="The Deserter",npc="Hermit Ortell",z=1377,x=67.2,y=69.8,v=1},
+    {"accept",q=8308,title="Brann Bronzebeard's Lost Letter",text="Shown only if you find Brann Bronzebeard's Lost Letter.",starter=20461,drops={11727},ifFound=true,v=1},
+    {"turnin",q=8308,title="Brann Bronzebeard's Lost Letter",npc="Rutgar Glyphshaper",z=1377,x=41.3,y=88.4,ifFound=true,v=1},
     {"turnin",q=8278,title="Noggle's Last Hope",npc="Beetix Ficklespragg",z=1377,x=51.6,y=38.6,v=1},
     {"turnin",q=8281,title="Stepping Up Security",npc="Windcaller Proudhorn",z=1377,x=51.2,y=38.3,v=1},
     {"accept",q=8282,title="Noggle's Lost Satchel",npc="Noggle Ficklespragg",z=1377,x=51.6,y=38.5,v=1},

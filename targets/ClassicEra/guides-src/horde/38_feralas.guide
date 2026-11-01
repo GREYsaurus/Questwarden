@@ -43,6 +43,8 @@ accept 3063 Vengeance on the Northspring
 complete 2822 The Mark of Quality | Thick Yeti Hides from Feral Scar Yetis in the yeti cave west of the camp.
 complete 2980 The Ogres of Feralas | Gordunni Shamans, Warlocks and Maulers at the Gordunni camp, south-west.
 accept 7003 Zapped Giants | Zorbin Fandazzle on the coast.
+accept 2766 Find OOX-22/FE! [iffound] | Shown only if you find OOX-22/FE Distress Beacon.
+turnin 2766 Find OOX-22/FE! [iffound]
 accept 7721 Fuel for the Zapping
 complete 7003 Zapped Giants | Use Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.
 complete 7721 Fuel for the Zapping | Water elementals on the coast.

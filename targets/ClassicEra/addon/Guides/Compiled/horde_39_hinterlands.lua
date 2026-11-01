@@ -35,6 +35,8 @@ ns.Guides:Register({
     {"turnin",q=7839,title="Vilebranch Hooligans",npc="Smith Slagtree",z=47,x=77.2,y=80.1,v=1},
     {"note",text="The next quest, Rin'ji is Trapped!, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
     {"accept",q=2742,title="Rin'ji is Trapped!",npc="Rin'ji",z=47,x=30.7,y=46.9,v=1},
+    {"accept",q=485,title="Find OOX-09/HL!",text="Shown only if you find OOX-09/HL Distress Beacon.",starter=8704,drops={2505,2639,2640,2649},ifFound=true,v=1},
+    {"turnin",q=485,title="Find OOX-09/HL!",npc="Homing Robot OOX-09/HL",z=47,x=49.4,y=37.7,ifFound=true,v=1},
     {"complete",q=2742,title="Rin'ji is Trapped!",text="Escort: stay close; it fails if the NPC dies.",v=1},
     {"turnin",q=2742,title="Rin'ji is Trapped!",npc="Rin'ji's Secret",z=47,x=86.3,y=59,v=1},
     {"level",text="Stranglethorn Vale starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=47,v=1},

@@ -122,6 +122,8 @@ accept The Great Fissure | Ranger Captain Venn'ren.
 accept Birds of a Feather | Falconer Drenna Riverwind.
 accept Arelion's Journal | Magistrix Carinda.
 accept Source of the Corruption | Apothecary Azethen.
+accept 9373 Missing Missive [iffound] | Shown only if you find Eroded Leather Case.
+turnin 9373 Missing Missive [iffound]
 accept In Need of Felblood | Ryathen the Somber.
 complete Birds of a Feather
 complete In Need of Felblood | Felblood Sample drops from Terrorfiend.

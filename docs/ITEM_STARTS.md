@@ -23,12 +23,29 @@ Each such step is in one state, read from your quest log and your bags only:
 | Waiting | no item, and a `via` step is still ahead | not current: the kill steps go first, and they say their mobs can drop the item |
 | Farm | no item, no kill step left | "Get [item] from ... to accept ...", the droppers, the arrow on the nearest one, and that you can skip |
 | Not available | race, class, level, another branch | auto-skipped with the reason, like any pickup |
+| Not found yet (`[iffound]`) | no item, quest not taken | hidden: not shown, not counted, never waited for or farmed |
 
 Having the item, or opening its quest window, isn't acceptance: the step is done only when the quest is in your log.
 
 While a pickup is waiting, its quest's objective and turn-in steps wait with it, so the guide never shows "Turn in ..." for a quest you don't have. When the item arrives, the guide goes back to the pickup. When the kill steps are done and there's still no item, the pickup comes back as a farm step.
 
 The current step also mentions a starter item in your bags that a later pickup of the guide uses.
+
+## Steps that appear only if you find the item
+
+Some start items are dropped by dozens of kinds of mob, or by mobs the guide never fights. Examples:
+- the OOX distress beacons;
+- the Pendant of Myzrael;
+- Brann Bronzebeard's Lost Letter.
+
+A guide can't send you to farm these, so their quests are written with `[iffound]` on the pickup, objective and turn-in. The steps stay hidden until the item is in your bags or the quest is in your log:
+- **Item in your bags:** the pickup appears ("Use [item] to accept ...") and notes it showed up because you found the item.
+- **Quest taken:** its objective and turn-in join the route.
+- **Abandoned without the item:** the steps hide again.
+
+They are never counted in the guide's progress or in the route audit's level model.
+
+They're placed in the guide for the zone where the quest's objectives are, or the finisher's zone when it has none, for each faction. You may find the item anywhere; the steps show once the route reaches that zone.
 
 ## Skipping
 
@@ -91,8 +108,13 @@ Second batch (`--relaxed`):
 - TBC got 6 quests: Rune Covered Tablet, Captain Sander's Hidden Treasure, Resting in Pieces, The Key to Freedom, Drain Schematics and Did You Get The Note?.
 - Grinding in the route model, after both batches: Classic Era 50.94 → 50.31 levels; TBC 54.81 → 53.47.
 
+Third batch (`--iffound`):
+- Classic Era: 5 quests in each faction's guides. These are the three OOX beacons, Crystal in the Mountains (Pendant of Myzrael) and Brann Bronzebeard's Lost Letter.
+- TBC: 19 placements of 12 quests. They also cover the Runed Scroll, Williden's Journal, Guarding Secrets, A Strange Red Key, Winterfall Ritual Totem, Missing Missive, Diabolical Plans and The Truth Unorbed.
+- They don't change the route model's numbers: they're bonuses when the item drops.
+
 Still left out:
-- escorts and events;
+- escorts and events (the OOX escorts that follow the beacon quests among them);
 - items only elites or instance mobs drop;
 - quests with no guide in the zone of their objectives or finisher.
 

@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 38 |
 | Level-gated pickups | 16 |
 | Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 503 |
+| Hub revisits (all guides) | 506 |
 
 ## Per guide
 
@@ -41,7 +41,7 @@ No baseline file found.
 | A_25_ShimmeringFlats | 18 | 6 | 16 | 16 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_26_StranglethornVale | 65 | 21 | 997 | 1011 | 14 | 0 | 0 | 0 | 0 | 3 |
 | A_27_AlteracMountains | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_28_ArathiHighlands | 55 | 19 | 384 | 384 | 11 | 0 | 0 | 0 | 2 | 4 |
+| A_28_ArathiHighlands | 57 | 20 | 384 | 384 | 11 | 0 | 0 | 0 | 2 | 4 |
 | A_29_DustwallowMarsh | 53 | 16 | 209 | 206 | 3 | 0 | 0 | 0 | 1 | 0 |
 | A_30_StranglethornVale | 38 | 15 | 171 | 171 | 4 | 0 | 0 | 0 | 0 | 6 |
 | A_31_Badlands | 63 | 19 | 239 | 339 | 8 | 0 | 0 | 0 | 0 | 0 |
@@ -49,14 +49,14 @@ No baseline file found.
 | A_33_StranglethornVale | 48 | 14 | 87 | 86 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_34_Desolace | 77 | 25 | 508 | 533 | 9 | 16 | 0 | 0 | 4 | 0 |
 | A_35_Tanaris | 38 | 13 | 84 | 84 | 3 | 0 | 0 | 0 | 0 | 8 |
-| A_36_Feralas | 53 | 17 | 236 | 236 | 6 | 0 | 0 | 0 | 1 | 1 |
+| A_36_Feralas | 55 | 18 | 261 | 236 | 7 | 0 | 0 | 0 | 1 | 1 |
 | A_37_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_38_Hinterlands | 24 | 4 | 14 | 14 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_38_Hinterlands | 26 | 5 | 85 | 14 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_39_StranglethornVale | 17 | 2 | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_40_SearingGorge | 57 | 19 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
 | A_41_Feralas | 29 | 6 | 96 | 96 | 0 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_43_Tanaris | 34 | 11 | 151 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
+| A_43_Tanaris | 36 | 12 | 166 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
 | A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 421 | 421 | 7 | 0 | 0 | 0 | 3 | 0 |
@@ -72,7 +72,7 @@ No baseline file found.
 | A_56_Azshara | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_57_Tanaris | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_58_UnGoroCrater | 32 | 7 | 432 | 432 | 6 | 0 | 0 | 0 | 1 | 1 |
-| A_59_Silithus | 48 | 13 | 320 | 320 | 9 | 0 | 0 | 0 | 0 | 0 |
+| A_59_Silithus | 50 | 14 | 368 | 320 | 9 | 0 | 0 | 0 | 0 | 0 |
 | A_60_EasternPlaguelands | 19 | 6 | 313 | 313 | 3 | 0 | 0 | 0 | 0 | 12 |
 | A_61_Winterspring | 29 | 11 | 198 | 198 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 433 | 17 | 0 | 3 | 0 | 0 | 0 |
@@ -95,7 +95,7 @@ No baseline file found.
 | H_24_ShimmeringFlats | 23 | 7 | 71 | 97 | 0 | 0 | 0 | 0 | 0 | 3 |
 | H_25_Desolace | 52 | 14 | 297 | 297 | 7 | 0 | 0 | 0 | 1 | 0 |
 | H_26_StranglethornVale | 63 | 18 | 333 | 244 | 5 | 0 | 0 | 0 | 0 | 0 |
-| H_27_ArathiHighlands | 70 | 21 | 387 | 345 | 7 | 0 | 0 | 0 | 1 | 3 |
+| H_27_ArathiHighlands | 72 | 22 | 387 | 345 | 7 | 0 | 0 | 0 | 1 | 3 |
 | H_28_AlteracMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_29_ThousandNeedles | 8 | 3 | 0 | 75 | 0 | 0 | 0 | 0 | 0 | 3 |
 | H_30_DustwallowMarsh | 40 | 12 | 100 | 150 | 4 | 0 | 0 | 0 | 0 | 0 |
@@ -106,13 +106,13 @@ No baseline file found.
 | H_35_DustwallowMarsh | 20 | 6 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_36_Desolace | 27 | 5 | 89 | 89 | 0 | 1 | 0 | 0 | 2 | 0 |
 | H_37_Tanaris | 51 | 13 | 82 | 82 | 3 | 0 | 0 | 0 | 0 | 11 |
-| H_38_Feralas | 49 | 16 | 105 | 105 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_39_Hinterlands | 30 | 9 | 127 | 127 | 0 | 0 | 0 | 0 | 1 | 0 |
+| H_38_Feralas | 51 | 17 | 135 | 105 | 3 | 0 | 0 | 0 | 0 | 0 |
+| H_39_Hinterlands | 32 | 10 | 133 | 127 | 0 | 0 | 0 | 0 | 1 | 0 |
 | H_40_StranglethornVale | 13 | 4 | 50 | 50 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_41_SearingGorge | 51 | 17 | 185 | 184 | 4 | 0 | 0 | 0 | 2 | 3 |
 | H_42_SwampofSorrows | 35 | 9 | 149 | 120 | 1 | 0 | 0 | 0 | 2 | 0 |
 | H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_44_Tanaris | 27 | 9 | 142 | 142 | 3 | 0 | 0 | 0 | 1 | 0 |
+| H_44_Tanaris | 29 | 10 | 157 | 142 | 3 | 0 | 0 | 0 | 1 | 0 |
 | H_45_Azshara | 20 | 3 | 58 | 58 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_46_Hinterlands | 39 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_47_BlastedLands | 24 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
@@ -125,7 +125,7 @@ No baseline file found.
 | H_54_WesternPlaguelands | 78 | 28 | 209 | 409 | 7 | 1 | 0 | 0 | 1 | 0 |
 | H_55_EasternPlaguelands | 68 | 20 | 604 | 629 | 11 | 0 | 0 | 0 | 1 | 12 |
 | H_56_WesternPlaguelands | 15 | 6 | 4 | 79 | 1 | 0 | 0 | 0 | 0 | 3 |
-| H_57_Silithus | 48 | 13 | 407 | 407 | 10 | 0 | 0 | 0 | 0 | 0 |
+| H_57_Silithus | 50 | 14 | 447 | 407 | 10 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 106 | 106 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 224 | 71 | 458 | 536 | 16 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |

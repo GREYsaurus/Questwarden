@@ -39,6 +39,8 @@ ns.Guides:Register({
     {"complete",q=2822,title="The Mark of Quality",text="Thick Yeti Hides from Feral Scar Yetis in the yeti cave west of the camp.",v=1},
     {"complete",q=2980,title="The Ogres of Feralas",text="Gordunni Shamans, Warlocks and Maulers at the Gordunni camp, south-west.",v=1},
     {"accept",q=7003,title="Zapped Giants",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,text="Zorbin Fandazzle on the coast.",v=1},
+    {"accept",q=2766,title="Find OOX-22/FE!",text="Shown only if you find OOX-22/FE Distress Beacon.",starter=8705,drops={5229,5232,5234,5236,5237,5238,5239,5240},ifFound=true,v=1},
+    {"turnin",q=2766,title="Find OOX-22/FE!",npc="Homing Robot OOX-22/FE",z=357,x=53.4,y=55.7,ifFound=true,v=1},
     {"accept",q=7721,title="Fuel for the Zapping",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,v=1},
     {"complete",q=7003,title="Zapped Giants",text="Use Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.",v=1},
     {"complete",q=7721,title="Fuel for the Zapping",text="Water elementals on the coast.",v=1},

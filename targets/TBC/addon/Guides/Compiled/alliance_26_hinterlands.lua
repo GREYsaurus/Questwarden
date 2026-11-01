@@ -11,6 +11,8 @@ ns.Guides:Register({
     {"fp",npc="Guthrum Thunderfist",z=47,x=11.1,y=46.2,place="Aerie Peak",node=43,v=1},
     {"bind",npc="Innkeeper Thulfram",z=47,x=14.2,y=41.6,place="Aerie Peak",npcId=7744,areas={348,349},v=1},
     {"accept",q=2880,title="Troll Necklace Bounty",npc="Fraggar Thundermantle",z=47,x=14.8,y=44.6,text="Fraggar Thundermantle.",v=1},
+    {"accept",q=485,title="Find OOX-09/HL!",text="Shown only if you find OOX-09/HL Distress Beacon.",starter=8704,drops={2505,2639,2640,2641,2642,2643,2644,2645},ifFound=true,v=1},
+    {"turnin",q=485,title="Find OOX-09/HL!",npc="Homing Robot OOX-09/HL",z=47,x=49.4,y=37.7,ifFound=true,v=1},
     {"accept",q=2877,title="Skulk Rock Clean-up",npc="Fraggar Thundermantle",z=47,x=14.8,y=44.6,v=1},
     {"accept",q=9469,title="Featherbeard's Endorsement",npc="Ambassador Rualeth",z=47,x=15.1,y=47.2,text="Ambassador Rualeth (draenei).",v=1},
     {"accept",q=9470,title="A Gesture of Goodwill",npc="Ambassador Rualeth",z=47,x=15.1,y=47.2,v=1},

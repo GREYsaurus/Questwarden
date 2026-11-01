@@ -27,6 +27,8 @@ ns.Guides:Register({
     {"turnin",q=4124,title="The Missing Courier",npc="Ginro Hearthkindle",z=357,x=31.9,y=45.1,text="Ginro Hearthkindle on the mainland dock.",v=1},
     {"accept",q=4125,title="The Missing Courier",npc="Ginro Hearthkindle",z=357,x=31.9,y=45.1,v=1},
     {"turnin",q=4125,title="The Missing Courier",npc="Wrecked Row Boat",z=357,x=45.4,y=65,v=1},
+    {"accept",q=2766,title="Find OOX-22/FE!",text="Shown only if you find OOX-22/FE Distress Beacon.",starter=8705,drops={5229,5232,5234,5236,5237,5238,5239,5240},ifFound=true,v=1},
+    {"turnin",q=2766,title="Find OOX-22/FE!",npc="Homing Robot OOX-22/FE",z=357,x=53.4,y=55.7,ifFound=true,v=1},
     {"accept",q=4127,title="Boat Wreckage",npc="Wrecked Row Boat",z=357,x=45.4,y=65,v=1},
     {"turnin",q=4127,title="Boat Wreckage",npc="Ginro Hearthkindle",z=357,x=31.9,y=45.1,v=1},
     {"accept",q=4129,title="The Knife Revealed",npc="Ginro Hearthkindle",z=357,x=31.9,y=45.1,v=1},

@@ -26,6 +26,8 @@ turnin 110 Insect Part Analysis | Alchemist Pestlezugg.
 accept 113 Insect Part Analysis
 turnin 113 Insect Part Analysis
 accept 3161 Gahz'ridian [optional] | Marvon Rivetseeker, south of Gadgetzan. Needs level 43.
+accept 351 Find OOX-17/TN! [iffound] | Shown only if you find OOX-17/TN Distress Beacon.
+turnin 351 Find OOX-17/TN! [iffound]
 note The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.
 accept 1560 Tooga's Quest
 complete 1560 Tooga's Quest | Escort: stay close; it fails if the NPC dies.

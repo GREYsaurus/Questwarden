@@ -24,6 +24,8 @@ ns.Guides:Register({
     {"accept",q=8318,title="Secret Communication",npc="Bor Wildmane",z=1377,x=48.6,y=37.8,v=1},
     {"accept",q=8304,title="Dearest Natalia",npc="Commander Mar'alith",z=1377,x=49.2,y=34.2,v=1},
     {"accept",q=9422,title="Scouring the Desert",npc="General Kirika",z=1377,x=50.8,y=69.5,v=1},
+    {"accept",q=8308,title="Brann Bronzebeard's Lost Letter",text="Shown only if you find Brann Bronzebeard's Lost Letter.",starter=20461,drops={11727},ifFound=true,v=1},
+    {"turnin",q=8308,title="Brann Bronzebeard's Lost Letter",npc="Rutgar Glyphshaper",z=1377,x=41.3,y=88.4,ifFound=true,v=1},
     {"complete",q=9422,title="Scouring the Desert",v=1},
     {"complete",q=8304,title="Dearest Natalia",v=1},
     {"complete",q=8318,title="Secret Communication",v=1},

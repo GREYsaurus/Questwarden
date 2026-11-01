@@ -120,6 +120,8 @@ ns.Guides:Register({
     {"accept",q=9397,title="Birds of a Feather",npc="Falconer Drenna Riverwind",z=3483,x=27.7,y=60.3,text="Falconer Drenna Riverwind.",v=1},
     {"accept",q=9374,title="Arelion's Journal",npc="Magistrix Carinda",z=3483,x=26.4,y=60.3,text="Magistrix Carinda.",v=1},
     {"accept",q=9387,title="Source of the Corruption",npc="Apothecary Azethen",z=3483,x=26.8,y=59.7,text="Apothecary Azethen.",v=1},
+    {"accept",q=9373,title="Missing Missive",text="Shown only if you find Eroded Leather Case.",starter=23338,drops={16857,16968},ifFound=true,v=1},
+    {"turnin",q=9373,title="Missing Missive",npc="Thiah Redmane",z=3483,x=15.7,y=52.1,ifFound=true,v=1},
     {"accept",q=9366,title="In Need of Felblood",npc="Ryathen the Somber",z=3483,x=27,y=59.5,text="Ryathen the Somber.",v=1},
     {"complete",q=9397,title="Birds of a Feather",v=1},
     {"complete",q=9366,title="In Need of Felblood",text="Felblood Sample drops from Terrorfiend.",v=1},

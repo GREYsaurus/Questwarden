@@ -17,6 +17,8 @@
 --             item turns up or when they are behind you;
 --   farm      the item is not in your bags and no kill step is left: get it from the droppers, or skip.
 -- Not available (race, class, level, an exclusive quest) is the engine's auto-skip, as for any pickup.
+-- An [iffound] pickup (ifFound=true; for items many kinds of mob drop) has no waiting or farm state: the engine
+-- keeps it and its quest's steps hidden until the item is in your bags or the quest is in your log.
 -- Bags are read on BAG_UPDATE_DELAYED only; the engine refreshes when a starter item comes or goes.
 
 local _, ns = ...
@@ -80,6 +82,7 @@ function IS:State(s, i)
     if T:IsTurnedIn(s.q) then return "done" end
     if T:InLog(s.q) then return "accepted" end
     if self:Has(s.starter) then return "have" end
+    if s.ifFound then return "hidden" end
     local E = ns.Engine
     i = i or s.index
     if E.waiting and i and E.waiting[i] then return "waiting" end
@@ -89,7 +92,7 @@ end
 -- Whether the step should wait for its later kill steps: the item is not in your bags, the quest is not in
 -- your log, and one of the via steps is still open. (Engine:Refresh asks this for pending accept steps.)
 function IS:Waits(s, status)
-    if not (s.starter and s.via and s.q) then return false end
+    if not (s.starter and s.via and s.q) or s.ifFound then return false end
     T = T or ns.Tracker
     if self:Has(s.starter) or T:InLog(s.q) or T:IsTurnedIn(s.q) then return false end
     for _, j in ipairs(s.via) do
@@ -134,6 +137,7 @@ function IS:Lines(s, i, current)
     local st = self:State(s, i)
     if st == "have" then
         out[#out + 1] = { warn = true, text = itemName(s.starter) .. " is in your bags: right-click it, then click Accept." }
+        if s.ifFound then out[#out + 1] = { text = "This step shows only because you found the item." } end
     elseif st == "farm" or st == "waiting" then
         local who = dropperNames(s, 6)
         if who[1] then

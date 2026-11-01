@@ -13,6 +13,8 @@
 
 accept Crystals of Power | J.D. Collie.
 accept Expedition Salvation | Williden Marshal, Marshal's Refuge.
+accept 3884 Williden's Journal [iffound] | Shown only if you find A Mangled Journal.
+turnin 3884 Williden's Journal [iffound]
 accept Alien Ecology | Hol'anyee Marshal.
 accept Roll the Bones | Spark Nilminer.
 accept Shizzle's Flyer | Shizzle, Marshal's Refuge.

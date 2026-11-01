@@ -171,6 +171,7 @@ namespace GuideTools
         static bool StepApplies(CStep s, string race, string cls, string faction, bool hardcore)
         {
             if (hardcore ? s.HcSkip : s.HcOnly) return false;
+            if (s.IfFound) return false; // shown only if you happen to find the item: never counted on
             if (s.Races != null && !s.Races.Contains(race)) return false;
             if (s.Classes != null && !s.Classes.Contains(cls)) return false;
             if (s.Faction != null && s.Faction != faction) return false;

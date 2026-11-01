@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 62 (49 Azeroth, 13 Outland) |
-| Guide steps | 6422 |
-| Quest steps (accept/complete/turn-in) | 5675 |
-| Distinct quests referenced | 1919 |
-| Steps with database-derived coordinates | 4465 |
+| Guide steps | 6460 |
+| Quest steps (accept/complete/turn-in) | 5713 |
+| Distinct quests referenced | 1931 |
+| Steps with database-derived coordinates | 4484 |
 | Steps with hand-written coordinates (unverified) | 1 |
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
@@ -95,19 +95,19 @@ Each race/class combination is followed from its racial start guide through the 
 | Silverpine Forest (The Sepulcher) | Horde | 10-18 | Silverpine Forest | 77 | 28 | 2 |
 | Darkshore | Alliance | 11-20 | Darkshore | 189 | 54 | 80 |
 | Loch Modan | Alliance | 11-18 | Loch Modan | 106 | 29 | 9 |
-| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 325 | 112 | 91 |
+| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 327 | 113 | 91 |
 | Redridge Mountains | Alliance | 15-21 | Redridge Mountains | 118 | 41 | 34 |
 | Ashenvale | Alliance | 19-25 | Ashenvale | 76 | 24 | 24 |
 | Duskwood | Alliance | 20-25 | Duskwood | 190 | 65 | 65 |
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 21-25 | Stonetalon Mountains | 59 | 23 | 3 |
-| Ashenvale (Splintertree Post) | Horde | 23-28 | Ashenvale | 60 | 19 | 15 |
+| Ashenvale (Splintertree Post) | Horde | 23-28 | Ashenvale | 62 | 20 | 15 |
 | Wetlands | Alliance | 24-29 | Wetlands | 113 | 41 | 20 |
 | Hillsbrad Foothills (Tarren Mill) | Horde | 27-31 | Hillsbrad Foothills | 51 | 14 | 7 |
 | Hillsbrad Foothills (Southshore) | Alliance | 28-31 | Hillsbrad Foothills | 65 | 25 | 7 |
 | Thousand Needles (Freewind Post) | Horde | 29-33 | Thousand Needles | 135 | 42 | 58 |
-| Arathi Highlands (Refuge Pointe) | Alliance | 30-34 | Arathi Highlands | 33 | 7 | 6 |
+| Arathi Highlands (Refuge Pointe) | Alliance | 30-34 | Arathi Highlands | 35 | 8 | 6 |
 | Stranglethorn Vale | Alliance | 32-40 | Stranglethorn Vale | 147 | 47 | 16 |
-| Arathi Highlands (Hammerfall) | Horde | 32-35 | Arathi Highlands | 52 | 14 | 0 |
+| Arathi Highlands (Hammerfall) | Horde | 32-35 | Arathi Highlands | 54 | 15 | 0 |
 | Desolace (Nijel's Point) | Alliance | 33-37 | Desolace | 69 | 21 | 3 |
 | Desolace (Ghost Walker Post and Shadowprey) | Horde | 33-36 | Desolace | 35 | 7 | 0 |
 | Stranglethorn Vale (Grom'gol) | Horde | 34-40 | Stranglethorn Vale | 69 | 19 | 0 |
@@ -116,30 +116,30 @@ Each race/class combination is followed from its racial start guide through the 
 | Dustwallow Marsh (Brackenwall Village) | Horde | 37-42 | Dustwallow Marsh | 109 | 35 | 14 |
 | Badlands | Alliance | 38-41 | Badlands | 50 | 15 | 4 |
 | Swamp of Sorrows (Stonard) | Horde | 39-42 | Swamp of Sorrows | 43 | 11 | 3 |
-| Tanaris (Gadgetzan) | Both | 41-45 | Tanaris | 58 | 15 | 12 |
-| Feralas (Feathermoon Stronghold) | Alliance | 43-47 | Feralas | 60 | 19 | 2 |
-| Feralas (Camp Mojache) | Horde | 43-47 | Feralas | 54 | 14 | 0 |
-| The Hinterlands (Revantusk Village) | Horde | 44-50 | The Hinterlands | 63 | 17 | 3 |
-| The Hinterlands (Aerie Peak) | Alliance | 45-49 | The Hinterlands | 39 | 9 | 0 |
+| Tanaris (Gadgetzan) | Both | 41-45 | Tanaris | 60 | 16 | 12 |
+| Feralas (Feathermoon Stronghold) | Alliance | 43-47 | Feralas | 62 | 20 | 2 |
+| Feralas (Camp Mojache) | Horde | 43-47 | Feralas | 56 | 15 | 0 |
+| The Hinterlands (Revantusk Village) | Horde | 44-50 | The Hinterlands | 65 | 18 | 3 |
+| The Hinterlands (Aerie Peak) | Alliance | 45-49 | The Hinterlands | 41 | 10 | 0 |
 | Searing Gorge (Thorium Point) | Both | 47-50 | Searing Gorge | 52 | 14 | 0 |
-| Un'Goro Crater | Both | 48-52 | Un'Goro Crater | 63 | 17 | 1 |
-| Felwood (Talonbranch Glade) | Alliance | 51-54 | Felwood | 44 | 12 | 0 |
-| Felwood (Bloodvenom Post) | Horde | 51-54 | Felwood | 39 | 10 | 0 |
+| Un'Goro Crater | Both | 48-52 | Un'Goro Crater | 65 | 18 | 1 |
+| Felwood (Talonbranch Glade) | Alliance | 51-54 | Felwood | 48 | 14 | 0 |
+| Felwood (Bloodvenom Post) | Horde | 51-54 | Felwood | 45 | 13 | 0 |
 | Burning Steppes (Morgan's Vigil) | Alliance | 53-56 | Burning Steppes | 42 | 13 | 2 |
 | Winterspring (Everlook) | Both | 54-56 | Winterspring | 50 | 16 | 0 |
 | Western Plaguelands (The Bulwark) | Horde | 54-58 | Western Plaguelands | 64 | 21 | 3 |
 | Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 82 | 27 | 3 |
 | Eastern Plaguelands (Light's Hope) | Both | 56-58 | Eastern Plaguelands | 45 | 11 | 1 |
-| Hellfire Peninsula (Honor Hold) | Alliance | 58-62 | Hellfire Peninsula | 179 | 61 | 4 |
-| Hellfire Peninsula (Thrallmar) | Horde | 58-62 | Hellfire Peninsula | 146 | 53 | 4 |
+| Hellfire Peninsula (Honor Hold) | Alliance | 58-62 | Hellfire Peninsula | 181 | 62 | 4 |
+| Hellfire Peninsula (Thrallmar) | Horde | 58-62 | Hellfire Peninsula | 148 | 54 | 4 |
 | Zangarmarsh (Telredor) | Alliance | 61-64 | Zangarmarsh | 122 | 42 | 4 |
 | Zangarmarsh (Zabra'jin) | Horde | 61-64 | Zangarmarsh | 112 | 38 | 3 |
 | Terokkar Forest (Allerian Stronghold) | Alliance | 63-65 | Terokkar Forest | 108 | 37 | 9 |
 | Terokkar Forest (Stonebreaker Hold) | Horde | 63-65 | Terokkar Forest | 107 | 37 | 8 |
 | Nagrand (Telaar) | Alliance | 64-67 | Nagrand | 130 | 45 | 4 |
 | Nagrand (Garadar) | Horde | 64-67 | Nagrand | 132 | 45 | 4 |
-| Blade's Edge Mountains (Sylvanaar & Toshley's Station) | Alliance | 66-68 | Blade's Edge Mountains | 106 | 35 | 0 |
-| Blade's Edge Mountains (Thunderlord Stronghold) | Horde | 66-68 | Blade's Edge Mountains | 82 | 26 | 3 |
+| Blade's Edge Mountains (Sylvanaar & Toshley's Station) | Alliance | 66-68 | Blade's Edge Mountains | 108 | 36 | 0 |
+| Blade's Edge Mountains (Thunderlord Stronghold) | Horde | 66-68 | Blade's Edge Mountains | 84 | 27 | 3 |
 | Netherstorm (Area 52) | Both | 67-70 | Netherstorm | 117 | 39 | 3 |
 | Shadowmoon Valley (Wildhammer Stronghold) | Alliance | 68-70 | Shadowmoon Valley | 59 | 19 | 0 |
 | Shadowmoon Valley (Shadowmoon Village) | Horde | 68-70 | Shadowmoon Valley | 59 | 19 | 0 |

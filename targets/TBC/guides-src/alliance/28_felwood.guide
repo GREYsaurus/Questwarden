@@ -13,6 +13,8 @@
 accept Deadwood of the North | Nafien.
 accept 8470 Deadwood Ritual Totem
 turnin 8470 Deadwood Ritual Totem
+accept 8471 Winterfall Ritual Totem [iffound] | Shown only if you find Winterfall Ritual Totem.
+turnin 8471 Winterfall Ritual Totem [iffound]
 complete Deadwood of the North | Deadwood furbolgs in northern Felwood.
 turnin Deadwood of the North
 accept Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.
@@ -24,6 +26,8 @@ accept 939 Flute of Xavaric
 complete Further Corruption | Xavathras, Jadefire Glen.
 turnin Further Corruption
 accept Verifying the Corruption | Taronn Redfeather.
+accept 5202 A Strange Red Key [iffound] | Shown only if you find Blood Red Key.
+turnin 5202 A Strange Red Key [iffound]
 complete 939 Flute of Xavaric
 turnin 939 Flute of Xavaric
 complete Verifying the Corruption | Explore the area north of Shatter Scar Vale.

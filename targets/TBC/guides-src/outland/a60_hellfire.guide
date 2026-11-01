@@ -167,6 +167,8 @@ accept The Cenarion Expedition [optional] | Leads to Zangarmarsh.
 accept Keep Thornfang Hill Clear! | Mahuram Stouthoof.
 accept Colossal Menace | Tola'thion.
 accept Demonic Contamination | Thiah Redmane, Cenarion Post.
+accept 9373 Missing Missive [iffound] | Shown only if you find Eroded Leather Case.
+turnin 9373 Missing Missive [iffound]
 complete Demonic Contamination | Helboar Blood Sample drops from Dreadtusk and Hulking Helboar.
 complete Colossal Menace | Elite: Raging Colossus; bring help or skip.
 complete Keep Thornfang Hill Clear!

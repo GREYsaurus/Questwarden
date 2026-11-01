@@ -11,6 +11,8 @@
 @next A_Desolace
 
 accept The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
+accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.
+turnin 635 Crystal in the Mountains [iffound]
 complete The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent Shards.
 turnin The Princess Trapped
 accept Stones of Binding

@@ -38,6 +38,8 @@ accept 8278 Noggle's Last Hope
 complete 8281 Stepping Up Security
 complete 8278 Noggle's Last Hope
 turnin 8285 The Deserter
+accept 8308 Brann Bronzebeard's Lost Letter [iffound] | Shown only if you find Brann Bronzebeard's Lost Letter.
+turnin 8308 Brann Bronzebeard's Lost Letter [iffound]
 turnin 8278 Noggle's Last Hope
 turnin 8281 Stepping Up Security
 accept 8282 Noggle's Lost Satchel

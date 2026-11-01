@@ -14,6 +14,8 @@
 
 travel Arathi Highlands
 accept 642 The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
+accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.
+turnin 635 Crystal in the Mountains [iffound]
 complete 642 The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent Shards.
 turnin 642 The Princess Trapped
 complete 627 Favor for Krazek

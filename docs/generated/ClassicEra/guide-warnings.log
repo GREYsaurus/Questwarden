@@ -8,8 +8,8 @@ alliance/22_hillsbradfoothills.guide:74: 'Hints of a New Plague?' has no objecti
 alliance/24_stranglethornvale.guide:67: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
 alliance/29_dustwallowmarsh.guide:57: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/36_feralas.guide:24: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
-alliance/36_feralas.guide:44: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
-alliance/36_feralas.guide:48: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/36_feralas.guide:46: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
+alliance/36_feralas.guide:50: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
 alliance/52_westernplaguelands.guide:29: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
 alliance/52_westernplaguelands.guide:72: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:67: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
@@ -19,10 +19,10 @@ horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations i
 horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:131: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:28: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:37: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:46: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:49: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:30: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:39: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:51: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:24: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/46_hinterlands.guide:30: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto

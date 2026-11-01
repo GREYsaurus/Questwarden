@@ -27,10 +27,10 @@ alliance/23_dustwallow.guide:55: 'Dastardly Denizens of the Deep' has no objecti
 alliance/23_dustwallow.guide:65: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
 alliance/23_dustwallow.guide:72: 'Inspecting the Ruins' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:21: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
-alliance/25_feralas.guide:39: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
-alliance/25_feralas.guide:41: 'Freedom for All Creatures' has no objective locations in the database; add [at=x,y] or a goto
-alliance/25_feralas.guide:48: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
-alliance/26_hinterlands.guide:29: 'Featherbeard's Endorsement' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:41: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:43: 'Freedom for All Creatures' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:50: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/26_hinterlands.guide:31: 'Featherbeard's Endorsement' has no objective locations in the database; add [at=x,y] or a goto
 alliance/29_burningsteppes.guide:42: 'The True Masters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/30_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6028) with no earlier accept on this faction's routes
 alliance/30_westernplaguelands.guide:23: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
@@ -62,31 +62,31 @@ horde/05_silverpine.guide:60: 'The Engraved Ring' has no objective locations in 
 horde/05_silverpine.guide:73: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:77: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:164: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:226: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:255: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:264: quest 5881 requires level 23 but guide ends at 22
-horde/10_barrens.guide:265: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:228: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:257: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:266: quest 5881 requires level 23 but guide ends at 22
 horde/10_barrens.guide:267: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:268: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:269: quest 5881 requires level 23 but guide ends at 22
 horde/11_stonetalon.guide:26: 'Vorsha the Lasher' has no objective locations in the database; add [at=x,y] or a goto
 horde/11_stonetalon.guide:47: 'Gerenzo's Orders' has no objective locations in the database; add [at=x,y] or a goto
-horde/12_ashenvale.guide:28: 'Torek's Assault' has no objective locations in the database; add [at=x,y] or a goto
-horde/12_ashenvale.guide:40: 'Freedom to Ruul' has no objective locations in the database; add [at=x,y] or a goto
+horde/12_ashenvale.guide:30: 'Torek's Assault' has no objective locations in the database; add [at=x,y] or a goto
+horde/12_ashenvale.guide:42: 'Freedom to Ruul' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:71: 'Homeward Bound' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:73: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:80: 'Free at Last' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:83: 'Protect Kanati Greycloud' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:24: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:36: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:45: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:26: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:38: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:47: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:50: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:17: 'Inspecting the Ruins' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:26: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:32: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:82: 'Justice Dispensed' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:86: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
 horde/21_hinterlands.guide:52: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
-horde/22_felwood.guide:23: 'Corrupted Sabers' has no objective locations in the database; add [at=x,y] or a goto
+horde/22_felwood.guide:27: 'Corrupted Sabers' has no objective locations in the database; add [at=x,y] or a goto
 horde/23_westernplaguelands.guide:15: turn-in of 'The Everlook Report' (6029) with no earlier accept on this faction's routes
 horde/23_westernplaguelands.guide:17: 'Scarlet Diversions' has no objective locations in the database; add [at=x,y] or a goto
 outland/a66_nagrand.guide:64: 'Corki's Ransom' has no objective locations in the database; add [at=x,y] or a goto
@@ -96,7 +96,7 @@ outland/a69_shadowmoon.guide:67: 'Invasion Point: Cataclysm' has no objective lo
 outland/b68_netherstorm.guide:100: 'Curse of the Violet Tower' has no objective locations in the database; add [at=x,y] or a goto
 outland/h60_hellfire.guide:79: 'Investigate the Crash' has no objective locations in the database; add [at=x,y] or a goto
 outland/h60_hellfire.guide:108: 'A Spirit Guide' has no objective locations in the database; add [at=x,y] or a goto
-outland/h60_hellfire.guide:145: 'The Mistress Revealed' has no objective locations in the database; add [at=x,y] or a goto
+outland/h60_hellfire.guide:147: 'The Mistress Revealed' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:22: 'The Missing War Party' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:32: 'Because Kilrath is a Coward' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:39: 'Missing Mag'hari Procession' has no objective locations in the database; add [at=x,y] or a goto
@@ -104,9 +104,9 @@ outland/h66_nagrand.guide:69: 'He Will Walk The Earth...' has no objective locat
 outland/h69_shadowmoon.guide:39: 'The Deathforge' has no objective locations in the database; add [at=x,y] or a goto
 outland/h69_shadowmoon.guide:59: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
 outland/h69_shadowmoon.guide:65: 'Find the Deserter' has no objective locations in the database; add [at=x,y] or a goto
-shared/27_ungoro.guide:54: 'The Northern Pylon' has no objective locations in the database; add [at=x,y] or a goto
-shared/27_ungoro.guide:55: 'The Eastern Pylon' has no objective locations in the database; add [at=x,y] or a goto
-shared/27_ungoro.guide:56: 'The Western Pylon' has no objective locations in the database; add [at=x,y] or a goto
+shared/27_ungoro.guide:56: 'The Northern Pylon' has no objective locations in the database; add [at=x,y] or a goto
+shared/27_ungoro.guide:57: 'The Eastern Pylon' has no objective locations in the database; add [at=x,y] or a goto
+shared/27_ungoro.guide:58: 'The Western Pylon' has no objective locations in the database; add [at=x,y] or a goto
 shared/28b_winterspring.guide:15: turn-in of 'Speak to Salfa' (8465) with no earlier accept on this faction's routes
 alliance/00_human_elwynn.guide:66 (Garments of the Light): prerequisite 5623 'In Favor of the Light' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/00_human_elwynn.guide:147 (Bartleby's Mug): prerequisite 1640 'Beat Bartleby' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -126,13 +126,13 @@ horde/01_tauren_mulgore.guide:164 (Speak with Coleman): prerequisite 1819 'Ulag 
 horde/04_bloodelf_ghostlands.guide:17 (Return to Quartermaster Lymel): prerequisite 9134 'Skymistress Gloaming' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:101 (Zando'zan): prerequisite 2378 'Find the Shattered Hand' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:271 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:326 (Steelsnap): prerequisite 1130 'Melor Sends Word' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:273 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:328 (Steelsnap): prerequisite 1130 'Melor Sends Word' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_ashenvale.guide:41 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_ashenvale.guide:45 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:32 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:43 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:47 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_hillsbrad.guide:18 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14_thousandneedles.guide:15 (Betrayal from Within): prerequisite 5052 'Blood Shards of Agamaggan' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14_thousandneedles.guide:22 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)

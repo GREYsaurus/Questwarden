@@ -10,6 +10,8 @@ ns.Guides:Register({
   steps={
     {"accept",q=4284,title="Crystals of Power",npc="J.D. Collie",z=490,x=41.9,y=2.7,text="J.D. Collie.",v=1},
     {"accept",q=3881,title="Expedition Salvation",npc="Williden Marshal",z=490,x=44,y=7.1,text="Williden Marshal, Marshal's Refuge.",v=1},
+    {"accept",q=3884,title="Williden's Journal",text="Shown only if you find A Mangled Journal.",starter=11116,drops={6505,6506,6507,6508,6509},ifFound=true,v=1},
+    {"turnin",q=3884,title="Williden's Journal",npc="Williden Marshal",z=490,x=44,y=7.1,ifFound=true,v=1},
     {"accept",q=3883,title="Alien Ecology",npc="Hol'anyee Marshal",z=490,x=43.9,y=7.2,text="Hol'anyee Marshal.",v=1},
     {"accept",q=3882,title="Roll the Bones",npc="Spark Nilminer",z=490,x=43.5,y=7.4,text="Spark Nilminer.",v=1},
     {"accept",q=4503,title="Shizzle's Flyer",npc="Shizzle",z=490,x=44.2,y=11.6,text="Shizzle, Marshal's Refuge.",v=1},

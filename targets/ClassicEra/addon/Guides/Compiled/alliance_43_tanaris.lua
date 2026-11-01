@@ -22,6 +22,8 @@ ns.Guides:Register({
     {"accept",q=113,title="Insect Part Analysis",npc="Alchemist Pestlezugg",z=440,x=50.9,y=27,v=1},
     {"turnin",q=113,title="Insect Part Analysis",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},
     {"accept",q=3161,title="Gahz'ridian",npc="Marvon Rivetseeker",z=440,x=52.7,y=45.9,text="Marvon Rivetseeker, south of Gadgetzan. Needs level 43.",optional=true,v=1},
+    {"accept",q=351,title="Find OOX-17/TN!",text="Shown only if you find OOX-17/TN Distress Beacon.",starter=8623,drops={5419,5420,5421,5422,5423,5424,5425,5426},ifFound=true,v=1},
+    {"turnin",q=351,title="Find OOX-17/TN!",npc="Homing Robot OOX-17/TN",z=440,x=60.2,y=64.7,ifFound=true,v=1},
     {"note",text="The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.",v=1},
     {"accept",q=1560,title="Tooga's Quest",npc="Tooga",z=440,x=31.8,y=74.2,v=1},
     {"complete",q=1560,title="Tooga's Quest",text="Escort: stay close; it fails if the NPC dies.",v=1},

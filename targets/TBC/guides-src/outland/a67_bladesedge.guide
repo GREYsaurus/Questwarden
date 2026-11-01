@@ -94,6 +94,8 @@ turnin Cutting Your Teeth
 turnin What Came First, the Drake or the Egg?
 fp Evergrove
 accept A Time for Negotiation... | Tree Warden Chawn, Evergrove (north).
+accept 10825 The Truth Unorbed [iffound] | Shown only if you find Orb of the Grishna.
+turnin 10825 The Truth Unorbed [iffound]
 turnin A Time for Negotiation...
 accept ...and a Time for Action
 accept Culling the Wild | Faradrella.

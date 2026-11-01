@@ -50,6 +50,8 @@ ns.Guides:Register({
     {"turnin",q=2875,title="WANTED: Andre Firebeard",npc="Security Chief Bilgewhizzle",z=440,x=67.1,y=23.9,text="Security Chief Bilgewhizzle, Steamwheedle Port.",v=1},
     {"turnin",q=8365,title="Pirate Hats Ahoy!",npc="Haughty Modiste",z=440,x=66.6,y=22.3,v=1},
     {"accept",q=3161,title="Gahz'ridian",npc="Marvon Rivetseeker",z=440,x=52.7,y=45.9,text="Marvon Rivetseeker, south of Gadgetzan. Needs level 43.",optional=true,v=1},
+    {"accept",q=351,title="Find OOX-17/TN!",text="Shown only if you find OOX-17/TN Distress Beacon.",starter=8623,drops={5419,5420,5421,5422,5423,5424,5425,5426},ifFound=true,v=1},
+    {"turnin",q=351,title="Find OOX-17/TN!",npc="Homing Robot OOX-17/TN",z=440,x=60.2,y=64.7,ifFound=true,v=1},
     {"complete",q=3161,title="Gahz'ridian",text="Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.",optional=true,v=1},
     {"turnin",q=3161,title="Gahz'ridian",npc="Marvon Rivetseeker",z=440,x=52.7,y=45.9,optional=true,v=1},
     {"accept",q=2605,title="The Thirsty Goblin",npc="Marin Noggenfogger",z=440,x=51.8,y=28.7,text="Marin Noggenfogger, Gadgetzan. Needs level 44.",optional=true,v=1},

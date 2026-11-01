@@ -18,6 +18,8 @@ fp Hammerfall
 accept 655 Hammerfall | Gor'mul.
 turnin 638 Trollbane
 accept 642 The Princess Trapped | The Shards of Myzrael, south-east.
+accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.
+turnin 635 Crystal in the Mountains [iffound]
 accept 671 Foul Magics
 turnin 655 Hammerfall | Tor'gan.
 accept 672 Raising Spirits | Tor'gan.

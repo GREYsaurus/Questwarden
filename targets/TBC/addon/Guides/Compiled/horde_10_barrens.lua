@@ -173,6 +173,8 @@ ns.Guides:Register({
     {"complete",q=1069,title="Deepmoss Spider Eggs",text="Deepmoss Egg: loot Deepmoss Eggs.",classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
     {"accept",q=863,title="The Escape",npc="Wizzlecrank's Shredder",z=17,x=56.5,y=7.4,text="Escort quest: start it when you are ready to follow.",optional=true,v=1},
     {"turnin",q=894,title="Samophlange",npc="Control Console",z=17,x=52.4,y=11.6,v=1},
+    {"accept",q=3513,title="The Runed Scroll",text="Shown only if you find Runed Scroll.",starter=10621,drops={5797},ifFound=true,v=1},
+    {"turnin",q=3513,title="The Runed Scroll",npc="Kadrak",z=17,x=48.1,y=5.4,ifFound=true,v=1},
     {"accept",q=900,title="Samophlange",npc="Control Console",z=17,x=52.4,y=11.6,v=1},
     {"complete",q=900,title="Samophlange",text="Click Fuel Control Valve and Main Control Valve.",v=1},
     {"turnin",q=900,title="Samophlange",npc="Control Console",z=17,x=52.4,y=11.6,v=1},

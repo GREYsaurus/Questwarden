@@ -165,6 +165,8 @@ ns.Guides:Register({
     {"accept",q=10159,title="Keep Thornfang Hill Clear!",npc="Mahuram Stouthoof",z=3483,x=15.9,y=52.2,text="Mahuram Stouthoof.",v=1},
     {"accept",q=10132,title="Colossal Menace",npc="Tola'thion",z=3483,x=15.6,y=52,text="Tola'thion.",v=1},
     {"accept",q=9372,title="Demonic Contamination",npc="Thiah Redmane",z=3483,x=15.7,y=52.1,text="Thiah Redmane, Cenarion Post.",v=1},
+    {"accept",q=9373,title="Missing Missive",text="Shown only if you find Eroded Leather Case.",starter=23338,drops={16857,16968},ifFound=true,v=1},
+    {"turnin",q=9373,title="Missing Missive",npc="Thiah Redmane",z=3483,x=15.7,y=52.1,ifFound=true,v=1},
     {"complete",q=9372,title="Demonic Contamination",text="Helboar Blood Sample drops from Dreadtusk and Hulking Helboar.",v=1},
     {"complete",q=10132,title="Colossal Menace",text="Elite: Raging Colossus; bring help or skip.",v=1},
     {"complete",q=10159,title="Keep Thornfang Hill Clear!",v=1},

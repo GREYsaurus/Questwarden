@@ -51,6 +51,8 @@ turnin Another Message to the Wildhammer
 turnin Cannibalistic Cousins
 complete Kidnapped Elder Torntusk! | Elder Torntusk is held in the Vilebranch area.
 turnin Kidnapped Elder Torntusk!
+accept 485 Find OOX-09/HL! [iffound] | Shown only if you find OOX-09/HL Distress Beacon.
+turnin 485 Find OOX-09/HL! [iffound]
 accept Recover the Key!
 complete Recover the Key! | Shackle Key drops from Hitah'ya the Keeper.
 turnin Recover the Key!

@@ -23,7 +23,14 @@
 # later guide of that zone, by level, for the same faction), and the pickup no longer waits for the required level
 # (below it, the add-on skips the pickup with "needs level N" and takes it if you reach the level before moving on).
 #
-# Usage: python tools/research/item_starter_insert.py <Target> [--relaxed] [--dry-run] [--why]
+# --iffound adds, instead, the quests no other mode can: items that many kinds of mob drop (or that the guide does not
+# fight). Their steps carry [iffound], so the add-on shows them only once the item is in your bags or the quest is in
+# your log, and the route audit never counts them. Pickup and objective go into the first guide (by level, faction)
+# of the zone where the objectives are (the finisher's zone when there are none), near them; the turn-in into that
+# guide or the next one of the finisher's zone. Kept: non-elite open-world droppers, no escort, event, repeatable,
+# reputation or class quests, prerequisites turned in first.
+#
+# Usage: python tools/research/item_starter_insert.py <Target> [--relaxed | --iffound] [--dry-run] [--why]
 # Run the compiler and the route audit afterwards; every added quest is reviewed in the diff.
 import csv
 import json
@@ -39,7 +46,8 @@ target = [a for a in sys.argv[1:] if not a.startswith("--")]
 target = target[0] if target else "ClassicEra"
 DRY = "--dry-run" in sys.argv
 VERBOSE = "--why" in sys.argv
-RELAXED = "--relaxed" in sys.argv
+IFFOUND = "--iffound" in sys.argv
+RELAXED = "--relaxed" in sys.argv or IFFOUND
 T = qdb.Target(target)
 EXCLUDE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "quest_exclude.json"), encoding="utf-8")).get(target, {})
 VERB_RE = re.compile(r"^(accept|turnin|complete)\s")
@@ -164,7 +172,7 @@ def faction_flag(guide, qfaction):
     return " [faction=%s]" % qfaction if guide["faction"] == "Both" and qfaction != "Both" else ""
 
 
-for gid in ORDER:
+for gid in ([] if IFFOUND else ORDER):
     c = ctx[gid]
     g, zone, cq, src_q, anchors = c["g"], c["g"]["zone"], c["cq"], c["src_q"], c["anchors"]
     if gid not in cands or len(anchors) < 3:
@@ -271,6 +279,110 @@ for gid in ORDER:
         report.append("%s: + %d %s (item %s; %s; needs %d, model %s)%s" % (
             gid, qid, title, st["itemName"], "before the guide's kill steps" if kills else "named dropper",
             req, "%.1f" % lv if lv is not None else "?", where))
+
+def objective_zones(q):
+    """(has objectives, {zone: [points]} where every objective can be done without elites, or None when one cannot)."""
+    obj = hsh(f(q, 12))
+    kill = ids(obj.get("c")) + ids(obj.get("k"))
+    if any(elite(n) for n in kill):
+        return True, None
+    parts = []
+    for n in kill:
+        parts.append(pts_by_zone(T.N.get(n), 6))
+    for o in ids(obj.get("o")):
+        parts.append(pts_by_zone(T.O.get(o), 3))
+    for it in ids(obj.get("i")):
+        ir = T.I.get(it)
+        if not ir:
+            return True, None
+        d = {}
+        for n in ids(ir[1]):
+            if not elite(n):
+                for z, pts in pts_by_zone(T.N.get(n), 6).items():
+                    d.setdefault(z, []).extend(pts)
+        for o in ids(ir[2]):
+            for z, pts in pts_by_zone(T.O.get(o), 3).items():
+                d.setdefault(z, []).extend(pts)
+        parts.append(d)
+    if not parts:
+        return False, {}
+    zones = set.intersection(*[set(z for z, v in d.items() if v) for d in parts])
+    return True, ({z: [p for d in parts for p in d.get(z, [])] for z in zones} if zones else None)
+
+
+if IFFOUND:
+    guided = set()
+    for c in ctx.values():
+        guided |= {s["q"] for s in c["cq"] if s["q"]}
+    for qid, st in sorted(starters.items()):
+        q = T.Q.get(qid)
+        CUR[0] = ("-", "%d %s" % (qid, q[0] if q else "?"))
+        if not q or qid in guided or st["source"] != "mob" or st["classes"] not in ("0", ""):
+            continue
+        if str(qid) in EXCLUDE or escort(q) or (f(q, 26) or 0) & 2 or (f(q, 19) or 0) & 1 or f(q, 23):
+            reject("escort/event/repeatable/reputation/excluded"); continue
+        item = int(st["item"])
+        plain = [n for n in ids(T.I[item][1]) if not elite(n) and pts_by_zone(T.N.get(n), 6)] if item in T.I else []
+        if not plain:
+            reject("only elites (or nothing outdoors) drop it"); continue
+        has_obj, oz = objective_zones(q)
+        if oz is None:
+            reject("objectives not doable in one zone without elites"); continue
+        ez = {}
+        for n in ids(f(q, 9)):
+            for z, pts in pts_by_zone(T.N.get(n), 6).items():
+                ez.setdefault(z, []).extend(pts)
+        for o in ids(f(q, 10)):
+            for z, pts in pts_by_zone(T.O.get(o), 3).items():
+                ez.setdefault(z, []).extend(pts)
+        ez = {z: v for z, v in ez.items() if v}
+        races = f(q, 4) or 0
+        qfaction = "Alliance" if races and not (races & 178) else ("Horde" if races and not (races & 77) else "Both")
+        req, lvl = f(q, 2) or 0, f(q, 3) or 0
+        home = set(oz) if has_obj else set(ez)
+        covered = set()  # factions already given this quest (a Both guide covers both)
+        for fac in (["Alliance", "Horde"] if qfaction == "Both" else [qfaction]):
+            if fac in covered:
+                continue
+            # The guide of that zone whose levels fit the quest best (it must allow the required level).
+            best = None
+            for k in ORDER:
+                h = ctx[k]["g"]
+                if h["zone"] not in home or len(ctx[k]["anchors"]) < 3 or h["max"] < req or h["faction"] not in (fac, "Both"):
+                    continue
+                score = 0 if h["min"] - 2 <= lvl <= h["max"] + 2 else min(abs(h["min"] - lvl), abs(h["max"] - lvl))
+                if best is None or score < best[0]:
+                    best = (score, k)
+            if not best:
+                reject("no %s guide in the zone of its objectives or finisher" % fac); continue
+            ag = best[1]
+            ac = ctx[ag]
+            both = ac["g"]["faction"] == "Both" and qfaction == "Both"
+            tg = later_guide(ag, set(ez), "Both" if both else fac)
+            if not tg:
+                reject("no guide where the finisher is, from there on"); continue
+            apos = centroid((oz if has_obj else ez)[ac["g"]["zone"]])
+            ia = min(ac["anchors"], key=lambda a: dist(a[1], apos))[0]
+            if not prereq_done(q, ag, ia):
+                reject("prerequisite not turned in first"); continue
+            tc = ctx[tg]
+            epos = centroid(ez[tc["g"]["zone"]])
+            pool = [a for a in tc["anchors"] if tg != ag or a[0] >= ia] or [tc["anchors"][-1]]
+            it_ = min(pool, key=lambda a: dist(a[1], epos))[0]
+
+            def flags(guide):
+                fl = ["iffound"]
+                if guide["faction"] == "Both" and not both:
+                    fl.append("faction=" + fac)
+                return " [" + "; ".join(fl) + "]"
+            ac["inserts"].append((ia, 0, "accept %d %s%s | Shown only if you find %s." % (qid, q[0], flags(ac["g"]), st["itemName"])))
+            if has_obj:
+                ac["inserts"].append((ia, 1, "complete %d %s%s" % (qid, q[0], flags(ac["g"]))))
+            tc["inserts"].append((it_, 2, "turnin %d %s%s" % (qid, q[0], flags(tc["g"]))))
+            covered |= {"Alliance", "Horde"} if both else {fac}
+            report.append("%s: + %d %s (item %s, %d kinds of dropper; level %d)%s" % (
+                ag, qid, q[0], st["itemName"], len(set(ids(T.I[item][1]))), lvl, "" if tg == ag else " -> turn-in in " + tg))
+        guided.add(qid)
 
 for gid, c in ctx.items():
     if not c["inserts"] or DRY:

@@ -175,6 +175,8 @@ complete 1069 Deepmoss Spider Eggs [race=Undead,Blood Elf] | Deepmoss Egg: loot 
 complete 1069 Deepmoss Spider Eggs [class=Shaman; race=Orc,Tauren,Troll] | Deepmoss Egg: loot Deepmoss Eggs.
 accept 863 The Escape [optional] | Escort quest: start it when you are ready to follow.
 turnin Samophlange
+accept 3513 The Runed Scroll [iffound] | Shown only if you find Runed Scroll.
+turnin 3513 The Runed Scroll [iffound]
 accept 900 Samophlange
 complete 900 Samophlange | Click Fuel Control Valve and Main Control Valve.
 turnin 900 Samophlange

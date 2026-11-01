@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5182 |
-| Quest steps (accept/complete/turn-in) | 4218 |
-| Distinct quests referenced | 1318 |
-| Steps with database-derived coordinates | 3315 |
+| Guide steps | 5202 |
+| Quest steps (accept/complete/turn-in) | 4238 |
+| Distinct quests referenced | 1323 |
+| Steps with database-derived coordinates | 3325 |
 | Steps with hand-written coordinates (unverified) | 2 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
@@ -109,9 +109,9 @@ Each race/class combination is followed from its racial start guide through the 
 | Shimmering Flats (33-34) | Alliance | 33-34 | Thousand Needles | 18 | 6 | 0 |
 | Stranglethorn Vale (34-36) | Horde | 34-36 | Stranglethorn Vale | 63 | 18 | 1 |
 | Stranglethorn Vale (36-37) | Alliance | 36-37 | Stranglethorn Vale | 65 | 21 | 4 |
-| Arathi Highlands (36-37) | Horde | 36-37 | Arathi Highlands | 70 | 21 | 3 |
+| Arathi Highlands (36-37) | Horde | 36-37 | Arathi Highlands | 72 | 22 | 3 |
 | Alterac Mountains (37) | Alliance | 37-37 | Alterac Mountains | 3 | 0 | 0 |
-| Arathi Highlands (37-38) | Alliance | 37-38 | Arathi Highlands | 55 | 19 | 6 |
+| Arathi Highlands (37-38) | Alliance | 37-38 | Arathi Highlands | 57 | 20 | 6 |
 | Alterac Mountains (37) | Horde | 37-37 | Alterac Mountains | 5 | 1 | 0 |
 | Thousand Needles (37-38) | Horde | 37-38 | Thousand Needles | 8 | 3 | 0 |
 | Dustwallow Marsh (38-39) | Alliance | 38-39 | Dustwallow Marsh | 53 | 16 | 4 |
@@ -127,23 +127,23 @@ Each race/class combination is followed from its racial start guide through the 
 | Desolace (43) | Alliance | 43-43 | Desolace | 77 | 25 | 3 |
 | Tanaris (43-44) | Alliance | 43-44 | Tanaris | 38 | 13 | 3 |
 | Dustwallow Marsh (43-44) | Horde | 43-44 | Dustwallow Marsh | 20 | 6 | 0 |
-| Feralas (44-46) | Alliance | 44-46 | Feralas | 53 | 17 | 1 |
+| Feralas (44-46) | Alliance | 44-46 | Feralas | 55 | 18 | 1 |
 | Desolace (44) | Horde | 44-44 | Desolace | 27 | 5 | 1 |
 | Tanaris (44-45) | Horde | 44-45 | Tanaris | 51 | 13 | 3 |
-| Feralas (45-46) | Horde | 45-46 | Feralas | 49 | 16 | 0 |
+| Feralas (45-46) | Horde | 45-46 | Feralas | 51 | 17 | 0 |
 | Azshara (46) | Alliance | 46-46 | Azshara | 17 | 2 | 0 |
-| The Hinterlands (46) | Alliance | 46-46 | The Hinterlands | 24 | 4 | 0 |
+| The Hinterlands (46) | Alliance | 46-46 | The Hinterlands | 26 | 5 | 0 |
 | Stranglethorn Vale (46-47) | Alliance | 46-47 | Stranglethorn Vale | 17 | 2 | 3 |
 | Searing Gorge (47-48) | Alliance | 47-48 | Searing Gorge | 57 | 19 | 3 |
-| The Hinterlands (47) | Horde | 47-47 | The Hinterlands | 30 | 9 | 0 |
+| The Hinterlands (47) | Horde | 47-47 | The Hinterlands | 32 | 10 | 0 |
 | Stranglethorn Vale (47) | Horde | 47-47 | Stranglethorn Vale | 13 | 4 | 0 |
 | Searing Gorge (47-48) | Horde | 47-48 | Searing Gorge | 51 | 17 | 3 |
 | Feralas (48-49) | Alliance | 48-49 | Feralas | 29 | 6 | 1 |
 | Swamp of Sorrows (48-49) | Horde | 48-49 | Swamp of Sorrows | 35 | 9 | 3 |
 | Dustwallow Marsh (49) | Alliance | 49-49 | Dustwallow Marsh | 6 | 1 | 0 |
-| Tanaris (49-50) | Alliance | 49-50 | Tanaris | 34 | 11 | 6 |
+| Tanaris (49-50) | Alliance | 49-50 | Tanaris | 36 | 12 | 6 |
 | Dustwallow Marsh (49) | Horde | 49-49 | Dustwallow Marsh | 3 | 0 | 0 |
-| Tanaris (49-50) | Horde | 49-50 | Tanaris | 27 | 9 | 6 |
+| Tanaris (49-50) | Horde | 49-50 | Tanaris | 29 | 10 | 6 |
 | The Hinterlands (50) | Alliance | 50-50 | The Hinterlands | 14 | 1 | 0 |
 | Blasted Lands (50-51) | Alliance | 50-51 | Blasted Lands | 34 | 7 | 0 |
 | Azshara (50) | Horde | 50-50 | Azshara | 20 | 3 | 0 |
@@ -171,8 +171,8 @@ Each race/class combination is followed from its racial start guide through the 
 | Azshara (58) | Alliance | 58-58 | Azshara | 12 | 0 | 0 |
 | Tanaris (58) | Alliance | 58-58 | Tanaris | 12 | 0 | 0 |
 | Un'Goro Crater (58) | Alliance | 58-58 | Un'Goro Crater | 32 | 7 | 1 |
-| Silithus (58-59) | Alliance | 58-59 | Silithus | 48 | 13 | 0 |
-| Silithus (58-59) | Horde | 58-59 | Silithus | 48 | 13 | 0 |
+| Silithus (58-59) | Alliance | 58-59 | Silithus | 50 | 14 | 0 |
+| Silithus (58-59) | Horde | 58-59 | Silithus | 50 | 14 | 0 |
 | Eastern Plaguelands (59) | Alliance | 59-59 | Eastern Plaguelands | 19 | 6 | 0 |
 | Winterspring (59-60) | Alliance | 59-60 | Winterspring | 29 | 11 | 1 |
 | Winterspring (59-60) | Horde | 59-60 | Winterspring | 19 | 6 | 0 |

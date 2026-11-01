@@ -205,6 +205,7 @@ namespace GuideTools
         public int Starter;                      // accept: the item that starts the quest (no NPC or object gives it)
         public List<int> Drops;                  // accept: NPCs that drop Starter (preferring those in the guide's zone)
         public List<int> Via;                    // accept: later steps (1-based) that kill a dropper of Starter
+        public bool IfFound;                     // [iffound]: shown only once the start item is in your bags or the quest in your log
     }
 
     public sealed class CGuide
@@ -472,6 +473,11 @@ namespace GuideTools
                 else s.Faction = v;
             }
             if (flags.ContainsKey("optional")) s.Optional = true;
+            if (flags.ContainsKey("iffound"))
+            {
+                if (verb != "accept" && verb != "complete" && verb != "turnin") res.Errors.Add(where + ": [iffound] is only for accept, complete and turnin steps");
+                else s.IfFound = true;
+            }
             if (flags.TryGetValue("hc", out v))
             {
                 if (!Ctx.Hardcore) res.Errors.Add(where + ": [hc=] used, but target " + Ctx.Target + " has no Hardcore ruleset");
@@ -559,6 +565,7 @@ namespace GuideTools
                             s.Starter = items[0];
                             if (it != null) s.Drops = StarterDroppers(res.Db, it, stepZone);
                         }
+                        if (s.IfFound && s.Starter == 0) res.Errors.Add(where + ": [iffound] pickup of '" + s.Title + "', which does not start from an item");
                     }
                     else if (verb == "turnin")
                     {
@@ -1036,7 +1043,7 @@ namespace GuideTools
             for (int i = 0; i < g.Steps.Count; i++)
             {
                 var a = g.Steps[i];
-                if (a.Kind != "accept" || a.Drops == null) continue;
+                if (a.Kind != "accept" || a.Drops == null || a.IfFound) continue; // [iffound]: never waited for or farmed
                 var drops = new HashSet<int>(a.Drops);
                 var names = new HashSet<string>(a.Drops.Select(n => db.NpcName(n)).Where(n => n != null).Select(BundledDb.Norm));
                 var via = new List<int>();
@@ -1328,6 +1335,7 @@ namespace GuideTools
             if (s.Starter > 0) sb.Append(",starter=").Append(s.Starter);
             if (s.Drops != null) sb.Append(",drops={").Append(string.Join(",", s.Drops.Select(x => x.ToString()).ToArray())).Append("}");
             if (s.Via != null) sb.Append(",via={").Append(string.Join(",", s.Via.Select(x => x.ToString()).ToArray())).Append("}");
+            if (s.IfFound) sb.Append(",ifFound=true");
             sb.Append(",v=").Append(s.Verified ? 1 : 0);
             return sb.Append("}").ToString();
         }

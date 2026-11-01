@@ -10,6 +10,8 @@
 -- A pending step can also be waiting (Engine.waiting[i]): the pickup of a quest that starts from a dropped
 -- item lets the later steps that kill its droppers go first (Core/ItemStarts.lua). It stays "pending" for
 -- everything else (quest automation, vendors, markers); only the choice of the current step passes it by.
+-- An [iffound] quest (an item many mobs drop, rarely) is "na" until its item is in your bags or the quest is in
+-- your log: hidden and not counted, never waited for or farmed.
 -- Completion rules per step type are in COMPLETERS below. Rules only use reliable signals
 -- (quest flags, quest log, level, bind location, explicit UI messages). Anything else waits for
 -- the player to click the step (manual confirmation) - the engine never guesses.
@@ -234,6 +236,9 @@ function Engine:Refresh(silent)
         elseif (s.dungeon and self:DungeonOff(s.dungeon) and not (s.q and T:InLog(s.q))) or (s.elite and not self:EliteOn())
             or (s.optional and prof.speedRoute)
             or (s.hcSkip and ns:IsHardcore()) or (s.hcOnly and not ns:IsHardcore()) then
+            st = "na"
+        elseif s.ifFound and s.q and not T:InLog(s.q) and not T:IsTurnedIn(s.q)
+            and not (s[1] == "accept" and s.starter and ns.ItemStarts and ns.ItemStarts:Has(s.starter)) then
             st = "na"
         elseif p.skipped[i] and not (s.starter and s.q and (T:InLog(s.q) or T:IsTurnedIn(s.q))) then
             -- (A skipped item-started pickup counts as done once you take the quest after all.)

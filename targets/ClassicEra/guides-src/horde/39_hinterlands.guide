@@ -39,6 +39,8 @@ turnin 7844 Cannibalistic Cousins
 turnin 7839 Vilebranch Hooligans
 note The next quest, Rin'ji is Trapped!, is an escort: pick it up only when you are ready to follow the NPC.
 accept 2742 Rin'ji is Trapped!
+accept 485 Find OOX-09/HL! [iffound] | Shown only if you find OOX-09/HL Distress Beacon.
+turnin 485 Find OOX-09/HL! [iffound]
 complete 2742 Rin'ji is Trapped! | Escort: stay close; it fails if the NPC dies.
 turnin 2742 Rin'ji is Trapped!
 level 47 | Stranglethorn Vale starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

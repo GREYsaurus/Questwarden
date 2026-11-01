@@ -10,6 +10,8 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Arathi Highlands",dest="Arathi Highlands",v=1},
     {"accept",q=642,title="The Princess Trapped",npc="Shards of Myzrael",z=45,x=62.5,y=33.7,text="The Shards of Myzrael object, south-east of Refuge Pointe.",v=1},
+    {"accept",q=635,title="Crystal in the Mountains",text="Shown only if you find Pendant of Myzrael.",starter=4614,drops={587,588,595,597,660,667,671,674},ifFound=true,v=1},
+    {"turnin",q=635,title="Crystal in the Mountains",npc="Shards of Myzrael",z=45,x=62.5,y=33.7,ifFound=true,v=1},
     {"complete",q=642,title="The Princess Trapped",text="Kill Kobolds at Drywhisker Gorge for Iridescent Shards.",v=1},
     {"turnin",q=642,title="The Princess Trapped",npc="Iridescent Shards",z=45,x=84.3,y=31,v=1},
     {"complete",q=627,title="Favor for Krazek",v=1},
