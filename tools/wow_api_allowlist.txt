@@ -249,6 +249,7 @@ GetQuestLogIndexByID              # core; guarded
 GetQuestLogPushable               # core; guarded
 QuestLogPushQuest                 # core; guarded
 UnitOnTaxi                        # core; guarded
+GetUnitSpeed                      # core; run speed for the hearthstone suggestion (guarded)
 UnitIsFriend                      # core; guarded
 GetMerchantNumItems               # core; guarded
 GetMerchantItemLink               # core; guarded

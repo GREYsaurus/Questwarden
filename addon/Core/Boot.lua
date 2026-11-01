@@ -63,6 +63,7 @@ ns:On("PLAYER_LOGIN", function()
     stage("corpse waypoint", function() ns.Corpse:Init() end)
     stage("assist", function() ns.Assist:Init() end)
     stage("hearthstone binding", function() ns.Bind:Init() end)
+    stage("hearthstone suggestions", function() ns.Hearth:Init() end)
     stage("settings window", function() ns.Config:Create() end)
 
     stage("first-login setup", function() ns.Welcome:Migrate() end)

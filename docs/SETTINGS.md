@@ -34,6 +34,7 @@ None of this has been tested in the game client yet.
   | Automatic Training | Off | Per character, also in the setup wizard (opt-in). *Recommended spells*: when you open your class trainer, learns the ranks the suggestions list for you that you can afford; *Everything I can afford*: all of them. Spends gold, one summary chat line when you close the trainer, hold Shift to skip. Characters that had the old *Trainer automation* switch on keep "everything" until they choose |
   | Flight Path automation | on | On a "fly to" step, takes that flight when the flight map opens |
   | Innkeeper Bind automation | on | On a "set your hearthstone" step, when you talk to that town's innkeeper: picks the bind option, confirms it only if the game names the step's inn, and completes the step once the game reports the new home. Never at other inns. Hold Shift to skip |
+  | Hearthstone Suggestions | on | When your hearthstone is ready and the next steps turn in quests in the town it is set to, the step suggests hearthing if that saves enough time over walking (5 minutes for one turn-in, less for more, never under a minute). Never uses the hearthstone. Details: docs/HEARTHSTONE.md |
   | Skip Gossip | on | Picks the only option when an NPC has one option and no quests (never a bind option outside a bind step) |
 
   Hold **Shift** while talking to an NPC to skip all of these once.

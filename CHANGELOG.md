@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Hearthstone suggestions.** When your hearthstone is off cooldown and the next steps turn in quests in the town it is set to, the step says when hearthing beats walking: "Hearthstone ready: hearth to Goldshire for 3 turn-ins there; saves about 4 min over walking." The fewer the turn-ins, the more it has to save (5 minutes for one, 2.5 for two, never under a minute), because the hearthstone has a long cooldown. Walking time uses the straight line, a margin for roads and your run speed (mounted if you are); hearthing counts the cast, a loading screen and the walk from the inn. The inn is where you last set the hearthstone or landed after hearthing, else the innkeeper of the guide's bind step. Only a suggestion: it never uses the hearthstone. New setting *Hearthstone Suggestions* (on). Details: docs/HEARTHSTONE.md.
 - **No chat ranking of quest rewards.** Choosing a quest reward no longer prints "Reward comparison ..." with a line per item; hovering a reward still shows how it compares with what you wear. The ranking can be turned back on with *Quest Reward Recommendation* (Gear settings, now off by default) or `/qw set gearQuestRewards on`. Saved settings are switched off once.
 
 ## 0.1.0-alpha.18 (2026-11-01)

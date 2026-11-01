@@ -107,6 +107,7 @@ local profileDefaults = {
         roamRoutes = true,          -- roaming hunting-area waypoints on kill steps with a verified route (Core/Roam.lua)
         patrolPaths = true,         -- follow and draw the path of a patrolling quest NPC (Core/Patrol.lua)
         bindAuto = true,            -- confirm the hearthstone bind on the guide's bind step
+        hearthSuggest = true,       -- suggest the hearthstone when it beats walking to turn-ins in town (Core/Hearth.lua)
         skipGossip = true,          -- pick the only gossip option when an NPC offers nothing else
         inventoryManager = true,    -- master switch for junk selling, junk list and junk deletion
         junkModifierToggle = false, -- mark/unmark items as junk with modifier + right-click in bags

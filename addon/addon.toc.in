@@ -87,6 +87,7 @@ Core\Orphans.lua
 Core\Marker.lua
 Core\Assist.lua
 Core\Bind.lua
+Core\Hearth.lua
 Core\Group.lua
 Core\FlightTimer.lua
 Core\FlightPaths.lua

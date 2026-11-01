@@ -68,6 +68,8 @@ pages.general = { title = "General", items = function() return {
     T("flightAuto", "Flight Path automation", { tip = "On a 'fly to' step, takes the flight to that destination when the flight map opens. Hold Shift to skip." }),
     T("bindAuto", "Innkeeper Bind automation", { tip = "On a 'set your hearthstone' step, when you talk to that town's innkeeper: picks the bind option and confirms it, only if the game names the step's inn. The step completes once the game reports your new home. Never binds at other inns. Hold Shift to skip.",
       after = function() if not ns.db.profile.bindAuto then ns.Bind:Cancel("setting off") end end }),
+    T("hearthSuggest", "Hearthstone Suggestions", { tip = "When your hearthstone is ready and the next steps turn in quests in the town it is set to, the step says so if hearthing saves enough time over walking: 5 minutes for one turn-in, less for more (never under a minute). Only a suggestion: it never uses the hearthstone.",
+      after = function() ns.Hearth:Check() end }),
     T("skipGossip", "Skip Gossip", { tip = "Picks the only option when an NPC has one option and no quests. Hold Shift to skip." }),
     H("Window"),
     { type = "range", key = "scale", label = "Guide Window Scale", min = 0.6, max = 1.6, step = 0.05, percent = true, decimals = 2 },
