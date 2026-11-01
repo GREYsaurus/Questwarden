@@ -14,7 +14,7 @@
 # Optional variable ADDON_NAME (default Questwarden) must match tools/addon.json "name".
 # Without the variable and secret the workflow skips the upload instead of failing.
 #
-# Re-run for an existing release: Actions > "Publish to CurseForge" > Run workflow > tag, e.g. v0.1.0-alpha.1.
+# Re-run for an existing release: Actions > "Publish to CurseForge" > Run workflow > tag, e.g. v0.1.0-alpha.10 (or a padded one, v0.1.0-alpha.01).
 
 name: Publish to CurseForge
 
@@ -24,7 +24,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag to upload (e.g. v0.1.0-alpha.1)"
+        description: "Release tag to upload (e.g. v0.1.0-alpha.10)"
         required: true
 
 permissions:
@@ -55,6 +55,9 @@ jobs:
         run: |
           set -euo pipefail
           VERSION="${TAG#v}"
+          # Tags of alpha.1-alpha.9 are zero-padded (v0.1.0-alpha.01) so GitHub's releases page, which sorts tags as
+          # text, lists them in order; the zips inside carry the unpadded version.
+          VERSION="$(echo "$VERSION" | sed -E 's/(alpha|beta)\.0+([0-9])/\1.\2/')"
           gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "${ADDON}-${VERSION}.zip" --dir dist
           test -s "dist/${ADDON}-${VERSION}.zip"
           gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body,isPrerelease,name > release.json

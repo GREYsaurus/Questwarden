@@ -36,7 +36,8 @@ New projects, and each uploaded file, are reviewed by CurseForge moderation befo
 
 1. Load the add-on once in each game (Classic Era and TBC Anniversary) and check `/qw debug`: no errors, the right target shown.
 2. Run `powershell -ExecutionPolicy Bypass -File tools/build.ps1 package`. It tests the folder through both TOCs and writes `dist/Questwarden-<version>.zip` and the source zip.
-3. On GitHub, create a release with the tag `v<version>` (for example `v0.1.0-alpha.1`), mark it as a **pre-release**, and attach both zips. Publishing it triggers the upload.
+3. On GitHub, create a release with the tag `v<version>` (for example `v0.1.0-alpha.11`), mark it as a **pre-release**, and attach both zips. Publishing it triggers the upload.
+   - **Tag order:** GitHub's releases page sorts tags as text, so `alpha.10` would sort right after `alpha.1`. The tags of alpha.1 to alpha.9 were therefore renamed to `v0.1.0-alpha.01` to `v0.1.0-alpha.09` (same releases and zips; the zips keep their unpadded version). Two-digit numbers (`alpha.10` to `alpha.99`) need no padding. The workflow strips the padding when it looks for the zip.
 
 - **Re-run for an existing release:** **Actions > Publish to CurseForge > Run workflow**, then enter the tag.
 - **By hand (alternative):** on the CurseForge project, upload `Questwarden-<version>.zip`, choose game versions *1.15.9* and *2.5.6*, release type *Alpha*.
