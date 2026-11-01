@@ -43,7 +43,7 @@ ns.Guides:Register({
     {"accept",q=733,title="Scrounging",npc="Sigrun Ironhew",z=3,x=53.8,y=43.3,text="Scrap Metal from Dustbelcher ogres in the west.",v=1},
     {"complete",q=2418,title="Power Stones",text="Shadowforge Surveyors at Agmond's End and around Uldaman's entrance, north.",v=1},
     {"turnin",q=721,title="A Sign of Hope",npc="Hammertoe Grez",z=38,x=37.3,y=85.8,text="Hammertoe Grez at the Uldaman excavation, north.",v=1},
-    {"accept",q=2198,title="The Shattered Necklace",text="Starts from the item Shattered Necklace.",v=1},
+    {"accept",q=2198,title="The Shattered Necklace",text="Starts from the item Shattered Necklace.",starter=7666,drops={4844,4845,4846,4851,4856},v=1},
     {"accept",q=722,title="Amulet of Secrets",npc="Hammertoe Grez",z=38,x=37.3,y=85.8,v=1},
     {"complete",q=722,title="Amulet of Secrets",text="Hammertoe's Amulet drops from Magregan Deepshadow at the Stonesplinter camp just north of Hammertoe.",v=1},
     {"turnin",q=722,title="Amulet of Secrets",npc="Hammertoe Grez",z=38,x=37.3,y=85.8,v=1},

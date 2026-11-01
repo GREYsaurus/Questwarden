@@ -59,7 +59,7 @@ ns.Guides:Register({
     {"turnin",q=4321,title="Making Sense of It",npc="J.D. Collie",z=490,x=41.9,y=2.7,v=1},
     {"accept",q=974,title="Finding the Source",npc="Krakle",z=490,x=30.9,y=50.4,text="Needs level 51. Krakle, at the hot springs on the west side of Fire Plume Ridge.",v=1},
     {"turnin",q=4492,title="Lost!",npc="Ringo",z=490,x=51.9,y=49.8,v=1},
-    {"accept",q=3884,title="Williden's Journal",text="Starts from the item A Mangled Journal.",v=1},
+    {"accept",q=3884,title="Williden's Journal",text="Starts from the item A Mangled Journal.",starter=11116,drops={6505,6506,6507,6508,6509},v=1},
     {"complete",q=974,title="Finding the Source",text="Use Krakle's Thermometer at the hottest vent up on Fire Plume Ridge.",v=1},
     {"turnin",q=974,title="Finding the Source",npc="Krakle",z=490,x=30.9,y=50.4,v=1},
     {"note",text="The next quest, A Little Help From My Friends, is an escort: pick it up only when you are ready to follow the NPC.",v=1},

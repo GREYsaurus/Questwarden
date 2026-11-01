@@ -75,6 +75,7 @@ Core\Engine.lua
 Core\Completionist.lua
 Core\Setup.lua
 Core\DungeonRun.lua
+Core\ItemStarts.lua
 Core\StepText.lua
 Core\Navigation.lua
 Core\NavHints.lua

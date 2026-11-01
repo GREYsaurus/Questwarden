@@ -10,7 +10,7 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Felwood",dest="Felwood",v=1},
     {"accept",q=8461,title="Deadwood of the North",npc="Nafien",z=361,x=64.8,y=8.1,text="Nafien.",v=1},
-    {"accept",q=5083,title="Winterfall Firewater",text="Starts from the item Empty Firewater Flask.",v=1},
+    {"accept",q=5083,title="Winterfall Firewater",text="Starts from the item Empty Firewater Flask.",starter=12771,drops={10916},v=1},
     {"complete",q=8461,title="Deadwood of the North",text="Deadwood furbolgs in northern Felwood.",v=1},
     {"turnin",q=8461,title="Deadwood of the North",npc="Nafien",z=361,x=64.8,y=8.1,v=1},
     {"accept",q=8465,title="Speak to Salfa",npc="Nafien",z=361,x=64.8,y=8.1,text="Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.",v=1},

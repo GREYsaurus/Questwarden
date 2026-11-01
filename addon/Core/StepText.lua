@@ -42,6 +42,10 @@ end
 function StepText:Title(s)
     refreshColours()
     local k = s[1]
+    if k == "accept" and s.starter and ns.ItemStarts then
+        local t = ns.ItemStarts:Title(s, function(x) return string.format(QUEST, x) end, function(x) return "[" .. x .. "]" end)
+        if t then return t end
+    end
     if k == "accept" then
         local who = s.npc and (" from " .. string.format(NPC, s.npc)) or ""
         return "Accept " .. string.format(QUEST, questName(s)) .. who
@@ -125,6 +129,12 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(DIM, string.format("Level %d, %d%% through", UnitLevel("player"), math.floor(xp / maxXp * 100)))
         end
     end
+    -- Quests that start from a dropped item (Core/ItemStarts.lua).
+    if ns.ItemStarts then
+        for _, l in ipairs(ns.ItemStarts:Lines(s, s.index, ns.Engine:CurrentStep() == s)) do
+            lines[#lines + 1] = string.format(l.warn and WARN or DIM, l.text)
+        end
+    end
     -- Hearthing to town beats walking (Core/Hearth.lua).
     local hearth = ns.Hearth and ns.Engine:CurrentStep() == s and ns.Hearth:Line()
     if hearth then lines[#lines + 1] = string.format(WARN, hearth) end
@@ -158,6 +168,13 @@ function StepText:Target(s)
     if s[1] == "train" and ns.Trainer then
         local z, x, y, name = ns.Trainer:TrainerFor(s)
         if z then return z, x, y, name end
+    end
+    -- An item-started pickup: the nearest NPC that drops the item, while you still need it.
+    if s.starter and ns.ItemStarts then
+        local st = ns.ItemStarts:State(s)
+        if st == "have" or st == "accepted" or st == "done" then return nil end
+        local z, x, y, label = ns.ItemStarts:Target(s)
+        if z then return z, x, y, label end
     end
     if s.x and s.y and s.z then
         if s[1] == "grind" then return s.z, s.x, s.y, s.location or (s.mobs and s.mobs[1]) end

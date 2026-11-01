@@ -20,7 +20,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"turnin",q=270,title="The Doomed Fleet",npc="Glorin Steelbrow",z=11,x=10.6,y=60.6,optional=true,v=1},
     {"accept",q=321,title="Lightforge Iron",npc="Glorin Steelbrow",z=11,x=10.6,y=60.6,optional=true,v=1},
-    {"accept",q=637,title="Sully Balloo's Letter",text="Starts from the item Waterlogged Envelope.",v=1},
+    {"accept",q=637,title="Sully Balloo's Letter",text="Starts from the item Waterlogged Envelope.",starter=4433,v=1},
     {"accept",q=290,title="Lifting the Curse",npc="First Mate Fitzsimmons",z=11,x=10.9,y=59.6,v=1},
     {"accept",q=465,title="Nek'rosh's Gambit",npc="Captain Stoutfist",z=11,x=9.9,y=57.5,optional=true,v=1},
     {"turnin",q=465,title="Nek'rosh's Gambit",npc="Dragonmaw Catapult",z=11,x=47.5,y=47,optional=true,v=1},

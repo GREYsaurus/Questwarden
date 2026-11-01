@@ -15,7 +15,7 @@ ns.Guides:Register({
     {"accept",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
     {"complete",q=893,title="Weapons of Choice",v=1},
     {"turnin",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
-    {"accept",q=884,title="Owatanka",text="Starts from the item Owatanka's Tailspike.",optional=true,v=1},
+    {"accept",q=884,title="Owatanka",text="Starts from the item Owatanka's Tailspike.",optional=true,starter=5102,drops={3473},v=1},
     {"turnin",q=884,title="Owatanka",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
     {"level",text="Thousand Needles starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=25,v=1},
   },

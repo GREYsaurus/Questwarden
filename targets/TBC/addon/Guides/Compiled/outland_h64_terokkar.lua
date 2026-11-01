@@ -108,7 +108,7 @@ ns.Guides:Register({
     {"accept",q=10878,title="Before Darkness Falls",npc="Mekeda",z=3519,x=37.8,y=51.8,text="Mekeda, at the refugee camp.",v=1},
     {"complete",q=10878,title="Before Darkness Falls",text="Cabal Skirmishers and Spell-weavers west of the camp.",v=1},
     {"turnin",q=10878,title="Before Darkness Falls",npc="Mekeda",z=3519,x=37.8,y=51.8,v=1},
-    {"accept",q=10880,title="Cabal Orders",text="Only if the Cabal Orders dropped from the Cabal cultists. Turned in to Mekeda.",optional=true,v=1},
+    {"accept",q=10880,title="Cabal Orders",text="Only if the Cabal Orders dropped from the Cabal cultists. Turned in to Mekeda.",optional=true,starter=31707,drops={21661,21902,21907},v=1},
     {"turnin",q=10880,title="Cabal Orders",npc="Mekeda",z=3519,x=37.8,y=51.8,text="Mekeda.",optional=true,v=1},
     {"accept",q=10881,title="The Shadow Tomb",npc="Mekeda",z=3519,x=37.8,y=51.8,optional=true,v=1},
     {"complete",q=10881,title="The Shadow Tomb",text="The Drape of Arunen and the Gavel of K'alen from the Cabal chests in the Shadow Tomb crypts west of the camp.",optional=true,v=1},

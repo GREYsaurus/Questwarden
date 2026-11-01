@@ -19,7 +19,7 @@ ns.Guides:Register({
     {"train",text="No shaman trainer in this zone - train at the next town or capital.",classes={"SHAMAN"},v=1},
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
-    {"accept",q=883,title="Lakota'mani",text="Starts from the item Hoof of Lakota'mani.",optional=true,v=1},
+    {"accept",q=883,title="Lakota'mani",text="Starts from the item Hoof of Lakota'mani.",optional=true,starter=5099,drops={3474},v=1},
     {"turnin",q=883,title="Lakota'mani",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
     {"accept",q=1487,title="Deviate Eradication",npc="Ebru",z=17,x=46,y=35.7,dungeon="Wailing Caverns",v=1},
     {"complete",q=1487,title="Deviate Eradication",dungeon="Wailing Caverns",v=1},

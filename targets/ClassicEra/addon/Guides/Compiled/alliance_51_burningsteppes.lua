@@ -54,7 +54,7 @@ ns.Guides:Register({
     {"complete",q=5001,title="Bijou's Belongings",dungeon="Blackrock Spire",v=1},
     {"turnin",q=5001,title="Bijou's Belongings",npc="Bijou",dungeon="Blackrock Spire",v=1},
     {"accept",q=5002,title="Message to Maxwell",npc="Bijou",dungeon="Blackrock Spire",v=1},
-    {"accept",q=5089,title="General Drakkisath's Command",text="Starts from the item General Drakkisath's Command.",dungeon="Blackrock Spire",v=1},
+    {"accept",q=5089,title="General Drakkisath's Command",text="Starts from the item General Drakkisath's Command.",dungeon="Blackrock Spire",starter=12780,v=1},
     {"turnin",q=4123,title="The Heart of the Mountain",npc="Maxwort Uberglint",z=46,x=65.2,y=23.9,dungeon="Blackrock Depths",v=1},
     {"turnin",q=4136,title="Ribbly Screwspigot",npc="Yuka Screwspigot",z=46,x=66.1,y=22,dungeon="Blackrock Depths",v=1},
     {"turnin",q=4862,title="En-Ay-Es-Tee-Why",npc="Kibler",z=46,x=65.9,y=21.9,dungeon="Blackrock Spire",v=1},

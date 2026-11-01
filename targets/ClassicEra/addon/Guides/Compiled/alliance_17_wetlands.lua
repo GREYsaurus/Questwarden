@@ -62,7 +62,7 @@ ns.Guides:Register({
     {"accept",q=275,title="Blisters on The Land",npc="Rethiel the Greenwarden",z=11,x=56.4,y=40.4,v=1},
     {"complete",q=275,title="Blisters on The Land",text="Fen Creepers in the marshes.",v=1},
     {"turnin",q=275,title="Blisters on The Land",npc="Rethiel the Greenwarden",z=11,x=56.4,y=40.4,v=1},
-    {"accept",q=968,title="The Powers Below",text="Starts from the item Book: The Powers Below.",optional=true,v=1},
+    {"accept",q=968,title="The Powers Below",text="Starts from the item Book: The Powers Below.",optional=true,starter=5352,drops={2338,2339},v=1},
     {"turnin",q=470,title="Digging Through the Ooze",npc="Sida",z=11,x=11.8,y=58,v=1},
     {"turnin",q=968,title="The Powers Below",npc="Gerrig Bonegrip",z=1537,x=50.8,y=5.6,text="Turned in at Ironforge.",optional=true,v=1},
     {"turnin",q=472,title="Fall of Dun Modr",npc="Longbraid the Grim",z=11,x=49.8,y=18.3,v=1},

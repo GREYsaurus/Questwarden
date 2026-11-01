@@ -204,6 +204,8 @@ function A:StepNpcIds()
             for id in pairs(ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or {}) do ids[id] = true end
         elseif s[1] == "accept" then
             for _, id in ipairs(q.startNpcs or {}) do ids[id] = true end
+            -- An item-started quest: the NPCs that drop the item, while you still need it (Core/ItemStarts.lua).
+            for id in pairs(s.starter and ns.ItemStarts:Npcs(s) or {}) do ids[id] = true end
         elseif s[1] == "turnin" then
             for _, id in ipairs(q.endNpcs or {}) do ids[id] = true end
         end

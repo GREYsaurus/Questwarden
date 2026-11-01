@@ -7,13 +7,16 @@
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
 -- Step states: "done", "skipped", "active", "pending", "na" (not for this character).
+-- A pending step can also be waiting (Engine.waiting[i]): the pickup of a quest that starts from a dropped
+-- item lets the later steps that kill its droppers go first (Core/ItemStarts.lua). It stays "pending" for
+-- everything else (quest automation, vendors, markers); only the choice of the current step passes it by.
 -- Completion rules per step type are in COMPLETERS below. Rules only use reliable signals
 -- (quest flags, quest log, level, bind location, explicit UI messages). Anything else waits for
 -- the player to click the step (manual confirmation) - the engine never guesses.
 
 local _, ns = ...
 
-local Engine = { guide = nil, current = nil, status = {}, autoReason = {} }
+local Engine = { guide = nil, current = nil, status = {}, autoReason = {}, waiting = {} }
 ns.Engine = Engine
 
 local T -- tracker, set in Init
@@ -232,7 +235,8 @@ function Engine:Refresh(silent)
             or (s.optional and prof.speedRoute)
             or (s.hcSkip and ns:IsHardcore()) or (s.hcOnly and not ns:IsHardcore()) then
             st = "na"
-        elseif p.skipped[i] then
+        elseif p.skipped[i] and not (s.starter and s.q and (T:InLog(s.q) or T:IsTurnedIn(s.q))) then
+            -- (A skipped item-started pickup counts as done once you take the quest after all.)
             st = "skipped"
         elseif p.done[i] then
             st = "done"
@@ -252,8 +256,35 @@ function Engine:Refresh(silent)
             end
         end
         self.status[i] = st
-        if st == "pending" and not firstOpen then firstOpen = i end
     end
+
+    -- Item-started pickups wait for their kill steps (Core/ItemStarts.lua), and so do the objective and
+    -- turn-in steps of those quests while the quest is not in your log.
+    self.waiting = {}
+    local IS = ns.ItemStarts
+    if IS then
+        for i, s in ipairs(g.steps) do
+            if self.status[i] == "pending" and s[1] == "accept" and IS:Waits(s, self.status) then self.waiting[i] = true end
+        end
+        if next(self.waiting) then
+            for i, s in ipairs(g.steps) do
+                if self.status[i] == "pending" and (s[1] == "complete" or s[1] == "turnin") and s.q
+                    and not T:InLog(s.q) and not T:IsTurnedIn(s.q) then
+                    local a = self.acceptIndex[s.q]
+                    if a and self.waiting[a] then self.waiting[i] = true end
+                end
+            end
+        end
+    end
+    local firstWaiting
+    for i in ipairs(g.steps) do
+        if self.status[i] == "pending" then
+            if not self.waiting[i] then firstOpen = i break end
+            firstWaiting = firstWaiting or i
+        end
+    end
+    -- Only waiting steps left (their kill steps are themselves waiting): take the first, never "finished".
+    firstOpen = firstOpen or firstWaiting
 
     if self.forced and (not firstOpen or self.forced < firstOpen) then
         firstOpen = self.forced
@@ -397,7 +428,7 @@ function Engine:Upcoming(n)
     if not self.guide or not self.current then return out end
     for i = self.current, #self.guide.steps do
         local st = self.status[i]
-        if st == "active" or st == "pending" then
+        if st == "active" or (st == "pending" and not self.waiting[i]) then
             out[#out + 1] = i
             if #out >= n then break end
         end

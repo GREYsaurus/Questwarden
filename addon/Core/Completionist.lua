@@ -22,6 +22,10 @@
 --      band: the most work, then the nearest by world distance (MIN_CLUSTER items preferred);
 --   4. inside the zone: every actionable quest up to one band above the lowest (finish local work), quests
 --      already in the log, then pickups, objectives and turn-ins, each in nearest-neighbour order.
+-- A quest that starts from an item mobs drop (no NPC or object gives it) is placed at the nearest dropper
+-- outside instances. Its pickup comes after the zone's other objectives, so the item may drop on the way, and
+-- its own objectives follow it (Core/ItemStarts.lua). A pickup like that you skip is remembered for the
+-- character ("itemskipped") and is not planned again until the item is in your bags.
 -- Categories in EXCLUDE_DEFAULT stay in the inventory and the counts but are not routed automatically.
 -- Completion comes only from the game's quest-completion flag; nothing here marks a quest complete.
 
@@ -41,7 +45,7 @@ CM.CATEGORY_NAMES = {
     deferred = "Later (level)", blocked = "Waiting on a prerequisite", dungeon = "Dungeon", raid = "Raid",
     group = "Group/elite", profession = "Profession", reputation = "Reputation", event = "Event/seasonal",
     repeatable = "Repeatable", exclusive = "Other branch chosen", ineligible = "Not for this character",
-    missing = "Missing location data", unknown = "Completion unknown",
+    missing = "Missing location data", unknown = "Completion unknown", itemskipped = "Item pickup skipped",
 }
 
 local function DB() return ns.DB end
@@ -57,6 +61,7 @@ function CM:State()
         for k, v in pairs(CM.EXCLUDE_DEFAULT) do s.exclude[k] = v end
     end
     if type(s.visits) ~= "table" then s.visits = {} end
+    if type(s.itemSkipped) ~= "table" then s.itemSkipped = {} end
     return s
 end
 
@@ -137,7 +142,26 @@ local function hostileElite(id)
     return n and (n[N.RANK] == 1 or n[N.RANK] == 2 or n[N.RANK] == 3) and DB().HostileToPlayer(n[N.FRIENDLY])
 end
 
--- Where a quest starts / ends: zone, x, y (nil when the data has no position).
+-- A quest no NPC or object gives that starts from an item: the item and the NPCs that drop it with a spawn
+-- outside instances (an empty list when none does). Nil for any other quest.
+function CM:Starter(r)
+    local Q, N = QDB().QUEST, QDB().NPC
+    if #(r[Q.START_NPCS] or {}) > 0 or #(r[Q.START_OBJECTS] or {}) > 0 then return nil end
+    local item = (r[Q.START_ITEMS] or {})[1]
+    if not item then return nil end
+    local it = QDB().items[item]
+    local drops = {}
+    for _, id in ipairs(it and it[QDB().ITEM.NPC_DROPS] or {}) do
+        local n = QDB().npcs[id]
+        for z in pairs(n and n[N.SPAWNS] or {}) do
+            if not isInstance(z) then drops[#drops + 1] = id break end
+        end
+    end
+    return item, drops
+end
+
+-- Where a quest starts / ends: zone, x, y (nil when the data has no position). For a quest started by a
+-- dropped item: the nearest NPC that drops it, and the item as a fifth value.
 function CM:GiverPos(r, nearZone, nx, ny)
     local Q = QDB().QUEST
     for _, id in ipairs(r[Q.START_NPCS] or {}) do
@@ -147,6 +171,11 @@ function CM:GiverPos(r, nearZone, nx, ny)
     for _, id in ipairs(r[Q.START_OBJECTS] or {}) do
         local z, x, y = DB().GetObjectPosition(id, nearZone, nx, ny)
         if z then return z, x, y, DB().GetObjectName(id) end
+    end
+    local item, drops = self:Starter(r)
+    for _, id in ipairs(drops or {}) do
+        local z, x, y = DB().GetNPCPosition(id, nearZone, nx, ny)
+        if z and not isInstance(z) then return z, x, y, DB().GetNPCName(id), item end
     end
 end
 
@@ -220,6 +249,11 @@ function CM:Classify(id, ctx, exclude)
     -- so they do not sit in the quest log for many levels.
     local d = kind == "dungeon" and dname and self:DungeonEntry(dname)
     if d and d.min > (ctx.level or 1) then return "deferred", d.min end
+    -- An item pickup you skipped stays out of the route until the item is in your bags.
+    if self:State().itemSkipped[id] then
+        local item = self:Starter(r)
+        if item and not (ns.ItemStarts and ns.ItemStarts:Has(item)) then return "itemskipped", item end
+    end
     return "actionable"
 end
 
@@ -333,16 +367,18 @@ function CM:Work(inv, ctx, here)
     local function add(z, kind, id, x, y, name, b)
         z = DB().ParentZone(z) or z
         zones[z] = zones[z] or { zone = z, pickups = {}, objectives = {}, turnins = {}, n = 0 }
-        table.insert(zones[z][kind], { q = id, x = x, y = y, name = name })
+        local e = { q = id, x = x, y = y, name = name }
+        table.insert(zones[z][kind], e)
         zones[z].n = zones[z].n + 1
         if b and (not zones[z].best or b < zones[z].best) then zones[z].best = b end
+        return e
     end
     for _, id in ipairs(inv.byCat.actionable or {}) do
         local r = QDB().quests[id]
         local b = band(r[Q.LEVEL] or 0)
         if b <= minBand + 1 then
-            local z, x, y, name = self:GiverPos(r, hz, hx, hy)
-            if z then add(z, "pickups", id, x, y, name, b) end
+            local z, x, y, name, item = self:GiverPos(r, hz, hx, hy)
+            if z then add(z, "pickups", id, x, y, name, b).starter = item end
         end
     end
     -- Dungeon quests in the log that are not complete yet are not zone work: they become one "run" step per
@@ -510,11 +546,15 @@ function CM:Plan(ctx, here)
         for other in pairs(conflict[q] or {}) do if kept[other] then clash = true end end
         if clash then closed[q] = true else kept[q] = true end
     end
+    local itemPickups = {} -- quests started by a dropped item: after the other objectives (see the top of the file)
     for _, it in ipairs(nearestOrder(w.pickups, sx, sy)) do
         if inLog + #seg.accepted >= cap or #seg.accepted >= self.MAX_ACCEPTS then break end
         local r = QDB().quests[it.q]
         if closed[it.q] then
             seg.skippedExclusive = (seg.skippedExclusive or 0) + 1
+        elseif it.starter then
+            seg.accepted[#seg.accepted + 1] = it.q
+            itemPickups[#itemPickups + 1] = it
         else
         seg.accepted[#seg.accepted + 1] = it.q
         seg.steps[#seg.steps + 1] = { "accept", q = it.q, title = r[1], z = w.zone, x = it.x, y = it.y, npc = it.name }
@@ -527,20 +567,41 @@ function CM:Plan(ctx, here)
         if t then seg.steps[#seg.steps + 1] = t end
     end
     -- objectives: quests in the log plus those just picked up, located in this zone
-    local objectives = {}
-    for _, it in ipairs(w.objectives) do objectives[#objectives + 1] = it end
-    for _, q in ipairs(seg.accepted) do
-        local r = QDB().quests[q]
-        local obj = r[QDB().QUEST.OBJECTIVES]
-        if obj and next(obj) then
-            local z, x, y, name = DB().GetObjectiveLocation(q, w.zone, sx, sy)
-            if z and (DB().ParentZone(z) or z) == w.zone then objectives[#objectives + 1] = { q = q, x = x, y = y, name = name } end
+    local late = {}
+    for _, it in ipairs(itemPickups) do late[it.q] = true end
+    local function objectiveSteps(list, only)
+        local objectives = {}
+        for _, it in ipairs(list) do objectives[#objectives + 1] = it end
+        for _, q in ipairs(seg.accepted) do
+            local r = QDB().quests[q]
+            local obj = r[QDB().QUEST.OBJECTIVES]
+            if obj and next(obj) and (late[q] or false) == only then
+                local z, x, y, name = DB().GetObjectiveLocation(q, w.zone, sx, sy)
+                if z and (DB().ParentZone(z) or z) == w.zone then objectives[#objectives + 1] = { q = q, x = x, y = y, name = name } end
+            end
+        end
+        for _, it in ipairs(nearestOrder(objectives, sx, sy)) do
+            local r = QDB().quests[it.q]
+            seg.steps[#seg.steps + 1] = { "complete", q = it.q, title = r[1], z = w.zone, x = it.x, y = it.y, text = it.name and ("Objectives near " .. it.name) or nil }
         end
     end
-    for _, it in ipairs(nearestOrder(objectives, sx, sy)) do
+    objectiveSteps(w.objectives, false)
+    -- Item pickups: get the item from its droppers here (the step targets the nearest one), then their objectives.
+    for _, it in ipairs(nearestOrder(itemPickups, sx, sy)) do
         local r = QDB().quests[it.q]
-        seg.steps[#seg.steps + 1] = { "complete", q = it.q, title = r[1], z = w.zone, x = it.x, y = it.y, text = it.name and ("Objectives near " .. it.name) or nil }
+        local _, all = self:Starter(r)
+        local drops = {}
+        for _, id in ipairs(all) do
+            local n = QDB().npcs[id]
+            for z in pairs(n and n[QDB().NPC.SPAWNS] or {}) do
+                if (DB().ParentZone(z) or z) == w.zone then drops[#drops + 1] = id break end
+            end
+        end
+        if #drops == 0 then drops = all end
+        seg.steps[#seg.steps + 1] = { "accept", q = it.q, title = r[1], starter = it.starter, drops = drops,
+            text = "Starts from the item " .. (DB().GetItemName(it.starter) or ("item " .. it.starter)) .. "." }
     end
+    objectiveSteps({}, true)
     local turnins, seen = {}, {}
     for _, it in ipairs(w.turnins) do turnins[#turnins + 1] = it; seen[it.q] = true end
     for _, q in ipairs(seg.accepted) do
@@ -576,9 +637,23 @@ function CM:Load(seg)
             while #v > 200 do table.remove(v, 1) end
         end
     end
+    self:RecordItemSkips()
     ns:ResetProgress(self.GUIDE_ID)
     self.segment = seg
     return ns.Engine:Load(self.GUIDE_ID)
+end
+
+-- Item pickups you skipped in the segment that ends (Skip on the step, not an automatic skip), unless you took
+-- the quest after all: kept out of later segments until the item is in your bags (Classify: "itemskipped").
+function CM:RecordItemSkips()
+    local seg = self.segment
+    local p = seg and ns.char.progress and ns.char.progress[self.GUIDE_ID]
+    if not (p and type(p.skipped) == "table") then return end
+    for i, s in ipairs(seg.steps or {}) do
+        if s.starter and s.q and p.skipped[i] and not ns.Tracker:InLog(s.q) and not ns.Tracker:IsTurnedIn(s.q) then
+            self:State().itemSkipped[s.q] = true
+        end
+    end
 end
 
 -- Plans and loads the next segment (also on demand: /qw completionist replan).
@@ -641,6 +716,7 @@ function CM:Summary(inv)
         completed = n("completed"), remaining = n("actionable") + n("inlog") + n("deferred") + n("blocked"),
         routable = routable, deferred = n("deferred"), blocked = n("blocked"), excluded = excluded,
         exclusive = n("exclusive"), unknown = n("unknown"), missing = n("missing"), ineligible = n("ineligible"),
+        itemskipped = n("itemskipped"),
     }
 end
 
@@ -654,7 +730,8 @@ function CM:StatusLines()
         string.format("Not routed automatically (turn on in setup or Settings): %d (raid %d, group/elite %d, profession %d, reputation %d, event %d, repeatable %d). Dungeon quests are routed for every dungeon.",
             s.excluded, inv.counts.raid or 0, inv.counts.group or 0, inv.counts.profession or 0,
             inv.counts.reputation or 0, inv.counts.event or 0, inv.counts.repeatable or 0),
-        string.format("Other branch chosen: %d. Missing location data: %d. Completion unknown: %d.", s.exclusive, s.missing, s.unknown),
+        string.format("Other branch chosen: %d. Missing location data: %d. Completion unknown: %d. Item pickups you skipped: %d (back once the item is in your bags).",
+            s.exclusive, s.missing, s.unknown, s.itemskipped),
         "Coverage: every quest in the bundled QuestieDB data for this game; quests the data lacks or places nowhere are not routed.",
     }
     local seg = self.segment

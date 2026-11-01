@@ -33,7 +33,7 @@ A quest chain continues across segments: the next quest is actionable once the p
 
 ## Categories
 
-Each quest is classified for the character: *ready now*, *in your quest log*, *completed*, *later (level)*, *waiting on a prerequisite*, *other branch chosen*, *not for this character*, *missing location data*, *completion unknown*, and the special kinds below.
+Each quest is classified for the character: *ready now*, *in your quest log*, *completed*, *later (level)*, *waiting on a prerequisite*, *other branch chosen*, *not for this character*, *missing location data*, *completion unknown*, *item pickup skipped* (a quest started by a dropped item whose pickup you skipped; it comes back once the item is in your bags, docs/ITEM_STARTS.md), and the special kinds below.
 
 **Dungeon quests are always routed:** Completionist goes through every dungeon; the dungeon selection in setup applies to Speed only.
 - A dungeon quest is picked up only from the dungeon's usual level (`Database/Dungeons.lua`), so it does not sit in the quest log for many levels.
@@ -48,7 +48,7 @@ Counted but **not routed by default** (setup's Options step or Settings → Guid
 
 The route covers every quest in the bundled QuestieDB data for the game whose giver and finisher have positions. `tools/build.ps1 completionist-coverage -Target <Target>` writes the per-race/class matrix (`docs/generated/<Target>/completionist-coverage.md`) with the planner itself. Classic Era: 4,257 quests in the data, about 1,190-1,410 routable per character. TBC Classic Anniversary: 6,648 quests, about 1,890-2,150 routable per character (dungeon quests included).
 
-Not covered: quests the database lacks; quests whose giver or finisher has no position (*missing data*, about 140 per Classic character); quests started by an item with no giver; content added after the pinned QuestieDB data.
+Not covered: quests the database lacks; quests whose giver or finisher has no position (*missing data*); quests started by an item that no NPC outside an instance drops in the data. A quest started by a mob-dropped item is placed at the nearest dropper, and its pickup comes after the zone's other objectives (docs/ITEM_STARTS.md); content added after the pinned QuestieDB data.
 
 ## Limits and assumptions (not checked in game)
 

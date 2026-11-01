@@ -202,6 +202,9 @@ namespace GuideTools
         public List<string> Mobs;                // grind: mob names (as spelled in the database)
         public string Location;                  // grind: where to find them (free text)
         public List<int> Areas;                  // bind: AreaTable ids the client may report as the home (GetBindLocation)
+        public int Starter;                      // accept: the item that starts the quest (no NPC or object gives it)
+        public List<int> Drops;                  // accept: NPCs that drop Starter (preferring those in the guide's zone)
+        public List<int> Via;                    // accept: later steps (1-based) that kill a dropper of Starter
     }
 
     public sealed class CGuide
@@ -279,6 +282,7 @@ namespace GuideTools
                 catch (Exception e) { res.Errors.Add(rel + ": " + e.Message); }
             }
             CrossChecks(res, state);
+            foreach (var g in res.Guides) LinkStarterKills(res.Db, g);
             res.Routes = RoamRoutes.Compile(srcDir, res);
             res.RoamInventory = RoamRoutes.Inventory(res);
             if (res.Errors.Count == 0 && write) Write(res, addOnDir);
@@ -552,6 +556,8 @@ namespace GuideTools
                             LTable it;
                             string iname = res.Db.Items.TryGetValue(items[0], out it) ? BundledDb.Str(it, BundledDb.I_NAME) : ("item " + items[0]);
                             if (s.Text == null) s.Text = "Starts from the item " + iname + ".";
+                            s.Starter = items[0];
+                            if (it != null) s.Drops = StarterDroppers(res.Db, it, stepZone);
                         }
                     }
                     else if (verb == "turnin")
@@ -976,6 +982,81 @@ namespace GuideTools
             }
         }
 
+        // ------------------------------------------------------------------ item-started quests
+        // The NPCs that drop a quest's start item, as the data lists them: those that spawn in the guide's zone
+        // when there are any, else every dropper with a spawn; hostile elites, rare elites and bosses only when no
+        // other NPC drops it. Null when no NPC drops it (an object, a vendor or nothing in the data): the step then
+        // only says which item starts the quest.
+        const int MaxStarterDroppers = 8;
+        static List<int> StarterDroppers(BundledDb db, LTable item, int zone)
+        {
+            var all = BundledDb.Ids(item, BundledDb.I_NPCDROPS).Where(n => db.NpcSpawns(n).Count > 0).ToList();
+            if (all.Count == 0) return null;
+            var plain = all.Where(n => !HostileElite(db, n)).ToList();
+            if (plain.Count > 0) all = plain;
+            var here = all.Where(n => db.NpcSpawns(n).Any(sp => (int)sp[0] == zone || db.Parent((int)sp[0]) == zone)).ToList();
+            return (here.Count > 0 ? here : all).Take(MaxStarterDroppers).ToList();
+        }
+
+        // Elite (1), rare elite (2) or boss (3) that is friendly to no one: a fight, not a quest NPC.
+        static bool HostileElite(BundledDb db, int id)
+        {
+            LTable n;
+            if (!db.Npcs.TryGetValue(id, out n)) return false;
+            int rank = BundledDb.Num(n, BundledDb.N_RANK);
+            return rank >= 1 && rank <= 3 && BundledDb.Str(n, BundledDb.N_FRIENDLY) == null;
+        }
+
+        // NPC ids a quest's objectives kill: creatures, kill credit and the droppers of its quest items.
+        static HashSet<int> ObjectiveNpcs(BundledDb db, LTable rec)
+        {
+            var ids = new HashSet<int>();
+            var obj = BundledDb.Tab(rec, BundledDb.Q_OBJ);
+            if (obj == null) return ids;
+            foreach (var key in new[] { "c", "k" })
+            {
+                var l = obj.Get(key) as LTable;
+                if (l != null) foreach (var id in l.IntList()) ids.Add(id);
+            }
+            var il = obj.Get("i") as LTable;
+            if (il != null)
+                foreach (var id in il.IntList())
+                {
+                    LTable it;
+                    if (db.Items.TryGetValue(id, out it)) foreach (var n in BundledDb.Ids(it, BundledDb.I_NPCDROPS)) ids.Add(n);
+                }
+            return ids;
+        }
+
+        // For each item-started accept step with droppers: the later objective and grind steps of the same guide that
+        // kill one of them. The add-on lets those steps go first, since the item may drop on the way, and comes back
+        // to the pickup (to farm the item) only when they are behind you.
+        static void LinkStarterKills(BundledDb db, CGuide g)
+        {
+            for (int i = 0; i < g.Steps.Count; i++)
+            {
+                var a = g.Steps[i];
+                if (a.Kind != "accept" || a.Drops == null) continue;
+                var drops = new HashSet<int>(a.Drops);
+                var names = new HashSet<string>(a.Drops.Select(n => db.NpcName(n)).Where(n => n != null).Select(BundledDb.Norm));
+                var via = new List<int>();
+                for (int j = i + 1; j < g.Steps.Count; j++)
+                {
+                    var s = g.Steps[j];
+                    bool kills = false;
+                    if (s.Kind == "complete" && s.Quest > 0 && s.Quest != a.Quest)
+                    {
+                        LTable rec;
+                        kills = db.Quests.TryGetValue(s.Quest, out rec) && ObjectiveNpcs(db, rec).Overlaps(drops);
+                    }
+                    else if (s.Kind == "grind" && s.Mobs != null)
+                        kills = s.Mobs.Any(m => names.Contains(BundledDb.Norm(m)));
+                    if (kills) via.Add(j + 1);
+                }
+                if (via.Count > 0) a.Via = via;
+            }
+        }
+
         static void PlaceAt(List<double[]> spawns, CStep s, int zone, ref int lz, ref double lx, ref double ly)
         {
             double bestD = double.MaxValue; double[] best = null;
@@ -1244,6 +1325,9 @@ namespace GuideTools
                 sb.Append(",mark={i=").Append(s.MarkIcon).Append(",npcs={").Append(string.Join(",", s.MarkNpcs.Select(x => x.ToString()).ToArray())).Append("}}");
             if (s.Kind == "bind" && s.NpcId > 0) sb.Append(",npcId=").Append(s.NpcId);
             if (s.Areas != null && s.Areas.Count > 0) sb.Append(",areas={").Append(string.Join(",", s.Areas.Select(x => x.ToString()).ToArray())).Append("}");
+            if (s.Starter > 0) sb.Append(",starter=").Append(s.Starter);
+            if (s.Drops != null) sb.Append(",drops={").Append(string.Join(",", s.Drops.Select(x => x.ToString()).ToArray())).Append("}");
+            if (s.Via != null) sb.Append(",via={").Append(string.Join(",", s.Via.Select(x => x.ToString()).ToArray())).Append("}");
             sb.Append(",v=").Append(s.Verified ? 1 : 0);
             return sb.Append("}").ToString();
         }

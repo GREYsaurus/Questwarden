@@ -33,7 +33,7 @@ ns.Guides:Register({
     {"complete",q=613,title="Cracking Maury's Foot",hcSkip=true,elite=true,group=true,v=1},
     {"turnin",q=613,title="Cracking Maury's Foot",npc="\"Sea Wolf\" MacKinley",z=33,x=27.8,y=77.1,hcSkip=true,elite=true,group=true,v=1},
     {"accept",q=617,title="Akiris by the Bundle",npc="Privateer Bloads",z=33,x=26.8,y=76.4,v=1},
-    {"accept",q=8552,title="The Monogrammed Sash",text="Starts from the item Monogrammed Sash.",v=1},
+    {"accept",q=8552,title="The Monogrammed Sash",text="Starts from the item Monogrammed Sash.",starter=3985,drops={1493},v=1},
     {"complete",q=617,title="Akiris by the Bundle",v=1},
     {"turnin",q=617,title="Akiris by the Bundle",npc="Privateer Bloads",z=33,x=26.8,y=76.4,v=1},
     {"turnin",q=8552,title="The Monogrammed Sash",npc="Captain Hecklebury Smotts",z=33,x=26.7,y=73.6,v=1},

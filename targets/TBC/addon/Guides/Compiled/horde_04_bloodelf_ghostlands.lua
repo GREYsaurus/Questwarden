@@ -106,7 +106,7 @@ ns.Guides:Register({
     {"accept",q=9199,title="Troll Juju",npc="Deathstalker Maltendis",z=3433,x=44.8,y=32.3,v=1},
     {"complete",q=9199,title="Troll Juju",v=1},
     {"turnin",q=9199,title="Troll Juju",npc="Deathstalker Maltendis",z=3433,x=44.8,y=32.3,v=1},
-    {"accept",q=9175,title="The Lady's Necklace",text="Starts from the item The Lady's Necklace.",v=1},
+    {"accept",q=9175,title="The Lady's Necklace",text="Starts from the item The Lady's Necklace.",starter=22597,drops={16314,16315},v=1},
     {"turnin",q=9175,title="The Lady's Necklace",npc="High Executor Mavren",z=3433,x=44.8,y=32.4,v=1},
     {"turnin",q=9173,title="Retaking Windrunner Spire",npc="High Executor Mavren",z=3433,x=44.8,y=32.4,v=1},
     {"accept",q=9180,title="Journey to Undercity",npc="High Executor Mavren",z=3433,x=44.8,y=32.4,optional=true,v=1},

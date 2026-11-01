@@ -125,6 +125,8 @@ function M:BuildRule()
             elseif p.markFriendly and i == cur and s[1] == "train" then
                 local npcs = trainerNpcs(s)
                 if npcs then parts[#parts + 1] = { npcs = npcs, step = i } end
+            elseif p.autoMarkObjectives and i == cur and s[1] == "accept" and s.starter and ns.ItemStarts:Npcs(s) then
+                parts[#parts + 1] = { npcs = ns.ItemStarts:Npcs(s), step = i }
             elseif p.markFriendly and i == cur and (s[1] == "accept" or s[1] == "turnin") and s.q then
                 local q = ns.DB.GetQuestByID(s.q)
                 local list = q and (s[1] == "accept" and q.startNpcs or q.endNpcs)

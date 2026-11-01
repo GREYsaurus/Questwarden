@@ -21,7 +21,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=621,title="Zanzil's Secret",npc="Crank Fizzlebub",z=33,x=27.1,y=77.2,v=1},
     {"accept",q=617,title="Akiris by the Bundle",npc="Privateer Bloads",z=33,x=26.8,y=76.4,v=1},
-    {"accept",q=8552,title="The Monogrammed Sash",text="Starts from the item Monogrammed Sash.",v=1},
+    {"accept",q=8552,title="The Monogrammed Sash",text="Starts from the item Monogrammed Sash.",starter=3985,drops={1493},v=1},
     {"complete",q=621,title="Zanzil's Secret",v=1},
     {"complete",q=617,title="Akiris by the Bundle",v=1},
     {"accept",q=609,title="Voodoo Dues",npc="\"Sea Wolf\" MacKinley",z=33,x=27.8,y=77.1,v=1},

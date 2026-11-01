@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Quests started by dropped items.** A pickup whose quest starts from an item now knows the item, the mobs that drop it (from the data) and the later kill steps of the guide where those mobs are. Without the item the guide does those kill steps first and their step says the mobs can drop it. When the item is in your bags the guide comes back to the pickup: "Use [item] to accept ...". If the kill steps are behind you and there is still no item, the pickup asks you to get it from the droppers, with the arrow on the nearest one, or to skip. The quest's objective and turn-in steps wait with the pickup. Having the item or opening its quest window is not acceptance. A skipped pickup counts as done if you take the quest later. Completionist now routes these quests: at the nearest dropper, after the zone's other objectives. A skipped one is kept out until the item is in your bags. No drop rates are claimed. Details: docs/ITEM_STARTS.md.
 - **Auto repair (opt-in).** A new *Auto Repair* setting next to *Auto Sell Junk*, off by default. At a merchant who can repair, it repairs all your gear with your own money (never guild funds), after any junk is sold, and only when you can pay the whole bill. One chat line says what it cost, or what it would cost when you cannot pay. Hold Shift to skip.
 
 ## 0.1.0-alpha.19 (2026-11-01)

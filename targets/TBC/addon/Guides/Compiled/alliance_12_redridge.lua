@@ -10,7 +10,7 @@ ns.Guides:Register({
   steps={
     {"accept",q=9429,title="Travel to Darkshire",npc="Emissary Taluun",z=1519,x=78.5,y=18.3,races={"Draenei"},v=1},
     {"accept",q=66,title="The Legend of Stalvan",npc="Madame Eva",z=10,x=75.8,y=45.3,text="Needs level 22. If you are lower, {name} skips it and moves on.",v=1},
-    {"accept",q=1642,title="The Tome of Divinity",text="Starts from the item Tome of Divinity.",classes={"PALADIN"},races={"Human"},v=1},
+    {"accept",q=1642,title="The Tome of Divinity",text="Starts from the item Tome of Divinity.",classes={"PALADIN"},races={"Human"},starter=6775,v=1},
     {"turnin",q=1642,title="The Tome of Divinity",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,text="Turned in at Stormwind City.",classes={"PALADIN"},races={"Human"},v=1},
     {"accept",q=1643,title="The Tome of Divinity",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,classes={"PALADIN"},races={"Human"},v=1},
     {"accept",q=244,title="Encroaching Gnolls",npc="Guard Parker",z=44,x=15.3,y=71.5,text="Guard Parker at the Elwynn border bridge.",v=1},
@@ -20,7 +20,7 @@ ns.Guides:Register({
     {"accept",q=1644,title="The Tome of Divinity",npc="Stephanie Turner",z=1519,x=57.1,y=61.7,classes={"PALADIN"},races={"Human"},v=1},
     {"turnin",q=1644,title="The Tome of Divinity",npc="Stephanie Turner",z=1519,x=57.1,y=61.7,text="Turned in at Stormwind City.",classes={"PALADIN"},races={"Human"},v=1},
     {"accept",q=1780,title="The Tome of Divinity",npc="Stephanie Turner",z=1519,x=57.1,y=61.7,classes={"PALADIN"},races={"Human"},v=1},
-    {"accept",q=1649,title="The Tome of Valor",text="Needs level 20. If you are lower, {name} skips it and moves on.",classes={"PALADIN"},races={"Human","Dwarf","Draenei"},v=1},
+    {"accept",q=1649,title="The Tome of Valor",text="Needs level 20. If you are lower, {name} skips it and moves on.",classes={"PALADIN"},races={"Human","Dwarf","Draenei"},starter=6776,v=1},
     {"accept",q=94,title="A Watchful Eye",npc="Theocritus",z=12,x=65.2,y=69.7,text="Needs level 20. If you are lower, {name} skips it and moves on.",optional=true,v=1},
     {"turnin",q=1649,title="The Tome of Valor",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,text="Turned in at Stormwind City.",classes={"PALADIN"},races={"Human","Dwarf","Draenei"},v=1},
     {"accept",q=1650,title="The Tome of Valor",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,text="Needs level 20. If you are lower, {name} skips it and moves on.",classes={"PALADIN"},races={"Human","Dwarf","Draenei"},v=1},
