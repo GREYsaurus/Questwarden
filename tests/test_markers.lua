@@ -227,12 +227,16 @@ local fourth = MOCK.creature(objMob, 44, "objective mob")
 MOCK.units.target = nil
 MOCK.tick(0.1)
 target(fourth)
-check(iconOf(fourth) == nil, "living holder out of sight keeps the icon for a while")
-MOCK.time = MOCK.time + 61
-MOCK.units.target = nil
+check(iconOf(fourth) == prof.defaultMarker, "targeting another mob of the step moves the icon to it")
 local fifth = MOCK.creature(objMob, 45, "objective mob")
-target(fifth)
-check(iconOf(fifth) == prof.defaultMarker, "holder unseen for over a minute: icon moves to the next mob")
+MOCK.units.target = nil
+MOCK.units.mouseover = fifth
+M:Consider("mouseover")
+check(iconOf(fifth) == nil, "a mob only moused over does not take the icon from a living holder")
+MOCK.time = MOCK.time + 61
+M:Consider("mouseover")
+check(iconOf(fifth) == prof.defaultMarker, "holder unseen for over a minute: icon moves to the next mob seen")
+MOCK.units.mouseover = nil
 
 -- 13) Several kill steps done together: each mob type gets its own icon
 reset()

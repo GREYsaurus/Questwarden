@@ -18,7 +18,9 @@
 --    changes or removes its icon;
 --  * an existing icon is not replaced unless markReplace is on;
 --  * one live unit per icon holds it, so it does not jump between mobs; a unit that dies (seen via
---    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) frees it for the next;
+--    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) frees it for the next.
+--    Targeting another mob of the step moves the icon to it (the one you are about to fight);
+--    mouseover and nameplates never move it;
 --  * success is reported only when GetRaidTargetIndex shows the icon afterwards;
 --  * if the client blocks or rejects marking, automatic marking stops and says how to mark by click.
 
@@ -269,9 +271,13 @@ function M:Consider(unit)
         self.handsOff[guid] = true -- someone else's icon; leave it
         return self:Note("already has another raid icon", name, true)
     end
-    if self.tried[guid] then return self:Note("already tried this unit", name) end
-    -- Keep each icon on one living unit instead of moving it between mobs of the same kind.
-    if self:HolderKeeps(icon, guid) then return self:Note("icon is on another living mob of this step", name) end
+    -- The mob you target gets the icon, moved from the step's other mob if needed; seen in passing (mouseover,
+    -- nameplates), each icon stays on one living unit instead of jumping between mobs of the same kind.
+    local targeting = unit == "target"
+    -- One attempt per unit, except that targeting it again takes the icon back from another mob.
+    local moving = targeting and self.holder[icon] and self.holder[icon] ~= guid
+    if self.tried[guid] and not moving then return self:Note("already tried this unit", name) end
+    if not targeting and self:HolderKeeps(icon, guid) then return self:Note("icon is on another living mob of this step", name) end
     if self.holder[icon] then self:Release(self.holder[icon]) end
     local can, why = C.CanMark()
     if not can then

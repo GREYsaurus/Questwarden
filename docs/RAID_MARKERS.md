@@ -74,7 +74,7 @@ Units are matched **only by NPC ID** from their GUID, so a mob with the same nam
 1. its NPC ID is in the current rule;
 2. the unit is alive, and Questwarden has not already tried it in this step;
 3. the unit has no icon, or it already has this icon. With `markReplace` on, an existing icon may be replaced;
-4. no other living unit holds that icon for this step, so the icon does not jump between mobs of the same kind. The holder loses it when it dies (seen from the combat log's `UNIT_DIED`; the game removes a dead mob's icon without a `RAID_TARGET_UPDATE`), when it is visible without the icon, or when it has not been seen for 60 seconds. The next matching mob you look at then gets the icon;
+4. for a mob you **target**, the icon moves to it from the step's other mob (the one you are about to fight). For a mob only seen in passing (mouseover, nameplate): no other living unit holds that icon for this step, so the icon does not jump between mobs of the same kind. The holder loses it when it dies (seen from the combat log's `UNIT_DIED`; the game removes a dead mob's icon without a `RAID_TARGET_UPDATE`), when it is visible without the icon, or when it has not been seen for 60 seconds. The next matching mob you look at then gets the icon;
 5. you are allowed to mark (see below).
 
 After each attempt, Questwarden checks `GetRaidTargetIndex` and reports **"Marked ..."** only if the icon is really there.
