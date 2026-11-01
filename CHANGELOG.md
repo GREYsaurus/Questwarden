@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.28 (2026-11-01)
+
+- **Fixed:** the on/off switches in the settings window did not move when clicked, so they looked like they did nothing (the setting itself did change).
+
+**Tested:** the fix was checked in the live game by the author. Offline: TBC suite 5,481/5,481, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors.
+
 ## 0.1.0-alpha.27 (2026-11-01)
 
 - **Help for players new to World of Warcraft.** All off by default; turn them on in the setup wizard's new *Helpers* page or in the settings (docs/NEW_PLAYERS.md):
