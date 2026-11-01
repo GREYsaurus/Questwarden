@@ -62,28 +62,57 @@ local function currentStep() return ns.Engine and ns.Engine:CurrentStep() end
 -- Automatic training (opt-in, per character: Trainer:AutoTrainMode). Learns the first affordable spell the trainer
 -- offers that the mode allows; TRAINER_UPDATE brings the next one. "recommended" buys only ranks the training
 -- suggestions list for you (matched by name and rank, never at a profession trainer, never pet skills); "all" buys
--- anything affordable. One chat line per purchase. Hold Shift to skip.
+-- anything affordable. Hold Shift to skip.
+-- One purchase at a time: the trainer fires several updates before the server confirms a purchase, and the spell
+-- stays listed as available until then, so a spell bought less than BUY_WAIT seconds ago and still listed is
+-- waited for, not bought again. The game announces each spell; one summary line follows when you close the
+-- trainer (A:TrainerSummary).
+local BUY_WAIT = 3
 function A:TrainerStep()
     local TR = ns.Trainer
     local mode = TR and TR:AutoTrainMode() or "off"
     if mode == "off" or shiftHeld() then return end
     if not (GetNumTrainerServices and GetTrainerServiceInfo and BuyTrainerService) then return end
     if mode == "recommended" and IsTradeskillTrainer and IsTradeskillTrainer() then return end
+    local n = GetNumTrainerServices() or 0
+    local fl = self.trainBuying
+    if fl then
+        local listed = false
+        for i = 1, n do
+            local name, rankText, kind = GetTrainerServiceInfo(i)
+            if kind == "available" and name == fl.name and (rankText or "") == fl.rank then listed = true break end
+        end
+        if listed and GetTime() - fl.at < BUY_WAIT then return end
+        self.trainBuying = nil
+    end
     local want = mode == "recommended" and TR:RecommendedSet() or nil
     local money = GetMoney and GetMoney() or 0
-    for i = 1, GetNumTrainerServices() or 0 do
+    for i = 1, n do
         local name, rankText, kind = GetTrainerServiceInfo(i)
         if kind == "available" then
             local e = want and TR:EntryForService(name, rankText)
             local cost = GetTrainerServiceCost and GetTrainerServiceCost(i) or 0
             if (not want or (e and want[e.id])) and cost <= money then
                 BuyTrainerService(i)
-                ns:Print("Learned " .. tostring(name) .. ((rankText and rankText ~= "") and (" (" .. rankText .. ")") or "")
-                    .. " for " .. ns.Compat.FormatMoney(cost) .. ". (Automatic training; hold Shift to skip.)")
+                self.trainBuying = { name = name, rank = rankText or "", at = GetTime() }
+                local t = self.trainSession or { count = 0, cost = 0 }
+                t.count, t.cost = t.count + 1, t.cost + cost
+                self.trainSession = t
+                -- In case no update follows (a failed purchase), look again once the wait is over.
+                C_Timer.After(BUY_WAIT + 0.1, function() A:TrainerStep() end)
                 return true
             end
         end
     end
+end
+
+-- One chat line for a trainer visit with automatic training: how many spells and what they cost.
+function A:TrainerSummary()
+    local t = self.trainSession
+    self.trainSession, self.trainBuying = nil, nil
+    if not (t and t.count > 0) then return end
+    ns:Print("Automatic training: learned " .. t.count .. (t.count == 1 and " spell" or " spells") .. " for "
+        .. ns.Compat.FormatMoney(t.cost) .. ". Hold Shift when you open the trainer to skip it.")
 end
 
 -- Flies to the current fly step's destination when the flight map opens. With a flight graph
@@ -659,8 +688,9 @@ function A:Init()
     C = ns.Compat
     ns:On("GROUP_ROSTER_UPDATE", function() A:ApplyFrames() end)
     ns:On("RAID_ROSTER_UPDATE", function() A:ApplyFrames() end)
-    ns:On("TRAINER_SHOW", function() C_Timer.After(0.2, function() A:TrainerStep() end) end)
+    ns:On("TRAINER_SHOW", function() A.trainSession, A.trainBuying = nil, nil C_Timer.After(0.2, function() A:TrainerStep() end) end)
     ns:On("TRAINER_UPDATE", function() C_Timer.After(0.2, function() A:TrainerStep() end) end)
+    ns:On("TRAINER_CLOSED", function() A:TrainerSummary() end)
     ns:On("TAXIMAP_OPENED", function() A:OnTaxiMap() end)
     ns:On("GOSSIP_SHOW", function() A:OnGossip() end)
     ns:On("NAME_PLATE_UNIT_ADDED", function(_, unit) if unit then A:OnUnitSeen(unit) end end)

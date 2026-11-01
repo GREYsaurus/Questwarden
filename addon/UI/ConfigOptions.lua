@@ -60,7 +60,7 @@ pages.general = { title = "General", items = function() return {
       set = function(v) ns.char.trainerSuggestions = v ns.Trainer.skipCache = nil if ns.Engine then ns.Engine:Refresh() end end },
     { type = "select", label = "Automatic Training",
       values = function() return { { "off", "Off" }, { "recommended", "Recommended spells" }, { "all", "Everything I can afford" } } end,
-      tip = "When you open your class trainer: Recommended learns only the ranks the training suggestions list for you (important ones, or all with suggestions set to All); Everything learns all you can afford. Spends gold; one chat line per spell. Saved for this character. Hold Shift to skip.",
+      tip = "When you open your class trainer: Recommended learns only the ranks the training suggestions list for you (important ones, or all with suggestions set to All); Everything learns all you can afford. Spends gold; one summary chat line when you close the trainer. Saved for this character. Hold Shift to skip.",
       get = function() return ns.Trainer:AutoTrainMode() end,
       set = function(v) ns.char.autoTrain = v end },
     T("flightAuto", "Flight Path automation", { tip = "On a 'fly to' step, takes the flight to that destination when the flight map opens. Hold Shift to skip." }),

@@ -232,7 +232,7 @@ function render.prefs(d)
         d.training == "important", true, function() d.training = "important" end)
     WL:Option("Suggest all spells", "Every rank the trainer sells you, important, useful and optional.", d.training == "all", true, function() d.training = "all" end)
     WL:Option("Off", "No training lists; guide train steps stay as they are.", d.training == "off", true, function() d.training = "off" end)
-    WL:Option("Learn recommended spells automatically", "Opt-in. When you open your class trainer, the ranks listed for you above are learned if you can afford them. Spends gold; one chat line per spell; hold Shift to skip. Change it later in Settings (Automatic Training).",
+    WL:Option("Learn recommended spells automatically", "Opt-in. When you open your class trainer, the ranks listed for you above are learned if you can afford them. Spends gold; one summary chat line per visit; hold Shift to skip. Change it later in Settings (Automatic Training).",
         d.autoTrain == "recommended", true, function() d.autoTrain = d.autoTrain == "recommended" and "off" or "recommended" end)
     if d.autoTrain == "all" then
         WL:Text("Currently: everything you can afford is learned automatically (your earlier setting). Ticking the box above switches to recommended spells only.", nil, { 1, 0.82, 0.4 })

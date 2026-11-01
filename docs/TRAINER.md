@@ -69,7 +69,7 @@ Setting **Automatic Training** (General → Automation, and the setup wizard's O
 | Recommended spells | Learns the ranks the training suggestions list for you: the important ones, or all of them with suggestions set to All. Matched by the spell's name and rank in the trainer window. |
 | Everything I can afford | Learns every spell the trainer offers that you can afford (the old *Trainer automation*). |
 
-- **Spends gold:** only what you can afford at that moment, one spell at a time, in the order the trainer lists them. One chat line per spell names it and its price.
+- **Spends gold:** only what you can afford at that moment, one spell at a time, in the order the trainer lists them; the next one waits until the server has confirmed the last. The game announces each spell; when you close the trainer, one chat line says how many were learned and what they cost.
 - **Order:** a rank and the earlier rank it needs are both bought, earlier rank first, because the trainer lists the earlier one first and the next appears once it is learned.
 - **Never:** at a profession trainer in *Recommended*, pet skills, or while you hold **Shift** (skips buying for that visit).
 - **Learned** means the game says you know it; buying is the only thing that changes that.

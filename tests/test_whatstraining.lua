@@ -140,6 +140,26 @@ local got = table.concat(bought, ",")
 check(got:find("Rend Rank 1", 1, true) and got:find("Rend Rank 2", 1, true) and not got:find("Mystery", 1, true),
     "recommended: the listed ranks are learned in order, nothing the suggestions do not list (" .. got .. ")")
 check(known[772] and known[6546] and not known[999002], "only what was bought counts as learned")
+-- The server confirms a purchase later: the trainer keeps listing the spell and sends several updates meanwhile.
+-- It is bought once, and one summary line comes when the trainer closes (the game announces each spell).
+known = {}
+trainer()
+local realBuy = BuyTrainerService
+BuyTrainerService = function(i) bought[#bought + 1] = services[i].name .. " " .. (services[i].rank or "") end
+A.trainSession, A.trainBuying = nil, nil
+local nPrint = #MOCK.printed
+for _ = 1, 6 do A:TrainerStep() end
+check(#bought == 1 and #MOCK.printed == nPrint, "unconfirmed purchase: bought once, no chat line per update (" .. #bought .. " bought)")
+table.remove(services, 1) -- confirmed: the rank leaves the list
+A:TrainerStep()
+check(#bought == 2 and bought[2] == "Rend Rank 2", "the next rank once the first is confirmed")
+table.remove(services, 1)
+A:TrainerSummary()
+check(#MOCK.printed == nPrint + 1 and string.find(MOCK.printed[#MOCK.printed], "learned 2 spells", 1, true) ~= nil,
+    "closing the trainer prints one summary line (" .. tostring(MOCK.printed[#MOCK.printed]) .. ")")
+A:TrainerSummary()
+check(#MOCK.printed == nPrint + 1, "no second summary")
+BuyTrainerService = realBuy
 GetMoney = function() return 150 end
 known = {}
 trainer() visit()
