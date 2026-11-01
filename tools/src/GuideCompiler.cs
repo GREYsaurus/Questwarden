@@ -186,6 +186,7 @@ namespace GuideTools
     {
         public string Kind;
         public int Quest, Obj, Level;
+        public int Pct; // grind only: also this percent of the way through Level ("grind 22.4" = 40%)
         public string Title, Npc, Text, Place, Dest, GuideRef, Dungeon, Faction;
         public int Zone; public double X = -1, Y = -1;
         public bool Verified = true, Optional, Elite;
@@ -688,27 +689,29 @@ namespace GuideTools
         }
 
         // ------------------------------------------------------------------ grind steps
-        // grind <level> <Mob>[, <Mob>...] [@ <location>]
-        // Completes like a level step. Every mob must exist in the bundled database AND spawn in this
+        // grind <level>[.<tenth>] <Mob>[, <Mob>...] [@ <location>]
+        // Completes like a level step; "22.4" also needs 40% of the way through level 22. Every mob must exist in the bundled database AND spawn in this
         // step's zone, so a guide cannot name invented or out-of-zone mobs. Without [at=x,y] the
         // step points at the database spawn of those mobs nearest the previous step.
         // Note: [at=x,y] still updates the position (same as every other step type).
         static bool ParseGrind(string arg, CStep s, int zone, string where, CompileResult res, int lz, double lx, double ly)
         {
-            var m = Regex.Match(arg, @"^(\d+)\s+([^@]+?)\s*(?:@\s*(.+))?$");
+            var m = Regex.Match(arg, @"^(\d+)(?:\.(\d))?\s+([^@]+?)\s*(?:@\s*(.+))?$");
             int lvl;
             if (!m.Success || !int.TryParse(m.Groups[1].Value, out lvl) || lvl < 2 || lvl > Ctx.MaxLevel)
             {
-                res.Errors.Add(where + ": grind needs '<level 2-" + Ctx.MaxLevel + "> <Mob>[, <Mob>] [@ location]'");
+                res.Errors.Add(where + ": grind needs '<level 2-" + Ctx.MaxLevel + ">[.<tenth>] <Mob>[, <Mob>] [@ location]'");
                 return false;
             }
             s.Level = lvl;
-            s.Location = m.Groups[3].Success ? m.Groups[3].Value.Trim() : null;
+            s.Pct = m.Groups[2].Success ? int.Parse(m.Groups[2].Value) * 10 : 0;
+            if (s.Pct > 0 && lvl >= Ctx.MaxLevel) { res.Errors.Add(where + ": no XP past the level cap"); return false; }
+            s.Location = m.Groups[4].Success ? m.Groups[4].Value.Trim() : null;
             s.Mobs = new List<string>();
             var spawns = new List<double[]>();
             var db = res.Db;
             int parent = db.Parent(zone);
-            foreach (var raw in m.Groups[2].Value.Split(','))
+            foreach (var raw in m.Groups[3].Value.Split(','))
             {
                 string want = BundledDb.Norm(raw);
                 if (want.Length == 0) continue;
@@ -1316,6 +1319,7 @@ namespace GuideTools
             if (s.Dest != null) sb.Append(",dest=").Append(L(s.Dest));
             if (s.Node > 0) sb.Append(",node=").Append(s.Node);
             if (s.Level > 0) sb.Append(",level=").Append(s.Level);
+            if (s.Pct > 0) sb.Append(",pct=").Append(s.Pct);
             if (s.GuideRef != null) sb.Append(",guide=").Append(L(s.GuideRef));
             if (s.Mobs != null) sb.Append(",mobs=").Append(LList(s.Mobs));
             if (s.Location != null) sb.Append(",location=").Append(L(s.Location));

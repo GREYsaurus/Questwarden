@@ -82,6 +82,7 @@ function StepText:Title(s)
     elseif k == "grind" then
         local mobs = type(s.mobs) == "table" and #s.mobs > 0 and table.concat(s.mobs, ", ") or "mobs"
         return "Grind " .. mobs .. (s.location and (" at " .. s.location) or "") .. " until level " .. tostring(s.level)
+            .. (s.pct and (" (" .. s.pct .. "% through)") or "")
     elseif k == "talk" then
         return "Talk to " .. string.format(NPC, s.npc or "?")
     elseif k == "guide" then

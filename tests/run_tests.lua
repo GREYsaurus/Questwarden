@@ -169,6 +169,37 @@ MOCK.fire("PLAYER_LEVEL_UP", 5)
 MOCK.tick(1)
 check(ns.Engine.current == 3 and ns.Engine.status[2] == "done", "reaching the target level completes it and the guide advances")
 check(ns.Engine.progress.done[2] == true, "completion is remembered like a level step")
+-- "grind 5.4" in a guide source: level 5 and 40% of the way through it.
+nRejected, nErrors = #G.rejected, #ns.errors
+G:Register({ id = "T_GrindBadPct", name = "t", faction = "Alliance", steps = { { "grind", level = 5, pct = 100, mobs = { "X" } } } })
+check(G.byId["T_GrindBadPct"] == nil and #G.rejected == nRejected + 1, "registry rejects a grind percent outside 1-99")
+table.remove(G.rejected)
+while #ns.errors > nErrors do table.remove(ns.errors) end
+G:Register({ id = "T_GrindPct", name = "Grind percent", faction = "Alliance", minLevel = 4, maxLevel = 6, steps = {
+    { "note", text = "before" },
+    { "grind", level = 5, pct = 40, mobs = { "Riverpaw Outrunner" }, z = 12, x = 27.8, y = 81.2 },
+    { "note", text = "after" },
+} })
+check(G.byId["T_GrindPct"] ~= nil, "registry accepts a grind step with a percent")
+MOCK.player.level, MOCK.player.xp = 4, 90
+ns.Engine:Load("T_GrindPct", { reset = true })
+ns.Engine:MarkDone(1)
+check(ns.Engine.current == 2, "below the level: the percent grind is current, whatever the XP bar says")
+check(string.find(ns.StepText:Title(ns.Engine:CurrentStep()), "until level 5 (40% through)", 1, true), "title gives the level and the percent")
+MOCK.player.level, MOCK.player.xp = 5, 30
+MOCK.fire("PLAYER_LEVEL_UP", 5)
+MOCK.tick(1)
+check(ns.Engine.current == 2, "at the level but 30% through: still grinding")
+MOCK.player.xp = 40
+MOCK.fire("PLAYER_XP_UPDATE", "player")
+MOCK.tick(1)
+check(ns.Engine.current == 3 and ns.Engine.status[2] == "done", "40% through the level completes it on the XP event")
+MOCK.player.level, MOCK.player.xp = 6, 0
+ns.Engine:Load("T_GrindPct", { reset = true })
+ns.Engine:MarkDone(1)
+check(ns.Engine.status[2] == "done", "a higher level counts as reached even at 0% into it")
+MOCK.player.xp = nil
+
 -- The shipped example: Elwynn's level-10 gate is a grind step on database-verified gnolls.
 local elw, found = G.byId["A_Human_Elwynn"], nil
 for _, s in ipairs(elw.steps) do if s[1] == "grind" then found = s end end

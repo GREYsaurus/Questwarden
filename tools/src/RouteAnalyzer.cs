@@ -135,10 +135,13 @@ namespace GuideTools
                 Add(ref QLevel, ref QXp, m.Reward(quest, QLevel));
             }
             public double Lifted; // levels added by level/grind steps (the grinding the quests leave)
-            public void Reach(int level)
+            // Lifts the model to `target` (a grind step's "22.4" is 22 and 40% of the way to 23).
+            public void Reach(double target)
             {
-                if (Level < level) { Lifted += level - Exact; Level = level; Xp = 0; Grinds++; }
-                if (QLevel < level) { QLevel = level; QXp = 0; }
+                int level = (int)Math.Floor(target);
+                double xp = level < Ctx.MaxLevel ? (target - level) * ToNext[level] : 0;
+                if (Exact < target - 1e-9) { Lifted += target - Exact; Level = level; Xp = xp; Grinds++; }
+                if (QExact < target - 1e-9) { QLevel = level; QXp = xp; }
             }
             public double Exact { get { return Level + (Level < Ctx.MaxLevel ? Xp / ToNext[Level] : 0); } }
             public double QExact { get { return QLevel + (QLevel < Ctx.MaxLevel ? QXp / ToNext[QLevel] : 0); } }
@@ -188,7 +191,7 @@ namespace GuideTools
                 int n = g.Steps.Count;
                 var anchors = new List<KeyValuePair<int, double>> { new KeyValuePair<int, double>(0, g.MinLevel) };
                 for (int k = 0; k < n; k++)
-                    if ((g.Steps[k].Kind == "level" || g.Steps[k].Kind == "grind") && g.Steps[k].Level > 0) anchors.Add(new KeyValuePair<int, double>(k, g.Steps[k].Level));
+                    if ((g.Steps[k].Kind == "level" || g.Steps[k].Kind == "grind") && g.Steps[k].Level > 0) anchors.Add(new KeyValuePair<int, double>(k, g.Steps[k].Level + g.Steps[k].Pct / 100.0));
                 if (anchors[anchors.Count - 1].Key < n - 1) anchors.Add(new KeyValuePair<int, double>(n - 1, Math.Max(g.MaxLevel, anchors[anchors.Count - 1].Value)));
                 est = new double[n];
                 for (int a = 0; a + 1 < anchors.Count; a++)
@@ -282,7 +285,7 @@ namespace GuideTools
                         double cur; double lv = xs.Exact;
                         if (!a.StepLevel.TryGetValue(sk, out cur) || lv < cur) a.StepLevel[sk] = lv;
                     }
-                    if ((s.Kind == "level" || s.Kind == "grind") && s.Level > 0) { xs.Reach(s.Level); continue; }
+                    if ((s.Kind == "level" || s.Kind == "grind") && s.Level > 0) { xs.Reach(s.Level + s.Pct / 100.0); continue; }
                     if (s.Kind == "fp" && s.Node > 0) learned.Add(s.Node);
                     if (s.Kind == "fly" && s.Node > 0)
                     {

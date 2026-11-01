@@ -40,9 +40,14 @@ local COMPLETERS = {
     -- Completionist's run step: done when you are inside that dungeon (Core/DungeonRun.lua).
     dungeon = function(s) return ns.DungeonRun:Current() == s.dungeon end,
 }
--- A grind step ends exactly like a level step: when the player reaches s.level. (UnitXP only
--- counts XP into the current level, so an XP threshold would misfire after a level-up.)
-COMPLETERS.grind = COMPLETERS.level
+-- A grind step ends when the player reaches s.level, and with s.pct also that percent of the way
+-- through it. (UnitXP only counts XP into the current level, so any higher level counts as reached.)
+COMPLETERS.grind = function(s)
+    local lvl, need = UnitLevel("player") or 1, s.level or 1
+    if lvl ~= need or not s.pct then return lvl >= need end
+    local xp, maxXp = UnitXP("player") or 0, UnitXPMax("player") or 0
+    return maxXp > 0 and xp * 100 >= s.pct * maxXp
+end
 
 -- Steps whose completion is remembered once observed (cannot be re-derived later).
 local STICKY = { ["goto"] = true, note = true, train = true, fp = true, fly = true, hs = true, travel = true,
@@ -53,6 +58,10 @@ function Engine:Init()
     T = ns.Tracker
     ns:Listen("QUESTS_CHANGED", function() Engine:Refresh() end)
     ns:On("PLAYER_LEVEL_UP", function() C_Timer.After(0.5, function() Engine:Refresh() end) end)
+    ns:On("PLAYER_XP_UPDATE", function() -- only a grind step to a percent of a level needs XP
+        local s = Engine:CurrentStep()
+        if s and s[1] == "grind" and s.pct then Engine:Refresh() end
+    end)
     ns:On("ZONE_CHANGED_NEW_AREA", function() Engine:OnZoneChanged() end)
     ns:On("ZONE_CHANGED", function() Engine:OnZoneChanged() end)
     ns:On("PLAYER_CONTROL_GAINED", function() Engine:OnZoneChanged() end) -- landing after a flight
