@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2026-11-01)
+
+- **Weapon upgrades by DPS:** a weapon with the same secondary stats as your equipped one (or none on either), the same kind (two-hander, one-hander, ranged) and more DPS is equipped automatically. The notification says how much DPS it adds.
+- **Automatic training of recommended spells** (opt-in; setup wizard and Settings → *Automatic Training*, per character). At your class trainer it learns the ranks the training suggestions list for you that you can afford, with a chat line per spell; hold Shift to skip. *Everything I can afford* keeps the old behaviour. Characters with the old *Trainer automation* switch on keep it until they choose.
+- **Training steps mark the trainer** with a raid icon, like quest givers on accept and turn-in steps (setting *Mark Friendly Targets*). It marks the trainer the step names, or your class trainers in that zone when the step names none.
+
+**Tested:** offline only (TBC suite 4,857/4,857, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
+
 ## 0.1.0-alpha.13 (2026-11-01)
 
 - **Fix: raid markers paused themselves and stuck on the old mob** ("paused for this step" in `/qw debug marks`). When a marked mob had gone out of sight and back, moving its icon to your new target looked like someone else had changed the icon, so marking stopped for the step. Quick retargeting could also count as two failures and pause it. Moving an icon now releases every mob it was on, and an icon that Questwarden itself moved is never treated as an outside change or a failure.
