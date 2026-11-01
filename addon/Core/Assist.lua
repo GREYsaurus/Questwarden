@@ -221,6 +221,8 @@ function A:AddStepNpcs(s, ids)
             for _, id in ipairs(q.endNpcs or {}) do ids[id] = true end
         end
     end
+    -- The innkeeper, flight master or vendor a step names (Core/Marker.lua).
+    for id in pairs(ns.Marker:NamedNpcs(s) or {}) do ids[id] = true end
     return ids
 end
 

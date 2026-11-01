@@ -104,6 +104,33 @@ local function trainerNpcs(s)
     return trainerCache[key] or nil
 end
 
+-- The NPC a hearthstone, flight-path, vendor or talk step names (an innkeeper, a flight master, ...), as NPC ids:
+-- the step's npcId, else the NPCs of that name friendly to your faction with a spawn in the step's zone (or yours).
+-- nil for other steps. Cached per name/zone/faction.
+local NAMED = { bind = true, fp = true, talk = true, vendor = true, repair = true, buy = true, learn = true, home = true }
+local namedCache = {}
+function M:NamedNpcs(s)
+    if not (s and NAMED[s[1]]) then return nil end
+    if s.npcId then return { [s.npcId] = true } end
+    if not s.npc then return nil end
+    local info = ns.Compat.PlayerInfo()
+    local zone = s.z or ns.Completionist:Here()
+    local key = s.npc .. "|" .. tostring(zone) .. "|" .. tostring(info.faction)
+    if namedCache[key] ~= nil then return namedCache[key] or nil end
+    local N, side = ns.QDB.NPC, info.faction == "Alliance" and "A" or "H"
+    local parent = zone and ns.DB.ParentZone(zone)
+    local npcs = {}
+    for id, r in pairs(ns.QDB.npcs) do
+        local f, spawns = r[N.FRIENDLY], r[N.SPAWNS]
+        if r[N.NAME] == s.npc and f and string.find(f, side, 1, true)
+            and (not zone or (spawns and (spawns[zone] or (parent and spawns[parent])))) then
+            npcs[id] = true
+        end
+    end
+    namedCache[key] = next(npcs) and npcs or false
+    return namedCache[key] or nil
+end
+
 -- Builds the rule for the active guide position, or nil plus the reason there is none.
 function M:BuildRule()
     local p = prof()
@@ -129,6 +156,8 @@ function M:BuildRule()
             elseif p.markFriendly and i == cur and s[1] == "train" then
                 local npcs = trainerNpcs(s)
                 if npcs then parts[#parts + 1] = { npcs = npcs, step = i } end
+            elseif p.markFriendly and i == cur and self:NamedNpcs(s) then
+                parts[#parts + 1] = { npcs = self:NamedNpcs(s), step = i }
             elseif p.autoMarkObjectives and i == cur and s[1] == "accept" and s.starter and ns.ItemStarts:Npcs(s) then
                 parts[#parts + 1] = { npcs = ns.ItemStarts:Npcs(s), step = i }
             elseif p.markFriendly and i == cur and (s[1] == "accept" or s[1] == "turnin") and s.q then
