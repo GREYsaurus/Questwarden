@@ -2,11 +2,11 @@
 alliance/01_dwarf_gnome_dunmorogh.guide:110: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 alliance/01_dwarf_gnome_dunmorogh.guide:113: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 alliance/02_nightelf_teldrassil.guide:126: 'Mist' has no objective locations in the database; add [at=x,y] or a goto
-alliance/02_nightelf_teldrassil.guide:140: 'Sathrah's Sacrifice' has no objective locations in the database; add [at=x,y] or a goto
-alliance/02_nightelf_teldrassil.guide:162: 'Great Bear Spirit' has no objective locations in the database; add [at=x,y] or a goto
-alliance/02_nightelf_teldrassil.guide:167: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-alliance/02_nightelf_teldrassil.guide:170: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-alliance/02_nightelf_teldrassil.guide:173: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
+alliance/02_nightelf_teldrassil.guide:141: 'Sathrah's Sacrifice' has no objective locations in the database; add [at=x,y] or a goto
+alliance/02_nightelf_teldrassil.guide:163: 'Great Bear Spirit' has no objective locations in the database; add [at=x,y] or a goto
+alliance/02_nightelf_teldrassil.guide:168: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
+alliance/02_nightelf_teldrassil.guide:171: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
+alliance/02_nightelf_teldrassil.guide:174: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 alliance/04_draenei_bloodmyst.guide:128: 'Searching for Galaen' has no objective locations in the database; add [at=x,y] or a goto
 alliance/05_darkshore.guide:42: 'Body and Heart' has no objective locations in the database; add [at=x,y] or a goto
 alliance/05_darkshore.guide:114: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
@@ -67,14 +67,14 @@ horde/05_silverpine.guide:54: 'Maps and Runes' has no objective locations in the
 horde/05_silverpine.guide:62: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:75: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:79: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:155: 'Free From the Hold' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:172: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:235: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:267: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:276: quest 5881 requires level 23 but guide ends at 22
-horde/10_barrens.guide:277: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:153: 'Free From the Hold' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:170: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:233: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:269: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:278: quest 5881 requires level 23 but guide ends at 22
 horde/10_barrens.guide:279: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:280: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:281: quest 5881 requires level 23 but guide ends at 22
 horde/11_stonetalon.guide:26: 'Vorsha the Lasher' has no objective locations in the database; add [at=x,y] or a goto
 horde/11_stonetalon.guide:52: 'Gerenzo's Orders' has no objective locations in the database; add [at=x,y] or a goto
 horde/12_ashenvale.guide:31: 'Torek's Assault' has no objective locations in the database; add [at=x,y] or a goto
@@ -138,7 +138,7 @@ horde/01_tauren_mulgore.guide:164 (Speak with Coleman): prerequisite 1819 'Ulag 
 horde/04_bloodelf_ghostlands.guide:17 (Return to Quartermaster Lymel): prerequisite 9134 'Skymistress Gloaming' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:101 (Zando'zan): prerequisite 2378 'Find the Shattered Hand' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:283 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:285 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:350 (Steelsnap): prerequisite 1130 'Melor Sends Word' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)

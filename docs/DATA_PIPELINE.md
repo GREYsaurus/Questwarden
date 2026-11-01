@@ -77,6 +77,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 | `Database/Flights.lua` | client DB2 `TaxiNodes`, `TaxiPath`, `UiMapAssignment` + bundled `Npcs.lua`, `Zones.lua` | `FlightTables.cs` |
 | `Guides/Compiled/*.lua` | `guides-src/*.guide` + the files above | `GuideCompiler.cs` |
 | `Classes/WhatsTrainingData.lua` | What's Training? `Classes/Vanilla` or `Classes/TBC` at commit `26caff2` (`tools/upstream.json` `whatstraining`), MIT | `tools/research/whatstraining_import.py <Target> <checkout> <commit>`; also writes `docs/generated/<Target>/whatstraining-crosscheck.md` |
+| `Database/QuestTimers.lua` | CMaNGOS `quest_template.LimitTime`: classic-db commit `603ece1` (Classic Era, Forever), tbc-db commit `1c54acd` (TBC) (`tools/upstream.json` `cmangos`), GPL-3.0 | `tools/research/quest_timers.py <Target> <Full_DB .sql.gz> <repository> <commit>` |
 | `Database/DungeonEntrances.lua` | QuestieDB `support/Zones/dungeons.lua` at commit `8f55e69` (`tools/upstream.json` `questiedbDungeons`), base Classic/TBC table, limited to the target's `Database/Dungeons.lua` | `tools/research/dungeon_entrances.py <Target> <dungeons.lua> <commit>` |
 
 ## Quest flags (0.2.0)

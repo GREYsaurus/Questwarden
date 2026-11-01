@@ -29,10 +29,10 @@ turnin 4492 Lost!
 complete 974 Finding the Source | Use Krakle's Thermometer at the hottest vent up on Fire Plume Ridge.
 note The next quest, A Little Help From My Friends, is an escort: pick it up only when you are ready to follow the NPC.
 accept 4491 A Little Help From My Friends
-turnin 974 Finding the Source
 complete 4491 A Little Help From My Friends | Escort: stay close; it fails if the NPC dies.
+turnin 4491 A Little Help From My Friends
+turnin 974 Finding the Source
 accept 4301 The Mighty U'cha
 complete 4301 The Mighty U'cha
-turnin 4491 A Little Help From My Friends
 turnin 4301 The Mighty U'cha
 level 58 | Silithus starts at 58. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

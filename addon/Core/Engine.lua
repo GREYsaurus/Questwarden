@@ -302,6 +302,7 @@ function Engine:Refresh(silent)
     end
     -- Only waiting steps left (their kill steps are themselves waiting): take the first, never "finished".
     firstOpen = firstOpen or firstWaiting
+    firstOpen = self:TimedFirst(firstOpen)
 
     if self.forced and (not firstOpen or self.forced < firstOpen) then
         firstOpen = self.forced
@@ -331,6 +332,26 @@ function Engine:Refresh(silent)
     end
     if old ~= self.current then ns:Fire("STEP_CHANGED", self.current, old) end
     ns:Fire("REFRESH")
+end
+
+-- A timed quest in your log comes first (Core/QuestTimer.lua): its next open objective or turn-in step becomes
+-- current, unless only turn-ins and travel lie before it (on the way). The steps passed over stay open and come
+-- back once it is done. The guides already put these steps first; this covers a quest taken out of order.
+local NOT_ON_THE_WAY = { accept = true, complete = true, grind = true, level = true, dungeon = true }
+function Engine:TimedFirst(firstOpen)
+    local QT, g = ns.QuestTimer, self.guide
+    if not (firstOpen and QT and ns.QuestTimers and next(ns.QuestTimers)) then return firstOpen end
+    for j = firstOpen, #g.steps do
+        local s = g.steps[j]
+        if self.status[j] == "pending" and not self.waiting[j] and s.q and (s[1] == "complete" or s[1] == "turnin")
+            and QT:Running(s.q) then
+            for i = firstOpen, j - 1 do
+                if self.status[i] == "pending" and not self.waiting[i] and NOT_ON_THE_WAY[g.steps[i][1]] then return j end
+            end
+            return firstOpen
+        end
+    end
+    return firstOpen
 end
 
 function Engine:OnGuideFinished()

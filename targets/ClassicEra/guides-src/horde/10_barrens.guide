@@ -117,8 +117,6 @@ turnin 872 The Disruption Ends
 turnin 5041 Supplies for the Crossroads
 accept 1492 Wharfmaster Dizzywig [optional] | From Apothecary Helbrim.
 turnin 848 Fungal Spores
-accept 853 Apothecary Zamah [race=Orc,Undead,Troll]
-accept 853 Apothecary Zamah [race=Tauren]
 turnin 845 The Zhevra
 accept 903 Prowlers of the Barrens
 turnin 819 Chen's Empty Keg [optional] | Brewmaster Drohn.
@@ -164,13 +162,15 @@ complete 821 Chen's Empty Keg | Savannah Lion Tusk drops from Savannah Highmane,
 turnin 821 Chen's Empty Keg
 turnin 902 Samophlange [optional]
 turnin 905 The Angry Scytheclaws
+accept 853 Apothecary Zamah [race=Orc,Undead,Troll]
+accept 853 Apothecary Zamah [race=Tauren]
+turnin 853 Apothecary Zamah [race=Orc,Undead,Troll] | Turned in at Thunder Bluff.
+turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
 accept 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional]
 turnin 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional] | Turned in at Tirisfal Glades.
 accept 1820 Speak with Coleman [class=Warrior; race=Orc,Undead,Tauren,Troll; optional]
 turnin 1820 Speak with Coleman [class=Warrior; race=Orc,Undead,Tauren,Troll; optional] | Turned in at Tirisfal Glades.
 turnin 6002 Body and Heart [class=Druid; race=Tauren] | Turned in at Thunder Bluff.
-turnin 853 Apothecary Zamah [race=Orc,Undead,Troll] | Turned in at Thunder Bluff.
-turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
 turnin 892 The Missing Shipment
 turnin 6386 Return to the Crossroads. [race=Orc,Troll; optional]
 turnin 6364 Return to Jahan [class=Warrior,Hunter,Druid; race=Tauren]

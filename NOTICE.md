@@ -25,6 +25,13 @@ Releases also include the class-trainer spell lists of **What's Training?** (htt
 
 Questwarden is not affiliated with What's Training? or its author.
 
+Releases also include the time limits of timed quests from the **CMaNGOS** world databases (https://github.com/cmangos/classic-db and https://github.com/cmangos/tbc-db), under the GPLv3:
+
+- `quest_template.LimitTime` at classic-db commit `603ece109099ce44a5447a1b1cffd65c7272d71c` (Classic Era) and tbc-db commit `1c54acd200540076c3078d22a66fd417d0f6dd60` (TBC Classic Anniversary).
+- Transformed by `tools/research/quest_timers.py`: only the quest id and the limit in seconds are kept (the quest title is a comment), for quests in the bundled quest data. Written to `Database/QuestTimers.lua` in each target's data.
+
+Questwarden is not affiliated with the CMaNGOS project.
+
 Talent-tree layouts and race/class combinations are read from World of Warcraft client tables for each target's build (Classic Era 1.15.9 from Phase 2). World of Warcraft and The Burning Crusade are trademarks of Blizzard Entertainment, Inc. This add-on is not affiliated with or endorsed by Blizzard Entertainment.
 
 See `THIRD_PARTY_LICENSES.md` for details, including the residual licensing uncertainty upstream documents for some historic Questie contributions.

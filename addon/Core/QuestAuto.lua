@@ -83,6 +83,8 @@ function QA:CanAccept(q, liveText)
     if not step then return false, "not in the active guide", false end
     local manual, why = ns.DB.GetEscortStatus(q, liveText)
     if manual then return false, why, true end
+    -- Timed quests: the clock starts when you accept, so you choose the moment (Core/QuestTimer.lua).
+    if ns.QuestTimer and ns.QuestTimer:Limit(q) then return false, "timed quest", true end
     if not p.autoAccept then return false, "automatic acceptance is off", true end
     if step.optional and not p.autoAcceptOptional then return false, "optional quest", true end
     if (step.elite or step.group or step.dungeon) and not p.autoAcceptGroup then return false, "group/dungeon quest", true end
@@ -209,6 +211,8 @@ function QA:Explain(q, why)
     local lw = string.lower(why or "")
     if string.find(lw, "escort") or string.find(lw, "event") or string.find(lw, "not in the database") then
         notify("|cffffd100" .. title .. "|r is an escort/event quest (" .. why .. "). Accept it manually when you are ready.")
+    elseif why == "timed quest" then
+        notify("|cffffd100" .. title .. "|r is timed (" .. ns.QuestTimer.Words(ns.QuestTimer:Limit(q)) .. "). Accept it when you are ready to go straight for it.")
     elseif string.find(lw, "quest log full") then
         notify("|cffff7744Cannot accept " .. title .. ":|r " .. why .. ". Abandon or finish a quest first.")
     end
@@ -218,6 +222,7 @@ function QA:OnQuestDetail()
     if blocked() or C.DialogFromPlayer() then return end
     local q = self:Resolve(C.DialogQuestID(), C.DialogTitle())
     if not q or self.pending["accept" .. q] then return end
+    if ns.QuestTimer and ns.QuestTimer:Limit(q) then return ns.QuestTimer:OnQuestDetail(q) end
     local ok, why, onGuide = self:CanAccept(q, C.DialogText())
     if ok then
         markTried(q)

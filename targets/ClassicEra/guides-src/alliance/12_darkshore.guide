@@ -21,6 +21,7 @@ accept 951 Mathystra Relics
 note The next quest, The Sleeper Has Awakened, is an escort: pick it up only when you are ready to follow the NPC.
 accept 5321 The Sleeper Has Awakened
 complete 5321 The Sleeper Has Awakened | Escort: stay close; it fails if the NPC dies.
+turnin 5321 The Sleeper Has Awakened
 complete 951 Mathystra Relics
 complete 731 The Absent Minded Prospector [group=2]
 turnin 731 The Absent Minded Prospector
@@ -78,7 +79,6 @@ turnin 966 The Tower of Althalaxx
 accept 967 The Tower of Althalaxx
 complete 967 The Tower of Althalaxx
 turnin 967 The Tower of Althalaxx
-turnin 5321 The Sleeper Has Awakened
 accept 2139 Tharnariun's Hope
 complete 2139 Tharnariun's Hope | Den Mother in the bear cave north-east.
 turnin 2139 Tharnariun's Hope

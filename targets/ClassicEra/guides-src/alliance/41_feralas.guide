@@ -26,9 +26,9 @@ accept 7733 Improved Quality
 complete 7733 Improved Quality
 note The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.
 accept 2969 Freedom for All Creatures | Kindal Moonweaver, at the camp east.
-turnin 7733 Improved Quality
 complete 2969 Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
 turnin 2969 Freedom for All Creatures
+turnin 7733 Improved Quality
 accept 2970 Doling Justice
 complete 2970 Doling Justice | Grimtotem tauren at the compound.
 turnin 2970 Doling Justice

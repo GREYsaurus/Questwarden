@@ -38,6 +38,7 @@ Database\Flights.lua
 Database\ZoneGeo.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
+Database\QuestTimers.lua
 Database\Dungeons.lua
 Database\DungeonEntrances.lua
 Database\QuestDB.lua
@@ -91,6 +92,7 @@ Core\Bind.lua
 Core\Hearth.lua
 Core\Group.lua
 Core\FlightTimer.lua
+Core\QuestTimer.lua
 Core\FlightPaths.lua
 
 # UI

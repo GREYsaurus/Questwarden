@@ -15,6 +15,12 @@ A new order is kept only when it saves at least 2 map percent. Run it again afte
 
 The route audit's Distance column counts NPC steps only, not the walk to kill objectives in between. A reorder can raise that number and still shorten the real walk: for example, turning in the far-west quest first when the next objectives are in the east. The first run (2026-11-01) reordered 88 stretches in Classic Era and 103 in TBC.
 
+**Timed quests:** `python tools/research/timed_order.py <Target> [--apply]` checks every timed quest (`Database/QuestTimers.lua`) from its pickup to its turn-in. Between the two, only the quest's own steps, travel, and turn-ins on the way may stay. A turn-in is on the way when its quest is already done, its NPC is in the same zone, and it adds at most 3 map percent to the walk. The estimated walk must also stay within half the time limit: straight lines in world yards x 1.25, at 7 yards a second, plus 10 seconds a step. Anything else is fixed in this order:
+1. the pickup moves down to the last point before the turn-in where the guide passes the quest giver anyway (within 4 map percent);
+2. the remaining steps move to right after the turn-in.
+
+A turn-in in another zone is moved only after an escort, which ends at the turn-in NPC, or with a moved pickup; otherwise the tool reports it for a hand edit. Pickups of one quest for different races are handled as one. The tool fixes one quest per guide and run: run `guides` and the tool again until it finds nothing, then `layout_map.py`. The first run (2026-11-01) fixed 10 guides in Classic Era and 7 in TBC. MacKreel's Moonshine (TBC Wetlands) was moved by hand to the guide's end, on the way out through the Thandol Span. In the add-on, a timed quest taken out of order still comes first (`Engine:TimedFirst`).
+
 **Kill packs:** `python tools/research/kill_packs.py <Target> [--apply]` moves complete steps of quests already in your log up next to a complete step whose mobs spawn in the same area: within 8 map percent, or the same mobs, kill targets or item droppers. The compiler then links them into a kill pack that the add-on shows as one ([GUIDE_FORMAT.md](GUIDE_FORMAT.md#kill-packs)). Any number of steps can join.
 
 A step doesn't move:

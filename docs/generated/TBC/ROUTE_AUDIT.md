@@ -10,12 +10,12 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 |---|---|
 | Routes walked | 52 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
-| Warnings | 93 |
-| Peak quest log (worst route) | 23 / 25 |
-| Reduced-XP pickups (6+ levels below estimate) | 49 |
-| Level-gated pickups | 145 |
+| Warnings | 88 |
+| Peak quest log (worst route) | 22 / 25 |
+| Reduced-XP pickups (6+ levels below estimate) | 50 |
+| Level-gated pickups | 144 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 630 |
+| Hub revisits (all guides) | 627 |
 
 ## Per guide
 
@@ -43,25 +43,25 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | A_Human_Elwynn | 164 (143) | 59 (48) | 394 (467) | 459 | 13 (16) | 0 | 7 (2) | 0 | 0 | 2 |
 | A_LochModan | 111 (72) | 31 (24) | 158 (517) | 420 | 8 (11) | 0 | 6 (0) | 0 (2) | 0 | 0 (1) |
 | A_Nagrand | 134 (105) | 47 (37) | 441 (367) | 441 | 10 (4) | 0 | 1 (0) | 0 (1) | 3 (2) | 1 (2) |
-| A_NightElf_Teldrassil | 189 (92) | 67 (30) | 454 (214) | 612 | 19 (7) | 0 | 3 (1) | 0 (1) | 7 (0) | 0 |
+| A_NightElf_Teldrassil | 189 (92) | 67 (30) | 385 (214) | 542 | 18 (7) | 0 | 3 (1) | 0 (1) | 7 (0) | 0 |
 | A_Redridge | 118 (69) | 41 (22) | 249 (289) | 377 | 10 (13) | 0 | 13 (0) | 0 (1) | 1 | 3 |
 | A_Shadowmoon | 68 (57) | 22 (18) | 150 (132) | 150 | 4 (2) | 0 | 0 | 0 | 1 (0) | 0 |
 | A_Stranglethorn | 190 (76) | 64 (25) | 507 (269) | 675 | 12 (6) | 12 (0) | 0 | 0 (5) | 0 | 0 |
 | A_Terokkar | 123 (97) | 42 (34) | 410 (390) | 485 | 9 (11) | 0 | 0 | 0 (1) | 3 (1) | 2 (3) |
 | A_WesternPlaguelands | 93 (41) | 31 (12) | 819 (288) | 894 | 18 (5) | 0 | 0 | 0 (3) | 1 (0) | 0 |
 | A_Westfall | 87 (56) | 31 (16) | 232 (253) | 341 | 9 (7) | 0 | 5 (0) | 0 | 0 | 2 |
-| A_Wetlands | 113 (79) | 41 (26) | 232 (255) | 432 | 8 (9) | 0 | 8 (0) | 0 (2) | 0 | 0 |
+| A_Wetlands | 113 (79) | 41 (26) | 311 (255) | 461 | 8 (9) | 0 | 7 (0) | 0 (2) | 0 | 0 |
 | A_Zangarmarsh | 122 (115) | 42 (41) | 187 (365) | 187 | 5 (9) | 0 | 0 | 0 (5) | 1 (2) | 0 (1) |
 | Both_EasternPlaguelands | 76 | 22 | 403 | 413 | 7 | 0 | 0 | 0 | 2 | 0 |
 | Both_Netherstorm | 117 (107) | 39 (37) | 315 (440) | 315 | 11 (14) | 0 | 0 | 0 (2) | 0 (1) | 1 |
 | Both_SearingGorge | 72 | 18 | 226 | 196 | 7 | 0 | 0 | 0 | 2 | 0 |
-| Both_Tanaris | 64 (52) | 17 (15) | 201 (63) | 182 | 4 (1) | 0 | 2 (1) | 0 (3) | 1 (0) | 2 |
+| Both_Tanaris | 64 (52) | 17 (15) | 220 (63) | 201 | 3 (1) | 0 | 2 (1) | 0 (3) | 1 (0) | 2 |
 | Both_UngoroCrater | 69 (55) | 20 (17) | 488 (323) | 483 | 9 (4) | 0 | 0 (1) | 0 (4) | 3 | 1 (2) |
 | Both_Winterspring | 61 | 19 | 216 | 184 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_Arathi | 54 (52) | 15 (14) | 103 (163) | 103 | 2 (3) | 0 | 0 | 0 | 0 | 0 |
 | H_Ashenvale | 66 (42) | 21 (10) | 275 (492) | 274 | 6 (13) | 0 | 0 (1) | 0 (1) | 2 | 5 (3) |
 | H_Badlands | 40 | 8 | 113 | 113 | 2 | 0 | 2 | 0 | 0 | 0 |
-| H_Barrens | 349 (117) | 120 (41) | 706 (299) | 957 | 35 (13) | 17 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
+| H_Barrens | 349 (117) | 120 (41) | 675 (299) | 961 | 35 (13) | 18 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
 | H_BladesEdge | 90 (51) | 29 (16) | 197 (245) | 197 | 4 (8) | 0 | 0 | 0 (1) | 1 | 0 |
 | H_BloodElf_Eversong | 245 (118) | 94 (41) | 446 (583) | 519 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
 | H_BloodElf_Ghostlands | 193 (103) | 70 (35) | 416 (440) | 518 | 21 (16) | 0 | 4 (1) | 0 (1) | 1 (0) | 1 |
@@ -73,7 +73,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Hillsbrad | 69 (48) | 20 (15) | 272 (122) | 272 | 3 (1) | 0 | 5 (0) | 0 (4) | 0 | 0 |
 | H_Hinterlands | 65 (52) | 18 (14) | 163 (70) | 80 | 2 (1) | 0 | 0 | 0 (1) | 0 | 0 |
 | H_Nagrand | 136 (114) | 47 (39) | 380 (336) | 430 | 7 (9) | 0 | 1 (0) | 0 | 4 (3) | 1 |
-| H_OrcTroll_Durotar | 215 (105) | 70 (33) | 375 (371) | 455 | 13 (14) | 0 | 7 (0) | 0 (2) | 4 (0) | 0 |
+| H_OrcTroll_Durotar | 215 (105) | 70 (33) | 368 (371) | 448 | 12 (14) | 0 | 7 (0) | 0 (2) | 4 (0) | 0 |
 | H_Shadowmoon | 68 (57) | 22 (18) | 125 (89) | 125 | 5 | 0 | 0 | 0 | 1 (0) | 0 |
 | H_Silverpine | 92 (76) | 34 (28) | 323 (191) | 473 | 10 (8) | 0 | 1 (0) | 0 (1) | 1 | 2 (3) |
 | H_Stonetalon | 70 (37) | 27 (8) | 215 (222) | 293 | 14 (5) | 0 | 0 | 0 | 2 (1) | 0 |
@@ -90,21 +90,21 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 
 | Route | Peak | At |
 |---|---|---|
-| BloodElf/ROGUE | 23 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| BloodElf/WARLOCK | 23 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Orc/ROGUE | 23 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Orc/WARLOCK | 23 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Troll/ROGUE | 23 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| BloodElf/HUNTER | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| BloodElf/MAGE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| BloodElf/PALADIN | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| BloodElf/PRIEST | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Orc/HUNTER | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Orc/SHAMAN | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Orc/WARRIOR | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Scourge/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Scourge/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
-| Tauren/DRUID | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:221] |
+| BloodElf/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Orc/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Orc/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Troll/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/MAGE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/PALADIN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/PRIEST | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Orc/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Orc/SHAMAN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Orc/WARRIOR | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Scourge/ROGUE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Scourge/WARLOCK | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| Tauren/DRUID | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
 
 ## Errors
 
@@ -121,10 +121,8 @@ None.
 - Orc/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Orc/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Orc/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
-- Orc/ROGUE: quest log peaks at 23/25 at H_Barrens (The Harvester) [horde/10_barrens.guide:221]
 - Orc/SHAMAN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Orc/WARLOCK: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
-- Orc/WARLOCK: quest log peaks at 23/25 at H_Barrens (The Harvester) [horde/10_barrens.guide:221]
 - Dwarf/WARRIOR: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
 - Dwarf/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Dwarf/PALADIN: A_Redridge (Elmore's Task) [alliance/12_redridge.guide:32]: turn-in of a quest never accepted on this route
@@ -175,18 +173,15 @@ None.
 - Troll/WARRIOR: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Troll/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Troll/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
-- Troll/ROGUE: quest log peaks at 23/25 at H_Barrens (The Harvester) [horde/10_barrens.guide:221]
 - Troll/PRIEST: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Troll/SHAMAN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - Troll/MAGE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - BloodElf/PALADIN: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - BloodElf/HUNTER: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - BloodElf/ROGUE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
-- BloodElf/ROGUE: quest log peaks at 23/25 at H_Barrens (The Harvester) [horde/10_barrens.guide:221]
 - BloodElf/PRIEST: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - BloodElf/MAGE: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
 - BloodElf/WARLOCK: H_Hellfire (fly Thrallmar) [outland/h60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
-- BloodElf/WARLOCK: quest log peaks at 23/25 at H_Barrens (The Harvester) [horde/10_barrens.guide:221]
 - Draenei/WARRIOR: A_Stranglethorn (The Legend of Stalvan) [alliance/22_stranglethorn.guide:25]: turn-in of a quest never accepted on this route
 - Draenei/WARRIOR: A_Stranglethorn (Worgen in the Woods) [alliance/22_stranglethorn.guide:60]: turn-in of a quest never accepted on this route
 - Draenei/WARRIOR: A_Hellfire (fly Honor Hold) [outland/a60_hellfire.guide:18]: the flight path is not learned on this route yet (no fp step before it)
@@ -263,11 +258,11 @@ None.
 - A_Hellfire: level-gated pickup: Keep Thornfang Hill Clear! (10159) needs 61, model level 60.7 (quests only: 60) [outland/a60_hellfire.guide:174, Human/WARRIOR]
 - A_Hellfire: level-gated pickup: Testing the Antidote (10255) needs 61, model level 60.8 (quests only: 60) [outland/a60_hellfire.guide:185, Human/WARRIOR]
 - A_Hellfire: level-gated pickup: The Cenarion Expedition (9912) needs 61, model level 60.7 (quests only: 60) [outland/a60_hellfire.guide:173, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Costly Menace (564) needs 30, model level 28.3 (quests only: 28) [alliance/20_hillsbrad.guide:26, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Crushridge Bounty (500) needs 30, model level 28.8 (quests only: 28) [alliance/20_hillsbrad.guide:40, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Encrypted Letter (511) needs 30, model level 28.6 (quests only: 28) [alliance/20_hillsbrad.guide:33, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Hints of a New Plague? (659) needs 30, model level 29.0 (quests only: 28) [alliance/20_hillsbrad.guide:45, Human/WARRIOR]
-- A_Hillsbrad: level-gated pickup: Letter to Stormpike (514) needs 30, model level 29.3 (quests only: 28) [alliance/20_hillsbrad.guide:54, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Costly Menace (564) needs 30, model level 28.5 (quests only: 28) [alliance/20_hillsbrad.guide:26, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Crushridge Bounty (500) needs 30, model level 28.9 (quests only: 28) [alliance/20_hillsbrad.guide:40, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Encrypted Letter (511) needs 30, model level 28.7 (quests only: 28) [alliance/20_hillsbrad.guide:33, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Hints of a New Plague? (659) needs 30, model level 29.1 (quests only: 28) [alliance/20_hillsbrad.guide:45, Human/WARRIOR]
+- A_Hillsbrad: level-gated pickup: Letter to Stormpike (514) needs 30, model level 29.4 (quests only: 28) [alliance/20_hillsbrad.guide:54, Human/WARRIOR]
 - A_Human_Elwynn: level-gated pickup: A Fishy Peril (40) needs 7, model level 4.7 (quests only: 4) [alliance/00_human_elwynn.guide:72, Human/WARRIOR]
 - A_Human_Elwynn: level-gated pickup: A Warrior's Training (1638) needs 10, model level 9.1 (quests only: 7) [alliance/00_human_elwynn.guide:139, Human/WARRIOR]
 - A_Human_Elwynn: level-gated pickup: Bartleby's Mug (1665) needs 10, model level 9.3 (quests only: 7) [alliance/00_human_elwynn.guide:147, Human/WARRIOR]
@@ -282,7 +277,7 @@ None.
 - A_LochModan: level-gated pickup: Vyrin's Revenge (271) needs 15, model level 14.6 (quests only: 13) [alliance/11_lochmodan.guide:108, Dwarf/WARRIOR]
 - A_LochModan: level-gated pickup: Vyrin's Revenge (531) needs 15, model level 14.8 (quests only: 13) [alliance/11_lochmodan.guide:111, Dwarf/WARRIOR]
 - A_Nagrand: level-gated pickup: Survey the Land (9991) needs 66, model level 65.8 (quests only: 65) [outland/a66_nagrand.guide:128, Human/WARRIOR]
-- A_NightElf_Teldrassil: level-gated pickup: Destiny Calls (2242) needs 10, model level 9.1 (quests only: 7) [alliance/02_nightelf_teldrassil.guide:128, NightElf/ROGUE]
+- A_NightElf_Teldrassil: level-gated pickup: Destiny Calls (2242) needs 10, model level 9.3 (quests only: 7) [alliance/02_nightelf_teldrassil.guide:129, NightElf/ROGUE]
 - A_NightElf_Teldrassil: level-gated pickup: In Favor of Elune (5622) needs 5, model level 4.8 (quests only: 4) [alliance/02_nightelf_teldrassil.guide:52, NightElf/PRIEST]
 - A_NightElf_Teldrassil: level-gated pickup: The Apple Falls (2241) needs 10, model level 7.5 (quests only: 6) [alliance/02_nightelf_teldrassil.guide:104, NightElf/ROGUE]
 - A_Redridge: level-gated pickup: A Watchful Eye (94) needs 20, model level 15.0 (quests only: 15) [alliance/12_redridge.guide:26, Human/WARRIOR]
@@ -315,35 +310,35 @@ None.
 - A_Westfall: level-gated pickup: Captain Sander's Hidden Treasure (140) needs 14, model level 13.0 (quests only: 12) [alliance/10_westfall.guide:85, Human/WARRIOR]
 - A_Westfall: level-gated pickup: The Coastal Menace (104) needs 15, model level 12.8 (quests only: 11) [alliance/10_westfall.guide:67, Human/WARRIOR]
 - A_Westfall: level-gated pickup: The Defias Brotherhood (65) needs 14, model level 11.7 (quests only: 11) [alliance/10_westfall.guide:50, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: A Grim Task (304) needs 26, model level 26.0 (quests only: 25) [alliance/14_wetlands.guide:80, NightElf/WARRIOR]
+- A_Wetlands: level-gated pickup: A Grim Task (304) needs 26, model level 25.8 (quests only: 25) [alliance/14_wetlands.guide:78, NightElf/WARRIOR]
 - A_Wetlands: level-gated pickup: Fall of Dun Modr (472) needs 25, model level 24.0 (quests only: 24) [alliance/14_wetlands.guide:15, NightElf/WARRIOR]
-- A_Wetlands: level-gated pickup: MacKreel's Moonshine (647) needs 28, model level 25.3 (quests only: 25) [alliance/14_wetlands.guide:40, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: Plea To The Alliance (634) needs 28, model level 27.9 (quests only: 26) [alliance/14_wetlands.guide:110, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: The Thandol Span (631) needs 28, model level 26.6 (quests only: 26) [alliance/14_wetlands.guide:74, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: The Thandol Span (632) needs 28, model level 26.7 (quests only: 26) [alliance/14_wetlands.guide:76, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: The Thandol Span (633) needs 28, model level 26.8 (quests only: 26) [alliance/14_wetlands.guide:78, Human/WARRIOR]
-- A_Wetlands: level-gated pickup: Uncovering the Past (299) needs 25, model level 24.3 (quests only: 24) [alliance/14_wetlands.guide:41, NightElf/WARRIOR]
+- A_Wetlands: level-gated pickup: Plea To The Alliance (634) needs 28, model level 27.7 (quests only: 26) [alliance/14_wetlands.guide:108, Human/WARRIOR]
+- A_Wetlands: level-gated pickup: The Thandol Span (631) needs 28, model level 26.4 (quests only: 25) [alliance/14_wetlands.guide:72, Human/WARRIOR]
+- A_Wetlands: level-gated pickup: The Thandol Span (632) needs 28, model level 26.5 (quests only: 26) [alliance/14_wetlands.guide:74, Human/WARRIOR]
+- A_Wetlands: level-gated pickup: The Thandol Span (633) needs 28, model level 26.6 (quests only: 26) [alliance/14_wetlands.guide:76, Human/WARRIOR]
+- A_Wetlands: level-gated pickup: Uncovering the Past (299) needs 25, model level 24.3 (quests only: 24) [alliance/14_wetlands.guide:40, NightElf/WARRIOR]
 - Both_Tanaris: level-gated pickup: The Dunemaul Compound (5863) needs 44, model level 42.6 (quests only: 41) [shared/24_tanaris.guide:41, Human/WARRIOR]
-- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.1 (quests only: 42) [shared/24_tanaris.guide:61, Human/WARRIOR]
+- Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.3 (quests only: 42) [shared/24_tanaris.guide:62, Human/WARRIOR]
 - H_Badlands: level-gated pickup: Badlands Reagent Run (2258) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:15, Orc/WARRIOR]
 - H_Badlands: level-gated pickup: Unclaimed Baggage (9439) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:17, Orc/WARRIOR]
 - H_Barrens: level-gated pickup: Blind Cazul (1508) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:93, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: Calling in the Reserves (5881) needs 23, model level 17.8 (quests only: 15) [horde/10_barrens.guide:276, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: Deepmoss Spider Eggs (1069) needs 15, model level 13.9 (quests only: 13) [horde/10_barrens.guide:149, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: Calling in the Reserves (5881) needs 23, model level 17.8 (quests only: 16) [horde/10_barrens.guide:278, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: Deepmoss Spider Eggs (1069) needs 15, model level 13.9 (quests only: 13) [horde/10_barrens.guide:147, Orc/WARRIOR]
 - H_Barrens: level-gated pickup: Devourer of Souls (1507) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:91, Orc/WARLOCK]
 - H_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 12.0 (quests only: 11) [horde/10_barrens.guide:52, Orc/HUNTER]
 - H_Barrens: level-gated pickup: News of Dogran (1509) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:105, Orc/WARLOCK]
 - H_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 12.6 (quests only: 12) [horde/10_barrens.guide:119, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: Plundering the Plunderers (2381) needs 16, model level 14.5 (quests only: 13) [horde/10_barrens.guide:166, Orc/ROGUE]
+- H_Barrens: level-gated pickup: Plundering the Plunderers (2381) needs 16, model level 14.5 (quests only: 13) [horde/10_barrens.guide:164, Orc/ROGUE]
 - H_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 19.2 (quests only: 17) [horde/10_barrens.guide:321, Troll/PRIEST]
 - H_Barrens: level-gated pickup: The Ashenvale Hunt (742) needs 20, model level 12.4 (quests only: 11) [horde/10_barrens.guide:81, Orc/WARRIOR]
 - H_Barrens: level-gated pickup: The Sacred Flame (1195) needs 20, model level 12.4 (quests only: 11) [horde/10_barrens.guide:90, Orc/WARRIOR]
 - H_Barrens: level-gated pickup: Wrenix of Ratchet (2382) needs 16, model level 12.3 (quests only: 11) [horde/10_barrens.guide:103, Orc/ROGUE]
 - H_Barrens: level-gated pickup: Zando'zan (2379) needs 16, model level 12.3 (quests only: 11) [horde/10_barrens.guide:101, Orc/ROGUE]
 - H_Barrens: reduced-XP quest: A Sacred Burial (833, level 10) at estimated level 17.3
+- H_Barrens: reduced-XP quest: Apothecary Zamah (853, level 15) at estimated level 21.2
 - H_Barrens: reduced-XP quest: Disrupt the Attacks (871, level 12) at estimated level 19.2
 - H_Barrens: reduced-XP quest: Forged Steel (1503, level 10) at estimated level 17.3
-- H_Barrens: reduced-XP quest: Kaya's Alive (6401, level 18) at estimated level 24.2
+- H_Barrens: reduced-XP quest: Kaya's Alive (6401, level 18) at estimated level 24.0
 - H_Barrens: reduced-XP quest: Kyle's Gone Missing! (11129, level 7) at estimated level 17.6
 - H_Barrens: reduced-XP quest: Plainstrider Menace (844, level 12) at estimated level 19.2
 - H_Barrens: reduced-XP quest: Preparation for Ceremony (744, level 11) at estimated level 17.1
@@ -353,7 +348,7 @@ None.
 - H_Barrens: reduced-XP quest: Samophlange (901, level 14) at estimated level 20.6
 - H_Barrens: reduced-XP quest: Stolen Booty (888, level 16) at estimated level 22.4
 - H_Barrens: reduced-XP quest: Supplies for the Crossroads (5041, level 14) at estimated level 20.0
-- H_Barrens: reduced-XP quest: The Elder Crone (1063, level 18) at estimated level 24.2
+- H_Barrens: reduced-XP quest: The Elder Crone (1063, level 18) at estimated level 24.0
 - H_Barrens: reduced-XP quest: The Forgotten Pools (870, level 13) at estimated level 19.2
 - H_Barrens: reduced-XP quest: The Missing Shipment (892, level 14) at estimated level 20.4
 - H_Barrens: reduced-XP quest: The Zhevra (845, level 13) at estimated level 19.6

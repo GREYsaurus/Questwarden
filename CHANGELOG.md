@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- **Timed quests.** Questwarden now knows the 29 timed quests of Classic Era and the 40 of TBC, with their time limits (from the CMaNGOS quest tables).
+  - **Warning before you accept.** The pickup step says how long you will have, and when the quest's window opens a warning shows on screen and in chat. Timed quests are never accepted automatically: you choose when the clock starts. Turn the warning off with *Warn Before Timed Quests* (General, Features).
+  - **Timer.** While a timed quest is in your log, a bar shows the time left (red under a minute, "failed" when it ran out), and its objective and turn-in steps show it too. Turn the bar off with *Show Timed Quest Timers*. The time comes from the game when it is clear which quest a timer belongs to, otherwise it is counted from when you accepted.
+  - **Turned in first.** The guides now go from a timed quest's pickup straight to its objective and turn-in. Only turn-ins on the way stay in between, and only while the estimated walk stays within half the limit. Where possible the pickup moved down instead, so the clock starts later. 10 guides changed in Classic Era and 7 in TBC. Examples: Apothecary Zamah (Barrens) is now picked up on your last stop at the Crossroads and taken straight to Thunder Bluff; Mist (TBC Teldrassil) is turned in right after the escort instead of 51 steps later; MacKreel's Moonshine (TBC Wetlands) is picked up on the way out to Southshore. Saved progress follows the moved steps.
+  - If you take a timed quest out of the guide's order, the guide puts its next step first anyway, unless only turn-ins and travel lie before it.
+
 ## 0.1.0-alpha.22 (2026-11-01)
 
 - **Nearest quest giver first.** Where the guide lists several pickups and turn-ins in a row, it now sends you to the nearest NPC first instead of walking past one and coming back. Example: a new dwarf or gnome now starts with Sten Stoutarm's Dwarven Outfitters, right where you appear, then The Boar Hunter farther west. 88 such stretches were reordered in Classic Era and 103 in TBC, in every zone.

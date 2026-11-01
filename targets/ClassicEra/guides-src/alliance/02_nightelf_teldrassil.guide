@@ -35,7 +35,6 @@ turnin A Friend in Need
 accept 3521 Iverron's Antidote
 complete 3521 Iverron's Antidote | Hyacinth Mushrooms on the ground, Moonpetal Lilies at the pool, Webwood Ichor from spiders.
 turnin 3521 Iverron's Antidote
-accept 3522 Iverron's Antidote
 accept Webwood Venom | Gilshalan Windwalker, inside Aldrassil.
 complete Webwood Venom | Webwood Spiders in Shadowthread Cave.
 turnin Webwood Venom
@@ -43,6 +42,7 @@ accept Webwood Egg
 complete Webwood Egg | The egg is at the back of Shadowthread Cave.
 turnin Webwood Egg
 accept Tenaron's Summons
+accept 3522 Iverron's Antidote
 turnin 3522 Iverron's Antidote
 turnin Tenaron's Summons | Top of Aldrassil.
 accept 921 Crown of the Earth

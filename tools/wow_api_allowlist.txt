@@ -120,6 +120,7 @@ GetTitleText                      # core
 GetObjectiveText                  # core
 GetQuestText                      # core
 AcceptQuest                       # core
+GetQuestTimers                    # core; read-only: seconds left on timed quests in the log (approved 2026-11-01)
 IsQuestCompletable                # core
 GetQuestMoneyToGet                # core
 CompleteQuest                     # core

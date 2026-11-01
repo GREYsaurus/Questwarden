@@ -95,5 +95,22 @@
       "LICENSE"
     ],
     "cache": ".cache/upstream/whatstraining/26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe"
+  },
+  "cmangos": {
+    "_comment": "Time limits of timed quests (quest_template.LimitTime), read by tools/research/quest_timers.py into targets/<Target>/addon/Database/QuestTimers.lua. classic-db for ClassicEra and Forever, tbc-db for TBC. GPL-3.0. Approved 2026-11-01. Never fetched by the normal build.",
+    "classic": {
+      "repository": "https://github.com/cmangos/classic-db",
+      "commit": "603ece109099ce44a5447a1b1cffd65c7272d71c",
+      "url": "https://github.com/cmangos/classic-db/raw/603ece109099ce44a5447a1b1cffd65c7272d71c/Full_DB/ClassicDB_1_12_1_z2815.sql.gz",
+      "sha256": "4f92db520868ab4e566726f68b5b2e380ae781209beaf22237b4f7f04600d0c0",
+      "cache": ".cache/upstream/cmangos/classic-603ece1.sql.gz"
+    },
+    "tbc": {
+      "repository": "https://github.com/cmangos/tbc-db",
+      "commit": "1c54acd200540076c3078d22a66fd417d0f6dd60",
+      "url": "https://github.com/cmangos/tbc-db/raw/1c54acd200540076c3078d22a66fd417d0f6dd60/Full_DB/TBCDB_1.11.0_Vengeance_One_A_Cmangos_Story.sql.gz",
+      "sha256": "dfd269a33923debba9954dfe8d120a04ffef3a3d683a513a9a5634f98808d8fb",
+      "cache": ".cache/upstream/cmangos/tbc-1c54acd.sql.gz"
+    }
   }
 }

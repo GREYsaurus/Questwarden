@@ -136,6 +136,12 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(l.warn and WARN or DIM, l.text)
         end
     end
+    -- Timed quests (Core/QuestTimer.lua): the warning before you accept, then the time left.
+    if s.q and ns.QuestTimer and ns.QuestTimer:Limit(s.q) and not ns.Tracker:IsTurnedIn(s.q) then
+        local l = (s[1] == "accept" and not ns.Tracker:InLog(s.q) and ns.QuestTimer:WarningText(s.q))
+            or ((s[1] == "complete" or s[1] == "turnin") and ns.QuestTimer:StepLine(s.q))
+        if l then lines[#lines + 1] = string.format(WARN, l) end
+    end
     -- Hearthing to town beats walking (Core/Hearth.lua).
     local hearth = ns.Hearth and ns.Engine:CurrentStep() == s and ns.Hearth:Line()
     if hearth then lines[#lines + 1] = string.format(WARN, hearth) end

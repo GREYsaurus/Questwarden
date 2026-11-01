@@ -21,9 +21,9 @@ accept 2822 The Mark of Quality | Jangdor Swiftstrider.
 complete 2862 War on the Woodpaw | Woodpaw Gnoll Manes from the gnolls south-west of the camp.
 complete 2973 A New Cloak's Sheen | Iridescent Sprite Darter Wings from Sprite Darters by the gnoll camp.
 turnin 2862 War on the Woodpaw
-accept 2863 Alpha Strike
 turnin 2973 A New Cloak's Sheen | Krueg Skullsplitter.
 accept 2974 A Grim Discovery
+accept 2863 Alpha Strike
 complete 2863 Alpha Strike | Woodpaw Alphas in the same gnoll camps.
 turnin 2863 Alpha Strike | Hadoken Swiftstrider.
 accept 2902 Woodpaw Investigation

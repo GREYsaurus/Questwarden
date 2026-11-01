@@ -142,8 +142,6 @@ turnin The Disruption Ends
 turnin Supplies for the Crossroads
 accept Wharfmaster Dizzywig [optional] | From Apothecary Helbrim.
 turnin Fungal Spores
-accept 853 Apothecary Zamah [race=Orc,Undead,Troll,Blood Elf]
-accept 853 Apothecary Zamah [race=Tauren]
 turnin The Zhevra
 accept Prowlers of the Barrens
 accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
@@ -259,6 +257,10 @@ turnin Verog the Dervish
 accept Hezrul Bloodmark
 accept 868 Egg Hunt
 accept 6541 Report to Kadrak
+accept 853 Apothecary Zamah [race=Orc,Undead,Troll,Blood Elf]
+accept 853 Apothecary Zamah [race=Tauren]
+turnin 853 Apothecary Zamah [race=Orc,Undead,Troll,Blood Elf] | Turned in at Thunder Bluff.
+turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
 turnin 6541 Report to Kadrak
 turnin 1061 The Spirits of Stonetalon
 accept 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
@@ -316,8 +318,6 @@ accept Cry of the Thunderhawk
 complete Cry of the Thunderhawk
 turnin Cry of the Thunderhawk
 accept 874 Mahren Skyseer [optional]
-turnin 853 Apothecary Zamah [race=Orc,Undead,Troll,Blood Elf] | Turned in at Thunder Bluff.
-turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
 accept 5642 Shadowguard [class=Priest; race=Troll] | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin 1094 Further Instructions
 accept 1095 Further Instructions

@@ -172,19 +172,19 @@ accept 5726 Hidden Enemies [class=Warlock; race=Orc; optional]
 accept 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Needs level 9. If you are lower, {name} skips it and moves on.
 accept 5726 Hidden Enemies [race=Troll; optional]
 accept Need for a Cure | Rhinag.
+complete Need for a Cure | Venomtail Scorpids.
+turnin Need for a Cure
 accept Winds in the Desert | Rezlak at the eastern caravan.
 accept Lost But Not Forgotten | Misha Tor'kren, north Durotar.
 complete Lost But Not Forgotten | Durotar Tigers near Misha.
 complete 5726 Hidden Enemies [optional] | Lieutenant's Insignia drops from Burning Blade Apprentice and Burning Blade Fanatic.
 complete Winds in the Desert | Supply sacks scattered in Drygulch Ravine.
-complete Need for a Cure | Venomtail Scorpids.
 turnin Lost But Not Forgotten
 turnin Winds in the Desert
 accept Securing the Lines
 complete Securing the Lines | Dustwind harpies in Drygulch Ravine.
 turnin Securing the Lines
 grind 11.5 Dustwind Savage, Dustwind Storm Witch, Burning Blade Cultist [at=52.4,24.0] | The next steps expect level 12: grind these to 50% through level 11, and the quests left here bring you the rest of the way.
-turnin Need for a Cure
 turnin 5726 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [race=Troll; optional] | Turned in at Orgrimmar.

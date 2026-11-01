@@ -1,5 +1,5 @@
-﻿alliance/12_darkshore.guide:73: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
-alliance/12_darkshore.guide:79: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+﻿alliance/12_darkshore.guide:74: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+alliance/12_darkshore.guide:80: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
 alliance/13_ashenvale.guide:33: 'Raene's Cleansing' has no objective locations in the database; add [at=x,y] or a goto
 alliance/18_duskwood.guide:32: turn-in of 'The Tome of Valor' (1650) with no earlier accept on this faction's routes
 alliance/18_duskwood.guide:50: 'Sven's Revenge' has no objective locations in the database; add [at=x,y] or a goto
@@ -17,7 +17,7 @@ horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
 horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:131: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:129: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:31: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:39: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto

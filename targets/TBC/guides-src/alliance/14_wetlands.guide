@@ -37,7 +37,6 @@ turnin The Search Continues
 accept Search More Hovels
 turnin Search More Hovels
 accept Return the Statuette
-accept 647 MacKreel's Moonshine [optional] | Needs level 28. If you are lower, {name} skips it and moves on.
 accept Uncovering the Past | Prospector Whelgar.
 accept Ormer's Revenge | Ormer Ironbraid, excavation site.
 complete Ormer's Revenge | Mottled Raptors and Screechers around the site.
@@ -66,7 +65,6 @@ turnin Fire Taboo
 accept Blisters on The Land
 complete Blisters on The Land | Fen Creepers in the marshes.
 turnin Blisters on The Land
-turnin 647 MacKreel's Moonshine [optional] | Turned in at Hillsbrad Foothills.
 accept 968 The Powers Below [optional]
 turnin Digging Through the Ooze
 accept 637 Sully Balloo's Letter
@@ -115,3 +113,5 @@ accept 292 The Eye of Paleth
 grind 28 Cursed Marine, Cursed Sailor, Giant Wetlands Crocolisk [at=15.1,27.0] | The next steps expect level 28 and the quests here don't quite get you there: grind these until you reach it.
 train | Ironforge via the Dun Algaz pass and Thelsamar.
 note Head north through the Thandol Span into Arathi, then west to Southshore (Hillsbrad Foothills).
+accept 647 MacKreel's Moonshine [optional] | Needs level 28. If you are lower, {name} skips it and moves on.
+turnin 647 MacKreel's Moonshine [optional] | Turned in at Hillsbrad Foothills.

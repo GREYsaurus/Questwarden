@@ -34,6 +34,7 @@ Why these defaults: quest automation only touches quests the guide was going to 
 2. **A reward is never chosen for you.** If the reward panel offers more than one choice, the add-on stops, leaves the panel open and prints *"Choose your reward"*. The guide advances only when the game reports `QUEST_TURNED_IN`. With zero or one reward there is nothing to choose: the default UI pre-selects a single reward, and the add-on clicks *Complete Quest*. If the client cannot report the number of choices, the quest stays manual.
 3. **Nothing is reported until the game confirms it.** "Accepted" waits for `QUEST_ACCEPTED`, and "Turned in" waits for `QUEST_TURNED_IN`. A junk sale counts only when the bag slot is actually empty. If confirmation does not arrive within 4 seconds, you get a "could not confirm" message and the guide does not advance.
 4. **Quests shared by other players are never accepted automatically**, and quests that **cost money** to complete stay manual.
+5. **Timed quests are never accepted automatically.** Their clock starts when you accept, so you choose the moment. The add-on warns instead (*Warn Before Timed Quests*). The time limits are in `Database/QuestTimers.lua`.
 
 ## Quest automation flow
 

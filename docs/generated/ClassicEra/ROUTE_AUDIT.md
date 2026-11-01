@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 40 |
 | Level-gated pickups | 14 |
 | Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 514 |
+| Hub revisits (all guides) | 512 |
 
 ## Per guide
 
@@ -25,7 +25,7 @@ No baseline file found.
 |---|---|---|---|---|---|---|---|---|---|---|
 | A_10_Darkshore | 139 | 40 | 344 | 373 | 11 | 0 | 7 | 0 | 0 | 0 |
 | A_11_LochModan | 90 | 28 | 173 | 412 | 4 | 5 | 0 | 0 | 0 | 0 |
-| A_12_Darkshore | 82 | 19 | 513 | 555 | 7 | 0 | 0 | 0 | 6 | 3 |
+| A_12_Darkshore | 82 | 19 | 474 | 566 | 8 | 0 | 0 | 0 | 6 | 3 |
 | A_13_Ashenvale | 40 | 17 | 86 | 183 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_14_StonetalonMountains | 29 | 8 | 176 | 176 | 5 | 0 | 0 | 0 | 1 | 0 |
 | A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -56,7 +56,7 @@ No baseline file found.
 | A_40_SearingGorge | 57 | 19 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
 | A_41_Feralas | 29 | 6 | 185 | 185 | 2 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_43_Tanaris | 36 | 12 | 166 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
+| A_43_Tanaris | 36 | 12 | 205 | 169 | 2 | 0 | 0 | 0 | 1 | 3 |
 | A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 490 | 490 | 8 | 0 | 0 | 0 | 3 | 0 |
@@ -71,14 +71,14 @@ No baseline file found.
 | A_55_Felwood | 12 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_56_Azshara | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_57_Tanaris | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_58_UnGoroCrater | 32 | 7 | 426 | 426 | 5 | 0 | 0 | 0 | 1 | 1 |
+| A_58_UnGoroCrater | 32 | 7 | 345 | 345 | 4 | 0 | 0 | 0 | 1 | 1 |
 | A_59_Silithus | 51 | 15 | 297 | 249 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_60_EasternPlaguelands | 20 | 7 | 313 | 313 | 3 | 0 | 0 | 0 | 0 | 12 |
 | A_61_Winterspring | 29 | 11 | 201 | 201 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_DwarfGnome_DunMorogh | 133 | 46 | 376 | 407 | 18 | 0 | 2 | 0 | 0 | 0 |
 | A_Human_Elwynn | 200 | 69 | 913 | 741 | 21 | 3 | 0 | 1 | 1 | 2 |
-| A_NightElf_Teldrassil | 193 | 68 | 487 | 637 | 21 | 0 | 0 | 0 | 4 | 0 |
-| H_10_Barrens | 177 | 59 | 397 | 457 | 21 | 0 | 1 | 0 | 0 | 0 |
+| A_NightElf_Teldrassil | 193 | 68 | 491 | 642 | 21 | 0 | 0 | 0 | 4 | 0 |
+| H_10_Barrens | 177 | 59 | 344 | 458 | 21 | 0 | 1 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_12_Barrens | 122 | 40 | 406 | 475 | 16 | 0 | 2 | 0 | 3 | 4 |
 | H_13_StonetalonMountains | 43 | 19 | 174 | 199 | 2 | 0 | 0 | 0 | 1 | 0 |
@@ -112,11 +112,11 @@ No baseline file found.
 | H_41_SearingGorge | 51 | 17 | 149 | 147 | 3 | 0 | 0 | 0 | 2 | 3 |
 | H_42_SwampofSorrows | 35 | 9 | 149 | 120 | 1 | 0 | 0 | 0 | 2 | 0 |
 | H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_44_Tanaris | 29 | 10 | 157 | 142 | 3 | 0 | 0 | 0 | 1 | 0 |
+| H_44_Tanaris | 29 | 10 | 196 | 161 | 2 | 0 | 0 | 0 | 1 | 0 |
 | H_45_Azshara | 20 | 3 | 58 | 58 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_46_Hinterlands | 39 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_47_BlastedLands | 24 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_48_UnGoroCrater | 65 | 22 | 776 | 776 | 15 | 0 | 0 | 0 | 4 | 1 |
+| H_48_UnGoroCrater | 65 | 22 | 840 | 840 | 16 | 0 | 0 | 0 | 4 | 1 |
 | H_49_BurningSteppes | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_50_Azshara | 12 | 4 | 112 | 112 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_51_Felwood | 42 | 12 | 222 | 222 | 3 | 1 | 0 | 0 | 2 | 0 |
@@ -127,7 +127,7 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 50 | 14 | 323 | 283 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 225 | 71 | 515 | 572 | 19 | 0 | 0 | 0 | 1 | 6 |
+| H_OrcTroll_Durotar | 225 | 71 | 503 | 560 | 18 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 235 | 435 | 13 | 0 | 0 | 0 | 5 | 0 |
 | H_Undead_Tirisfal | 136 | 46 | 164 | 246 | 13 | 0 | 0 | 1 | 0 | 0 |
 
@@ -227,7 +227,7 @@ None.
 - A_Human_Elwynn: reduced-XP quest: Wine Shop Advert (332, level 2) at estimated level 10.6
 - H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:56, Scourge/WARRIOR]
 - H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.5 (quests only: 17) [horde/12_barrens.guide:94, Orc/WARLOCK]
-- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.4 (quests only: 17) [horde/12_barrens.guide:92, Troll/PRIEST]
+- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.3 (quests only: 17) [horde/12_barrens.guide:92, Troll/PRIEST]
 - H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 30.0 (quests only: 29) [horde/21_hillsbradfoothills.guide:38, Orc/WARRIOR]
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8

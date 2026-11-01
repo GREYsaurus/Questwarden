@@ -152,7 +152,7 @@ function GetNumQuestLogEntries() return #MOCK.questLog, #MOCK.questLog end
 function GetQuestLogTitle(i)
     local q = MOCK.questLog[i]
     if not q then return nil end
-    return q.title, 1, nil, false, false, q.complete and 1 or nil, nil, q.id
+    return q.title, 1, nil, false, false, (q.failed and -1) or (q.complete and 1) or nil, nil, q.id
 end
 function GetNumQuestLeaderBoards(i) return #(MOCK.questLog[i].objectives or {}) end
 function GetQuestLogLeaderBoard(o, i)
