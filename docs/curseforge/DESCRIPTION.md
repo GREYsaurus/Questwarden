@@ -9,7 +9,7 @@
 - **Step-by-step routes for every race and class**, from your start zone to level cap, following a planned zone order.
 - **Two route flavors:** Speed, and Hardcore, which leaves out risky pulls and adds warnings before dangerous spots. On Hardcore realms the Hardcore route turns on by itself.
 - **Built-in quest database** (from QuestieDB), so Questie is not required.
-- **Navigation:** arrow, map pins and optional TomTom waypoints; flight-path help with your known flight paths.
+- **Navigation:** built-in arrow, world-map pin and minimap pin (no other add-on needed); flight-path help with your known flight paths.
 - **Talents:** a talent calculator and leveling builds for each class.
 - **Quality-of-life:** quest automation that never auto-accepts escorts, trainer suggestions, gear upgrade hints, optional map pins for rares, elites and spirit healers.
 - **Every step can be completed or skipped by hand**, so you never get stuck.

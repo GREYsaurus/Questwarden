@@ -14,8 +14,6 @@
 4. Start the game. On the character screen, open **AddOns** and make sure **Questwarden** is enabled.
 5. Log in. Type `/qw help` for commands, and `/qw debug` to see which client the build was made for.
 
-Optional: install **TomTom** for its waypoint arrow as well as the built-in one.
-
 **World of Warcraft: Forever:** there is no Forever build yet. The Forever AddOns folder will be confirmed after launch (2026-11-04). The Classic Era build will not load guides on a Forever client: it says so at login.
 
 ### Upgrading

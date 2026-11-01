@@ -41,7 +41,6 @@ ns.Target = {
     xpRate = 1,
 
     integrations = {
-        TomTom = true,
         Questie = false,
     },
 }

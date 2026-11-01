@@ -332,6 +332,8 @@ pages.advanced = { title = "Advanced Settings", items = function() return {
       get = function() return ns.Assist:LuaErrors() end, set = function(v) ns.Assist:LuaErrors(v) end,
       tip = "The game's own Lua error pop-up (scriptErrors setting)." },
     T("showMapPins", "Disable Map Pins", { invert = true }),
+    T("showMinimapPin", "Show Minimap Waypoint", { tip = "A pin for the current waypoint on the minimap; it sits on the minimap's edge while the target is out of range.",
+      after = function() ns.Nav:UpdateMinimapPin() end }),
 } end }
 
 local function profileNames(exclude)

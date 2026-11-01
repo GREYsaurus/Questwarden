@@ -87,11 +87,6 @@ GetUnspentTalentPoints        # guarded (newer clients)
 GetSpellTexture               # core
 GetSpellInfo                  # core
 
-# --- optional integrations ---
-TomTom                        # optional add-on
-TomTom.AddWaypoint
-TomTom.RemoveWaypoint
-
 # --- automation: bags / items / money (added 0.2.0) ---
 # Evidence: Questie v12.3.1 (TOC 20506) QuestieCompat.lua uses C_Container with a fallback to the
 # globals; warcraft.wiki.gg lists C_Container.UseContainerItem for TBC Classic 2.5.6.
@@ -306,6 +301,7 @@ Enum                              # client enums (Enum.PlayerInteractionType.Bin
 Enum.PlayerInteractionType        # Binder interaction type for the bind confirmation
 C_Map.GetAreaInfo                 # localized area names for bind steps (Core/Bind.lua)
 IsInInstance                      # hunting routes stop inside instances (Core/Roam.lua)
+IsIndoors                         # core; the minimap shows fewer yards indoors (Core/Navigation.lua minimap pin). Approved 2026-11-01
 SecureActionButtonMixin           # modern secure template present: register down+up clicks (UI/ActiveItems.lua)
 ChatEdit_InsertLink               # shift-click an active item to link it in chat
 UnitIsGhost                       # corpse waypoint: only while a ghost (Core/Corpse.lua)

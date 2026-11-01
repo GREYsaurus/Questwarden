@@ -1,4 +1,4 @@
--- Questwarden - waypoints: built-in arrow, world map pin, optional TomTom integration
+-- Questwarden - waypoints: built-in arrow, world map pin and minimap pin
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -52,15 +52,15 @@ function Nav:SetMapTarget(mapId, x, y, label, owner, areaId)
     local t = self.target
     if t and t.mapId == mapId and t.x == x and t.y == y then t.label = label or "" return end
     self.target = { area = areaId, mapId = mapId, x = x, y = y, label = label or "" }
-    self:UpdateTomTom()
     self:UpdateMapPin()
+    self:UpdateMinimapPin()
     if self.arrow then self.arrow:SetShown(ns.db.profile.showArrow and ns.Assist:FramesAllowed()) end
 end
 
 function Nav:Clear()
     self.target, self.owner = nil, nil
-    self:UpdateTomTom()
     self:UpdateMapPin()
+    self:UpdateMinimapPin()
     if self.arrow then self.arrow:Hide() end
 end
 
@@ -90,19 +90,81 @@ function Nav:Vector()
     return dist, angle
 end
 
--- TomTom (optional) ----------------------------------------------------------------------------
+-- Minimap pin ---------------------------------------------------------------------------------
+-- The minimap shows a fixed number of yards across per zoom level (fewer indoors). These are the Classic
+-- client's sizes, the same ones map-pin libraries use; the pin is placed from the player's and the target's
+-- world positions, turned with the player when the minimap rotates, and kept on the edge when out of range.
 
-function Nav:UpdateTomTom()
-    if self.tomtomUid and TomTom and TomTom.RemoveWaypoint then
-        pcall(TomTom.RemoveWaypoint, TomTom, self.tomtomUid)
-        self.tomtomUid = nil
-    end
+local MINIMAP_YARDS = {
+    outdoor = { [0] = 466 + 2 / 3, 400, 333 + 1 / 3, 266 + 2 / 3, 200, 133 + 1 / 3 },
+    indoor = { [0] = 300, 240, 180, 120, 80, 50 },
+}
+
+-- Pixel offset of the target from the minimap centre (right, up) and whether it is on the edge; nil when
+-- either position is unknown or the target is on another continent.
+function Nav:MinimapOffset()
     local t = self.target
-    if not t or not ns.db.profile.useTomTom or not ns.Target.integrations.TomTom then return end
-    if not (TomTom and TomTom.AddWaypoint) then return end
-    local ok, uid = pcall(TomTom.AddWaypoint, TomTom, t.mapId, t.x / 100, t.y / 100,
-        { title = ns.name .. ": " .. (t.label or ""), persistent = false, minimap = true, world = true })
-    if ok then self.tomtomUid = uid end
+    if not t or not Minimap then return nil end
+    local pMap, px, py = C.GetPlayerMapPosition()
+    if not px then return nil end
+    local c1, x1, y1 = C.MapToWorld(pMap, px, py)
+    local c2, x2, y2 = C.MapToWorld(t.mapId, t.x, t.y)
+    if not c1 or not c2 or c1 ~= c2 then return nil end
+    local north, east = x2 - x1, -(y2 - y1) -- world X = north, world Y = west
+    if GetCVar and GetCVar("rotateMinimap") == "1" then
+        local f = C.GetPlayerFacing()
+        if not f then return nil end
+        north, east = -east * math.sin(f) + north * math.cos(f), east * math.cos(f) + north * math.sin(f)
+    end
+    local sizes = (IsIndoors and IsIndoors()) and MINIMAP_YARDS.indoor or MINIMAP_YARDS.outdoor
+    local zoom = Minimap.GetZoom and Minimap:GetZoom() or 0
+    local radius = (Minimap:GetWidth() or 140) / 2
+    local scale = radius * 2 / (sizes[zoom] or sizes[0])
+    local rx, ry = east * scale, north * scale
+    local d = math.sqrt(rx * rx + ry * ry)
+    local edge = d > radius - 6
+    if edge and d > 0 then rx, ry = rx / d * (radius - 6), ry / d * (radius - 6) end
+    return rx, ry, edge
+end
+
+function Nav:UpdateMinimapPin()
+    local pin = self.mpin
+    if not pin then return end
+    if not self.target or not ns.db.profile.showMinimapPin then pin:Hide() return end
+    local rx, ry, edge = self:MinimapOffset()
+    if not rx then pin:Hide() return end
+    pin:ClearAllPoints()
+    pin:SetPoint("CENTER", Minimap, "CENTER", rx, ry)
+    pin:SetAlpha(edge and 0.6 or 1)
+    pin:Show()
+end
+
+local function createMinimapPin()
+    local pin = CreateFrame("Frame", ns.name .. "MinimapPin", Minimap)
+    pin:SetSize(14, 14)
+    pin:SetFrameLevel((Minimap:GetFrameLevel() or 1) + 5)
+    local tex = pin:CreateTexture(nil, "OVERLAY")
+    tex:SetAllPoints()
+    tex:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon") -- stock client texture, as on the world map
+    pin:EnableMouse(true)
+    pin:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:AddLine(ns.name)
+        GameTooltip:AddLine(Nav.target and Nav.target.label or "", 1, 1, 1)
+        GameTooltip:Show()
+    end)
+    pin:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    pin:Hide()
+    -- Repositioned as the player moves and turns (on a separate frame, so it keeps running while hidden).
+    local acc = 0
+    local ticker = CreateFrame("Frame")
+    ticker:SetScript("OnUpdate", function(_, elapsed)
+        acc = acc + elapsed
+        if acc < (ns.db.profile.lowQuality and 0.3 or 0.1) then return end
+        acc = 0
+        Nav:UpdateMinimapPin()
+    end)
+    return pin
 end
 
 -- World map pin --------------------------------------------------------------------------------
@@ -219,6 +281,7 @@ end
 function Nav:Init()
     self.arrow = createArrow()
     self.pin = createPin()
+    if Minimap then self.mpin = createMinimapPin() end
     if WorldMapFrame then
         WorldMapFrame:HookScript("OnShow", function() Nav:UpdateMapPin() end)
         if WorldMapFrame.OnMapChanged then

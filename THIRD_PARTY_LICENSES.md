@@ -77,4 +77,4 @@ These are factual game mechanics (talent positions and names), and they are what
 
 ## 4. Optional integrations (not bundled)
 
-- **TomTom** - if installed, Questwarden sends waypoints to it. Nothing from TomTom is distributed with Questwarden.
+None. Questwarden used to send waypoints to TomTom if it was installed; that was removed in 0.1.0-alpha.6, and its own arrow, world-map pin and minimap pin replace it.

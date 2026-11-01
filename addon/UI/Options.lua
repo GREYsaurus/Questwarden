@@ -16,7 +16,7 @@ local CHECKS = {
     { "autoAdvance", "Advance automatically when a step's completion is detected" },
     { "showArrow", "Show the navigation arrow" },
     { "showMapPins", "Show the current target on the world map" },
-    { "useTomTom", "Send waypoints to TomTom (if installed)" },
+    { "showMinimapPin", "Show the current target on the minimap" },
     -- After setup these two are per character (Core/Setup.lua), so they go through its accessors.
     { "showDungeonSteps", "Include Dungeon Quests", get = function() return ns.Setup:DungeonsOn() end, set = function(v) ns.Setup:SetDungeonsOn(v) end },
     { "showElite", "Show elite / group quest steps", get = function() return ns.Engine:EliteOn() end, set = function(v) ns.Setup:SetElite(v) end },
@@ -114,7 +114,7 @@ function Options:Apply()
         ns.MainFrame:Render()
     end
     ns.Nav:UpdateMapPin()
-    ns.Nav:UpdateTomTom()
+    ns.Nav:UpdateMinimapPin()
     if ns.MinimapButton then ns.MinimapButton:Update() end
     if ns.Engine.guide then ns.Engine:Refresh() end
 end

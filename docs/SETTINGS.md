@@ -162,6 +162,7 @@ None of this has been tested in the game client yet.
   - *Disable step skips*: nothing is skipped automatically.
   - *Display Lua Errors*: the game's own error pop-up.
   - *Disable Map Pins*.
+  - *Show Minimap Waypoint* (on by default): a pin for the current waypoint on the minimap; on the minimap edge while out of range.
 
 ### Profiles
 - **Profiles hold settings.** Guide progress, talents and junk-sale totals always stay with the character.
@@ -180,7 +181,7 @@ None of this has been tested in the game client yet.
 - text colours;
 - guide window scale, font size, steps shown and step list;
 - arrow scale;
-- map pin and TomTom.
+- map pin (TomTom support was removed in 0.1.0-alpha.6; the minimap pin is next to *Disable Map Pins*).
 
 **Options with nothing to act on in Questwarden** were removed:
 - *Detect Rate* and *Experience rates*;

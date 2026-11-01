@@ -6,7 +6,6 @@
 ## Category: Quests
 ## SavedVariables: {{NAME}}DB
 ## SavedVariablesPerCharacter: {{NAME}}CharDB
-## OptionalDeps: TomTom
 ## X-License: GPL-3.0-only
 ## X-Target: {{TARGET_TITLE}}
 {{EXTRA}}

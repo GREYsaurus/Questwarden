@@ -12,7 +12,7 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide): it f
 - **Two route flavors:** Speed (default), and Hardcore/Survival, which avoids dangerous mobs and risky pulls, adds warnings, and never relies on a soulstone or Reincarnation.
 - **Every step can be completed or skipped by hand**, so you never get stuck. Automatic progression from the quest log, quest-completion flags, level, hearthstone and flight paths.
 - **Bundled quest database** derived from QuestieDB, so Questie is not required.
-- **Navigation:** built-in arrow, world-map pin and optional TomTom waypoints.
+- **Navigation:** built-in arrow, world-map pin and minimap pin; no other add-on needed.
 - **Talent guide and calculator** from client data, with leveling and level-60 builds (tank, healer and DPS where relevant), each checked point by point against the 51-point Classic trees.
 - **Quest automation** that never auto-accepts escort quests and never picks rewards for you, junk selling (off by default), orphaned-quest finder, raid markers, gear scoring with researched stat weights, auto-equip (never Bind-on-Equip), bag-addon markers, an auction house Upgrades tab, flight/inn/gossip automation, a leveling tracker, and a settings window with profiles.
 

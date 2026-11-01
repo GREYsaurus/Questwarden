@@ -45,7 +45,6 @@ ns.Target = {
 
     -- Optional integrations (all optional; the guide works without any of them) ----------------
     integrations = {
-        TomTom = true,       -- waypoints via TomTom if it is loaded
         Questie = false,     -- we never require Questie; set true to read its map icons (not implemented)
     },
 }

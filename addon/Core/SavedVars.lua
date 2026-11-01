@@ -25,7 +25,7 @@ local profileDefaults = {
         autoSelectGuide = true,   -- pick a guide automatically on first login
         showArrow = true,
         showMapPins = true,
-        useTomTom = true,
+        showMinimapPin = true,    -- current waypoint on the minimap (Core/Navigation.lua)
         stepsShown = 4,           -- current step + upcoming
         scale = 1,
         locked = false,
@@ -185,6 +185,7 @@ end
 -- Fills a profile table with defaults and repairs invalid values.
 function ns.FixProfile(p)
     ns.Merge(p, profileDefaults)
+    p.useTomTom = nil -- TomTom support was removed (0.1.0-alpha.6); the built-in arrow and pins replace it
     local dm = p.defaultMarker
     if type(dm) ~= "number" or dm < 1 or dm > 8 then p.defaultMarker = 8 end
     if p.junkModifier ~= "CTRL" and p.junkModifier ~= "ALT" and p.junkModifier ~= "SHIFT" then p.junkModifier = "CTRL" end

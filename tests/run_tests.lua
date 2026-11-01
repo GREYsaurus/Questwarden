@@ -254,6 +254,7 @@ dofile("tests/test_roam.lua")
 dofile("tests/test_corpse.lua")
 dofile("tests/test_completionist.lua")
 dofile("tests/test_setup.lua")
+dofile("tests/test_navigation.lua")
 
 print(string.format("%d passed, %d failed", passes, failures))
 os.exit(failures == 0 and 0 or 1)

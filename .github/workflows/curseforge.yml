@@ -92,8 +92,7 @@ jobs:
               changelog: $rel[0].body,
               changelogType: "markdown",
               gameVersions: $versions,
-              releaseType: (if ($tag | test("alpha")) then "alpha" elif $rel[0].isPrerelease then "beta" else "release" end),
-              relations: {projects: [{slug: "tomtom", type: "optionalDependency"}]}}' > metadata.json
+              releaseType: (if ($tag | test("alpha")) then "alpha" elif $rel[0].isPrerelease then "beta" else "release" end)}' > metadata.json
           cat metadata.json | jq 'del(.changelog)'
           curl -sSf -H "X-Api-Token: $CF_API_KEY" \
             -F "metadata=<metadata.json" \
