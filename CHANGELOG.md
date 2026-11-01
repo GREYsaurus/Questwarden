@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.27 (2026-11-01)
 
 - **Help for players new to World of Warcraft.** All off by default; turn them on in the setup wizard's new *Helpers* page or in the settings (docs/NEW_PLAYERS.md):
   - **Explain steps and the basics** (Tips → New Players): the first time each kind of step comes up, one chat line says what to do and which key opens what. Also full bags, your first death and talent points. `/qw newplayer reset` shows them again.
@@ -17,6 +17,8 @@
   - **Accent Colour** (General, Window): blue (default), teal, green, purple, gold or red, after `/reload`. Windows have a soft shadow.
 - **Clean-up:** the colours of the setup wizard, settings window, talent window, Active Targets and gear tooltips now come from the shared theme (`W.THEME`: new `good`, `gold`, `warn` and `bad` entries), so some shades are slightly different. Junk handling moved from `Core/Assist.lua` into `Core/Junk.lua` without changing what it does. `THIRD_PARTY_LICENSES.md` now says correctly that the talent plans are Icy Veins' talent allocations (facts, not guide text).
 - **The setup wizard asks first whether you are new to World of Warcraft.** New players get six pages in plain words: the talents page asks whether they want to tank, heal or deal damage (or don't know yet) and suggests a talent plan for it, and the dungeons page explains dungeons and picks the recommended ones (those the guides have quests for), so new players learn to run them. No leveling-mode or training choices; those keep their defaults. Experienced players get every page as before. Both end with the Helpers page.
+
+**Tested:** offline only (TBC suite 5,480/5,480, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.26 (2026-11-01)
 

@@ -2,7 +2,7 @@
   "_comment": "The add-on's name, in ONE place. tools/build.ps1 names the staged add-on folder, the TOC, Bindings.xml, the SavedVariables and the release zips after `name`, and writes `slash` into Config/Brand.lua. Lua code derives every global from the folder name at runtime (Core/Init.lua). To rename: tools/build.ps1 rename <NewName> [<slash>]. Players' saved settings are stored under <name>DB, so renaming after a release starts them fresh.",
   "name": "Questwarden",
   "slash": "qw",
-  "version": "0.1.0-alpha.26",
+  "version": "0.1.0-alpha.27",
   "author": "GREYsaurus",
   "notes": "Free leveling guides, bundled quest database and talent guide. GPL-3.0."
 }
