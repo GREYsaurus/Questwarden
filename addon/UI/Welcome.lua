@@ -1,4 +1,4 @@
--- Questwarden - setup wizard: route and mode, talent plan, dungeons, options, review (per character)
+-- Questwarden - setup wizard: new to WoW?, route and mode, talent plan, dungeons, options, helpers, review
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -9,7 +9,9 @@
 -- The window only edits the draft of Core/Setup.lua; Finish Setup applies it there. Shown by itself once per
 -- character until setup is finished (not again in the same session after Set Up Later or closing), and from
 -- Settings -> General -> Run Setup Again or /qw setup. Every step is one scrolling page that is laid out again
--- from the draft after each change (widgets are pooled, nothing expensive runs on a click).
+-- from the draft after each change (widgets are pooled, nothing expensive runs on a click). The first page asks
+-- whether the player is new to World of Warcraft; the pages after it follow that answer (Setup:Steps).
+-- New players see plain words and fewer choices; nothing on their pages assumes they know the game.
 
 local _, ns = ...
 
@@ -17,6 +19,7 @@ local WL = { pools = {} }
 ns.Welcome = WL
 
 local W = ns.Widgets
+local T = W.THEME
 local function S() return ns.Setup end
 
 local FW, FH, CW = 540, 580, 486 -- frame size, content width
@@ -27,24 +30,25 @@ WL.MODES = {
     { "completionist", "Completionist (every eligible quest)" },
 }
 
--- Older callers --------------------------------------------------------------------------------------
-function WL:Migrate() S():Migrate() end
-function WL:Needed() return S():Needed() end
-function WL:Draft() return self.draft or S():Draft() end
-
 -- Pooled widgets ------------------------------------------------------------------------------------
 
 local function makeOption(parent)
-    local row = CreateFrame("Button", nil, parent)
-    row:SetSize(CW, 20)
+    -- A card: panel background and border (accent border when chosen), the check on the left.
+    local row = CreateFrame("Button", nil, parent, ns.Compat.BackdropTemplate)
+    row:SetSize(CW, 30)
+    W.Skin(row, "panel")
+    local hl = row:CreateTexture(nil, "HIGHLIGHT")
+    hl:SetPoint("TOPLEFT", 1, -1)
+    hl:SetPoint("BOTTOMRIGHT", -1, 1)
+    W.Color(hl, T.hover, 0.35)
     row.check = W.Check(row)
-    row.check:SetPoint("TOPLEFT", 0, -1)
+    row.check:SetPoint("TOPLEFT", 8, -7)
     row.label = W.Text(row, "GameFontHighlight", "LEFT")
-    row.label:SetPoint("TOPLEFT", 26, -2)
-    row.label:SetWidth(CW - 30)
+    row.label:SetPoint("TOPLEFT", 34, -9)
+    row.label:SetWidth(CW - 44)
     row.note = W.Text(row, "GameFontHighlightSmall", "LEFT")
-    row.note:SetPoint("TOPLEFT", 26, -18)
-    row.note:SetWidth(CW - 30)
+    row.note:SetPoint("TOPLEFT", 34, -26)
+    row.note:SetWidth(CW - 44)
     local function click()
         if row.enabled and row.onClick then row.onClick() end
         WL:Render()
@@ -83,7 +87,7 @@ function WL:Text(str, font, color)
     fs:SetWidth(CW)
     fs:SetPoint("TOPLEFT", 4, self.y)
     fs:SetText(str)
-    if color then fs:SetTextColor(color[1], color[2], color[3]) else fs:SetTextColor(1, 1, 1) end
+    W.TextColor(fs, color or T.text)
     self.y = self.y - (fs:GetStringHeight() or 12) - 6
     return fs
 end
@@ -91,8 +95,14 @@ end
 function WL:Section(str)
     self:Gap(4)
     local fs = self:Text(str, "GameFontNormal")
-    fs:SetTextColor(1, 0.82, 0)
+    W.TextColor(fs, T.gold)
     return fs
+end
+
+-- A page title in large type.
+function WL:Title(str)
+    self:Gap(2)
+    return self:Text(str, "GameFontNormalLarge", T.text)
 end
 
 -- A check row (radio when `radio`): label, optional note under it, disabled with its reason.
@@ -103,11 +113,16 @@ function WL:Option(label, note, checked, enabled, onClick)
     row.note:SetText(note or "")
     row.check:SetChecked(checked and true or false)
     row.enabled, row.onClick = enabled ~= false, onClick
-    if row.enabled then row.check:Enable() row.label:SetTextColor(1, 1, 1) row.note:SetTextColor(0.75, 0.75, 0.75)
-    else row.check:Disable() row.label:SetTextColor(0.5, 0.5, 0.5) row.note:SetTextColor(0.5, 0.5, 0.5) end
-    local h = 20 + (note and note ~= "" and ((row.note:GetStringHeight() or 12) + 2) or 0)
+    if row.enabled then row.check:Enable() W.TextColor(row.label, T.text) W.TextColor(row.note, T.muted)
+    else row.check:Disable() W.TextColor(row.label, T.disabled) W.TextColor(row.note, T.disabled) end
+    local h = 30 + (note and note ~= "" and ((row.note:GetStringHeight() or 12) + 6) or 0)
     row:SetHeight(h)
-    self.y = self.y - h - 4
+    if row.SetBackdropColor then
+        local bg, edge = checked and T.raised or T.panel, (checked and row.enabled) and T.accent or T.border
+        row:SetBackdropColor(bg[1], bg[2], bg[3], bg[4])
+        row:SetBackdropBorderColor(edge[1], edge[2], edge[3], 1)
+    end
+    self.y = self.y - h - 6
     return row
 end
 
@@ -135,10 +150,49 @@ end
 
 local render = {}
 
+function render.welcome(d)
+    local ch = S():Character()
+    WL:Title("Welcome to " .. ns.name)
+    WL:Text(ns.name .. " is a leveling guide: it tells you, one step at a time, which quests to do and where to go, and an arrow on screen points the way.")
+    WL:Text(string.format("This is %s, a level %d %s %s (%s).", tostring(ch.name), ch.level, tostring(ch.raceName), tostring(ch.className), tostring(ch.faction)), nil, T.muted)
+    WL:Section("Is this your first time playing World of Warcraft?")
+    WL:Option("Yes, I am new to World of Warcraft",
+        "The next pages use plain words and choose sensible defaults for you. At the end you can turn on helpers that explain the game while you play.",
+        d.newPlayer == true, true, function() S():SetNewPlayer(d, true) end)
+    WL:Option("No, I have played before",
+        "All the choices: leveling mode, talent plan and gear profile, dungeons, class training and automatic upgrades.",
+        d.newPlayer == false, true, function() S():SetNewPlayer(d, false) end)
+    WL:Gap(4)
+    WL:Text("Either way, everything can be changed later in the settings (/" .. ns.slash .. " options) or by running setup again.", nil, T.muted)
+end
+
+-- New players: the guide to start with, plainly; no leveling mode choice when Speed is available.
+local function routeNew(d, ch)
+    local speed = S():ModeInfo("speed")
+    if not (speed and speed.available) then return false end
+    local rec = S():RecommendedGuide()
+    local recG = rec and ns.Guides:Get(rec)
+    WL:Text("The guide starts where your character is. Each step says what to do; when it is done, the guide moves on by itself.")
+    WL:Section("Where to start")
+    WL:Dropdown(WL.guideDD)
+    WL:Text("Best for your character right now: " .. (recG and recG.name or "none") .. ". If you are not sure, keep this one.")
+    if ns.Target.hardcore then
+        WL:Section("Hardcore")
+        if ch.hardcoreRealm then
+            WL:Option("Hardcore route", "You are on a Hardcore realm: if your character dies, it cannot come back. The guide leaves out the most dangerous steps.", true, false)
+        else
+            WL:Option("Hardcore route (one life)", "Only for characters that play Hardcore, where dying ends the character. Leave this off if you do not know what it is.", d.hardcore, true,
+                function() d.hardcore = not d.hardcore end)
+        end
+    end
+    return true
+end
+
 function render.route(d)
     local ch = S():Character()
+    if d.newPlayer and routeNew(d, ch) then return end
     WL:Text(string.format("%s: level %d %s %s, %s, %s. Known from the game; nothing to enter.",
-        tostring(ch.name), ch.level, tostring(ch.raceName), tostring(ch.className), tostring(ch.faction), ch.game), nil, { 0.75, 0.75, 0.75 })
+        tostring(ch.name), ch.level, tostring(ch.raceName), tostring(ch.className), tostring(ch.faction), ch.game), nil, T.muted)
     WL:Section("Leveling mode")
     for _, m in ipairs(S():Modes()) do
         WL:Option(m.name, m.available and m.text or m.why, d.mode == m.id, m.available, function() d.mode = m.id end)
@@ -166,11 +220,45 @@ function render.route(d)
 end
 
 function render.build(d)
+    if d.newPlayer then
+        WL:Text("From level 10 you get a talent point every level, to spend on a special ability or a bonus. A talent plan tells you which one to take. " .. ns.name .. " never spends points for you.")
+        WL:Section("What would you like to do in a group?")
+        WL:Text("In a dungeon, a group of five has one tank, one healer and three damage dealers.", nil, T.muted)
+        for _, r in ipairs(S().ROLES) do
+            WL:Option(r.name, r.text, d.role == r.id, true, function() S():SetRole(d, r.id) end)
+        end
+        if d.role == nil then return end
+        local advice = ns.ClassAdvice and ns.ClassAdvice:For(ns.Compat.PlayerInfo().class)
+        local suggested, fits = S():SuggestedPlan(d)
+        local role = S():RoleInfo(d.role)
+        if suggested then
+            WL:Section("Suggested: " .. suggested.name)
+            if not fits then
+                WL:Text(string.format("Your class has no %s plan here, so this is the usual leveling plan. Another class can %s.",
+                    string.lower(role.name), d.role == "tank" and "tank" or "heal"), nil, T.warn)
+            elseif suggested.default then
+                WL:Text("The usual way to level this class" .. (advice and advice.summary and (". " .. advice.summary) or "."))
+            else
+                WL:Text("Fits what you want to do in a group. It levels more slowly on your own than the usual plan, but finds dungeon groups faster.")
+            end
+        end
+        WL:Text("You can relearn talents later at your class trainer, for a fee.", nil, T.muted)
+        WL:Section("All talent plans")
+        for _, p in ipairs(S():Plans()) do
+            local r = p.role and (S().ROLE_TEXT[p.role] or p.role)
+            local note = (r and (r .. " ") or "") .. (p.summary or "")
+            WL:Option(p.name .. (suggested and p.id == suggested.id and " (suggested)" or ""), note, d.plan == p.id, true, function() S():SetPlan(d, p.id) end)
+        end
+        WL:Option("No talent plan", "Choose talents yourself. You still get a reminder when you have points to spend.",
+            d.plan == "none", true, function() S():SetPlan(d, "none") end)
+        WL:Text("Gear advice (which quest reward to take, which items are better) follows this plan.", nil, T.muted)
+        return
+    end
     WL:Text("A talent plan is a recommendation for this character. " .. ns.name .. " never spends talent points or changes gear: the plan drives the level-up reminder, the markers in the talent window and the calculator (/" .. ns.slash .. " talents). Plans start with the first talent point at level 10; you can pick one now.")
     local live, spent = ns.Talents:ReadLive(), 0
     for _, r in pairs(live or {}) do spent = spent + r end
     WL:Text(string.format("Your talents right now: %d point(s) spent, %d unspent. Choosing a plan does not change them.",
-        spent, ns.Compat.GetUnspentTalentPoints() or 0), nil, { 0.75, 0.75, 0.75 })
+        spent, ns.Compat.GetUnspentTalentPoints() or 0), nil, T.muted)
     WL:Section("Talent plan (" .. ns.Target.name .. ")")
     for _, p in ipairs(S():Plans()) do
         local note = (p.role and (p.role .. ". ") or "") .. (p.summary or "") .. (p.default and " Class default." or "")
@@ -183,7 +271,29 @@ function render.build(d)
     WL:Text("Scores gear for tooltips, quest rewards and bag markers. It follows your talent plan's tree unless you pick one here. * = estimated weights.")
 end
 
+-- New players: what dungeons are, and the recommended ones (those the leveling guides have quests for).
+local function dungeonsNew(d)
+    WL:Text("Dungeons are places for a group of five players, with tougher enemies, better rewards and quests of their own. They are a big part of the game and a good way to meet other players.")
+    WL:Text("When you reach a dungeon's level, a step says it is time to run it and the arrow points at the entrance. Find a group in the Looking for Group channel, your guild, or at the meeting stone near the dungeon. Not ready? Skip the step and keep questing; you can come back to it.", nil, T.muted)
+    WL:Option("Include the recommended dungeons (suggested)", "The guide picks up their quests on the way and takes you there at the right level.",
+        d.dungeons == "selected", true, function()
+            d.dungeons = "selected"
+            if #S():SelectedDungeons(d) == 0 then S():SelectAllDungeons(d) end
+        end)
+    WL:Option("Questing only", "No dungeons. You can turn them on later in Settings, Guide Routing.",
+        d.dungeons == "questing", true, function() d.dungeons = "questing" end)
+    if d.dungeons ~= "selected" then return end
+    WL:Section("Recommended dungeons")
+    for _, row in ipairs(S():Dungeons("speed")) do
+        if row.supported then
+            WL:Option(row.name, string.format("Levels %d-%d. %d quest(s) in your guides.", row.min, row.max, row.quests),
+                d.selected[row.id], true, function() d.selected[row.id] = (not d.selected[row.id]) or nil end)
+        end
+    end
+end
+
 function render.dungeons(d)
+    if d.newPlayer and d.mode == "speed" then return dungeonsNew(d) end
     if d.mode == "completionist" then
         WL:Text("Completionist routes the quests of every dungeon. Its quests are picked up once you reach the dungeon's usual level, and each dungeon gets a run step. A run step never marks a quest complete: skip it to keep questing, and the turn-ins appear when the quests are complete.")
         WL:Section("Dungeons routed")
@@ -192,7 +302,7 @@ function render.dungeons(d)
                 WL:Text(string.format("%s: levels %d-%d, %d quest(s); %s.", row.name, row.min, row.max, row.quests, row.note))
             end
         end
-        WL:Text("Your dungeon selection for Speed is kept and used if you switch to Speed.", nil, { 0.75, 0.75, 0.75 })
+        WL:Text("Your dungeon selection for Speed is kept and used if you switch to Speed.", nil, T.muted)
         return
     end
     WL:Option("Questing only", "No dungeon quests are routed. Dungeon quests already in your log keep their turn-in, which appears once they are complete.",
@@ -200,7 +310,7 @@ function render.dungeons(d)
     WL:Option("Include selected dungeons", "The guides add the quests of the dungeons you pick, where they place them. Picking a dungeon does not assume you have a group: skip its steps to put it off, nothing is marked complete.",
         d.dungeons == "selected", true, function() d.dungeons = "selected" end)
     if d.dungeons ~= "selected" then
-        WL:Text("Your dungeon picks are kept if you switch back.", nil, { 0.75, 0.75, 0.75 })
+        WL:Text("Your dungeon picks are kept if you switch back.", nil, T.muted)
         return
     end
     WL:Gap(2)
@@ -214,7 +324,7 @@ function render.dungeons(d)
         WL:Option(row.name, note, row.supported and d.selected[row.id], row.supported,
             function() d.selected[row.id] = (not d.selected[row.id]) or nil end)
     end
-    WL:Text("Dungeons of the other faction are not listed. Greyed out: the Speed leveling guides have no quests for that dungeon in this game version. This list only affects Speed; Completionist routes every dungeon's quests.", nil, { 0.75, 0.75, 0.75 })
+    WL:Text("Dungeons of the other faction are not listed. Greyed out: the Speed leveling guides have no quests for that dungeon in this game version. This list only affects Speed; Completionist routes every dungeon's quests.", nil, T.muted)
 end
 
 function render.prefs(d)
@@ -225,7 +335,7 @@ function render.prefs(d)
         for _, k in ipairs(S().INCLUDE_KINDS) do
             WL:Option(k[2], nil, d.include[k[1]], true, function() d.include[k[1]] = not d.include[k[1]] end)
         end
-        WL:Text("Off by default: they are counted in /" .. ns.slash .. " completionist but not routed.", nil, { 0.75, 0.75, 0.75 })
+        WL:Text("Off by default: they are counted in /" .. ns.slash .. " completionist but not routed.", nil, T.muted)
     end
     WL:Section("Class training")
     WL:Option("Suggest important spells", "Train steps and level-ups list the important ranks your class trainer has for you, with the trainer's prices. Default.",
@@ -235,9 +345,9 @@ function render.prefs(d)
     WL:Option("Learn recommended spells automatically", "Opt-in. When you open your class trainer, the ranks listed for you above are learned if you can afford them. Spends gold; one summary chat line per visit; hold Shift to skip. Change it later in Settings (Automatic Training).",
         d.autoTrain == "recommended", true, function() d.autoTrain = d.autoTrain == "recommended" and "off" or "recommended" end)
     if d.autoTrain == "all" then
-        WL:Text("Currently: everything you can afford is learned automatically (your earlier setting). Ticking the box above switches to recommended spells only.", nil, { 1, 0.82, 0.4 })
+        WL:Text("Currently: everything you can afford is learned automatically (your earlier setting). Ticking the box above switches to recommended spells only.", nil, T.warn)
     end
-    WL:Text("Built in: the trainer data comes from What's Training?, which does not need to be installed. Nothing is bought unless you turn on automatic training. In Completionist, a train step is added only when your trainer is in the zone you are questing in.", nil, { 0.75, 0.75, 0.75 })
+    WL:Text("Built in: the trainer data comes from What's Training?, which does not need to be installed. Nothing is bought unless you turn on automatic training. In Completionist, a train step is added only when your trainer is in the zone you are questing in.", nil, T.muted)
     WL:Section("Automatic upgrades")
     WL:Option("Equip upgrades from my bags automatically",
         d.gear and "Off unless you tick it. Empty slots are filled with usable items; filled slots only get a higher estimated score, not a guaranteed gain. Never in combat, and unbound Bind-on-Equip items are never equipped. This switch is part of your settings profile."
@@ -245,20 +355,37 @@ function render.prefs(d)
         d.autoEquip and d.gear, d.gear and true or false, function() d.autoEquip = not d.autoEquip end)
 end
 
+function render.helpers(d)
+    if d.newPlayer then
+        WL:Text("Helpers for your first character. They only add chat lines and hints; nothing is done for you. All are off until you tick them.")
+    else
+        WL:Text("Optional helpers, off unless you tick them. Handy when friends new to the game play with you.")
+    end
+    WL:Gap(2)
+    local y = WL.y
+    WL:Button("Turn On All", 140, function() S():SetAllHelpers(d, true) end)
+    WL:Button("Turn Off All", 140, function() S():SetAllHelpers(d, false) end, 154)
+    WL.y = y - 30
+    for _, h in ipairs(S():Helpers()) do
+        WL:Option(h.name, h.text, d.helpers[h.key], true, function() d.helpers[h.key] = not d.helpers[h.key] end)
+    end
+    WL:Text("Change them later in Settings: Tips -> New Players, Communications -> Play Together, General -> Simple settings view.", nil, T.muted)
+end
+
 function render.review(d)
     for _, l in ipairs(S():Summary(d)) do WL:Text(l) end
     local warn = S():Warnings(d)
     if #warn > 0 then
         WL:Section("Notes")
-        for _, w in ipairs(warn) do WL:Text(w, nil, { 1, 0.82, 0.4 }) end
+        for _, w in ipairs(warn) do WL:Text(w, nil, T.warn) end
     end
     local ok, errs = S():Validate(d)
     if not ok then
         WL:Section("Fix before finishing")
-        for _, e in ipairs(errs) do WL:Text(e, nil, { 1, 0.4, 0.3 }) end
+        for _, e in ipairs(errs) do WL:Text(e, nil, T.bad) end
     end
     WL:Gap(4)
-    WL:Text("Finish Setup saves these choices for this character and starts the route. Your quest history and guide progress are never reset. You can run setup again from Settings -> General.", nil, { 0.75, 0.75, 0.75 })
+    WL:Text("Finish Setup saves these choices for this character and starts the route. Your quest history and guide progress are never reset. You can run setup again from Settings -> General.", nil, T.muted)
 end
 
 -- Window --------------------------------------------------------------------------------------------
@@ -276,14 +403,10 @@ function WL:Build()
     self.progress = W.Text(f, "GameFontNormal", "LEFT")
     self.progress:SetPoint("TOPLEFT", 16, -38)
     self.progress:SetWidth(FW - 32)
+    -- A segmented progress bar, one segment per page; laid out in Render, since the number of pages follows
+    -- the first answer.
     self.dots = {}
-    for i, st in ipairs(S().STEPS) do
-        local t = W.Text(f, "GameFontHighlightSmall", "CENTER")
-        t:SetPoint("TOPLEFT", 16 + (i - 1) * ((FW - 32) / #S().STEPS), -58)
-        t:SetWidth((FW - 32) / #S().STEPS)
-        t:SetText(i .. ". " .. st.title)
-        self.dots[i] = t
-    end
+    for i = 1, #S().STEPS do self.dots[i] = f:CreateTexture(nil, "ARTWORK") end
     local scroll, content = W.Scroll(f, ns.name .. "WelcomeScroll")
     scroll:SetPoint("TOPLEFT", 16, -80)
     scroll:SetPoint("BOTTOMRIGHT", -34, 74)
@@ -292,7 +415,7 @@ function WL:Build()
     self.msg = W.Text(f, "GameFontHighlightSmall", "LEFT")
     self.msg:SetPoint("BOTTOMLEFT", 16, 46)
     self.msg:SetWidth(FW - 32)
-    self.msg:SetTextColor(1, 0.4, 0.3)
+    W.TextColor(self.msg, T.bad)
     self.back = W.Button(f, "Back", 90, 24, function() WL:Go(-1) end)
     self.back:SetPoint("BOTTOMLEFT", 16, 14)
     self.later = W.Button(f, "Set Up Later", 120, 24, function() WL:Later() end)
@@ -336,19 +459,29 @@ function WL:Build()
     return f
 end
 
-function WL:StepId() return S().STEPS[self.draft.step].id end
+function WL:Steps() return S():Steps(self.draft) end
+function WL:StepId() return self:Steps()[self.draft.step].id end
 
 -- Lays out the current step from the draft.
 function WL:Render()
     if not self.frame or not self.draft then return end
     local d = self.draft
-    local n = #S().STEPS
+    local steps = self:Steps()
+    local n = #steps
     self:Begin()
     render[self:StepId()](d)
     self.content:SetHeight(-self.y + 8)
-    self.progress:SetText(string.format("Step %d of %d: %s", d.step, n, S().STEPS[d.step].title))
+    self.progress:SetText(string.format("Step %d of %d: %s", d.step, n, steps[d.step].title))
+    local gap = 4
+    local w = (FW - 32 - (n - 1) * gap) / n
     for i, t in ipairs(self.dots) do
-        if i == d.step then t:SetTextColor(1, 0.82, 0) elseif i < d.step then t:SetTextColor(1, 1, 1) else t:SetTextColor(0.5, 0.5, 0.5) end
+        t:SetShown(i <= n)
+        if i <= n then
+            t:ClearAllPoints()
+            t:SetPoint("TOPLEFT", 16 + (i - 1) * (w + gap), -62)
+            t:SetSize(w, 4)
+            W.Color(t, i <= d.step and T.accent or T.raised, i < d.step and 0.55 or 1)
+        end
     end
     if d.step > 1 then self.back:Enable() else self.back:Disable() end
     self.nextB:SetShown(d.step < n)
@@ -363,9 +496,10 @@ function WL:Go(delta)
         local ok, errs = S():Validate(d, self:StepId())
         if not ok then self.msg:SetText(errs[1]) self:Render() return false end
     end
-    d.step = math.max(1, math.min(#S().STEPS, d.step + delta))
+    d.step = math.max(1, math.min(#self:Steps(), d.step + delta))
     self.msg:SetText("")
     if self.scroll.SetVerticalScroll then self.scroll:SetVerticalScroll(0) end
+    W.FadeIn(self.content, 0.15)
     self:Render()
     return true
 end

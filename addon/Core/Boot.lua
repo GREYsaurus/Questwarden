@@ -22,7 +22,7 @@ end
 
 ns:On("ADDON_LOADED", function(_, loaded)
     if loaded ~= addonName then return end
-    stage("saved variables", function() ns:InitSavedVariables() end)
+    stage("saved variables", function() ns:InitSavedVariables() ns.Widgets.ApplyAccent(ns.db.profile.accentColor) end)
     ns.version = ns.Compat.GetAddOnMetadata(addonName, "Version") or "dev"
     stage("database overrides", function() ns.QDB:ApplyOverrides() end)
 end)
@@ -53,6 +53,10 @@ ns:On("PLAYER_LOGIN", function()
     stage("group features", function() ns.Group:Init() end)
     stage("flight timers", function() ns.FlightTimer:Init() ns.FlightPaths:Init() end)
     stage("timed quests", function() ns.QuestTimer:Init() end)
+    stage("play together", function() ns.PlayTogether:Init() end)
+    stage("new-player tips", function() ns.NewPlayer:Init() ns.SpellCoach:Init() ns.ProfessionTips:Init() end)
+    stage("mount goal", function() ns.MountGoal:Init() end)
+    stage("session recap", function() ns.SessionRecap:Init() end)
     stage("active items", function() ns.ActiveItems:Init() end)
     stage("active targets", function() ns.ActiveTargets:Init() end)
     stage("leveling tracker", function() ns.LevelTracker:Init() end)
@@ -68,7 +72,7 @@ ns:On("PLAYER_LOGIN", function()
     stage("hearthstone suggestions", function() ns.Hearth:Init() end)
     stage("settings window", function() ns.Config:Create() end)
 
-    stage("first-login setup", function() ns.Welcome:Migrate() end)
+    stage("first-login setup", function() ns.Setup:Migrate() end)
     stage("guide selection", function()
         local active = ns.char.activeGuide
         if ns.Completionist:Active() then

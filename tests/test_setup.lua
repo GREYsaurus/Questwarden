@@ -52,15 +52,21 @@ check(d.mode == "speed" and d.step == 1 and S:GuideValid(d.guide), "defaults: Sp
 check(S:Validate(d, "route"), "the default route step is valid")
 local guideBefore = ns.char.activeGuide
 
+-- The first page asks whether the player is new; the experienced path has every page
+check(d.newPlayer == nil and S:Steps(d)[1].id == "welcome", "the first page asks whether the player is new")
+check(not WL:Go(1) and d.step == 1, "Next needs an answer on the first page")
+S:SetNewPlayer(d, false)
+check(#S:Steps(d) == 7 and WL:Go(1) and d.step == 2, "experienced: seven pages, Next moves to the route")
+
 -- Back and Next keep choices
-check(WL:Go(1) and d.step == 2, "Next moves to the talent step")
+check(WL:Go(1) and d.step == 3, "Next moves to the talent step")
 local plans = S:Plans()
 check(#plans >= 2, "warrior plans are offered (" .. #plans .. ")")
 for _, p in ipairs(plans) do check(ns.Talents:Get(p.id).class == "WARRIOR", "plan " .. p.id .. " is a warrior plan") end
 S:SetPlan(d, plans[2].id)
 WL:Go(1)
 WL:Go(-1)
-check(d.step == 2 and d.plan == plans[2].id, "Back keeps the chosen plan")
+check(d.step == 3 and d.plan == plans[2].id, "Back keeps the chosen plan")
 check(ns.char.talentBuild == nil and ns.char.mode == nil, "nothing is applied while choosing")
 
 -- Dismiss: not done, draft kept, not reopened this session
@@ -75,7 +81,7 @@ check(not WL.open, "a dismissed wizard does not reopen in the same session")
 login(orcSV, orc)
 WL:Init()
 MOCK.tick(2.5)
-check(WL.open and WL.draft.plan == plans[2].id and WL.draft.step == 2, "after a reload the wizard resumes the draft and step")
+check(WL.open and WL.draft.plan == plans[2].id and WL.draft.step == 3, "after a reload the wizard resumes the draft and step")
 d = WL.draft
 
 -- Invalid choices block finishing
@@ -83,9 +89,9 @@ local goodGuide = d.guide
 d.guide = false
 check(not WL:Finish() and not S:Done(), "Speed without a guide cannot be finished")
 d.guide = goodGuide
-d.step = 3
+d.step = 4
 d.dungeons, d.selected = "selected", {}
-check(not WL:Go(1) and d.step == 3 and WL.switchQ.shown, "no dungeon selected: Next is blocked and Questing Only is offered")
+check(not WL:Go(1) and d.step == 4 and WL.switchQ.shown, "no dungeon selected: Next is blocked and Questing Only is offered")
 WL.switchQ.scripts.OnClick(WL.switchQ)
 check(d.dungeons == "questing" and WL:Go(1), "Use Questing Only resolves it")
 
@@ -100,7 +106,7 @@ check(ns.char.routing == nil and ns.char.talentBuild == nil and ns.char.activeGu
 d.guide = goodGuide
 
 -- Finish
-d.step = 5
+d.step = 7
 check(WL:Finish(), "Finish Setup succeeds")
 check(S:Done() and ns.char.setup.draft == nil and ns.char.setup.version == S.VERSION, "setup is done, draft cleared, version saved")
 check(ns.char.mode == "speed" and E.guide and E.guide.id == goodGuide, "Standard (Speed) activates the chosen guide")

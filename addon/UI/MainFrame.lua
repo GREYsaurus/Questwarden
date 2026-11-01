@@ -16,6 +16,7 @@ local Main = { rows = {} }
 ns.MainFrame = Main
 
 local ROW_PAD = 4
+local CARD_PAD = 6 -- inner space of the current step's card
 Main.EMPTY_TEXT = "No guide selected.\nType |cffffd100/" .. ns.slash .. " guide|r to pick one, or |cffffd100/" .. ns.slash .. " auto|r for a recommendation."
 
 local function stepIcon(s, status)
@@ -37,18 +38,34 @@ end
 local function createRow(parent)
     local r = CreateFrame("Button", nil, parent)
     r:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    -- The current step is a card: a raised background with an accent bar on the left.
     r.hl = r:CreateTexture(nil, "BACKGROUND")
     r.hl:SetAllPoints()
-    W.Color(r.hl, W.THEME.accent, 0.10)
+    W.Color(r.hl, W.THEME.raised, 0.9)
+    r.accent = r:CreateTexture(nil, "BORDER")
+    r.accent:SetPoint("TOPLEFT")
+    r.accent:SetPoint("BOTTOMLEFT")
+    r.accent:SetWidth(3)
+    W.Color(r.accent, W.THEME.accent)
     r.icon = r:CreateTexture(nil, "ARTWORK")
-    r.icon:SetSize(14, 14)
-    r.icon:SetPoint("TOPLEFT", 2, -2)
+    r.icon:SetSize(16, 16)
+    r.icon:SetPoint("TOPLEFT", 9, -CARD_PAD)
     r.title = W.Text(r, "GameFontHighlight")
-    r.title:SetPoint("TOPLEFT", r.icon, "TOPRIGHT", 4, 1)
-    r.title:SetPoint("RIGHT", r, "RIGHT", -2, 0)
+    r.title:SetPoint("TOPLEFT", r.icon, "TOPRIGHT", 6, 0)
+    r.title:SetPoint("RIGHT", r, "RIGHT", -CARD_PAD, 0)
+    -- Objective progress of the current step (StepText:Progress), between the title and the details.
+    r.prog = CreateFrame("StatusBar", nil, r)
+    r.prog:SetHeight(4)
+    r.prog:SetPoint("TOPLEFT", r.title, "BOTTOMLEFT", 0, -4)
+    r.prog:SetPoint("RIGHT", r, "RIGHT", -CARD_PAD, 0)
+    r.prog:SetStatusBarTexture(W.FLAT)
+    r.prog:SetStatusBarColor(W.THEME.good[1], W.THEME.good[2], W.THEME.good[3])
+    r.prog:SetMinMaxValues(0, 1)
+    local pbg = r.prog:CreateTexture(nil, "BACKGROUND")
+    pbg:SetAllPoints()
+    W.Color(pbg, W.THEME.bg)
     r.detail = W.Text(r, "GameFontHighlightSmall")
-    r.detail:SetPoint("TOPLEFT", r.title, "BOTTOMLEFT", 0, -2)
-    r.detail:SetPoint("RIGHT", r, "RIGHT", -2, 0)
+    r.detail:SetPoint("RIGHT", r, "RIGHT", -CARD_PAD, 0)
     r:SetScript("OnClick", function(self, button)
         if not self.stepIndex then return end
         if button == "RightButton" then ns.Engine:Skip(self.stepIndex) else ns.Engine:MarkDone(self.stepIndex) end
@@ -119,11 +136,11 @@ function Main:Create()
     hdrBtn("Interface\\Buttons\\UI-SpellbookIcon-NextPage-Up", "Next step (/" .. ns.slash .. " next)", function() ns.Engine:Next() end)
     hdrBtn("Interface\\Buttons\\UI-SpellbookIcon-PrevPage-Up", "Previous step (/" .. ns.slash .. " prev)", function() ns.Engine:Prev() end)
 
-    -- Progress bar
+    -- Progress bar: a thin accent line under the header (the numbers are in the subline and its tooltip)
     local bar = CreateFrame("StatusBar", nil, f)
     bar:SetPoint("TOPLEFT", f, "TOPLEFT", 1, -43)
     bar:SetPoint("TOPRIGHT", f, "TOPRIGHT", -1, -43)
-    bar:SetHeight(6)
+    bar:SetHeight(3)
     bar:SetStatusBarTexture(W.FLAT)
     bar:SetStatusBarColor(W.THEME.accent[1], W.THEME.accent[2], W.THEME.accent[3])
     bar:SetMinMaxValues(0, 1)
@@ -131,8 +148,14 @@ function Main:Create()
     bg:SetAllPoints()
     W.Color(bg, W.THEME.raised)
     bar.text = W.Text(bar, "GameFontHighlightSmall", "CENTER")
-    bar.text:SetPoint("CENTER", 0, 0)
-    bar.text:SetFont(bar.text:GetFont(), 9)
+    bar.text:Hide()
+    bar:EnableMouse(true)
+    bar:SetScript("OnEnter", function(s)
+        GameTooltip:SetOwner(s, "ANCHOR_BOTTOM")
+        GameTooltip:AddLine(s.text:GetText() or "")
+        GameTooltip:Show()
+    end)
+    bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
     self.bar = bar
 
     -- Body
@@ -223,10 +246,11 @@ function Main:Render()
     self.empty:Hide()
     local color = (level < g.minLevel and "|cffff7744") or (level > g.maxLevel + 1 and "|cff999999") or "|cff55ff55"
     self.guideName:SetText(g.name)
-    self.subline:SetText(string.format("%sLv %d|r  -  guide %d-%d  -  %s", color, level, g.minLevel, g.maxLevel, zone))
     local done, total = E:Counts()
+    local pct = total > 0 and math.floor(done / total * 100) or 0
+    self.subline:SetText(string.format("%sLv %d|r  -  guide %d-%d  -  %s  -  %d%%", color, level, g.minLevel, g.maxLevel, zone, pct))
     self.bar:SetValue(total > 0 and done / total or 0)
-    self.bar.text:SetText(string.format("%d / %d steps (%d%%)", done, total, total > 0 and math.floor(done / total * 100) or 0))
+    self.bar.text:SetText(string.format("%d / %d steps (%d%%)", done, total, pct))
 
     if ns.db.frames.main.minimized then return end
 
@@ -259,10 +283,24 @@ function Main:Render()
         local details = cur and ns.StepText:Details(s) or {}
         r.detail:SetText(table.concat(details, "\n"))
         r.detail:SetShown(#details > 0)
-        r.title:SetAlpha(cur and 1 or 0.75)
+        r.title:SetAlpha(cur and 1 or 0.6)
+        r.icon:SetAlpha(cur and 1 or 0.6)
+        if r.icon.SetDesaturated then r.icon:SetDesaturated(not cur) end
         r.hl:SetShown(cur)
-        local h = r.title:GetStringHeight() + (#details > 0 and (r.detail:GetStringHeight() + 4) or 0) + ROW_PAD
+        r.accent:SetShown(cur)
+        local progress = cur and ns.StepText:Progress(s)
+        r.prog:SetShown(progress ~= nil)
+        if progress then r.prog:SetValue(progress) end
+        r.detail:ClearAllPoints()
+        r.detail:SetPoint("TOPLEFT", progress and r.prog or r.title, "BOTTOMLEFT", 0, progress and -5 or -3)
+        r.detail:SetPoint("RIGHT", r, "RIGHT", -CARD_PAD, 0)
+        local h = r.title:GetStringHeight() + (progress and 9 or 0) + (#details > 0 and (r.detail:GetStringHeight() + 4) or 0)
+            + (cur and CARD_PAD * 2 or ROW_PAD + CARD_PAD)
         r:SetHeight(h)
+        if n == 1 and self.firstStep ~= idx then
+            self.firstStep = idx
+            W.FadeIn(r, 0.25)
+        end
         r:ClearAllPoints()
         r:SetPoint("TOPLEFT", self.body, "TOPLEFT", 0, -y)
         y = y + h + 2

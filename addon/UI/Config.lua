@@ -23,10 +23,11 @@
 local _, ns = ...
 
 local W = ns.Widgets
-local CF = { pages = {}, built = {}, widgets = {} }
+local CF = { pages = {}, built = {}, widgets = {}, searchDefs = {} }
 ns.Config = CF
 
-CF.WIDTH, CF.HEIGHT = 900, 690
+CF.WIDTH, CF.HEIGHT = 1000, 690
+local SIDE = 170 -- sidebar width: search box and one entry per tab
 local COLS = 3
 local PAD = 18
 
@@ -104,17 +105,17 @@ function build.label(page, it, x, y, w)
 end
 
 function build.toggle(page, it, x, y, w)
-    local cb = W.Check(page)
+    local cb = W.Switch(page)
     cb:SetPoint("TOPLEFT", page, "TOPLEFT", x + 6, y - 5)
     local text = W.Text(cb, "GameFontHighlight")
-    text:SetPoint("LEFT", cb, "RIGHT", 8, 0)
-    text:SetWidth(w - 40)
+    text:SetPoint("LEFT", cb, "RIGHT", 10, 0)
+    text:SetWidth(w - 58)
     text:SetWordWrap(false)
     text:SetText(it.label)
     cb.label = text
     if it.planned then
         cb:Disable()
-        text:SetTextColor(0.5, 0.5, 0.5)
+        W.TextColor(text, W.THEME.disabled)
         tooltip(cb, it.label, PLANNED)
     else
         cb:SetScript("OnClick", function(s) setValue(it, s:GetChecked() and true or false) end)
@@ -126,7 +127,7 @@ function build.toggle(page, it, x, y, w)
         cb:SetChecked(getValue(it) and true or false)
         if it.disabled then
             local off = it.disabled()
-            if off then cb:Disable() text:SetTextColor(0.5, 0.5, 0.5) else cb:Enable() text:SetTextColor(1, 1, 1) end
+            if off then cb:Disable() W.TextColor(text, W.THEME.disabled) else cb:Enable() W.TextColor(text, W.THEME.text) end
         end
     end
     return w2
@@ -173,7 +174,7 @@ function build.range(page, it, x, y, w)
     end)
     if it.planned then
         s:Disable()
-        title:SetTextColor(0.5, 0.5, 0.5)
+        W.TextColor(title, W.THEME.disabled)
         tooltip(s, it.label, PLANNED)
     end
     local w2 = { height = 54, frame = s, box = box, item = it }
@@ -206,7 +207,7 @@ function build.select(page, it, x, y, w)
             return it.empty or ""
         end)
     dd:SetPoint("TOPLEFT", page, "TOPLEFT", x - 14, y - 14)
-    if it.planned then title:SetTextColor(0.5, 0.5, 0.5) end
+    if it.planned then W.TextColor(title, W.THEME.disabled) end
     local w2 = { height = 52, frame = dd, item = it }
     w2.sync = function()
         local cur = getValue(it)
@@ -259,7 +260,7 @@ function build.color(page, it, x, y, w)
         if sw.SetColorTexture then sw:SetColorTexture(c.r, c.g, c.b, 1) end
     end
     if it.planned then
-        text:SetTextColor(0.5, 0.5, 0.5)
+        W.TextColor(text, W.THEME.disabled)
         tooltip(b, it.label, PLANNED)
     else
         b:SetScript("OnClick", function() CF:PickColor(it, paint) end)
@@ -328,7 +329,7 @@ end
 -- Page layout --------------------------------------------------------------------------------------------
 
 function CF:BuildPage(id)
-    local def = self.pageDefs[id]
+    local def = self.pageDefs[id] or self.searchDefs[id]
     local page = CreateFrame("Frame", nil, self.scrollChild)
     page:SetPoint("TOPLEFT")
     page:SetWidth(self.contentWidth)
@@ -339,8 +340,12 @@ function CF:BuildPage(id)
         if col > 0 then y = y - rowH col, rowH = 0, 0 end
     end
     -- `hidden` items do not apply to this target (e.g. the Hardcore option where there is no Hardcore).
+    -- `more` items are rarely needed: the simple settings view leaves them out.
+    local simple = self:Simple()
     local items = {}
-    for _, it in ipairs(def.items(self)) do if not it.hidden then items[#items + 1] = it end end
+    for _, it in ipairs(def.items(self)) do
+        if not it.hidden and not (simple and it.more) then items[#items + 1] = it end
+    end
     for _, it in ipairs(items) do
         if it.type == "newline" then
             newline()
@@ -373,14 +378,68 @@ function CF:Show(id)
     id = id or self.current or "general"
     if not self.frame then return end
     for pid, page in pairs(self.built) do page:SetShown(pid == id) end
+    if self.pageDefs[id] then self.lastTab = id end
     local page = self.built[id] or self:BuildPage(id)
     page:Show()
+    W.FadeIn(page, 0.15)
     self.scroll:SetScrollChild(page)
     if self.scroll.SetVerticalScroll then self.scroll:SetVerticalScroll(0) end
     for tid, tab in pairs(self.tabs) do tab:SetSelected(tid == id) end
     self.current = id
     for _, w in ipairs(page.widgets) do w.sync() end
     self.frame:Show()
+end
+
+-- Simple settings view (setting simpleSettings): fewer tabs and options, for new players.
+function CF:Simple() return ns.db and ns.db.profile.simpleSettings and true or false end
+
+-- Search -------------------------------------------------------------------------------------------------
+
+-- Every option on the tabs shown whose label or tooltip contains `query` (any case), under its tab's name.
+function CF:SearchItems(query)
+    local q = string.lower(query or "")
+    local out, simple = {}, self:Simple()
+    local skip = { header = true, desc = true, label = true, newline = true }
+    for _, id in ipairs(self:VisibleTabs()) do
+        local first = true
+        for _, it in ipairs(self.pageDefs[id].items(self)) do
+            if not skip[it.type] and type(it.label) == "string" and not it.hidden and not (simple and it.more) then
+                local hay = string.lower(it.label .. " " .. (type(it.tip) == "string" and it.tip or ""))
+                if string.find(hay, q, 1, true) then
+                    if first then out[#out + 1] = { type = "header", text = self.pageDefs[id].title } first = false end
+                    out[#out + 1] = it
+                end
+            end
+        end
+    end
+    if #out == 0 then out[1] = { type = "desc", text = "No option matches \"" .. tostring(query) .. "\"." } end
+    return out
+end
+
+-- Shows the results for `query` (a page built once per query); an empty query goes back to the last tab.
+function CF:Search(query)
+    query = string.match(query or "", "^%s*(.-)%s*$")
+    if #query < 2 then
+        if self.current and not self.pageDefs[self.current] then self:Show(self.lastTab or "general") end
+        return
+    end
+    local id = "search:" .. string.lower(query)
+    if not self.searchDefs[id] then
+        self.searchDefs[id] = { title = "Search", items = function() return CF:SearchItems(query) end }
+    end
+    self:Show(id)
+end
+
+-- After the view changes: pages are built again and the tabs laid out again.
+function CF:Rebuild()
+    for _, page in pairs(self.built) do page:Hide() end
+    self.built, self.searchDefs = {}, {}
+    if not self.frame then return end
+    self:LayoutTabs()
+    local id = self.current
+    if not self.tabs[id] or not self.tabs[id]:IsShown() then id = (self.tabs[self.lastTab or ""] and self.tabs[self.lastTab]:IsShown()) and self.lastTab or "general" end
+    if self.searchBox then self.searchBox:SetText("") end
+    if self.frame:IsShown() then self:Show(id) else self.current = id end
 end
 
 function CF:Toggle(id)
@@ -391,6 +450,27 @@ end
 -- Frame ----------------------------------------------------------------------------------------------------
 
 local TABS = { "general", "guide", "targeting", "tracker", "comms", "tips", "advanced", "profiles", "help" }
+local SIMPLE_HIDDEN = { advanced = true, profiles = true }
+
+-- Tabs down the sidebar; the simple view hides some.
+function CF:VisibleTabs()
+    local out = {}
+    for _, id in ipairs(TABS) do
+        if not (self:Simple() and SIMPLE_HIDDEN[id]) then out[#out + 1] = id end
+    end
+    return out
+end
+
+function CF:LayoutTabs()
+    for _, tab in pairs(self.tabs) do tab:Hide() end
+    self.laidOutSimple = self:Simple()
+    for i, id in ipairs(self:VisibleTabs()) do
+        local tab = self.tabs[id]
+        tab:ClearAllPoints()
+        tab:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 16, -110 - (i - 1) * 30)
+        tab:Show()
+    end
+end
 
 function CF:Create()
     if self.frame then return end
@@ -406,8 +486,10 @@ function CF:Create()
     f:SetScript("OnDragStart", function(s) s:StartMoving() end)
     f:SetScript("OnDragStop", function(s) s:StopMovingOrSizing() end)
     W.Skin(f)
+    W.Shadow(f)
     f:Hide()
     self.frame = f
+    self.searchDefs = self.searchDefs or {}
     tinsert(UISpecialFrames, ns.name .. "ConfigFrame") -- Escape closes it
 
     -- Title bar with the Questwarden icon and version.
@@ -437,24 +519,29 @@ function CF:Create()
         else ns:Print("No guide available for this character.") end
     end, "Loads the guide that fits your race, class and level.")
 
-    -- Tabs: one row, flat, accent underline on the selected one.
+    -- Sidebar: a search box over one entry per tab (accent bar on the selected one).
+    local search = W.Input(f, ns.name .. "ConfigSearch", SIDE, 24)
+    search:SetPoint("TOPLEFT", f, "TOPLEFT", 16, -76)
+    local hint = W.Text(search, "GameFontDisableSmall")
+    hint:SetPoint("LEFT", 8, 0)
+    hint:SetText("Search options")
+    search:SetScript("OnTextChanged", function(s)
+        hint:SetShown((s:GetText() or "") == "")
+        ns:Throttle("configsearch", 0.25, function() CF:Search(s:GetText()) end)
+    end)
+    tooltip(search, "Search options", "Type two letters or more: every option whose name or tooltip contains them, on all tabs. Clear the box to go back.")
+    self.searchBox = search
     self.tabs = {}
-    local width = (self.WIDTH - 32) / #TABS
-    for i, id in ipairs(TABS) do
-        local tab = W.Tab(f, self.pageDefs[id].title, width, 28)
-        tab:SetPoint("TOPLEFT", f, "TOPLEFT", 16 + (i - 1) * width, -72)
-        tab:SetScript("OnClick", function() CF:Show(id) end)
+    for _, id in ipairs(TABS) do
+        local tab = W.NavItem(f, self.pageDefs[id].title, SIDE, 28)
+        tab:SetScript("OnClick", function() search:SetText("") search:ClearFocus() CF:Show(id) end)
         self.tabs[id] = tab
     end
-    local tabLine = f:CreateTexture(nil, "ARTWORK")
-    tabLine:SetPoint("TOPLEFT", f, "TOPLEFT", 16, -100)
-    tabLine:SetPoint("TOPRIGHT", f, "TOPRIGHT", -16, -100)
-    tabLine:SetHeight(1)
-    W.Color(tabLine, W.THEME.border)
+    self:LayoutTabs()
 
-    -- Content box with a scroll frame
+    -- Content box with a scroll frame, right of the sidebar
     local box = CreateFrame("Frame", nil, f, ns.Compat.BackdropTemplate)
-    box:SetPoint("TOPLEFT", 16, -108)
+    box:SetPoint("TOPLEFT", 16 + SIDE + 12, -76)
     box:SetPoint("BOTTOMRIGHT", -16, 50)
     W.Skin(box, "panel")
     local scroll = CreateFrame("ScrollFrame", ns.name .. "ConfigScroll", box, "UIPanelScrollFrameTemplate")
@@ -463,14 +550,17 @@ function CF:Create()
     W.SkinScroll(scroll, ns.name .. "ConfigScroll")
     self.scroll = scroll
     self.scrollChild = CreateFrame("Frame", nil, scroll)
-    self.scrollChild:SetSize(self.WIDTH - 44 - 40, 10)
+    self.contentWidth = self.WIDTH - (16 + SIDE + 12) - 16 - 50
+    self.scrollChild:SetSize(self.contentWidth + 10, 10)
     scroll:SetScrollChild(self.scrollChild)
-    self.contentWidth = self.WIDTH - 44 - 50
 
     W.Button(f, "Close", 110, 24, function() f:Hide() end):SetPoint("BOTTOMRIGHT", -16, 14)
     W.CloseButton(f)
 
-    ns:Listen("PROFILE_CHANGED", function() CF:SyncAll() end)
+    -- Another profile may use the other view.
+    ns:Listen("PROFILE_CHANGED", function()
+        if CF.laidOutSimple ~= CF:Simple() then CF:Rebuild() else CF:SyncAll() end
+    end)
     self:SyncAll()
 end
 

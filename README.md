@@ -38,7 +38,10 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
   - It tells you to right-click the item once it's in your bags.
   - Items that dozens of kinds of mob drop, such as the OOX distress beacons, get steps that appear only if you find the item.
 - **Completionist mode** ([docs/COMPLETIONIST.md](docs/COMPLETIONIST.md)): in place of the Speed route, every quest the bundled data knows for your character. It goes lowest level first, zone by zone, comes back to zones as more quests open up, and includes dungeons.
-- **Setup wizard** ([docs/SETUP.md](docs/SETUP.md)): each new character chooses route and mode, a talent plan, dungeons and options in five steps. Nothing changes until *Finish Setup*, and you can run it again any time with `/qw setup`.
+- **Setup wizard** ([docs/SETUP.md](docs/SETUP.md)): it first asks whether you are new to World of Warcraft.
+  - **New players** get six pages in plain words: where to start, whether they want to tank, heal or deal damage (with a suggested talent plan for it), the recommended dungeons (picked, so they learn to run them), and the helpers below.
+  - **Experienced players** choose route and mode, talent plan and gear profile, dungeons, training and upgrades, and helpers.
+  - Nothing changes until *Finish Setup*, and you can run it again any time with `/qw setup`.
 - **Dungeon runs** ([docs/DUNGEONS.md](docs/DUNGEONS.md)): pick the dungeons you want in your route.
   - When a quest sends you into one, the step tells you to find a group and the arrow leads to the entrance. The step moves on when you enter.
   - Skip a run to keep questing; nothing is marked complete.
@@ -47,6 +50,16 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
 - **Hearthstone suggestions** ([docs/HEARTHSTONE.md](docs/HEARTHSTONE.md)): when hearthing to turn-ins in town beats walking, the step says so and how much time it saves. It never uses the hearthstone for you.
 - **Every step can be completed or skipped by hand**, so you never get stuck. Steps also complete on their own from the quest log, quest flags, your level, the hearthstone and flight paths.
 - **Bundled quest database** taken from QuestieDB, so you don't need Questie.
+
+### Help for new players
+
+See [docs/NEW_PLAYERS.md](docs/NEW_PLAYERS.md). All off by default; the setup wizard offers them.
+
+- **Explanations:** the first time each kind of step comes up (pick up, kill, turn in, fly, train...), one chat line says what to do and which key opens what. Also full bags, your first death and talent points.
+- **New spells:** what a spell you just learned does, and how to put it on your action bars; every few levels, a leveling tip for your class.
+- **Play together:** party members running Questwarden see where each other are in the guide, with "Wait for <name>" when someone still has to pick up or turn in. Optionally, everyone follows the party leader's step (`/qw follow`).
+- **Mount savings goal**, **session recap** at login, and **profession starter tips** with the nearest trainers.
+- **Simple settings view:** hides the rarely needed options.
 
 ### Navigation
 
@@ -86,7 +99,7 @@ See [docs/TRAINER.md](docs/TRAINER.md).
 - Bag-addon markers and an auction house Upgrades tab.
 - Flight, inn and gossip automation, and flight timers.
 - A leveling tracker.
-- A settings window with profiles.
+- A settings window with a sidebar, search, switches and profiles, and a choice of accent colour.
 
 ### One download, two games
 
@@ -114,6 +127,8 @@ World of Warcraft\_classic_era_\Interface\AddOns\Questwarden\Questwarden_Vanilla
 | `/qw train` | Class training suggestions (`waypoint`: arrow to your trainer; `defer`: hide until your next level) |
 | `/qw next` / `/qw prev` / `/qw skip` | Move between steps by hand |
 | `/qw options` | Settings window |
+| `/qw follow` | Play together: go to the party leader's guide and step |
+| `/qw mount` / `/qw recap` / `/qw professions [name]` | Mount savings goal / this session's recap / profession trainers |
 | `/qw gear` (or `/qwgear`) | Equipped gear and upgrades |
 | `/qw mark` / `/qw markbar` | Mark your target / show the raid marker bar |
 | `/qw debug` / `debug nav` / `debug marks` / `debug errors` | Diagnostics: client and build, waypoint pins, raid markers, captured errors |

@@ -26,6 +26,11 @@ local HELP = {
     { "pet", "hunter pet skills and warlock Grimoires still to learn (pet defer | pet waypoint)" },
     { "route next|off|on", "hunting route: next point, normal objective waypoint for this step, or back on" },
     { "corpse off|on", "while a ghost: return the arrow to the guide, or point it at your corpse again" },
+    { "follow", "play together: go to the party leader's guide and step" },
+    { "newplayer reset", "show the new-player tips again" },
+    { "mount", "your first mount's price and your savings" },
+    { "recap", "what you did this session (and last time)" },
+    { "professions [name]", "profession trainers; with a name, the arrow points at the nearest" },
     { "setup", "open the setup wizard (resumes an unfinished setup; afterwards: run it again). setup status: your confirmed choices" },
     { "options", "open settings" },
     { "minimap", "show/hide the minimap button" },
@@ -121,6 +126,17 @@ commands.corpse = function(arg)
     if arg == "off" then ns.Corpse:Dismiss() else ns.Corpse:Resume() end
 end
 commands.next = function() ns.Engine:Next() end
+commands.follow = function() ns.PlayTogether:Follow(nil, false) end
+commands.newplayer = function(arg)
+    if string.lower(arg or "") == "reset" then ns.NewPlayer:Reset() ns:Print("New-player tips will show again.") ns.NewPlayer:OnStep()
+    else ns:Print(ns.NewPlayer:KeysText()) end
+end
+commands.mount = function() ns.MountGoal:Print() end
+commands.recap = function() ns.SessionRecap:PrintNow() end
+commands.professions = function(arg)
+    if arg and arg ~= "" then ns.ProfessionTips:Waypoint(arg) else ns.ProfessionTips:PrintAll() end
+end
+commands.profession = commands.professions
 commands.prev = function() ns.Engine:Prev() end
 commands.skip = function() ns.Engine:Skip() end
 commands.reset = function() ns.Engine:Reset() end

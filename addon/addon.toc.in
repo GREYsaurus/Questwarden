@@ -39,6 +39,7 @@ Database\ZoneGeo.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
 Database\QuestTimers.lua
+Database\Riding.lua
 Database\Dungeons.lua
 Database\DungeonEntrances.lua
 Database\QuestDB.lua
@@ -55,6 +56,7 @@ Classes\TrainingData.lua
 Classes\TrainingNotes.lua
 Classes\WhatsTrainingData.lua
 Classes\Trainer.lua
+Classes\SpellCoach.lua
 Classes\PetData.lua
 Classes\PetSkills.lua
 Talents\Data\TalentTrees.lua
@@ -88,12 +90,18 @@ Core\QuestAuto.lua
 Core\Orphans.lua
 Core\Marker.lua
 Core\Assist.lua
+Core\Junk.lua
 Core\Bind.lua
 Core\Hearth.lua
 Core\Group.lua
 Core\FlightTimer.lua
 Core\QuestTimer.lua
 Core\FlightPaths.lua
+Core\PlayTogether.lua
+Core\NewPlayer.lua
+Core\MountGoal.lua
+Core\SessionRecap.lua
+Core\ProfessionTips.lua
 
 # UI
 UI\Widgets.lua

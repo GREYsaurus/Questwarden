@@ -294,6 +294,8 @@ dofile("tests/test_step_targets.lua")
 dofile("tests/test_corpse.lua")
 dofile("tests/test_completionist.lua")
 dofile("tests/test_setup.lua")
+dofile("tests/test_new_players.lua")
+dofile("tests/test_look.lua")
 dofile("tests/test_navigation.lua")
 dofile("tests/test_dungeon_runs.lua")
 

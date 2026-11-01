@@ -126,7 +126,7 @@ local function createCell(parent)
     b.rank:SetPoint("BOTTOMRIGHT", 3, -3)
     b.buildRank = b:CreateFontString(nil, "OVERLAY", "NumberFontNormalSmall")
     b.buildRank:SetPoint("TOPLEFT", -3, 3)
-    b.buildRank:SetTextColor(1, 0.82, 0)
+    W.TextColor(b.buildRank, W.THEME.gold)
     b:SetScript("OnClick", function(self, button)
         if button == "RightButton" then TF:RemovePoint(self.talent) else TF:AddPoint(self.talent) end
     end)
@@ -304,11 +304,11 @@ function TF:Render()
                 b.buildNote = notes[t.id]
                 b.buildRank:SetText(br > 0 and tostring(br) or "")
                 if br > 0 and r == br then
-                    b.border:SetVertexColor(0.2, 1, 0.2); b.border:Show()
+                    W.VertexColor(b.border, W.THEME.good); b.border:Show()
                 elseif br > 0 then
-                    b.border:SetVertexColor(1, 0.82, 0); b.border:Show()
+                    W.VertexColor(b.border, W.THEME.gold); b.border:Show()
                 elseif r > 0 then
-                    b.border:SetVertexColor(1, 0.3, 0.3); b.border:Show()
+                    W.VertexColor(b.border, W.THEME.bad); b.border:Show()
                 else
                     b.border:Hide()
                 end

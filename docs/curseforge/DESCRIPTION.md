@@ -15,12 +15,19 @@
 - **Grind steps only where needed:** where questing still falls short, a grind step sends you to the densest group of mobs near your level, close to where you already are. It stops at the level you need, or part of one when the quests you have left will cover the rest.
 - **Quests started by dropped items:** the guide knows which mobs drop the item. It lets you kill them on the way, and tells you to right-click the item once you have it. Rare drops like the OOX distress beacons show up only if you find one.
 - **Completionist mode:** every quest the bundled data knows for your character, zone by zone, dungeons included.
-- **Setup wizard:** a new character chooses route, talent plan, dungeons and options in five steps. Run it again any time with `/qw setup`.
+- **Setup wizard:** it first asks whether you are new to World of Warcraft. New players get a short, plain-words setup: where to start, whether you want to tank, heal or deal damage (with a suggested talent plan), and the recommended dungeons. Experienced players get every option. Run it again any time with `/qw setup`.
 - **Dungeon runs:** when a quest sends you into a dungeon, the step tells you to find a group and the arrow leads to the entrance. If you die inside, it leads you back.
 - **Objectives before far turn-ins:** you finish the quests in one place before travelling back to turn them in.
 - **Hearthstone suggestions:** the step tells you when hearthing to your turn-ins beats walking.
 - **Built-in quest database** (from QuestieDB), so you don't need Questie.
 - **Every step can be completed or skipped by hand**, so you never get stuck.
+
+**New to WoW? Built for you** (all optional, off until you turn them on)
+- **Explanations** of each kind of step, the useful keys, full bags and your first death, once each.
+- **New spells explained**, with a nudge to put them on your action bars, and class tips as you level.
+- **Play together:** see where your friends are in the guide, get a "wait for" hint, or follow the party leader's step.
+- **Mount savings goal**, a **session recap** at login and **profession starter tips**.
+- **Simple settings view** that hides the rarely needed options.
 
 **Navigation**
 - **Built-in arrow** with distance and time to arrival, a world-map pin and a minimap pin. No other add-on needed.
@@ -45,6 +52,7 @@
 - Junk selling and auto repair, both off by default.
 - Flight and inn automation, and flight timers.
 - Optional map pins for rares, elites and spirit healers.
+- A clean, modern look: the current step as a card with an objective progress bar, settings with a sidebar, search and switches, and a choice of accent colour.
 
 ## Which game?
 

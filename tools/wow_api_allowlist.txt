@@ -352,3 +352,7 @@ WOW_PROJECT_ID                    # core constant; which game this client is
 WOW_PROJECT_CAMELOT               # Forever only (= 18); nil on other clients, always checked
 C_GameRules                       # classic namespace; present on Classic Era, TBC Anniversary and Forever
 C_GameRules.IsHardcoreActive      # true on a Hardcore realm (guarded)
+# --- new-spell coaching (approved by the maintainer 2026-11-01) ---
+HasAction                         # core; is something in this action slot (guarded)
+GetActionInfo                     # core; what is in an action slot: "spell", spell id (guarded)
+GetSpellDescription               # classic; the game's own spell text (guarded, pcall)

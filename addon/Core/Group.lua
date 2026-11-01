@@ -13,7 +13,7 @@
 
 local _, ns = ...
 
-local G = { users = {}, replied = {}, told = false, lastObjective = {}, lastSent = 0, complete = {} }
+local G = { users = {}, replied = {}, told = false, lastObjective = {}, lastSent = 0, complete = {}, handlers = {} }
 ns.Group = G
 
 G.PREFIX = ns.name
@@ -40,6 +40,10 @@ local function send(msg, channel, target)
     if f then pcall(f, G.PREFIX, msg, channel, target) end
 end
 
+-- Other modules' messages: "<TAG>:<payload>" on the same prefix; fn(senderName, payload, channel).
+function G:Handle(tag, fn) self.handlers[tag] = fn end
+function G:Send(tag, payload, channel) send(tag .. ":" .. payload, channel) end
+
 function G:SendVersion(channel)
     if channel == "GROUP" then
         if not inGroup() then return end
@@ -52,6 +56,12 @@ function G:OnAddonMessage(prefix, msg, channel, sender)
     if prefix ~= self.PREFIX or type(msg) ~= "string" then return end
     local name = sender and string.match(sender, "^([^%-]+)") or sender
     if not name or name == (UnitName and UnitName("player")) then return end
+    local tag, payload = string.match(msg, "^(%u+):(.*)$")
+    if tag and tag ~= "V" and self.handlers[tag] then
+        self.users[name] = self.users[name] or "?"
+        pcall(self.handlers[tag], name, payload, channel)
+        return
+    end
     local v = string.match(msg, "^V:(.+)$")
     if not v then return end
     self.users[name] = v

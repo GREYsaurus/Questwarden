@@ -1,6 +1,8 @@
 # Settings window
 
-`/qw options`, or left-click the minimap button, opens the Questwarden settings window. It has one row of tabs: **General, Guide Routing, Targeting, Leveling Tracker, Communications, Tips, Advanced Settings, Profiles, Help**. Escape closes it. Changes apply immediately and are saved in your current profile.
+`/qw options`, or left-click the minimap button, opens the Questwarden settings window. A sidebar on the left lists the tabs: **General, Guide Routing, Targeting, Leveling Tracker, Communications, Tips, Advanced Settings, Profiles, Help**. Escape closes it. Changes apply immediately and are saved in your current profile. On/off options are switches.
+
+**Search** (top of the sidebar): type two letters or more, and every option whose name or tooltip contains them is listed, on all tabs, under its tab's name. The results work like the options on their tab. Clear the box, or click a tab, to go back.
 
 Under the title bar are five buttons:
 - **Guide Browser** opens the guide browser.
@@ -11,14 +13,16 @@ Under the title bar are five buttons:
 
 Every option in the window works; none is a greyed-out placeholder.
 
+**Simple settings view** (General, off by default): hides the Advanced Settings and Profiles tabs and the rarely needed options (marked `more = true` in `addon/UI/ConfigOptions.lua`), for new players. Hidden options keep working as they are set. Another profile may use the other view; the window follows the active profile.
+
 None of this has been tested in the game client yet.
 
-**Look:** every Questwarden window shares one flat dark style with a blue accent. The colours are in one table, `W.THEME` in `addon/UI/Widgets.lua`.
+**Look:** every Questwarden window shares one flat dark style with a soft shadow and one accent colour. The colours are in one table, `W.THEME` in `addon/UI/Widgets.lua`. *Accent Colour* (General, Window) picks blue (default), teal, green, purple, gold or red; it shows after `/reload`, because windows read it when they are built.
 
 ## What each tab controls
 
 ### General
-- **Setup wizard** (docs/SETUP.md): a new character gets a five-step setup: route and leveling mode, talent plan and gear profile, dungeons, options (group quests, Completionist categories, automatic upgrades), review. Saved per character; nothing applies before *Finish Setup*. *Set Up Later* keeps the draft and does not finish setup. *Run Setup Again* (General) or `/qw setup` reopens it from the current choices. Characters that already used Questwarden are not asked.
+- **Setup wizard** (docs/SETUP.md): a new character gets a setup that first asks whether the player is new to World of Warcraft. Experienced players then choose route and leveling mode, talent plan and gear profile, dungeons, options (group quests, Completionist categories, automatic upgrades), helpers, review; new players get fewer pages in plainer words. Saved per character; nothing applies before *Finish Setup*. *Set Up Later* keeps the draft and does not finish setup. *Run Setup Again* (General) or `/qw setup` reopens it from the current choices. Characters that already used Questwarden are not asked.
 - **Window Management:** *Show all Enabled Frames* hides the guide window and arrow together when off. *Lock Frames* and *Autohide in Raids* do what they say.
 - **Features:** minimap button, world map button (opens the guide browser), *Hide Window* and *Hide waypoint arrow*.
 - **Automatically Navigate to Corpse** (on): after you release your spirit, the arrow points to your corpse until you are alive again, then returns to the guide. It uses the game's own corpse position and asks the map you died on, then your current map and its parents, without opening or changing the map. No position means no arrow (never a guessed one). After a death inside a dungeon the arrow points to that dungeon's entrance (docs/DUNGEONS.md, "Dungeon runs"). Inside raids and battlegrounds, or a dungeon without an entrance in the data, there is no outdoor position: you get a note, not an arrow. `/qw corpse off` hands the arrow back to the guide; `/qw corpse on` brings it back.
@@ -133,8 +137,10 @@ None of this has been tested in the game client yet.
   - *Don't announce when Questie is loaded*: avoids double messages, since Questie can announce progress itself.
   - **Never in raids.** They are only sent when another party member runs Questwarden, unless *Send announcements without another Questwarden user in group* is on.
 - *Automatic quest sharing*: shares a guide quest with your party right after you accept it.
+- **Play Together** (off by default; docs/NEW_PLAYERS.md): *Show party members' steps* (where each party member running Questwarden is in the guide, and "Wait for <name>") and *Follow the party leader's step*. Both need *Enable Group Settings*.
 
 ### Tips
+- **New Players** (all off by default; docs/NEW_PLAYERS.md): *Explain steps and the basics*, *Coach new spells*, *Profession starter tips*, *Mount savings goal* (not on Forever) and *Session recap*.
 - **Drowning:** warning, sound, threshold, screen-edge flash.
 - **Emergency Actions:** low-health warning, threshold, sound, flash.
 - **Rare mobs:** *Track Rare Mobs* gives a chat alert and sound when a rare's nameplate appears (rares from the bundled database: on Classic Era, every rare hostile to your faction). It can skip rares this character already killed.

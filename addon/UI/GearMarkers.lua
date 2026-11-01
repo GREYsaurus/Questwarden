@@ -137,7 +137,8 @@ function M:TooltipLines(bag, slot, itemID)
     local p = ns.Upgrade:ActiveProfile()
     if not p then return nil end
     local lines = {}
-    local green = { 0.3, 1, 0.3 }
+    local T = ns.Widgets.THEME
+    local green = T.good
     lines[#lines + 1] = { ns.name .. ": upgrade for " .. ns.Upgrade:ProfileName(p), green }
     if e.kind == "empty" then
         lines[#lines + 1] = { "  Empty slot (" .. (ns.Gear.SLOT_NAMES[e.target] or e.target) .. ")", green }
@@ -145,15 +146,15 @@ function M:TooltipLines(bag, slot, itemID)
         lines[#lines + 1] = { "  " .. ns.Upgrade.PctText(e), green }
         local names = {}
         for _, r in ipairs(e.replaced or {}) do names[#names + 1] = tostring(r.link or r.name) end
-        lines[#lines + 1] = { "  Replaces " .. table.concat(names, " + ") .. " (" .. (ns.Gear.SLOT_NAMES[e.target] or e.target) .. ")", { 0.8, 0.8, 0.8 } }
+        lines[#lines + 1] = { "  Replaces " .. table.concat(names, " + ") .. " (" .. (ns.Gear.SLOT_NAMES[e.target] or e.target) .. ")", T.text }
     end
-    if e.uncertain then lines[#lines + 1] = { "  Uncertain: " .. e.uncertain .. " (not scored)", { 1, 0.6, 0.2 } } end
+    if e.uncertain then lines[#lines + 1] = { "  Uncertain: " .. e.uncertain .. " (not scored)", T.warn } end
     if e.bind == "boe" then
-        lines[#lines + 1] = { "  Bind on Equip - manual equip required.", { 1, 0.82, 0 } }
+        lines[#lines + 1] = { "  Bind on Equip - manual equip required.", T.gold }
     elseif not e.bind then
-        lines[#lines + 1] = { "  Binding unknown - not equipped automatically.", { 1, 0.6, 0.2 } }
+        lines[#lines + 1] = { "  Binding unknown - not equipped automatically.", T.warn }
     end
-    if e.heuristic and #e.heuristic > 0 then lines[#lines + 1] = { "  Estimate: " .. table.concat(e.heuristic, "; "), { 0.6, 0.6, 0.6 } } end
+    if e.heuristic and #e.heuristic > 0 then lines[#lines + 1] = { "  Estimate: " .. table.concat(e.heuristic, "; "), T.muted } end
     return lines
 end
 

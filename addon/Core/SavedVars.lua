@@ -139,6 +139,16 @@ local profileDefaults = {
         arrowScale = 1,
         arrowUpdateMs = 50,
         checkConflicts = true,      -- warn about other guide add-ons that act on the same NPCs
+        -- Help for new players (docs/NEW_PLAYERS.md). All off by default; the setup wizard offers them.
+        newPlayerTips = false,      -- explain each kind of step once, keys, full bags, first death (Core/NewPlayer.lua)
+        spellCoach = false,         -- new spells: what they do, whether they are on a bar; class tips (Classes/SpellCoach.lua)
+        playTogether = false,       -- party members' guide steps and "wait for" hints (Core/PlayTogether.lua)
+        playFollowLeader = false,   -- ...and go to the party leader's guide and step
+        mountGoal = false,          -- first mount savings goal in the guide window (Core/MountGoal.lua)
+        sessionRecap = false,       -- recap of the last session at login (Core/SessionRecap.lua)
+        professionTips = false,     -- profession advice and trainers from level 5 (Core/ProfessionTips.lua)
+        simpleSettings = false,     -- settings window: hide the Advanced and Profiles tabs and rarely used options
+        accentColor = "blue",       -- the windows' accent colour (UI/Widgets.lua W.ACCENTS); applies after /reload
 }
 
 local accountDefaults = {

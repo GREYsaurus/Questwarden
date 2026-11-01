@@ -1,6 +1,6 @@
 # Setup wizard
 
-Each character sets up Questwarden once, in a five-step window. The code has two parts. The choices, validation, saving and route start are in `addon/Core/Setup.lua`. The window is `addon/UI/Welcome.lua`.
+Each character sets up Questwarden once, in a window of five to seven pages. The first page asks whether the player is new to World of Warcraft, and the pages after it follow the answer (docs/NEW_PLAYERS.md). The code has two parts. The choices, validation, saving and route start are in `addon/Core/Setup.lua`. The window is `addon/UI/Welcome.lua`.
 
 ## When it shows
 
@@ -19,6 +19,12 @@ The wizard does not ask for anything the game already reports: name, race, class
 ## Steps
 
 The window has a progress line, *Back*, *Next*, *Set Up Later* and, on the last step, *Finish Setup*. *Next* checks the current step first and explains what is missing. *Back* never loses a choice.
+
+### Welcome
+
+"Is this your first time playing World of Warcraft?" *Next* needs an answer. Saved as `ns.char.newPlayer` at *Finish Setup*.
+- **Yes:** Welcome, Route, Talents, Dungeons, Helpers, Review. Route has no mode choice (Speed, the recommended guide) and plain wording. Talents first asks whether they want to tank, heal or deal damage (or don't know) and suggests a plan for it; no gear profile (it follows the plan). Dungeons explains them and suggests the dungeons the guides have quests for, all picked on a first setup. Options keep their defaults. Details: docs/NEW_PLAYERS.md.
+- **No:** every page below, then Helpers and Review.
 
 ### 1. Route
 
@@ -83,6 +89,10 @@ The window has a progress line, *Back*, *Next*, *Set Up Later* and, on the last 
 - **Learn recommended spells automatically** (opt-in, off by default): at your class trainer, the listed ranks you can afford are learned. Spends gold; one summary chat line per trainer visit; hold Shift to skip. Settings → *Automatic Training* also offers "everything I can afford".
 - **Automatic upgrades.** Off unless ticked, and only with a gear profile. This one switch is part of the settings profile, not the character.
 
+### Helpers
+
+The new-player helpers (docs/NEW_PLAYERS.md), all unticked unless already on, with *Turn On All* and *Turn Off All*. They are profile settings; *Play together* also turns on *Enable Group Settings*. *Mount savings goal* is only offered where there are mount prices.
+
 ### 5. Review
 
 The review shows:
@@ -91,6 +101,7 @@ The review shows:
 - **Talent plan** and **gear profile.**
 - **Dungeons** and **group quests.**
 - **Completionist categories** and **automatic upgrades.**
+- **New to World of Warcraft** (once answered) and the **helpers** turned on.
 - **Notes:** coverage limits, replaced saved values, a gear profile that doesn't match the plan.
 - **Anything that still blocks finishing.**
 
@@ -105,7 +116,8 @@ What happens, in order:
    - talent plan (`talentBuild`, `noTalentPlan`) and `gearProfile`;
    - the Completionist categories;
    - `ns.char.routing`;
-   - the profile's `autoEquip`.
+   - the profile's `autoEquip`;
+   - `ns.char.newPlayer` and the helper settings in the profile.
 4. The route starts. Speed loads the guide with its progress; Completionist plans its first segment.
 5. Only then is setup marked done, with its version.
 
@@ -139,6 +151,7 @@ Changing the mode or guide never touches quest history or guide progress. Each S
 | `ns.char.setup` | `version` (1), `done`, `legacy`, `draft`, `at`, `lastError` |
 | `ns.char.routing` | `dungeons` (`"questing"` or `"selected"`), `selected` (`{ [dungeon] = true }`), `elite` |
 | `ns.char.noTalentPlan` | `true` when *No talent guidance* is chosen |
+| `ns.char.newPlayer` | the answer to the first page: `true`, `false`, or absent before it was answered |
 
 - **Identifiers.** Dungeons are identified by their name in `Database/Dungeons.lua`. That is the same string the guides' `[dungeon=...]` tags use, from the bundled data rather than the client's language. Guides and plans are identified by their ids.
 - **Repairs:**
@@ -161,13 +174,14 @@ Characters with a routing record use it for *Include Dungeon Quests*, the dungeo
 ## Tests
 
 - **`tests/test_setup.lua`** (TBC fixture) covers:
-  - first-time display, Back/Next, Set Up Later, the same-session rule and resume after reload;
+  - first-time display, the first page's question, Back/Next, Set Up Later, the same-session rule and resume after reload;
   - invalid choices, a failed route start and Finish;
   - separate characters, Standard and Completionist activation, an unavailable mode, mid-level reconciliation;
   - plans by class, *No talent guidance*, learned talents unchanged;
   - questing only, selected and future dungeons, run deferral and deselection;
   - legacy, alpha.2 and corrupt saved data, re-run prefill, cancel, quest history.
 - **`tests/test_completionist.lua`:** dungeon level gating, run steps and turn-ins.
+- **`tests/test_new_players.lua`:** the new-player path, the helpers page, a failed finish putting the helpers back.
 - **`tests/run_smoke.lua`:** Classic Era defaults, plans, dungeon counts and the Hardcore choice.
 
 These are headless tests against a mock client. The window layout has not been checked in the game client.

@@ -143,8 +143,15 @@ function StepText:Details(s)
         if l then lines[#lines + 1] = string.format(WARN, l) end
     end
     -- Hearthing to town beats walking (Core/Hearth.lua).
-    local hearth = ns.Hearth and ns.Engine:CurrentStep() == s and ns.Hearth:Line()
+    local current = ns.Engine:CurrentStep() == s
+    local hearth = ns.Hearth and current and ns.Hearth:Line()
     if hearth then lines[#lines + 1] = string.format(WARN, hearth) end
+    -- Party members' steps (Core/PlayTogether.lua) and the mount savings goal (Core/MountGoal.lua).
+    if current and ns.PlayTogether then
+        for _, l in ipairs(ns.PlayTogether:Lines()) do lines[#lines + 1] = string.format(l.warn and WARN or DIM, l.text) end
+    end
+    local goal = current and ns.MountGoal and ns.MountGoal:Line()
+    if goal then lines[#lines + 1] = string.format(DIM, goal) end
     -- A quest NPC that walks a path (Core/Patrol.lua).
     if ns.Patrol then
         for i, l in ipairs(ns.Patrol:Lines(s)) do lines[#lines + 1] = string.format(i == 1 and WARN or DIM, l) end
@@ -166,6 +173,24 @@ function StepText:Details(s)
     local c = fmtCoords(s)
     if c and s[1] ~= "goto" then lines[#lines + 1] = string.format(DIM, c) end
     return lines
+end
+
+-- Objective progress of a kill/collect step from 0 to 1, or nil when there is nothing to count. Each
+-- objective counts as its own share: "Wolf Meat: 3/8" as 3/8, a done objective as 1, others as 0.
+function StepText:Progress(s)
+    if not (s and s[1] == "complete" and s.q) then return nil end
+    local e = ns.Tracker:GetEntry(s.q)
+    if not (e and #e.objectives > 0) then return nil end
+    local sum, n = 0, 0
+    for i, o in ipairs(e.objectives) do
+        if not s.obj or s.obj == i then
+            local have, need = string.match(o.text or "", "(%d+)%s*/%s*(%d+)")
+            have, need = tonumber(have), tonumber(need)
+            sum = sum + ((o.done and 1) or (need and need > 0 and math.min(1, have / need)) or 0)
+            n = n + 1
+        end
+    end
+    return n > 0 and sum / n or nil
 end
 
 -- Navigation target for a step: zoneAreaId, x, y, label. Uses compiled coordinates first and

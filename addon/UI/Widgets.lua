@@ -26,8 +26,31 @@ W.THEME = {
     text     = { 0.920, 0.930, 0.950, 1 },
     muted    = { 0.600, 0.630, 0.680, 1 },
     disabled = { 0.400, 0.420, 0.460, 1 },
+    -- Meaning colours: good (upgrades, friendly), gold (the game's quest yellow: headings, current step),
+    -- warn (notes, uncertain), bad (errors, enemies).
+    good     = { 0.350, 1.000, 0.400, 1 },
+    gold     = { 1.000, 0.820, 0.000, 1 },
+    warn     = { 1.000, 0.700, 0.300, 1 },
+    bad      = { 1.000, 0.380, 0.320, 1 },
 }
 local T = W.THEME
+
+-- Accent colour choices (setting accentColor). The accent is read when a window is built, so a change shows
+-- after /reload; W.ApplyAccent runs at login before any window exists.
+W.ACCENTS = {
+    { "blue", "Blue", { 0.300, 0.720, 0.980 } },
+    { "teal", "Teal", { 0.200, 0.820, 0.740 } },
+    { "green", "Green", { 0.400, 0.850, 0.400 } },
+    { "purple", "Purple", { 0.700, 0.520, 1.000 } },
+    { "gold", "Gold", { 1.000, 0.760, 0.250 } },
+    { "red", "Red", { 1.000, 0.420, 0.400 } },
+}
+function W.ApplyAccent(id)
+    for _, a in ipairs(W.ACCENTS) do
+        if a[1] == id then T.accent[1], T.accent[2], T.accent[3] = a[3][1], a[3][2], a[3][3] return true end
+    end
+    return false
+end
 
 W.BACKDROP = {
     bgFile = W.FLAT, edgeFile = W.FLAT, tile = false, edgeSize = 1,
@@ -40,6 +63,10 @@ local function color(tex, c, a)
 end
 W.Color = color
 
+-- Text and vertex colours from a theme entry (W.THEME.good etc.).
+function W.TextColor(fs, c) fs:SetTextColor(c[1], c[2], c[3]) end
+function W.VertexColor(tex, c) tex:SetVertexColor(c[1], c[2], c[3]) end
+
 -- Flat background + 1 px border. `bg` and `border` are theme keys (default "bg" / "border").
 function W.Skin(f, bg, border)
     if not f.SetBackdrop then return f end
@@ -50,11 +77,43 @@ function W.Skin(f, bg, border)
     return f
 end
 
+-- Per-frame state of the helpers below, kept apart from the frames' own fields.
+local shadows, fades = setmetatable({}, { __mode = "k" }), setmetatable({}, { __mode = "k" })
+
+-- A soft dark edge around a window, so it stands off the game world (two layers just outside the frame).
+function W.Shadow(f)
+    if shadows[f] then return end
+    local layers = {}
+    for i, a in ipairs({ 0.22, 0.12 }) do
+        local t = f:CreateTexture(nil, "BACKGROUND", nil, -8)
+        t:SetPoint("TOPLEFT", -2 * i, 2 * i)
+        t:SetPoint("BOTTOMRIGHT", 2 * i, -2 * i)
+        color(t, { 0, 0, 0 }, a)
+        layers[i] = t
+    end
+    shadows[f] = layers
+end
+
 function W.Panel(name, parent, w, h)
     local f = CreateFrame("Frame", name, parent or UIParent, ns.Compat.BackdropTemplate)
     f:SetSize(w or 300, h or 200)
     W.Skin(f)
+    W.Shadow(f)
     return f
+end
+
+-- Fades a frame in (alpha 0 to 1) when it is shown or its content changes. Needs the client's animation
+-- groups; without them the frame just shows.
+function W.FadeIn(f, seconds)
+    if fades[f] == nil then
+        local g = f.CreateAnimationGroup and f:CreateAnimationGroup()
+        local a = g and g.CreateAnimation and g:CreateAnimation("Alpha")
+        if not a then fades[f] = false return end
+        if a.SetFromAlpha then a:SetFromAlpha(0) a:SetToAlpha(1) end
+        a:SetDuration(seconds or 0.2)
+        fades[f] = g
+    end
+    if fades[f] then fades[f]:Stop() fades[f]:Play() end
 end
 
 -- Title strip across the top of a window: slightly lighter, accent line underneath, title text.
@@ -213,6 +272,36 @@ function W.Check(parent, size)
     return cb
 end
 
+-- On/off switch: a pill-shaped track (accent when on) with a knob that sits left (off) or right (on).
+-- Same API as W.Check (SetChecked/GetChecked/Enable/Disable/OnClick).
+function W.Switch(parent)
+    local sw = CreateFrame("CheckButton", nil, parent, ns.Compat.BackdropTemplate)
+    sw:SetSize(34, 18)
+    W.Skin(sw, "raised")
+    local knob = sw:CreateTexture(nil, "OVERLAY")
+    knob:SetSize(12, 12)
+    sw.knob = knob
+    local hl = sw:CreateTexture(nil, "HIGHLIGHT")
+    hl:SetAllPoints()
+    color(hl, T.hover, 0.4)
+    function sw:Refresh()
+        local on, enabled = self:GetChecked() and true or false, not (self.IsEnabled and self:IsEnabled() == false)
+        local track = not enabled and T.raised or (on and T.accent or T.raised)
+        if self.SetBackdropColor then self:SetBackdropColor(track[1], track[2], track[3], enabled and 1 or 0.5) end
+        knob:ClearAllPoints()
+        knob:SetPoint(on and "RIGHT" or "LEFT", on and -3 or 3, 0)
+        color(knob, enabled and (on and { 1, 1, 1 } or T.muted) or T.disabled)
+    end
+    local setChecked, enable, disable = sw.SetChecked, sw.Enable, sw.Disable
+    function sw:SetChecked(v) setChecked(self, v) self:Refresh() end
+    function sw:Enable() enable(self) self:Refresh() end
+    function sw:Disable() disable(self) self:Refresh() end
+    sw:HookScript("OnClick", function(s) s:Refresh() end)
+    hoverBorder(sw)
+    sw:Refresh()
+    return sw
+end
+
 -- Flat single-line input.
 function W.Input(parent, name, w, h)
     local e = CreateFrame("EditBox", name, parent, ns.Compat.BackdropTemplate)
@@ -266,6 +355,41 @@ function W.Tab(parent, text, w, h)
         self.selected = on and true or false
         if on then self.underline:Show() self.label:SetTextColor(T.accent[1], T.accent[2], T.accent[3])
         else self.underline:Hide() self.label:SetTextColor(T.muted[1], T.muted[2], T.muted[3]) end
+    end
+    b:SetSelected(false)
+    return b
+end
+
+-- Sidebar entry: text with an accent bar on the left and a lighter background when selected
+-- (item:SetSelected(bool), like W.Tab).
+function W.NavItem(parent, text, w, h)
+    local b = CreateFrame("Button", nil, parent)
+    b:SetSize(w or 150, h or 28)
+    local bg = b:CreateTexture(nil, "BACKGROUND")
+    bg:SetAllPoints()
+    color(bg, T.raised)
+    b.bg = bg
+    local bar = b:CreateTexture(nil, "ARTWORK")
+    bar:SetPoint("TOPLEFT")
+    bar:SetPoint("BOTTOMLEFT")
+    bar:SetWidth(3)
+    color(bar, T.accent)
+    b.underline = bar
+    local fs = b:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    fs:SetPoint("LEFT", 14, 0)
+    fs:SetPoint("RIGHT", -6, 0)
+    fs:SetJustifyH("LEFT")
+    fs:SetText(text)
+    b.label = fs
+    local hl = b:CreateTexture(nil, "HIGHLIGHT")
+    hl:SetAllPoints()
+    color(hl, T.hover, 0.5)
+    function b:SetSelected(on)
+        self.selected = on and true or false
+        self.underline:SetShown(self.selected)
+        self.bg:SetShown(self.selected)
+        if on then self.label:SetTextColor(T.text[1], T.text[2], T.text[3])
+        else self.label:SetTextColor(T.muted[1], T.muted[2], T.muted[3]) end
     end
     b:SetSelected(false)
     return b

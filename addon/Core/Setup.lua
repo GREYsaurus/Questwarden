@@ -12,6 +12,14 @@
 -- (ns.char.routing: dungeons and group quests), starts the route, and only then marks setup done. If the
 -- route cannot be started everything is put back as it was and the draft is kept (docs/SETUP.md).
 --
+-- The first page asks whether the player is new to World of Warcraft (ns.char.newPlayer). New players get
+-- fewer pages in plainer words (Setup.PATHS): Speed mode; on the talents page they first say whether they want
+-- to tank, heal or deal damage (or do not know), and the suggested plan follows (Setup:SuggestedPlan: the class
+-- default, the spec its leveling advice names, when it fits the role); the recommended dungeons (those the leveling guides have quests
+-- for) picked on a first setup so they learn to run them, no training or options page (defaults kept), the gear
+-- profile following the talent plan. Both paths end with the helpers page (Setup.HELPERS),
+-- whose switches are settings in the profile and start off.
+--
 -- ns.char.setup = { version, done, legacy, draft, at, lastError }
 -- ns.char.routing = { dungeons = "questing" | "selected", selected = { [dungeon name] = true }, elite = bool }
 --   Dungeon names are the dungeon list's names (Database/Dungeons.lua), the same strings the guides tag
@@ -23,12 +31,121 @@ local Setup = { VERSION = 1 }
 ns.Setup = Setup
 
 Setup.STEPS = {
+    { id = "welcome", title = "Welcome" },
     { id = "route", title = "Route" },
     { id = "build", title = "Talents" },
     { id = "dungeons", title = "Dungeons" },
     { id = "prefs", title = "Options" },
+    { id = "helpers", title = "Helpers" },
     { id = "review", title = "Review" },
 }
+
+-- Pages for new and experienced players (the experienced path until the first page is answered).
+Setup.PATHS = {
+    new = { "welcome", "route", "build", "dungeons", "helpers", "review" },
+    experienced = { "welcome", "route", "build", "dungeons", "prefs", "helpers", "review" },
+}
+
+-- The helpers page: profile settings, all off by default (Core/SavedVars.lua, docs/NEW_PLAYERS.md).
+-- `riding`: only where the game version has mount prices (Database/Riding.lua).
+Setup.HELPERS = {
+    { key = "newPlayerTips", name = "Explain steps and the basics",
+      text = "The first time you meet each kind of step, one chat line says what to do and which key opens what. Also full bags, your first death and talent points." },
+    { key = "spellCoach", name = "Coach new spells",
+      text = "When you learn a spell: what it does, and how to put it on your action bars if it is not there. Every few levels, a tip for your class." },
+    { key = "playTogether", name = "Play together",
+      text = "Shows where your party members are in the guide and when to wait for someone. Your friends need this add-on with this switch on too. Also turns on group settings." },
+    { key = "mountGoal", name = "Mount savings goal", riding = true,
+      text = "From 10 levels before you can ride: what your first mount costs against the gold you have." },
+    { key = "sessionRecap", name = "Session recap",
+      text = "At login, one line about your last session: time played, levels, quests, zones and gold." },
+    { key = "professionTips", name = "Profession starter tips",
+      text = "Once, at level 5: which professions suit a new character and where their trainers are." },
+    { key = "simpleSettings", name = "Simple settings view",
+      text = "The settings window shows only the options most players need. Turn it off there to see everything." },
+}
+
+-- Helpers this game version offers.
+function Setup:Helpers()
+    local out = {}
+    for _, h in ipairs(self.HELPERS) do
+        if not h.riding or ns.Riding then out[#out + 1] = h end
+    end
+    return out
+end
+
+-- The steps of a draft's path: { id, title } in order.
+function Setup:Steps(d)
+    local byId = {}
+    for _, st in ipairs(self.STEPS) do byId[st.id] = st end
+    local out = {}
+    for _, id in ipairs(self.PATHS[d and d.newPlayer and "new" or "experienced"]) do out[#out + 1] = byId[id] end
+    return out
+end
+
+-- The answer to the first page. New players follow the guides (Speed) from the recommended guide.
+function Setup:SetNewPlayer(d, yes)
+    d.newPlayer = yes and true or false
+    if yes then
+        local speed = self:ModeInfo("speed")
+        if speed and speed.available then d.mode = "speed" end
+        if not self:GuideValid(d.guide) then d.guide = self:RecommendedGuide() or false end
+        -- A first setup starts with the recommended dungeons picked; a re-run keeps the saved choice.
+        if not self:Routing() then
+            d.dungeons = "selected"
+            if #self:SelectedDungeons(d) == 0 then self:SelectAllDungeons(d) end
+        end
+        if d.dungeons == "selected" and #self:SelectedDungeons(d) == 0 then d.dungeons = "questing" end
+    end
+end
+
+-- Plain words for the talent plans' roles (Talents/Builds), for new players.
+Setup.ROLE_TEXT = {
+    ["Tank"] = "Tank: in a group, enemies attack you while the others deal damage.",
+    ["Healer"] = "Healer: in a group, you keep everyone alive.",
+    ["Melee DPS"] = "Damage up close.",
+    ["Ranged DPS"] = "Damage from a distance.",
+    ["Melee DPS / Tank"] = "Damage up close; can also tank in a group.",
+}
+
+-- The new-player question on the talents page. `match` is looked for in the plans' role.
+Setup.ROLES = {
+    { id = "tank", name = "Tank", match = "Tank",
+      text = "Stand in front and keep the enemies attacking you, so the others are safe. Every group needs one." },
+    { id = "healer", name = "Heal", match = "Healer",
+      text = "Keep the group alive with healing spells. Every group needs one." },
+    { id = "dps", name = "Deal damage", match = "DPS",
+      text = "Defeat the enemies, up close or from a distance. A group has three; the usual place to start." },
+    { id = "unsure", name = "I don't know yet",
+      text = "You get the usual leveling plan for your class. You can change it any time." },
+}
+
+function Setup:RoleInfo(id)
+    for _, r in ipairs(self.ROLES) do if r.id == id then return r end end
+end
+
+-- The plan to suggest for a draft's role: the class default when it fits, else the first plan of that role.
+-- Returns plan, fits (false when the class has no plan for the role: then the class default).
+function Setup:SuggestedPlan(d)
+    local plans, default = self:Plans(), nil
+    for _, p in ipairs(plans) do if p.default then default = p end end
+    local r = self:RoleInfo(d.role)
+    if not (r and r.match) then return default, true end
+    local function fits(p) return p.role and string.find(p.role, r.match, 1, true) ~= nil end
+    if default and fits(default) then return default, true end
+    for _, p in ipairs(plans) do if fits(p) then return p, true end end
+    return default, false
+end
+
+function Setup:SetRole(d, id)
+    d.role = id
+    local p = self:SuggestedPlan(d)
+    if p then self:SetPlan(d, p.id) end
+end
+
+function Setup:SetAllHelpers(d, on)
+    for _, h in ipairs(self:Helpers()) do d.helpers[h.key] = on and true or false end
+end
 
 -- Player-facing names and explanations (English only, like the rest of the add-on: docs/LOCALES.md).
 Setup.MODE_NAMES = { speed = "Speed (the leveling guides)", completionist = "Completionist (every eligible quest)" }
@@ -300,7 +417,12 @@ function Setup:Current()
     end
     local include = {}
     for _, k in ipairs(self.INCLUDE_KINDS) do include[k[1]] = not exclude[k[1]] end
+    local helpers = {}
+    for _, h in ipairs(self.HELPERS) do helpers[h.key] = prof[h.key] == true end
+    local newPlayer
+    if c.newPlayer ~= nil then newPlayer = c.newPlayer == true end
     return {
+        newPlayer = newPlayer, helpers = helpers,
         mode = mode, guide = guide, hardcore = c.hardcore == true, plan = plan,
         gear = c.gearProfile and self:GearValid(c.gearProfile) and c.gearProfile or false,
         dungeons = dungeons, selected = selected, elite = elite, include = include,
@@ -343,7 +465,11 @@ function Setup:Sanitize(d)
     d.autoEquip = d.autoEquip == true
     if d.training ~= "important" and d.training ~= "all" and d.training ~= "off" then d.training = current().training end
     if d.autoTrain ~= "off" and d.autoTrain ~= "recommended" and d.autoTrain ~= "all" then d.autoTrain = current().autoTrain end
-    if type(d.step) ~= "number" or d.step < 1 or d.step > #self.STEPS then d.step = 1 end
+    if d.newPlayer ~= nil then d.newPlayer = d.newPlayer == true end
+    if d.role ~= nil and not self:RoleInfo(d.role) then d.role = nil end
+    if type(d.helpers) ~= "table" then d.helpers = current().helpers end
+    for _, h in ipairs(self.HELPERS) do d.helpers[h.key] = d.helpers[h.key] == true end
+    if type(d.step) ~= "number" or d.step < 1 or d.step > #self:Steps(d) then d.step = 1 end
     return notes
 end
 
@@ -380,6 +506,9 @@ function Setup:ClearDungeons(d) d.selected = {} end
 function Setup:Validate(d, step)
     local errs = {}
     local function check(id) return not step or step == id end
+    -- Only the page itself insists on an answer; an unanswered draft is treated as experienced.
+    if step == "welcome" and d.newPlayer == nil then errs[#errs + 1] = "Choose Yes or No." end
+    if step == "build" and d.newPlayer and d.role == nil then errs[#errs + 1] = "Choose what you would like to do in a group, or I don't know yet." end
     if check("route") then
         local m = self:ModeInfo(d.mode)
         if not m then errs[#errs + 1] = "Choose a leveling mode."
@@ -427,7 +556,14 @@ function Setup:Snapshot()
         talentBuild = c.talentBuild, noTalentPlan = c.noTalentPlan, gearProfile = c.gearProfile,
         routing = c.routing and copy(c.routing) or nil, exclude = copy(ns.Completionist:State().exclude),
         autoEquip = prof.autoEquip, training = c.trainerSuggestions, autoTrain = c.autoTrain,
+        newPlayer = c.newPlayer, helpers = self:HelperValues(), groupFeatures = prof.groupFeatures,
     }
+end
+
+function Setup:HelperValues()
+    local out = {}
+    for _, h in ipairs(self.HELPERS) do out[h.key] = ns.db.profile[h.key] end
+    return out
 end
 
 function Setup:Restore(snap)
@@ -437,6 +573,8 @@ function Setup:Restore(snap)
     c.routing, c.trainerSuggestions, c.autoTrain = snap.routing, snap.training, snap.autoTrain
     ns.Completionist:State().exclude = snap.exclude
     prof.autoEquip = snap.autoEquip
+    c.newPlayer, prof.groupFeatures = snap.newPlayer, snap.groupFeatures
+    for k, v in pairs(snap.helpers or {}) do prof[k] = v end
     if snap.activeGuide and snap.activeGuide ~= ns.Completionist.GUIDE_ID and ns.Guides:Get(snap.activeGuide) then
         if c.activeGuide ~= snap.activeGuide then pcall(ns.Engine.Load, ns.Engine, snap.activeGuide) end
     elseif snap.activeGuide == ns.Completionist.GUIDE_ID and c.mode == "completionist" then
@@ -460,6 +598,9 @@ function Setup:Apply(d)
     local ex = CM:State().exclude
     for _, k in ipairs(self.INCLUDE_KINDS) do ex[k[1]] = not d.include[k[1]] end
     prof.autoEquip = (d.autoEquip and d.gear and ns.Upgrade:ActiveProfile()) and true or false
+    if d.newPlayer ~= nil then c.newPlayer = d.newPlayer end
+    for _, h in ipairs(self:Helpers()) do prof[h.key] = d.helpers[h.key] == true end
+    if d.helpers.playTogether then prof.groupFeatures = true end
     if d.mode == "completionist" then
         local ok, why = CM:Available()
         if not ok then return false, "Completionist is not available: " .. why end
@@ -477,6 +618,8 @@ function Setup:Apply(d)
     end
     if ns.AutoEquip then ns.AutoEquip:OnProfileChanged() end
     if ns.TalentHints and ns.TalentHints.Refresh then ns.TalentHints:Refresh() end
+    if ns.Config and ns.Config.Rebuild then ns.Config:Rebuild() end
+    if ns.NewPlayer then ns.NewPlayer:OnStep() end
     return true
 end
 
@@ -513,6 +656,7 @@ function Setup:Summary(d)
     local ch = self:Character()
     local lines = {}
     lines[#lines + 1] = string.format("Character: %s, level %d %s %s (%s), %s.", tostring(ch.name), ch.level, tostring(ch.raceName), tostring(ch.className), tostring(ch.faction), ch.game)
+    if d.newPlayer ~= nil then lines[#lines + 1] = "New to World of Warcraft: " .. (d.newPlayer and "yes" or "no") .. "." end
     lines[#lines + 1] = "Mode: " .. (self.MODE_NAMES[d.mode] or d.mode) .. "."
     local g = d.guide and ns.Guides:Get(d.guide)
     if d.mode == "speed" then
@@ -547,6 +691,9 @@ function Setup:Summary(d)
     lines[#lines + 1] = "Class training suggestions: " .. (self.TRAINING_NAMES[d.training] or d.training) .. "."
     lines[#lines + 1] = "Automatic training: " .. (self.AUTOTRAIN_NAMES[d.autoTrain] or d.autoTrain) .. "."
     lines[#lines + 1] = "Automatic upgrades: " .. (d.autoEquip and d.gear and "on" or "off") .. "."
+    local on = {}
+    for _, h in ipairs(self:Helpers()) do if d.helpers[h.key] then on[#on + 1] = string.lower(h.name) end end
+    lines[#lines + 1] = "Helpers: " .. (#on > 0 and table.concat(on, ", ") or "none") .. "."
     return lines
 end
 

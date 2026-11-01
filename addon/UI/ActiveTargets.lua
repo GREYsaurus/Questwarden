@@ -94,7 +94,7 @@ function AT:Update()
         if e then
             b:SetAttribute("macrotext", "/tar " .. e.name)
             b.text:SetText(e.name)
-            if e.enemy then b.text:SetTextColor(1, 0.4, 0.3) else b.text:SetTextColor(0.4, 1, 0.4) end
+            ns.Widgets.TextColor(b.text, e.enemy and ns.Widgets.THEME.bad or ns.Widgets.THEME.good)
             b:Show()
         else
             b:SetAttribute("macrotext", nil)
