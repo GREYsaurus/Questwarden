@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-alpha.6 (2026-11-01)
+
+- **TomTom support removed.** Waypoints use only Questwarden's own navigation: the arrow, the world-map pin and a new **minimap pin** for the current waypoint (it sits on the minimap's edge while the target is out of range, and turns with a rotating minimap). Setting: *Show Minimap Waypoint* (on by default). The old TomTom setting is dropped from saved profiles, and CurseForge no longer lists TomTom as an optional dependency.
+- **Fix: "Binding header QUESTWARDEN was attempted to be loaded more than once".** The key bindings declare their header only once.
+- **Dungeon runs** (docs/DUNGEONS.md):
+  - A dungeon quest's objective step now starts as a note while you are outside the dungeon: *Run <dungeon>: find a group*, with the arrow on the dungeon's entrance. Once you enter, the step moves on to the quest's objectives.
+  - Completionist's run step does the same, ends when you enter, and plans a dungeon segment while you are inside.
+  - After a death inside a dungeon, releasing points the arrow to its entrance, also after a reload.
+  - Entrance positions: QuestieDB's dungeon table, for all 19 Classic Era and 34 TBC dungeons.
+
+**Tested:** offline only (TBC suite 4,704/4,704, Classic Era smoke 87/87, Forever 31/31, route audits 0 errors). Not checked in the live game: the minimap pin's placement, entering detection and the entrance positions need an in-game check.
+
 ## 0.1.0-alpha.5 (2026-11-01)
 
 - **Fix: the guide progress bar counted steps you had not done.** Steps ahead of you that wait for a level ("needs level N; picked up if you reach it") counted as done, so a new level-1 character saw about 71% of Elwynn Forest complete. Skipped steps now count once you are past them or when you skipped them yourself.
