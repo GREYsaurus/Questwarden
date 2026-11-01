@@ -100,13 +100,17 @@ accept Culling the Wild | Faradrella.
 accept Little Embers | Mosswood the Ancient.
 accept From the Ashes
 accept Poaching from Poachers
+accept 10719 Did You Get The Note?
 complete ...and a Time for Action
 complete Poaching from Poachers | Wyrmcult Net drops from Wyrmcult Poacher.
+accept 10810 Damaged Mask
 complete Culling the Wild
 turnin Poaching from Poachers
 complete Little Embers
 complete From the Ashes | Click Fertile Volcanic Soil.
 turnin ...and a Time for Action
+turnin 10719 Did You Get The Note?
+turnin 10810 Damaged Mask
 turnin Culling the Wild
 turnin Little Embers
 turnin From the Ashes

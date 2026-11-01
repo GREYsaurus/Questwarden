@@ -86,6 +86,7 @@ turnin 367 A New Plague
 accept 368 A New Plague
 turnin A Putrid Task
 accept The Mills Overrun
+accept 361 A Letter Undelivered
 complete The Mills Overrun | Agamand Mills, north.
 complete 368 A New Plague | Vile Fin murlocs on the coast.
 turnin The Mills Overrun
@@ -104,6 +105,7 @@ turnin 372 At War With The Scarlet Crusade [optional]
 turnin Graverobbers
 accept Forsaken Duties
 accept Deaths in the Family | Coleman Farthing, Brill inn.
+turnin 361 A Letter Undelivered
 accept The Haunted Mills
 complete Deaths in the Family | Agamand relatives in the mills crypt.
 complete The Haunted Mills | Devlin Agamand in the mills.

@@ -19,6 +19,8 @@ ns.Guides:Register({
     {"turnin",q=10760,title="The Sketh'lon Wreckage",npc="Sergeant Kargrul",z=3520,x=31,y=29.8,v=1},
     {"accept",q=10761,title="Find the Deserter",npc="Sergeant Kargrul",z=3520,x=31,y=29.8,v=1},
     {"accept",q=10595,title="Besieged!",npc="Blood Guard Gulmok",z=3520,x=30.4,y=32.4,text="Blood Guard Gulmok.",v=1},
+    {"accept",q=10623,title="Illidari-Bane Shard",text="Starts from the item Illidari-Bane Shard.",starter=30579,drops={21499},v=1},
+    {"turnin",q=10623,title="Illidari-Bane Shard",npc="Grokom Deatheye",z=3520,x=29.8,y=31.3,v=1},
     {"complete",q=10595,title="Besieged!",v=1},
     {"turnin",q=10595,title="Besieged!",npc="Blood Guard Gulmok",z=3520,x=30.4,y=32.4,v=1},
     {"accept",q=10596,title="To Legion Hold",npc="Blood Guard Gulmok",z=3520,x=30.4,y=32.4,v=1},

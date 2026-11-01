@@ -32,6 +32,7 @@ accept 3442 The Flawless Flame
 complete 7724 Fiery Menace! | Greater Lava Spiders all around Thorium Point.
 complete 7727 Incendosaurs? Whateverosaur is More Like It | Incendosaurs at the lava lake east of Thorium Point.
 complete 3442 The Flawless Flame [obj=1] | Heart of Flame from Blazing Elementals in the middle of the Gorge.
+accept 4451 The Key to Freedom
 complete 7729 JOB OPPORTUNITY: Culling the Competition | Dark Iron Taskmasters and Slavers around the Cauldron.
 complete 7728 STOLEN: Smithing Tuyere and Lookout's Spyglass | Tuyere from Dark Iron Steamsmiths, Spyglass from Dark Iron Lookouts, around the Cauldron.
 complete 7723 Curse These Fat Fingers | Heavy War Golems in the south-west of the Gorge.
@@ -51,6 +52,7 @@ accept 3462 Squire Maltrake
 turnin 3462 Squire Maltrake | Squire Maltrake appears next to the torch.
 complete 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
 accept 4449 Caught!
+turnin 4451 The Key to Freedom
 complete 7722 What the Flux?
 accept 3463 Set Them Ablaze!
 complete 4449 Caught!

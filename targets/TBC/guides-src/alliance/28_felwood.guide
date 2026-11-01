@@ -11,6 +11,8 @@
 @next Both_Winterspring
 
 accept Deadwood of the North | Nafien.
+accept 8470 Deadwood Ritual Totem
+turnin 8470 Deadwood Ritual Totem
 complete Deadwood of the North | Deadwood furbolgs in northern Felwood.
 turnin Deadwood of the North
 accept Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.
@@ -18,9 +20,12 @@ accept The Corruption of the Jadefire | Eridan Bluewind.
 complete The Corruption of the Jadefire | Jadefire satyrs at Jadefire Glen.
 turnin The Corruption of the Jadefire
 accept Further Corruption
+accept 939 Flute of Xavaric
 complete Further Corruption | Xavathras, Jadefire Glen.
 turnin Further Corruption
 accept Verifying the Corruption | Taronn Redfeather.
+complete 939 Flute of Xavaric
+turnin 939 Flute of Xavaric
 complete Verifying the Corruption | Explore the area north of Shatter Scar Vale.
 turnin Verifying the Corruption
 accept Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.

@@ -8,15 +8,15 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 62 (49 Azeroth, 13 Outland) |
-| Guide steps | 6356 |
-| Quest steps (accept/complete/turn-in) | 5609 |
-| Distinct quests referenced | 1889 |
-| Steps with database-derived coordinates | 4435 |
+| Guide steps | 6422 |
+| Quest steps (accept/complete/turn-in) | 5675 |
+| Distinct quests referenced | 1919 |
+| Steps with database-derived coordinates | 4465 |
 | Steps with hand-written coordinates (unverified) | 1 |
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 140 (see docs/generated/TBC/guide-warnings.log) |
+| Compiler warnings | 139 (see docs/generated/TBC/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 70)
 
@@ -84,23 +84,23 @@ Each race/class combination is followed from its racial start guide through the 
 | Northshire & Elwynn Forest | Alliance | 1-10 | Elwynn Forest | 164 | 59 | 14 |
 | Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 145 | 50 | 3 |
 | Shadowglen & Teldrassil | Alliance | 1-11 | Teldrassil | 178 | 63 | 14 |
-| Ammen Vale & Azuremyst Isle | Alliance | 1-11 | Azuremyst Isle | 204 | 77 | 17 |
+| Ammen Vale & Azuremyst Isle | Alliance | 1-11 | Azuremyst Isle | 206 | 78 | 17 |
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 215 | 70 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 162 | 60 | 24 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 119 | 40 | 3 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 121 | 41 | 3 |
 | Sunstrider Isle & Eversong Woods | Horde | 1-11 | Eversong Woods | 242 | 93 | 30 |
 | Bloodmyst Isle | Alliance | 10-20 | Bloodmyst Isle | 205 | 78 | 14 |
-| Westfall | Alliance | 10-16 | Westfall | 78 | 27 | 17 |
+| Westfall | Alliance | 10-16 | Westfall | 80 | 28 | 17 |
 | Ghostlands (Tranquillien) | Horde | 10-20 | Ghostlands | 193 | 70 | 49 |
-| Silverpine Forest (The Sepulcher) | Horde | 10-18 | Silverpine Forest | 75 | 27 | 2 |
+| Silverpine Forest (The Sepulcher) | Horde | 10-18 | Silverpine Forest | 77 | 28 | 2 |
 | Darkshore | Alliance | 11-20 | Darkshore | 189 | 54 | 80 |
 | Loch Modan | Alliance | 11-18 | Loch Modan | 106 | 29 | 9 |
-| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 323 | 111 | 91 |
+| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 325 | 112 | 91 |
 | Redridge Mountains | Alliance | 15-21 | Redridge Mountains | 118 | 41 | 34 |
 | Ashenvale | Alliance | 19-25 | Ashenvale | 76 | 24 | 24 |
 | Duskwood | Alliance | 20-25 | Duskwood | 190 | 65 | 65 |
 | Stonetalon Mountains (Sun Rock Retreat) | Horde | 21-25 | Stonetalon Mountains | 59 | 23 | 3 |
-| Ashenvale (Splintertree Post) | Horde | 23-28 | Ashenvale | 58 | 18 | 15 |
+| Ashenvale (Splintertree Post) | Horde | 23-28 | Ashenvale | 60 | 19 | 15 |
 | Wetlands | Alliance | 24-29 | Wetlands | 113 | 41 | 20 |
 | Hillsbrad Foothills (Tarren Mill) | Horde | 27-31 | Hillsbrad Foothills | 51 | 14 | 7 |
 | Hillsbrad Foothills (Southshore) | Alliance | 28-31 | Hillsbrad Foothills | 65 | 25 | 7 |
@@ -115,34 +115,34 @@ Each race/class combination is followed from its racial start guide through the 
 | Dustwallow Marsh (Theramore) | Alliance | 36-41 | Dustwallow Marsh | 93 | 29 | 15 |
 | Dustwallow Marsh (Brackenwall Village) | Horde | 37-42 | Dustwallow Marsh | 109 | 35 | 14 |
 | Badlands | Alliance | 38-41 | Badlands | 50 | 15 | 4 |
-| Swamp of Sorrows (Stonard) | Horde | 39-42 | Swamp of Sorrows | 41 | 10 | 3 |
+| Swamp of Sorrows (Stonard) | Horde | 39-42 | Swamp of Sorrows | 43 | 11 | 3 |
 | Tanaris (Gadgetzan) | Both | 41-45 | Tanaris | 58 | 15 | 12 |
 | Feralas (Feathermoon Stronghold) | Alliance | 43-47 | Feralas | 60 | 19 | 2 |
 | Feralas (Camp Mojache) | Horde | 43-47 | Feralas | 54 | 14 | 0 |
 | The Hinterlands (Revantusk Village) | Horde | 44-50 | The Hinterlands | 63 | 17 | 3 |
 | The Hinterlands (Aerie Peak) | Alliance | 45-49 | The Hinterlands | 39 | 9 | 0 |
-| Searing Gorge (Thorium Point) | Both | 47-50 | Searing Gorge | 50 | 13 | 0 |
+| Searing Gorge (Thorium Point) | Both | 47-50 | Searing Gorge | 52 | 14 | 0 |
 | Un'Goro Crater | Both | 48-52 | Un'Goro Crater | 63 | 17 | 1 |
-| Felwood (Talonbranch Glade) | Alliance | 51-54 | Felwood | 39 | 10 | 0 |
+| Felwood (Talonbranch Glade) | Alliance | 51-54 | Felwood | 44 | 12 | 0 |
 | Felwood (Bloodvenom Post) | Horde | 51-54 | Felwood | 39 | 10 | 0 |
 | Burning Steppes (Morgan's Vigil) | Alliance | 53-56 | Burning Steppes | 42 | 13 | 2 |
-| Winterspring (Everlook) | Both | 54-56 | Winterspring | 48 | 15 | 0 |
+| Winterspring (Everlook) | Both | 54-56 | Winterspring | 50 | 16 | 0 |
 | Western Plaguelands (The Bulwark) | Horde | 54-58 | Western Plaguelands | 64 | 21 | 3 |
 | Western Plaguelands (Chillwind Camp) | Alliance | 55-57 | Western Plaguelands | 82 | 27 | 3 |
 | Eastern Plaguelands (Light's Hope) | Both | 56-58 | Eastern Plaguelands | 45 | 11 | 1 |
-| Hellfire Peninsula (Honor Hold) | Alliance | 58-62 | Hellfire Peninsula | 177 | 60 | 4 |
-| Hellfire Peninsula (Thrallmar) | Horde | 58-62 | Hellfire Peninsula | 142 | 51 | 4 |
-| Zangarmarsh (Telredor) | Alliance | 61-64 | Zangarmarsh | 116 | 39 | 4 |
-| Zangarmarsh (Zabra'jin) | Horde | 61-64 | Zangarmarsh | 110 | 37 | 3 |
+| Hellfire Peninsula (Honor Hold) | Alliance | 58-62 | Hellfire Peninsula | 179 | 61 | 4 |
+| Hellfire Peninsula (Thrallmar) | Horde | 58-62 | Hellfire Peninsula | 146 | 53 | 4 |
+| Zangarmarsh (Telredor) | Alliance | 61-64 | Zangarmarsh | 122 | 42 | 4 |
+| Zangarmarsh (Zabra'jin) | Horde | 61-64 | Zangarmarsh | 112 | 38 | 3 |
 | Terokkar Forest (Allerian Stronghold) | Alliance | 63-65 | Terokkar Forest | 108 | 37 | 9 |
 | Terokkar Forest (Stonebreaker Hold) | Horde | 63-65 | Terokkar Forest | 107 | 37 | 8 |
-| Nagrand (Telaar) | Alliance | 64-67 | Nagrand | 126 | 43 | 4 |
-| Nagrand (Garadar) | Horde | 64-67 | Nagrand | 130 | 44 | 4 |
-| Blade's Edge Mountains (Sylvanaar & Toshley's Station) | Alliance | 66-68 | Blade's Edge Mountains | 102 | 33 | 0 |
-| Blade's Edge Mountains (Thunderlord Stronghold) | Horde | 66-68 | Blade's Edge Mountains | 79 | 25 | 3 |
-| Netherstorm (Area 52) | Both | 67-70 | Netherstorm | 105 | 35 | 3 |
-| Shadowmoon Valley (Wildhammer Stronghold) | Alliance | 68-70 | Shadowmoon Valley | 57 | 18 | 0 |
-| Shadowmoon Valley (Shadowmoon Village) | Horde | 68-70 | Shadowmoon Valley | 57 | 18 | 0 |
+| Nagrand (Telaar) | Alliance | 64-67 | Nagrand | 130 | 45 | 4 |
+| Nagrand (Garadar) | Horde | 64-67 | Nagrand | 132 | 45 | 4 |
+| Blade's Edge Mountains (Sylvanaar & Toshley's Station) | Alliance | 66-68 | Blade's Edge Mountains | 106 | 35 | 0 |
+| Blade's Edge Mountains (Thunderlord Stronghold) | Horde | 66-68 | Blade's Edge Mountains | 82 | 26 | 3 |
+| Netherstorm (Area 52) | Both | 67-70 | Netherstorm | 117 | 39 | 3 |
+| Shadowmoon Valley (Wildhammer Stronghold) | Alliance | 68-70 | Shadowmoon Valley | 59 | 19 | 0 |
+| Shadowmoon Valley (Shadowmoon Village) | Horde | 68-70 | Shadowmoon Valley | 59 | 19 | 0 |
 
 ### Zones covered
 
@@ -186,7 +186,7 @@ Each race/class combination is followed from its racial start guide through the 
 
 - Guide **routes, ordering and notes** are original and were written without in-game testing. Quest ids, names, faction/race/class limits and NPC coordinates come from the database, but the practical route (XP sufficiency, travel efficiency) needs play-testing.
 - **100 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
-- **30 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
+- **29 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
 - **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.
 - **Talent builds** are legal against the 2.5.6.70577 client tables, but how good they are is a judgement call, not something tested.
 

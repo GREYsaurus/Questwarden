@@ -23,6 +23,7 @@ accept The Flawless Flame
 complete Fiery Menace! | Greater Lava Spiders all around Thorium Point.
 complete Incendosaurs? Whateverosaur is More Like It | Incendosaurs at the lava lake east of Thorium Point.
 complete The Flawless Flame [obj=1] | Heart of Flame from Blazing Elementals in the middle of the Gorge.
+accept 4451 The Key to Freedom
 complete JOB OPPORTUNITY: Culling the Competition | Dark Iron Taskmasters and Slavers around the Cauldron.
 complete STOLEN: Smithing Tuyere and Lookout's Spyglass | Tuyere from Dark Iron Steamsmiths, Spyglass from Dark Iron Lookouts, around the Cauldron.
 complete Curse These Fat Fingers | Heavy War Golems in the south-west of the Gorge.
@@ -40,6 +41,7 @@ accept 3454 The Torch of Retribution
 turnin 3454 The Torch of Retribution | Take the Torch of Retribution from beside Kalaran.
 accept Squire Maltrake
 turnin Squire Maltrake | Squire Maltrake appears next to the torch.
+turnin 4451 The Key to Freedom
 accept Set Them Ablaze!
 complete Set Them Ablaze! | Light the two Sentry Braziers at the south edge of the Gorge, by the Blackrock Mountain bridge. Dark Iron sentries stand nearby.
 turnin Set Them Ablaze! | Squire Maltrake.

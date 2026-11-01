@@ -56,6 +56,46 @@ Skip is never completion. A skipped pickup skips its quest's objective and turn-
 - whether a guide picks the quest up;
 - which steps of that guide kill a dropper.
 
+## Added to the speed guides
+
+`python tools/research/item_starter_gaps.py <Target>` lists, for every guide whose route model still needs grinding (`guide-xp.csv`), the item-started quests no guide uses yet. A candidate must:
+- be open to the guide's faction and every class;
+- have no prerequisite;
+- fit the guide's level band;
+- be dropped by mobs in the guide's zone.
+
+`python tools/research/item_starter_insert.py <Target>` adds the conservative ones to the guide sources, with the same placement rules as `quest_insert.py`. A quest is added only when:
+- its item is dropped by one kind of NPC (a named mob), or the guide already has an objective step that kills a dropper;
+- no dropper is a hostile elite, rare elite or boss;
+- it isn't an escort, an event, repeatable or reputation-gated;
+- its finisher and objectives are in the zone;
+- the route model reaches its required level where the pickup goes.
+
+The pickup goes right before the guide's first step that kills a dropper, else after the step nearest the droppers. Being dropped by one named mob doesn't mean the drop is certain; drop rates aren't in the data.
+
+First batch (2026-11-01):
+- **Classic Era (7 quests):**
+  - Horde: A Letter Undelivered (Tirisfal); The Runed Scroll and The Harvester (Barrens); The Corrupter (Desolace).
+  - Alliance: Noboru the Cudgel (Swamp of Sorrows); Deadwood Ritual Totem and Flute of Xavaric (Felwood).
+  - Grinding in the route model: 50.94 → 50.42 levels.
+- **TBC (24 quests):** the same kinds in Tirisfal, the Barrens, Ashenvale, Swamp of Sorrows, Felwood and Winterspring, plus 15 in Outland (Hellfire, Zangarmarsh, Nagrand, Blade's Edge, Netherstorm, Shadowmoon). Grinding: 54.81 → 53.80 levels.
+
+Second batch (`--relaxed`):
+- The objectives and turn-in may be in another zone. They go into the first later guide of that zone, by level, for the same faction, and the pickup says where it's turned in.
+- The pickup no longer waits for the required level. Below it, the add-on skips it with "needs level N" and picks it up if you reach the level before moving on.
+- Every guide whose zone has the droppers is considered, not only those that still need grinding.
+- Prerequisites are allowed when the route turns them in first.
+- Elite droppers no longer rule a quest out when non-elite mobs drop the item too. The step then points only at the non-elite ones; the compiler does the same for every item pickup.
+- Items more than 12 kinds of mob drop are left out: a broad world drop, likely rare, and more droppers than the bundled data keeps.
+- Classic Era got The Key to Freedom (Searing Gorge) and Winterfall Ritual Totem (Winterspring, turned in in Felwood).
+- TBC got 6 quests: Rune Covered Tablet, Captain Sander's Hidden Treasure, Resting in Pieces, The Key to Freedom, Drain Schematics and Did You Get The Note?.
+- Grinding in the route model, after both batches: Classic Era 50.94 → 50.31 levels; TBC 54.81 → 53.47.
+
+Still left out:
+- escorts and events;
+- items only elites or instance mobs drop;
+- quests with no guide in the zone of their objectives or finisher.
+
 ## Not checked in the game
 
 Everything above is checked offline with the test suite, not in the live client.

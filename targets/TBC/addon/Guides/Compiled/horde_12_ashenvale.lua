@@ -51,6 +51,8 @@ ns.Guides:Register({
     {"fp",npc="Vhulgra",z=331,x=73.2,y=61.6,place="Zoram'gar Outpost",node=58,v=1},
     {"turnin",q=216,title="Between a Rock and a Thistlefur",npc="Karang Amakkar",z=331,x=11.9,y=34.5,v=1},
     {"turnin",q=824,title="Je'neu of the Earthen Ring",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,v=1},
+    {"accept",q=6564,title="Allegiance to the Old Gods",text="Starts from the item Damp Note.",starter=16790,drops={4802},v=1},
+    {"turnin",q=6564,title="Allegiance to the Old Gods",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,v=1},
     {"turnin",q=6562,title="Trouble in the Deeps",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,text="Je'neu Sancrea, Zoram'gar Outpost (west coast).",optional=true,v=1},
     {"accept",q=6921,title="Amongst the Ruins",npc="Je'neu Sancrea",z=331,x=11.6,y=34.3,text="Je'neu Sancrea. Needs the Blackfathom Deeps dungeon.",dungeon="Blackfathom Deeps",v=1},
     {"complete",q=6921,title="Amongst the Ruins",text="The Fathom Stone is inside the Blackfathom Deeps instance (entrance at the Zoram Strand).",dungeon="Blackfathom Deeps",v=1},

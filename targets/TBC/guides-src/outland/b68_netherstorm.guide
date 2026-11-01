@@ -43,6 +43,18 @@ accept Elemental Power Extraction
 turnin A Heap of Ethereals
 accept Warp-Raider Nesaad
 turnin Invaluable Asset Zapping
+accept 10305 Abjurist Belmara
+accept 10306 Conjurer Luminrath
+accept 10307 Cohlien Frostweaver
+accept 10182 Battle-Mage Dathric
+complete 10305 Abjurist Belmara
+complete 10306 Conjurer Luminrath
+complete 10307 Cohlien Frostweaver
+complete 10182 Battle-Mage Dathric
+turnin 10305 Abjurist Belmara
+turnin 10306 Conjurer Luminrath
+turnin 10307 Cohlien Frostweaver
+turnin 10182 Battle-Mage Dathric
 accept Dr. Boom!
 complete Dr. Boom!
 complete Warp-Raider Nesaad

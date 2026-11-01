@@ -209,6 +209,7 @@ turnin 5726 Hidden Enemies [class=Paladin,Hunter,Rogue,Priest,Mage; race=Blood E
 accept 9428 Report to Splintertree Post [race=Blood Elf; optional]
 complete Lost in Battle | Mankrik's wife lies near Blackthorn Ridge.
 accept 878 Tribes at War
+accept 897 The Harvester
 complete The Angry Scytheclaws
 complete Consumed by Hatred
 turnin 1525 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional] | Turned in at Durotar.
@@ -279,6 +280,7 @@ turnin 878 Tribes at War [race=Undead,Blood Elf]
 turnin 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
 accept 883 Lakota'mani [optional]
 turnin 883 Lakota'mani [optional]
+turnin 897 The Harvester
 complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
 turnin Jorn Skyseer | Camp Taurajo.
 accept Ishamuhale

@@ -19,5 +19,7 @@ accept 1393 Galen's Escape
 complete 1393 Galen's Escape | Escort: stay close; it fails if the NPC dies.
 complete 1396 Encroaching Wildlife
 turnin 1393 Galen's Escape
+accept 1392 Noboru the Cudgel
+turnin 1392 Noboru the Cudgel
 turnin 1396 Encroaching Wildlife
 level 42 | Stranglethorn Vale starts at 42. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

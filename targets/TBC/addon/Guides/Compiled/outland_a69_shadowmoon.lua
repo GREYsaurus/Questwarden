@@ -61,6 +61,8 @@ ns.Guides:Register({
     {"turnin",q=10677,title="The Second Course...",npc="Gnomus",z=3520,x=36.5,y=55.2,v=1},
     {"complete",q=10759,title="Find the Deserter",v=1},
     {"turnin",q=10759,title="Find the Deserter",npc="Parshah",z=3520,x=35.4,y=42.2,v=1},
+    {"accept",q=10621,title="Illidari-Bane Shard",text="Starts from the item Illidari-Bane Shard.",starter=30756,drops={21499},v=1},
+    {"turnin",q=10621,title="Illidari-Bane Shard",npc="Ordinn Thunderfist",z=3520,x=36.8,y=54.9,v=1},
     {"complete",q=10766,title="Invasion Point: Cataclysm",v=1},
     {"turnin",q=10766,title="Invasion Point: Cataclysm",npc="Plexi",z=3520,x=40.8,y=22.3,v=1},
     {"level",level=70,v=1},

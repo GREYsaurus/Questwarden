@@ -59,8 +59,10 @@ turnin 61 Shipment to Stormwind [race=Human] | Turned in at Stormwind City.
 accept Keeper of the Flame | Captain Grayson at the Westfall Lighthouse.
 accept The Coast Isn't Clear
 complete Keeper of the Flame | Kill Gnoll Mystics on the coast for Flasks of Oil.
+accept 136 Captain Sander's Hidden Treasure
 complete The Coast Isn't Clear | Murlocs along the shore north of the lighthouse.
 turnin Keeper of the Flame
+turnin 136 Captain Sander's Hidden Treasure
 turnin The Coast Isn't Clear
 accept The Coastal Menace [elite; group=2; optional] | Old Murk-Eye (elite murloc). Skip if solo below level 16.
 complete The Coastal Menace [elite; group=2; optional]

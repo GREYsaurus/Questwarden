@@ -74,6 +74,7 @@ accept Enemy of my Enemy...
 complete Enemy of my Enemy...
 turnin Enemy of my Enemy...
 accept Invasion Point: Annihilator
+accept 10395 The Dark Missive
 complete Invasion Point: Annihilator | Burning Legion Gate Key drops from Warbringer Arix'Amal. Click Forge Camp: Portal Glyph.
 turnin Invasion Point: Annihilator
 turnin Outland Sucks!
@@ -121,6 +122,7 @@ complete The Mastermind | Deep inside the Hellfire Quarry mine.
 turnin The Mastermind
 complete Looking to the Leadership | Bonechewer leaders.
 accept The Path of Glory | Warp-Scryer Kryv.
+turnin 10395 The Dark Missive
 complete The Path of Glory | Click Trampled Skeleton.
 turnin The Path of Glory
 accept The Temple of Telhamat

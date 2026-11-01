@@ -15,6 +15,7 @@ accept Draenethyst Crystals | Magtoor, a Lost One in the hut at the west end of 
 fp Stonard
 accept Little Morsels | Cersei Dusksinger, Stonard.
 accept Pool of Tears | Fel'zerul, Stonard.
+accept 1392 Noboru the Cudgel
 accept 698 Lack of Surplus | Dar, just outside Stonard.
 accept Fresh Meat | Dar.
 complete 698 Lack of Surplus | Unprepared Sawtooth Flanks from Sawtooth Crocolisks around the lakes east of Stonard.
@@ -40,6 +41,7 @@ turnin Little Morsels | Stonard.
 turnin Pool of Tears | Fel'zerul.
 turnin Fresh Meat | Dar.
 turnin Draenethyst Crystals | Magtoor, at the west end of the swamp.
+turnin 1392 Noboru the Cudgel
 level 40
 train | Fly from Stonard to Orgrimmar to train.
 note Fly from Stonard to Orgrimmar and on to Brackenwall Village in Dustwallow Marsh (zeppelin route if you lack the path).

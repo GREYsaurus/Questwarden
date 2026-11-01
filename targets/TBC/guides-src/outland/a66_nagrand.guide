@@ -123,6 +123,7 @@ accept Stealing from Thieves | Gezhe, Aeris Landing.
 accept Matters of Security | Zerid, Aeris Landing.
 accept Gava'xi | Zerid. Needs level 65.
 accept A Head Full of Ivory | Shadrek, Aeris Landing.
+accept 9871 Murkblood Invaders
 complete Stealing from Thieves | Oshu'gun Crystal Fragments from Vir'aani Raiders north of Oshu'gun, south of the camp.
 complete Matters of Security | Voidspawn around Oshu'gun.
 complete Gava'xi | Gava'xi, near Oshu'gun.
@@ -131,6 +132,9 @@ turnin Stealing from Thieves | Gezhe.
 turnin Matters of Security | Zerid.
 turnin Gava'xi
 accept I Must Have Them! | Wazat, in east-central Nagrand.
+accept 9861 The Howling Wind
+turnin 9861 The Howling Wind
+turnin 9871 Murkblood Invaders
 complete I Must Have Them! | Air Elemental Gas from Dust Howlers in the east of Nagrand.
 turnin I Must Have Them! | Wazat.
 turnin A Head Full of Ivory | Shadrek, back at Aeris Landing.

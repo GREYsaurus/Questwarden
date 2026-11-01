@@ -34,6 +34,7 @@ accept Warden Hamoot
 accept The Dying Balance | Lethyn Moonfire.
 turnin Warden Hamoot
 accept A Warm Welcome
+accept 9731 Drain Schematics
 complete A Warm Welcome | Mire Hydras.
 complete A Damp, Dark Place | The Ikeyen's Belongings cave in Umbrafen.
 complete Safeguarding the Watchers | Kill the Umbrafen Oracles and Seers.
@@ -46,6 +47,7 @@ turnin A Damp, Dark Place
 turnin Saving the Sporeloks
 turnin The Dying Balance
 turnin Balance Must Be Preserved
+turnin 9731 Drain Schematics
 fp Telredor | Climb the giant mushroom at Telredor.
 accept The Zapthrottle Mote Extractor! | K. Lee Smallfry.
 bind Telredor [area=3644]
@@ -81,6 +83,8 @@ complete Messenger to the Feralfen
 turnin Messenger to the Feralfen
 turnin The Dead Mire
 accept An Unnatural Drought
+accept 9827 Withered Basidium
+turnin 9827 Withered Basidium
 complete An Unnatural Drought | Withered giants in the Dead Mire.
 turnin An Unnatural Drought
 turnin The Zapthrottle Mote Extractor! [optional]
@@ -88,6 +92,8 @@ accept Watcher Leesa'oh | From Lethyn Moonfire.
 accept The Sporelings' Plight | Fahssn.
 accept Natural Enemies
 turnin Watcher Leesa'oh | Watcher Leesa'oh, near Sporeggar.
+accept 9911 The Count of the Marshes
+turnin 9911 The Count of the Marshes
 accept Observing the Sporelings
 complete Observing the Sporelings
 complete The Sporelings' Plight | Mature Spore Sacs on the ground.

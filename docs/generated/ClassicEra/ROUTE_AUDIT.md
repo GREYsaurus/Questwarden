@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 38 |
 | Level-gated pickups | 16 |
 | Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 501 |
+| Hub revisits (all guides) | 503 |
 
 ## Per guide
 
@@ -45,7 +45,7 @@ No baseline file found.
 | A_29_DustwallowMarsh | 53 | 16 | 209 | 206 | 3 | 0 | 0 | 0 | 1 | 0 |
 | A_30_StranglethornVale | 38 | 15 | 171 | 171 | 4 | 0 | 0 | 0 | 0 | 6 |
 | A_31_Badlands | 63 | 19 | 239 | 339 | 8 | 0 | 0 | 0 | 0 | 0 |
-| A_32_SwampofSorrows | 9 | 2 | 114 | 114 | 1 | 0 | 0 | 0 | 1 | 0 |
+| A_32_SwampofSorrows | 11 | 3 | 137 | 137 | 1 | 0 | 0 | 0 | 1 | 0 |
 | A_33_StranglethornVale | 48 | 14 | 87 | 86 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_34_Desolace | 77 | 25 | 508 | 533 | 9 | 16 | 0 | 0 | 4 | 0 |
 | A_35_Tanaris | 38 | 13 | 84 | 84 | 3 | 0 | 0 | 0 | 0 | 8 |
@@ -53,7 +53,7 @@ No baseline file found.
 | A_37_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_38_Hinterlands | 24 | 4 | 14 | 14 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_39_StranglethornVale | 17 | 2 | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_40_SearingGorge | 55 | 18 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
+| A_40_SearingGorge | 57 | 19 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
 | A_41_Feralas | 29 | 6 | 96 | 96 | 0 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_43_Tanaris | 34 | 11 | 151 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
@@ -61,9 +61,9 @@ No baseline file found.
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 421 | 421 | 7 | 0 | 0 | 0 | 3 | 0 |
 | A_47_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_48_Felwood | 26 | 10 | 197 | 197 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_49_Winterspring | 30 | 10 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
-| A_50_Felwood | 21 | 4 | 152 | 97 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_48_Felwood | 31 | 12 | 208 | 208 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_49_Winterspring | 31 | 11 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_50_Felwood | 22 | 5 | 157 | 102 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_51_BurningSteppes | 70 | 26 | 244 | 369 | 7 | 0 | 0 | 0 | 4 | 29 |
 | A_52_WesternPlaguelands | 78 | 26 | 521 | 596 | 13 | 1 | 0 | 0 | 0 | 0 |
 | A_53_EasternPlaguelands | 41 | 10 | 350 | 375 | 4 | 0 | 0 | 0 | 1 | 0 |
@@ -82,7 +82,7 @@ No baseline file found.
 | H_11_StonetalonMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_12_Barrens | 122 | 40 | 406 | 476 | 16 | 0 | 2 | 0 | 3 | 4 |
 | H_13_StonetalonMountains | 42 | 18 | 159 | 182 | 2 | 0 | 0 | 0 | 1 | 0 |
-| H_14_SouthernBarrens | 39 | 7 | 76 | 126 | 3 | 0 | 0 | 0 | 0 | 3 |
+| H_14_SouthernBarrens | 43 | 9 | 112 | 162 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_15_StonetalonMountains | 17 | 5 | 23 | 27 | 3 | 0 | 0 | 0 | 1 | 0 |
 | H_16_SouthernBarrens | 10 | 5 | 30 | 80 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_17_ThousandNeedles | 43 | 15 | 194 | 269 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -93,7 +93,7 @@ No baseline file found.
 | H_22_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_23_StranglethornVale | 27 | 6 | 185 | 82 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_24_ShimmeringFlats | 23 | 7 | 71 | 97 | 0 | 0 | 0 | 0 | 0 | 3 |
-| H_25_Desolace | 50 | 13 | 282 | 282 | 6 | 0 | 0 | 0 | 1 | 0 |
+| H_25_Desolace | 52 | 14 | 297 | 297 | 7 | 0 | 0 | 0 | 1 | 0 |
 | H_26_StranglethornVale | 63 | 18 | 333 | 244 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_27_ArathiHighlands | 70 | 21 | 387 | 345 | 7 | 0 | 0 | 0 | 1 | 3 |
 | H_28_AlteracMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -129,7 +129,7 @@ No baseline file found.
 | H_58_Winterspring | 19 | 6 | 106 | 106 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 224 | 71 | 458 | 536 | 16 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 237 | 437 | 9 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 134 | 45 | 169 | 225 | 13 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 136 | 46 | 169 | 225 | 13 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 

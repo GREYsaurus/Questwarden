@@ -49,8 +49,10 @@ complete 6142 Clam Bait
 complete 6143 Other Fish to Fry | Slitherblade naga along the north-west coast.
 complete 6161 Claim Rackmore's Treasure! | Silver Key from Drysnap Crawlers on the shore, Golden Key from Slitherblade Naga.
 turnin 6161 Claim Rackmore's Treasure! | Rackmore's Chest on Ranazjar Isle, north-west. Swim across.
+accept 1480 The Corrupter
 complete 5741 Sceptre of Light | The Sceptre drops from the Burning Blade Seer at the top of the Thunder Axe Fortress tower.
 turnin 5741 Sceptre of Light | Azore Aldamort.
+turnin 1480 The Corrupter
 turnin 6143 Other Fish to Fry | Shadowprey Village.
 turnin 6142 Clam Bait
 level 34 | Stranglethorn Vale starts at 34. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

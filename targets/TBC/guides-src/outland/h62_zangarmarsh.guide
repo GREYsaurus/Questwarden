@@ -111,8 +111,10 @@ turnin Watcher Leesa'oh
 accept Observing the Sporelings
 complete Observing the Sporelings
 complete The Sporelings' Plight | Mature Spore Sac: loot Mature Spore Sac.
+accept 9828 Withered Basidium
 complete Natural Enemies | Bog Lord Tendril drops from Bog Lord, Starving Fungal Giant and Withered Giant and others.
 turnin Observing the Sporelings
+turnin 9828 Withered Basidium
 accept A Question of Gluttony
 complete A Question of Gluttony | Discarded Nutriment: loot Discarded Nutriment.
 turnin A Question of Gluttony

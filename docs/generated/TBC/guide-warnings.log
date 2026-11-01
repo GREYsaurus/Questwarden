@@ -59,15 +59,15 @@ horde/05_silverpine.guide:32: 'Escorting Erland' has no objective locations in t
 horde/05_silverpine.guide:37: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:52: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:60: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:71: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:75: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:73: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:77: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:164: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:225: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:254: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:263: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:226: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:255: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:264: quest 5881 requires level 23 but guide ends at 22
 horde/10_barrens.guide:265: quest 5881 requires level 23 but guide ends at 22
 horde/10_barrens.guide:266: quest 5881 requires level 23 but guide ends at 22
+horde/10_barrens.guide:267: quest 5881 requires level 23 but guide ends at 22
 horde/11_stonetalon.guide:26: 'Vorsha the Lasher' has no objective locations in the database; add [at=x,y] or a goto
 horde/11_stonetalon.guide:47: 'Gerenzo's Orders' has no objective locations in the database; add [at=x,y] or a goto
 horde/12_ashenvale.guide:28: 'Torek's Assault' has no objective locations in the database; add [at=x,y] or a goto
@@ -92,18 +92,18 @@ horde/23_westernplaguelands.guide:17: 'Scarlet Diversions' has no objective loca
 outland/a66_nagrand.guide:64: 'Corki's Ransom' has no objective locations in the database; add [at=x,y] or a goto
 outland/a69_shadowmoon.guide:37: 'The Deathforge' has no objective locations in the database; add [at=x,y] or a goto
 outland/a69_shadowmoon.guide:63: 'Find the Deserter' has no objective locations in the database; add [at=x,y] or a goto
-outland/a69_shadowmoon.guide:65: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
-outland/b68_netherstorm.guide:88: 'Curse of the Violet Tower' has no objective locations in the database; add [at=x,y] or a goto
-outland/h60_hellfire.guide:77: 'Investigate the Crash' has no objective locations in the database; add [at=x,y] or a goto
-outland/h60_hellfire.guide:104: 'A Spirit Guide' has no objective locations in the database; add [at=x,y] or a goto
-outland/h60_hellfire.guide:141: 'The Mistress Revealed' has no objective locations in the database; add [at=x,y] or a goto
+outland/a69_shadowmoon.guide:67: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
+outland/b68_netherstorm.guide:100: 'Curse of the Violet Tower' has no objective locations in the database; add [at=x,y] or a goto
+outland/h60_hellfire.guide:79: 'Investigate the Crash' has no objective locations in the database; add [at=x,y] or a goto
+outland/h60_hellfire.guide:108: 'A Spirit Guide' has no objective locations in the database; add [at=x,y] or a goto
+outland/h60_hellfire.guide:145: 'The Mistress Revealed' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:22: 'The Missing War Party' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:32: 'Because Kilrath is a Coward' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:39: 'Missing Mag'hari Procession' has no objective locations in the database; add [at=x,y] or a goto
-outland/h66_nagrand.guide:68: 'He Will Walk The Earth...' has no objective locations in the database; add [at=x,y] or a goto
-outland/h69_shadowmoon.guide:37: 'The Deathforge' has no objective locations in the database; add [at=x,y] or a goto
-outland/h69_shadowmoon.guide:57: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
-outland/h69_shadowmoon.guide:63: 'Find the Deserter' has no objective locations in the database; add [at=x,y] or a goto
+outland/h66_nagrand.guide:69: 'He Will Walk The Earth...' has no objective locations in the database; add [at=x,y] or a goto
+outland/h69_shadowmoon.guide:39: 'The Deathforge' has no objective locations in the database; add [at=x,y] or a goto
+outland/h69_shadowmoon.guide:59: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
+outland/h69_shadowmoon.guide:65: 'Find the Deserter' has no objective locations in the database; add [at=x,y] or a goto
 shared/27_ungoro.guide:54: 'The Northern Pylon' has no objective locations in the database; add [at=x,y] or a goto
 shared/27_ungoro.guide:55: 'The Eastern Pylon' has no objective locations in the database; add [at=x,y] or a goto
 shared/27_ungoro.guide:56: 'The Western Pylon' has no objective locations in the database; add [at=x,y] or a goto
@@ -112,8 +112,7 @@ alliance/00_human_elwynn.guide:66 (Garments of the Light): prerequisite 5623 'In
 alliance/00_human_elwynn.guide:147 (Bartleby's Mug): prerequisite 1640 'Beat Bartleby' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/01_dwarf_gnome_dunmorogh.guide:70 (Garments of the Light): prerequisite 5626 'In Favor of the Light' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/02_nightelf_teldrassil.guide:69 (Ferocitas the Dream Eater): prerequisite 2438 'The Emerald Dreamcatcher' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/03_draenei_azuremyst.guide:119 (Warlord Sriss'tiz): prerequisite 9514 'Rune Covered Tablet' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/10_westfall.guide:71 (Bartleby's Mug): prerequisite 1640 'Beat Bartleby' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/10_westfall.guide:73 (Bartleby's Mug): prerequisite 1640 'Beat Bartleby' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/12_redridge.guide:15 (The Tome of Divinity): prerequisite 1641 'The Tome of Divinity' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/13_duskwood.guide:40 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/13_duskwood.guide:73 (Call of Water): prerequisite 9508 'Call of Water' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -127,8 +126,8 @@ horde/01_tauren_mulgore.guide:164 (Speak with Coleman): prerequisite 1819 'Ulag 
 horde/04_bloodelf_ghostlands.guide:17 (Return to Quartermaster Lymel): prerequisite 9134 'Skymistress Gloaming' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:101 (Zando'zan): prerequisite 2378 'Find the Shattered Hand' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:270 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/10_barrens.guide:324 (Steelsnap): prerequisite 1130 'Melor Sends Word' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:271 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/10_barrens.guide:326 (Steelsnap): prerequisite 1130 'Melor Sends Word' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
