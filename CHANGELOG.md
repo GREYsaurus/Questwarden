@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Quest reward markers.** On a quest's reward panel, a green arrow (the same one as on bag upgrades) marks each reward choice that is an upgrade for your spec profile. When none is, a coin marks the choice that sells for the most at a vendor. They show when you read the quest and when you turn it in. Turn them off with *Mark quest reward choices* (Item Upgrade settings, on by default).
+- **Fixed: "Choose your reward" printed twice.** The client can fire its reward event twice for one panel; the message now shows once.
 - **Kill packs: kill and drop quests in the same area are done together.** When the mobs of several quests in your log spawn in the same area, their objective steps now show together as current, so you kill them all in one trip. Examples: Dwarven Outfitters and The Boar Hunter in Dun Morogh; the four Un'Goro quests that join Beware of Pterrordax on the Classic Era Horde route.
   - **Any number of quests.** A pack holds as many quests as share the area: up to 7 in Classic Era and 8 in TBC.
   - **Drop quests count too:** a quest whose items drop from mobs joins by those mobs.

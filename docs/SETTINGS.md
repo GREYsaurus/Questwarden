@@ -143,7 +143,8 @@ None of this has been tested in the game client yet.
 - **Item Upgrade:**
   - gear scoring switches;
   - the **Spec profile** (per character; your class's profiles only);
-  - quest reward recommendation and automation.
+  - quest reward recommendation and automation;
+  - *Mark quest reward choices* (on by default): a green arrow on reward choices that are upgrades, or, when none is, a coin on the one that sells for the most.
 
   See [GEAR_SCORING.md](GEAR_SCORING.md).
 - **Automatic Upgrades** (opt-in): see [AUTO_EQUIP.md](AUTO_EQUIP.md).

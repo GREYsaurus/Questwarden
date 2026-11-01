@@ -16,7 +16,7 @@ local _, ns = ...
 -- external: buttons of bag add-ons (UI/BagAdapters.lua) -> function returning bag, slot (or nil
 -- when the button shows something other than the player's own bags: bank, offline characters).
 local M = { marks = {}, junk = {}, queue = {}, overlays = setmetatable({}, { __mode = "k" }),
-            coins = setmetatable({}, { __mode = "k" }), vendor = {}, external = setmetatable({}, { __mode = "k" }),
+            coins = setmetatable({}, { __mode = "k" }), vendor = {}, reward = {}, external = setmetatable({}, { __mode = "k" }),
             tipOnly = setmetatable({}, { __mode = "k" }) } -- buttons whose add-on draws the marker itself (Baganator)
 ns.GearMarkers = M
 
@@ -302,7 +302,84 @@ function M:RefreshMerchant()
     end
 end
 
+-- Quest reward choices ---------------------------------------------------------------------------------------
+-- On the reward panel (quest details and turn-in): a green arrow on each choice that is an upgrade for your spec
+-- profile (the same evaluation as the bags and merchants). When none is, a coin on the choice worth the most at a
+-- vendor (with two or more choices). Items the client has not loaded yet are retried, never guessed.
+M.REWARD_BUTTONS = 10
+
+-- The default UI's button for reward choice i (choices come first on the panel), or nil.
+function M:RewardButton(i)
+    local f = _G["QuestInfoRewardsFrame"]
+    local b = (f and f.RewardButtons and f.RewardButtons[i]) or _G["QuestInfoRewardsFrameQuestInfoItem" .. i] or _G["QuestRewardItem" .. i]
+    if b and type(b.type) == "string" and b.type ~= "choice" then return nil end
+    return b
+end
+
+-- Fills self.reward[i] = "upgrade" | "coin". Returns true while some choice is not loaded yet.
+function M:ScanRewards()
+    self.reward = {}
+    local p = prof()
+    local n = GetNumQuestChoices and GetNumQuestChoices() or 0
+    if not (p.gearEnabled and p.rewardMarkers) or type(n) ~= "number" or n < 1 or not GetQuestItemLink then return false end
+    local ctx = ns.Upgrade:Context()
+    local any, pending, best, bestPrice = false, false, nil, 0
+    for i = 1, n do
+        local link = GetQuestItemLink("choice", i)
+        local d = link and ns.Gear:ItemData(link)
+        local info = link and ns.Compat.GetItemInfo(link)
+        if not (d and info) then
+            pending = true
+        else
+            if ctx and ns.Gear:IsEquippable(d) then
+                d.tip = ns.Upgrade:Classify(ns.Upgrade.ScanLines("link", link), d)
+                local e = ns.Upgrade:Evaluate(d, ctx)
+                if e.ok and (e.kind == "empty" or (e.kind == "upgrade" and not e.uncertain)) then
+                    self.reward[i] = "upgrade"
+                    any = true
+                end
+            end
+            local v = info.sellPrice or 0
+            if v > bestPrice then best, bestPrice = i, v end
+        end
+    end
+    if not any and not pending and best and n >= 2 then self.reward[best] = "coin" end
+    return pending
+end
+
+function M:RefreshRewards()
+    for i = 1, self.REWARD_BUTTONS do
+        local b = self:RewardButton(i)
+        if b then
+            local mark = self.reward[i]
+            if mark == "upgrade" then
+                local t = overlay(b)
+                if t then t:Show() end
+            elseif self.overlays[b] then
+                self.overlays[b]:Hide()
+            end
+            if mark == "coin" then
+                local c = coin(b)
+                if c then c:Show() end
+            elseif self.coins[b] then
+                self.coins[b]:Hide()
+            end
+        end
+    end
+end
+
+function M:OnRewardPanel(tries)
+    tries = tries or 0
+    local pending = self:ScanRewards()
+    self:RefreshRewards()
+    if pending and tries < 3 then C_Timer.After(0.5, function() M:OnRewardPanel(tries + 1) end) end
+end
+
 function M:Init()
+    -- After the default UI has drawn the panel.
+    ns:On("QUEST_DETAIL", function() C_Timer.After(0.1, function() M:OnRewardPanel() end) end)
+    ns:On("QUEST_COMPLETE", function() C_Timer.After(0.1, function() M:OnRewardPanel() end) end)
+    ns:On("QUEST_FINISHED", function() M.reward = {} M:RefreshRewards() end)
     ns:On("MERCHANT_SHOW", function() C_Timer.After(0.2, function() M:OnMerchantShow() end) end)
     ns:On("MERCHANT_CLOSED", function() M.vendor = {} M:RefreshMerchant() end)
     if hooksecurefunc and MerchantFrame_UpdateMerchantInfo then

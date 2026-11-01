@@ -260,6 +260,10 @@ function QA:OnQuestComplete()
         -- The player picks the reward (unless Quest auto rewards found a clear winner above).
         -- Leave the panel open; progress follows QUEST_TURNED_IN once they click Complete Quest.
         self.waitingReward[q] = true
+        -- The client can fire QUEST_COMPLETE twice for one reward panel: say it once.
+        local now = GetTime and GetTime() or 0
+        if self.rewardSaid and self.rewardSaid.q == q and now - self.rewardSaid.t < 2 then return end
+        self.rewardSaid = { q = q, t = now }
         if onGuide or prof().questNotify then
             ns:Print("|cffffd100Choose your reward|r for " .. questTitle(q) .. ", then click Complete Quest.")
         end

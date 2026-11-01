@@ -469,6 +469,15 @@ ns.QuestAuto.tried = {}
 MOCK.fire("QUEST_COMPLETE")
 for _, c in ipairs(MOCK.calls) do if c == "reward:88001:2" then chose = true end end
 check(chose, "Quest auto rewards on: the clear upgrade is chosen")
+-- The client can fire QUEST_COMPLETE twice for one panel: the reward prompt is said once.
+prof().autoReward = false
+MOCK.printed, ns.QuestAuto.tried = {}, {}
+MOCK.dialog = { questID = 88002, title = "Twice Quest", choices = 2, completable = true }
+MOCK.fire("QUEST_COMPLETE")
+MOCK.fire("QUEST_COMPLETE")
+local said = 0
+for _, line in ipairs(MOCK.printed) do if string.find(line, "Choose your reward", 1, true) then said = said + 1 end end
+check(said == 1, "the reward prompt is printed once when QUEST_COMPLETE fires twice")
 prof().autoReward, prof().turnInUnrelated = false, false
 MOCK.dialog, MOCK.questChoices, MOCK.equipped = nil, {}, {}
 ns.char.gearProfile = nil

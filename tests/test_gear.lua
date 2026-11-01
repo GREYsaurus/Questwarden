@@ -230,6 +230,38 @@ check(not string.find(table.concat(MOCK.printed, "\n"), "Reward comparison", 1, 
 MOCK.dialog, MOCK.questChoices = nil, {}
 ns.db.profile.gearQuestRewards = false
 
+-- Reward choice markers: a green arrow on upgrades, else a coin on the best-selling choice ----------------------
+local GM = ns.GearMarkers
+check(ns.PROFILE_DEFAULTS.rewardMarkers == true, "reward markers are on by default")
+local rb1 = CreateFrame("Button", "QuestInfoRewardsFrameQuestInfoItem1")
+local rb2 = CreateFrame("Button", "QuestInfoRewardsFrameQuestInfoItem2")
+_G.QuestInfoRewardsFrameQuestInfoItem1, _G.QuestInfoRewardsFrameQuestInfoItem2 = rb1, rb2
+local function shown(t) return t and t:IsShown() or false end
+local keepSell1, keepSell2 = I[90001].sellPrice, I[90002].sellPrice
+I[90001].sellPrice, I[90002].sellPrice = 50, 200
+MOCK.equipped[8] = 90002
+MOCK.questChoices = { 90002, 90001 }
+MOCK.dialog = { questID = 77002, title = "Marker Quest", choices = 2, completable = true }
+MOCK.fire("QUEST_COMPLETE")
+MOCK.tick(1)
+check(shown(GM.overlays[rb2]) and not shown(GM.overlays[rb1]), "the upgrade choice gets the green arrow, the other none")
+check(not shown(GM.coins[rb1]) and not shown(GM.coins[rb2]), "with an upgrade there is no coin")
+MOCK.equipped[8] = 90001 -- now neither choice is an upgrade
+MOCK.fire("QUEST_DETAIL")
+MOCK.tick(1)
+check(not shown(GM.overlays[rb1]) and not shown(GM.overlays[rb2]), "no upgrades: no arrows")
+check(shown(GM.coins[rb1]) and not shown(GM.coins[rb2]), "no upgrades: a coin on the choice that sells for the most")
+MOCK.fire("QUEST_FINISHED")
+check(not shown(GM.coins[rb1]), "closing the panel clears the markers")
+ns.db.profile.rewardMarkers = false
+MOCK.fire("QUEST_COMPLETE")
+MOCK.tick(1)
+check(not shown(GM.coins[rb1]) and not shown(GM.overlays[rb2]), "setting off: no reward markers")
+ns.db.profile.rewardMarkers = true
+I[90001].sellPrice, I[90002].sellPrice = keepSell1, keepSell2
+_G.QuestInfoRewardsFrameQuestInfoItem1, _G.QuestInfoRewardsFrameQuestInfoItem2 = nil, nil
+MOCK.dialog, MOCK.questChoices = nil, {}
+
 -- /cg gear and /cggear ------------------------------------------------------------------------------------
 MOCK.printed = {}
 MOCK.bags[0][1] = { itemID = 90001, count = 1 }

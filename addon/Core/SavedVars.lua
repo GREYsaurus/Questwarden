@@ -71,6 +71,7 @@ local profileDefaults = {
         equipChat = true,           -- the same message in your chat frame (only you see it)
         equipSound = true,          -- the level-up sound after a confirmed automatic equip (Gear/AutoEquip.lua)
         boeMarkers = true,          -- marker on unequipped Bind-on-Equip upgrades in the bags
+        rewardMarkers = true,       -- quest reward choices: arrow on upgrades, else a coin on the best-selling one
         -- Features from the settings window (docs/SETTINGS.md)
         activeItems = true,         -- active item window (usable quest items)
         activeItemScale = 1,

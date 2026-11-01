@@ -268,6 +268,7 @@ pages.tips = { title = "Tips", items = function() return {
       get = function() return ns.char.gearProfile or "auto" end,
       set = function(v) ns.char.gearProfile = (v ~= "auto") and v or nil ns.AutoEquip:OnProfileChanged() end },
     T("gearQuestRewards", "Quest Reward Recommendation"),
+    T("rewardMarkers", "Mark quest reward choices", { tip = "A green arrow on reward choices that are upgrades for your spec. When none is, a coin on the one that sells for the most." }),
     T("autoReward", "Quest Reward Automation"),
     T("gearTooltip", "Disable Tooltips", { invert = true }),
     T("gearShowPercent", "Show score change (%)"),
