@@ -56,7 +56,9 @@ function StepText:Title(s)
     elseif k == "goto" then
         return s.text or ("Go to " .. (fmtCoords(s) or "the marked location"))
     elseif k == "train" then
-        return "Train new skills" .. (s.npc and (" at " .. string.format(NPC, s.npc)) or " at your class trainer")
+        local npc = s.npc
+        if ns.Trainer then npc = select(4, ns.Trainer:TrainerFor(s)) or npc end
+        return "Train new skills" .. (npc and (" at " .. string.format(NPC, npc)) or " at your class trainer")
     elseif k == "fp" then
         return "Get the flight path" .. (s.place and (" at " .. s.place) or "") .. (s.npc and (" (" .. string.format(NPC, s.npc) .. ")") or "")
     elseif k == "fly" then
@@ -137,14 +139,17 @@ end
 -- Navigation target for a step: zoneAreaId, x, y, label. Uses compiled coordinates first and
 -- falls back to live database lookups for quest steps.
 function StepText:Target(s)
+    -- Train steps: the class trainer nearest to you, else the one the guide names (Classes/Trainer.lua).
+    if s[1] == "train" and ns.Trainer then
+        local z, x, y, name = ns.Trainer:TrainerFor(s)
+        if z then return z, x, y, name end
+    end
     if s.x and s.y and s.z then
         if s[1] == "grind" then return s.z, s.x, s.y, s.location or (s.mobs and s.mobs[1]) end
         return s.z, s.x, s.y, s.npc or s.text
     end
     -- A dungeon run you are not in yet: its nearest entrance (none when the data has no entrance).
     if s[1] == "dungeon" or (s[1] == "complete" and ns.DungeonRun:RunPhase(s)) then return ns.DungeonRun:Entrance(s.dungeon) end
-    -- Train steps without a place: the nearest class trainer of your faction (Classes/Trainer.lua).
-    if s[1] == "train" and ns.Trainer then return ns.Trainer:NearestTrainer() end
     if not s.q then return nil end
     if s[1] == "accept" then
         local npcs = ns.DB.GetQuestStartNPCs(s.q)

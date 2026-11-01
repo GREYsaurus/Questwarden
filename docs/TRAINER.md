@@ -6,6 +6,7 @@ Built in: the trainer data comes from **What's Training?**, bundled in Questward
 
 ## What it does
 
+- **Where train steps send you:** to your class trainer nearest to where you stand in your zone, on the arrow, in the step title and for the raid marker; when your zone has none, to the trainer the guide names (and with no name, your capital's).
 - **Train steps** list what the trainer has for you now, grouped per spell ("Rend (Rank 2, 3)"). A train step with nothing new for the chosen setting is skipped with the reason ("nothing important to train yet"). *Off* keeps the old train steps unchanged.
 - **Level-up:** when new **important** ranks become available, one chat line names them and the next train step on your route (or points to `/qw train waypoint` when the route has none).
 - **Live eligibility:** every rank is checked against your spellbook with `IsSpellKnown` when the list is built, and again when you learn a spell (`LEARNED_SPELL_IN_TAB`) or level up. Known ranks are never suggested again.

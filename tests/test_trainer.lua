@@ -135,6 +135,28 @@ MOCK.player.class, MOCK.player.faction = "WARRIOR", "Alliance"
 local z, x, y, name = TR:NearestTrainer()
 check(z and x and y and name, "nearest trainer found for an Alliance warrior (" .. tostring(name) .. ")")
 
+-- Train steps send you to the class trainer nearest to you, not always the one the guide names.
+do
+    local realPos, realArea = ns.Compat.GetPlayerMapPosition, ns.DB.AreaForUiMap
+    local px, py, area = 42, 66, 12
+    ns.Compat.GetPlayerMapPosition = function() return 1429, px, py end
+    ns.DB.AreaForUiMap = function() return area end
+    MOCK.player.class = "PALADIN"
+    local step = { "train", npc = "Brother Sammuel", z = 12, x = 50.4, y = 42.1 }
+    local _, tx, ty, tname = TR:TrainerFor(step)
+    check(tname == "Brother Wilhelm" and math.abs(tx - 41.1) < 1 and math.abs(ty - 66) < 1,
+        "in Goldshire, a Northshire train step sends a paladin to Brother Wilhelm (" .. tostring(tname) .. ")")
+    local sz, sx, sy, sname = ns.StepText:Target(step)
+    check(sname == "Brother Wilhelm" and sz == 12 and math.abs(sx - tx) < 0.01 and math.abs(sy - ty) < 0.01,
+        "the arrow goes to the nearest trainer too")
+    check(string.find(ns.StepText:Title(step), "Brother Wilhelm", 1, true) ~= nil, "the step title names the nearest trainer")
+    px, py = 50, 43
+    check(select(4, TR:TrainerFor(step)) == "Brother Sammuel", "in Northshire: Brother Sammuel")
+    area = 40 -- Westfall: no paladin trainer there
+    check(select(4, TR:TrainerFor(step)) == "Brother Sammuel", "no trainer in your zone: the one the guide names")
+    ns.Compat.GetPlayerMapPosition, ns.DB.AreaForUiMap = realPos, realArea
+end
+
 IsSpellKnown = realKnown
 MOCK.player.class, MOCK.player.race, MOCK.player.level, MOCK.player.faction = saveP[1], saveP[2], saveP[3], saveP[4]
 prof.trainerSuggestions, ns.char.trainerDeferLevel = saveMode, saveDefer

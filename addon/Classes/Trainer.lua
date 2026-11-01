@@ -409,45 +409,75 @@ end
 
 -- Nearest class trainer of your faction: same zone first, else your capital. zone, x, y, name.
 TR.CAPITALS = { Alliance = { 1519, 1537, 1657, 3557 }, Horde = { 1637, 1497, 1638, 3487 } }
-function TR:NearestTrainer()
+local function classSub()
     local info = ns.Compat.PlayerInfo()
-    return self:NearestNPC(info.class and (info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer"))
+    return info.class and (info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer")
+end
+
+function TR:NearestTrainer()
+    return self:NearestNPC(classSub())
+end
+
+-- Where a train step sends you: the class trainer nearest to you in the zone you are in (Goldshire's, not
+-- Northshire's, once you have left the valley), else the trainer the guide names, else your capital's.
+-- zone, x, y, name.
+function TR:TrainerFor(s)
+    local sub = classSub()
+    local z, x, y, name = self:NearestHere(sub)
+    if z then return z, x, y, name end
+    if s and s.z and s.x and s.y then return s.z, s.x, s.y, s.npc end
+    return self:NearestNPC(sub)
+end
+
+-- Friendly NPCs of your faction with this English sub-name, as a list of ids (one scan per sub-name and
+-- faction; the bundled data does not change while you play).
+TR.npcsBy = {}
+local function npcsWithSub(sub)
+    local info = ns.Compat.PlayerInfo()
+    local key = tostring(sub) .. "|" .. tostring(info.faction)
+    if TR.npcsBy[key] then return TR.npcsBy[key] end
+    local side = info.faction == "Alliance" and "A" or "H"
+    local N, list = ns.QDB.NPC, {}
+    for id, r in pairs(ns.QDB.npcs) do
+        local f = r[N.FRIENDLY]
+        if sub and r[N.SUBNAME] == sub and f and string.find(f, side, 1, true) then list[#list + 1] = id end
+    end
+    table.sort(list)
+    TR.npcsBy[key] = list
+    return list
+end
+
+-- The NPC with this sub-name nearest to you in the zone you are in: zone, x, y, name; nil when the zone has
+-- none (or your position is unknown). Measured from where you stand each call.
+function TR:NearestHere(sub)
+    local mapId, px, py = ns.Compat.GetPlayerMapPosition()
+    local here = mapId and ns.DB.AreaForUiMap(mapId)
+    if not (here and px and py) then return nil end
+    local best, bestD
+    for _, id in ipairs(npcsWithSub(sub)) do
+        local z, x, y = ns.DB.GetNPCPosition(id, here, px, py) -- px, py: 0-100 like the data
+        if z == here then
+            local d = (x - px) ^ 2 + (y - py) ^ 2
+            if not bestD or d < bestD then best, bestD = { z, x, y, ns.DB.GetNPCName(id) }, d end
+        end
+    end
+    if best then return best[1], best[2], best[3], best[4] end
 end
 
 -- Nearest friendly NPC with this English sub-name in the bundled data ("Warrior Trainer",
 -- "Demon Trainer", "Pet Trainer"): same zone first, else your faction's capitals.
-TR.nearestBy = {}
 function TR:NearestNPC(sub)
+    local z, x, y, name = self:NearestHere(sub)
+    if z then return z, x, y, name end
     local info = ns.Compat.PlayerInfo()
-    local mapId0 = ns.Compat.GetPlayerMapPosition()
-    -- The NPC scan is cached per sub-name, faction and map (same answer until you change zone).
-    local key = tostring(sub) .. tostring(info.faction) .. tostring(mapId0)
-    local c = self.nearestBy[sub or ""]
-    if c and c.key == key and c.t then return c.t[1], c.t[2], c.t[3], c.t[4] end
-    local side = info.faction == "Alliance" and "A" or "H"
-    local N = ns.QDB.NPC
-    local mapId, px, py = ns.Compat.GetPlayerMapPosition()
-    local here = mapId and ns.DB.AreaForUiMap(mapId)
-    local best, bestD, cap
-    for id, r in pairs(ns.QDB.npcs) do
-        local f = r[N.FRIENDLY]
-        if r[N.SUBNAME] == sub and f and string.find(f, side, 1, true) then
-            if here then
-                local z, x, y = ns.DB.GetNPCPosition(id, here)
-                if z == here and px then
-                    local d = (x - px * 100) ^ 2 + (y - py * 100) ^ 2
-                    if not bestD or d < bestD then best, bestD = { z, x, y, r[N.NAME] }, d end
-                end
-            end
-            for rank, area in ipairs(self.CAPITALS[info.faction] or {}) do
-                local z, x, y = ns.DB.GetNPCPosition(id, area)
-                if z == area and (not cap or rank < cap.rank) then cap = { z, x, y, r[N.NAME], rank = rank } end
-            end
+    local cap
+    for _, id in ipairs(npcsWithSub(sub)) do
+        for rank, area in ipairs(self.CAPITALS[info.faction] or {}) do
+            local cz, cx, cy = ns.DB.GetNPCPosition(id, area)
+            if cz == area and (not cap or rank < cap.rank) then cap = { cz, cx, cy, ns.DB.GetNPCName(id), rank = rank } end
         end
     end
-    local t = best or cap
-    self.nearestBy[sub or ""] = { key = key, t = t }
-    if t then return t[1], t[2], t[3], t[4] end
+    if cap then return cap[1], cap[2], cap[3], cap[4] end
     return nil
 end
 
@@ -483,7 +513,9 @@ function TR:TrainStepFor(zone)
 end
 
 function TR:Waypoint()
-    local z, x, y, name = self:NearestTrainer()
+    local step = ns.Engine and ns.Engine:CurrentStep()
+    local z, x, y, name
+    if step and step[1] == "train" then z, x, y, name = self:TrainerFor(step) else z, x, y, name = self:NearestTrainer() end
     if z then
         ns.Nav:SetTarget(z, x, y, name)
         return true

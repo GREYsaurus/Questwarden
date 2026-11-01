@@ -81,16 +81,19 @@ end
 local trainerCache = {}
 local function trainerNpcs(s)
     local info = ns.Compat.PlayerInfo()
-    local zone = s.z or ns.Completionist:Here()
-    local key = tostring(s.npc) .. "|" .. tostring(zone) .. "|" .. tostring(info.faction) .. "|" .. tostring(info.class)
+    -- The trainer the step sends you to: the nearest one, as on the arrow and in the title.
+    local tz, _, _, tname = ns.Trainer:TrainerFor(s)
+    local npcName = tname or s.npc
+    local zone = tz or s.z or ns.Completionist:Here()
+    local key = tostring(npcName) .. "|" .. tostring(zone) .. "|" .. tostring(info.faction) .. "|" .. tostring(info.class)
     if trainerCache[key] ~= nil then return trainerCache[key] or nil end
     local N, side = ns.QDB.NPC, info.faction == "Alliance" and "A" or "H"
-    local sub = not s.npc and info.class and (info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer")
+    local sub = not npcName and info.class and (info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer")
     local parent = zone and ns.DB.ParentZone(zone)
     local npcs = {}
     for id, r in pairs(ns.QDB.npcs) do
         local f, spawns = r[N.FRIENDLY], r[N.SPAWNS]
-        if f and string.find(f, side, 1, true) and ((s.npc and r[N.NAME] == s.npc) or (sub and r[N.SUBNAME] == sub)) then
+        if f and string.find(f, side, 1, true) and ((npcName and r[N.NAME] == npcName) or (sub and r[N.SUBNAME] == sub)) then
             if not zone or (spawns and (spawns[zone] or (parent and spawns[parent]))) then npcs[id] = true end
         end
     end
