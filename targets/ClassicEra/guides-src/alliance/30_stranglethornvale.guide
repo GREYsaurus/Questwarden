@@ -31,13 +31,13 @@ turnin 669 Sunken Treasure
 accept 622 Return to Corporal Kaleb
 accept 595 The Bloodsail Buccaneers
 complete 606 Scaring Shaky | Mistvale gorillas.
-turnin 606 Scaring Shaky
 turnin 595 The Bloodsail Buccaneers
-accept 607 Return to MacKinley
 accept 597 The Bloodsail Buccaneers
-turnin 607 Return to MacKinley
+turnin 606 Scaring Shaky
+accept 607 Return to MacKinley
 turnin 597 The Bloodsail Buccaneers
 accept 599 The Bloodsail Buccaneers
+turnin 607 Return to MacKinley
 turnin 599 The Bloodsail Buccaneers
 accept 193 Panther Mastery [elite; group; hc=skip]
 complete 193 Panther Mastery [elite; group; hc=skip]

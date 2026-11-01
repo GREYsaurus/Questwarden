@@ -21,9 +21,9 @@ accept 10451 Escape from Coilskar Cistern
 complete 10451 Escape from Coilskar Cistern | Escort: stay close; it fails if the NPC dies.
 complete The Sketh'lon Wreckage | Sketh'lon Commander's Journal - Page 1 drops from Dark Conclave Hawkeye, Dark Conclave Ravenguard and Dark Conclave Shadowmancer. Sketh'lon Commander's Journal 
 complete A Grunt's Work...
+accept Besieged! | Blood Guard Gulmok.
 turnin The Sketh'lon Wreckage
 accept Find the Deserter
-accept Besieged! | Blood Guard Gulmok.
 accept 10623 Illidari-Bane Shard
 turnin 10623 Illidari-Bane Shard
 complete Besieged!

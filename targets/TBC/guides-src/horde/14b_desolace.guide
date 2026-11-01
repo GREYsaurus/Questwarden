@@ -40,21 +40,21 @@ turnin Centaur Bounty | Ghost Walker Post.
 turnin Befouled by Satyr
 note Ride south-west to Shadowprey Village on the coast.
 fp Shadowprey Village
-accept Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
 accept 5763 Hunting in Stranglethorn
 accept 6142 Clam Bait
+accept Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
 turnin 1368 Gelkis Alliance
 complete 1369 Broken Tears
-accept Sceptre of Light | Azore Aldamort, the tower on the north-west coast.
 accept Claim Rackmore's Treasure! | Rackmore's Log by the Karnitol wreck, just south of Azore's tower.
+accept Sceptre of Light | Azore Aldamort, the tower on the north-west coast.
 complete 6142 Clam Bait
 complete Other Fish to Fry | Slitherblade naga along the north-west coast.
 complete Claim Rackmore's Treasure! | Silver Key from Drysnap Crawlers on the shore, Golden Key from Slitherblade Naga.
 turnin Claim Rackmore's Treasure! | Rackmore's Chest on Ranazjar Isle, north-west. Swim across.
 complete Sceptre of Light | The Sceptre drops from the Burning Blade Seer at the top of the Thunder Axe Fortress tower.
 turnin Sceptre of Light | Azore Aldamort.
-turnin Other Fish to Fry | Shadowprey Village.
 turnin 1369 Broken Tears
+turnin Other Fish to Fry | Shadowprey Village.
 grind 34.9 Magram Wrangler, Magram Outrunner, Magram Scout [at=70.5,69.6] | The next steps expect level 35: grind these to 90% through level 34, and the quests left here bring you the rest of the way.
 turnin 6142 Clam Bait
 level 35

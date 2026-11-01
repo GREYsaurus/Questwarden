@@ -12,9 +12,9 @@
 @desc Dwarf and gnome starting route. Coldridge Valley to about level 5, then Kharanos, the Barleybrew and Amberstill farms and the eastern pass. Ends at about level 11 at the gate to Loch Modan.
 @next A_LochModan
 
-accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
-accept A Refugee's Quandary | Felix Whindlebolt, north of Anvilmar.
 accept Dwarven Outfitters | Sten Stoutarm, in front of Anvilmar.
+accept A Refugee's Quandary | Felix Whindlebolt, north of Anvilmar.
+accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
 complete Dwarven Outfitters | Wolves around Anvilmar drop Tough Wolf Meat.
 complete The Boar Hunter | Small Crag Boars west of Anvilmar.
 turnin Dwarven Outfitters
@@ -74,10 +74,10 @@ bind Kharanos [area=131,2102]
 accept Beer Basted Boar Ribs
 accept Tools for Steelgrill
 accept Operation Recombobulation | Razzle Sprysprocket in the gnome building of Kharanos.
+accept Ammo for Rumbleshot
+accept The Grizzled Den | Pilot Stonegear, same house.
 accept Stocking Jetsteam | Pilot Bellowfiz, north side of Kharanos.
 accept 9261 Investigate the Scourge of Ironforge
-accept The Grizzled Den | Pilot Stonegear, same house.
-accept Ammo for Rumbleshot
 train | Your trainer is in Kharanos.
 complete Operation Recombobulation | Leper Gnomes at the Gnomeregan entrance and the tunnel west of Kharanos.
 complete Stocking Jetsteam | Boars and bears south of Kharanos.
@@ -86,8 +86,8 @@ complete The Grizzled Den | Wendigos in the cave south of Kharanos.
 turnin Operation Recombobulation
 turnin Stocking Jetsteam
 complete 9261 Investigate the Scourge of Ironforge
-accept Evershine
 turnin 9261 Investigate the Scourge of Ironforge
+accept Evershine
 complete Frostmane Hold | Explore Frostmane Hold, the troll cave west of Kharanos.
 accept Bitter Rivals | Marleth Barleybrew, Brewnall Village.
 accept The Perfect Stout | Rejold Barleybrew, Brewnall Village.
@@ -132,8 +132,8 @@ turnin 6086 Training the Beast [class=Hunter; race=Dwarf] | Turned in at Ironfor
 accept Protecting the Herd | Rudra Amberstill at the Amberstill Ranch.
 accept 415 Rejold's New Brew
 complete Protecting the Herd | Vagash is a wandering yeti on the hill above the ranch.
-turnin Protecting the Herd
 turnin 415 Rejold's New Brew
+turnin Protecting the Herd
 accept The Public Servant
 accept Those Blasted Troggs! | Foreman Stonebrow, Gol'Bolar Quarry.
 complete Those Blasted Troggs! | Troggs in the quarry.

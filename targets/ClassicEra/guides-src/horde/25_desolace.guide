@@ -35,16 +35,16 @@ turnin 1365 Khan Dez'hepah | Ghost Walker Post.
 accept 1366 Centaur Bounty | Felgur Twocuts. Needs Khan Dez'hepah turned in.
 complete 1366 Centaur Bounty | Centaur Ears from the Kolkar back in the eastern village.
 complete 1434 Befouled by Satyr | Hatefury satyrs at Sargeron, north of the Kolkar village.
-turnin 1366 Centaur Bounty | Ghost Walker Post.
 turnin 1434 Befouled by Satyr
+turnin 1366 Centaur Bounty | Ghost Walker Post.
 note Ride south-west to Shadowprey Village on the coast.
 fp Shadowprey Village
-accept 6143 Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
-accept 5763 Hunting in Stranglethorn
-accept 6142 Clam Bait
 turnin 1368 Gelkis Alliance
-accept 5741 Sceptre of Light | Azore Aldamort, the tower on the north-west coast.
+accept 5763 Hunting in Stranglethorn
+accept 6143 Other Fish to Fry | Drulzegar Skraghook, Shadowprey Village.
+accept 6142 Clam Bait
 accept 6161 Claim Rackmore's Treasure! | Rackmore's Log by the Karnitol wreck, just south of Azore's tower.
+accept 5741 Sceptre of Light | Azore Aldamort, the tower on the north-west coast.
 complete 6142 Clam Bait
 complete 6143 Other Fish to Fry | Slitherblade naga along the north-west coast.
 complete 6161 Claim Rackmore's Treasure! | Silver Key from Drysnap Crawlers on the shore, Golden Key from Slitherblade Naga.

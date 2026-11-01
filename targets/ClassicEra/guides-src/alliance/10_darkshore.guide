@@ -21,8 +21,8 @@ turnin 947 Cave Mushrooms
 accept 948 Onu
 accept 963 For Love Eternal [optional]
 complete 963 For Love Eternal [optional] | Anaya's Pendant drops from Anaya Dawnrunner.
-turnin 963 For Love Eternal [optional]
 accept 3524 Washed Ashore | Gwennyth Bly'Leggonde.
+turnin 963 For Love Eternal [optional]
 complete 3524 Washed Ashore | The sea creature bones are on the beach south of Auberdine.
 turnin 3524 Washed Ashore
 accept 4681 Washed Ashore
@@ -58,16 +58,16 @@ accept 2138 Cleansing of the Infected
 complete 2138 Cleansing of the Infected | Rabid Thistle Bears.
 turnin 2138 Cleansing of the Infected
 accept 954 Bashal'Aran | Thundris Windweaver.
-turnin 954 Bashal'Aran | Asterion, at the ruins east of Auberdine.
-accept 955 Bashal'Aran
 turnin 4761 Thundris Windweaver
 accept 958 Tools of the Highborne
+turnin 954 Bashal'Aran | Asterion, at the ruins east of Auberdine.
+accept 955 Bashal'Aran
 complete 985 How Big a Threat? | Blackwood furbolgs at the camp.
 complete 958 Tools of the Highborne | Highborne relics in the Bashal'Aran ruins.
+turnin 985 How Big a Threat?
 accept 4762 The Cliffspring River
 turnin 958 Tools of the Highborne
 accept 982 Deep Ocean, Vast Sea [optional]
-turnin 985 How Big a Threat?
 complete 4812 As Water Cascades | Fill the bottle at the moonwell in Auberdine.
 turnin 4812 As Water Cascades
 accept 4813 The Fragments Within
@@ -95,10 +95,10 @@ complete 4740 WANTED: Murkdeep! [class=Warrior,Paladin,Rogue,Priest,Mage; race=H
 complete 4740 WANTED: Murkdeep! [race=Dwarf,Night Elf; optional]
 complete 2178 Easy Strider Living | Strider meat from striders along the coast.
 complete 1001 Buzzbox 411 | Thresher eyes from threshers off the coast.
-turnin 2178 Easy Strider Living
 turnin 4762 The Cliffspring River
-turnin 1001 Buzzbox 411
+turnin 2178 Easy Strider Living
 accept 4723 Beached Sea Creature
+turnin 1001 Buzzbox 411
 accept 1002 Buzzbox 323
 complete 1002 Buzzbox 323 | Moonstalkers.
 turnin 1002 Buzzbox 323

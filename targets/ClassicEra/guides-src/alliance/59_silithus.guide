@@ -30,21 +30,21 @@ complete 8304 Dearest Natalia
 turnin 9419 Scouring the Desert
 turnin 8318 Secret Communication
 turnin 8284 The Twilight Mystery
-turnin 8280 Securing the Supply Lines
-turnin 8277 Deadly Desert Venom
-turnin 8304 Dearest Natalia
 accept 8285 The Deserter
+turnin 8280 Securing the Supply Lines
 accept 8281 Stepping Up Security
+turnin 8277 Deadly Desert Venom
 accept 8278 Noggle's Last Hope
+turnin 8304 Dearest Natalia
 complete 8281 Stepping Up Security
 complete 8278 Noggle's Last Hope
 turnin 8285 The Deserter
 accept 8308 Brann Bronzebeard's Lost Letter [iffound] | Shown only if you find Brann Bronzebeard's Lost Letter.
+accept 8279 The Twilight Lexicon
 turnin 8308 Brann Bronzebeard's Lost Letter [iffound]
 turnin 8278 Noggle's Last Hope
-turnin 8281 Stepping Up Security
 accept 8282 Noggle's Lost Satchel
-accept 8279 The Twilight Lexicon
+turnin 8281 Stepping Up Security
 complete 8282 Noggle's Lost Satchel
 complete 8279 The Twilight Lexicon
 turnin 8282 Noggle's Lost Satchel

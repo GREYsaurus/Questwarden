@@ -28,9 +28,9 @@ accept 1284 Suspicious Hoofprints | The hoofprints are beside the inn.
 complete 1258 ... and Bugs | Saltspittle and mire crawlers along the shore.
 accept 1177 Hungry! | Mudcrush Durtfeet, the friendly giant in the north.
 complete 1177 Hungry! | Mirefin murlocs on the northern coast.
-turnin 1177 Hungry!
 note  [optional] | The next quest, Stinky's Escape, is an escort: pick it up only when you are ready to follow the NPC.
 accept 1222 Stinky's Escape [optional] | "Stinky" Ignatz, north of the road. Escort: start it only when you are ready to follow.
+turnin 1177 Hungry!
 complete 1222 Stinky's Escape [optional] | Stay close; it fails if he dies.
 note  [hc=only] | Hardcore: Stinky's escort draws murlocs and crocolisks in waves. Leave it out unless you are 37 or higher and at full health.
 accept 1219 The Orc Report | The loose dirt beside Swamp Eye Jarl's house.

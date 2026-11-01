@@ -80,6 +80,10 @@ accept Returning the Favor
 accept Body of Evidence
 complete Returning the Favor
 complete Body of Evidence
+turnin The Throne of the Elements
+accept A Rare Bean
+accept Muck Diving
+accept The Underneath
 turnin Returning the Favor
 turnin Body of Evidence
 accept Message to Garadar
@@ -88,10 +92,6 @@ turnin Wanted: Giselda the Crone
 turnin Wanted: Zorbo the Advisor
 turnin Message to Garadar
 turnin 9872 Murkblood Invaders
-accept The Underneath
-turnin The Throne of the Elements
-accept A Rare Bean
-accept Muck Diving
 complete A Rare Bean | Digested Caracoli: loot Dung.
 complete Muck Diving | Muck-ridden Core drops from Muck Spawn.
 turnin A Rare Bean
@@ -122,17 +122,17 @@ accept 9858 Talbuk Mastery
 complete 9850 Clefthoof Mastery
 complete 9855 Windroc Mastery
 complete 9858 Talbuk Mastery
-turnin 9858 Talbuk Mastery
 turnin 9850 Clefthoof Mastery
 turnin 9855 Windroc Mastery
+turnin 9858 Talbuk Mastery
+accept 9991 Survey the Land
+turnin 9991 Survey the Land
+accept A Head Full of Ivory | Shadrek, Aeris Landing.
 note Ride west to Aeris Landing, the Consortium camp by the lake south-west of Sunspring Post.
 accept Stealing from Thieves | Gezhe, Aeris Landing.
-accept 9991 Survey the Land
 turnin 9913 The Consortium Needs You!
 accept Matters of Security | Zerid, Aeris Landing.
 accept Gava'xi | Zerid. Needs level 65.
-accept A Head Full of Ivory | Shadrek, Aeris Landing.
-turnin 9991 Survey the Land
 complete Stealing from Thieves | Oshu'gun Crystal Fragments from Vir'aani Raiders north of Oshu'gun, south of the camp.
 complete Matters of Security | Voidspawn around Oshu'gun.
 complete Gava'xi | Gava'xi, near Oshu'gun.

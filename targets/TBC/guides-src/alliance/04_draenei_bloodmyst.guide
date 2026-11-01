@@ -35,14 +35,14 @@ turnin 9622 Warn Your People [class=Warrior,Paladin,Hunter,Priest,Mage] | Turned
 turnin 9515 Warlord Sriss'tiz | Turned in at Azuremyst Isle.
 accept Learning from the Crystals | Harbinger Mikolaas.
 complete Saving Princess Stillpine | Kill Bristlelimb furbolgs for the key.
+accept 9603 Beds, Bandages, and Beyond
+accept Catch and Release | Morae.
 turnin Report to Exarch Admetius | Blood Watch.
 accept What Argus Means to Me
 turnin What Argus Means to Me
 accept Blood Watch
 accept Irradiated Crystal Shards | Vindicator Boros.
 turnin Saving Princess Stillpine
-accept Catch and Release | Morae.
-accept 9603 Beds, Bandages, and Beyond
 accept 9598 Redemption [class=Paladin]
 turnin 9598 Redemption [class=Paladin] | Turned in at The Exodar.
 accept 9600 Redemption [class=Paladin]
@@ -141,8 +141,8 @@ turnin Matis the Cruel
 complete The Cryo-Core | Sunhawk outpost at the Cryo-Core, south-west.
 turnin The Cryo-Core
 accept Ysera's Tears
-accept 9669 The Missing Expedition
 turnin Culling the Flutterers
+accept 9669 The Missing Expedition
 turnin 9632 Newfound Allies | Turned in at Azuremyst Isle.
 accept 9741 Critters of the Void
 accept 9670 They're Alive! Maybe...

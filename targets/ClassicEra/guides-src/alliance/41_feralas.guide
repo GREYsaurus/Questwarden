@@ -24,9 +24,9 @@ complete 7721 Fuel for the Zapping | Water elementals on the coast.
 turnin 7721 Fuel for the Zapping
 accept 7733 Improved Quality
 complete 7733 Improved Quality
-turnin 7733 Improved Quality
 note The next quest, Freedom for All Creatures, is an escort: pick it up only when you are ready to follow the NPC.
 accept 2969 Freedom for All Creatures | Kindal Moonweaver, at the camp east.
+turnin 7733 Improved Quality
 complete 2969 Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
 turnin 2969 Freedom for All Creatures
 accept 2970 Doling Justice

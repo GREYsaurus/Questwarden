@@ -38,11 +38,11 @@ complete Invaluable Asset Zapping | Click Hyper Rotational Dig-A-Matic and Servo
 complete That Little Extra Kick | Nether Ray Stinger drops from Nether Ray.
 complete A Heap of Ethereals | Zaxxis Insignia drops from Warp-Raider Nesaad, Zaxxis Raider and Zaxxis Stalker.
 complete Essence for the Engines | Mana Wraith Essence drops from Mana Wraith.
+turnin Invaluable Asset Zapping
 turnin Essence for the Engines
 accept Elemental Power Extraction
 turnin A Heap of Ethereals
 accept Warp-Raider Nesaad
-turnin Invaluable Asset Zapping
 accept 10305 Abjurist Belmara
 accept 10306 Conjurer Luminrath
 accept 10307 Cohlien Frostweaver
@@ -76,9 +76,9 @@ turnin Pick Your Part
 accept In A Scrap With The Legion
 accept Help Mama Wheeler
 complete In A Scrap With The Legion
-turnin In A Scrap With The Legion
 turnin Help Mama Wheeler
 accept One Demon's Trash...
+turnin In A Scrap With The Legion
 complete One Demon's Trash... | Fel Reaver Part: loot Fel Reaver Part.
 turnin One Demon's Trash...
 accept Declawing Doomclaw

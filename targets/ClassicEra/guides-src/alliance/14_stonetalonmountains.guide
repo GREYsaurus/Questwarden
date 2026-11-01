@@ -23,12 +23,12 @@ accept 1057 Reclaiming the Charred Vale
 complete 1093 Super Reaper 6000
 complete 1090 Gerenzo's Orders
 complete 1057 Reclaiming the Charred Vale
+turnin 1057 Reclaiming the Charred Vale
 turnin 1093 Super Reaper 6000
 turnin 1085 On Guard in Stonetalon
-turnin 1090 Gerenzo's Orders
-turnin 1057 Reclaiming the Charred Vale
-accept 1092 Gerenzo's Orders
 accept 1071 A Gnome's Respite
+turnin 1090 Gerenzo's Orders
+accept 1092 Gerenzo's Orders
 complete 1071 A Gnome's Respite
 turnin 1092 Gerenzo's Orders
 turnin 1071 A Gnome's Respite

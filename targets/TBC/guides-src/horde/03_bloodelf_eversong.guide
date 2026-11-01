@@ -12,12 +12,12 @@
 @desc Blood elf starting route (TBC). Sunstrider Isle to about 5, then Falconwing Square, Fairbreeze Village, the Sunsail Anchorage, Stillwhisper Pond and Farstrider Retreat. Continues in the Ghostlands.
 @next H_BloodElf_Ghostlands
 
-accept Thirst Unending | Arcanist Helion.
-accept A Fistful of Slivers | Arcanist Ithanas.
+accept Reclaiming Sunstrider Isle | Magistrix Erona.
+accept 8344 Windows to the Source [class=Warlock] | Summoner Teli'Larien, the warlock trainer.
 accept Solanian's Belongings | Well Watcher Solanian.
 accept The Shrine of Dath'Remar
-accept 8344 Windows to the Source [class=Warlock] | Summoner Teli'Larien, the warlock trainer.
-accept Reclaiming Sunstrider Isle | Magistrix Erona.
+accept A Fistful of Slivers | Arcanist Ithanas.
+accept Thirst Unending | Arcanist Helion.
 complete Reclaiming Sunstrider Isle | Mana Wyrms around the isle.
 complete 8344 Windows to the Source [class=Warlock] | Arcane Wraiths and the Tainted Arcane Wraith, west of the Sunspire.
 turnin Reclaiming Sunstrider Isle
@@ -219,8 +219,8 @@ turnin 8891 Abandoned Investigations
 accept 8477 The Spearcrafter's Hammer
 complete 8477 The Spearcrafter's Hammer | Otembe's Hammer drops from Spearcrafter Otembe.
 turnin 8477 The Spearcrafter's Hammer
-accept 9144 Missing in the Ghostlands [optional]
 turnin 8491 Pelt Collection
+accept 9144 Missing in the Ghostlands [optional]
 turnin Research Notes [optional] | Silvermoon City.
 turnin 9363 Warning Fairbreeze Village [optional]
 turnin 9489 Cleansing the Scar [class=Priest; optional]

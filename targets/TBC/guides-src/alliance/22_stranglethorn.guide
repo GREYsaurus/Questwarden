@@ -123,8 +123,8 @@ turnin The Second Rebellion
 turnin Bad Medicine
 accept Special Forces
 complete Special Forces | Kurzen Commandos and Headshrinkers.
-turnin Special Forces
 turnin Bookie Herod
+turnin Special Forces
 turnin 1241 The Missing Diplomat | Turned in at Stormwind City.
 accept 1242 The Missing Diplomat
 turnin 1242 The Missing Diplomat | Turned in at Stormwind City.
@@ -163,31 +163,31 @@ complete Scaring Shaky | Mistvale gorillas.
 turnin Scaring Shaky
 turnin 595 The Bloodsail Buccaneers
 complete 621 Zanzil's Secret
-accept Return to MacKinley
 accept 597 The Bloodsail Buccaneers
+accept Return to MacKinley
 turnin Return to MacKinley
 turnin 597 The Bloodsail Buccaneers
 complete Some Assembly Required | Snapjaw Crocolisks.
 complete 192 Panther Mastery | Shadowmaw Panthers.
 complete Venture Company Mining | Venture Co. miners at the mines.
-turnin Some Assembly Required
 accept 599 The Bloodsail Buccaneers
-turnin Venture Company Mining
-accept 609 Voodoo Dues
+turnin Some Assembly Required
 accept 628 Excelsior
+accept 609 Voodoo Dues
+turnin Venture Company Mining
 turnin 621 Zanzil's Secret
-turnin 187 Tiger Mastery
 accept 328 The Hidden Key
+turnin 187 Tiger Mastery
 complete 628 Excelsior
 turnin 213 Hostile Takeover
 turnin 599 The Bloodsail Buccaneers
 complete 609 Voodoo Dues
 turnin 628 Excelsior
-turnin 189 Bloodscalp Ears
 turnin 609 Voodoo Dues
+turnin 189 Bloodscalp Ears
+turnin 192 Panther Mastery
 turnin 198 Supplies to Private Thorsen
 turnin 328 The Hidden Key
-turnin 192 Panther Mastery
 level 38
 train | Fly to Ironforge/Stormwind to train.
 note Leave the remaining Tiger/Panther/Raptor Mastery chain for your second STV visit or skip it.

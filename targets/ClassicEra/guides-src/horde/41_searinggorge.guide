@@ -52,14 +52,14 @@ accept 3463 Set Them Ablaze!
 complete 4449 Caught!
 complete 3463 Set Them Ablaze! | Light the two Sentry Braziers at the south edge of the Gorge, by the Blackrock Mountain bridge. Dark Iron sentries stand nearby.
 turnin 3463 Set Them Ablaze! | Squire Maltrake.
-turnin 4449 Caught!
-turnin 7728 STOLEN: Smithing Tuyere and Lookout's Spyglass | Taskmaster Scrange, Thorium Point.
-turnin 7729 JOB OPPORTUNITY: Culling the Competition
-turnin 7723 Curse These Fat Fingers | Hansel Heavyhands.
-turnin 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
-turnin 7722 What the Flux?
-turnin 7724 Fiery Menace!
-turnin 7727 Incendosaurs? Whateverosaur is More Like It
 accept 3481 Trinkets...
 turnin 3481 Trinkets...
+turnin 7722 What the Flux?
+turnin 7723 Curse These Fat Fingers | Hansel Heavyhands.
+turnin 7724 Fiery Menace!
+turnin 7727 Incendosaurs? Whateverosaur is More Like It
+turnin 7701 WANTED: Overseer Maltorius [elite; group; hc=skip]
+turnin 7728 STOLEN: Smithing Tuyere and Lookout's Spyglass | Taskmaster Scrange, Thorium Point.
+turnin 7729 JOB OPPORTUNITY: Culling the Competition
+turnin 4449 Caught!
 level 48 | Swamp of Sorrows starts at 48. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

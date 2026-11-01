@@ -56,18 +56,18 @@ accept 4288 The Western Pylon
 complete 4285 The Northern Pylon
 complete 4287 The Eastern Pylon
 complete 4288 The Western Pylon
+accept 974 Finding the Source | Needs level 51. Krakle, at the hot springs on the west side of Fire Plume Ridge.
+turnin 4492 Lost!
 turnin 4285 The Northern Pylon
 turnin 4287 The Eastern Pylon
 turnin 4288 The Western Pylon
 accept 4321 Making Sense of It
 turnin 4321 Making Sense of It
-accept 974 Finding the Source | Needs level 51. Krakle, at the hot springs on the west side of Fire Plume Ridge.
-turnin 4492 Lost!
 accept 3884 Williden's Journal
 complete 974 Finding the Source | Use Krakle's Thermometer at the hottest vent up on Fire Plume Ridge.
-turnin 974 Finding the Source
 note The next quest, A Little Help From My Friends, is an escort: pick it up only when you are ready to follow the NPC.
 accept 4491 A Little Help From My Friends
+turnin 974 Finding the Source
 complete 4491 A Little Help From My Friends | Escort: stay close; it fails if the NPC dies.
 accept 3844 It's a Secret to Everybody
 accept 4301 The Mighty U'cha

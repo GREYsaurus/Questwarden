@@ -99,6 +99,16 @@ end
 check(withDrop >= 50, "drop-source notes on objective steps (" .. withDrop .. ")")
 check(gateNotes >= 20, "level notes on gated pickups (" .. gateNotes .. ")")
 
+-- Nearest NPC first (tools/research/npc_order.py): a dwarf or gnome appears next to Sten Stoutarm, so Dwarven
+-- Outfitters is picked up before The Boar Hunter, whose giver stands farther west.
+local dm = G.byId["A_DwarfGnome_DunMorogh"]
+local first, boar
+for i, s in ipairs(dm.steps) do
+    if s[1] == "accept" and not first then first = s end
+    if s[1] == "accept" and s.q == 183 then boar = i end
+end
+check(first and first.q == 179 and boar and boar > 1, "Dun Morogh starts with Sten Stoutarm's Dwarven Outfitters")
+
 -- restore
 MOCK.player.race, MOCK.player.class, MOCK.player.faction, MOCK.player.level = "Human", "WARRIOR", "Alliance", 1
 E:Load("A_Human_Elwynn", { reset = true })

@@ -86,15 +86,15 @@ complete 367 A New Plague
 turnin 367 A New Plague
 accept 368 A New Plague
 turnin A Putrid Task
-accept 5482 Doom Weed
 accept The Mills Overrun
+accept 5482 Doom Weed
 complete 5482 Doom Weed
 accept 361 A Letter Undelivered
 complete The Mills Overrun | Agamand Mills, north.
 complete 374 Proof of Demise
 complete 368 A New Plague | Vile Fin murlocs on the coast.
-turnin The Mills Overrun
 turnin 5482 Doom Weed
+turnin The Mills Overrun
 turnin 368 A New Plague
 accept 369 A New Plague
 complete 370 At War With The Scarlet Crusade | Captain Perrine, Scarlet Crusade camp.
@@ -106,13 +106,13 @@ complete 371 At War With The Scarlet Crusade | Scarlet Zealots at the Scarlet Wa
 turnin 371 At War With The Scarlet Crusade
 accept 372 At War With The Scarlet Crusade [optional]
 complete 372 At War With The Scarlet Crusade [optional]
-turnin 372 At War With The Scarlet Crusade [optional]
 turnin Graverobbers
 accept Forsaken Duties
 accept Deaths in the Family | Coleman Farthing, Brill inn.
-turnin 374 Proof of Demise
-turnin 361 A Letter Undelivered
 accept The Haunted Mills
+turnin 361 A Letter Undelivered
+turnin 374 Proof of Demise
+turnin 372 At War With The Scarlet Crusade [optional]
 complete Deaths in the Family | Agamand relatives in the mills crypt.
 complete The Haunted Mills | Devlin Agamand in the mills.
 turnin Deaths in the Family

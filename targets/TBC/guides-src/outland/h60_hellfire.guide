@@ -126,9 +126,9 @@ accept Birds of a Feather | Falconer Drenna Riverwind.
 accept Arelion's Journal | Magistrix Carinda.
 accept Source of the Corruption | Apothecary Azethen.
 accept 9373 Missing Missive [iffound] | Shown only if you find Eroded Leather Case.
-turnin 9373 Missing Missive [iffound]
-accept 10403 Naladu
 accept In Need of Felblood | Ryathen the Somber.
+accept 10403 Naladu
+turnin 9373 Missing Missive [iffound]
 complete Birds of a Feather
 complete In Need of Felblood | Felblood Sample drops from Terrorfiend.
 complete The Great Fissure

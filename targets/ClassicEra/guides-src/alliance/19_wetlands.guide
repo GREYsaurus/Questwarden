@@ -34,9 +34,9 @@ accept 292 The Eye of Paleth
 accept 296 Ormer's Revenge
 complete 296 Ormer's Revenge | Sarltooth, a big raptor on the hill above the site.
 turnin 296 Ormer's Revenge
+accept 299 Uncovering the Past | Prospector Whelgar.
 accept 473 Report to Captain Stoutfist | Valstag Ironjaw, the keep.
 turnin 473 Report to Captain Stoutfist
-accept 299 Uncovering the Past | Prospector Whelgar.
 complete 299 Uncovering the Past | Relics are scattered in the excavation (raptors present).
 turnin 299 Uncovering the Past
 level 30 | Ashenvale starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

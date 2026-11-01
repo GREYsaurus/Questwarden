@@ -52,12 +52,12 @@ complete Jin'Zil's Forest Magic | Venture Co. operators and Stonetalon creatures
 complete 1090 Gerenzo's Orders | Venture Co. at Windshear Crag.
 turnin 1090 Gerenzo's Orders
 complete Cenarius' Legacy
-turnin Cenarius' Legacy
-accept 6381 New Life
-accept Ordanus
-turnin Harpies Threaten
 accept 1092 Gerenzo's Orders
+accept 6381 New Life
+turnin Harpies Threaten
 accept Bloodfury Bloodline
+turnin Cenarius' Legacy
+accept Ordanus
 complete Bloodfury Bloodline
 complete Elemental War
 complete Ordanus | Ordanus is in the Sons of Cenarius camp.
@@ -66,9 +66,9 @@ turnin Ordanus
 turnin Elemental War
 turnin 1096 Gerenzo Wrenchwhistle
 complete 6381 New Life
+turnin 6381 New Life
 turnin 1092 Gerenzo's Orders
 turnin Jin'Zil's Forest Magic
-turnin 6381 New Life
 level 24
 train | Orgrimmar or Thunder Bluff.
 note Take the Talondeep Path north-east into Ashenvale; Splintertree Post is the Horde town.

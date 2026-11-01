@@ -32,9 +32,9 @@ complete Fel Orc Scavengers | Fel orcs at Zeth'Gor.
 complete Ravager Egg Roundup | Ravager nests south of Honor Hold.
 turnin Fel Orc Scavengers
 accept Ill Omens
-accept Outland Sucks! | Foreman Razelcraz, outside Honor Hold.
 turnin The Legion Reborn | Sergeant Altumus at the Stair of Destiny caravan.
 accept The Path of Anguish
+accept Outland Sucks! | Foreman Razelcraz, outside Honor Hold.
 complete The Path of Anguish | Demons along the Path of Glory.
 complete Waste Not, Want Not | Burning Legion missives on the ground near the Stair.
 complete Outland Sucks! | Salvage scattered west of Honor Hold.
@@ -79,17 +79,17 @@ turnin Enemy of my Enemy...
 accept Invasion Point: Annihilator
 accept 10395 The Dark Missive
 complete Invasion Point: Annihilator | Burning Legion Gate Key drops from Warbringer Arix'Amal. Click Forge Camp: Portal Glyph.
-turnin Invasion Point: Annihilator
 turnin Outland Sucks!
 accept How to Serve Goblins
+turnin Invasion Point: Annihilator
 turnin Waste Not, Want Not
 accept Laying Waste to the Unwanted
 accept Unyielding Souls | Honor Guard Wesilow.
 accept When This Mine's a-Rockin' | Foreman Biggums.
 accept 9355 A Job for an Intelligent Man
+accept An Old Gift | Father Malgor Devidicus.
 turnin Ravager Egg Roundup
 accept Helboar, the Other White Meat
-accept An Old Gift | Father Malgor Devidicus.
 complete Helboar, the Other White Meat | Helboars around Honor Hold.
 complete Laying Waste to the Unwanted | Burn the fuel tanks along the Path of Glory.
 complete 9355 A Job for an Intelligent Man
@@ -117,9 +117,9 @@ accept Voidwalkers Gone Wild
 complete Voidwalkers Gone Wild | Voidwalkers at Void Ridge.
 turnin Voidwalkers Gone Wild
 turnin The Longbeards | Gremni Longbeard.
-accept 10367 A Traitor Among Us
 accept Rampaging Ravagers | Gremni Longbeard. Needs level 60; {name} skips it if you are lower and brings it back when you ding.
 accept The Arakkoa Threat | Needs level 60. If you are lower, {name} skips it and moves on.
+accept 10367 A Traitor Among Us
 turnin Unyielding Souls
 accept Looking to the Leadership
 turnin When This Mine's a-Rockin'
@@ -184,12 +184,12 @@ complete Keep Thornfang Hill Clear!
 turnin Demonic Contamination
 accept Testing the Antidote | Needs level 61. If you are lower, {name} skips it and moves on.
 complete Testing the Antidote
+turnin Keep Thornfang Hill Clear!
 turnin Testing the Antidote
 turnin Colossal Menace
-turnin Keep Thornfang Hill Clear!
-turnin Rampaging Ravagers
 turnin 10367 A Traitor Among Us
 turnin 10403 Naladu
+turnin Rampaging Ravagers
 turnin The Arakkoa Threat
 grind 62 Quillfang Ravager, Kaliri Swooper, Haal'eshi Windwalker [at=24.7,71.1] | The next steps expect level 62 and the quests here don't quite get you there: grind these until you reach it.
 train | Hearth or take the Dark Portal back to a capital city to train.

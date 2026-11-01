@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- **Nearest quest giver first.** Where the guide lists several pickups and turn-ins in a row, it now sends you to the nearest NPC first instead of walking past one and coming back. Example: a new dwarf or gnome now starts with Sten Stoutarm's Dwarven Outfitters, right where you appear, then The Boar Hunter farther west. 88 such stretches were reordered in Classic Era and 103 in TBC, in every zone.
+  - Pickups stay after the turn-ins of their prerequisites, and turn-ins after their pickups.
+  - A pickup you may not have the level for yet stays after the turn-ins before it, whose XP may get you there. This also fixes two pickups the route model reached just below their level (Rejold's New Brew in Dun Morogh, Deep Ocean, Vast Sea in Darkshore).
+  - Saved progress follows the moved steps.
+
 ## 0.1.0-alpha.21 (2026-11-01)
 
 - **Quest reward markers.** On a quest's reward panel, a green arrow (the same one as on bag upgrades) marks each reward choice that is an upgrade for your spec profile. When none is, a coin marks the choice that sells for the most at a vendor. They show when you read the quest and when you turn it in. Turn them off with *Mark quest reward choices* (Item Upgrade settings, on by default).

@@ -12,11 +12,11 @@
 @desc Tauren starting route. Camp Narache and Red Cloud Mesa to about 6, then Bloodhoof Village, the Winterhoof and Thunderhorn totems, the Venture Co. mine and Thunder Bluff. Ends at about 11, heading into the Barrens.
 @next H_Barrens
 
+accept 747 The Hunt Begins | Grull Hawkwind, Camp Narache.
 accept 752 A Humble Task | Chief Hawkwind.
 accept 1519 Call of Earth [class=Shaman] | Seer Ravenfeather, Camp Narache (level 4).
 turnin 752 A Humble Task | Greatmother Hawkwind at the well.
 accept 753 A Humble Task
-accept 747 The Hunt Begins | Grull Hawkwind, Camp Narache.
 complete 753 A Humble Task | Fill the pitcher at the well.
 complete 747 The Hunt Begins | Plainstriders around the camp.
 turnin 747 The Hunt Begins
@@ -54,11 +54,11 @@ turnin 1520 Call of Earth [class=Shaman] | Drink the Earth Sapta at Kodo Rock; t
 accept 1521 Call of Earth [class=Shaman]
 turnin 1521 Call of Earth [class=Shaman] | Back to Seer Ravenfeather for your Earth Totem.
 turnin 781 Attack on Camp Narache
+turnin A Task Unfinished | Bloodhoof Village.
 accept 745 Sharing the Land
 turnin 763 Rites of the Earthmother [optional]
-accept 11129 Kyle's Gone Missing!
 accept 766 Mazzranache [optional]
-turnin A Task Unfinished | Bloodhoof Village.
+accept 11129 Kyle's Gone Missing!
 bind Bloodhoof Village [area=222]
 accept Poison Water | Mull Thunderhorn.
 complete Poison Water | Prairie wolves and plainstriders.

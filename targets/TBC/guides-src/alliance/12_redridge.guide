@@ -84,15 +84,15 @@ turnin 2281 Redridge Rendezvous [class=Rogue; race=Human,Dwarf,Night Elf,Gnome]
 accept 2282 Alther's Mill [class=Rogue; race=Human,Dwarf,Night Elf,Gnome; optional]
 complete Redridge Goulash | Tarantulas, condors and goretusks.
 complete The Everstill Bridge | Redridge Mystics and Brutes west of the lake.
-turnin Assessing the Threat
 turnin A Free Lunch | Guard Parker at the west bridge.
 accept Visit the Herbalist
+turnin Assessing the Threat
 turnin Visit the Herbalist | Martie Jainrose, the farm north-west of Lakeshire.
 accept Delivering Daffodils
 turnin Redridge Goulash
+turnin Delivering Daffodils | Darcy in the Lakeshire inn.
 accept Selling Fish | Dockmaster Baren on the dock.
 accept 150 Murloc Poachers | Needs level 20. If you are lower, {name} skips it and moves on.
-turnin Delivering Daffodils | Darcy in the Lakeshire inn.
 complete Selling Fish | Murlocs drop Spotted Sunfish.
 complete 2282 Alther's Mill [class=Rogue; race=Human,Dwarf,Night Elf,Gnome; optional] | Token of Thievery: loot Lucius's Lockbox.
 complete Solomon's Law | Blackrock orcs along the north-east road and Stonewatch Falls.

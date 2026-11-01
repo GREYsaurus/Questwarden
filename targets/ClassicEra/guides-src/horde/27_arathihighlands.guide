@@ -55,12 +55,12 @@ accept 652 Breaking the Keystone
 complete 652 Breaking the Keystone | Rod of Order drops from Fozruk.
 turnin 652 Breaking the Keystone
 complete 639 Sigil of Strom [elite; group; hc=skip]
-turnin 639 Sigil of Strom [elite; group; hc=skip]
 accept 663 Land Ho!
 turnin 663 Land Ho!
-accept 688 Myzrael's Allies
 note The next quest, Sunken Treasure, is an escort: pick it up only when you are ready to follow the NPC.
 accept 665 Sunken Treasure
+accept 688 Myzrael's Allies
+turnin 639 Sigil of Strom [elite; group; hc=skip]
 complete 665 Sunken Treasure | Escort: stay close; it fails if the NPC dies.
 accept 664 Drowned Sorrows
 accept 662 Deep Sea Salvage
@@ -69,9 +69,9 @@ complete 664 Drowned Sorrows
 turnin 662 Deep Sea Salvage
 turnin 664 Drowned Sorrows
 turnin 665 Sunken Treasure
+accept 666 Sunken Treasure
 turnin 688 Myzrael's Allies
 accept 640 The Broken Sigil
-accept 666 Sunken Treasure
 complete 640 The Broken Sigil
 complete 666 Sunken Treasure
 turnin 666 Sunken Treasure

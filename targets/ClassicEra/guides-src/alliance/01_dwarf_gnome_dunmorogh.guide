@@ -12,8 +12,8 @@
 @desc Dwarf and gnome starting route. Coldridge Valley to about level 5, then Kharanos, the Barleybrew and Amberstill farms and the eastern pass. Ends at about level 11 at the gate to Loch Modan.
 @next A_10_Darkshore
 
-accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
 accept Dwarven Outfitters | Sten Stoutarm, in front of Anvilmar.
+accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
 complete Dwarven Outfitters | Wolves around Anvilmar drop Tough Wolf Meat.
 complete The Boar Hunter | Small Crag Boars west of Anvilmar.
 turnin Dwarven Outfitters
@@ -56,8 +56,8 @@ turnin The Stolen Journal
 accept 282 Senir's Observations
 accept Scalding Mornbrew Delivery | Nori Pridedrift at Grelin's camp. Deliver fast; the brew cools.
 turnin Scalding Mornbrew Delivery | Durnan Furcutter inside Anvilmar.
-accept 3361 A Refugee's Quandary
 accept Bring Back the Mug
+accept 3361 A Refugee's Quandary
 turnin Bring Back the Mug
 complete 3361 A Refugee's Quandary
 accept Supplies to Tannok [optional] | Hands Springsprocket stands at the tunnel too.
@@ -111,12 +111,12 @@ turnin Return to Marleth
 complete 412 Operation Recombobulation
 turnin The Perfect Stout
 accept Shimmer Stout
-accept Protecting the Herd | Rudra Amberstill at the Amberstill Ranch.
-accept 415 Rejold's New Brew
 turnin 412 Operation Recombobulation
+accept 415 Rejold's New Brew
+accept Protecting the Herd | Rudra Amberstill at the Amberstill Ranch.
 complete Protecting the Herd | Vagash is a wandering yeti on the hill above the ranch.
-turnin Protecting the Herd
 turnin 415 Rejold's New Brew
+turnin Protecting the Herd
 accept The Public Servant
 accept Those Blasted Troggs! | Foreman Stonebrow, Gol'Bolar Quarry.
 complete Those Blasted Troggs! | Troggs in the quarry.

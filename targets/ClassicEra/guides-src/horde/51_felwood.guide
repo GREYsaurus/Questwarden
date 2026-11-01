@@ -33,10 +33,10 @@ accept 4506 Corrupted Sabers
 complete 4506 Corrupted Sabers | Use the cage on a corrupted saber.
 turnin 4506 Corrupted Sabers
 complete 6162 A Husband's Last Battle
-turnin 6162 A Husband's Last Battle
 turnin 5155 Forces of Jaedenar
-turnin 5203 Rescue From Jaedenar
 accept 5157 Collection of the Corrupt Water
+turnin 5203 Rescue From Jaedenar
+turnin 6162 A Husband's Last Battle
 complete 5157 Collection of the Corrupt Water | The corrupted moonwell in Jaedenar.
 turnin 5157 Collection of the Corrupt Water
 turnin 5156 Verifying the Corruption

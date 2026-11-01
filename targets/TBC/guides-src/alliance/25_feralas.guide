@@ -31,15 +31,15 @@ accept 2982 The High Wilderness
 accept 4125 The Missing Courier
 turnin 4125 The Missing Courier
 accept 2766 Find OOX-22/FE! [iffound] | Shown only if you find OOX-22/FE Distress Beacon.
-turnin 2766 Find OOX-22/FE! [iffound]
 accept Boat Wreckage
+turnin 2766 Find OOX-22/FE! [iffound]
 turnin Boat Wreckage
 accept The Knife Revealed
 turnin The Knife Revealed
-accept 2821 The Mark of Quality
 accept Psychometric Reading
 turnin Psychometric Reading
 accept The Woodpaw Gnolls
+accept 2821 The Mark of Quality
 complete The Woodpaw Gnolls | Woodpaw gnolls in the southern hills.
 accept Freedom for All Creatures | Kindal Moonweaver, at the camp east.
 complete Freedom for All Creatures [group=2] | Escort the sprite darters out of the Grimtotem compound.
@@ -61,17 +61,17 @@ complete Fuel for the Zapping | Water elementals on the coast.
 turnin Zapped Giants
 turnin Fuel for the Zapping
 turnin Freed from the Hive
-turnin 2821 The Mark of Quality
-turnin 2982 The High Wilderness
 accept A Hero's Welcome
-accept 7733 Improved Quality
-turnin A Hero's Welcome
+turnin 2982 The High Wilderness
 accept 2871 Delivering the Relic
+turnin A Hero's Welcome
+turnin 2821 The Mark of Quality
+accept 7733 Improved Quality
 accept The Giant Guardian | Rockbiter at the Twin Colossals.
 complete 7733 Improved Quality
-turnin 2871 Delivering the Relic
 turnin The Giant Guardian
 turnin 7733 Improved Quality
+turnin 2871 Delivering the Relic
 level 46
 train
 note Fly to Ironforge, then to Aerie Peak in the Hinterlands (fly from Menethil if you lack the path).

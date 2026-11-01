@@ -31,12 +31,12 @@ turnin 613 Cracking Maury's Foot [elite; group; hc=skip]
 accept 617 Akiris by the Bundle
 accept 8552 The Monogrammed Sash
 complete 617 Akiris by the Bundle
-turnin 617 Akiris by the Bundle
 turnin 8552 The Monogrammed Sash
 accept 8553 The Captain's Cutlass
+turnin 8553 The Captain's Cutlass
+turnin 617 Akiris by the Bundle
 note Back in Stranglethorn Vale for the higher-level quests.
 accept 576 Keep An Eye Out
-turnin 8553 The Captain's Cutlass
 complete 576 Keep An Eye Out
 turnin 576 Keep An Eye Out
 accept 209 Skullsplitter Tusks

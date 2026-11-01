@@ -65,8 +65,8 @@ complete Rot Hide Ichor | Rot Hide gnolls.
 complete 450 A Recipe For Death
 complete Ambermill Investigations | Ambermill Dalaran mages.
 turnin 422 Arugal's Folly
-turnin 460 Resting in Pieces
 accept 423 Arugal's Folly
+turnin 460 Resting in Pieces
 turnin The Engraved Ring
 turnin Rot Hide Ichor
 accept Rot Hide Origins
@@ -89,16 +89,16 @@ turnin 480 The Weaver
 turnin 423 Arugal's Folly
 accept 424 Arugal's Folly
 complete 424 Arugal's Folly | Pyrewood Village.
+accept 461 The Hidden Niche
 turnin 424 Arugal's Folly
 accept 99 Arugal's Folly
-accept 516 Beren's Peril
 accept 3221 Speak with Renferrel
-accept 461 The Hidden Niche
+accept 516 Beren's Peril
 complete 516 Beren's Peril
 complete 99 Arugal's Folly
+turnin 3221 Speak with Renferrel
 turnin 516 Beren's Peril
 turnin 99 Arugal's Folly
-turnin 3221 Speak with Renferrel
 turnin 461 The Hidden Niche
 grind 17 Lake Creeper, Vile Fin Shorecreeper, Vile Fin Tidecaller [at=77.4,30.7] | The next steps expect level 17 and the quests here don't quite get you there: grind these until you reach it.
 note Take the zeppelin from Tirisfal to Orgrimmar, then ride to the Crossroads.

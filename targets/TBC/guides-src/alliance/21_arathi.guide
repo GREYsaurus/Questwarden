@@ -17,16 +17,16 @@ complete The Princess Trapped | Kill Kobolds at Drywhisker Gorge for Iridescent 
 turnin The Princess Trapped
 accept Stones of Binding
 fp Refuge Pointe
-accept Wanted!  Marez Cowl [elite; group=3; optional]
 accept 658 Hints of a New Plague?
+accept Wanted!  Marez Cowl [elite; group=3; optional]
 accept Wanted!  Otto and Falconcrest [elite; group=3; optional]
 complete 658 Hints of a New Plague?
-accept Northfold Manor | Captain Nials, Refuge Pointe.
 turnin 658 Hints of a New Plague?
+accept Northfold Manor | Captain Nials, Refuge Pointe.
 complete Northfold Manor | Syndicate at Northfold Manor, north-west.
 turnin Northfold Manor
-accept 657 Hints of a New Plague?
 accept Stromgarde Badges
+accept 657 Hints of a New Plague?
 turnin 657 Hints of a New Plague?
 complete Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
 turnin Stromgarde Badges
@@ -35,8 +35,8 @@ accept 660 Hints of a New Plague?
 complete 660 Hints of a New Plague? | Escort: stay close; it fails if the NPC dies.
 complete Wanted!  Marez Cowl [elite; group=3; optional] | Marez's Head drops from Marez Cowl.
 complete Wanted!  Otto and Falconcrest [elite; group=3; optional] | Otto's Head drops from Otto. Falconcrest's Head drops from Lord Falconcrest.
-turnin Wanted!  Marez Cowl [optional]
 turnin 660 Hints of a New Plague?
+turnin Wanted!  Marez Cowl [optional]
 turnin Wanted!  Otto and Falconcrest [optional]
 complete Stones of Binding | Collect the three Cresting, Thundering and Burning keys at the stones.
 turnin Stones of Binding

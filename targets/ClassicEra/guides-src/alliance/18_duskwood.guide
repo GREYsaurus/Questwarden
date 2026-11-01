@@ -25,10 +25,10 @@ accept 165 The Hermit
 accept 337 An Old History Book [optional]
 fp Darkshire
 accept 101 The Totem of Infliction | Madame Eva.
-accept 56 The Night Watch | Commander Althea Ebonlocke, Darkshire town hall.
 accept 66 The Legend of Stalvan | Madame Eva, in her house in Darkshire.
-turnin 66 The Legend of Stalvan
 accept 90 Seasoned Wolf Kabobs | Chef Grual.
+accept 56 The Night Watch | Commander Althea Ebonlocke, Darkshire town hall.
+turnin 66 The Legend of Stalvan
 turnin 1650 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Turned in at Westfall.
 accept 1651 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Defend event: Daphne Stilwell must survive the Defias attack; start it when you are ready.
 complete 1651 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Defend Daphne Stilwell; it fails if she dies.
@@ -58,23 +58,23 @@ accept 149 Ghost Hair Thread
 complete 177 Look To The Stars [optional] | Mary's Looking Glass drops from Insane Ghoul.
 complete 93 Dusky Crab Cakes | Crabs along the coast in western Duskwood.
 complete 56 The Night Watch | Skeletons and ghouls at Tranquil Gardens Cemetery, south-east of Darkshire.
-turnin 177 Look To The Stars [optional]
-accept 181 Look To The Stars [optional]
 turnin 149 Ghost Hair Thread | Blind Mary, house south-east of Darkshire.
 accept 154 Return the Comb
 turnin 56 The Night Watch
 accept 57 The Night Watch
+turnin 177 Look To The Stars [optional]
+accept 181 Look To The Stars [optional]
 complete 57 The Night Watch | Skeletal Fiends and Healers at the graveyard.
-turnin 57 The Night Watch
-accept 58 The Night Watch
 turnin 154 Return the Comb
 accept 157 Deliver the Thread
+turnin 57 The Night Watch
+accept 58 The Night Watch
 turnin 95 Sven's Revenge
 accept 230 Sven's Camp
-turnin 230 Sven's Camp
-accept 262 The Shadowy Figure
 turnin 157 Deliver the Thread
 accept 158 Zombie Juice
+turnin 230 Sven's Camp
+accept 262 The Shadowy Figure
 accept 128 Blackrock Bounty [optional]
 complete 128 Blackrock Bounty [optional]
 turnin 128 Blackrock Bounty [optional] | Turned in at Redridge Mountains.

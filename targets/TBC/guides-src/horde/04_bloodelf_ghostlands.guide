@@ -103,10 +103,10 @@ complete Goldenmist Village | Quel'dorei ghosts at Goldenmist Village.
 turnin Goldenmist Village
 accept Windrunner Village
 complete Windrunner Village | Windrunner Village spirits.
-turnin Windrunner Village
-turnin Salvaging the Past
 turnin Trouble at the Underlight Mines
 accept Troll Juju
+turnin Salvaging the Past
+turnin Windrunner Village
 complete Troll Juju
 turnin Troll Juju
 accept 9175 The Lady's Necklace
@@ -188,9 +188,9 @@ complete 9281 Clearing the Way [optional]
 turnin The Twin Ziggurats
 accept 9167 The Traitor's Destruction [optional]
 complete 9167 The Traitor's Destruction [optional] | Dar'Khan's Head drops from Dar'Khan Drathir.
+turnin 9281 Clearing the Way [optional]
 turnin 9167 The Traitor's Destruction [optional]
 accept 9328 Hero of the Sin'dorei [optional]
-turnin 9281 Clearing the Way [optional]
 turnin 9328 Hero of the Sin'dorei [optional] | Turned in at Silvermoon City.
 accept 9621 Envoy to the Horde [optional]
 turnin 9180 Journey to Undercity [optional] | Turned in at Undercity.

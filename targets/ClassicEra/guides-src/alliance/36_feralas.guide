@@ -34,15 +34,15 @@ accept 2982 The High Wilderness
 accept 4125 The Missing Courier
 turnin 4125 The Missing Courier
 accept 2766 Find OOX-22/FE! [iffound] | Shown only if you find OOX-22/FE Distress Beacon.
-turnin 2766 Find OOX-22/FE! [iffound]
 accept 4127 Boat Wreckage
+turnin 2766 Find OOX-22/FE! [iffound]
 turnin 4127 Boat Wreckage
 accept 4129 The Knife Revealed
 turnin 4129 The Knife Revealed
-accept 2821 The Mark of Quality
 accept 4130 Psychometric Reading
 turnin 4130 Psychometric Reading
 accept 4131 The Woodpaw Gnolls
+accept 2821 The Mark of Quality
 complete 4131 The Woodpaw Gnolls | Woodpaw gnolls in the southern hills.
 turnin 4131 The Woodpaw Gnolls
 complete 2982 The High Wilderness
@@ -53,10 +53,10 @@ turnin 4135 The Writhing Deep
 accept 4265 Freed from the Hive
 grind 45.7 Zukk'ash Wasp, Zukk'ash Worker, Zukk'ash Stinger [at=74.6,62.3] | Azshara starts at 46: grind these to 70% through level 45, and the quests left here bring you the rest of the way.
 turnin 4265 Freed from the Hive
-turnin 2821 The Mark of Quality
-turnin 2982 The High Wilderness
 accept 4266 A Hero's Welcome
-turnin 4266 A Hero's Welcome
+turnin 2982 The High Wilderness
 accept 2871 Delivering the Relic
+turnin 4266 A Hero's Welcome
 turnin 2871 Delivering the Relic
+turnin 2821 The Mark of Quality
 level 46 | Azshara starts at 46. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

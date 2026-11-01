@@ -47,20 +47,20 @@ accept 10825 The Truth Unorbed [iffound] | Shown only if you find Orb of the Gri
 turnin 10825 The Truth Unorbed [iffound]
 turnin A Time for Negotiation...
 accept ...and a Time for Action
+accept Poaching from Poachers
 accept Culling the Wild
 accept Little Embers
 accept From the Ashes
-accept Poaching from Poachers
 complete ...and a Time for Action
 complete Little Embers
 complete Poaching from Poachers | Wyrmcult Net drops from Wyrmcult Poacher.
 complete Culling the Wild
 turnin Poaching from Poachers
 complete From the Ashes | Click Fertile Volcanic Soil.
-turnin ...and a Time for Action
 turnin Culling the Wild
 turnin Little Embers
 turnin From the Ashes
+turnin ...and a Time for Action
 fp Evergrove
 accept Mok'Nathal Treats [optional] | Matron Varah, Mok'Nathal Village.
 complete Mok'Nathal Treats [optional] | Raptor Ribs drops from Bladespire Raptor, Bladespire Ravager and Daggermaw Lashtail and others. Serpent Flesh drops from Cobalt Serpent, Cobalt Serpent (1) and 

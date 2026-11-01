@@ -14,10 +14,10 @@
 
 accept 790 Sarkoth | Hana'zua, wounded near the canyon to the south.
 complete 790 Sarkoth [mark=skull] | Sarkoth is a large scorpid north-west of Hana'zua.
+accept Cutting Teeth
+accept Your Place In The World | Kaltunk at the valley entrance.
 turnin 790 Sarkoth
 accept 804 Sarkoth
-accept Your Place In The World | Kaltunk at the valley entrance.
-accept Cutting Teeth
 complete Cutting Teeth | Mottled Boars around the valley.
 turnin Cutting Teeth
 accept 2383 Simple Parchment [class=Warrior; race=Orc] | Gornek gives your class letter now.
@@ -52,32 +52,32 @@ accept 792 Vile Familiars [class=Warrior,Hunter,Rogue,Shaman,Priest,Mage] | Zure
 complete 792 Vile Familiars [class=Warrior,Hunter,Rogue,Shaman,Priest,Mage] | Vile Familiars in the north-east of the valley.
 complete 1485 Vile Familiars [class=Warlock]
 complete 1516 Call of Earth [class=Shaman] | Felstalkers in the north-east of the valley drop Felstalker Hooves.
-turnin 792 Vile Familiars [class=Warrior,Hunter,Rogue,Shaman,Priest,Mage]
 turnin 1485 Vile Familiars [class=Warlock]
 accept 1499 Vile Familiars [class=Warlock] | Ruzan; needed for Burning Blade Medallion.
+turnin 792 Vile Familiars [class=Warrior,Hunter,Rogue,Shaman,Priest,Mage]
 turnin 1499 Vile Familiars [class=Warlock] | Zureetha Fargaze.
 accept Burning Blade Medallion
+accept Thazz'ril's Pick
 accept A Peon's Burden [optional] | Ukor.
 accept Vanquish the Betrayers
 turnin A Peon's Burden [optional] | Innkeeper Grosk, Razor Hill inn.
 accept 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional]
 accept 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional]
-accept Thazz'ril's Pick
 complete Thazz'ril's Pick | Burning Blade Cave, north.
 complete Vanquish the Betrayers [mark=cross:Lieutenant Benedict] | Kul Tiras Sailors and Marines at Tiragarde Keep; Lieutenant Benedict is upstairs in the keep.
 complete 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete Burning Blade Medallion | Yarrog Baneshadow, deep in the cave.
+turnin 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional]
+turnin 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional]
+turnin Vanquish the Betrayers
 turnin Thazz'ril's Pick
 turnin Burning Blade Medallion
 accept Report to Sen'jin Village
 turnin 3086 Glyphic Tablet [class=Mage; race=Troll]
-turnin 3090 Tainted Parchment [class=Warlock; race=Orc]
 turnin 3088 Encrypted Parchment [class=Rogue; race=Orc]
 turnin 3083 Encrypted Tablet [class=Rogue; race=Troll]
-turnin 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional]
-turnin 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional]
-turnin Vanquish the Betrayers
+turnin 3090 Tainted Parchment [class=Warlock; race=Orc]
 accept 830 The Admiral's Orders [class=Warrior,Rogue; race=Orc]
 accept 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage; race=Troll]
 accept 830 The Admiral's Orders [class=Hunter,Shaman; race=Troll]

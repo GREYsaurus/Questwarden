@@ -21,19 +21,19 @@ turnin 642 The Princess Trapped
 complete 627 Favor for Krazek
 accept 651 Stones of Binding
 fp Refuge Pointe
-accept 684 Wanted!  Marez Cowl [elite; group=3; optional]
-accept 691 Worth Its Weight in Gold
 accept 658 Hints of a New Plague?
+accept 691 Worth Its Weight in Gold
+accept 684 Wanted!  Marez Cowl [elite; group=3; optional]
 complete 691 Worth Its Weight in Gold
 turnin 691 Worth Its Weight in Gold
 complete 658 Hints of a New Plague?
-accept 685 Wanted!  Otto and Falconcrest [elite; group=3; optional]
 turnin 658 Hints of a New Plague?
 accept 657 Hints of a New Plague?
 turnin 657 Hints of a New Plague?
-accept 682 Stromgarde Badges
 note The next quest, Hints of a New Plague?, is an escort: pick it up only when you are ready to follow the NPC.
 accept 660 Hints of a New Plague?
+accept 685 Wanted!  Otto and Falconcrest [elite; group=3; optional]
+accept 682 Stromgarde Badges
 complete 660 Hints of a New Plague? | Escort: stay close; it fails if the NPC dies.
 complete 682 Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
 turnin 682 Stromgarde Badges
@@ -46,14 +46,14 @@ complete 651 Stones of Binding | Collect the three Cresting, Thundering and Burn
 turnin 651 Stones of Binding
 accept 652 Breaking the Keystone
 complete 652 Breaking the Keystone | Rod of Order drops from Fozruk.
+accept 693 Wand over Fist
 turnin 652 Breaking the Keystone
 accept 663 Land Ho!
-accept 693 Wand over Fist
 complete 693 Wand over Fist
 turnin 663 Land Ho!
-turnin 693 Wand over Fist
 note The next quest, Sunken Treasure, is an escort: pick it up only when you are ready to follow the NPC.
 accept 665 Sunken Treasure
+turnin 693 Wand over Fist
 complete 665 Sunken Treasure | Escort: stay close; it fails if the NPC dies.
 accept 664 Drowned Sorrows
 accept 662 Deep Sea Salvage

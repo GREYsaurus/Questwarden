@@ -46,11 +46,11 @@ accept 4288 The Western Pylon
 complete 4285 The Northern Pylon
 complete 4287 The Eastern Pylon
 complete 4288 The Western Pylon
+accept 3844 It's a Secret to Everybody
+turnin 3844 It's a Secret to Everybody
 turnin 4285 The Northern Pylon
 turnin 4287 The Eastern Pylon
 turnin 4288 The Western Pylon
 accept 4321 Making Sense of It
 turnin 4321 Making Sense of It
-accept 3844 It's a Secret to Everybody
-turnin 3844 It's a Secret to Everybody
 level 52 | Azshara starts at 52. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

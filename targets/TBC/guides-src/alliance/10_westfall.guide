@@ -40,10 +40,10 @@ accept Red Leather Bandanas
 complete 12 The People's Militia | Defias Trappers and Smugglers north of Jangolode Mine.
 complete Patrolling Westfall | Gnolls south of Sentinel Hill.
 complete Red Leather Bandanas | Any Defias in Westfall drops them.
-turnin Red Leather Bandanas
-turnin Patrolling Westfall
 turnin 12 The People's Militia
 accept 13 The People's Militia
+turnin Patrolling Westfall
+turnin Red Leather Bandanas
 complete 13 The People's Militia | Defias Pathstalkers and Highwaymen west of the Jangolode Mine.
 turnin 13 The People's Militia
 accept 14 The People's Militia
@@ -61,8 +61,8 @@ accept The Coast Isn't Clear
 complete Keeper of the Flame | Kill Gnoll Mystics on the coast for Flasks of Oil.
 accept 136 Captain Sander's Hidden Treasure
 complete The Coast Isn't Clear | Murlocs along the shore north of the lighthouse.
-turnin Keeper of the Flame
 turnin 136 Captain Sander's Hidden Treasure
+turnin Keeper of the Flame
 turnin The Coast Isn't Clear
 accept The Coastal Menace [elite; group=2; optional] | Old Murk-Eye (elite murloc). Skip if solo below level 16.
 complete The Coastal Menace [elite; group=2; optional]

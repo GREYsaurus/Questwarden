@@ -17,9 +17,9 @@ train
 fp Aerie Peak
 accept 2880 Troll Necklace Bounty | Fraggar Thundermantle.
 accept 485 Find OOX-09/HL! [iffound] | Shown only if you find OOX-09/HL Distress Beacon.
-turnin 485 Find OOX-09/HL! [iffound]
 accept 2877 Skulk Rock Clean-up
 accept 2988 Witherbark Cages | Gryphon Master Talonaxe.
+turnin 485 Find OOX-09/HL! [iffound]
 complete 2988 Witherbark Cages | Witherbark trolls' cages around the Hinterlands.
 complete 2880 Troll Necklace Bounty | Any Witherbark trolls.
 complete 2877 Skulk Rock Clean-up | Oozes at Skulk Rock.

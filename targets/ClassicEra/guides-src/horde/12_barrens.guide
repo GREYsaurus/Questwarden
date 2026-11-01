@@ -46,9 +46,9 @@ accept 899 Consumed by Hatred | Mankrik, Crossroads.
 accept 4921 Lost in Battle
 complete 4921 Lost in Battle | Mankrik's wife lies near Blackthorn Ridge.
 complete 899 Consumed by Hatred
-turnin 3281 Stolen Silver
 turnin 4921 Lost in Battle
 turnin 899 Consumed by Hatred
+turnin 3281 Stolen Silver
 note  [optional] | The next quest, The Escape, is an escort: pick it up only when you are ready to follow the NPC.
 accept 863 The Escape [optional] | Escort quest: start it when you are ready to follow.
 complete 863 The Escape [optional] | Escort: stay close; it fails if the NPC dies.

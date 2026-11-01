@@ -31,9 +31,9 @@ turnin Corrupted Sabers
 fp Bloodvenom Post
 accept Cleansing Felwood | Maybess Riverbreeze, Emerald Sanctuary.
 complete 6162 A Husband's Last Battle
-turnin 6162 A Husband's Last Battle
 note The next quest, Rescue From Jaedenar, is an escort: pick it up only when you are ready to follow the NPC.
 accept 5203 Rescue From Jaedenar
+turnin 6162 A Husband's Last Battle
 complete 5203 Rescue From Jaedenar | Escort: stay close; it fails if the NPC dies.
 complete Cleansing Felwood | Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.
 turnin Cleansing Felwood
@@ -48,15 +48,15 @@ complete Collection of the Corrupt Water | The corrupted moonwell in Jaedenar.
 turnin Collection of the Corrupt Water
 turnin Verifying the Corruption
 complete 5204 Retribution of the Light
-accept Deadwood of the North | Nafien.
 turnin 5204 Retribution of the Light
+accept Deadwood of the North | Nafien.
 turnin 8462 Speak to Nafien
 accept 8471 Winterfall Ritual Totem [iffound] | Shown only if you find Winterfall Ritual Totem.
 turnin 8471 Winterfall Ritual Totem [iffound]
 complete Deadwood of the North | Deadwood furbolgs.
 turnin Deadwood of the North
-accept 5385 The Remains of Trey Lightforge
 accept Speak to Salfa | Nafien. Turned in at the Winterspring end of the Timbermaw tunnel.
+accept 5385 The Remains of Trey Lightforge
 turnin 5385 The Remains of Trey Lightforge
 level 53
 train

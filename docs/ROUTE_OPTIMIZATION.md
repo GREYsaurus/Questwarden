@@ -4,6 +4,17 @@ The route audit (`tools/build.ps1 routes`) works for every target. It walks ever
 
 **Objectives before far turn-ins:** `python tools/research/cluster_objectives.py <Target> [--apply]` finds complete steps of quests already in your log whose objectives are next to the ones you just finished, placed after a turn-in far away, and moves them before that turn-in. Each move is kept only if it shortens the guide's modeled walk; it never moves a step past a hearthstone, flight, boat, dungeon or another-zone step, past another step of the same quest or a step that names its items, or onto a quest too high for the route's level there. After `--apply`, run `guides` and `routes`, then `python tools/research/layout_map.py <Target>` so saved progress follows the new order (Guides/Layouts.lua).
 
+**Nearest NPC first:** `python tools/research/npc_order.py <Target> [--apply]` reorders stretches of back-to-back pickups and turn-ins in the guide's zone (note lines move with their step) to the shortest walk. The walk starts where you are before the stretch: the previous step's NPC, or the nearest spawn of the previous kill step's objectives. At the start of a starting guide, it starts at the NPC who stands where the race appears (SPAWN in the tool). The walk ends where you go next: the next step's NPC, or the nearest objective spawn of the next kill step.
+
+Steps at the same NPC stay together, in their order. The tool never puts:
+- a pickup before the turn-in of one of its prerequisites;
+- a turn-in before its pickup;
+- a pickup whose required level is above the route model's level there ahead of the turn-ins before it.
+
+A new order is kept only when it saves at least 2 map percent. Run it again after `guides` and `routes` until it finds nothing: NPCs with several spawns can be placed differently after a reorder. Then run `layout_map.py`, which ignores the fields the compiler derives from order (coordinates, chosen NPC, packs).
+
+The route audit's Distance column counts NPC steps only, not the walk to kill objectives in between. A reorder can raise that number and still shorten the real walk: for example, turning in the far-west quest first when the next objectives are in the east. The first run (2026-11-01) reordered 88 stretches in Classic Era and 103 in TBC.
+
 **Kill packs:** `python tools/research/kill_packs.py <Target> [--apply]` moves complete steps of quests already in your log up next to a complete step whose mobs spawn in the same area: within 8 map percent, or the same mobs, kill targets or item droppers. The compiler then links them into a kill pack that the add-on shows as one ([GUIDE_FORMAT.md](GUIDE_FORMAT.md#kill-packs)). Any number of steps can join.
 
 A step doesn't move:

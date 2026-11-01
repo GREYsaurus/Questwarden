@@ -86,8 +86,8 @@ complete 2541 The Sleeping Druid
 turnin Timberling Seeds
 accept 922 Rellian Greenspyre
 turnin 928 Crown of the Earth | Corithras Moonrage, Dolanaar.
-turnin 2541 The Sleeping Druid
 accept 929 Crown of the Earth
+turnin 2541 The Sleeping Druid
 complete Timberling Sprouts | Sprouts on the ground around the lake.
 complete 929 Crown of the Earth | Fill the phial at the Starbreeze Village moonwell.
 complete Twisted Hatred | Lord Melenas in Fel Rock, near Dolanaar.
@@ -176,11 +176,11 @@ complete 6101 Taming the Beast [class=Hunter]
 turnin 6101 Taming the Beast [class=Hunter]
 accept 6102 Taming the Beast [class=Hunter]
 complete 6102 Taming the Beast [class=Hunter]
+turnin 2498 Return to Denalan
+turnin 941 Planting the Heart
 turnin 6102 Taming the Beast [class=Hunter]
 accept 6103 Training the Beast [class=Hunter]
 turnin 489 Seek Redemption! [optional]
-turnin 941 Planting the Heart
-turnin 2498 Return to Denalan
 turnin 5931 Back to Darnassus [class=Druid] | Turned in at Darnassus.
 accept 6001 Body and Heart [class=Druid; optional]
 turnin 6103 Training the Beast [class=Hunter] | Turned in at Darnassus.

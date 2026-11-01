@@ -54,13 +54,13 @@ complete Menacing Marshfangs
 turnin Thick Hydra Scales
 accept Searching for Scout Jyoba
 fp Swamprat Post
+turnin Menacing Marshfangs
+accept The Respect of Another
 turnin No More Mushrooms!
 accept There's No Explanation for Fashion
 accept A Job Undone
 turnin Searching for Scout Jyoba
 accept Jyoba's Report
-turnin Menacing Marshfangs
-accept The Respect of Another
 complete There's No Explanation for Fashion | Diaphanous Wing drops from Blacksting, Marshlight Bleeder and Umbraglow Stinger and others.
 complete The Respect of Another | Blacksting's Stinger drops from Blacksting.
 complete A Job Undone
@@ -105,17 +105,17 @@ turnin Pursuing Terrorclaw
 turnin Burstcap Mushrooms, Mon!
 turnin The Zapthrottle Mote Extractor! [optional]
 accept Watcher Leesa'oh | From Lethyn Moonfire.
-accept The Sporelings' Plight | Fahssn.
-accept Natural Enemies
 turnin Watcher Leesa'oh
 accept Observing the Sporelings
+accept The Sporelings' Plight | Fahssn.
+accept Natural Enemies
 complete Observing the Sporelings
 complete The Sporelings' Plight | Mature Spore Sac: loot Mature Spore Sac.
 accept 9828 Withered Basidium
 complete Natural Enemies | Bog Lord Tendril drops from Bog Lord, Starving Fungal Giant and Withered Giant and others.
 turnin Observing the Sporelings
-turnin 9828 Withered Basidium
 accept A Question of Gluttony
+turnin 9828 Withered Basidium
 complete A Question of Gluttony | Discarded Nutriment: loot Discarded Nutriment.
 turnin A Question of Gluttony
 turnin The Sporelings' Plight

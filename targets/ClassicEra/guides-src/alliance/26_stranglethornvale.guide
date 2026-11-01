@@ -39,9 +39,9 @@ turnin 328 The Hidden Key
 turnin 192 Panther Mastery
 accept 188 Tiger Mastery
 complete 188 Tiger Mastery
+turnin 188 Tiger Mastery [optional]
 accept 578 The Stone of the Tides
 accept 628 Excelsior [elite; group; hc=skip]
-turnin 188 Tiger Mastery [optional]
 complete 628 Excelsior [elite; group; hc=skip]
 accept 207 Kurzen's Mystery
 accept 329 The Spy Revealed!
@@ -54,9 +54,9 @@ accept 330 Patrol Schedules
 accept 601 Water Elementals
 complete 601 Water Elementals
 turnin 330 Patrol Schedules
-turnin 601 Water Elementals
 accept 331 Report to Doren
 turnin 331 Report to Doren
+turnin 601 Water Elementals
 accept 1301 James Hyal [class=Mage; race=Human,Gnome]
 accept 1301 James Hyal [class=Warrior,Rogue,Warlock; race=Gnome]
 accept 1301 James Hyal [class=Warrior,Paladin,Rogue,Priest,Warlock; race=Human]

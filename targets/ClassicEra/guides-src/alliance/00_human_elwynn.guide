@@ -143,12 +143,12 @@ accept 123 The Collector [optional]
 complete Riverpaw Gnoll Bounty | Gnolls south of the garrison drop Painted Gnoll Armbands.
 turnin Riverpaw Gnoll Bounty
 complete Wanted: "Hogger" [elite; group=3; optional; hc=skip]
-turnin A Bundle of Trouble
-turnin Cloth and Leather Armor | Return to Sara Timberlain only if you are passing Eastvale; otherwise skip.
 turnin Wanted: "Hogger" [optional; hc=skip]
 turnin 123 The Collector [class=Warrior,Paladin,Rogue,Priest,Mage; optional]
 turnin 123 The Collector [class=Warlock; optional]
 accept 147 Manhunt [class=Warlock; optional]
+turnin A Bundle of Trouble
+turnin Cloth and Leather Armor | Return to Sara Timberlain only if you are passing Eastvale; otherwise skip.
 complete 147 Manhunt [class=Warlock; optional] | The Collector's Ring drops from Morgan the Collector.
 turnin 147 Manhunt [class=Warlock; optional]
 grind 10 Riverpaw Outrunner, Riverpaw Runt @ south of Westbrook Garrison [at=27.8,81.2] | Only if you are short of level 10: keep killing the bounty gnolls until you ding.

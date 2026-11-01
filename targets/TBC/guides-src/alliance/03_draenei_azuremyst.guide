@@ -27,14 +27,14 @@ complete Rescue the Survivors! | Use the Gift of the Naaru racial on the injured
 complete Volatile Mutations | Volatile Mutations east of the crash site.
 turnin Volatile Mutations
 accept What Must Be Done...
-accept 9421 Shaman Training [class=Shaman]
-accept Spare Parts | Technician Zhanaa.
-accept Inoculation | Vindicator Aldar.
-accept 9288 Hunter Training [class=Hunter]
+accept Botanical Legwork
 turnin Rescue the Survivors!
 accept 9291 Priest Training [class=Priest]
 accept 9287 Paladin Training [class=Paladin]
-accept Botanical Legwork
+accept 9421 Shaman Training [class=Shaman]
+accept 9288 Hunter Training [class=Hunter]
+accept Spare Parts | Technician Zhanaa.
+accept Inoculation | Vindicator Aldar.
 complete Spare Parts | Emitter spare parts on the ground in the vale.
 complete Inoculation | Use the inoculating crystal on Nestlewood Owlkins.
 complete What Must Be Done... | Mutated Root Lashers at the lake.
@@ -79,14 +79,14 @@ accept 9455 Strange Findings [optional]
 accept Word from Azure Watch [optional]
 accept Red Snapper - Very Tasty! | Diktynna, on the beach.
 accept 9612 A Hearty Thanks! [optional] | Needs level 8. If you are lower, {name} skips it and moves on.
-accept Learning the Language | Cryptographer Aurren.
 accept Medicinal Purpose | Anchorite Fateema, Azure Watch.
-turnin 9612 A Hearty Thanks! [optional]
-turnin 9455 Strange Findings [optional]
-accept 9456 Nightstalker Clean Up, Isle 2... [optional]
+accept Learning the Language | Cryptographer Aurren.
 turnin Travel to Azure Watch | Technician Dyvuun, Azure Watch.
 accept 9586 Help Tavara [class=Priest]
 turnin Word from Azure Watch [optional] | Caregiver Chellan, the Azure Watch inn.
+turnin 9612 A Hearty Thanks! [optional]
+turnin 9455 Strange Findings [optional]
+accept 9456 Nightstalker Clean Up, Isle 2... [optional]
 bind Azure Watch [area=3576]
 complete Medicinal Purpose | Skittering Crawlers drop Skittering Crawler Meat.
 turnin Medicinal Purpose
@@ -151,18 +151,18 @@ turnin The Prophecy of Akida | Arugoo of the Stillpine, Stillpine Hold.
 accept Stillpine Hold
 complete 9586 Help Tavara [class=Priest]
 turnin 9586 Help Tavara [class=Priest]
-turnin Stillpine Hold
-accept Murlocs... Why Here? Why Now?
 accept Beasts of the Apocalypse!
+accept Murlocs... Why Here? Why Now?
+turnin Stillpine Hold
 complete Beasts of the Apocalypse! | Ravagers south of Stillpine Hold.
 complete Murlocs... Why Here? Why Now? | Murlocs at the lake by the hold.
 accept 9564 Gurf's Dignity
-turnin Beasts of the Apocalypse!
 turnin Murlocs... Why Here? Why Now?
+turnin Beasts of the Apocalypse!
+accept Chieftain Oomooroo
 accept Search Stillpine Hold
 turnin Search Stillpine Hold
 accept Blood Crystals
-accept Chieftain Oomooroo
 complete Chieftain Oomooroo | Inside Stillpine Hold.
 turnin Chieftain Oomooroo
 accept 9570 The Kurken is Lurkin'

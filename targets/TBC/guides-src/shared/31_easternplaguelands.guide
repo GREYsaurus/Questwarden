@@ -21,10 +21,10 @@ complete Augustus' Receipt Book | The book is upstairs in the inn across the roa
 turnin Augustus' Receipt Book
 note Ride the road east across the zone to Light's Hope Chapel.
 fp Light's Hope Chapel
-turnin Duke Nicholas Zverenhoff [optional] | Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).
+accept 9665 Bolstering Our Defenses [faction=Horde]
 accept 9126 Bonescythe Digs
 accept 9664 Establishing New Outposts [faction=Alliance]
-accept 9665 Bolstering Our Defenses [faction=Horde]
+turnin Duke Nicholas Zverenhoff [optional] | Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).
 accept 5503 Argent Dawn Commission
 turnin 5503 Argent Dawn Commission
 accept Zaeldarr the Outcast | Caretaker Alen, Light's Hope Chapel.
@@ -64,17 +64,17 @@ complete 6133 The Ranger Lord's Behest [faction=Horde]
 complete 6136 The Corpulent One [faction=Horde]
 complete 9124 Cryptstalker Armor Doesn't Make Itself...
 complete 9128 The Elemental Equation
-turnin 6133 The Ranger Lord's Behest [faction=Horde]
-accept 5742 Redemption [faction=Alliance]
-accept 5742 Redemption [faction=Horde]
-turnin 6136 The Corpulent One [faction=Horde]
-turnin 5742 Redemption [faction=Alliance]
-turnin 5742 Redemption [faction=Horde]
+turnin 9664 Establishing New Outposts [faction=Alliance]
 turnin 9124 Cryptstalker Armor Doesn't Make Itself...
 turnin 9126 Bonescythe Digs
 turnin 9128 The Elemental Equation
-turnin 9664 Establishing New Outposts [faction=Alliance]
 turnin 9665 Bolstering Our Defenses [faction=Horde]
+turnin 6133 The Ranger Lord's Behest [faction=Horde]
+turnin 6136 The Corpulent One [faction=Horde]
+accept 5742 Redemption [faction=Alliance]
+accept 5742 Redemption [faction=Horde]
+turnin 5742 Redemption [faction=Alliance]
+turnin 5742 Redemption [faction=Horde]
 level 58
 train
 note At 58 go to the Dark Portal in the Blasted Lands. Alliance: fly to Stormwind, then Nethergarde Keep (the herald for Through the Dark Portal is in Stormwind or Nethergarde). Horde: fly to Orgrimmar or the Undercity (the herald is there), then Stonard and ride south.

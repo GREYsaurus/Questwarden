@@ -19,8 +19,8 @@ accept Onu
 accept The Absent Minded Prospector | Archaeologist Hollee, Auberdine.
 accept 963 For Love Eternal [optional]
 complete 963 For Love Eternal [optional] | Anaya's Pendant drops from Anaya Dawnrunner.
-turnin 963 For Love Eternal [optional]
 accept Washed Ashore | Gwennyth Bly'Leggonde.
+turnin 963 For Love Eternal [optional]
 complete Washed Ashore | The sea creature bones are on the beach south of Auberdine.
 turnin Washed Ashore
 accept 4681 Washed Ashore
@@ -61,18 +61,18 @@ complete Buzzbox 827 | Crawlers on the beach.
 turnin Cleansing of the Infected
 accept Tharnariun's Hope
 complete Tharnariun's Hope | Den Mother in the bear cave north-east.
-turnin Tharnariun's Hope
 accept Bashal'Aran | Thundris Windweaver.
-turnin Bashal'Aran | Asterion, at the ruins east of Auberdine.
-accept 955 Bashal'Aran
 turnin Thundris Windweaver
 accept Tools of the Highborne
+turnin Bashal'Aran | Asterion, at the ruins east of Auberdine.
+accept 955 Bashal'Aran
+turnin Tharnariun's Hope
 complete 985 How Big a Threat? | Blackwood furbolgs at the camp.
 complete Tools of the Highborne | Highborne relics in the Bashal'Aran ruins.
+turnin 985 How Big a Threat?
+accept 982 Deep Ocean, Vast Sea [optional]
 accept The Cliffspring River
 turnin Tools of the Highborne
-accept 982 Deep Ocean, Vast Sea [optional]
-turnin 985 How Big a Threat?
 complete As Water Cascades | Fill the bottle at the moonwell in Auberdine.
 turnin As Water Cascades
 accept The Fragments Within
@@ -127,10 +127,10 @@ accept 4728 Beached Sea Creature
 complete Buzzbox 525
 turnin Buzzbox 525
 accept 951 Mathystra Relics
+accept 4730 Beached Sea Creature
 accept 4731 Beached Sea Turtle
 accept 4732 Beached Sea Turtle
 accept 4733 Beached Sea Creature
-accept 4730 Beached Sea Creature
 complete 967 The Tower of Althalaxx
 turnin 967 The Tower of Althalaxx
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Rogue,Mage; race=Gnome; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.

@@ -23,8 +23,9 @@ LAYOUTS = os.path.join(ROOT, "targets", TARGET, "addon", "Guides", "Layouts.lua"
 STEP_RE = re.compile(r'^    \{"\w+".*\},\s*$', re.M)
 
 
-# Fields the compiler derives from step positions (kill packs, item-start kill steps) change with any reorder.
-DERIVED_RE = re.compile(r",(pack=\d+|via=\{[\d,]*\})")
+# Fields the compiler derives from step positions change with any reorder: kill packs, item-start kill steps, and the
+# coordinates and the NPC (of several spawns or givers, the one nearest the step before).
+DERIVED_RE = re.compile(r",(pack=\d+|via=\{[\d,]*\}|z=\d+,x=[\d.]+,y=[\d.]+|npc=\"[^\"]*\"|npcId=\d+)")
 
 
 def guide(text):

@@ -35,11 +35,11 @@ complete 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; ra
 complete 973 The Tower of Althalaxx [race=Dwarf,Night Elf,Draenei; optional] | Ilkrud Magthrull's Tome drops from Ilkrud Magthrull.
 accept The Zoram Strand | Shindrell Swiftfire.
 complete The Zoram Strand | Wrathtail naga at the strand.
-turnin The Zoram Strand
 turnin 973 The Tower of Althalaxx [class=Warlock; race=Human,Gnome; optional]
 turnin 973 The Tower of Althalaxx [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 973 The Tower of Althalaxx [race=Dwarf,Night Elf,Draenei; optional]
+turnin The Zoram Strand
 complete Raene's Cleansing | Teronis' corpse is at the Zoram Strand ruins.
 turnin Raene's Cleansing
 note The next quest, Supplies to Auberdine, is an escort: pick it up only when you are ready to follow the NPC.
@@ -60,11 +60,11 @@ turnin 1023 Raene's Cleansing
 accept An Aggressive Defense
 accept 1024 Raene's Cleansing
 complete An Aggressive Defense | Foulweald furbolgs south of Astranaar.
-turnin An Aggressive Defense
-turnin Orendil's Cure | Pelturas Whitemoon, Astranaar.
 turnin 1024 Raene's Cleansing
-accept Elune's Tear
 accept 1026 Raene's Cleansing
+turnin Orendil's Cure | Pelturas Whitemoon, Astranaar.
+accept Elune's Tear
+turnin An Aggressive Defense
 complete Elune's Tear | The tear lies on the isle in Lake Iris.
 turnin Elune's Tear
 complete 1026 Raene's Cleansing
@@ -99,13 +99,13 @@ complete 9519 The Lost Chalice
 complete 9517 A Shameful Waste
 complete 9518 Agents of Destruction
 complete 1035 Fallen Sky Lake
-turnin 9517 A Shameful Waste
-turnin 9519 The Lost Chalice
-turnin 4581 Kayneth Stillwind
-turnin 9518 Agents of Destruction
-turnin 1022 The Howling Vale
 turnin 1035 Fallen Sky Lake
 turnin 1140 The Tower of Althalaxx
+turnin 9517 A Shameful Waste
+turnin 9518 Agents of Destruction
+turnin 1022 The Howling Vale
+turnin 9519 The Lost Chalice
+turnin 4581 Kayneth Stillwind
 grind 23.7 Thistlefur Totemic, Thistlefur Ursa, Thistlefur Avenger [at=39.2,33.8] | The next steps expect level 24: grind these to 70% through level 23, and the quests left here bring you the rest of the way.
 accept 1011 Forsaken Diseases
 complete 1011 Forsaken Diseases

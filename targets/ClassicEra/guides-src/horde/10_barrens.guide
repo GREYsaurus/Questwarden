@@ -60,10 +60,10 @@ accept 855 Centaur Bracers | Regthar Deathgate (at the Kolkar border).
 accept 6361 A Bundle of Hides [race=Tauren]
 accept 848 Fungal Spores | Apothecary Helbrim.
 fp Crossroads
-accept 869 Raptor Thieves | Gazrog.
-accept 6365 Meats to Orgrimmar [race=Orc,Troll]
 turnin 6361 A Bundle of Hides [race=Tauren]
 accept 6362 Ride to Thunder Bluff [race=Tauren]
+accept 869 Raptor Thieves | Gazrog.
+accept 6365 Meats to Orgrimmar [race=Orc,Troll]
 fp Ratchet
 complete 871 Disrupt the Attacks | Razormane quilboars east of the Crossroads.
 turnin 6365 Meats to Orgrimmar [race=Orc,Troll]
@@ -140,9 +140,9 @@ accept 901 Samophlange
 complete 901 Samophlange | Console Key drops from Tinkerer Sniggles.
 turnin 901 Samophlange
 accept 902 Samophlange [optional]
-turnin 850 Kolkar Leaders
 turnin 867 Harpy Raiders
 accept 875 Harpy Lieutenants
+turnin 850 Kolkar Leaders
 complete 875 Harpy Lieutenants
 turnin 875 Harpy Lieutenants
 turnin 903 Prowlers of the Barrens

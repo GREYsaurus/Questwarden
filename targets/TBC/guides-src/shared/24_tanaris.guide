@@ -40,9 +40,9 @@ accept 113 Insect Part Analysis
 turnin 113 Insect Part Analysis
 accept The Dunemaul Compound [optional] | Needs level 44. If you are lower, {name} skips it and moves on.
 complete The Dunemaul Compound [optional] | Dunemaul ogres.
+accept WANTED: Andre Firebeard | The wanted poster in Gadgetzan. Turned in at Steamwheedle Port.
 turnin The Dunemaul Compound [optional]
 accept Pirate Hats Ahoy! | Haughty Modiste.
-accept WANTED: Andre Firebeard | The wanted poster in Gadgetzan. Turned in at Steamwheedle Port.
 accept Southsea Shakedown | Security Chief Bilgewhizzle at Steamwheedle Port.
 complete Southsea Shakedown | Pirates at Lost Rigger Cove.
 complete WANTED: Andre Firebeard | Andre Firebeard at Lost Rigger Cove, in the pirate camp on the coast.

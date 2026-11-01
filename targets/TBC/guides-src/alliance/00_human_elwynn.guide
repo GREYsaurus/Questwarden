@@ -54,11 +54,11 @@ accept Bounty on Garrick Padfoot
 complete Bounty on Garrick Padfoot [mark=skull] | Garrick Padfoot is at the Defias camp east of the vineyard.
 complete 1598 The Stolen Tome [class=Warlock] | The Stolen Books are at the same Defias camp.
 complete Skirmish at Echo Ridge | Kill Kobold Laborers inside Echo Ridge Mine.
-turnin Bounty on Garrick Padfoot
 turnin Skirmish at Echo Ridge
 accept Report to Goldshire
 turnin Grape Manifest | Brother Neals is at the top of the abbey bell tower.
 turnin 1598 The Stolen Tome [class=Warlock]
+turnin Bounty on Garrick Padfoot
 train | Level 4 abilities.
 accept Rest and Relaxation | Falkhaan Isenstrider stands on the road south of the valley.
 turnin Report to Goldshire

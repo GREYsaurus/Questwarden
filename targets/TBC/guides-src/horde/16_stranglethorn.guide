@@ -62,23 +62,23 @@ turnin 195 Raptor Mastery
 accept 188 Tiger Mastery
 turnin Headhunting
 complete 188 Tiger Mastery
-accept 196 Raptor Mastery
-accept 598 Split Bone Necklace
-turnin 569 The Defense of Grom'gol
 accept 584 Bloodscalp Clan Heads
-turnin 188 Tiger Mastery
 turnin Mok'thardin's Enchantment
+turnin 569 The Defense of Grom'gol
+accept 598 Split Bone Necklace
+accept 196 Raptor Mastery
+turnin 188 Tiger Mastery
 complete 584 Bloodscalp Clan Heads
 turnin 192 Panther Mastery
 complete 196 Raptor Mastery
 complete 598 Split Bone Necklace
 fp Booty Bay
-accept Singing Blue Shards | Crank Fizzlebub.
-accept 617 Akiris by the Bundle
-accept 189 Bloodscalp Ears
-accept Scaring Shaky | "Sea Wolf" MacKinley.
 accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
+accept Scaring Shaky | "Sea Wolf" MacKinley.
+accept Singing Blue Shards | Crank Fizzlebub.
+accept 189 Bloodscalp Ears
+accept 617 Akiris by the Bundle
 complete Supply and Demand | Large River Crocolisk Skin drops from River Crocolisk.
 complete 189 Bloodscalp Ears
 complete Singing Blue Shards | Singing Crystal Shard drops from Cold Eye Basilisk, Crystal Spine Basilisk and Stone Maw Basilisk and others.
@@ -89,16 +89,16 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Some Assembly Required | Snapjaw Crocolisk Skin drops from Snapjaw Crocolisk.
 complete Venture Company Mining | Singing Blue Crystal drops from Venture Co. Foreman, Venture Co. Strip Miner and Venture Co. Surveyor and others.
-turnin Scaring Shaky
-turnin 584 Bloodscalp Clan Heads
-accept 193 Panther Mastery
 turnin 196 Raptor Mastery
-turnin 595 The Bloodsail Buccaneers
+accept 193 Panther Mastery
+turnin 584 Bloodscalp Clan Heads
 accept 572 Mok'thardin's Enchantment
+turnin Scaring Shaky
+turnin 595 The Bloodsail Buccaneers
 complete 617 Akiris by the Bundle
 complete 572 Mok'thardin's Enchantment
-turnin 598 Split Bone Necklace
 accept Return to MacKinley
+turnin 598 Split Bone Necklace
 accept 585 Speaking with Nezzliok
 accept 586 Speaking with Gan'zulah
 complete 193 Panther Mastery

@@ -39,10 +39,10 @@ accept The Twin Clefts of Nagrand
 complete The Twin Clefts of Nagrand
 turnin The Twin Clefts of Nagrand
 accept Diplomatic Measures | Escort quest: start it when you are ready to follow.
-accept HELP! | Corki, Telaar.
 turnin Diplomatic Measures | Lantresor of the Blade.
 accept Ruthless Cunning
 accept Armaments for Deception
+accept HELP! | Corki, Telaar.
 complete Ruthless Cunning
 complete Armaments for Deception | Kil'sorrow Armaments drops from Kil'sorrow Cultist.
 turnin Ruthless Cunning
@@ -54,11 +54,11 @@ complete Body of Evidence
 turnin Returning the Favor
 turnin Body of Evidence
 accept Message to Telaar
-accept The Throne of the Elements | Elementalist Ioki.
 turnin HELP! | Corki, in a cage at the Warmaul village.
-accept 9913 The Consortium Needs You!
 accept Corki's Gone Missing Again!
 turnin Message to Telaar
+accept The Throne of the Elements | Elementalist Ioki.
+accept 9913 The Consortium Needs You!
 complete Corki's Gone Missing Again!
 turnin Corki's Gone Missing Again!
 accept Corki's Ransom
@@ -137,8 +137,8 @@ turnin Matters of Security | Zerid.
 turnin Gava'xi
 accept I Must Have Them! | Wazat, in east-central Nagrand.
 accept 9861 The Howling Wind
-turnin 9861 The Howling Wind
 turnin 9871 Murkblood Invaders
+turnin 9861 The Howling Wind
 complete I Must Have Them! | Air Elemental Gas from Dust Howlers in the east of Nagrand.
 turnin I Must Have Them! | Wazat.
 turnin A Head Full of Ivory | Shadrek, back at Aeris Landing.

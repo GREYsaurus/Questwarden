@@ -28,16 +28,16 @@ accept 5022 Better Late Than Never
 turnin 5022 Better Late Than Never | Turned in at Stormwind City.
 complete A Plague Upon Thee | Termite barrels in the farms.
 complete The Wildlife Suffers Too | Diseased wolves around the farms.
+turnin The Wildlife Suffers Too
+accept 4985 The Wildlife Suffers Too
 turnin Clear the Way | Chillwind Camp.
 accept The Scourge Cauldrons
 accept All Along the Watchtowers | Commander Ashlam Valorfist.
-turnin The Scourge Cauldrons | High Priestess MacDonnell.
 accept 9474 The Mark of the Lightbringer
+turnin The Scourge Cauldrons | High Priestess MacDonnell.
 accept Target: Felstone Field
 turnin A Plague Upon Thee
 accept 5904 A Plague Upon Thee
-turnin The Wildlife Suffers Too
-accept 4985 The Wildlife Suffers Too
 complete Target: Felstone Field | Kill Cauldron Lord Bilemaw at the Felstone Field cauldron for the key.
 turnin Target: Felstone Field | Use the key on the cauldron.
 accept 5217 Return to Chillwind Camp
@@ -61,9 +61,9 @@ accept 5060 Locked Away | The locked cabinet in the farmhouse.
 complete 5060 Locked Away | Farmer Dalson, upstairs in the barn, drops the cabinet key.
 turnin 5060 Locked Away
 complete 4985 The Wildlife Suffers Too | Diseased Grizzlies in the hills east of the farms.
+turnin 4985 The Wildlife Suffers Too | Mulgris Deepriver.
 turnin 5220 Return to Chillwind Camp
 accept Target: Writhing Haunt
-turnin 4985 The Wildlife Suffers Too | Mulgris Deepriver.
 complete Target: Writhing Haunt | Cauldron Lord Razarch at the Writhing Haunt cauldron.
 turnin Target: Writhing Haunt
 accept 5223 Return to Chillwind Camp

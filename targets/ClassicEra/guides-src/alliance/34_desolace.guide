@@ -36,8 +36,8 @@ accept 1455 The Karnitol Shipwreck
 complete 6161 Claim Rackmore's Treasure! | Silver Key from Drysnap Crawlers on the shore, Golden Key from Slitherblade Naga.
 turnin 6161 Claim Rackmore's Treasure! | Rackmore's Chest on Ranazjar Isle, north-west. Swim across.
 turnin 1455 The Karnitol Shipwreck | Back at Nijel's Point.
-turnin 1465 Vahlarriel's Search
 accept 1456 The Karnitol Shipwreck
+turnin 1465 Vahlarriel's Search
 accept 1438 Vahlarriel's Search
 turnin 1438 Vahlarriel's Search | Dalinda Malem, inside Thunder Axe Fortress.
 accept 1439 Search for Tyranis
@@ -53,9 +53,9 @@ complete 1456 The Karnitol Shipwreck | Karnitol's Satchel from Slitherblade Tide
 turnin 5741 Sceptre of Light | Azore Aldamort.
 turnin 1456 The Karnitol Shipwreck | Nijel's Point.
 accept 5501 Bone Collector | Bibbly F'utzbuckle at Kormek's Hut.
-accept 5561 Kodo Roundup | Smeed Scrabblescrew at the caravan camp.
 note The next quest, Gizelton Caravan, is an escort: pick it up only when you are ready to follow the NPC.
 accept 5943 Gizelton Caravan
+accept 5561 Kodo Roundup | Smeed Scrabblescrew at the caravan camp.
 complete 5943 Gizelton Caravan | Escort: stay close; it fails if the NPC dies.
 note The next quest, Bodyguard for Hire, is an escort: pick it up only when you are ready to follow the NPC.
 accept 5821 Bodyguard for Hire
@@ -75,17 +75,17 @@ turnin 5561 Kodo Roundup
 turnin 1385 Brutal Politics | Warug in the Magram village, east.
 accept 1386 Assault on the Kolkar
 complete 1386 Assault on the Kolkar | Kolkar village north of the Magram.
-turnin 1386 Assault on the Kolkar
-turnin 5501 Bone Collector | Kormek's Hut.
 turnin 1387 Centaur Bounty | Nijel's Point.
+accept 261 Down the Scarlet Path | Brother Anton. Needs level 34.
 turnin 1459 Reagents for Reclaimers Inc.
 accept 1466 Reagents for Reclaimers Inc. [optional] | Mannoroc Coven demons; level 38-40 and they hit hard.
-accept 261 Down the Scarlet Path | Brother Anton. Needs level 34.
+turnin 5501 Bone Collector | Kormek's Hut.
+turnin 1386 Assault on the Kolkar
 complete 1466 Reagents for Reclaimers Inc. [optional] | Mana Eaters, Nether Maidens and Doomwarder Captains at the Mannoroc Coven.
 complete 261 Down the Scarlet Path | Undead Ravagers in the Valley of Bones, far south.
+accept 7028 Twisted Evils
 turnin 1466 Reagents for Reclaimers Inc. [optional] | Nijel's Point.
 turnin 261 Down the Scarlet Path
-accept 7028 Twisted Evils
 complete 7028 Twisted Evils
 turnin 7028 Twisted Evils
 level 43 | Tanaris starts at 43. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
