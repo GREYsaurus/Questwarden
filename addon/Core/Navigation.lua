@@ -368,6 +368,11 @@ function Nav:Init()
     end
     ns:Listen("STEP_CHANGED", function() Nav:FromStep(ns.Engine:CurrentStep()) end)
     ns:Listen("GUIDE_CHANGED", function() Nav:FromStep(ns.Engine:CurrentStep()) end)
+    -- An objective finished (looted, killed): the arrow moves on to the next one right away.
+    ns:Listen("QUESTS_CHANGED", function()
+        local s = ns.Engine:CurrentStep()
+        if s and s[1] == "complete" and not s.x and Nav.owner == "step" then Nav:FromStep(s) end
+    end)
     -- Complete steps track the nearest objective, so retarget as the player moves.
     local t = 0
     local ticker = CreateFrame("Frame")

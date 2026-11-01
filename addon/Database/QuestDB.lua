@@ -265,36 +265,53 @@ function DB.ObjectiveNpcIds(questId, zone)
     return next(ids) and ids or nil
 end
 
--- Best target for a quest objective: objective mobs, objects, item droppers, exploration trigger.
-function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY)
+-- Best target for a quest objective: objective mobs, objects, item droppers, exploration trigger. `isDone(name)`,
+-- when given, says whether the objective of that creature, object or item name is finished (the quest log); those
+-- are left out, so the target moves on to the next one. Of the open objectives, the one nearest to (nearX, nearY)
+-- in preferZone wins; without a position, the first in that order.
+function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone)
     local q = rawQuest(questId)
     if not q then return nil end
     local obj = q[Q.OBJECTIVES] or EMPTY
+    local best, bestD
+    local function consider(z, x, y, label)
+        if not z then return end
+        local d = (nearX and z == preferZone) and ((x - nearX) ^ 2 + (y - nearY) ^ 2) or math.huge
+        if not best or d < bestD then best, bestD = { z, x, y, label }, d end
+    end
+    local function open(name) return not (isDone and name and isDone(name)) end
     for _, id in ipairs(obj.c or EMPTY) do
-        local z, x, y = DB.GetNPCPosition(id, preferZone, nearX, nearY)
-        if z then return z, x, y, DB.GetNPCName(id) end
+        local name = DB.GetNPCName(id)
+        if open(name) then
+            local z, x, y = DB.GetNPCPosition(id, preferZone, nearX, nearY)
+            consider(z, x, y, name)
+        end
     end
     for _, id in ipairs(obj.k or EMPTY) do
         local z, x, y = DB.GetNPCPosition(id, preferZone, nearX, nearY)
-        if z then return z, x, y, DB.GetNPCName(id) end
+        consider(z, x, y, DB.GetNPCName(id))
     end
     for _, id in ipairs(obj.o or EMPTY) do
-        local z, x, y = DB.GetObjectPosition(id, preferZone, nearX, nearY)
-        if z then return z, x, y, DB.GetObjectName(id) end
+        local name = DB.GetObjectName(id)
+        if open(name) then
+            local z, x, y = DB.GetObjectPosition(id, preferZone, nearX, nearY)
+            consider(z, x, y, name)
+        end
     end
     for _, itemId in ipairs(obj.i or EMPTY) do
         local it = QDB.items[itemId]
-        if it then
+        if it and open(it[I.NAME]) then
             for _, npcId in ipairs(it[I.NPC_DROPS] or EMPTY) do
                 local z, x, y = DB.GetNPCPosition(npcId, preferZone, nearX, nearY)
-                if z then return z, x, y, DB.GetNPCName(npcId) end
+                consider(z, x, y, DB.GetNPCName(npcId))
             end
             for _, objId in ipairs(it[I.OBJECT_DROPS] or EMPTY) do
                 local z, x, y = DB.GetObjectPosition(objId, preferZone, nearX, nearY)
-                if z then return z, x, y, DB.GetObjectName(objId) end
+                consider(z, x, y, DB.GetObjectName(objId))
             end
         end
     end
+    if best then return best[1], best[2], best[3], best[4] end
     local trig = q[Q.TRIGGER]
     if trig and trig[2] then
         local z, x, y = pickSpawn(trig[2], preferZone, nearX, nearY)

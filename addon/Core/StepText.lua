@@ -211,7 +211,8 @@ function StepText:Target(s)
         local mapId, mx, my = ns.Compat.GetPlayerMapPosition()
         local area = mapId and ns.DB.AreaForUiMap(mapId)
         if mx then px, py = mx, my end
-        local z, x, y, label = ns.DB.GetObjectiveLocation(s.q, area, px, py)
+        -- Objectives your log shows done are left out: the arrow moves on to the next one.
+        local z, x, y, label = ns.DB.GetObjectiveLocation(s.q, area, px, py, function(name) return ns.Tracker:ObjectiveNameDone(s.q, name) end)
         if z then return z, x, y, label end
     end
 end
