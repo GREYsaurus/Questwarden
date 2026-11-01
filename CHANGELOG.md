@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.7 (2026-11-01)
+
+- **Navigation arrow:** about a third larger, with a larger distance label. *Arrow Scale* still resizes it.
+- **Time to arrival:** next to the distance, a countdown (m:ss) to the waypoint, worked out from how fast you are closing on it. It follows running, mounts and flight paths, and shows nothing while you stand still, move away, or just after a teleport or a new waypoint.
+
+**Tested:** offline only (TBC suite 4,712/4,712, Classic Era smoke 87/87, Forever 31/31, route audits 0 errors). The arrow size and the countdown have not been checked in the live game.
+
 ## 0.1.0-alpha.6 (2026-11-01)
 
 - **TomTom support removed.** Waypoints use only Questwarden's own navigation: the arrow, the world-map pin and a new **minimap pin** for the current waypoint (it sits on the minimap's edge while the target is out of range, and turns with a rotating minimap). Setting: *Show Minimap Waypoint* (on by default). The old TomTom setting is dropped from saved profiles, and CurseForge no longer lists TomTom as an optional dependency.
