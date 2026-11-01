@@ -59,18 +59,27 @@ end
 
 local function currentStep() return ns.Engine and ns.Engine:CurrentStep() end
 
--- Learns the first affordable spell the trainer offers; TRAINER_UPDATE brings the next one.
+-- Automatic training (opt-in, per character: Trainer:AutoTrainMode). Learns the first affordable spell the trainer
+-- offers that the mode allows; TRAINER_UPDATE brings the next one. "recommended" buys only ranks the training
+-- suggestions list for you (matched by name and rank, never at a profession trainer, never pet skills); "all" buys
+-- anything affordable. One chat line per purchase. Hold Shift to skip.
 function A:TrainerStep()
-    if not prof().trainerAuto or shiftHeld() then return end
+    local TR = ns.Trainer
+    local mode = TR and TR:AutoTrainMode() or "off"
+    if mode == "off" or shiftHeld() then return end
     if not (GetNumTrainerServices and GetTrainerServiceInfo and BuyTrainerService) then return end
+    if mode == "recommended" and IsTradeskillTrainer and IsTradeskillTrainer() then return end
+    local want = mode == "recommended" and TR:RecommendedSet() or nil
     local money = GetMoney and GetMoney() or 0
     for i = 1, GetNumTrainerServices() or 0 do
-        local name, _, kind = GetTrainerServiceInfo(i)
+        local name, rankText, kind = GetTrainerServiceInfo(i)
         if kind == "available" then
+            local e = want and TR:EntryForService(name, rankText)
             local cost = GetTrainerServiceCost and GetTrainerServiceCost(i) or 0
-            if cost <= money then
+            if (not want or (e and want[e.id])) and cost <= money then
                 BuyTrainerService(i)
-                ns:Debug("trainer: learned " .. tostring(name))
+                ns:Print("Learned " .. tostring(name) .. ((rankText and rankText ~= "") and (" (" .. rankText .. ")") or "")
+                    .. " for " .. ns.Compat.FormatMoney(cost) .. ". (Automatic training; hold Shift to skip.)")
                 return true
             end
         end

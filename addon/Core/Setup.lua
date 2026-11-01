@@ -37,6 +37,7 @@ Setup.MODE_TEXT = {
     completionist = "Does every quest the add-on knows for this character, lowest level first and zone by zone, and comes back to zones when more of their quests open up. Slower than Speed. Quests the database lacks or places nowhere are not covered.",
 }
 Setup.TRAINING_NAMES = { important = "important spells", all = "all spells", off = "off" }
+Setup.AUTOTRAIN_NAMES = { off = "off", recommended = "recommended spells, at your class trainer (spends gold)", all = "everything you can afford (spends gold)" }
 Setup.INCLUDE_KINDS = { -- Completionist-only categories (Core/Completionist.lua); dungeons and group quests have their own steps
     { "raid", "Raid quests" }, { "profession", "Profession quests" }, { "reputation", "Reputation quests" },
     { "event", "Event and seasonal quests" }, { "repeatable", "Repeatable quests" },
@@ -303,7 +304,7 @@ function Setup:Current()
         mode = mode, guide = guide, hardcore = c.hardcore == true, plan = plan,
         gear = c.gearProfile and self:GearValid(c.gearProfile) and c.gearProfile or false,
         dungeons = dungeons, selected = selected, elite = elite, include = include,
-        training = ns.Trainer:Mode(), autoEquip = prof.autoEquip == true, step = 1,
+        training = ns.Trainer:Mode(), autoTrain = ns.Trainer:AutoTrainMode(), autoEquip = prof.autoEquip == true, step = 1,
     }
 end
 
@@ -341,6 +342,7 @@ function Setup:Sanitize(d)
     if type(d.include) ~= "table" then d.include = current().include end
     d.autoEquip = d.autoEquip == true
     if d.training ~= "important" and d.training ~= "all" and d.training ~= "off" then d.training = current().training end
+    if d.autoTrain ~= "off" and d.autoTrain ~= "recommended" and d.autoTrain ~= "all" then d.autoTrain = current().autoTrain end
     if type(d.step) ~= "number" or d.step < 1 or d.step > #self.STEPS then d.step = 1 end
     return notes
 end
@@ -424,7 +426,7 @@ function Setup:Snapshot()
         mode = c.mode, activeGuide = c.activeGuide, speedGuide = c.speedGuide, hardcore = c.hardcore,
         talentBuild = c.talentBuild, noTalentPlan = c.noTalentPlan, gearProfile = c.gearProfile,
         routing = c.routing and copy(c.routing) or nil, exclude = copy(ns.Completionist:State().exclude),
-        autoEquip = prof.autoEquip, training = c.trainerSuggestions,
+        autoEquip = prof.autoEquip, training = c.trainerSuggestions, autoTrain = c.autoTrain,
     }
 end
 
@@ -432,7 +434,7 @@ function Setup:Restore(snap)
     local c, prof = ns.char, ns.db.profile
     c.mode, c.speedGuide, c.hardcore = snap.mode, snap.speedGuide, snap.hardcore
     c.talentBuild, c.noTalentPlan, c.gearProfile = snap.talentBuild, snap.noTalentPlan, snap.gearProfile
-    c.routing, c.trainerSuggestions = snap.routing, snap.training
+    c.routing, c.trainerSuggestions, c.autoTrain = snap.routing, snap.training, snap.autoTrain
     ns.Completionist:State().exclude = snap.exclude
     prof.autoEquip = snap.autoEquip
     if snap.activeGuide and snap.activeGuide ~= ns.Completionist.GUIDE_ID and ns.Guides:Get(snap.activeGuide) then
@@ -453,6 +455,7 @@ function Setup:Apply(d)
     c.gearProfile = d.gear or nil
     c.routing = { dungeons = d.dungeons, selected = copy(d.selected), elite = d.elite }
     c.trainerSuggestions = d.training
+    c.autoTrain = d.autoTrain
     ns.Trainer.skipCache = nil
     local ex = CM:State().exclude
     for _, k in ipairs(self.INCLUDE_KINDS) do ex[k[1]] = not d.include[k[1]] end
@@ -542,6 +545,7 @@ function Setup:Summary(d)
         lines[#lines + 1] = "Also routed: " .. (#on > 0 and table.concat(on, ", ") or "nothing else") .. "."
     end
     lines[#lines + 1] = "Class training suggestions: " .. (self.TRAINING_NAMES[d.training] or d.training) .. "."
+    lines[#lines + 1] = "Automatic training: " .. (self.AUTOTRAIN_NAMES[d.autoTrain] or d.autoTrain) .. "."
     lines[#lines + 1] = "Automatic upgrades: " .. (d.autoEquip and d.gear and "on" or "off") .. "."
     return lines
 end

@@ -13,7 +13,7 @@ Built in: the trainer data comes from **What's Training?**, bundled in Questward
 - **Class quest spells** (Defensive Stance, Bear Form, Summon Voidwalker, ...) are listed apart, "from a class quest", and are never a reason to visit the trainer.
 - **Race-only spells** (priest racials, faction portals) are listed only for races that get them.
 - **Names** come from the client (`GetSpellInfo`), so they show in your client's language. The word "Rank" in the grouped line is English.
-- **Never spends gold.** Suggestions only inform. The separate, opt-in *Trainer automation* option is the only Questwarden feature that buys at a trainer.
+- **Suggestions never spend gold.** Only the opt-in *Automatic Training* (below) buys at a trainer.
 - **Defer and view again:** `/qw train defer` hides the lists until your next level; `/qw train` shows them again at once. Saved per character.
 
 ## What the trainer sells (What's Training?)
@@ -54,9 +54,25 @@ The client tables have no trainer prices. A price comes from, in this order:
 - **Affordability:** a complete total says whether your gold covers it.
 - **What's counted:** known ranks and spells above your level are never in the total.
 - **Profession trainers** are not read.
-- **Never buys:** nothing is ever bought. Questwarden has no gold-reserve setting, so none is applied.
+- **Buying:** only with *Automatic Training* on (below). Questwarden has no gold-reserve setting, so none is applied.
 
 **Pet and demon skills:** train steps also list a few pet or demon skills; see docs/PETS.md.
+
+## Automatic training (opt-in)
+
+Setting **Automatic Training** (General → Automation, and the setup wizard's Options step: *Learn recommended spells automatically*). Off by default, saved per character.
+
+| Choice | When you open your class trainer |
+|---|---|
+| Off | Nothing is bought. |
+| Recommended spells | Learns the ranks the training suggestions list for you: the important ones, or all of them with suggestions set to All. Matched by the spell's name and rank in the trainer window. |
+| Everything I can afford | Learns every spell the trainer offers that you can afford (the old *Trainer automation*). |
+
+- **Spends gold:** only what you can afford at that moment, one spell at a time, in the order the trainer lists them. One chat line per spell names it and its price.
+- **Order:** a rank and the earlier rank it needs are both bought, earlier rank first, because the trainer lists the earlier one first and the next appears once it is learned.
+- **Never:** at a profession trainer in *Recommended*, pet skills, or while you hold **Shift** (skips buying for that visit).
+- **Learned** means the game says you know it; buying is the only thing that changes that.
+- **Existing characters:** one that had the old profile switch *Trainer automation* on keeps "everything" until a choice is made for it; the choice then wins.
 
 ## In the guides
 

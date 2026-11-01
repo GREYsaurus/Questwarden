@@ -201,6 +201,31 @@ function TR.GroupText(g)
     return g.name .. " (Rank " .. table.concat(r, ", ") .. ")"
 end
 
+-- Automatic training (Core/Assist.lua TrainerStep): "off", "recommended" (only the ranks the suggestions list:
+-- important ones, or all with suggestions set to All) or "all" (everything the trainer offers that you can afford).
+-- Per character (ns.char.autoTrain, setup wizard or settings). A character that never chose keeps the old profile
+-- switch "Trainer automation" (trainerAuto), which meant "all".
+function TR:AutoTrainMode()
+    local m = ns.char and ns.char.autoTrain
+    if m == "off" or m == "recommended" or m == "all" then return m end
+    return prof().trainerAuto and "all" or "off"
+end
+
+-- The ranks automatic training may buy in "recommended" mode: { [spell id] = true }.
+function TR:RecommendedSet()
+    local mode = self:Mode() == "all" and "all" or "important"
+    local set = {}
+    for _, e in ipairs(self:Available(mode).ready) do set[e.id] = true end
+    return set
+end
+
+-- The data entry for a trainer service (localized name + rank), or nil.
+function TR:EntryForService(name, rankText)
+    if not name then return nil end
+    local rank = tonumber(string.match(rankText or "", "(%d+)")) or 0
+    return self:NameIndex(ns.Compat.PlayerInfo().class)[string.lower(name) .. "#" .. rank]
+end
+
 -- Deferred: hidden until you reach a higher level (or "Show trainer suggestions again").
 function TR:Deferred()
     local d = ns.char.trainerDeferLevel

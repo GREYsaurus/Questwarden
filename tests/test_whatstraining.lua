@@ -104,6 +104,61 @@ trains = 0
 for _, s in ipairs(seg.steps) do if s[1] == "train" then trains = trains + 1 end end
 check(trains == 0, "plans for data and tests (not live play) never add training")
 
+-- Automatic training: off by default; "recommended" buys only listed ranks; the old profile switch means "all" ---------
+local A = ns.Assist
+MOCK.player.class, MOCK.player.race, MOCK.player.faction, MOCK.player.level = "WARRIOR", "Human", "Alliance", 10
+known = {}
+TR.cache, TR.nameIndex = {}, nil
+local services, bought = {}, {}
+local realSvc = { GetNumTrainerServices, GetTrainerServiceInfo, GetTrainerServiceCost, BuyTrainerService, IsTradeskillTrainer, GetMoney, GetSpellInfo }
+-- The client's own spell names (the mock names every spell "Spell"); services are matched by name and rank.
+GetSpellInfo = function(id) if id == 772 or id == 6546 then return "Rend", nil, "icon" end return "Spell " .. tostring(id), nil, "icon" end
+GetNumTrainerServices = function() return #services end
+GetTrainerServiceInfo = function(i) return services[i].name, services[i].rank, services[i].kind end
+GetTrainerServiceCost = function(i) return services[i].cost end
+BuyTrainerService = function(i) bought[#bought + 1] = services[i].name .. " " .. (services[i].rank or "") known[services[i].id] = true table.remove(services, i) end
+IsTradeskillTrainer = function() return false end
+GetMoney = function() return 100000 end
+local function trainer()
+    services = {
+        { name = "Rend", rank = "Rank 1", kind = "available", cost = 100, id = 772 },     -- important for warriors
+        { name = "Rend", rank = "Rank 2", kind = "available", cost = 600, id = 6546 },
+        { name = "Mystery Skill", rank = "", kind = "available", cost = 50, id = 999002 }, -- not in our data
+    }
+    bought = {}
+end
+local function visit() for _ = 1, 10 do if not A:TrainerStep() then break end end end
+local keepAuto, keepProfAuto = ns.char.autoTrain, prof.trainerAuto
+ns.char.autoTrain, prof.trainerAuto = nil, false
+check(TR:AutoTrainMode() == "off", "automatic training is off by default")
+trainer() visit()
+check(#bought == 0, "off: nothing is bought")
+ns.char.autoTrain, ns.char.trainerSuggestions = "recommended", "all"
+known = {}
+trainer() visit()
+local got = table.concat(bought, ",")
+check(got:find("Rend Rank 1", 1, true) and got:find("Rend Rank 2", 1, true) and not got:find("Mystery", 1, true),
+    "recommended: the listed ranks are learned in order, nothing the suggestions do not list (" .. got .. ")")
+check(known[772] and known[6546] and not known[999002], "only what was bought counts as learned")
+GetMoney = function() return 150 end
+known = {}
+trainer() visit()
+check(#bought == 1 and bought[1] == "Rend Rank 1", "only what you can afford is bought")
+GetMoney = function() return 100000 end
+IsTradeskillTrainer = function() return true end
+known = {}
+trainer() visit()
+check(#bought == 0, "recommended never buys at a profession trainer")
+IsTradeskillTrainer = function() return false end
+ns.char.autoTrain, prof.trainerAuto = nil, true
+check(TR:AutoTrainMode() == "all", "a character that never chose keeps the old 'Trainer automation' switch (everything)")
+ns.char.autoTrain = "off"
+check(TR:AutoTrainMode() == "off", "the character's choice wins over the old switch")
+GetNumTrainerServices, GetTrainerServiceInfo, GetTrainerServiceCost, BuyTrainerService, IsTradeskillTrainer, GetMoney, GetSpellInfo =
+    realSvc[1], realSvc[2], realSvc[3], realSvc[4], realSvc[5], realSvc[6], realSvc[7]
+TR.nameIndex = nil
+ns.char.autoTrain, prof.trainerAuto = keepAuto, keepProfAuto
+
 -- Setup wizard keeps the choice per character --------------------------------------------------------------------
 local S = ns.Setup
 local setupKeep, routingKeep = ns.char.setup, ns.char.routing
@@ -112,8 +167,13 @@ local d = S:Draft(true)
 check(d.training == "all", "the wizard starts from the current training choice")
 d.training = "important"
 check(ns.char.trainerSuggestions == "all", "choosing in the wizard changes nothing before Finish")
-S:Finish(d)
+check(d.autoTrain == "off", "the wizard proposes no automatic training (opt-in)")
+d.autoTrain, d.dungeons = "recommended", "questing"
+local fok, fmsg = S:Finish(d)
+check(fok, "setup finishes: " .. tostring(fmsg))
 check(ns.char.trainerSuggestions == "important", "Finish saves the training choice for the character")
+check(ns.char.autoTrain == "recommended" and TR:AutoTrainMode() == "recommended", "Finish saves the automatic-training opt-in for the character")
+ns.char.autoTrain = nil
 ns.char.setup, ns.char.routing = setupKeep, routingKeep
 
 -- restore

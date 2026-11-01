@@ -30,7 +30,7 @@ None of this has been tested in the game client yet.
   | Quest auto accept/turn in | on | Guide quests only. More options: `/qw automation` |
   | Quest auto rewards | off | Takes a reward only when gear scoring shows one clear upgrade, or when your class can use none of them (then the most valuable). Otherwise you choose |
   | Class Trainer Suggestions | Important only | Off / Important only / All: what your trainer has for you, checked against your spellbook; train steps with nothing new are skipped. Never buys (docs/TRAINER.md) |
-  | Trainer automation | off | Learns every spell you can afford at your class trainer; spends gold |
+  | Automatic Training | Off | Per character, also in the setup wizard (opt-in). *Recommended spells*: when you open your class trainer, learns the ranks the suggestions list for you that you can afford; *Everything I can afford*: all of them. Spends gold, one chat line per spell, hold Shift to skip. Characters that had the old *Trainer automation* switch on keep "everything" until they choose |
   | Flight Path automation | on | On a "fly to" step, takes that flight when the flight map opens |
   | Innkeeper Bind automation | on | On a "set your hearthstone" step, when you talk to that town's innkeeper: picks the bind option, confirms it only if the game names the step's inn, and completes the step once the game reports the new home. Never at other inns. Hold Shift to skip |
   | Skip Gossip | on | Picks the only option when an NPC has one option and no quests (never a bind option outside a bind step) |

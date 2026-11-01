@@ -299,6 +299,8 @@ function ns:InitSavedVariables()
     end
     if _G[ns.svChar].noTalentPlan ~= nil and _G[ns.svChar].noTalentPlan ~= true then _G[ns.svChar].noTalentPlan = nil end
     if _G[ns.svChar].trainerDeferLevel ~= nil and type(_G[ns.svChar].trainerDeferLevel) ~= "number" then _G[ns.svChar].trainerDeferLevel = nil end
+    local at = _G[ns.svChar].autoTrain -- per-character automatic training (Classes/Trainer.lua); nil = the profile's
+    if at ~= nil and at ~= "off" and at ~= "recommended" and at ~= "all" then _G[ns.svChar].autoTrain = nil end
     local ts = _G[ns.svChar].trainerSuggestions -- per-character trainer setting (Classes/Trainer.lua); nil = the profile's
     if ts ~= nil and ts ~= "off" and ts ~= "important" and ts ~= "all" then _G[ns.svChar].trainerSuggestions = nil end
     if _G[ns.svChar].petDeferLevel ~= nil and type(_G[ns.svChar].petDeferLevel) ~= "number" then _G[ns.svChar].petDeferLevel = nil end
