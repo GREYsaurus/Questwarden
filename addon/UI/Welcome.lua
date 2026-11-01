@@ -255,6 +255,7 @@ end
 function WL:Build()
     if self.frame then return self.frame end
     local f = W.Panel(ns.name .. "Welcome", UIParent, FW, FH)
+    f:Hide() -- hidden until Open, so a failure while building never leaves an empty window on screen
     f:SetPoint("CENTER")
     f:SetFrameStrata("DIALOG")
     f:EnableMouse(true)
@@ -293,24 +294,28 @@ function WL:Build()
         WL.draft.dungeons = "questing" WL.msg:SetText("") WL:Render()
     end)
     self.switchQ:SetPoint("BOTTOMRIGHT", -16, 42)
+    -- The client runs a dropdown's list function as soon as it is created (before any draft exists), so
+    -- every list and label function here must work without a draft.
     self.guideDD = W.Dropdown(content, ns.name .. "WelcomeGuide", 320, function()
-        local out, d = {}, WL.draft
+        local out, d = {}, WL.draft or {}
         for _, g in ipairs(S():Guides()) do
             out[#out + 1] = { text = string.format("%s (%d-%d)", g.name, g.minLevel, g.maxLevel), value = g.id, checked = d.guide == g.id }
         end
         return out
-    end, function(v) WL.draft.guide = v WL:Render() end)
+    end, function(v) if WL.draft then WL.draft.guide = v WL:Render() end end)
     self.guideDD.label = function()
         local g = WL.draft and WL.draft.guide and ns.Guides:Get(WL.draft.guide)
         return g and string.format("%s (%d-%d)", g.name, g.minLevel or 1, g.maxLevel or ns.Target.maxLevel) or "Choose a guide"
     end
     self.gearDD = W.Dropdown(content, ns.name .. "WelcomeGear", 320, function()
         local out = {}
-        for _, p in ipairs(S():GearProfiles()) do out[#out + 1] = { text = p.name, value = p.id, checked = WL.draft.gear == p.id } end
+        local d = WL.draft or {}
+        for _, p in ipairs(S():GearProfiles()) do out[#out + 1] = { text = p.name, value = p.id, checked = d.gear == p.id } end
         return out
-    end, function(v) S():SetGear(WL.draft, v) WL:Render() end)
+    end, function(v) if WL.draft then S():SetGear(WL.draft, v) WL:Render() end end)
     self.gearDD.label = function()
-        for _, p in ipairs(S():GearProfiles()) do if p.id == WL.draft.gear then return p.name end end
+        local d = WL.draft or {}
+        for _, p in ipairs(S():GearProfiles()) do if p.id == d.gear then return p.name end end
         return "-"
     end
     if UISpecialFrames then table.insert(UISpecialFrames, f:GetName()) end

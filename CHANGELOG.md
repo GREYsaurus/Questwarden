@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2026-11-01)
+
+- **Fix: the setup window opened empty** (no step content, Next drawn over Finish). In the game client a dropdown fills its list as soon as it is created, and the wizard's guide and gear-profile lists read the setup draft before it existed, so building the window stopped halfway. The lists now work without a draft, and the window stays hidden until it is fully built.
+- **Tests:** the mock client now fills dropdown lists on creation like the game, which reproduces this bug.
+
+**Tested:** offline only (TBC suite 4,656/4,656, Classic Era smoke 83/83, Forever 30/30, route audits 0 errors). The bug was reported from the live game on Classic Era; the fix itself has not been checked in game yet.
+
 ## 0.1.0-alpha.3 (2026-11-01)
 
 - **Setup wizard** (docs/SETUP.md): a per-character, five-step setup replaces the one-page first-login window.

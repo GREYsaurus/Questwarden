@@ -181,7 +181,8 @@ function GetSpellTexture() return "icon" end
 function GetSpellInfo() return "Spell", nil, "icon" end
 
 function UIDropDownMenu_SetWidth() end
-function UIDropDownMenu_Initialize() end
+-- Like the client: the list function runs as soon as the dropdown is initialised (level 1).
+function UIDropDownMenu_Initialize(frame, fn) if fn then fn(frame, 1) end end
 function UIDropDownMenu_CreateInfo() return {} end
 function UIDropDownMenu_AddButton() end
 function UIDropDownMenu_SetText() end
