@@ -117,7 +117,7 @@ local profileDefaults = {
         markFriendly = true,        -- also mark the quest giver/finisher of the current step
         markInGroup = true,         -- allow automatic marking while in a group
         targetMacro = true,         -- keep a "Questwarden" macro targeting the current step's NPCs
-        markWithMacro = true,       -- that macro also marks them (/tm); the add-on then never marks by itself
+        markWithMacro = false,      -- that macro also marks them (/tm) instead of the automatic marking (Core/Marker.lua)
         targetNotify = true,        -- chat note when a current-step mob or NPC first comes into view
         announceLevelEmote = false, announceLevelParty = false, announceLevelGuild = false,
         tipsEnabled = true,
@@ -261,6 +261,11 @@ function ns:InitSavedVariables()
         for _, p in pairs(profiles) do
             if not fresh and p.equipChat == false then p.equipChat = true end
         end
+    end
+    -- 0.1.0-alpha.10: marking is automatic again by default; alpha.9 saved "mark with the macro" as on.
+    if not mig.markWithMacro10 then
+        mig.markWithMacro10 = true
+        for _, p in pairs(profiles) do p.markWithMacro = false end
     end
     -- Active profile for this character.
     local key = ns.CharKey()

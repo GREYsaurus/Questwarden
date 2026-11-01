@@ -25,9 +25,8 @@ local function target(u) MOCK.units.target = u; MOCK.fire("PLAYER_TARGET_CHANGED
 local function iconOf(u) return MOCK.icons[u.guid] end
 
 check(M.Parse("skull") == 8 and M.Parse("Star") == 1 and M.Parse("7") == 7 and M.Parse("bogus") == nil, "marker names parse")
-check(prof.markEnabled and prof.autoMark and not prof.markReplace and prof.defaultMarker == 8 and prof.markWithMacro, "documented marker defaults (marking by the targeting macro)")
--- These tests drive the automatic marking (markWithMacro off); the macro is tested in tests/test_target_macro.lua.
-prof.markWithMacro = false
+check(prof.markEnabled and prof.autoMark and not prof.markReplace and prof.defaultMarker == 8 and not prof.markWithMacro, "documented marker defaults (automatic marking)")
+-- The macro's own marking is tested in tests/test_target_macro.lua.
 
 -- 1) No target ---------------------------------------------------------------------------------
 reset()
@@ -107,12 +106,26 @@ local scorpid = MOCK.creature(3124, 2, "Scorpid Worker")
 target(scorpid)
 check(iconOf(scorpid) == nil, "unrelated mob is not marked")
 
--- one live unit holds the icon: a second Sarkoth spawn does not steal it
+-- one visible live unit holds the icon: a second Sarkoth's nameplate coming into view does not steal it
 local sarkoth2 = MOCK.creature(3281, 12, "Sarkoth")
+MOCK.units.focus = sarkoth
+MOCK.units.nameplate1 = sarkoth2
+MOCK.fire("NAME_PLATE_UNIT_ADDED", "nameplate1")
+MOCK.tick(0.6)
+check(iconOf(sarkoth) == 8 and iconOf(sarkoth2) == nil, "a nameplate coming into view does not take the icon from a visible mob")
+-- mousing over the other one moves the icon to it
 MOCK.units.mouseover = sarkoth2
 MOCK.fire("UPDATE_MOUSEOVER_UNIT")
 MOCK.tick(0.6)
-check(iconOf(sarkoth) == 8 and iconOf(sarkoth2) == nil, "icon stays on the first live unit")
+check(iconOf(sarkoth2) == 8 and iconOf(sarkoth) == nil and not M.stopped, "mousing over another mob of the step moves the icon to it")
+-- its nameplate goes away (out of sight; the game fires this while the token still works): the icon moves to
+-- the next visible one at once
+MOCK.units.mouseover = nil
+MOCK.fire("NAME_PLATE_UNIT_REMOVED", "nameplate1")
+MOCK.units.nameplate1 = nil
+MOCK.tick(0.6)
+check(iconOf(sarkoth) == 8, "the marked mob out of sight: the next visible mob of the step gets the icon right away")
+MOCK.units.focus = nil
 
 -- 8) Player changes the marker afterwards: never overwritten
 MOCK.units.target = sarkoth
@@ -207,13 +220,15 @@ local first = MOCK.creature(objMob, 41, "objective mob")
 target(first)
 check(iconOf(first) == prof.defaultMarker, "first mob marked")
 local second = MOCK.creature(objMob, 42, "objective mob")
-MOCK.units.mouseover = second
-MOCK.fire("UPDATE_MOUSEOVER_UNIT")
+MOCK.units.nameplate1 = second
+MOCK.fire("NAME_PLATE_UNIT_ADDED", "nameplate1")
 MOCK.tick(0.6)
-check(iconOf(second) == nil, "while the first lives, the second is not marked")
+check(iconOf(second) == nil, "while the first lives and is in view, the second (a nameplate) is not marked")
 MOCK.kill(first)
 MOCK.units.target = nil -- corpse no longer targeted or visible
-MOCK.units.mouseover = nil
+MOCK.tick(0.6)
+check(iconOf(second) == prof.defaultMarker, "the first dies: the visible second gets the icon by itself")
+MOCK.units.nameplate1 = nil
 target(second)
 check(iconOf(second) == prof.defaultMarker and not M.stopped, "after the first dies the next mob is marked; marking is not paused")
 -- dead unit still visible when an icon event fires: treated as a death, not a manual change
@@ -231,14 +246,19 @@ MOCK.tick(0.1)
 target(fourth)
 check(iconOf(fourth) == prof.defaultMarker, "targeting another mob of the step moves the icon to it")
 local fifth = MOCK.creature(objMob, 45, "objective mob")
-MOCK.units.target = nil
 MOCK.units.mouseover = fifth
 M:Consider("mouseover")
-check(iconOf(fifth) == nil, "a mob only moused over does not take the icon from a living holder")
-MOCK.time = MOCK.time + 61
-M:Consider("mouseover")
-check(iconOf(fifth) == prof.defaultMarker, "holder unseen for over a minute: icon moves to the next mob seen")
+MOCK.tick(0.6)
+check(iconOf(fifth) == prof.defaultMarker, "mousing over another mob of the step moves the icon to it")
 MOCK.units.mouseover = nil
+-- the marked mob dies: the next visible one gets the icon without being looked at
+local sixth = MOCK.creature(objMob, 46, "objective mob")
+MOCK.units.nameplate2 = sixth
+MOCK.units.nameplate3 = fifth
+MOCK.kill(fifth)
+MOCK.tick(0.6)
+check(iconOf(sixth) == prof.defaultMarker, "after a kill the icon moves to the next visible mob by itself")
+MOCK.units.nameplate2, MOCK.units.nameplate3, MOCK.units.target = nil, nil, nil
 
 -- 13) Several kill steps done together: each mob type gets its own icon
 reset()
@@ -359,6 +379,5 @@ end
 ns.db.profile.defaultMarker = 42
 ns:InitSavedVariables()
 check(ns.db.profile.defaultMarker == 8, "invalid default marker repaired")
-prof.markWithMacro = true
 check(#ns.errors == 0, "no captured errors after marker tests: " .. table.concat(ns.errors, " | "))
 reset()

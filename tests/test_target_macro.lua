@@ -21,7 +21,8 @@ ns.Tracker.turnedIn = {}
 ns.Tracker:Scan()
 MOCK.units, MOCK.icons, MOCK.markCalls = {}, {}, 0
 
-check(prof.markWithMacro == true, "marking by the targeting macro is the default")
+check(prof.markWithMacro == false, "automatic marking is the default; the macro marks only when chosen")
+prof.markWithMacro = true
 loadStepWith("H_OrcTroll_Durotar", function(s) return s[1] == "complete" and s.q == 790 end)
 local body, n = A:MacroBody()
 check(M.rule and M.rule.types[3281] == 8, "the step's rule gives Sarkoth the skull")
@@ -105,4 +106,13 @@ prof.markWithMacro = true
 ns.Engine:Load("A_Human_Elwynn", { reset = true })
 MOCK.units, MOCK.icons, MOCK.markCalls = {}, {}, 0
 M:OnStep()
+-- alpha.9 saved "mark with the macro" as on; it is switched back to automatic marking once
+local mig = _G[ns.svAccount].migrations
+prof.markWithMacro, mig.markWithMacro10 = true, nil
+ns:InitSavedVariables()
+check(ns.db.profile.markWithMacro == false and mig.markWithMacro10, "profiles saved by alpha.9 go back to automatic marking once")
+ns.db.profile.markWithMacro = true
+ns:InitSavedVariables()
+check(ns.db.profile.markWithMacro == true, "choosing macro marking afterwards sticks")
+ns.db.profile.markWithMacro = false
 check(#ns.errors == 0, "no captured errors after targeting macro tests: " .. table.concat(ns.errors, " | "))

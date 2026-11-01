@@ -17,9 +17,9 @@ Settings live under **Interface > AddOns > Questwarden > Raid markers**, or `/qw
 
 With no target you get a short message, never an error. Marking an icon the target already has is a no-op. The raw API would toggle it off; Questwarden never does.
 
-## Marking with the targeting macro (default)
+## Marking with the targeting macro (optional)
 
-**Setting:** `markWithMacro` (*Mark with the Targeting Macro*), on by default since 0.1.0-alpha.9. While it is on, Questwarden never marks by itself; the "Questwarden" targeting macro does it when you press it.
+**Setting:** `markWithMacro` (*Mark with the Targeting Macro*), off by default (it was on in 0.1.0-alpha.9 only; saved settings are switched back once). While it is on, Questwarden never marks by itself; the "Questwarden" targeting macro does it when you press it. Off, marking is automatic (below).
 
 **What one press does:** for each kind of mob the guide wants right now (the same icons as the rule below), the macro runs three lines:
 1. `/cleartarget`
@@ -44,7 +44,7 @@ With no target you get a short message, never an error. Marking an icon the targ
 | Setting (`/qw set ...`) | Default | What it does |
 |---|---|---|
 | `markEnabled` | on | Turns commands, the bar and guide marking on or off |
-| `markWithMacro` | on (0.1.0-alpha.9) | The targeting macro marks the step's mobs on your key press; Questwarden does not mark by itself |
+| `markWithMacro` | off | The targeting macro marks the step's mobs on your key press instead of the automatic marking |
 | `autoMark` | on | Guide marking: NPCs that the current steps name with `[mark=...]` |
 | `autoMarkObjectives` | on (changed after 0.4.0) | Also marks the kill objectives of the current `complete` steps, one icon per step (see below). Settings saved by older versions are switched on once, with a chat note |
 | `markReplace` | off | Lets automatic marking replace an icon that is already on the unit |
@@ -97,7 +97,7 @@ Units are matched **only by NPC ID** from their GUID, so a mob with the same nam
 1. its NPC ID is in the current rule;
 2. the unit is alive, and Questwarden has not already tried it in this step;
 3. the unit has no icon, or it already has this icon. With `markReplace` on, an existing icon may be replaced;
-4. for a mob you **target**, the icon moves to it from the step's other mob (the one you are about to fight). For a mob only seen in passing (mouseover, nameplate): no other living unit holds that icon for this step, so the icon does not jump between mobs of the same kind. The holder loses it when it dies (seen from the combat log's `UNIT_DIED`; the game removes a dead mob's icon without a `RAID_TARGET_UPDATE`), when it is visible without the icon, or when it has not been seen for 60 seconds. The next matching mob you look at then gets the icon;
+4. for a mob you **target or mouse over**, the icon moves to it from the step's other mob. For a mob whose nameplate comes into view: only when no visible living unit holds that icon, so icons do not jump between mobs on their own. An icon is held only while its mob is visible (target, mouseover, focus or nameplate) and alive: when the mob dies or its nameplate goes away, the icon moves at once to the next visible mob of the step, without you looking at one. A mob the icon moved away from can get it again later; The holder loses it when it dies (seen from the combat log's `UNIT_DIED`; the game removes a dead mob's icon without a `RAID_TARGET_UPDATE`), when it is visible without the icon, or when it has not been seen for 60 seconds. The next matching mob you look at then gets the icon;
 5. you are allowed to mark (see below).
 
 After each attempt, Questwarden checks `GetRaidTargetIndex` and reports **"Marked ..."** only if the icon is really there.

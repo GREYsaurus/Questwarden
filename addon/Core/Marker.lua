@@ -18,9 +18,9 @@
 --    changes or removes its icon;
 --  * an existing icon is not replaced unless markReplace is on;
 --  * one live unit per icon holds it, so it does not jump between mobs; a unit that dies (seen via
---    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) frees it for the next.
---    Targeting another mob of the step moves the icon to it (the one you are about to fight);
---    mouseover and nameplates never move it;
+--    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) or one that goes out of sight
+--    frees it, and the next visible mob of the step gets it at once. Targeting or mousing over another
+--    mob of the step moves the icon to it; a nameplate coming into view never takes it from a visible mob;
 --  * success is reported only when GetRaidTargetIndex shows the icon afterwards;
 --  * if the client blocks or rejects marking, automatic marking stops and says how to mark by click.
 
@@ -227,26 +227,41 @@ function M:Explain(msg)
     say(msg)
 end
 
--- Whether the unit currently holding `icon` for this step should keep it: it must be visible,
--- alive and still wear the icon. A unit out of sight keeps it unless it was seen dying (the game
--- removes a dead unit's icon without firing RAID_TARGET_UPDATE) or has not been seen for a while.
-local HOLDER_TIMEOUT = 60
+-- Whether the unit currently holding `icon` for this step should keep it: it must be visible (target,
+-- mouseover, focus or a nameplate), alive and still wear the icon. Out of sight it does not keep it, so the
+-- icon goes to the next visible mob of the step at once instead of staying on the first one.
 function M:HolderKeeps(icon, exceptGuid)
     local h = self.holder[icon]
     if not h or h == exceptGuid then return false end
     local u = self:UnitFor(h)
-    if u then
-        if UnitIsDead and UnitIsDead(u) then return false end
-        return C.GetRaidTargetIndex(u) == icon
-    end
-    local seen = self.lastSeen[h]
-    return seen ~= nil and (GetTime() - seen) < HOLDER_TIMEOUT
+    if not u then return false end
+    if UnitIsDead and UnitIsDead(u) then return false end
+    return C.GetRaidTargetIndex(u) == icon
 end
 
+-- Our icon left this unit (moved on, or the unit died): it may be marked again later.
 function M:Release(guid)
     local icon = self.marked[guid]
     self.marked[guid], self.markedNpc[guid] = nil, nil
+    self.tried[guid] = nil
     if icon and self.holder[icon] == guid then self.holder[icon] = nil end
+end
+
+-- Looks at every visible unit again (your target first), so a free icon finds the next mob right away.
+function M:Rescan()
+    if not self.rule or prof().markWithMacro then return end
+    for _, u in ipairs(C.MarkableUnits()) do self:Consider(u) end
+end
+
+-- A nameplate went away: if it carried one of our icons, the icon is free for the next visible mob.
+function M:OnPlateRemoved(unit)
+    local guid = unit and UnitGUID and UnitGUID(unit)
+    if guid and self.marked[guid] then
+        local icon = self.marked[guid]
+        if self.holder[icon] == guid then self.holder[icon] = nil end
+        self:Note("marked mob out of sight; its icon can move on", nil, true)
+        C_Timer.After(0.1, function() M:Rescan() end)
+    end
 end
 
 -- Called for a unit the player is looking at; marks it if the current guide position names it.
@@ -275,9 +290,9 @@ function M:Consider(unit)
         self.handsOff[guid] = true -- someone else's icon; leave it
         return self:Note("already has another raid icon", name, true)
     end
-    -- The mob you target gets the icon, moved from the step's other mob if needed; seen in passing (mouseover,
-    -- nameplates), each icon stays on one living unit instead of jumping between mobs of the same kind.
-    local targeting = unit == "target"
+    -- The mob you target or mouse over gets the icon, moved from the step's other mob if needed; a nameplate
+    -- coming into view does not take it from a visible living mob, so icons do not jump on their own.
+    local targeting = unit == "target" or unit == "mouseover"
     -- One attempt per unit, except that targeting it again takes the icon back from another mob.
     local moving = targeting and self.holder[icon] and self.holder[icon] ~= guid
     if self.tried[guid] and not moving then return self:Note("already tried this unit", name) end
@@ -349,6 +364,7 @@ function M:OnUnitDied(guid)
     if guid and self.marked[guid] then
         self:Release(guid)
         self:Note("marked mob died; its icon is free again", nil, true)
+        C_Timer.After(0.2, function() M:Rescan() end)
     end
 end
 
@@ -408,6 +424,7 @@ function M:Init()
     ns:On("PLAYER_TARGET_CHANGED", function() M:Consider("target") end)
     ns:On("UPDATE_MOUSEOVER_UNIT", function() M:Consider("mouseover") end)
     ns:On("NAME_PLATE_UNIT_ADDED", function(_, unit) if unit then M:Consider(unit) end end)
+    ns:On("NAME_PLATE_UNIT_REMOVED", function(_, unit) M:OnPlateRemoved(unit) end)
     ns:Listen("REFRESH", function() M:OnRefresh() end)
     ns:On("RAID_TARGET_UPDATE", function() M:OnRaidTargetUpdate() end)
     -- Only UNIT_DIED is looked at, and only while this module has marked something.
