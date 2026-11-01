@@ -10,10 +10,12 @@
 -- in its sources), so instead of guessing a route it says when the straight line will mislead you:
 --   * the target is in a capital city: follow the streets;
 --   * you are in a capital and the target is outside it: leave the city first;
---   * you are indoors (the game's IsIndoors) and the target is not right here: find the way out first;
+--   * you are indoors (the game's IsIndoors) and the target is not right here (and not known to be inside): find the
+--     way out first, if the arrow points through a wall;
 --   * the target is inside a building, cave or mine: look for the entrance. Known from the guide's own step text
---     (words like "cave", "inside", "upstairs", or "in the inn"), or learned: when you arrive at a target while
---     indoors, that spot is remembered (QuestwardenDB.indoorSpots, all characters), so the next visit says so.
+--     (words like "cave", "inside", "upstairs", or "in the inn"), or learned: standing within OBSERVE_YARDS of a
+--     target records whether you are indoors there (QuestwardenDB.indoorSpots, all characters). A spot ever seen
+--     outdoors (a doorway, say) never counts as inside, so an NPC by a door is not called indoors.
 -- Capitals are found by name in the zone data, so ids are never typed by hand.
 
 local _, ns = ...
@@ -28,7 +30,8 @@ local INDOOR_WORDS = { "cave", "caves", "cavern", "caverns", "mine", "mines", "c
                        "grotto", "burrow", "burrows", "inside", "upstairs", "downstairs", "basement", "cellar", "indoors" }
 local BUILDING_WORDS = { "inn", "tower", "keep", "house", "hut", "abbey", "cathedral", "lair", "den", "building", "hall",
                          "bunker", "barracks", "chapel", "church", "castle", "fortress", "tavern", "library", "tomb" }
-local NEAR_YARDS = 40 -- indoors closer than this to the target: you are probably in the right building already
+local NEAR_YARDS = 15 -- indoors closer than this to the target: you are probably in the right room already
+local OBSERVE_YARDS = 5 -- only this close to a target does indoors/outdoors say where the target is
 
 local capitals
 function NH:Capitals()
@@ -83,23 +86,29 @@ local function spots()
     return db.indoorSpots
 end
 
+-- Indoors when a spot or a neighbour was seen indoors and none was ever seen outdoors (true/false per spot).
 function NH:IsLearnedIndoor(area, x, y)
     if not (area and x and y) then return false end
     local s = spots()
     local cx, cy = math.floor(x + 0.5), math.floor(y + 0.5)
+    local indoor = false
     for dx = -1, 1 do
         for dy = -1, 1 do
-            if s[string.format("%d:%d:%d", area, cx + dx, cy + dy)] then return true end
+            local v = s[string.format("%d:%d:%d", area, cx + dx, cy + dy)]
+            if v == false then return false end
+            if v == true then indoor = true end
         end
     end
-    return false
+    return indoor
 end
 
--- Called when the arrow says "Arrived": remember the spot if you are indoors there.
-function NH:OnArrived(target)
-    if not (target and target.area and target.x and target.y) then return end
-    if not (IsIndoors and IsIndoors()) then return end
-    spots()[spotKey(target.area, target.x, target.y)] = true
+-- Called while the arrow is at the target: within OBSERVE_YARDS, records indoors or outdoors for the spot.
+-- Outdoors is kept for good: a target reachable outdoors is never "inside".
+function NH:Observe(target, dist)
+    if not (target and target.area and target.x and target.y and dist and dist <= OBSERVE_YARDS and IsIndoors) then return end
+    local key, s = spotKey(target.area, target.x, target.y), spots()
+    if s[key] == false then return end
+    s[key] = IsIndoors() and true or false
 end
 
 -- Hints ---------------------------------------------------------------------------------------------------------
@@ -133,7 +142,7 @@ function NH:Lines(s, current, here, dist)
     if current and IsIndoors and IsIndoors() and not inside then
         if dist == nil then dist = ns.Nav.target and ns.Nav:Vector() end
         if not dist or dist > NEAR_YARDS then
-            out[#out + 1] = "You are indoors: find the way out of the building or cave before following the arrow."
+            out[#out + 1] = "You are indoors and the target may be outside: if the arrow points through a wall, find the way out of the building or cave first."
         end
     end
     if inside then
@@ -154,7 +163,7 @@ function NH:ArrowLine()
     local inside = t.area and self:TargetIndoors(s, t.area, t.x, t.y)
     if IsIndoors and IsIndoors() and not inside then
         local dist = ns.Nav:Vector()
-        if not dist or dist > NEAR_YARDS then return "Find the way out first" end
+        if not dist or dist > NEAR_YARDS then return "Indoors: find the way out first" end
     end
     if inside then return "Target is inside: find the entrance" end
     if city then return "In " .. city .. ": follow the streets" end

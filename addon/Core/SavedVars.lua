@@ -299,6 +299,11 @@ function ns:InitSavedVariables()
         _G[ns.svChar].activeGuide = nil
     end
     -- Future migrations: if QuestwardenDB.schema < N then ... end
+    -- 0.1.0-alpha.8 learned spots within 12 yards, so NPCs by a door were taken for indoors: start over once.
+    if not _G[ns.svAccount].migrations.indoorSpots9 then
+        _G[ns.svAccount].migrations.indoorSpots9 = true
+        _G[ns.svAccount].indoorSpots = nil
+    end
     _G[ns.svAccount].schema = SCHEMA
     _G[ns.svChar].schema = SCHEMA
     ns:SetActiveProfile(active)

@@ -297,10 +297,8 @@ local function createArrow()
         if dist < ARRIVE_YARDS then
             self.tex:SetVertexColor(0.3, 1, 0.3)
             self.label:SetText(corpse and "Corpse" or "Arrived")
-            if not corpse and Nav.arrivedAt ~= Nav.target then
-                Nav.arrivedAt = Nav.target
-                ns.NavHints:OnArrived(Nav.target) -- remembers indoor spots for the next visit
-            end
+            -- Standing right at the target: remember whether it is indoors or outdoors (Core/NavHints.lua).
+            if not corpse then ns.NavHints:Observe(Nav.target, dist) end
             local s = ns.Engine:CurrentStep()
             if Nav.owner == "step" and s and s[1] == "goto" then ns.Engine:MarkDone() end
             return

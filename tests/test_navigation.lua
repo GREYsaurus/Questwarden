@@ -96,16 +96,25 @@ here = { 12, 50, 50 }
 IsIndoors = function() return true end
 lines = table.concat(NH:Lines(outStep, true, nil, 300), " | ")
 check(string.find(lines, "You are indoors", 1, true), "indoors with a distant target: find the way out first")
-check(not string.find(table.concat(NH:Lines(outStep, true, nil, 20), " "), "You are indoors", 1, true), "indoors right next to the target: no exit hint")
+check(string.find(table.concat(NH:Lines(outStep, true, nil, 37), " "), "You are indoors", 1, true), "indoors 37 yards from an outdoor target (Northshire Abbey to Deputy Willem): find the way out")
+check(not string.find(table.concat(NH:Lines(outStep, true, nil, 10), " "), "You are indoors", 1, true), "indoors right next to the target: no exit hint")
 -- learned indoor spots
 ns.db.indoorSpots = {}
-NH:OnArrived({ area = 12, x = 40.2, y = 59.8 })
-check(NH:IsLearnedIndoor(12, 40, 60) and NH:IsLearnedIndoor(12, 40.9, 60.4) and not NH:IsLearnedIndoor(12, 45, 60), "arriving indoors remembers the spot (and its neighbours)")
+NH:Observe({ area = 12, x = 40.2, y = 59.8 }, 10)
+check(not NH:IsLearnedIndoor(12, 40, 60), "indoors 10 yards from the target says nothing about the target (a doorway)")
+NH:Observe({ area = 12, x = 40.2, y = 59.8 }, 3)
+check(NH:IsLearnedIndoor(12, 40, 60) and NH:IsLearnedIndoor(12, 40.9, 60.4) and not NH:IsLearnedIndoor(12, 45, 60), "standing at the target indoors remembers the spot (and its neighbours)")
 lines = table.concat(NH:Lines(outStep, true, nil, 20), " | ")
 check(string.find(lines, "is inside a building, cave or mine", 1, true), "a remembered indoor target says to find the entrance")
 IsIndoors = function() return false end
-NH:OnArrived({ area = 12, x = 70, y = 70 })
-check(not NH:IsLearnedIndoor(12, 70, 70), "arriving outdoors remembers nothing")
+NH:Observe({ area = 12, x = 70, y = 70 }, 3)
+check(not NH:IsLearnedIndoor(12, 70, 70), "standing at a target outdoors: not inside")
+-- An NPC by a door (Deputy Willem at Northshire Abbey): once seen outdoors it is never "inside" again
+NH:Observe({ area = 12, x = 48.2, y = 42.9 }, 4)
+IsIndoors = function() return true end
+NH:Observe({ area = 12, x = 48.2, y = 42.9 }, 4)
+check(not NH:IsLearnedIndoor(12, 48.2, 42.9), "a spot seen outdoors stays outdoors, even when seen from just inside later")
+IsIndoors = function() return false end
 -- the arrow line
 E.CurrentStep = function() return outStep end
 Nav.target = { area = 12, mapId = 1, x = 40, y = 60 }
@@ -114,6 +123,16 @@ here = { 1519, 50, 50 }
 check(NH:ArrowLine() == "Leave Stormwind City first", "leaving the city comes first")
 ns.Completionist.Here, IsIndoors, E.CurrentStep = keepHere, keepIndoors, keepCur
 ns.db.indoorSpots, Nav.target = {}, nil
+
+-- Spots learned by 0.1.0-alpha.8 (12-yard radius) are cleared once
+_G[ns.svAccount].indoorSpots = { ["12:48:43"] = true }
+_G[ns.svAccount].migrations.indoorSpots9 = nil
+ns:InitSavedVariables()
+check(ns.db.indoorSpots == nil and _G[ns.svAccount].migrations.indoorSpots9, "old indoor spots are cleared once")
+ns.db.indoorSpots = { ["12:1:1"] = true }
+ns:InitSavedVariables()
+check(ns.db.indoorSpots and ns.db.indoorSpots["12:1:1"], "spots learned afterwards are kept")
+ns.db.indoorSpots = {}
 
 -- TomTom is gone
 check(Nav.UpdateTomTom == nil and ns.db.profile.useTomTom == nil and ns.Target.integrations.TomTom == nil, "no TomTom code, setting or integration flag is left")
