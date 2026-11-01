@@ -247,6 +247,7 @@ end
 -- Percentage text shared by markers, tooltips and notifications.
 function U.PctText(e)
     if e.kind == "empty" then return "Empty slot filled" end
+    if e.armorOnly then return string.format("+%d armor (neither item has other stats)", e.armorOnly) end
     local pct = e.pct
     if not pct or pct ~= pct or pct == math.huge or pct == -math.huge then return "Upgrade - percentage unavailable" end
     return string.format("%+.1f%% estimated spec score", pct)
@@ -354,9 +355,31 @@ function U:Evaluate(d, ctx)
             e.reason = "percentage unavailable, minimum upgrade not checked"
         end
     else
-        e.reason = (math.abs(best.delta) <= EPS) and "same score as equipped" or "not an upgrade"
+        local gain = self:ArmorOnlyGain(d, best.replaced)
+        if gain then
+            -- Score says nothing (neither item has a stat the profile weighs), but the new one has more armor.
+            e.kind, e.armorOnly, e.pct = "upgrade", gain, nil
+            e.delta = gain * EPS -- ranks below every real score upgrade
+        else
+            e.reason = (math.abs(best.delta) <= EPS) and "same score as equipped" or "not an upgrade"
+        end
     end
     return e
+end
+
+-- An item with no stats but armor (no weapon damage, no effects) replacing one equally bare item: the armor it
+-- adds, or nil. Weapons never count; it must replace exactly one item.
+local function bare(d)
+    if not d or d.dps or (d.tip and ((d.tip.effects and #d.tip.effects > 0) or (d.tip.schoolDmg and next(d.tip.schoolDmg)))) then return false end
+    for k, v in pairs(d.stats or {}) do if k ~= "armor" and v ~= 0 then return false end end
+    return true
+end
+function U:ArmorOnlyGain(d, replaced)
+    if not replaced or #replaced ~= 1 or not bare(d) or not bare(replaced[1]) then return nil end
+    local loc = d.equipLoc or ""
+    if string.find(loc, "WEAPON", 1, true) or loc == "INVTYPE_RANGED" or loc == "INVTYPE_RANGEDRIGHT" or loc == "INVTYPE_THROWN" then return nil end
+    local gain = ((d.stats or {}).armor or 0) - ((replaced[1].stats or {}).armor or 0)
+    return gain > 0 and gain or nil
 end
 
 -- Context for one pass: profile, weights, equipped items and rating base. Returns ctx or nil, why

@@ -281,6 +281,7 @@ pages.tips = { title = "Tips", items = function() return {
       tip = "For occupied slots. 0 means any strictly higher score." },
     T("equipNotify", "On-screen equip messages"),
     T("equipChat", "Copy equip messages to chat"),
+    T("equipSound", "Play a sound on automatic upgrades", { tip = "The level-up sound when an item was equipped automatically." }),
     T("boeMarkers", "Mark Bind-on-Equip upgrades in bags", { tip = "A small arrow on BoE items that would be an upgrade. Equip them yourself." }),
     { type = "button", label = "Clear excluded items",
       tip = "Items excluded with /" .. ns.slash .. " gear exclude <item> are allowed again.",

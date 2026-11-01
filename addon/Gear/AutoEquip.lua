@@ -173,6 +173,8 @@ function AE:Verify(final)
         for _, r in ipairs(b.e.replaced or {}) do if r.id then self.displaced[r.id] = true end end
         self.failed[b.key] = true -- never move the same item into the same slot twice in a session
         if ns.GearMarkers then ns.GearMarkers:Notify(b.e, b.profile) end
+        -- Sound kit 888 = sound/spells/levelup.ogg in the 1.15.9 and 2.5.6 client tables (SoundKitEntry).
+        if prof().equipSound and PlaySound then pcall(PlaySound, 888, "Master") end
         self:Schedule(0.5)
     elseif final or now() >= b.deadline then
         self:Abort("not confirmed by the server")

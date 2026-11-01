@@ -330,6 +330,41 @@ if StaticPopupDialogs and StaticPopupDialogs[ns.key .. "_CONFIRM"] then StaticPo
 check(prof().autoEquip == true, "with a spec chosen, switching on asks first and then enables")
 CF.frame:Hide()
 
+-- Armor-only items, and the sound ----------------------------------------------------------------------------------
+-- Bracers with only armor replace bracers with only armor when they have more of it; never an item with stats.
+item(95030, { name = "Plain Bracers", classID = 4, subclassID = PLATE, equipLoc = "INVTYPE_WRIST", bindType = 1, stats = { RESISTANCE0_NAME = 20 } })
+item(95031, { name = "Thick Bracers", classID = 4, subclassID = PLATE, equipLoc = "INVTYPE_WRIST", bindType = 1, stats = { RESISTANCE0_NAME = 35 } })
+item(95032, { name = "Plain Cloak", classID = 4, subclassID = CLOTH, equipLoc = "INVTYPE_CLOAK", bindType = 1, stats = { RESISTANCE0_NAME = 50 } })
+item(95033, { name = "Agile Cloak", classID = 4, subclassID = CLOTH, equipLoc = "INVTYPE_CLOAK", bindType = 1, stats = { RESISTANCE0_NAME = 10, ITEM_MOD_STAMINA_SHORT = 3 } })
+item(95034, { name = "Thin Bracers", classID = 4, subclassID = PLATE, equipLoc = "INVTYPE_WRIST", bindType = 1, stats = { RESISTANCE0_NAME = 10 } })
+local sounds, realPlay = {}, PlaySound
+PlaySound = function(kit) sounds[#sounds + 1] = kit end
+MOCK.freeOverride = nil
+MOCK.equipped[9], MOCK.equipped[15] = 95030, 95033
+bag({ { 95031, true }, { 95032, true }, { 95034, true } })
+prof().equipSound = true
+AE.failed, AE.displaced = {}, {}
+local soundsBefore = #sounds
+AE:OnProfileChanged()
+settle(10)
+check(equipped(95031) == 9 and inBags(95030), "armor-only bracers with more armor replace armor-only bracers")
+check(equipped(95034) == nil, "armor-only bracers with less armor are not equipped")
+check(equipped(95032) == nil and equipped(95033) == 15, "an armor-only cloak never replaces a cloak with stats")
+check(#sounds > soundsBefore and sounds[#sounds] == 888, "the level-up sound plays after an automatic equip")
+local armorNote = false
+for _, m in ipairs(MOCK.printed) do if string.find(m, "+15 armor", 1, true) then armorNote = true end end
+check(armorNote, "the notification says how much armor was gained")
+prof().equipSound = false
+soundsBefore = #sounds
+MOCK.equipped[9] = 95034
+bag({ { 95030, true } })
+AE.failed, AE.displaced = {}, {}
+AE:OnProfileChanged()
+settle(10)
+check(equipped(95030) == 9 and #sounds == soundsBefore, "with the sound setting off nothing plays")
+PlaySound = realPlay
+MOCK.equipped[9], MOCK.equipped[15] = nil, nil
+
 -- Leveling characters: caps are not applied below 70 (they are level-70 assumptions) --------------------------------------------------------
 check(U:Context().base == nil, "level 60: no level-70 cap assumptions")
 

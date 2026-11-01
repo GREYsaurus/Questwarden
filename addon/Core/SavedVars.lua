@@ -68,6 +68,7 @@ local profileDefaults = {
         autoEquipMinPct = 0,        -- minimum estimated upgrade (%) for occupied slots; must also be > 0
         equipNotify = true,         -- on-screen message after a confirmed equip
         equipChat = false,          -- copy of that message in chat
+        equipSound = true,          -- the level-up sound after a confirmed automatic equip (Gear/AutoEquip.lua)
         boeMarkers = true,          -- marker on unequipped Bind-on-Equip upgrades in the bags
         -- Features from the settings window (docs/SETTINGS.md)
         activeItems = true,         -- active item window (usable quest items)
