@@ -153,7 +153,8 @@ end
 
 -- Targeting --------------------------------------------------------------------------------------------
 
--- NPC ids the current step is about: explicit [mark] NPCs, kill objectives, quest giver / finisher.
+-- NPC ids the current step is about: explicit [mark] NPCs, kill objectives and the mobs that drop quest items
+-- (DB.ObjectiveNpcIds), quest giver / finisher.
 function A:StepNpcIds()
     local s = currentStep()
     local ids = {}
@@ -162,8 +163,7 @@ function A:StepNpcIds()
     local q = s.q and ns.DB.GetQuestByID(s.q)
     if q then
         if s[1] == "complete" then
-            for _, id in ipairs(q.objectives.creatures) do ids[id] = true end
-            for _, id in ipairs(q.objectives.killCredit) do ids[id] = true end
+            for id in pairs(ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or {}) do ids[id] = true end
         elseif s[1] == "accept" then
             for _, id in ipairs(q.startNpcs or {}) do ids[id] = true end
         elseif s[1] == "turnin" then

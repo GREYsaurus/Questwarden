@@ -237,6 +237,34 @@ function DB.GetObjectPosition(objectId, preferZone, nearX, nearY)
     return pickSpawn(r[O.SPAWNS], preferZone or r[O.ZONE], nearX, nearY)
 end
 
+-- NPC ids a quest's objectives are about: kill objectives, kill-credit NPCs and the NPCs that drop its quest
+-- items. An item dropped by more than DROPPER_MAX kinds of NPC keeps only those that spawn in `zone` (the
+-- player's zone), so the target list and markers stay short; nil when nothing is left.
+local DROPPER_MAX = 6
+function DB.ObjectiveNpcIds(questId, zone)
+    local q = DB.GetQuestByID(questId)
+    if not q then return nil end
+    local ids = {}
+    for _, id in ipairs(q.objectives.creatures) do ids[id] = true end
+    for _, id in ipairs(q.objectives.killCredit) do ids[id] = true end
+    local parent = zone and DB.ParentZone(zone)
+    for _, itemId in ipairs(q.objectives.items) do
+        local it = DB.GetItemByID(itemId)
+        local drops = it and it.npcDrops or EMPTY
+        if #drops <= DROPPER_MAX then
+            for _, id in ipairs(drops) do ids[id] = true end
+        elseif zone then
+            local n = 0
+            for _, id in ipairs(drops) do
+                local rec = QDB.npcs[id]
+                local spawns = rec and rec[N.SPAWNS]
+                if spawns and (spawns[zone] or (parent and spawns[parent])) and n < DROPPER_MAX then ids[id] = true n = n + 1 end
+            end
+        end
+    end
+    return next(ids) and ids or nil
+end
+
 -- Best target for a quest objective: objective mobs, objects, item droppers, exploration trigger.
 function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY)
     local q = rawQuest(questId)

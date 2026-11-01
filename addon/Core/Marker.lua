@@ -58,7 +58,7 @@ local function say(msg) if prof().markNotify then ns:Print(msg) end end
 -- objectives that are done together one after another). Each step contributes one icon:
 --   * an explicit [mark=...] keeps its own icon;
 --   * otherwise (autoMarkObjectives) its quest's kill objectives, kill-credit NPCs and the droppers
---     of its quest items (only when at most 3 NPCs drop the item, like the guide compiler) get the
+--     of its quest items (DB.ObjectiveNpcIds: up to 6 kinds, or the ones in your zone) get the
 --     next free icon in the order: default marker, skull, cross, square, moon, triangle, diamond,
 --     circle, star. At most MAX_TYPES icons are handed out, so mob types never share or fight
 --     over one icon. An NPC id named by two steps keeps the first step's icon.
@@ -67,19 +67,10 @@ local ICON_ORDER = { 8, 7, 6, 5, 4, 3, 2, 1 }
 local BLOCK_SCAN = 8
 M.MAX_TYPES = MAX_TYPES
 
+-- Kill objectives, kill-credit NPCs and quest-item droppers (DB.ObjectiveNpcIds: items with many droppers keep
+-- the ones in your zone).
 local function objectiveNpcs(s)
-    local q = s.q and ns.DB.GetQuestByID(s.q)
-    if not q then return nil end
-    local npcs = {}
-    for _, id in ipairs(q.objectives.creatures) do npcs[id] = true end
-    for _, id in ipairs(q.objectives.killCredit) do npcs[id] = true end
-    for _, itemId in ipairs(q.objectives.items) do
-        local it = ns.DB.GetItemByID(itemId)
-        if it and #it.npcDrops >= 1 and #it.npcDrops <= 3 then
-            for _, id in ipairs(it.npcDrops) do npcs[id] = true end
-        end
-    end
-    return next(npcs) and npcs or nil
+    return s.q and ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or nil
 end
 
 -- Builds the rule for the active guide position, or nil plus the reason there is none.

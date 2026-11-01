@@ -235,6 +235,9 @@ if STAGE.target == "ClassicEra" then
         end
     end
     check(next(noEntrance) == nil and select(1, ns.DungeonRun:Entrance("The Deadmines")) == 40, "dungeon runs: every guide dungeon has an entrance (Deadmines in Westfall)")
+    -- Item-drop objectives count as targets: "Wolves Across the Border" (33) needs Tough Wolf Meat from wolves.
+    local wolfIds = ns.DB.ObjectiveNpcIds(33, 12) or {}
+    check(wolfIds[299] and wolfIds[69], "the wolves that drop Tough Wolf Meat are targets of quest 33 (Young Wolf 299, Timber Wolf 69)")
     local wcRow
     for _, row in ipairs(S:Dungeons("speed")) do if row.id == "Wailing Caverns" then wcRow = row end end
     check(wcRow and not wcRow.supported and string.find(wcRow.note, "Speed leveling guides", 1, true) and string.find(wcRow.note, "Completionist mode still routes", 1, true),

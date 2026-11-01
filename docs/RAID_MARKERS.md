@@ -47,7 +47,7 @@ accept Some Quest                                          # no flag: markers ar
 | `accept` | the quest's giver NPCs |
 | `turnin` | the quest's finisher NPCs |
 | `talk` | that NPC |
-| `complete` | the kill-objective creatures, plus the NPCs that drop a quest item when the item has at most 3 drop sources (e.g. a named mob's head) |
+| `complete` | the kill-objective creatures, plus the NPCs that drop its quest items: all of them when at most 6 kinds drop the item, otherwise those that spawn in your zone (`DB.ObjectiveNpcIds`) |
 
 - `[mark=icon:<id>]` names an NPC ID, which must exist in the database.
 - `[mark=icon:<name>]` names an NPC by exact name. The compiler narrows it to the NPCs the step is about, then to the zone. **If more than one NPC ID remains, the build fails** and lists the IDs to choose from.
@@ -65,7 +65,7 @@ Examples in the shipped guides:
 **Which NPCs.** The rule covers the current step plus the open `complete` steps right after it (guides list kill objectives you do together one after another). Each step gets one icon:
 
 - a step with `[mark=icon...]` keeps that icon for its NPCs;
-- otherwise, with `autoMarkObjectives` on, its quest's kill-objective creatures, kill-credit NPCs and the droppers of its quest items get an icon. Item droppers count only when at most 3 NPCs drop the item, the same rule the compiler uses. Icons are handed out in the order: default marker, skull, cross, square, moon, triangle, diamond, circle, star. Icons already used by `[mark]` steps are skipped, and at most 4 icons are used, so different mob types never share or fight over one icon. All NPC IDs of one step (variants of one mob) share its icon. A mob type keeps its icon when an earlier step finishes.
+- otherwise, with `autoMarkObjectives` on, its quest's kill-objective creatures, kill-credit NPCs and the droppers of its quest items get an icon. Item droppers count as for the target list: up to 6 kinds, or those in your zone. Icons are handed out in the order: default marker, skull, cross, square, moon, triangle, diamond, circle, star. Icons already used by `[mark]` steps are skipped, and at most 4 icons are used, so different mob types never share or fight over one icon. All NPC IDs of one step (variants of one mob) share its icon. A mob type keeps its icon when an earlier step finishes.
 
 Units are matched **only by NPC ID** from their GUID, so a mob with the same name but a different ID, or an unrelated mob, is never marked.
 
