@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.5 (2026-11-01)
+
+- **Fix: the guide progress bar counted steps you had not done.** Steps ahead of you that wait for a level ("needs level N; picked up if you reach it") counted as done, so a new level-1 character saw about 71% of Elwynn Forest complete. Skipped steps now count once you are past them or when you skipped them yourself.
+- **Setup: clearer greyed-out dungeons.** A dungeon greyed out in the Speed list now says it has no quests in the Speed leveling guides, and how many of its quests Completionist still routes.
+
+**Tested:** offline only (TBC suite 4,657/4,657, Classic Era smoke 85/85, Forever 30/30, route audits 0 errors). Both issues were reported from the live game on Classic Era; the fixes have not been checked in game yet.
+
 ## 0.1.0-alpha.4 (2026-11-01)
 
 - **Fix: the setup window opened empty** (no step content, Next drawn over Finish). In the game client a dropdown fills its list as soon as it is created, and the wizard's guide and gear-profile lists read the setup draft before it existed, so building the window stopped halfway. The lists now work without a draft, and the window stays hidden until it is fully built.
