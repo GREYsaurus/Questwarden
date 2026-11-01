@@ -2,22 +2,29 @@
 
 **A free leveling guide for WoW Classic Era (1-60) and TBC Classic Anniversary (1-70), in one download.**
 
-> **Alpha.** Questwarden is new and updated often. Its routes and data are built and checked offline. Testing in the live game is under way on Classic Era: the raid markers and the map and minimap waypoint pins have been confirmed working; newer features are checked offline only so far. Please report anything that is wrong on the issue tracker.
+> **Alpha.** Questwarden is new and updated often. Its routes and data are built and checked offline. Testing in the live game is under way on Classic Era: the raid markers and the map and minimap waypoint pins are confirmed working, and newer features are checked offline only so far. Please report anything wrong on the issue tracker.
 
 ## What it does
 
 **Guides and routes**
-- **Step-by-step routes for every race and class**, from your start zone to level cap, following a planned zone order.
-- **Two route flavors:** Speed, and Hardcore, which leaves out risky pulls and adds warnings before dangerous spots. On Hardcore realms the Hardcore route turns on by itself.
+- **Step-by-step routes for every race and class**, from your starting zone to the level cap, in a planned zone order.
+- **Two route types:**
+  - **Speed.**
+  - **Hardcore:** leaves out risky pulls and warns you before dangerous spots. It turns on by itself on Hardcore realms.
+- **Tuned for leveling speed:** quests and quest chains are added where the route would leave you short of the next zone's level.
+- **Grind steps only where needed:** where questing still falls short, a grind step sends you to the densest group of mobs near your level, close to where you already are. It stops at the level you need, or part of one when the quests you have left will cover the rest.
+- **Quests started by dropped items:** the guide knows which mobs drop the item. It lets you kill them on the way, and tells you to right-click the item once you have it. Rare drops like the OOX distress beacons show up only if you find one.
 - **Completionist mode:** every quest the bundled data knows for your character, zone by zone, dungeons included.
-- **Setup wizard:** a new character chooses route, talent plan, dungeons and options in five steps (`/qw setup` any time).
-- **Dungeon runs:** when a quest sends you into a dungeon, the step tells you to find a group and the arrow leads to the entrance; die inside and it leads you back.
+- **Setup wizard:** a new character chooses route, talent plan, dungeons and options in five steps. Run it again any time with `/qw setup`.
+- **Dungeon runs:** when a quest sends you into a dungeon, the step tells you to find a group and the arrow leads to the entrance. If you die inside, it leads you back.
 - **Objectives before far turn-ins:** you finish the quests in one place before travelling back to turn them in.
-- **Built-in quest database** (from QuestieDB), so Questie is not required.
+- **Hearthstone suggestions:** the step tells you when hearthing to your turn-ins beats walking.
+- **Built-in quest database** (from QuestieDB), so you don't need Questie.
 - **Every step can be completed or skipped by hand**, so you never get stuck.
 
 **Navigation**
-- **Built-in arrow** with distance and time to arrival, a world-map pin and a minimap pin; no other add-on needed.
+- **Built-in arrow** with distance and time to arrival, a world-map pin and a minimap pin. No other add-on needed.
+- **Patrolling NPCs:** the arrow follows quest NPCs and named mobs that walk a path.
 - **City, building and cave hints** where a straight-line arrow would get you lost.
 
 **Targets and raid markers**
@@ -25,22 +32,35 @@
 - **Target list and targeting macro** for the current step.
 
 **Class training**
-- **Training suggestions** with prices (spell lists from What's Training?, bundled; no need to install it).
+- **Training suggestions** with prices. The spell lists come from What's Training?, bundled, so you don't need to install it.
 - **Automatic training** (opt-in): learns the recommended spells you can afford when you visit your trainer.
-- **The nearest trainer**, or with none in your zone, the cheapest flight you know to one.
+- **The nearest trainer**, or, with none in your zone, the cheapest flight you know to one.
 
 **Talents and gear**
 - **Talent calculator and leveling builds** for each class.
-- **Automatic gear upgrades** (opt-in; never Bind-on-Equip items), including armor-only upgrades and weapons with more DPS, with a chat line and the level-up sound.
+- **Automatic gear upgrades** (opt-in, never Bind-on-Equip items). This includes armor-only upgrades and weapons with more DPS. Each upgrade gets a chat line and the level-up sound.
 
-**Quality of life:** quest automation that never auto-accepts escorts or picks rewards, junk selling (off by default), flight and inn automation, flight timers, optional map pins for rares, elites and spirit healers.
+**Quality of life**
+- Quest automation that never auto-accepts escorts or picks rewards for you.
+- Junk selling and auto repair, both off by default.
+- Flight and inn automation, and flight timers.
+- Optional map pins for rares, elites and spirit healers.
 
 ## Which game?
 
-Install the same folder for either game. Classic Era loads `Questwarden_Vanilla.toc` with Classic data; TBC Classic Anniversary loads `Questwarden_TBC.toc` with TBC data. Do not run it together with TBCGuide.
+Install the same folder for either game:
+- Classic Era loads `Questwarden_Vanilla.toc` with Classic data.
+- TBC Classic Anniversary loads `Questwarden_TBC.toc` with TBC data.
+
+Don't run it together with TBCGuide.
 
 Type `/qw help` in game for the commands.
 
 ## Licence and sources
 
-GPL-3.0. Quest data comes from QuestieDB (GPL-3.0); class-trainer spell lists from What's Training? (MIT); spell, talent and map data from the game client's own tables. Source code: https://github.com/GREYsaurus/Questwarden
+GPL-3.0. Data sources:
+- **Quest data:** QuestieDB (GPL-3.0).
+- **Class-trainer spell lists:** What's Training? (MIT).
+- **Spell, talent and map data:** the game client's own tables.
+
+Source code: https://github.com/GREYsaurus/Questwarden
