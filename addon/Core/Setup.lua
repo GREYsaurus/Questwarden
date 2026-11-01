@@ -228,13 +228,23 @@ end
 function Setup:Dungeons(mode)
     local info = ns.Compat.PlayerInfo()
     local level = info.level or 1
-    local counts = mode == "completionist" and ns.Completionist:DungeonQuestCounts(info.race, info.class) or self:SpeedDungeonQuests()
+    local cmCounts = ns.Completionist:DungeonQuestCounts(info.race, info.class)
+    local counts = mode == "completionist" and cmCounts or self:SpeedDungeonQuests()
     local out = {}
     for _, d in ipairs(ns.DungeonsFor(info.faction)) do
         local n = counts[d.name] or 0
         local row = { id = d.name, name = d.name, min = d.min, max = d.max, faction = d.faction, quests = n, supported = n > 0 }
         if not row.supported then
-            row.status, row.note = "unsupported", mode == "completionist" and "no quests for it in the quest data" or "no quests for it in the leveling guides"
+            -- Greyed out in Speed only means the Speed guides lack its quests; say whether Completionist has them.
+            local cm = cmCounts[d.name] or 0
+            row.status = "unsupported"
+            if mode == "completionist" then
+                row.note = "No quests for it in the quest data"
+            elseif cm > 0 then
+                row.note = string.format("No quests for it in the Speed leveling guides. Completionist mode still routes its %d quest(s)", cm)
+            else
+                row.note = "No quests for it in the Speed leveling guides or in Completionist's quest data"
+            end
         elseif level < d.min then
             row.status, row.note = "later", "planned for later: from level " .. d.min
         elseif level > d.max then

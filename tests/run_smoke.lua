@@ -222,6 +222,10 @@ if STAGE.target == "ClassicEra" then
     local sp, hasSup = S:SpeedDungeonQuests(), false
     for _, row in ipairs(S:Dungeons("speed")) do if row.supported then hasSup = true end end
     check(next(sp) ~= nil and hasSup, "setup: the Classic guides offer dungeons to select")
+    local wcRow
+    for _, row in ipairs(S:Dungeons("speed")) do if row.id == "Wailing Caverns" then wcRow = row end end
+    check(wcRow and not wcRow.supported and string.find(wcRow.note, "Speed leveling guides", 1, true) and string.find(wcRow.note, "Completionist mode still routes", 1, true),
+        "setup: a dungeon greyed out for Speed says Completionist still routes it (" .. tostring(wcRow and wcRow.note) .. ")")
     local hsd = S:Draft(true)
     hsd.hardcore, hsd.dungeons = true, "questing"
     local hcOk = S:Finish(hsd)

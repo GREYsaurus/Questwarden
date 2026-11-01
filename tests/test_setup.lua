@@ -188,6 +188,11 @@ check(bfd and bfd.supported and bfd.quests >= 1, "Blackfathom Deeps has guide qu
 local hasAlliance = false
 for _, r in ipairs(rows) do if r.faction == "Alliance" then hasAlliance = true end end
 check(not hasAlliance, "dungeons of the other faction are not listed")
+local cmCounts = CM:DungeonQuestCounts("Orc", "WARRIOR")
+local greyed
+for _, r in ipairs(rows) do if not r.supported and (cmCounts[r.id] or 0) > 0 then greyed = r break end end
+check(greyed == nil or (string.find(greyed.note, "Speed leveling guides", 1, true) and string.find(greyed.note, "Completionist mode still routes", 1, true)),
+    "a dungeon greyed out for Speed says Completionist still routes its quests (" .. tostring(greyed and greyed.note) .. ")")
 
 E:Load("H_Ashenvale", { reset = true })
 local acc, comp, tin

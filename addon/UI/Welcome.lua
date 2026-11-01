@@ -210,11 +210,11 @@ function render.dungeons(d)
     WL.y = y - 30
     for _, row in ipairs(S():Dungeons("speed")) do
         local note = string.format("Levels %d-%d. %s%s.", row.min, row.max,
-            row.supported and (row.quests .. " quest(s) in the guides; ") or "", row.note) .. (row.faction and (" " .. row.faction .. " only.") or "")
+            row.supported and (row.quests .. " quest(s) in the Speed guides; ") or "", row.note) .. (row.faction and (" " .. row.faction .. " only.") or "")
         WL:Option(row.name, note, row.supported and d.selected[row.id], row.supported,
             function() d.selected[row.id] = (not d.selected[row.id]) or nil end)
     end
-    WL:Text("Dungeons of the other faction are not listed. Greyed out: the guides have no quests for that dungeon in this game version.", nil, { 0.75, 0.75, 0.75 })
+    WL:Text("Dungeons of the other faction are not listed. Greyed out: the Speed leveling guides have no quests for that dungeon in this game version. This list only affects Speed; Completionist routes every dungeon's quests.", nil, { 0.75, 0.75, 0.75 })
 end
 
 function render.prefs(d)
