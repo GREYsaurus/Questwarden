@@ -63,6 +63,7 @@ accept 427 At War With The Scarlet Crusade | Needs level 5. If you are lower, {n
 turnin 5651 In Favor of Darkness [class=Priest]
 accept 5650 Garments of Darkness [class=Priest] | Needs level 5. If you are lower, {name} skips it and moves on.
 complete 5650 Garments of Darkness [class=Priest]
+complete A Putrid Task | Rotting Dead and Ravaged Corpses.
 turnin 5650 Garments of Darkness [class=Priest]
 turnin 8 A Rogue's Deal
 accept Graverobbers | Magistrate Sevren.
@@ -70,7 +71,6 @@ accept Wanted: Maggot Eye
 bind Brill [area=159,2119]
 complete Gordo's Task | Gloom Weed around Brill.
 turnin Gordo's Task
-complete A Putrid Task | Rotting Dead and Ravaged Corpses.
 complete 427 At War With The Scarlet Crusade | Scarlet Warriors at Solliden Farmstead.
 turnin 427 At War With The Scarlet Crusade
 accept 370 At War With The Scarlet Crusade
@@ -91,6 +91,7 @@ accept The Mills Overrun
 complete 5482 Doom Weed
 accept 361 A Letter Undelivered
 complete The Mills Overrun | Agamand Mills, north.
+complete 374 Proof of Demise
 complete 368 A New Plague | Vile Fin murlocs on the coast.
 turnin The Mills Overrun
 turnin 5482 Doom Weed
@@ -107,7 +108,6 @@ accept 372 At War With The Scarlet Crusade [optional]
 complete 372 At War With The Scarlet Crusade [optional]
 turnin 372 At War With The Scarlet Crusade [optional]
 turnin Graverobbers
-complete 374 Proof of Demise
 accept Forsaken Duties
 accept Deaths in the Family | Coleman Farthing, Brill inn.
 turnin 374 Proof of Demise

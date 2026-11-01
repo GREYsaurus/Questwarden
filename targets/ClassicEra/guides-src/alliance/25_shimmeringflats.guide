@@ -20,10 +20,10 @@ accept 1110 Rocket Car Parts
 accept 1176 Load Lightening
 accept 1175 A Bump in the Road
 complete 1175 A Bump in the Road
-complete 1110 Rocket Car Parts
 complete 1176 Load Lightening
 complete 1104 Salt Flat Venom
 complete 1105 Hardened Shells
+complete 1110 Rocket Car Parts
 turnin 1176 Load Lightening
 turnin 1105 Hardened Shells
 turnin 1104 Salt Flat Venom

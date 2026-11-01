@@ -131,25 +131,25 @@ accept Break a Few Eggs | Cook Torka.
 accept 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional]
 accept 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 complete 5648 Garments of Spirituality [class=Priest; race=Troll]
+complete Encroachment | Quilboars and Razormane scouts west of Razor Hill.
 complete 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete Break a Few Eggs | Taillasher eggs south of Razor Hill.
 turnin 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional]
 turnin 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 bind Razor Hill [area=362]
-complete Encroachment | Quilboars and Razormane scouts west of Razor Hill.
 turnin Break a Few Eggs
 level 10 [class=Hunter] | The taming quests need level 10.
 accept 6062 Taming the Beast [class=Hunter] | Thotar, Razor Hill. Needs level 10. If you are lower, {name} skips it and moves on.
 complete 6062 Taming the Beast [class=Hunter] | Use the Taming Rod on a Dire Mottled Boar.
+note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
+complete Dark Storms | Burning Blade cultists at Thunder Ridge.
 turnin 6062 Taming the Beast [class=Hunter]
 accept 6083 Taming the Beast [class=Hunter] | Thotar again.
 complete 6083 Taming the Beast [class=Hunter] | Use the Taming Rod on a Surf Crawler on the coast.
 turnin 6083 Taming the Beast [class=Hunter]
 accept 6082 Taming the Beast [class=Hunter] | Thotar again.
 complete 6082 Taming the Beast [class=Hunter] | Use the Taming Rod on an Armored Scorpid.
-note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
-complete Dark Storms | Burning Blade cultists at Thunder Ridge.
 turnin 6082 Taming the Beast [class=Hunter]
 accept 6081 Training the Beast [class=Hunter] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin Encroachment

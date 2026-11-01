@@ -41,12 +41,13 @@ accept 647 MacKreel's Moonshine [optional] | Needs level 28. If you are lower, {
 accept Uncovering the Past | Prospector Whelgar.
 accept Ormer's Revenge | Ormer Ironbraid, excavation site.
 complete Ormer's Revenge | Mottled Raptors and Screechers around the site.
-complete Uncovering the Past | Relics are scattered in the excavation (raptors present).
 complete 943 The Absent Minded Prospector [optional] | Stone of Relu drops from Mottled Raptor, Mottled Screecher and Mottled Scytheclaw and others. Flagongut's Fossil: loot Flagongut's Fossil.
 complete Digging Through the Ooze | Black Oozes near the Excavation site.
+complete Uncovering the Past | Relics are scattered in the excavation (raptors present).
 turnin Ormer's Revenge
 accept 295 Ormer's Revenge
 complete 295 Ormer's Revenge | Mottled Razormaws.
+complete War Banners | Dragonmaw orcs at Angerfang Encampment.
 turnin 295 Ormer's Revenge
 accept 296 Ormer's Revenge
 complete 296 Ormer's Revenge | Sarltooth, a big raptor on the hill above the site.
@@ -54,7 +55,6 @@ turnin 296 Ormer's Revenge
 turnin Uncovering the Past
 turnin In Search of The Excavation Team | Merrin Rockweaver at the Whelgar excavation.
 accept 306 In Search of The Excavation Team
-complete War Banners | Dragonmaw orcs at Angerfang Encampment.
 accept 469 Daily Delivery [optional]
 turnin The Greenwarden | Rethiel the Greenwarden, central Wetlands.
 accept Tramping Paws

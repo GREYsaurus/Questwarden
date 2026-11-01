@@ -29,24 +29,24 @@ alliance/21b_desolace.guide:57: 'Gizelton Caravan' has no objective locations in
 alliance/21b_desolace.guide:60: 'Bodyguard for Hire' has no objective locations in the database; add [at=x,y] or a goto
 alliance/22_stranglethorn.guide:106: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
 alliance/23_dustwallow.guide:63: 'Dastardly Denizens of the Deep' has no objective locations in the database; add [at=x,y] or a goto
-alliance/23_dustwallow.guide:73: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
-alliance/23_dustwallow.guide:80: 'Inspecting the Ruins' has no objective locations in the database; add [at=x,y] or a goto
+alliance/23_dustwallow.guide:75: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
+alliance/23_dustwallow.guide:81: 'Inspecting the Ruins' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:21: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:43: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
 alliance/25_feralas.guide:45: 'Freedom for All Creatures' has no objective locations in the database; add [at=x,y] or a goto
-alliance/25_feralas.guide:53: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
-alliance/26_hinterlands.guide:31: 'Featherbeard's Endorsement' has no objective locations in the database; add [at=x,y] or a goto
+alliance/25_feralas.guide:54: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/26_hinterlands.guide:32: 'Featherbeard's Endorsement' has no objective locations in the database; add [at=x,y] or a goto
 alliance/28_felwood.guide:37: 'Rescue From Jaedenar' has no objective locations in the database; add [at=x,y] or a goto
 alliance/29_burningsteppes.guide:45: 'The True Masters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/30_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6028) with no earlier accept on this faction's routes
 alliance/30_westernplaguelands.guide:25: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
-alliance/30_westernplaguelands.guide:69: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+alliance/30_westernplaguelands.guide:70: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
 horde/00_orc_troll_durotar.guide:138: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/00_orc_troll_durotar.guide:141: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/00_orc_troll_durotar.guide:144: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/00_orc_troll_durotar.guide:183: 'Hidden Enemies' has no objective locations in the database; add [at=x,y] or a goto
-horde/01_tauren_mulgore.guide:67: 'Winterhoof Cleansing' has no objective locations in the database; add [at=x,y] or a goto
-horde/01_tauren_mulgore.guide:71: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:69: 'Winterhoof Cleansing' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:73: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:85: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:96: 'Thunderhorn Cleansing' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:113: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
@@ -61,14 +61,14 @@ horde/02_undead_tirisfal.guide:84: 'Fields of Grief' has no objective locations 
 horde/03_bloodelf_eversong.guide:227: quest 9677 requires level 12 but guide ends at 11
 horde/03_bloodelf_eversong.guide:234: quest 9678 requires level 12 but guide ends at 11
 horde/04_bloodelf_ghostlands.guide:137: 'The Traitor's Shadow' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:34: 'Escorting Erland' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:35: 'Escorting Erland' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:39: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:54: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:62: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:75: 'Rot Hide Origins' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:79: 'Thule Ravenclaw' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:154: 'Free From the Hold' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:171: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:155: 'Free From the Hold' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:172: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:235: 'The Escape' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:267: 'Protect Kaya' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:276: quest 5881 requires level 23 but guide ends at 22
@@ -85,7 +85,7 @@ horde/14_thousandneedles.guide:80: 'Free at Last' has no objective locations in 
 horde/14_thousandneedles.guide:83: 'Protect Kanati Greycloud' has no objective locations in the database; add [at=x,y] or a goto
 horde/14b_desolace.guide:24: 'Gizelton Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/14b_desolace.guide:27: 'Bodyguard for Hire' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:26: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:27: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:38: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:47: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:50: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
@@ -94,7 +94,7 @@ horde/17_dustwallow.guide:19: 'Inspecting the Ruins' has no objective locations 
 horde/17_dustwallow.guide:28: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:35: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_dustwallow.guide:98: 'Justice Dispensed' has no objective locations in the database; add [at=x,y] or a goto
-horde/17_dustwallow.guide:104: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
+horde/17_dustwallow.guide:105: 'The Zeppelin Crash' has no objective locations in the database; add [at=x,y] or a goto
 horde/21_hinterlands.guide:52: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
 horde/22_felwood.guide:29: 'Corrupted Sabers' has no objective locations in the database; add [at=x,y] or a goto
 horde/22_felwood.guide:37: 'Rescue From Jaedenar' has no objective locations in the database; add [at=x,y] or a goto

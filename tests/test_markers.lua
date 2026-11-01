@@ -335,29 +335,30 @@ MOCK.units.target = nil
 
 -- 13) Several kill steps done together: each mob type gets its own icon
 reset()
--- Dun Morogh: "complete A New Threat" (troggs 707/724) is followed by "complete The Boar Hunter" (708).
--- (Durotar's makrura parts drop from more than 3 NPC types, so they are deliberately not marked.)
-loadStepWith("A_DwarfGnome_DunMorogh", function(s) return s[1] == "complete" and s.q == 170 end)
+-- Dun Morogh: "complete Dwarven Outfitters" (Tough Wolf Meat from wolves 704/705) is followed by "complete The
+-- Boar Hunter" (708), a kill pack. (Durotar's makrura parts drop from more than 3 NPC types, so they are deliberately
+-- not marked.)
+loadStepWith("A_DwarfGnome_DunMorogh", function(s) return s[1] == "complete" and s.q == 179 end)
 local r = M.rule
-local troggIcon, boarIcon = r and r.types[707], r and r.types[708]
-check(troggIcon and boarIcon and troggIcon ~= boarIcon and r.types[724] == troggIcon,
+local wolfIcon, boarIcon = r and r.types[705], r and r.types[708]
+check(wolfIcon and boarIcon and wolfIcon ~= boarIcon and r.types[704] == wolfIcon,
     "parallel kill steps: each mob type has its own icon; variants of one objective share it")
-check(troggIcon == prof.defaultMarker, "the first kill step uses the default marker")
+check(wolfIcon == prof.defaultMarker, "the first kill step uses the default marker")
 local count = 0
 for _ in pairs(r and r.icons or {}) do count = count + 1 end
 check(count <= M.MAX_TYPES, "no more than " .. M.MAX_TYPES .. " icons handed out")
-local trogg = MOCK.creature(707, 51, "Rockjaw Trogg")
+local wolf = MOCK.creature(705, 51, "Ragged Young Wolf")
 local boar = MOCK.creature(708, 52, "Small Crag Boar")
-target(trogg)
+target(wolf)
 target(boar)
-check(iconOf(trogg) == troggIcon and iconOf(boar) == boarIcon, "both mob types marked with their own icons")
+check(iconOf(wolf) == wolfIcon and iconOf(boar) == boarIcon, "both mob types marked with their own icons")
 -- the earlier step finishes: the later step's mobs stay covered, the finished one is dropped
-local idx170
-for i, s in ipairs(ns.Engine.guide.steps) do if s[1] == "complete" and s.q == 170 then idx170 = i break end end
-MOCK.units.nameplate1 = trogg -- still in view, so its icon can be removed
-ns.Engine:MarkDone(idx170)
+local idx179
+for i, s in ipairs(ns.Engine.guide.steps) do if s[1] == "complete" and s.q == 179 then idx179 = i break end end
+MOCK.units.nameplate1 = wolf -- still in view, so its icon can be removed
+ns.Engine:MarkDone(idx179)
 MOCK.tick(0.6)
-check(M.rule and M.rule.types[708] == boarIcon and M.rule.types[707] == nil and iconOf(boar) == boarIcon and iconOf(trogg) == nil,
+check(M.rule and M.rule.types[708] == boarIcon and M.rule.types[705] == nil and iconOf(boar) == boarIcon and iconOf(wolf) == nil,
     "finishing one kill step keeps the other's icon and clears the finished one's")
 
 -- 14) Combat and groups: marking is allowed in combat and in a party; a raid needs leader/assist

@@ -230,7 +230,7 @@ None.
 - H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:56, Scourge/WARRIOR]
 - H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.5 (quests only: 17) [horde/12_barrens.guide:94, Orc/WARLOCK]
 - H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.4 (quests only: 17) [horde/12_barrens.guide:92, Troll/PRIEST]
-- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 30.0 (quests only: 29) [horde/21_hillsbradfoothills.guide:37, Orc/WARRIOR]
+- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 30.0 (quests only: 29) [horde/21_hillsbradfoothills.guide:38, Orc/WARRIOR]
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8
 - H_21_HillsbradFoothills: reduced-XP quest: The Rescue (498, level 22) at estimated level 29.8

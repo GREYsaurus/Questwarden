@@ -46,12 +46,12 @@ accept 4131 The Woodpaw Gnolls
 complete 4131 The Woodpaw Gnolls | Woodpaw gnolls in the southern hills.
 turnin 4131 The Woodpaw Gnolls
 complete 2982 The High Wilderness
+complete 2821 The Mark of Quality
 accept 4135 The Writhing Deep
 complete 4135 The Writhing Deep | Inside the Zukk'ash hive at the Writhing Deep.
 turnin 4135 The Writhing Deep
 accept 4265 Freed from the Hive
 grind 45.7 Zukk'ash Wasp, Zukk'ash Worker, Zukk'ash Stinger [at=74.6,62.3] | Azshara starts at 46: grind these to 70% through level 45, and the quests left here bring you the rest of the way.
-complete 2821 The Mark of Quality
 turnin 4265 Freed from the Hive
 turnin 2821 The Mark of Quality
 turnin 2982 The High Wilderness

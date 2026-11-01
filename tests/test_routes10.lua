@@ -9,18 +9,24 @@ local E, G = ns.Engine, ns.Guides
 -- Saved progress follows reordered steps -------------------------------------------------------------
 local L = ns.GuideLayouts and ns.GuideLayouts.H_Barrens
 local M = L and L.maps and L.maps[2]
-check(L and L.layout == 2 and M and next(M), "H_Barrens has a step layout map")
+check(L and L.layout >= 2 and M and next(M), "H_Barrens has a step layout map")
+-- Progress saved before any layout walks every map up to the current one.
+local function follow(i)
+    for n = 2, L.layout do i = L.maps[n] and L.maps[n][i] or i end
+    return i
+end
 local oldIdx, newIdx
-for k, v in pairs(M) do oldIdx, newIdx = k, v break end
+for k in pairs(M) do oldIdx = k break end
+newIdx = follow(oldIdx)
 ns.char.progress.H_Barrens = { step = oldIdx, done = { [oldIdx] = true }, skipped = { [1] = true } }
 local p = ns:GetProgress("H_Barrens")
-check(p.layout == 2 and p.done[newIdx] == true and (oldIdx == newIdx or not p.done[oldIdx]), "done step moved to its new index")
+check(p.layout == L.layout and p.done[newIdx] == true and (oldIdx == newIdx or not p.done[oldIdx]), "done step moved to its new index")
 check(p.step == newIdx, "current step moved too")
-check(p.skipped[M[1] or 1] == true, "skipped steps moved")
+check(p.skipped[follow(1)] == true, "skipped steps moved")
 local again = ns:GetProgress("H_Barrens")
 check(again.done[newIdx] == true, "the remap runs once")
 ns:ResetProgress("H_Barrens")
-check(ns.char.progress.H_Barrens.layout == 2, "fresh progress records the current layout")
+check(ns.char.progress.H_Barrens.layout == L.layout, "fresh progress records the current layout")
 check(ns:GetProgress("A_Human_Elwynn").layout == (ns.GuideLayouts.A_Human_Elwynn and ns.GuideLayouts.A_Human_Elwynn.layout or nil), "guides without changes keep no layout")
 
 -- Two reorders in a row (0.7.0 -> 0.9.0 -> now): progress from either release lands on the same step.

@@ -19,6 +19,7 @@ accept The Shrine of Dath'Remar
 accept 8344 Windows to the Source [class=Warlock] | Summoner Teli'Larien, the warlock trainer.
 accept Reclaiming Sunstrider Isle | Magistrix Erona.
 complete Reclaiming Sunstrider Isle | Mana Wyrms around the isle.
+complete 8344 Windows to the Source [class=Warlock] | Arcane Wraiths and the Tainted Arcane Wraith, west of the Sunspire.
 turnin Reclaiming Sunstrider Isle
 accept 9676 Paladin Training [class=Paladin] | Magistrix Erona sends you to your class trainer.
 accept 9393 Hunter Training [class=Hunter]
@@ -31,7 +32,6 @@ complete Unfortunate Measures | Springpaw Cubs and Lynxes.
 complete Solanian's Belongings | Scrying orb, scroll and journal around the isle.
 complete The Shrine of Dath'Remar | Read the plaque at the shrine.
 complete A Fistful of Slivers | Arcane Slivers from tenders and wyrms.
-complete 8344 Windows to the Source [class=Warlock] | Arcane Wraiths and the Tainted Arcane Wraith, west of the Sunspire.
 accept 8338 Tainted Arcane Sliver [class=Warlock; optional]
 accept 8338 Tainted Arcane Sliver [class=Paladin,Hunter,Rogue,Priest,Mage; optional]
 complete Thirst Unending | Use Arcane Torrent on a Mana Wyrm.
@@ -118,10 +118,11 @@ turnin 9064 Taking the Fall
 accept 9066 Swift Discipline
 turnin The Dead Scar
 complete 8884 Fish Heads, Fish Heads... | Grimscale Murloc Head drops from Grimscale Forager, Grimscale Murloc and Grimscale Oracle and others.
-complete Corrupted Soil
-complete Lost Armaments
 complete Situation at Sunsail Anchorage | Grimscale murlocs at the anchorage.
 complete 9489 Cleansing the Scar [class=Priest; optional]
+complete 8886 Grimscale Pirates! | Captain Kelisendra's Cargo drops from Grimscale Murloc, Grimscale Oracle and Mmmrrrggglll.
+complete Corrupted Soil
+complete Lost Armaments
 turnin Delivery to the North Sanctum | Ley-Keeper Caidanis.
 accept Malfunction at the West Sanctum
 turnin Darnassian Intrusions
@@ -134,7 +135,6 @@ complete 9066 Swift Discipline [class=Paladin,Priest,Mage]
 complete 9066 Swift Discipline [class=Hunter,Rogue,Warlock]
 accept 8885 The Ring of Mmmrrrggglll
 complete 8885 The Ring of Mmmrrrggglll | Ring of Mmmrrrggglll drops from Mmmrrrggglll.
-complete 8886 Grimscale Pirates! | Captain Kelisendra's Cargo drops from Grimscale Murloc, Grimscale Oracle and Mmmrrrggglll.
 turnin 8885 The Ring of Mmmrrrggglll
 turnin 8886 Grimscale Pirates!
 turnin Lost Armaments
@@ -190,13 +190,13 @@ turnin Farstrider Retreat [optional] | Lieutenant Dawnrunner.
 accept Amani Encroachment | Lieutenant Dawnrunner, Farstrider Retreat.
 accept 9484 Taming the Beast [class=Hunter; optional] | Escort quest: start it when you are ready to follow.
 complete 9484 Taming the Beast [class=Hunter; optional] | Escort: stay close; it fails if the NPC dies.
+complete Amani Encroachment | Amani trolls at Zeb'Watha.
 turnin 9484 Taming the Beast [class=Hunter; optional]
 accept 9486 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow.
 complete 9486 Taming the Beast [class=Hunter] | Escort: stay close; it fails if the NPC dies.
 turnin 9486 Taming the Beast [class=Hunter]
 accept 9485 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow.
 complete 9403 The Purest Water [class=Mage]
-complete Amani Encroachment | Amani trolls at Zeb'Watha.
 turnin Amani Encroachment
 turnin 9360 Amani Invasion
 accept 9363 Warning Fairbreeze Village [optional]

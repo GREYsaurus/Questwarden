@@ -4,6 +4,16 @@ The route audit (`tools/build.ps1 routes`) works for every target. It walks ever
 
 **Objectives before far turn-ins:** `python tools/research/cluster_objectives.py <Target> [--apply]` finds complete steps of quests already in your log whose objectives are next to the ones you just finished, placed after a turn-in far away, and moves them before that turn-in. Each move is kept only if it shortens the guide's modeled walk; it never moves a step past a hearthstone, flight, boat, dungeon or another-zone step, past another step of the same quest or a step that names its items, or onto a quest too high for the route's level there. After `--apply`, run `guides` and `routes`, then `python tools/research/layout_map.py <Target>` so saved progress follows the new order (Guides/Layouts.lua).
 
+**Kill packs:** `python tools/research/kill_packs.py <Target> [--apply]` moves complete steps of quests already in your log up next to a complete step whose mobs spawn in the same area: within 8 map percent, or the same mobs, kill targets or item droppers. The compiler then links them into a kill pack that the add-on shows as one ([GUIDE_FORMAT.md](GUIDE_FORMAT.md#kill-packs)). Any number of steps can join.
+
+A step doesn't move:
+- past another step of its quest, a step that names its items, an item-started pickup, or a step that takes you elsewhere or into another zone;
+- when its quest has more than one complete step or only elite targets;
+- when its quest is more than 2 levels above the route's level there;
+- when the modeled walk gets more than 1 map percent longer. In this model, a complete step costs no walk when its mobs are within 8 map percent of where you are.
+
+After `--apply`, run `guides` and `routes`, then `layout_map.py`. The first run (2026-11-01) moved 39 Classic Era and 94 TBC steps. That gave 100 and 184 packs, with up to 7 and 8 quests in one pack.
+
 **Grind steps at dense spawns:** `python tools/research/grind_spots.py <Target> [--min-short 0.75] [--dry-run]` looks at every `level N` check in the guide sources. It acts only where the model character arrives at least 0.75 levels short (the lowest over all routes, from step-levels.csv), and adds one grind step for it:
 - **Mobs:** non-elite, non-friendly NPCs of the bundled data whose level range touches N-2..N, with at least 5 spawn points in the zone. No rares.
 - **Spot:** the densest cluster of their spawns (most points within 6 map percent) near one of the guide's last 25 quest steps in the zone. A later step wins unless an earlier spot is much denser. Steps before a hearthstone, flight, travel, level or grind step don't count.

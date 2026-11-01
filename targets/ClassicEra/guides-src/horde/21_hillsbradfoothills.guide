@@ -24,9 +24,10 @@ accept 549 WANTED: Syndicate Personnel
 complete 498 The Rescue
 turnin 494 Time To Strike [optional] | High Executor Darthalia, Tarren Mill.
 complete 549 WANTED: Syndicate Personnel
-complete 527 Battle of Hillsbrad | Hillsbrad farmers and peasants on the farms.
 complete 496 Elixir of Suffering | Hillsbrad farm creatures.
 complete 1066 Blood of Innocents [optional] | Vial of Innocent Blood drops from Syndicate Shadow Mage.
+complete 547 Humbert's Sword
+complete 527 Battle of Hillsbrad | Hillsbrad farmers and peasants on the farms.
 turnin 527 Battle of Hillsbrad
 turnin 549 WANTED: Syndicate Personnel
 accept 528 Battle of Hillsbrad
@@ -42,8 +43,8 @@ complete 509 Elixir of Agony
 turnin 509 Elixir of Agony
 complete 546 Souvenirs of Death | Hillsbrad farmers and peasants drop the skulls.
 complete 528 Battle of Hillsbrad
+complete 567 Dangerous!
 complete 501 Elixir of Pain | Mountain Lions.
-complete 547 Humbert's Sword
 turnin 501 Elixir of Pain
 accept 502 Elixir of Pain [optional]
 turnin 528 Battle of Hillsbrad
@@ -54,7 +55,6 @@ accept 532 Battle of Hillsbrad
 complete 532 Battle of Hillsbrad
 turnin 532 Battle of Hillsbrad
 turnin 502 Elixir of Pain [optional]
-complete 567 Dangerous!
 turnin 567 Dangerous!
 turnin 547 Humbert's Sword
 turnin 498 The Rescue

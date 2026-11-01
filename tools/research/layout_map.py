@@ -23,9 +23,13 @@ LAYOUTS = os.path.join(ROOT, "targets", TARGET, "addon", "Guides", "Layouts.lua"
 STEP_RE = re.compile(r'^    \{"\w+".*\},\s*$', re.M)
 
 
+# Fields the compiler derives from step positions (kill packs, item-start kill steps) change with any reorder.
+DERIVED_RE = re.compile(r",(pack=\d+|via=\{[\d,]*\})")
+
+
 def guide(text):
     m = re.search(r'id="([^"]+)", name=', text)
-    return (m.group(1), [s.strip() for s in STEP_RE.findall(text)]) if m else (None, [])
+    return (m.group(1), [DERIVED_RE.sub("", s.strip()) for s in STEP_RE.findall(text)]) if m else (None, [])
 
 
 def mapping(old, new):

@@ -9,17 +9,17 @@ alliance/24_stranglethornvale.guide:67: 'Bookie Herod' has no objective location
 alliance/29_dustwallowmarsh.guide:57: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/36_feralas.guide:24: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
 alliance/36_feralas.guide:46: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
-alliance/36_feralas.guide:50: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/36_feralas.guide:51: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
 alliance/52_westernplaguelands.guide:29: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
-alliance/52_westernplaguelands.guide:72: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
-horde/01_tauren_mulgore.guide:67: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
+alliance/52_westernplaguelands.guide:73: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:68: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
 horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:131: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:30: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:31: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:39: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:51: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
@@ -40,7 +40,7 @@ alliance/24_stranglethornvale.guide:43 (Worgen in the Woods): prerequisite 222 '
 alliance/24_stranglethornvale.guide:48 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:88 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 horde/10_barrens.guide:49 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_barrens.guide:30 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_barrens.guide:31 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_barrens.guide:94 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:22 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:30 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)

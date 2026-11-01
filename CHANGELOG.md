@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- **Kill packs: kill and drop quests in the same area are done together.** When the mobs of several quests in your log spawn in the same area, their objective steps now show together as current, so you kill them all in one trip. Examples: Dwarven Outfitters and The Boar Hunter in Dun Morogh; the four Un'Goro quests that join Beware of Pterrordax on the Classic Era Horde route.
+  - **Any number of quests.** A pack holds as many quests as share the area: up to 7 in Classic Era and 8 in TBC.
+  - **Drop quests count too:** a quest whose items drop from mobs joins by those mobs.
+  - **Targets, macro and raid markers** cover the mobs of every open step of the pack. Each step gets its own icon, so a pack can use all eight icons, not just the usual four. The 255-character macro limit still applies.
+  - **Finishing one step** of a pack leaves the others current. The arrow still points at the first open one.
+  - **The guides were reordered for this.** 39 Classic Era steps and 94 TBC steps moved next to the steps they overlap with. That gives 100 packs in Classic Era and 184 in TBC. Saved progress follows the moved steps. The route model's XP and levels are unchanged, as the quests are the same.
+
 ## 0.1.0-alpha.20 (2026-11-01)
 
 - **Quests started by dropped items.** A pickup whose quest starts from an item now knows the item, the mobs that drop it (from the data) and the later kill steps of the guide where those mobs are. Without the item the guide does those kill steps first and their step says the mobs can drop it. When the item is in your bags the guide comes back to the pickup: "Use [item] to accept ...". If the kill steps are behind you and there is still no item, the pickup asks you to get it from the droppers, with the arrow on the nearest one, or to skip. The quest's objective and turn-in steps wait with the pickup. Having the item or opening its quest window is not acceptance. A skipped pickup counts as done if you take the quest later. Completionist now routes these quests: at the nearest dropper, after the zone's other objectives. A skipped one is kept out until the item is in your bags. No drop rates are claimed. Details: docs/ITEM_STARTS.md.

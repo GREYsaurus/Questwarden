@@ -58,6 +58,7 @@ turnin A Task Unfinished | Bloodhoof Village.
 bind Bloodhoof Village [area=222]
 accept Poison Water | Mull Thunderhorn.
 complete Poison Water | Prairie wolves and plainstriders.
+complete 745 Sharing the Land
 turnin Poison Water
 accept Winterhoof Cleansing
 complete Winterhoof Cleansing | Cleanse the Winterhoof Water Well.
@@ -67,7 +68,6 @@ accept The Ravaged Caravan | Morin Cloudstalker.
 complete The Ravaged Caravan | The supply crate at the caravan north-east.
 turnin The Ravaged Caravan
 accept 751 The Ravaged Caravan
-complete 745 Sharing the Land
 complete 766 Mazzranache [optional] | Prairie Wolf Heart drops from Prairie Stalker, Prairie Wolf and Prairie Wolf Alpha. Flatland Cougar Femur drops from Flatland Cougar.
 complete Thunderhorn Totem | Flatland Cougars and Prairie Stalkers.
 turnin 766 Mazzranache [optional]

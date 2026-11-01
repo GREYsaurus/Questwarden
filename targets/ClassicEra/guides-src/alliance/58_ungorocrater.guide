@@ -17,10 +17,10 @@ train
 accept 4501 Beware of Pterrordax | The sign on the ramp down into the crater.
 accept 4289 The Apes of Un'Goro | Torwa Pathfinder at the east side of the crater.
 complete 4501 Beware of Pterrordax | Pterrordaxes and Frenzied Pterrordaxes.
+complete 4289 The Apes of Un'Goro | Un'Goro gorillas north-east.
 accept 4292 The Bait for Lar'korwi
 complete 4292 The Bait for Lar'korwi [group=2] | Lar'korwi's Head drops from Lar'korwi.
 turnin 4292 The Bait for Lar'korwi
-complete 4289 The Apes of Un'Goro | Un'Goro gorillas north-east.
 turnin 4289 The Apes of Un'Goro
 turnin 4501 Beware of Pterrordax
 accept 4492 Lost!

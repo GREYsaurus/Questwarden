@@ -63,7 +63,8 @@ local function say(msg) if prof().markNotify then ns:Print(msg) end end
 --     of its quest items (DB.ObjectiveNpcIds: up to 6 kinds, or the ones in your zone) get the
 --     next free icon in the order: default marker, skull, cross, square, moon, triangle, diamond,
 --     circle, star. At most MAX_TYPES icons are handed out, so mob types never share or fight
---     over one icon. An NPC id named by two steps keeps the first step's icon.
+--     over one icon; a kill pack (Engine:PackSteps) gets one icon per open step, up to all eight.
+--     An NPC id named by two steps keeps the first step's icon.
 local MAX_TYPES = 4
 local ICON_ORDER = { 8, 7, 6, 5, 4, 3, 2, 1 }
 local BLOCK_SCAN = 8
@@ -110,7 +111,8 @@ function M:BuildRule()
     local g, cur = E.guide, E.current
     if not (g and cur) then return nil, "no active guide step" end
     local parts = {}
-    for i = cur, math.min(#g.steps, cur + BLOCK_SCAN) do
+    local pack = E:PackSteps()
+    for i = cur, math.min(#g.steps, math.max(cur + BLOCK_SCAN, pack[#pack] or cur)) do
         local s, st = g.steps[i], E.status[i]
         local open = (i == cur) or st == "pending" or st == "active"
         if i > cur and open and s[1] ~= "complete" then break end
@@ -163,13 +165,14 @@ function M:BuildRule()
         if not used[i] then used[i] = true order[#order + 1] = i end
     end
     local types, icons, n, nextIcon = {}, {}, 0, 1
+    local limit = math.max(MAX_TYPES, #pack)
     for _, part in ipairs(parts) do
         local icon = part.icon
-        if not icon and n < MAX_TYPES and order[nextIcon] then
+        if not icon and n < limit and order[nextIcon] then
             icon = order[nextIcon]
             nextIcon = nextIcon + 1
         end
-        if icon and (icons[icon] or n < MAX_TYPES) then
+        if icon and (icons[icon] or n < limit) then
             local added = false
             for id in pairs(part.npcs) do
                 if not types[id] then types[id] = icon added = true end

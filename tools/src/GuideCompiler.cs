@@ -207,6 +207,7 @@ namespace GuideTools
         public List<int> Drops;                  // accept: NPCs that drop Starter (preferring those in the guide's zone)
         public List<int> Via;                    // accept: later steps (1-based) that kill a dropper of Starter
         public bool IfFound;                     // [iffound]: shown only once the start item is in your bags or the quest in your log
+        public int Pack;                         // complete: 1-based first step of its kill pack (0 = none), see LinkKillPacks
     }
 
     public sealed class CGuide
@@ -285,6 +286,7 @@ namespace GuideTools
             }
             CrossChecks(res, state);
             foreach (var g in res.Guides) LinkStarterKills(res.Db, g);
+            foreach (var g in res.Guides) LinkKillPacks(res.Db, g);
             res.Routes = RoamRoutes.Compile(srcDir, res);
             res.RoamInventory = RoamRoutes.Inventory(res);
             if (res.Errors.Count == 0 && write) Write(res, addOnDir);
@@ -1067,6 +1069,50 @@ namespace GuideTools
             }
         }
 
+        // Kill packs: back-to-back complete steps whose mobs (kill targets, kill credit, or the droppers of their quest
+        // items) spawn in the same area are done together. A step joins the pack when one of its mob spawns is within
+        // PackRadius map percent of a spawn of a step already in it (or the two share a mob); a step without mobs ends
+        // the pack, and one far from it starts a new one. The add-on shows every open step of the current step's pack
+        // as current, and targets and marks all their mobs (docs/GUIDE_FORMAT.md, Kill packs).
+        public const double PackRadius = 8.0;
+
+        static void LinkKillPacks(BundledDb db, CGuide g)
+        {
+            var mobs = new Dictionary<int, HashSet<int>>();
+            var pts = new Dictionary<int, List<double[]>>();
+            int start = -1;
+            for (int i = 0; i < g.Steps.Count; i++)
+            {
+                var s = g.Steps[i];
+                LTable rec = null;
+                bool kill = s.Kind == "complete" && s.Quest > 0 && db.Quests.TryGetValue(s.Quest, out rec);
+                if (kill)
+                {
+                    mobs[i] = ObjectiveNpcs(db, rec);
+                    pts[i] = mobs[i].SelectMany(n => db.NpcSpawns(n)).ToList();
+                    kill = pts[i].Count > 0;
+                }
+                if (!kill) { ClosePack(g, start, i); start = -1; continue; }
+                bool joins = start >= 0 && Enumerable.Range(start, i - start).Any(j => mobs[j].Overlaps(mobs[i]) || Near(pts[j], pts[i]));
+                if (!joins) { ClosePack(g, start, i); start = i; }
+            }
+            ClosePack(g, start, g.Steps.Count);
+        }
+
+        static void ClosePack(CGuide g, int start, int end)
+        {
+            if (start < 0 || end - start < 2) return;
+            for (int j = start; j < end; j++) g.Steps[j].Pack = start + 1;
+        }
+
+        static bool Near(List<double[]> a, List<double[]> b)
+        {
+            foreach (var p in a)
+                foreach (var q in b)
+                    if ((int)p[0] == (int)q[0] && (p[1] - q[1]) * (p[1] - q[1]) + (p[2] - q[2]) * (p[2] - q[2]) <= PackRadius * PackRadius) return true;
+            return false;
+        }
+
         static void PlaceAt(List<double[]> spawns, CStep s, int zone, ref int lz, ref double lx, ref double ly)
         {
             double bestD = double.MaxValue; double[] best = null;
@@ -1340,6 +1386,7 @@ namespace GuideTools
             if (s.Drops != null) sb.Append(",drops={").Append(string.Join(",", s.Drops.Select(x => x.ToString()).ToArray())).Append("}");
             if (s.Via != null) sb.Append(",via={").Append(string.Join(",", s.Via.Select(x => x.ToString()).ToArray())).Append("}");
             if (s.IfFound) sb.Append(",ifFound=true");
+            if (s.Pack > 0) sb.Append(",pack=").Append(s.Pack);
             sb.Append(",v=").Append(s.Verified ? 1 : 0);
             return sb.Append("}").ToString();
         }

@@ -20,6 +20,7 @@ accept 10489 Felling an Ancient Tree
 complete The Encroaching Wilderness
 accept 10524 Thunderlord Clan Artifacts
 complete The Bladespire Threat | Elite: Bladespire Sober Defender; bring help or skip.
+complete 10489 Felling an Ancient Tree
 complete They Stole Me Hookah and Me Brews! | T'chali's Hookah: loot T'chali's Hookah. Bloodmaul Brutebane Brew drops from Bloodmaul Brewmaster.
 complete Killing the Crawlers
 turnin The Encroaching Wilderness
@@ -33,7 +34,6 @@ complete Dust from the Drakes | Dust of the Fey Drake drops from Fey Drake.
 complete The Bloodmaul Ogres
 turnin The Bloodmaul Ogres
 turnin They Stole Me Hookah and Me Brews!
-complete 10489 Felling an Ancient Tree
 accept Bladespire Kegger | Group quest: Bladespire Sober Defender is elite.
 complete Bladespire Kegger | Elite: Bladespire Sober Defender; bring help or skip.
 turnin Bladespire Kegger
@@ -52,10 +52,10 @@ accept Little Embers
 accept From the Ashes
 accept Poaching from Poachers
 complete ...and a Time for Action
+complete Little Embers
 complete Poaching from Poachers | Wyrmcult Net drops from Wyrmcult Poacher.
 complete Culling the Wild
 turnin Poaching from Poachers
-complete Little Embers
 complete From the Ashes | Click Fertile Volcanic Soil.
 turnin ...and a Time for Action
 turnin Culling the Wild
@@ -70,13 +70,13 @@ accept Silkwing Cocoons | Taerek, Mok'Nathal Village.
 accept 10618 The Softest Wings
 accept The Stones of Vekh'nir | Dertrok.
 complete 10618 The Softest Wings
+complete Silkwing Cocoons | Silkwing Cocoons from Silkwing Larvae in the same valley.
 complete The Stones of Vekh'nir
 turnin The Stones of Vekh'nir
 accept Trial and Error
 accept Understanding the Mok'Nathal | Leoroxx.
 complete Trial and Error | Dullgrom Dredgers south-east of the village.
 complete Understanding the Mok'Nathal | Vekh, south-east of the village.
-complete Silkwing Cocoons | Silkwing Cocoons from Silkwing Larvae in the same valley.
 turnin Trial and Error | Dertrok.
 turnin Understanding the Mok'Nathal | Leoroxx.
 turnin Silkwing Cocoons | Taerek.

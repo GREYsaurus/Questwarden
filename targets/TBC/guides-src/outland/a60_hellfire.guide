@@ -92,6 +92,7 @@ accept Helboar, the Other White Meat
 accept An Old Gift | Father Malgor Devidicus.
 complete Helboar, the Other White Meat | Helboars around Honor Hold.
 complete Laying Waste to the Unwanted | Burn the fuel tanks along the Path of Glory.
+complete 9355 A Job for an Intelligent Man
 complete How to Serve Goblins | Rescue goblins from the Bonechewer camps.
 complete When This Mine's a-Rockin' | Hellfire Quarry mine.
 complete Unyielding Souls | Unyielding orcs at the Hellfire Citadel approach.
@@ -120,7 +121,6 @@ accept 10367 A Traitor Among Us
 accept Rampaging Ravagers | Gremni Longbeard. Needs level 60; {name} skips it if you are lower and brings it back when you ding.
 accept The Arakkoa Threat | Needs level 60. If you are lower, {name} skips it and moves on.
 turnin Unyielding Souls
-complete 9355 A Job for an Intelligent Man
 accept Looking to the Leadership
 turnin When This Mine's a-Rockin'
 turnin 9355 A Job for an Intelligent Man

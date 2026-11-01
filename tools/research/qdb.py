@@ -155,7 +155,7 @@ class Target:
                                   z=int(z.group(1)) if z else None, x=float(z.group(2)) if z else None,
                                   y=float(z.group(3)) if z else None, filtered=("classes=" in body or "races=" in body),
                                   opt=bool(re.search(r"\b(optional|hcSkip|hcOnly|elite)=true|\bdungeon=", body)),
-                                  dungeon=dng.group(1) if dng else None))
+                                  dungeon=dng.group(1) if dng else None, starter="starter=" in body))
             gs[m.group(1)] = dict(id=m.group(1), faction=m.group(2), min=int(m.group(3)), max=int(m.group(4)),
                                   zone=int(m.group(5)), steps=steps, file=None)
         for p in glob.glob(os.path.join(self.dir, "guides-src", "*", "*.guide")):

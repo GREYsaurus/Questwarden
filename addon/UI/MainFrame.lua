@@ -254,11 +254,13 @@ function Main:Render()
             if font then r.detail:SetFont(font, math.max(8, size - 2)) end
         end
         r.title:SetText(ns.StepText:Title(s))
-        local details = (n == 1) and ns.StepText:Details(s) or {}
+        -- The current step, and the other open steps of its kill pack (done together), are shown as current.
+        local cur = n == 1 or E.status[idx] == "active"
+        local details = cur and ns.StepText:Details(s) or {}
         r.detail:SetText(table.concat(details, "\n"))
         r.detail:SetShown(#details > 0)
-        r.title:SetAlpha(n == 1 and 1 or 0.75)
-        r.hl:SetShown(n == 1)
+        r.title:SetAlpha(cur and 1 or 0.75)
+        r.hl:SetShown(cur)
         local h = r.title:GetStringHeight() + (#details > 0 and (r.detail:GetStringHeight() + 4) or 0) + ROW_PAD
         r:SetHeight(h)
         r:ClearAllPoints()

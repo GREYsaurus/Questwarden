@@ -64,6 +64,7 @@ note The next quest, Get Me Out of Here!, is an escort: pick it up only when you
 accept 6132 Get Me Out of Here!
 complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
 complete 5561 Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
+complete 1387 Centaur Bounty | Centaur Ears from the same Kolkar.
 complete 5501 Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.
 turnin 5943 Gizelton Caravan
 turnin 5821 Bodyguard for Hire
@@ -74,7 +75,6 @@ turnin 5561 Kodo Roundup
 turnin 1385 Brutal Politics | Warug in the Magram village, east.
 accept 1386 Assault on the Kolkar
 complete 1386 Assault on the Kolkar | Kolkar village north of the Magram.
-complete 1387 Centaur Bounty | Centaur Ears from the same Kolkar.
 turnin 1386 Assault on the Kolkar
 turnin 5501 Bone Collector | Kormek's Hut.
 turnin 1387 Centaur Bounty | Nijel's Point.

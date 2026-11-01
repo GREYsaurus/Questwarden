@@ -38,8 +38,8 @@ bind Thelsamar [area=144,2101]
 accept 6387 Honor Students [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 accept 6387 Honor Students [race=Gnome]
 complete Rat Catching | Tunnel Rat Kobolds at the Silver Stream Mine, north of Thelsamar.
-turnin Rat Catching
 complete Thelsamar Blood Sausages | Bears and spiders around Thelsamar.
+turnin Rat Catching
 turnin Thelsamar Blood Sausages
 turnin 6387 Honor Students [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 turnin 6387 Honor Students [race=Gnome]

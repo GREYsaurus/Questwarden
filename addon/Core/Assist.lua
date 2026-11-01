@@ -192,11 +192,19 @@ end
 -- Targeting --------------------------------------------------------------------------------------------
 
 -- NPC ids the current step is about: explicit [mark] NPCs, kill objectives and the mobs that drop quest items
--- (DB.ObjectiveNpcIds), quest giver / finisher.
+-- (DB.ObjectiveNpcIds), quest giver / finisher. With a kill pack, those of all its open steps (Engine:PackSteps).
 function A:StepNpcIds()
-    local s = currentStep()
     local ids = {}
+    local s, E = currentStep(), ns.Engine
     if not s then return ids end
+    self:AddStepNpcs(s, ids)
+    for k, i in ipairs(E.guide and E:PackSteps() or {}) do
+        if k > 1 then self:AddStepNpcs(E.guide.steps[i], ids) end
+    end
+    return ids
+end
+
+function A:AddStepNpcs(s, ids)
     if type(s.mark) == "table" and s.mark.npcs then for _, id in ipairs(s.mark.npcs) do ids[id] = true end end
     local q = s.q and ns.DB.GetQuestByID(s.q)
     if q then

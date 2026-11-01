@@ -88,6 +88,8 @@ accept 341 Chapter III
 accept 342 Chapter IV
 turnin Welcome to the Jungle
 complete 339 Chapter I
+complete The Second Rebellion | Kurzen Jungle Fighters, Kurzen's Compound.
+complete Bad Medicine | Kurzen Medicine Men drop the Jungle Remedy.
 complete 340 Chapter II
 complete 341 Chapter III
 complete 342 Chapter IV
@@ -101,8 +103,6 @@ accept 190 Panther Mastery
 complete 185 Tiger Mastery | Young Stranglethorn Tigers.
 complete 190 Panther Mastery | Young Panthers.
 complete 194 Raptor Mastery | Stranglethorn Raptors.
-complete The Second Rebellion | Kurzen Jungle Fighters, Kurzen's Compound.
-complete Bad Medicine | Kurzen Medicine Men drop the Jungle Remedy.
 complete Bookie Herod | Bookie Herod's records in Kurzen's Compound.
 turnin 185 Tiger Mastery
 accept 186 Tiger Mastery
@@ -151,6 +151,8 @@ accept Scaring Shaky | "Sea Wolf" MacKinley.
 accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Elder Saltwater Crocolisks and Snapjaws.
+complete 213 Hostile Takeover
+complete 189 Bloodscalp Ears
 complete Singing Blue Shards | Crystal Spine Basilisks.
 complete 187 Tiger Mastery | Elder Stranglethorn Tigers.
 turnin Supply and Demand
@@ -166,6 +168,7 @@ accept 597 The Bloodsail Buccaneers
 turnin Return to MacKinley
 turnin 597 The Bloodsail Buccaneers
 complete Some Assembly Required | Snapjaw Crocolisks.
+complete 192 Panther Mastery | Shadowmaw Panthers.
 complete Venture Company Mining | Venture Co. miners at the mines.
 turnin Some Assembly Required
 accept 599 The Bloodsail Buccaneers
@@ -173,12 +176,9 @@ turnin Venture Company Mining
 accept 609 Voodoo Dues
 accept 628 Excelsior
 turnin 621 Zanzil's Secret
-complete 192 Panther Mastery | Shadowmaw Panthers.
 turnin 187 Tiger Mastery
 accept 328 The Hidden Key
 complete 628 Excelsior
-complete 213 Hostile Takeover
-complete 189 Bloodscalp Ears
 turnin 213 Hostile Takeover
 turnin 599 The Bloodsail Buccaneers
 complete 609 Voodoo Dues

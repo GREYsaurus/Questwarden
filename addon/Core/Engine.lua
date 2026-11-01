@@ -12,6 +12,9 @@
 -- everything else (quest automation, vendors, markers); only the choice of the current step passes it by.
 -- An [iffound] quest (an item many mobs drop, rarely) is "na" until its item is in your bags or the quest is in
 -- your log: hidden and not counted, never waited for or farmed.
+-- Kill packs: objective steps whose mobs spawn in the same area share a pack (s.pack = the pack's first step,
+-- compiled by GuideCompiler.LinkKillPacks). When the current step is in one, the pack's other open steps are
+-- "active" too: shown as current, and their mobs targeted and marked (Engine:PackSteps).
 -- Completion rules per step type are in COMPLETERS below. Rules only use reliable signals
 -- (quest flags, quest log, level, bind location, explicit UI messages). Anything else waits for
 -- the player to click the step (manual confirmation) - the engine never guesses.
@@ -311,6 +314,13 @@ function Engine:Refresh(silent)
     if firstOpen then
         self.status[firstOpen] = "active"
         p.step = firstOpen
+        local pack = g.steps[firstOpen].pack
+        if pack then
+            for i = firstOpen + 1, #g.steps do
+                if g.steps[i].pack ~= pack then break end
+                if self.status[i] == "pending" and not self.waiting[i] then self.status[i] = "active" end
+            end
+        end
     end
     if not firstOpen then
         p.step = #g.steps + 1
@@ -436,10 +446,25 @@ function Engine:Counts()
     return done, total
 end
 
--- Next N open steps starting at the current one (for display).
+-- The current step and the open steps of its kill pack (just the current step when it has none).
+function Engine:PackSteps()
+    local out = {}
+    if not self.guide or not self.current then return out end
+    out[1] = self.current
+    local steps, pack = self.guide.steps, self.guide.steps[self.current].pack
+    if not pack then return out end
+    for i = self.current + 1, #steps do
+        if steps[i].pack ~= pack then break end
+        if self.status[i] == "active" then out[#out + 1] = i end
+    end
+    return out
+end
+
+-- Next N open steps starting at the current one (for display); the whole current kill pack even when it is longer.
 function Engine:Upcoming(n)
     local out = {}
     if not self.guide or not self.current then return out end
+    n = math.max(n, #self:PackSteps())
     for i = self.current, #self.guide.steps do
         local st = self.status[i]
         if st == "active" or (st == "pending" and not self.waiting[i]) then

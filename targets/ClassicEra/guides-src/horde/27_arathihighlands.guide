@@ -24,6 +24,7 @@ accept 671 Foul Magics
 turnin 655 Hammerfall | Tor'gan.
 accept 672 Raising Spirits | Tor'gan.
 complete 672 Raising Spirits | Highland Striders.
+complete 642 The Princess Trapped | Kobolds at Drywhisker Gorge.
 complete 671 Foul Magics | Syndicate mages.
 turnin 672 Raising Spirits
 accept 674 Raising Spirits
@@ -31,7 +32,6 @@ complete 674 Raising Spirits
 turnin 674 Raising Spirits
 accept 675 Raising Spirits
 accept 639 Sigil of Strom [elite; group; hc=skip]
-complete 642 The Princess Trapped | Kobolds at Drywhisker Gorge.
 accept 678 Call to Arms
 turnin 642 The Princess Trapped
 accept 651 Stones of Binding

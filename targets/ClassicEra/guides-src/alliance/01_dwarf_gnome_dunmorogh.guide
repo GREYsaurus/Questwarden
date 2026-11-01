@@ -15,6 +15,7 @@
 accept The Boar Hunter | Talin Keeneye, west of Anvilmar.
 accept Dwarven Outfitters | Sten Stoutarm, in front of Anvilmar.
 complete Dwarven Outfitters | Wolves around Anvilmar drop Tough Wolf Meat.
+complete The Boar Hunter | Small Crag Boars west of Anvilmar.
 turnin Dwarven Outfitters
 accept 3106 Simple Rune [class=Warrior; race=Dwarf] | Sten Stoutarm gives your class letter now.
 accept 3107 Consecrated Rune [class=Paladin; race=Dwarf]
@@ -28,7 +29,6 @@ accept 3114 Glyphic Memorandum [class=Mage; race=Gnome]
 accept 3115 Tainted Memorandum [class=Warlock; race=Gnome]
 accept A New Threat
 complete A New Threat | Rockjaw Troggs and Burly Rockjaw Troggs in the valley.
-complete The Boar Hunter | Small Crag Boars west of Anvilmar.
 turnin A New Threat
 turnin 3107 Consecrated Rune [class=Paladin; race=Dwarf]
 turnin 3108 Etched Rune [class=Hunter; race=Dwarf]
@@ -77,6 +77,7 @@ accept The Grizzled Den | Pilot Stonegear, same house.
 accept Ammo for Rumbleshot
 train | Your trainer is in Kharanos.
 complete Stocking Jetsteam | Boars and bears south of Kharanos.
+complete The Grizzled Den | Wendigos in the cave south of Kharanos.
 complete Beer Basted Boar Ribs | Crag boar ribs and Rhapsody Malt (buy the malt from Ragnar Thunderbrew's distillery bar).
 turnin Stocking Jetsteam
 accept Evershine
@@ -89,7 +90,6 @@ complete The Perfect Stout | Shimmerweed is carried by the Frostmane trolls west
 turnin A Favor for Evershine
 accept Return to Bellowfiz
 turnin Return to Bellowfiz
-complete The Grizzled Den | Wendigos in the cave south of Kharanos.
 turnin The Grizzled Den
 turnin Tools for Steelgrill | Beldin Steelgrill at Steelgrill's Depot, east of Kharanos.
 turnin Bitter Rivals | The barrel stands inside the Thunderbrew Distillery.

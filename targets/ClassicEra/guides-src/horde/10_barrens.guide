@@ -104,6 +104,7 @@ accept 845 The Zhevra
 complete 870 The Forgotten Pools | Explore the pool north of the Crossroads.
 turnin 870 The Forgotten Pools
 complete 845 The Zhevra | Zhevra Runners.
+complete 1525 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional] | Fire Tar drops from Razormane Geomancer, Razormane Thornweaver and Razormane Water Seeker and others. Reagent Pouch drops from Burning Blade Cultist.
 complete 848 Fungal Spores | The Forgotten Pools.
 turnin 871 Disrupt the Attacks
 accept 872 The Disruption Ends
@@ -126,10 +127,10 @@ turnin 1492 Wharfmaster Dizzywig [optional]
 turnin 890 The Missing Shipment | Wharfmaster Dizzywig, Ratchet docks.
 accept 892 The Missing Shipment
 accept 894 Samophlange | Sputtervalve.
-complete 1525 Call of Fire [class=Shaman; race=Orc,Tauren,Troll; optional] | Fire Tar drops from Razormane Geomancer, Razormane Thornweaver and Razormane Water Seeker and others. Reagent Pouch drops from Burning Blade Cultist.
 turnin 924 The Demon Seed [race=Orc,Undead,Troll; optional]
 complete 894 Samophlange | The Sludge Fen control console.
 complete 903 Prowlers of the Barrens | Savannah Prowlers.
+complete 867 Harpy Raiders | Witchwing harpies north-west.
 complete 850 Kolkar Leaders | Barak Kodobane.
 turnin 894 Samophlange
 accept 900 Samophlange
@@ -140,7 +141,6 @@ complete 901 Samophlange | Console Key drops from Tinkerer Sniggles.
 turnin 901 Samophlange
 accept 902 Samophlange [optional]
 turnin 850 Kolkar Leaders
-complete 867 Harpy Raiders | Witchwing harpies north-west.
 turnin 867 Harpy Raiders
 accept 875 Harpy Lieutenants
 complete 875 Harpy Lieutenants

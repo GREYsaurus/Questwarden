@@ -109,10 +109,10 @@ accept 9548 Pilfered Equipment
 accept 9549 Artifacts of the Blacksilt
 complete 9548 Pilfered Equipment | Clopper's Equipment: loot Clopper's Equipment.
 complete 9549 Artifacts of the Blacksilt | Crude Murloc Idol drops from Blacksilt Seer. Crude Murloc Knife drops from Blacksilt Shorestriker and Blacksilt Warrior.
+complete Culling the Flutterers | Mutated Flutterers.
 complete I Shoot Magic Into the Darkness | Axxarien, north-east.
 complete 9687 Restoring Sanctity | Dragon Bone: loot Dragon Bone.
 complete Victims of Corruption | Corrupted treants.
-complete Culling the Flutterers | Mutated Flutterers.
 complete Containing the Threat | Satyrs and demons at Axxarien.
 turnin 9548 Pilfered Equipment
 turnin 9549 Artifacts of the Blacksilt
