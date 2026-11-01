@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2026-11-01)
+
+- **Fix: raid markers paused themselves and stuck on the old mob** ("paused for this step" in `/qw debug marks`). When a marked mob had gone out of sight and back, moving its icon to your new target looked like someone else had changed the icon, so marking stopped for the step. Quick retargeting could also count as two failures and pause it. Moving an icon now releases every mob it was on, and an icon that Questwarden itself moved is never treated as an outside change or a failure.
+
+**Tested:** offline only (TBC suite 4,832/4,832, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). The bug was found from in-game `/qw debug marks` output; the fix has not been checked in game yet.
+
 ## 0.1.0-alpha.12 (2026-11-01)
 
 - **Fix: "Target is inside" for mobs that are outside** (Kobold Workers at Echo Ridge Mine). A place named in the step text ("Echo Ridge Mine is north of the abbey") no longer counts as indoors; the text has to put the target inside ("inside", "in the cave", "at the back of the cave", "top of the tower"). Hints from step text now say "may be inside"; only spots learned by standing there indoors say "is inside".
