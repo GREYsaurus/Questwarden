@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2026-11-01)
+
+- **Fix: a black square around the waypoint pins** on the minimap and world map. The glow behind the diamond is now drawn additively, as the game draws that texture.
+- **Class training from What's Training?** (docs/TRAINER.md), built in: What's Training? does not need to be installed.
+  - **Trainer list:** its class-trainer data (MIT, by fusionpit; Classic Era and TBC data from commit `26caff2`) decides which ranks the class trainer sells, at which level, and with which earlier-rank, talent, faction and race requirements.
+  - **Not from the trainer:** spells the trainer does not sell (books such as Classic's rank-11 Healing Touch, the shaman totem quests, mounts) are no longer suggested as training; they are listed apart.
+  - **Prices:** every trainer rank now has a price, the listed base price until you have seen your trainer's own price (a reputation discount can lower it).
+  - **Buying in order:** a rank and the earlier rank it needs can both be listed for the same visit, in order.
+  - **Completionist:** a segment in a zone with your class trainer gets an optional train step when there is something to train. Training is never a detour and never counted as a quest.
+  - **Per character:** the training setting is saved per character and offered in the setup wizard's Options step. Existing characters keep their setting.
+- **Licences:** the Classic Era and Forever data now carry QuestieDB's licence copy (`Database/Questie/UPSTREAM_LICENSE.md`), as the TBC data already did.
+
+**Tested:** offline only (TBC suite 4,827/4,827, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game: the pin glow, the marker priority and the training lists at a real trainer need an in-game check.
+
+- **Raid marker priority:** your living target first, then the mob under your mouse, then a mob in view. An icon moves only to a mob that outranks its holder, so a mouseover never takes the icon off your target, and mobs coming into view never take it off your mouseover. When your target dies, the icon goes to your mouseover first.
+- **Fix:** right after a death, a mob in view could grab an icon meant for your mouseover, because a new mark only counted once it was confirmed. Marks now count from the moment they are asked for.
+
 ## 0.1.0-alpha.10 (2026-11-01)
 
 - **Raid markers are automatic again, and move:**
