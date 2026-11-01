@@ -87,6 +87,7 @@ Core\Assist.lua
 Core\Bind.lua
 Core\Group.lua
 Core\FlightTimer.lua
+Core\FlightPaths.lua
 
 # UI
 UI\Widgets.lua

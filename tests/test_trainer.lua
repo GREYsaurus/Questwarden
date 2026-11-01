@@ -153,7 +153,38 @@ do
     px, py = 50, 43
     check(select(4, TR:TrainerFor(step)) == "Brother Sammuel", "in Northshire: Brother Sammuel")
     area = 40 -- Westfall: no paladin trainer there
-    check(select(4, TR:TrainerFor(step)) == "Brother Sammuel", "no trainer in your zone: the one the guide names")
+    local keepKnown, keepCosts = ns.char.knownFlights, ns.char.flightCosts
+    ns.char.knownFlights, ns.char.flightCosts = {}, {}
+    check(select(4, TR:TrainerFor(step)) == "Brother Sammuel", "no trainer in your zone, no known flight: the one the guide names")
+    -- The flight map records the flight paths you know and the prices from where you stand.
+    local keepTaxi = { NumTaxiNodes, TaxiNodeName, TaxiNodeGetType, TaxiNodeCost }
+    local taxi = { { "Sentinel Hill, Westfall", "CURRENT", 0 }, { "Stormwind, Elwynn", "REACHABLE", 50 },
+                   { "Lakeshire, Redridge", "NONE", 0 } }
+    NumTaxiNodes = function() return #taxi end
+    TaxiNodeName = function(i) return taxi[i][1] end
+    TaxiNodeGetType = function(i) return taxi[i][2] end
+    TaxiNodeCost = function(i) return taxi[i][3] end
+    ns.FlightPaths:Record()
+    local K = ns.FlightPaths:Known()
+    check(K[4] and K[2] and not K[5], "known flight paths recorded (current and reachable, not unknown ones)")
+    check(ns.FlightPaths:Costs()[ns.FlightPaths.Key(4, 2)] == 50, "the price from here is recorded")
+    NumTaxiNodes, TaxiNodeName, TaxiNodeGetType, TaxiNodeCost = keepTaxi[1], keepTaxi[2], keepTaxi[3], keepTaxi[4]
+    -- No paladin trainer in Westfall: the cheapest known flight to one, and the arrow to the flight master.
+    px, py = 50, 50
+    local fz, fx, fy, fname, plan = TR:TrainerFor(step)
+    check(plan and plan.from == 4 and plan.to == 2 and plan.cost == 50 and fz == 40 and math.abs(fx - 56.6) < 0.1 and math.abs(fy - 52.7) < 0.1,
+        "no trainer in your zone: fly from Sentinel Hill to Stormwind (" .. tostring(fname) .. ")")
+    check(plan and plan.trainer ~= nil and string.find(ns.StepText:Title(step), "fly to Stormwind", 1, true) ~= nil,
+        "the title names the trainer and the flight (" .. ns.StepText:Title(step) .. ")")
+    local detail = table.concat(ns.StepText:Details(step), "\n")
+    check(string.find(detail, "Cheapest known flight: Sentinel Hill to Stormwind", 1, true) ~= nil, "the details give the flight and its price")
+    -- A destination with a seen price beats one without.
+    K[12] = true -- Darkshire: no paladin trainer there, so never a destination
+    check(select(5, TR:TrainerFor(step)).to == 2, "only zones with your class trainer are destinations")
+    ns.FlightPaths:Costs()[ns.FlightPaths.Key(4, 2)] = nil
+    check(select(5, TR:TrainerFor(step)).cost == nil and string.find(TR.FlightText(select(5, TR:TrainerFor(step))), "price not seen yet", 1, true) ~= nil,
+        "a price never seen is said so, not made up")
+    ns.char.knownFlights, ns.char.flightCosts = keepKnown, keepCosts
     ns.Compat.GetPlayerMapPosition, ns.DB.AreaForUiMap = realPos, realArea
 end
 

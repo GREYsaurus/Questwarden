@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Train steps suggest a flight when your zone has no class trainer.** The step names the cheapest flight path you know from your zone to a zone with your class trainer (Sentinel Hill to Stormwind, for example) and points the arrow at the flight master. Known flight paths and prices are saved per character each time you open a flight map; a price you have not seen yet is shown as "price not seen yet", never guessed. With no known flight, the step uses the trainer the guide names as before.
+
 ## 0.1.0-alpha.15 (2026-11-01)
 
 - **Fix: guides sent you to a turn-in between objectives in the same place** (Elwynn: Kobold Candles was turned in at Goldshire before The Fargodeep Mine and Gold Dust Exchange, which are done at the same mine with the same kobolds). Across all Classic Era and TBC guides, 60 complete steps of quests already in your log now come before a far-away turn-in when their objectives are next to the ones you just finished. Each move was kept only if it shortens the walk. Saved progress follows the new step order.

@@ -195,6 +195,7 @@ PanelTemplates_DeselectTab        # core (guarded)
 NumTaxiNodes                      # core (flight path automation)
 TaxiNodeName                      # core
 TaxiNodeGetType                   # core (guarded)
+TaxiNodeCost                      # core (guarded; flight prices, Core/FlightPaths.lua)
 TakeTaxiNode                      # core
 GetNumTrainerServices             # core (trainer automation)
 GetTrainerServiceInfo             # core

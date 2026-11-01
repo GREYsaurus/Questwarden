@@ -56,8 +56,14 @@ function StepText:Title(s)
     elseif k == "goto" then
         return s.text or ("Go to " .. (fmtCoords(s) or "the marked location"))
     elseif k == "train" then
-        local npc = s.npc
-        if ns.Trainer then npc = select(4, ns.Trainer:TrainerFor(s)) or npc end
+        local npc, plan = s.npc, nil
+        if ns.Trainer then
+            local _, _, _, name, p = ns.Trainer:TrainerFor(s)
+            npc, plan = name or npc, p
+        end
+        if plan then
+            return "Train new skills at " .. string.format(NPC, tostring(plan.trainer)) .. ": fly to " .. ns.Flights.nodes[plan.to].name
+        end
         return "Train new skills" .. (npc and (" at " .. string.format(NPC, npc)) or " at your class trainer")
     elseif k == "fp" then
         return "Get the flight path" .. (s.place and (" at " .. s.place) or "") .. (s.npc and (" (" .. string.format(NPC, s.npc) .. ")") or "")
@@ -110,6 +116,8 @@ function StepText:Details(s)
     elseif s[1] == "turnin" and s.q and not ns.Tracker:InLog(s.q) and not ns.Tracker:IsTurnedIn(s.q) then
         lines[#lines + 1] = string.format(WARN, "Quest is not in your log - skip this step if you did not take it.")
     elseif s[1] == "train" and ns.Trainer then
+        local plan = select(5, ns.Trainer:TrainerFor(s))
+        if plan then lines[#lines + 1] = string.format(WARN, ns.Trainer.FlightText(plan)) end
         for _, l in ipairs(ns.Trainer:Lines(6)) do lines[#lines + 1] = l end
     elseif s[1] == "level" or s[1] == "grind" then
         local xp, maxXp = UnitXP("player"), UnitXPMax("player")

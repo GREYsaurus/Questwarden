@@ -419,14 +419,42 @@ function TR:NearestTrainer()
 end
 
 -- Where a train step sends you: the class trainer nearest to you in the zone you are in (Goldshire's, not
--- Northshire's, once you have left the valley), else the trainer the guide names, else your capital's.
--- zone, x, y, name.
+-- Northshire's, once you have left the valley). With none there: the cheapest flight you know to a zone with
+-- your class trainer (Core/FlightPaths.lua), and the arrow goes to the flight master. Else the trainer the guide
+-- names, else your capital's. zone, x, y, name, flight plan (nil, or { from, to, cost, hops, trainer, master }).
 function TR:TrainerFor(s)
     local sub = classSub()
     local z, x, y, name = self:NearestHere(sub)
     if z then return z, x, y, name end
+    local plan = self:FlightPlan()
+    if plan then
+        local n = ns.Flights.nodes[plan.from]
+        return n.zone, n.x, n.y, plan.master or n.name, plan
+    end
     if s and s.z and s.x and s.y then return s.z, s.x, s.y, s.npc end
     return self:NearestNPC(sub)
+end
+
+-- The cheapest known flight to a zone with your class trainer, plus that trainer's and the flight master's
+-- names; nil when you know no such flight from the zone you are in.
+function TR:FlightPlan()
+    local FPs = ns.FlightPaths
+    if not (FPs and ns.Flights) then return nil end
+    local plan = FPs:CheapestTo(function(zone) return self:TrainerIn(zone) ~= nil end)
+    if not plan then return nil end
+    local from, to = ns.Flights.nodes[plan.from], ns.Flights.nodes[plan.to]
+    plan.trainer = select(4, self:TrainerIn(to.zone))
+    plan.master = from.npc and ns.DB.GetNPCName(from.npc) or nil
+    return plan
+end
+
+-- One line describing a flight plan for the step details.
+function TR.FlightText(plan)
+    local F = ns.Flights.nodes
+    local from, to = F[plan.from], F[plan.to]
+    local price = plan.cost and ns.Compat.FormatMoney(plan.cost) or "price not seen yet"
+    return "No class trainer in this zone. Cheapest known flight: " .. from.name .. " to " .. to.name .. " (" .. price
+        .. (plan.hops > 1 and (", " .. plan.hops .. " flights") or "") .. "), then " .. tostring(plan.trainer) .. "."
 end
 
 -- Friendly NPCs of your faction with this English sub-name, as a list of ids (one scan per sub-name and
@@ -514,8 +542,7 @@ end
 
 function TR:Waypoint()
     local step = ns.Engine and ns.Engine:CurrentStep()
-    local z, x, y, name
-    if step and step[1] == "train" then z, x, y, name = self:TrainerFor(step) else z, x, y, name = self:NearestTrainer() end
+    local z, x, y, name = self:TrainerFor(step and step[1] == "train" and step or nil)
     if z then
         ns.Nav:SetTarget(z, x, y, name)
         return true
