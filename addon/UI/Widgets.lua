@@ -292,11 +292,19 @@ function W.Switch(parent)
         knob:SetPoint(on and "RIGHT" or "LEFT", on and -3 or 3, 0)
         color(knob, enabled and (on and { 1, 1, 1 } or T.muted) or T.disabled)
     end
-    local setChecked, enable, disable = sw.SetChecked, sw.Enable, sw.Disable
+    local setChecked, enable, disable, setScript = sw.SetChecked, sw.Enable, sw.Disable, sw.SetScript
     function sw:SetChecked(v) setChecked(self, v) self:Refresh() end
     function sw:Enable() enable(self) self:Refresh() end
     function sw:Disable() disable(self) self:Refresh() end
-    sw:HookScript("OnClick", function(s) s:Refresh() end)
+    -- SetScript drops HookScript hooks, so the redraw on click is part of every OnClick the caller sets.
+    function sw:SetScript(name, fn)
+        if name ~= "OnClick" then return setScript(self, name, fn) end
+        setScript(self, name, function(s, ...)
+            s:Refresh()
+            if fn then fn(s, ...) end
+        end)
+    end
+    sw:SetScript("OnClick", nil)
     hoverBorder(sw)
     sw:Refresh()
     return sw

@@ -26,6 +26,14 @@ sw:SetChecked(false)
 check(sw.knob.point[1] == "LEFT", "...and on the left when off")
 sw:Disable()
 check(sw:GetChecked() == false, "disabling keeps the state")
+sw:Enable()
+-- The client checks the button, then runs OnClick: the knob must follow even with the caller's own OnClick.
+local clicked
+sw:SetScript("OnClick", function() clicked = true end)
+sw:SetChecked(true)
+sw.knob:SetPoint("LEFT", 3, 0)
+sw:GetScript("OnClick")(sw)
+check(clicked and sw.knob.point[1] == "RIGHT", "a click moves the knob even when the caller sets OnClick")
 
 -- Settings sidebar and search ---------------------------------------------------------------------------
 CF:Show("general")
