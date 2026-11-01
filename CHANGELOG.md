@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.21 (2026-11-01)
 
 - **Quest reward markers.** On a quest's reward panel, a green arrow (the same one as on bag upgrades) marks each reward choice that is an upgrade for your spec profile. When none is, a coin marks the choice that sells for the most at a vendor. They show when you read the quest and when you turn it in. Turn them off with *Mark quest reward choices* (Item Upgrade settings, on by default).
 - **Fixed: "Choose your reward" printed twice.** The client can fire its reward event twice for one panel; the message now shows once.
@@ -10,6 +10,8 @@
   - **Targets, macro and raid markers** cover the mobs of every open step of the pack. Each step gets its own icon, so a pack can use all eight icons, not just the usual four. The 255-character macro limit still applies.
   - **Finishing one step** of a pack leaves the others current. The arrow still points at the first open one.
   - **The guides were reordered for this.** 39 Classic Era steps and 94 TBC steps moved next to the steps they overlap with. That gives 100 packs in Classic Era and 184 in TBC. Saved progress follows the moved steps. The route model's XP and levels are unchanged, as the quests are the same.
+
+**Tested:** offline only (TBC suite 5,086/5,086, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.20 (2026-11-01)
 
