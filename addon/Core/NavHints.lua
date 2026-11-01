@@ -26,10 +26,16 @@ ns.NavHints = NH
 local CAPITAL_NAMES = { "Stormwind City", "Ironforge", "Darnassus", "Orgrimmar", "Thunder Bluff", "Undercity",
                         "Shattrath City", "Silvermoon City", "The Exodar" }
 -- Words that mean "indoors" wherever they appear, and building words that do only after "in the" / "top of the".
-local INDOOR_WORDS = { "cave", "caves", "cavern", "caverns", "mine", "mines", "crypt", "crypts", "barrow", "barrows",
-                       "grotto", "burrow", "burrows", "inside", "upstairs", "downstairs", "basement", "cellar", "indoors" }
-local BUILDING_WORDS = { "inn", "tower", "keep", "house", "hut", "abbey", "cathedral", "lair", "den", "building", "hall",
-                         "bunker", "barracks", "chapel", "church", "castle", "fortress", "tavern", "library", "tomb" }
+-- Words that put the target indoors on their own, and places that do so only after "in"/"into" (within three
+-- words: "in the bear cave", "in the inn") or "top of"/"back of" ("top of the abbey bell tower", "at the back of
+-- the troll cave"). A
+-- place merely named ("Echo Ridge Mine is north of the abbey", "at the Silver Stream Mine") says nothing: such
+-- mobs are often outside the entrance as well.
+local INDOOR_WORDS = { "inside", "upstairs", "downstairs", "basement", "cellar", "indoors" }
+local PLACE_WORDS = { "cave", "caves", "cavern", "caverns", "mine", "mines", "crypt", "crypts", "barrow", "barrows",
+                      "grotto", "burrow", "burrows", "inn", "tower", "keep", "house", "hut", "abbey", "cathedral", "lair",
+                      "den", "building", "hall", "bunker", "barracks", "chapel", "church", "castle", "fortress", "tavern",
+                      "library", "tomb" }
 local NEAR_YARDS = 15 -- indoors closer than this to the target: you are probably in the right room already
 local OBSERVE_YARDS = 5 -- only this close to a target does indoors/outdoors say where the target is
 
@@ -59,19 +65,33 @@ local function wordSet()
     if not set then
         set = { always = {}, building = {} }
         for _, w in ipairs(INDOOR_WORDS) do set.always[w] = true end
-        for _, w in ipairs(BUILDING_WORDS) do set.building[w] = true end
+        for _, w in ipairs(PLACE_WORDS) do set.building[w] = true end
     end
     return set
 end
 
--- Whether a step's own text says its target is indoors.
+-- Whether a step's own text says its target is indoors (not just where it is).
 function NH:TextSaysIndoors(s)
     local text = string.lower(table.concat({ s.text or "", s.location or "" }, " "))
     if text == " " then return false end
     local w = wordSet()
-    for word in string.gmatch(text, "%a+") do if w.always[word] then return true end end
-    for word in string.gmatch(text, "in the (%a+)") do if w.building[word] then return true end end
-    for word in string.gmatch(text, "top of the (%a+)") do if w.building[word] then return true end end
+    -- Sentences split at punctuation, so a place word never reaches across into the next clause.
+    for clause in string.gmatch(text, "[^%.,;:!%?%(%)]+") do
+        local words = {}
+        for word in string.gmatch(clause, "[%a']+") do words[#words + 1] = word end
+        for i, word in ipairs(words) do
+            if w.always[word] then return true end
+            local from
+            -- "turned in" / "handed in" is about quests, not places
+            if (word == "in" or word == "into") and words[i - 1] ~= "turned" and words[i - 1] ~= "handed" then from = i + 1
+            elseif (word == "top" or word == "back") and words[i + 1] == "of" then from = i + 2 end
+            if from then
+                for j = from, math.min(from + 3, #words) do
+                    if w.building[words[j]] then return true end
+                end
+            end
+        end
+    end
     return false
 end
 
@@ -138,7 +158,8 @@ function NH:Lines(s, current, here, dist)
     elseif city then
         out[#out + 1] = string.format("%s is in %s: follow the streets and bridges; the arrow only shows the direction.", label, city)
     end
-    local inside = self:TargetIndoors(s, area, x, y)
+    local learned = self:IsLearnedIndoor(area, x, y)
+    local inside = learned or self:TextSaysIndoors(s)
     if current and IsIndoors and IsIndoors() and not inside then
         if dist == nil then dist = ns.Nav.target and ns.Nav:Vector() end
         if not dist or dist > NEAR_YARDS then
@@ -146,7 +167,8 @@ function NH:Lines(s, current, here, dist)
         end
     end
     if inside then
-        out[#out + 1] = string.format("%s is inside a building, cave or mine: look for the entrance near the arrow.", label)
+        out[#out + 1] = learned and string.format("%s is inside a building, cave or mine: look for the entrance near the arrow.", label)
+            or string.format("%s may be inside (the step says so): look for the entrance near the arrow.", label)
     end
     return out
 end
@@ -165,7 +187,9 @@ function NH:ArrowLine()
         local dist = ns.Nav:Vector()
         if not dist or dist > NEAR_YARDS then return "Indoors: find the way out first" end
     end
-    if inside then return "Target is inside: find the entrance" end
+    if inside then
+        return self:IsLearnedIndoor(t.area, t.x, t.y) and "Target is inside: find the entrance" or "Target may be inside: find the entrance"
+    end
     if city then return "In " .. city .. ": follow the streets" end
     return nil
 end

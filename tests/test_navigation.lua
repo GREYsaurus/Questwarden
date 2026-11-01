@@ -77,7 +77,10 @@ local NH, E = ns.NavHints, ns.Engine
 check(NH:CapitalOf(1519) == "Stormwind City" and NH:CapitalOf(1637) == "Orgrimmar" and NH:CapitalOf(12) == nil, "capitals come from the zone data")
 local function says(text) return NH:TextSaysIndoors({ text = text }) end
 check(says("Den Mother in the bear cave north-east.") and says("Syndicate inside Stromgarde Keep (west).") and says("First Mate Fitzsimmons in the inn.")
-    and says("Brother Neals is at the top of the abbey bell tower.") and says("Tunnel Rat Kobolds at the Silver Stream Mine."), "step text that puts the target indoors is recognised")
+    and says("Brother Neals is at the top of the abbey bell tower.") and says("Grik'nir the Cold is at the back of the troll cave."), "step text that puts the target indoors is recognised")
+check(not says("Gregor Greystone. Turned in at Light's Hope Chapel (Eastern Plaguelands)."), "'turned in at' a building is about the quest, not the target's place")
+check(not says("Echo Ridge Mine is north of the abbey.") and not says("Tunnel Rat Kobolds at the Silver Stream Mine.")
+    and not says("Kobolds near the mine, in the camp outside."), "a mine or building only named (mobs often outside it too) is not taken for indoors")
 check(not says("Only if you are short of level 10: keep killing the bounty gnolls.") and not says("The hoofprints are beside the inn.")
     and not says("Mountaineer Barleybrew guards the tunnel to Loch Modan."), "outdoor text with building words is not a false alarm")
 local keepHere, keepIndoors, keepCur = ns.Completionist.Here, IsIndoors, E.CurrentStep
