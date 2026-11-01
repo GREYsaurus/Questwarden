@@ -19,8 +19,8 @@
 --  * an existing icon is not replaced unless markReplace is on;
 --  * one live unit per icon holds it, so it does not jump between mobs; a unit that dies (seen via
 --    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) or one that goes out of sight
---    frees it, and the next visible mob of the step gets it at once. Targeting or mousing over another
---    mob of the step moves the icon to it; a nameplate coming into view never takes it from a visible mob;
+--    frees it, and the next visible mob of the step gets it at once. Priority decides who holds an icon:
+--    your living target, then your mouseover, then a mob in view (M:Priority); it moves only to a higher one;
 --  * success is reported only when GetRaidTargetIndex shows the icon afterwards;
 --  * if the client blocks or rejects marking, automatic marking stops and says how to mark by click.
 
@@ -227,16 +227,26 @@ function M:Explain(msg)
     say(msg)
 end
 
--- Whether the unit currently holding `icon` for this step should keep it: it must be visible (target,
--- mouseover, focus or a nameplate), alive and still wear the icon. Out of sight it does not keep it, so the
--- icon goes to the next visible mob of the step at once instead of staying on the first one.
-function M:HolderKeeps(icon, exceptGuid)
+-- How strongly a unit claims its kind's icon: 3 = your target, 2 = your mouseover, 1 = otherwise in view (focus,
+-- a nameplate), 0 = out of sight or dead. An icon moves only to a unit with a higher claim than its holder, so it
+-- goes to your living target first, then to the mob under your mouse, then to a mob in view, and mobs of the same
+-- rank never swap it back and forth.
+function M:Priority(guid)
+    if not guid then return 0 end
+    local u = self:UnitFor(guid)
+    if not u or (UnitIsDead and UnitIsDead(u)) then return 0 end
+    if UnitGUID and UnitGUID("target") == guid then return 3 end
+    if UnitGUID and UnitGUID("mouseover") == guid then return 2 end
+    return 1
+end
+
+-- The claim of the unit holding `icon` (0 when it no longer wears it).
+function M:HolderPriority(icon)
     local h = self.holder[icon]
-    if not h or h == exceptGuid then return false end
+    if not h then return 0 end
     local u = self:UnitFor(h)
-    if not u then return false end
-    if UnitIsDead and UnitIsDead(u) then return false end
-    return C.GetRaidTargetIndex(u) == icon
+    if u and C.GetRaidTargetIndex(u) ~= icon then return 0 end
+    return self:Priority(h)
 end
 
 -- Our icon left this unit (moved on, or the unit died): it may be marked again later.
@@ -290,13 +300,15 @@ function M:Consider(unit)
         self.handsOff[guid] = true -- someone else's icon; leave it
         return self:Note("already has another raid icon", name, true)
     end
-    -- The mob you target or mouse over gets the icon, moved from the step's other mob if needed; a nameplate
-    -- coming into view does not take it from a visible living mob, so icons do not jump on their own.
-    local targeting = unit == "target" or unit == "mouseover"
-    -- One attempt per unit, except that targeting it again takes the icon back from another mob.
-    local moving = targeting and self.holder[icon] and self.holder[icon] ~= guid
+    -- Priority: your living target > your mouseover > a mob in view (M:Priority). The icon moves here only when
+    -- this unit outranks the one holding it.
+    local h = self.holder[icon]
+    local moving = h and h ~= guid and self:Priority(guid) > self:HolderPriority(icon)
+    if h and h ~= guid and not moving then
+        return self:Note("icon is on a mob with the same or higher priority (target > mouseover > in view)", name)
+    end
+    -- One attempt per unit, except when it now outranks the holder (targeted, moused over, or the holder left).
     if self.tried[guid] and not moving then return self:Note("already tried this unit", name) end
-    if not targeting and self:HolderKeeps(icon, guid) then return self:Note("icon is on another living mob of this step", name) end
     if self.holder[icon] then self:Release(self.holder[icon]) end
     local can, why = C.CanMark()
     if not can then
@@ -312,12 +324,18 @@ function M:Consider(unit)
         self:Note("the client refused the call", name, true)
         return self:Failed(name, "the client refused the call")
     end
+    -- Reserved for this unit right away, so a rescan in the next moment cannot hand the same icon to a lower-ranked
+    -- mob before the mark is confirmed; Verify releases it again if the icon did not appear.
+    self.marked[guid], self.markedNpc[guid], self.holder[icon] = icon, id, guid
+    self.pending = self.pending or {}
+    self.pending[guid] = true
     self:Note("asked the client to mark", name, true)
     local gen = self.gen
     C_Timer.After(VERIFY_DELAY, function() M:Verify(guid, gen, icon, id, name) end)
 end
 
 function M:Verify(guid, gen, icon, id, name)
+    if self.pending then self.pending[guid] = nil end
     if self.gen ~= gen then return end
     local u = self:UnitFor(guid)
     if not u then return end -- out of sight: result unknown, claim nothing
@@ -326,6 +344,10 @@ function M:Verify(guid, gen, icon, id, name)
         self:Note("marked", name, true)
         say("Marked " .. tostring(name) .. " with " .. M.Label(icon) .. ".")
     else
+        if self.marked[guid] == icon then
+            self.marked[guid], self.markedNpc[guid] = nil, nil
+            if self.holder[icon] == guid then self.holder[icon] = nil end
+        end
         self:Note("the icon did not appear", name, true)
         self:Failed(name, "the icon did not appear")
     end
@@ -347,7 +369,7 @@ end
 -- simply lost its icon by dying.
 function M:OnRaidTargetUpdate()
     for guid, icon in pairs(self.marked) do
-        local u = self:UnitFor(guid)
+        local u = not (self.pending and self.pending[guid]) and self:UnitFor(guid) -- a mark not confirmed yet is not checked
         if u and C.GetRaidTargetIndex(u) ~= icon then
             self:Release(guid)
             if not (UnitIsDead and UnitIsDead(u)) then

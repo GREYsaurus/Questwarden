@@ -245,12 +245,30 @@ MOCK.units.target = nil
 MOCK.tick(0.1)
 target(fourth)
 check(iconOf(fourth) == prof.defaultMarker, "targeting another mob of the step moves the icon to it")
+-- Priority: your living target > your mouseover > a mob in view
 local fifth = MOCK.creature(objMob, 45, "objective mob")
 MOCK.units.mouseover = fifth
 M:Consider("mouseover")
 MOCK.tick(0.6)
-check(iconOf(fifth) == prof.defaultMarker, "mousing over another mob of the step moves the icon to it")
-MOCK.units.mouseover = nil
+check(iconOf(fourth) == prof.defaultMarker and iconOf(fifth) == nil, "a mouseover never takes the icon from your living target")
+MOCK.units.target, MOCK.units.focus = nil, fourth -- you stop targeting it; it is still in view
+M:Consider("mouseover")
+MOCK.tick(0.6)
+check(iconOf(fifth) == prof.defaultMarker and iconOf(fourth) == nil, "no longer your target: the mob under your mouse outranks one only in view")
+local inView = MOCK.creature(objMob, 47, "objective mob")
+MOCK.units.nameplate4 = inView
+MOCK.fire("NAME_PLATE_UNIT_ADDED", "nameplate4")
+MOCK.tick(0.6)
+check(iconOf(fifth) == prof.defaultMarker and iconOf(inView) == nil, "a mob only in view never takes the icon from your mouseover")
+target(fourth)
+check(iconOf(fourth) == prof.defaultMarker and iconOf(fifth) == nil, "targeting a living mob always pulls its icon to it")
+MOCK.units.mouseover, MOCK.units.focus, MOCK.units.nameplate4 = nil, nil, nil
+-- your target dies: the icon goes to the mob under your mouse first, not to one only in view
+MOCK.units.mouseover, MOCK.units.nameplate4 = fifth, inView
+MOCK.kill(fourth)
+MOCK.tick(0.6)
+check(iconOf(fifth) == prof.defaultMarker and iconOf(inView) == nil, "target dies: the mouseover gets the icon before a mob in view")
+MOCK.units.mouseover, MOCK.units.nameplate4, MOCK.units.target = nil, nil, nil
 -- the marked mob dies: the next visible one gets the icon without being looked at
 local sixth = MOCK.creature(objMob, 46, "objective mob")
 MOCK.units.nameplate2 = sixth
@@ -259,6 +277,17 @@ MOCK.kill(fifth)
 MOCK.tick(0.6)
 check(iconOf(sixth) == prof.defaultMarker, "after a kill the icon moves to the next visible mob by itself")
 MOCK.units.nameplate2, MOCK.units.nameplate3, MOCK.units.target = nil, nil, nil
+-- an icon change elsewhere while a mark is still on its way is not taken for "someone changed our icon"
+local slow = MOCK.creature(objMob, 48, "objective mob")
+MOCK.markDenied = true -- the icon does not show up at once
+MOCK.units.target = slow
+M:Consider("target")
+MOCK.fire("RAID_TARGET_UPDATE")
+check(not M.stopped, "a mark not confirmed yet does not pause marking when another icon changes")
+MOCK.markDenied = false
+MOCK.tick(0.6)
+MOCK.units.target = nil
+M.failures, M.stopped = 0, false
 
 -- 13) Several kill steps done together: each mob type gets its own icon
 reset()
