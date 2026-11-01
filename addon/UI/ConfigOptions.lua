@@ -282,7 +282,7 @@ pages.tips = { title = "Tips", items = function() return {
     { type = "range", key = "autoEquipMinPct", label = "Minimum upgrade", min = 0, max = 20, step = 0.5, decimals = 1, suffix = "%",
       tip = "For occupied slots. 0 means any strictly higher score." },
     T("equipNotify", "On-screen equip messages"),
-    T("equipChat", "Copy equip messages to chat"),
+    T("equipChat", "Copy equip messages to chat", { tip = "A line in your chat frame for every automatic equip. Only you see it; nothing is sent to other players." }),
     T("equipSound", "Play a sound on automatic upgrades", { tip = "The level-up sound when an item was equipped automatically." }),
     T("boeMarkers", "Mark Bind-on-Equip upgrades in bags", { tip = "A small arrow on BoE items that would be an upgrade. Equip them yourself." }),
     { type = "button", label = "Clear excluded items",

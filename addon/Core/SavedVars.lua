@@ -67,7 +67,7 @@ local profileDefaults = {
         autoEquipEmpty = true,      -- fill empty gear slots with any usable non-BoE item
         autoEquipMinPct = 0,        -- minimum estimated upgrade (%) for occupied slots; must also be > 0
         equipNotify = true,         -- on-screen message after a confirmed equip
-        equipChat = false,          -- copy of that message in chat
+        equipChat = true,           -- the same message in your chat frame (only you see it)
         equipSound = true,          -- the level-up sound after a confirmed automatic equip (Gear/AutoEquip.lua)
         boeMarkers = true,          -- marker on unequipped Bind-on-Equip upgrades in the bags
         -- Features from the settings window (docs/SETTINGS.md)
@@ -255,6 +255,13 @@ function ns:InitSavedVariables()
                 .. "Turn this off with /" .. ns.slash .. " set autoMarkObjectives off."
         end
     end
+    -- 0.1.0-alpha.9: the chat line for automatic equips is on by default; saved profiles held the old "off".
+    if not mig.equipChat9 then
+        mig.equipChat9 = true
+        for _, p in pairs(profiles) do
+            if not fresh and p.equipChat == false then p.equipChat = true end
+        end
+    end
     -- Active profile for this character.
     local key = ns.CharKey()
     local active = _G[ns.svAccount].profileKeys[key]
@@ -292,6 +299,11 @@ function ns:InitSavedVariables()
     if type(_G[ns.svAccount].flightTimes) ~= "table" then _G[ns.svAccount].flightTimes = {} end
     -- Indoor spots learned on arrival (Core/NavHints.lua): ["area:x:y"] = true.
     if _G[ns.svAccount].indoorSpots ~= nil and type(_G[ns.svAccount].indoorSpots) ~= "table" then _G[ns.svAccount].indoorSpots = nil end
+    -- 0.1.0-alpha.8 learned spots within 12 yards, so NPCs by a door were taken for indoors: start over once.
+    if not _G[ns.svAccount].migrations.indoorSpots9 then
+        _G[ns.svAccount].migrations.indoorSpots9 = true
+        _G[ns.svAccount].indoorSpots = nil
+    end
     local gx = _G[ns.svChar].gearExclude
     if type(gx) ~= "table" then gx = {} _G[ns.svChar].gearExclude = gx end
     if type(gx.items) ~= "table" then gx.items = {} end
@@ -300,11 +312,6 @@ function ns:InitSavedVariables()
         _G[ns.svChar].activeGuide = nil
     end
     -- Future migrations: if QuestwardenDB.schema < N then ... end
-    -- 0.1.0-alpha.8 learned spots within 12 yards, so NPCs by a door were taken for indoors: start over once.
-    if not _G[ns.svAccount].migrations.indoorSpots9 then
-        _G[ns.svAccount].migrations.indoorSpots9 = true
-        _G[ns.svAccount].indoorSpots = nil
-    end
     _G[ns.svAccount].schema = SCHEMA
     _G[ns.svChar].schema = SCHEMA
     ns:SetActiveProfile(active)

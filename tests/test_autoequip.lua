@@ -365,6 +365,26 @@ check(equipped(95030) == 9 and #sounds == soundsBefore, "with the sound setting 
 PlaySound = realPlay
 MOCK.equipped[9], MOCK.equipped[15] = nil, nil
 
+-- The chat line for automatic equips: on by default, local only, old "off" switched on once
+check(ns.PROFILE_DEFAULTS.equipChat == true, "the equip chat line is on by default")
+local sentToOthers = 0
+local realSend = SendChatMessage
+SendChatMessage = function() sentToOthers = sentToOthers + 1 end
+local printedBefore = #MOCK.printed
+M:Notify({ kind = "empty", target = 1, item = { link = "[Test Helm]", name = "Test Helm" } }, ns.Upgrade:ActiveProfile() or { name = "x" })
+local saw = false
+for i = printedBefore + 1, #MOCK.printed do if string.find(MOCK.printed[i], "Auto-equipped: [Test Helm]", 1, true) then saw = true end end
+check(saw and sentToOthers == 0, "the equip message goes to your own chat frame only, never to other players")
+SendChatMessage = realSend
+local mig = _G[ns.svAccount].migrations
+prof().equipChat, mig.equipChat9 = false, nil
+ns:InitSavedVariables()
+check(ns.db.profile.equipChat == true and mig.equipChat9, "a saved 'off' from before is switched on once")
+ns.db.profile.equipChat = false
+ns:InitSavedVariables()
+check(ns.db.profile.equipChat == false, "turning it off afterwards sticks")
+ns.db.profile.equipChat = true
+
 -- Leveling characters: caps are not applied below 70 (they are level-70 assumptions) --------------------------------------------------------
 check(U:Context().base == nil, "level 60: no level-70 cap assumptions")
 

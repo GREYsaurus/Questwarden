@@ -170,7 +170,7 @@ After a confirmed change, a message with the item's icon appears at the top of t
 
 **Queue:** at most three wait in line; more go to chat instead.
 
-**Chat copy:** optional, *Copy equip messages to chat*.
+**Chat line:** on by default since 0.1.0-alpha.9 (*Copy equip messages to chat*). The line goes only to your own chat frame; nothing is sent to other players. Settings saved as "off" by earlier versions are switched on once.
 
 ## Settings
 
