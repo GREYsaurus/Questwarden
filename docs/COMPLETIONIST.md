@@ -29,6 +29,8 @@ A quest chain continues across segments: the next quest is actionable once the p
 
 **Return visits.** Every planned zone visit is logged (`ns.char.completionist.visits`: zone, band, level, quests, deferred count). A zone comes back whenever new quests there become actionable by level or prerequisite. If nothing is actionable, the route says so and adds a *reach level N* step for the next level that opens deferred quests; it never invents filler quests.
 
+**Class training.** A segment in a zone with your class trainer gets one optional train step after its pickups when there is something to train (docs/TRAINER.md, "In the guides"). The route never travels just to train, and training is not counted as a quest.
+
 ## Categories
 
 Each quest is classified for the character: *ready now*, *in your quest log*, *completed*, *later (level)*, *waiting on a prerequisite*, *other branch chosen*, *not for this character*, *missing location data*, *completion unknown*, and the special kinds below.

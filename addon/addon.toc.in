@@ -51,6 +51,7 @@ Classes\ClassAdvice.lua
 Classes\Advice.lua
 Classes\TrainingData.lua
 Classes\TrainingNotes.lua
+Classes\WhatsTrainingData.lua
 Classes\Trainer.lua
 Classes\PetData.lua
 Classes\PetSkills.lua

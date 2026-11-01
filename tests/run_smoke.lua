@@ -238,6 +238,20 @@ if STAGE.target == "ClassicEra" then
     -- Item-drop objectives count as targets: "Wolves Across the Border" (33) needs Tough Wolf Meat from wolves.
     local wolfIds = ns.DB.ObjectiveNpcIds(33, 12) or {}
     check(wolfIds[299] and wolfIds[69], "the wolves that drop Tough Wolf Meat are targets of quest 33 (Young Wolf 299, Timber Wolf 69)")
+    -- Class training from What's Training? (Classes/WhatsTrainingData.lua): Classic Era data only, licences packaged.
+    local WTD = ns.WhatsTrainingData
+    check(WTD and WTD.source and WTD.source.game == "Vanilla" and WTD.classes.MAGE[3561] and not WTD.classes.MAGE[32271],
+        "What's Training: Classic Era loads the Vanilla data (Teleport: Stormwind yes, TBC's Teleport: Exodar no)")
+    check(WTD.classes.WARRIOR[6546] and WTD.classes.WARRIOR[6546][2] == 600, "What's Training: Rend 2 base price 6 silver")
+    local htEntry
+    for _, e in ipairs(ns.Trainer:Entries("DRUID")) do if e.id == 25297 then htEntry = e end end
+    check(htEntry and htEntry.source == "other", "What's Training: Healing Touch rank 11 (a book) is not sold by the class trainer")
+    for _, f in ipairs({ "Classes/WhatsTraining_LICENSE.txt", "Database/Questie/UPSTREAM_LICENSE.md" }) do
+        local fh = io.open("build/" .. STAGE.target .. "/" .. ns.name .. "/" .. f, "r") -- the release zip has them under Targets/<Target>/
+        local text = fh and fh:read("*a") or ""
+        if fh then fh:close() end
+        check(#text > 100, "packaged licence file: " .. f)
+    end
     local wcRow
     for _, row in ipairs(S:Dungeons("speed")) do if row.id == "Wailing Caverns" then wcRow = row end end
     check(wcRow and not wcRow.supported and string.find(wcRow.note, "Speed leveling guides", 1, true) and string.find(wcRow.note, "Completionist mode still routes", 1, true),

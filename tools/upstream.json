@@ -80,5 +80,20 @@
     "url": "https://raw.githubusercontent.com/Questie/QuestieDB/8f55e69de02e8a67229c4a54575f899244359cb8/support/Zones/dungeons.lua",
     "sha256": "f36a9ef784322ed7da9916670b46bf76698f1f9a3cfede0895a49c6cbec64f60",
     "cache": ".cache/upstream/questiedb-support/8f55e69de02e8a67229c4a54575f899244359cb8/dungeons.lua"
+  },
+  "whatstraining": {
+    "_comment": "What's Training? class-trainer spell lists (MIT). Read by tools/research/whatstraining_import.py into targets/<Target>/addon/Classes/WhatsTrainingData.lua: Classes/Vanilla for ClassicEra, Classes/TBC for TBC (upstream TOC: Interface 20506, 11509; Classes\\[Game]\\). Never fetched by the normal build.",
+    "repository": "https://github.com/fusionpit/WhatsTraining",
+    "branch": "master",
+    "commit": "26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe",
+    "archiveUrl": "https://codeload.github.com/fusionpit/WhatsTraining/zip/26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe",
+    "archiveSha256": "f6c450080248113a60b00f2c9414e218b743318681ab4d79781f623199c8d59f",
+    "files": [
+      "Classes/Vanilla/<Class>.lua",
+      "Classes/TBC/<Class>.lua",
+      "Classes/<Game>/HunterPets.lua (pet ability ids, to leave them out)",
+      "LICENSE"
+    ],
+    "cache": ".cache/upstream/whatstraining/26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe"
   }
 }

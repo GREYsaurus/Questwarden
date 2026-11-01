@@ -273,6 +273,7 @@ function CM:Context()
     end
     info.inLog = function(id) return ns.Tracker:InLog(id) end
     info.inside = ns.DungeonRun and ns.DungeonRun:Current() -- the listed dungeon you are in, if any
+    info.live = true -- planning for the character in the game (adds optional training, Classes/Trainer.lua)
     return info
 end
 
@@ -518,6 +519,12 @@ function CM:Plan(ctx, here)
         seg.accepted[#seg.accepted + 1] = it.q
         seg.steps[#seg.steps + 1] = { "accept", q = it.q, title = r[1], z = w.zone, x = it.x, y = it.y, npc = it.name }
         end
+    end
+    -- Optional class training while the route is in a zone with your class trainer (Classes/Trainer.lua): never a
+    -- detour, never counted as a quest. Live play only (the planner is also run on test and coverage data).
+    if ctx.live and ns.Trainer then
+        local t = ns.Trainer:TrainStepFor(w.zone)
+        if t then seg.steps[#seg.steps + 1] = t end
     end
     -- objectives: quests in the log plus those just picked up, located in this zone
     local objectives = {}

@@ -79,6 +79,7 @@ The window has a progress line, *Back*, *Next*, *Set Up Later* and, on the last 
 
 - **Route group and elite quests.** Steps marked `[elite]` in Speed; quests with an elite target in Completionist.
 - **Completionist only:** raid, profession, reputation, event/seasonal and repeatable quests. Each is off by default: counted, not routed.
+- **Class training:** *Suggest important spells* (default), *Suggest all spells* or *Off*, saved for the character (docs/TRAINER.md). Built in; What's Training? does not need to be installed.
 - **Automatic upgrades.** Off unless ticked, and only with a gear profile. This one switch is part of the settings profile, not the character.
 
 ### 5. Review

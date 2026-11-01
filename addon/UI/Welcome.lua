@@ -227,6 +227,12 @@ function render.prefs(d)
         end
         WL:Text("Off by default: they are counted in /" .. ns.slash .. " completionist but not routed.", nil, { 0.75, 0.75, 0.75 })
     end
+    WL:Section("Class training")
+    WL:Option("Suggest important spells", "Train steps and level-ups list the important ranks your class trainer has for you, with the trainer's prices. Default.",
+        d.training == "important", true, function() d.training = "important" end)
+    WL:Option("Suggest all spells", "Every rank the trainer sells you, important, useful and optional.", d.training == "all", true, function() d.training = "all" end)
+    WL:Option("Off", "No training lists; guide train steps stay as they are.", d.training == "off", true, function() d.training = "off" end)
+    WL:Text("Built in: the trainer data comes from What's Training?, which does not need to be installed. Nothing is ever bought for you. In Completionist, a train step is added only when your trainer is in the zone you are questing in.", nil, { 0.75, 0.75, 0.75 })
     WL:Section("Automatic upgrades")
     WL:Option("Equip upgrades from my bags automatically",
         d.gear and "Off unless you tick it. Empty slots are filled with usable items; filled slots only get a higher estimated score, not a guaranteed gain. Never in combat, and unbound Bind-on-Equip items are never equipped. This switch is part of your settings profile."

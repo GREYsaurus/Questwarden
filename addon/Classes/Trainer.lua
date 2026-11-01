@@ -30,27 +30,66 @@ local function raceBit(race)
     return b or 0
 end
 
--- The class's entries, with priority and quest notes resolved once.
+-- Where a rank is learned (e.source): "trainer" = sold by the class trainer; "quest" = a class quest (our notes);
+-- "other" = not sold by the class trainer according to What's Training? (books, drops, vendors, quests our notes do
+-- not name; how exactly is not known here). Without What's Training data for this game (Forever) every non-quest rank
+-- counts as "trainer", as before.
+-- The class's entries, with priority, source, baseline price and requirements resolved once.
 function TR:Entries(class)
     if self.cache[class] then return self.cache[class] end
     local data = ns.TrainingData and ns.TrainingData.classes[class] or {}
+    local wt = ns.WhatsTrainingData and ns.WhatsTrainingData.classes and ns.WhatsTrainingData.classes[class]
+    if wt and not next(wt) then wt = nil end
     local notes = ns.TrainingNotes or {}
     local imp, opt = {}, {}
     for _, n in ipairs((notes.important or {})[class] or {}) do imp[n] = true end
     for _, n in ipairs((notes.optional or {})[class] or {}) do opt[n] = true end
     local quest = (notes.quest or {})[class] or {}
-    local out = {}
-    for _, r in ipairs(data) do
-        local name = r[5]
+    local function prioOf(name)
+        if not name then return 2 end
         local prio = imp[name] and 1 or opt[name] and 3 or 2
         if prio == 2 then
             for _, pat in ipairs(notes.optionalPattern or {}) do
                 if string.find(name, pat) then prio = 3 break end
             end
         end
-        out[#out + 1] = { id = r[1], level = r[2], rank = r[3], prev = r[4], name = name, talent = r[6] == 1,
-            race = r[7], prio = prio, quest = quest[r[1]] }
+        return prio
     end
+    -- What's Training row -> requirements: previous ranks, talent, faction, races (as our race mask), skill.
+    local function applyWT(e, w)
+        e.source, e.listCost, e.level = "trainer", w[2], w[1]
+        e.req = (#w[3] > 0) and w[3] or nil
+        e.talentReq = w[4] ~= 0 and w[4] or nil
+        e.faction = w[5] ~= "" and w[5] or nil
+        if w[6] then
+            local mask = 0
+            for _, r in ipairs(w[6]) do mask = mask + raceBit(r) end
+            e.race = mask
+        end
+        e.skill = w[7] and w[7][1] or nil
+    end
+    local out, seen = {}, {}
+    for _, r in ipairs(data) do
+        local name = r[5]
+        local e = { id = r[1], level = r[2], rank = r[3], prev = r[4], name = name, talent = r[6] == 1,
+            race = r[7], prio = prioOf(name), quest = quest[r[1]] }
+        local w = wt and wt[r[1]]
+        if w then applyWT(e, w)
+        elseif e.quest then e.source = "quest"
+        else e.source = wt and "other" or "trainer" end
+        seen[e.id] = true
+        out[#out + 1] = e
+    end
+    -- Trainer ranks the client-table import leaves out (passives such as Parry or Dual Wield, level-1 spells): the
+    -- name comes from the client at display time.
+    for id, w in pairs(wt or {}) do
+        if not seen[id] then
+            local e = { id = id, rank = 0, prev = 0, talent = w[4] ~= 0, race = 0, prio = 2 }
+            applyWT(e, w)
+            out[#out + 1] = e
+        end
+    end
+    table.sort(out, function(a, b) if a.level ~= b.level then return a.level < b.level end return a.id < b.id end)
     self.cache[class] = out
     return out
 end
@@ -67,44 +106,73 @@ function TR.CanCheck() return (IsSpellKnown or IsPlayerSpell) and true or false 
 -- Localized name and rank text from the client; the English data name if the client has none.
 function TR.SpellName(e)
     local n = GetSpellInfo and GetSpellInfo(e.id)
-    return n or e.name
+    return n or e.name or ("spell " .. tostring(e.id))
 end
 
--- Status of one entry for this character: "ready", "later", "known", "talent" (needs the talent
--- or rank before), "quest", "race".
-function TR:Status(e, level, race)
+-- Status of one entry for this character: "ready", "later", "known", "talent" (needs the talent or the rank
+-- before it), "prereq" (needs an earlier rank first), "quest", "other" (not from the class trainer), "race",
+-- "faction".
+function TR:Status(e, level, race, faction)
     if e.race ~= 0 and not ns.HasBit(e.race, raceBit(race)) then return "race" end
+    if e.faction and faction and e.faction ~= faction then return "faction" end
     if TR.Known(e.id) then return "known" end
-    if e.quest then return "quest" end
+    if e.source == "quest" or e.quest then return "quest" end
+    if e.source == "other" then return "other" end
     if e.level > level then return "later" end
-    if e.talent and e.prev ~= 0 and not TR.Known(e.prev) then return "talent" end
+    if e.talentReq and not TR.Known(e.talentReq) then return "talent" end
+    if e.talent and not e.talentReq and e.prev ~= 0 and not TR.Known(e.prev) then return "talent" end
+    if e.req then
+        for _, id in ipairs(e.req) do if not TR.Known(id) then return "prereq" end end
+    end
     return "ready"
 end
 
+-- Per character once chosen (setup wizard or settings: ns.char.trainerSuggestions); before that the settings
+-- profile's value, so existing characters keep what they had.
 function TR:Mode()
-    local m = prof().trainerSuggestions
+    local m = ns.char and ns.char.trainerSuggestions or prof().trainerSuggestions
     if m == "off" or m == "important" or m == "all" then return m end
     return "important"
 end
 
--- What the trainer has for you now: { ready = {entries}, quest = {entries}, level = n }.
--- `mode` overrides the setting ("important" or "all"); deferred levels are ignored here.
+-- What the trainer has for you now: { ready = {entries}, quest = {entries}, other = {entries}, level = n }.
+-- `mode` overrides the setting ("important" or "all"); deferred levels are ignored here. A rank whose earlier rank
+-- you do not know yet is ready when that earlier rank is ready too (you can buy both in one visit, in order).
 function TR:Available(mode, level)
     local info = ns.Compat.PlayerInfo()
     level = level or info.level
     mode = mode or self:Mode()
-    local res = { ready = {}, quest = {}, level = level }
+    local res = { ready = {}, quest = {}, other = {}, level = level }
     if mode == "off" or not TR.CanCheck() then return res end
-    for _, e in ipairs(self:Entries(info.class)) do
-        local st = self:Status(e, level, info.race)
-        if st == "ready" and (mode == "all" or e.prio == 1) then res.ready[#res.ready + 1] = e
-        elseif st == "quest" and e.level <= level then res.quest[#res.quest + 1] = e end
+    local entries, st, ready = self:Entries(info.class), {}, {}
+    for _, e in ipairs(entries) do
+        st[e] = self:Status(e, level, info.race, info.faction)
+        if st[e] == "ready" then ready[e.id] = true end
+    end
+    local changed = true
+    while changed do
+        changed = false
+        for _, e in ipairs(entries) do
+            if st[e] == "prereq" then
+                local ok = true
+                for _, id in ipairs(e.req) do if not (TR.Known(id) or ready[id]) then ok = false break end end
+                if ok then st[e], ready[e.id], changed = "ready", true, true end
+            end
+        end
+    end
+    for _, e in ipairs(entries) do
+        local s = st[e]
+        if s == "ready" and (mode == "all" or e.prio == 1) then res.ready[#res.ready + 1] = e
+        elseif s == "quest" and e.level <= level then res.quest[#res.quest + 1] = e
+        elseif s == "other" and e.level <= level then res.other[#res.other + 1] = e end
     end
     table.sort(res.ready, function(a, b)
         if a.prio ~= b.prio then return a.prio < b.prio end
         if a.level ~= b.level then return a.level < b.level end
-        if a.name ~= b.name then return a.name < b.name end
-        return a.rank < b.rank
+        local an, bn = a.name or TR.SpellName(a), b.name or TR.SpellName(b)
+        if an ~= bn then return an < bn end
+        if a.rank ~= b.rank then return a.rank < b.rank end
+        return a.id < b.id
     end)
     return res
 end
@@ -113,7 +181,7 @@ end
 function TR.Group(list)
     local out, at = {}, {}
     for _, e in ipairs(list) do
-        local key = e.name
+        local key = e.name or TR.SpellName(e)
         local g = at[key]
         if not g then
             g = { name = TR.SpellName(e), prio = e.prio, ranks = {}, first = e, entries = {} }
@@ -157,6 +225,7 @@ end
 -- Off keeps the old behaviour (train steps always shown). Unknown (no spell API) never skips.
 function TR:SkipReason()
     if self:Mode() == "off" or not TR.CanCheck() then return nil end
+    if self:Deferred() then return "training deferred until your next level" end
     -- One spellbook check per refresh is enough for every train step of the guide.
     local now, key = GetTime and GetTime() or 0, self:Mode() .. (UnitLevel("player") or 1)
     local c = self.skipCache
@@ -221,23 +290,26 @@ function TR:ScanTrainer()
     ns:Fire("TRAINER_CHANGED")
 end
 
--- copper, "current" | "seen" | nil
+-- copper, "current" | "seen" | "listed" | nil. "listed" is the baseline trainer price from What's Training?, before
+-- reputation discounts, so the trainer may charge less.
 function TR:Cost(e)
     if self.trainerOpen and self.live[e.id] then return self.live[e.id], "current" end
     local c = costCache()[e.id]
     if type(c) == "table" and type(c.c) == "number" then return c.c, "seen" end
+    if type(e.listCost) == "number" then return e.listCost, "listed" end
     return nil, nil
 end
 
 -- The bill for a list of entries: total copper of the known prices, how many prices are unknown
 -- or only "seen", and whether the total is complete.
 function TR:Bill(list)
-    local b = { total = 0, unknown = 0, seen = 0, n = #list }
+    local b = { total = 0, unknown = 0, seen = 0, listed = 0, n = #list }
     for _, e in ipairs(list) do
         local c, kind = self:Cost(e)
         if c then
             b.total = b.total + c
             if kind == "seen" then b.seen = b.seen + 1 end
+            if kind == "listed" then b.listed = b.listed + 1 end
         else
             b.unknown = b.unknown + 1
         end
@@ -254,6 +326,7 @@ function TR.BillText(b, label)
     local t = label .. ": " .. money(b.total)
     if not b.complete then t = t .. " |cffffaa55(partial: " .. b.unknown .. " price(s) unknown)|r" end
     if b.seen > 0 then t = t .. " |cff999999(" .. b.seen .. " last seen at a trainer)|r" end
+    if b.listed > 0 then t = t .. " |cff999999(" .. b.listed .. " at the listed base price; a reputation discount can lower it)|r" end
     if b.complete then
         local have = GetMoney and GetMoney() or 0
         t = t .. (have >= b.total and " - you can afford it." or (" - you are " .. money(b.total - have) .. " short."))
@@ -291,6 +364,11 @@ function TR:Lines(max)
         lines[#lines + 1] = "- " .. TR.GroupText(g) .. groupCost(g) .. (g.prio ~= 1 and (" |cff999999" .. PRIO_NAME[g.prio] .. "|r") or "")
     end
     for _, e in ipairs(a.quest) do lines[#lines + 1] = "- " .. TR.SpellName(e) .. " |cff999999(" .. e.quest .. ")|r" end
+    if #a.other > 0 then
+        local names = {}
+        for _, g in ipairs(TR.Group(a.other)) do names[#names + 1] = TR.GroupText(g) end
+        lines[#lines + 1] = "|cff999999Not from the class trainer (a book, drop, vendor or quest): " .. table.concat(names, ", ") .. "|r"
+    end
     -- Totals: everything listed; with "All", important and the rest separately too.
     local imp, rest = {}, {}
     for _, e in ipairs(a.ready) do if e.prio == 1 then imp[#imp + 1] = e else rest[#rest + 1] = e end end
@@ -348,6 +426,37 @@ function TR:NearestNPC(sub)
     return nil
 end
 
+-- Your class trainer in `zone` (area id): zone, x, y, name; nil when the bundled data has none there.
+function TR:TrainerIn(zone)
+    local info = ns.Compat.PlayerInfo()
+    if not (zone and info.class) then return nil end
+    local sub = info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer"
+    local side = info.faction == "Alliance" and "A" or "H"
+    local N = ns.QDB.NPC
+    local best
+    for id, r in pairs(ns.QDB.npcs) do
+        local f = r[N.FRIENDLY]
+        if r[N.SUBNAME] == sub and f and string.find(f, side, 1, true) then
+            local z, x, y = ns.DB.GetNPCPosition(id, zone)
+            if z and (ns.DB.ParentZone(z) or z) == zone and (not best or id < best[5]) then best = { z, x, y, r[N.NAME], id } end
+        end
+    end
+    if best then return best[1], best[2], best[3], best[4] end
+end
+
+-- Completionist (Core/Completionist.lua): an optional train step for a segment in `zone`, or nil. Only when
+-- suggestions are on and not deferred, something is ready to train, and your class trainer is in that zone: the
+-- route never travels just to train. The step is skipped like any train step once nothing is left
+-- (SkipReason) and is never a quest.
+function TR:TrainStepFor(zone)
+    if self:Mode() == "off" or self:Deferred() or not TR.CanCheck() then return nil end
+    if #self:Available().ready == 0 then return nil end
+    local z, x, y, name = self:TrainerIn(zone)
+    if not z then return nil end
+    return { "train", z = z, x = x, y = y, npc = name, optional = true,
+             text = "Optional: your class trainer is here; " .. #self:Available().ready .. " rank(s) to learn." }
+end
+
 function TR:Waypoint()
     local z, x, y, name = self:NearestTrainer()
     if z then
@@ -373,6 +482,11 @@ function TR:Report(force)
     local bill = TR.BillText(self:Bill(a.ready), "Cost")
     if bill and #parts > 0 then ns:Print(bill) end
     for _, e in ipairs(a.quest) do ns:Print("From a class quest: " .. TR.SpellName(e) .. " - " .. e.quest .. ".") end
+    if #a.other > 0 then
+        local names = {}
+        for _, g in ipairs(TR.Group(a.other)) do names[#names + 1] = TR.GroupText(g) end
+        ns:Print("Not from the class trainer (a book, drop, vendor or quest): " .. table.concat(names, ", ") .. ".")
+    end
     local nxt = self:NextTrainStep()
     if nxt then ns:Print("Your route trains next at step " .. nxt .. ".") end
 end

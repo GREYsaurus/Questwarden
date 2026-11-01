@@ -17,6 +17,14 @@ Releases include data derived from **QuestieDB** (from Phase 2; the 0.1.0 develo
 
 Questwarden is not affiliated with the Questie project and does not use the Questie name or logo as its own.
 
+Releases also include the class-trainer spell lists of **What's Training?** (https://github.com/fusionpit/WhatsTraining) by fusionpit, under the MIT License:
+
+- Upstream commit `26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe` (branch `master`): `Classes/Vanilla/<Class>.lua` for Classic Era and `Classes/TBC/<Class>.lua` for TBC Classic Anniversary.
+- The MIT licence text (upstream: "Copyright (c) 2019") is reproduced verbatim in `Classes/WhatsTraining_LICENSE.txt` in each target's data.
+- Transformed by `tools/research/whatstraining_import.py`: the spell ids, levels, base prices and requirements are kept, hunter pet abilities are left out, race ids are turned into race names. No code, interface or artwork of What's Training? is included, and it does not need to be installed.
+
+Questwarden is not affiliated with What's Training? or its author.
+
 Talent-tree layouts and race/class combinations are read from World of Warcraft client tables for each target's build (Classic Era 1.15.9 from Phase 2). World of Warcraft and The Burning Crusade are trademarks of Blizzard Entertainment, Inc. This add-on is not affiliated with or endorsed by Blizzard Entertainment.
 
 See `THIRD_PARTY_LICENSES.md` for details, including the residual licensing uncertainty upstream documents for some historic Questie contributions.

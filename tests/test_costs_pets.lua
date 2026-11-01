@@ -43,9 +43,14 @@ check(c == 1000 and kind == "current", "open trainer: Rend 2 costs 10 silver, re
 check(ns.db.trainCosts[6546] and ns.db.trainCosts[6546].c == 1000, "price is remembered as copper for later")
 local a = TR:Available()
 local bill = TR:Bill(a.ready)
-check(bill.total >= 1500 and not bill.complete and bill.unknown > 0, "total of known prices; unknown prices make it partial")
+check(bill.total >= 1500 and bill.complete and bill.listed > 0, "with What's Training prices every trainer rank has a price: live, seen, or the listed base price")
 local txt = TR.BillText(bill, "Total")
-check(string.find(txt, "partial", 1, true) and not string.find(txt, "afford", 1, true), "a partial total never claims you can afford it")
+check(string.find(txt, "listed base price", 1, true) and string.find(txt, "reputation discount", 1, true), "listed prices are named as base prices that a discount can lower")
+-- A rank without any known price (no trainer seen, no listed price) still makes the total partial
+local bare = { id = 999001, level = 1, rank = 1, name = "Test Spell", prio = 1 }
+bill = TR:Bill({ entry(6546), bare })
+txt = TR.BillText(bill, "Total")
+check(not bill.complete and bill.unknown == 1 and string.find(txt, "partial", 1, true) and not string.find(txt, "afford", 1, true), "a partial total never claims you can afford it")
 local full = TR:Bill({ entry(6546), entry(2687) })
 GetMoney = function() return 1200 end
 check(full.complete and full.total == 1500 and string.find(TR.BillText(full, "Total"), "short", 1, true), "complete total: says how much you are short")
