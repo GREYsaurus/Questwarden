@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.3 (2026-11-01)
 
 - **Setup wizard** (docs/SETUP.md): a per-character, five-step setup replaces the one-page first-login window.
   - **Steps:** route (Speed or Completionist, starting guide, Hardcore on Classic Era); talent plan (or *No talent guidance*) and gear profile; dungeons (questing only or selected dungeons, with level, coverage and status per dungeon); options (group quests, Completionist categories, automatic upgrades); review.
@@ -14,6 +14,8 @@
   - each dungeon gets a skippable run step, and turn-ins wait for completion;
   - coverage is now about 1,190-1,410 routable quests per Classic Era character and 1,890-2,150 per TBC character.
 - **No talent guidance:** a per-character choice that turns off plan picks in reminders and the talent window.
+
+**Tested:** offline only (TBC suite 4,656/4,656, Classic Era smoke 83/83, Forever 30/30, route audits 0 errors). Not played in the live game.
 
 ## 0.1.0-alpha.2 (2026-10-31)
 
