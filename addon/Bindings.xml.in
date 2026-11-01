@@ -1,8 +1,10 @@
 <Bindings>
+	<!-- The header is declared once, on the first binding; the client warns when a header is declared twice.
+	     Every binding after it is listed under that header in the key bindings menu. -->
 	<Binding name="{{KEY}}_DELETEJUNK" header="{{KEY}}">
 		{{NAME}}_DeleteCheapestJunk()
 	</Binding>
-	<Binding name="{{KEY}}_ROUTENEXT" header="{{KEY}}">
+	<Binding name="{{KEY}}_ROUTENEXT">
 		{{NAME}}_RouteNext()
 	</Binding>
 </Bindings>

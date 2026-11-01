@@ -351,4 +351,19 @@ end
 check(#ns.errors == 0, "no captured errors after commands: " .. table.concat(ns.errors, " | "))
 
 print(string.format("[%s] %d passed, %d failed", STAGE.target, passes, failures))
+-- Key bindings: each header is declared once (the client warns "Binding header ... loaded more than once").
+do
+    local f = io.open("build/" .. STAGE.target .. "/" .. ns.name .. "/Bindings.xml", "r")
+    local xml = f and f:read("*a") or ""
+    if f then f:close() end
+    local headers, seen, dup = 0, {}, false
+    for h in string.gmatch(xml, 'header="([^"]+)"') do
+        headers = headers + 1
+        if seen[h] then dup = true end
+        seen[h] = true
+    end
+    local bindings = select(2, string.gsub(xml, "<Binding ", ""))
+    check(headers >= 1 and not dup and bindings >= 2, "Bindings.xml declares each header once (" .. headers .. " header(s), " .. bindings .. " bindings)")
+end
+
 os.exit(failures == 0 and 0 or 1)
