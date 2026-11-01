@@ -76,6 +76,12 @@ local function loadStepWith(guideId, pred)
     local g = ns.Engine.guide
     local idx
     for i, s in ipairs(g.steps) do if pred(s) then idx = i break end end
+    -- Objective steps mark only quests in your log: the found step's quest is picked up.
+    local q = g.steps[idx][1] == "complete" and g.steps[idx].q
+    if q and not ns.Tracker:InLog(q) then
+        MOCK.questLog[#MOCK.questLog + 1] = { id = q, title = "Quest " .. q, objectives = { { text = "x: 0/1", done = false } } }
+        ns.Tracker:Scan()
+    end
     local p = ns.Engine.progress
     for i = 1, idx - 1 do p.done[i] = true end
     ns.Engine:Refresh()
@@ -338,6 +344,9 @@ reset()
 -- Dun Morogh: "complete Dwarven Outfitters" (Tough Wolf Meat from wolves 704/705) is followed by "complete The
 -- Boar Hunter" (708), a kill pack. (Durotar's makrura parts drop from more than 3 NPC types, so they are deliberately
 -- not marked.)
+MOCK.questLog = { { id = 179, title = "Dwarven Outfitters", objectives = { { text = "Tough Wolf Meat: 0/8", done = false } } },
+                  { id = 183, title = "The Boar Hunter", objectives = { { text = "Small Crag Boar slain: 0/12", done = false } } } }
+ns.Tracker:Scan()
 loadStepWith("A_DwarfGnome_DunMorogh", function(s) return s[1] == "complete" and s.q == 179 end)
 local r = M.rule
 local wolfIcon, boarIcon = r and r.types[705], r and r.types[708]

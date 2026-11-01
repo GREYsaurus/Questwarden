@@ -209,7 +209,10 @@ function A:AddStepNpcs(s, ids)
     local q = s.q and ns.DB.GetQuestByID(s.q)
     if q then
         if s[1] == "complete" then
-            for id in pairs(ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or {}) do ids[id] = true end
+            -- Without the objectives your log shows done; a quest not in your log yet lists all of them.
+            local here = ns.Completionist:Here()
+            local open = ns.Tracker:OpenObjectiveNpcIds(s.q, here) or ns.DB.ObjectiveNpcIds(s.q, here)
+            for id in pairs(open or {}) do ids[id] = true end
         elseif s[1] == "accept" then
             for _, id in ipairs(q.startNpcs or {}) do ids[id] = true end
             -- An item-started quest: the NPCs that drop the item, while you still need it (Core/ItemStarts.lua).

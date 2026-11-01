@@ -318,7 +318,10 @@ function Engine:Refresh(silent)
         if pack then
             for i = firstOpen + 1, #g.steps do
                 if g.steps[i].pack ~= pack then break end
-                if self.status[i] == "pending" and not self.waiting[i] then self.status[i] = "active" end
+                -- Only quests you have: an objective step whose quest you have not picked up yet waits.
+                if self.status[i] == "pending" and not self.waiting[i] and not (g.steps[i].q and not T:InLog(g.steps[i].q)) then
+                    self.status[i] = "active"
+                end
             end
         end
     end

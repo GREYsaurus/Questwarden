@@ -6,6 +6,8 @@
   - Pickups stay after the turn-ins of their prerequisites, and turn-ins after their pickups.
   - A pickup you may not have the level for yet stays after the turn-ins before it, whose XP may get you there. This also fixes two pickups the route model reached just below their level (Rejold's New Brew in Dun Morogh, Deep Ocean, Vast Sea in Darkshore).
   - Saved progress follows the moved steps.
+- **Fixed: mobs marked for a quest you haven't picked up.** Kill-pack steps whose quest is not in your log no longer show as current, and their mobs are not marked or targeted (example: boars before you accept The Boar Hunter).
+- **Fixed: finished objectives still marked.** Once your quest log shows an objective done, its mobs stop being marked and targeted, while the quest's other objectives stay (example: Rockjaw Troggs after 6/6 in A New Threat, while Burly Rockjaw Troggs are still needed). A collected item objective drops its droppers the same way.
 
 ## 0.1.0-alpha.21 (2026-11-01)
 

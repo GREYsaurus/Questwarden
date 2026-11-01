@@ -71,9 +71,11 @@ local BLOCK_SCAN = 8
 M.MAX_TYPES = MAX_TYPES
 
 -- Kill objectives, kill-credit NPCs and quest-item droppers (DB.ObjectiveNpcIds: items with many droppers keep
--- the ones in your zone).
+-- the ones in your zone), only for a quest in your log and without the objectives it shows done
+-- (Tracker:OpenObjectiveNpcIds). A quest you have not picked up yet marks nothing.
 local function objectiveNpcs(s)
-    return s.q and ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or nil
+    local ids = s.q and ns.Tracker:OpenObjectiveNpcIds(s.q, ns.Completionist:Here())
+    return ids and next(ids) and ids or nil
 end
 
 -- The trainer of a train step, as NPC ids: the NPC the step names (guide steps name it, e.g. npc="Llane

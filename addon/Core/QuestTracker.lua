@@ -41,6 +41,45 @@ function Tracker:ObjectiveDone(questId, objIndex)
     return o and o.done or false
 end
 
+-- The objective NPCs of a quest in your log (DB.ObjectiveNpcIds) without those of objectives the log shows done: a kill
+-- objective by its creature's name ("Rockjaw Trogg slain: 6/6"), an item objective by the item's name (its droppers,
+-- unless they also drop an item or are a kill you still need). Text that names neither (kill credit, another client
+-- language) keeps its NPCs. nil when the quest is not in your log; an empty table when nothing is left to kill.
+function Tracker:OpenObjectiveNpcIds(questId, zone)
+    local e = questId and self.log[questId]
+    if not e then return nil end
+    local ids = ns.DB.ObjectiveNpcIds(questId, zone) or {}
+    local doneText = {}
+    for _, o in ipairs(e.objectives or {}) do
+        if o.done and type(o.text) == "string" then doneText[#doneText + 1] = o.text end
+    end
+    local q = ns.DB.GetQuestByID(questId)
+    if #doneText == 0 or not q then return ids end
+    local function done(name)
+        if not name then return false end
+        for _, t in ipairs(doneText) do
+            if string.sub(t, 1, #name + 1) == name .. ":" or string.sub(t, 1, #name + 6) == name .. " slain" then return true end
+        end
+        return false
+    end
+    local drop, keep = {}, {}
+    for _, id in ipairs(q.objectives.creatures) do
+        if done(ns.DB.GetNPCName(id)) then drop[id] = true else keep[id] = true end
+    end
+    for _, itemId in ipairs(q.objectives.items) do
+        local it = ns.DB.GetItemByID(itemId)
+        local finished = done(ns.DB.GetItemName(itemId))
+        for _, n in ipairs(it and it.npcDrops or {}) do
+            if finished then drop[n] = true else keep[n] = true end
+        end
+    end
+    local out = {}
+    for id in pairs(ids) do
+        if keep[id] or not drop[id] then out[id] = true end
+    end
+    return out
+end
+
 function Tracker:IsTurnedIn(questId)
     if not questId then return false end
     if self.turnedIn[questId] then return true end
