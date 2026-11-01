@@ -207,6 +207,9 @@ function StepText:Target(s)
             if z then return z, x, y, ns.DB.GetObjectName(objs[1]) end
         end
     elseif s[1] == "complete" then
+        -- Two or more open steps of the current kill pack: where their mobs meet (Core/Roam.lua).
+        local pz, pkx, pky, plabel = ns.Roam:PackTarget(s)
+        if pz then return pz, pkx, pky, plabel end
         local px, py
         local mapId, mx, my = ns.Compat.GetPlayerMapPosition()
         local area = mapId and ns.DB.AreaForUiMap(mapId)

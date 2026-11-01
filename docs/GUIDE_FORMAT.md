@@ -107,7 +107,7 @@ If a name is ambiguous (e.g. the three "Rite of Vision" quests), the compiler st
 
 Back-to-back `complete` steps whose mobs spawn in the same area are a **kill pack**, done together. The mobs are the kill targets, the kill-credit NPCs and the droppers of the quest's items. The compiler links them (`pack=<first step>` on each step, `GuideCompiler.LinkKillPacks`). A step joins the pack before it when one of its mob spawns is within 8 map percent of a spawn of a step already in the pack, or when the two share a mob. A step with no mob spawns (objects, areas, NPCs to talk to) ends the pack.
 
-You don't write packs: put the steps next to each other. In the add-on, every open step of the current step's pack is current: highlighted with its details, and its mobs are in the target list, the macro and the raid markers.
+You don't write packs: put the steps next to each other. In the add-on, every open step of the current step's pack is current: highlighted with its details, and its mobs are in the target list, the macro and the raid markers. The arrow points at the spot where the open steps' mobs meet, not at one step's hunting route ([ROAMING.md](ROAMING.md#how-it-works-addoncoreroamlua)).
 
 `python tools/research/kill_packs.py <Target> [--apply]` finds later `complete` steps that would join a pack and moves them up to it ([ROUTE_OPTIMIZATION.md](ROUTE_OPTIMIZATION.md)).
 

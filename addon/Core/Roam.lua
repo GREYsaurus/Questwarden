@@ -79,6 +79,134 @@ local function serves(route, objIndex)
     return false
 end
 
+-- Kill packs ----------------------------------------------------------------------------------------
+-- The steps of a kill pack (Engine:PackSteps) are done together, so the arrow goes where the mobs of all of
+-- them spawn: the known spawn with mobs of the most open steps within PACK_SPOT map percent, then the most of
+-- the step with the fewest there, then the most in all. Example: Stocking Jetsteam and The Grizzled Den in Dun
+-- Morogh meet by the wendigo cave (about 43, 56.5), not at the boars far west. The spot stays put until a step
+-- or objective of the pack finishes.
+-- A hunting route of a pack step is used only when it passes within PACK_NEAR map percent of the spot where
+-- all the pack's steps meet; otherwise the arrow points at that spot (several open steps) or the nearest
+-- spawn (one).
+local PACK_SPOT = 4
+local PACK_NEAR = 8   -- the compiler's PackRadius
+
+-- Score of each spawn in `lists` (one spawn list per step): { p, steps with spawns near it, fewest of those, total }.
+local function packScores(lists)
+    local grid, cells = {}, PACK_SPOT
+    local function key(x, y) return math.floor(x / cells) * 1000 + math.floor(y / cells) end
+    for li, l in ipairs(lists) do
+        for _, p in ipairs(l) do
+            local k = key(p[1], p[2])
+            grid[k] = grid[k] or {}
+            grid[k][#grid[k] + 1] = { p, li }
+        end
+    end
+    local out, r2 = {}, PACK_SPOT * PACK_SPOT
+    for _, l in ipairs(lists) do
+        for _, c in ipairs(l) do
+            local n = {}
+            local gx, gy = math.floor(c[1] / cells), math.floor(c[2] / cells)
+            for dx = -1, 1 do
+                for dy = -1, 1 do
+                    for _, e in ipairs(grid[(gx + dx) * 1000 + gy + dy] or {}) do
+                        local p = e[1]
+                        if (p[1] - c[1]) ^ 2 + (p[2] - c[2]) ^ 2 <= r2 then n[e[2]] = (n[e[2]] or 0) + 1 end
+                    end
+                end
+            end
+            local steps, fewest, total = 0, math.huge, 0
+            for li = 1, #lists do
+                if n[li] then
+                    steps, fewest, total = steps + 1, math.min(fewest, n[li]), total + n[li]
+                end
+            end
+            out[#out + 1] = { c, steps, fewest, total }
+        end
+    end
+    return out
+end
+
+local function better(a, b)
+    if a[2] ~= b[2] then return a[2] > b[2] end
+    if a[3] ~= b[3] then return a[3] > b[3] end
+    return a[4] > b[4]
+end
+
+-- The best spot for these spawn lists (one list per step), or nil when no spawn has mobs of two steps near it.
+function R.PackSpot(lists)
+    if #lists < 2 then return nil end
+    local best
+    for _, s in ipairs(packScores(lists)) do if not best or better(s, best) then best = s end end
+    if not best or best[2] < 2 then return nil end
+    return best[1][1], best[1][2]
+end
+
+-- Where all the steps of step s's kill pack meet in `zone` (all their objectives, done or not): x, y or nil.
+local areaCache = {}
+function R:PackArea(s, zone)
+    local E = ns.Engine
+    if not (s and s.pack and E.guide and zone) then return nil end
+    local key = E.guide.id .. ":" .. s.pack .. ":" .. zone
+    local hit = areaCache[key]
+    if hit == nil then
+        local lists = {}
+        for i = s.pack, #E.guide.steps do
+            local st = E.guide.steps[i]
+            if st.pack ~= s.pack then break end
+            if st[1] == "complete" and st.q then
+                local l = ns.DB.ObjectiveSpawns(st.q, zone)
+                if #l > 0 then lists[#lists + 1] = l end
+            end
+        end
+        local x, y = R.PackSpot(lists)
+        hit = x and { x, y } or false
+        areaCache[key] = hit
+    end
+    if hit then return hit[1], hit[2] end
+end
+
+local function routeNear(route, x, y)
+    for _, p in ipairs(route.pts) do
+        if (p[1] - x) ^ 2 + (p[2] - y) ^ 2 <= PACK_NEAR * PACK_NEAR then return true end
+    end
+    return false
+end
+
+-- Arrow target while two or more steps of the current kill pack are open: zone, x, y, label; nil otherwise.
+-- Spawns in the zone you are in (the guide's quests there), open objectives only.
+function R:PackTarget(s)
+    local E = ns.Engine
+    if not (s and s.pack and E.guide and s == E:CurrentStep()) then return nil end
+    local mapId = C.GetPlayerMapPosition()
+    local zone = mapId and ns.DB.AreaForUiMap(mapId)
+    if not zone then return nil end
+    local lists, titles, sig = {}, {}, { E.guide.id, s.pack, zone }
+    for _, i in ipairs(E:PackSteps()) do
+        local st = E.guide.steps[i]
+        local e = st[1] == "complete" and st.q and ns.Tracker:GetEntry(st.q)
+        if e and not e.complete then
+            local l = ns.DB.ObjectiveSpawns(st.q, zone, function(name) return ns.Tracker:ObjectiveNameDone(st.q, name) end)
+            if #l > 0 then
+                lists[#lists + 1] = l
+                titles[#titles + 1] = st.title or ns.DB.GetQuestName(st.q) or ("quest " .. st.q)
+                sig[#sig + 1] = st.q .. "/" .. #l
+            end
+        end
+    end
+    if #lists < 2 then self.pack = nil return nil end
+    sig = table.concat(sig, ":")
+    local p = self.pack
+    if not (p and p.sig == sig) then
+        local x, y = R.PackSpot(lists)
+        if not x then self.pack = nil return nil end
+        p = { sig = sig, zone = zone, x = x, y = y, label = table.concat(titles, " + ") }
+        self.pack = p
+        dbg(string.format("kill pack spot %.1f, %.1f", x, y))
+    end
+    return p.zone, p.x, p.y, p.label
+end
+
 -- The route for step s now, with its unfinished objectives; nil and a reason otherwise.
 function R:Pick(s)
     if not prof().roamRoutes then return nil, "setting off" end
@@ -90,15 +218,19 @@ function R:Pick(s)
     if e.complete then return nil, "quest complete" end
     if inInstance() then return nil, "in an instance" end
     if ns.Patrol and ns.Patrol:Pick(s) then return nil, "a patrolling NPC leads" end
-    local cands = {}
+    if self:PackTarget(s) then return nil, "kill pack: the arrow shows where its mobs meet" end
+    local cands, far = {}, false
     for _, route in ipairs(list) do
-        if not s.obj or serves(route, s.obj) then
+        local ax, ay = self:PackArea(s, route.zone)
+        if ax and not routeNear(route, ax, ay) then
+            far = true
+        elseif not s.obj or serves(route, s.obj) then
             local open = openObjectives(route, e)
             if open == nil then return nil, "quest log does not match route data" end
             if #open > 0 then cands[#cands + 1] = { route = route, open = open } end
         end
     end
-    if #cands == 0 then return nil, "route objectives complete" end
+    if #cands == 0 then return nil, far and "route far from the kill pack" or "route objectives complete" end
     local a = self.active
     if a and a.q == s.q then
         for _, c in ipairs(cands) do if c.route == a.route then return c.route, c.open end end

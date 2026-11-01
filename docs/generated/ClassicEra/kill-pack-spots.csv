@@ -1,0 +1,125 @@
+guide,pack,quests,zone,x,y,steps,fewest,total,route,route_zone,nearest,verdict
+A_10_Darkshore,48,Plagued Lands + Buzzbox 827,148,36.69,58.00,2,11,24,Buzzbox 827: Crawler Leg,148,8.0,used
+A_10_Darkshore,59,How Big a Threat? + Tools of the Highborne,148,40.23,56.31,2,17,42,Tools of the Highborne: Highborne Relic,148,3.1,used
+A_10_Darkshore,90,Easy Strider Living + Buzzbox 411,148,35.97,36.49,2,5,18,,,,no hunting route
+A_10_Darkshore,120,Fruit of the Sea + Fruit of the Sea + Fruit of the Sea,148,48.90,20.08,3,17,51,,,,no hunting route
+A_11_LochModan,4,In Defense of the King's Lands + The Trogg Threat,38,33.45,74.21,2,37,74,In Defense of the King's Lands: Stonesplinter Scout,38,2.0,used
+A_11_LochModan,4,In Defense of the King's Lands + The Trogg Threat,38,33.45,74.21,2,37,74,The Trogg Threat: Trogg Stone Tooth,38,2.1,used
+A_11_LochModan,25,Rat Catching + Thelsamar Blood Sausages,38,37.01,29.51,2,10,22,Thelsamar Blood Sausages: Boar Intestines,38,4.8,used
+A_12_Darkshore,36,A Lost Master + A Lost Master + A Lost Master,148,39.41,91.80,3,11,33,,,,no hunting route
+A_14_StonetalonMountains,17,Super Reaper 6000 + Gerenzo's Orders,406,73.27,56.67,2,1,7,,,,no hunting route
+A_16_Ashenvale,22,The Tower of Althalaxx + The Tower of Althalaxx + The Tower of Althalaxx + The Tower of Althalaxx,331,25.28,60.69,4,1,4,,,,no hunting route
+A_17_Wetlands,24,Claws from the Deep + The Absent Minded Prospector + Digging Through the Ooze,11,24.11,50.43,2,2,21,Digging Through the Ooze: Sida's Bag,11,29.1,not used for this pack: far from the spot
+A_18_Duskwood,32,Seasoned Wolf Kabobs + Eight-Legged Menaces,10,66.04,18.04,2,3,8,,,,no hunting route
+A_18_Duskwood,96,The Night Watch + Ghoulish Effigy,10,24.78,34.36,2,14,50,,,,no hunting route
+A_24_StranglethornVale,56,Tiger Mastery + Panther Mastery + Raptor Mastery + The Second Rebellion + Bad Medicine,33,40.65,11.19,4,5,43,The Second Rebellion: Kurzen Jungle Fighter,33,3.4,used
+A_24_StranglethornVale,67,Tiger Mastery + Panther Mastery,33,28.36,13.43,2,6,18,,,,no hunting route
+A_24_StranglethornVale,90,Supply and Demand + Tiger Mastery,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_25_ShimmeringFlats,8,A Bump in the Road + Load Lightening + Salt Flat Venom + Hardened Shells,400,79.40,87.17,4,2,35,Hardened Shells: Hardened Tortoise Shell,400,32.6,not used for this pack: far from the spot
+A_26_StranglethornVale,26,Some Assembly Required + Panther Mastery,33,39.15,31.89,2,9,20,Panther Mastery: Shadowmaw Panther,33,8.6,not used for this pack: far from the spot
+A_28_ArathiHighlands,27,Wanted!  Marez Cowl + Wanted!  Otto and Falconcrest,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_30_StranglethornVale,6,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter I: Green Hills of Stranglethorn - Page 1,33,32.3,not used for this pack: far from the spot
+A_30_StranglethornVale,6,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter II: Green Hills of Stranglethorn - Page 10,33,32.3,not used for this pack: far from the spot
+A_30_StranglethornVale,6,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter III: Green Hills of Stranglethorn - Page 18,33,32.3,not used for this pack: far from the spot
+A_30_StranglethornVale,6,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter IV: Green Hills of Stranglethorn - Page 25,33,32.3,not used for this pack: far from the spot
+A_31_Badlands,27,Power Stones + A Dwarf and His Tools,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_34_Desolace,30,Search for Tyranis + Sceptre of Light,405,53.01,29.08,2,1,2,,,,no hunting route
+A_34_Desolace,52,Kodo Roundup + Centaur Bounty,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_34_Desolace,70,Reagents for Reclaimers Inc. + Down the Scarlet Path,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_35_Tanaris,11,Wastewander Justice + Water Pouch Bounty,440,63.54,33.07,2,27,69,,,,no hunting route
+A_35_Tanaris,25,Southsea Shakedown + WANTED: Andre Firebeard + Pirate Hats Ahoy!,440,72.97,45.18,3,1,230,Southsea Shakedown: Southsea Dock Worker,440,2.4,used
+A_35_Tanaris,25,Southsea Shakedown + WANTED: Andre Firebeard + Pirate Hats Ahoy!,440,72.97,45.18,3,1,230,Southsea Shakedown: Southsea Swashbuckler,440,2.2,used
+A_36_Feralas,42,The High Wilderness + The Mark of Quality,357,59.33,57.52,2,6,22,The Mark of Quality: Thick Yeti Hide,357,6.5,used
+A_37_Azshara,13,Spiritual Unrest + A Land Filled with Hatred,16,19.10,64.04,2,4,17,,,,no hunting route
+A_40_SearingGorge,19,Incendosaurs? Whateverosaur is More Like It + The Flawless Flame,51,51.62,37.39,2,3,6,,,,no hunting route
+A_40_SearingGorge,22,JOB OPPORTUNITY: Culling the Competition + STOLEN: Smithing Tuyere and Lookout's Spyglass + Curse These Fat Fingers + The Flawless Flame,51,40.52,51.14,4,2,20,,,,no hunting route
+A_45_BlastedLands,19,Vulture's Vigor + The Basilisk's Bite + The Decisive Striker + A Boar's Vitality + Snickerfang Jowls + To Serve Kum'isha + Everything Counts In Large Amounts,4,61.82,26.17,7,2,53,To Serve Kum'isha: Flawless Draenethyst Sphere,4,20.4,not used for this pack: far from the spot
+A_45_BlastedLands,19,Vulture's Vigor + The Basilisk's Bite + The Decisive Striker + A Boar's Vitality + Snickerfang Jowls + To Serve Kum'isha + Everything Counts In Large Amounts,4,61.82,26.17,7,2,53,Everything Counts In Large Amounts: Imperfect Draenethyst Fragment,4,20.4,not used for this pack: far from the spot
+A_46_UnGoroCrater,17,Roll the Bones + Crystals of Power + Shizzle's Flyer + Muigin and Larion,490,53.36,63.28,4,9,135,,,,no hunting route
+A_48_Felwood,15,Further Corruption + Flute of Xavaric,361,42.37,17.05,2,27,54,,,,no hunting route
+A_52_WesternPlaguelands,41,All Along the Watchtowers + Unfinished Business,28,42.33,66.24,2,2,4,,,,no hunting route
+A_53_EasternPlaguelands,23,Demon Dogs + Carrion Grubbage + Blood Tinged Skies,139,16.49,78.74,3,5,23,,,,no hunting route
+A_58_UnGoroCrater,13,Beware of Pterrordax + The Apes of Un'Goro,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_59_Silithus,18,Scouring the Desert + Secret Communication + Securing the Supply Lines + Deadly Desert Venom + The Twilight Mystery,1377,28.49,27.24,4,1,8,,,,no hunting route
+A_59_Silithus,33,Stepping Up Security + Noggle's Last Hope,1377,51.43,62.27,2,8,19,,,,no hunting route
+A_DwarfGnome_DunMorogh,3,Dwarven Outfitters + The Boar Hunter,1,26.18,71.19,2,21,42,Dwarven Outfitters: Tough Wolf Meat,1,0.9,used
+A_DwarfGnome_DunMorogh,3,Dwarven Outfitters + The Boar Hunter,1,26.18,71.19,2,21,42,The Boar Hunter: Small Crag Boar,1,3.3,used
+A_DwarfGnome_DunMorogh,40,The Troll Cave + Beginnings,1,27.13,80.46,2,8,51,,,,no hunting route
+A_DwarfGnome_DunMorogh,77,Stocking Jetsteam + The Grizzled Den + Beer Basted Boar Ribs,1,43.07,56.43,3,13,53,Stocking Jetsteam: Chunk of Boar Meat,1,22.7,not used for this pack: far from the spot
+A_DwarfGnome_DunMorogh,86,A Favor for Evershine + The Perfect Stout,1,39.48,33.99,2,12,35,,,,no hunting route
+A_DwarfGnome_DunMorogh,120,Those Blasted Troggs! + The Public Servant,1,70.81,53.95,2,26,53,,,,no hunting route
+A_Human_Elwynn,7,Kobold Camp Cleanup + Wolves Across the Border,12,48.36,37.44,2,22,53,Kobold Camp Cleanup: Kobold Vermin,12,1.8,used
+A_Human_Elwynn,7,Kobold Camp Cleanup + Wolves Across the Border,12,48.36,37.44,2,22,53,Wolves Across the Border: Tough Wolf Meat,12,0.6,used
+A_Human_Elwynn,32,Investigate Echo Ridge + Brotherhood of Thieves,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+A_Human_Elwynn,74,Kobold Candles + Gold Dust Exchange,12,39.01,80.66,2,58,116,,,,no hunting route
+A_NightElf_Teldrassil,65,Zenn's Bidding + Garments of the Moon,141,53.68,63.21,2,1,27,,,,no hunting route
+A_NightElf_Teldrassil,74,Timberling Seeds + The Sleeping Druid,141,53.71,75.32,2,4,12,,,,no hunting route
+A_NightElf_Teldrassil,127,Tears of the Moon + Tumors,141,43.87,26.99,2,2,12,,,,no hunting route
+H_10_Barrens,23,Preparation for Ceremony + Preparation for Ceremony + Preparation for Ceremony + Rites of the Earthmother + Rites of the Earthmother + Rites of the Earthmother + The Hunter's Way,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_10_Barrens,80,Plainstrider Menace + Raptor Thieves,17,56.41,35.00,2,17,39,,,,no hunting route
+H_10_Barrens,100,The Zhevra + Call of Fire,17,59.12,23.96,2,19,42,Call of Fire: Fire Tar,17,4.0,used
+H_10_Barrens,124,Prowlers of the Barrens + Harpy Raiders + Kolkar Leaders,17,40.29,20.50,3,1,54,Harpy Raiders: Witchwing Talon,17,3.6,used
+H_12_Barrens,19,The Guns of Northwatch + Raptor Horns,17,60.24,52.07,2,17,90,,,,no hunting route
+H_12_Barrens,27,Ignition + Miner's Fortune,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_12_Barrens,41,Lost in Battle + Consumed by Hatred,17,46.90,53.14,2,1,57,Consumed by Hatred: Bristleback Quilboar Tusk,17,4.5,used
+H_14_SouthernBarrens,21,Tribes at War + Tribes at War + Tribes at War + Tribes at War + Tribes at War,17,50.73,54.73,5,51,255,Tribes at War: Bristleback Water Seeker,17,3.9,used
+H_14_SouthernBarrens,21,Tribes at War + Tribes at War + Tribes at War + Tribes at War + Tribes at War,17,50.73,54.73,5,51,255,Tribes at War: Bristleback Water Seeker,17,3.9,used
+H_14_SouthernBarrens,21,Tribes at War + Tribes at War + Tribes at War + Tribes at War + Tribes at War,17,50.73,54.73,5,51,255,Tribes at War: Bristleback Water Seeker,17,3.9,used
+H_14_SouthernBarrens,21,Tribes at War + Tribes at War + Tribes at War + Tribes at War + Tribes at War,17,50.73,54.73,5,51,255,Tribes at War: Bristleback Water Seeker,17,3.9,used
+H_14_SouthernBarrens,21,Tribes at War + Tribes at War + Tribes at War + Tribes at War + Tribes at War,17,50.73,54.73,5,51,255,Tribes at War: Bristleback Water Seeker,17,3.9,used
+H_18_Ashenvale,25,Warsong Supplies + Stonetalon Standstill,331,53.96,64.83,2,1,28,Stonetalon Standstill: Befouled Water Elemental,331,7.2,used
+H_20_ThousandNeedles,46,Salt Flat Venom + Hardened Shells + Load Lightening,400,81.70,89.22,3,2,6,Hardened Shells: Hardened Tortoise Shell,400,34.5,not used for this pack: far from the spot
+H_21_HillsbradFoothills,12,WANTED: Syndicate Personnel + Elixir of Suffering + Blood of Innocents + Humbert's Sword + Battle of Hillsbrad,267,81.74,47.53,3,6,31,WANTED: Syndicate Personnel: Syndicate Watchman,267,3.5,used
+H_21_HillsbradFoothills,30,Souvenirs of Death + Battle of Hillsbrad + Dangerous! + Elixir of Pain,267,34.30,44.23,4,1,58,Souvenirs of Death: Hillsbrad Human Skull,267,41.5,not used for this pack: far from the spot
+H_23_StranglethornVale,15,Tiger Mastery + Panther Mastery,33,38.29,13.45,2,10,21,,,,no hunting route
+H_25_Desolace,42,Clam Bait + Other Fish to Fry + Claim Rackmore's Treasure!,405,35.40,22.01,3,19,75,Clam Bait: Soft-shelled Clam Meat,405,0.8,used
+H_25_Desolace,42,Clam Bait + Other Fish to Fry + Claim Rackmore's Treasure!,405,35.40,22.01,3,19,75,Claim Rackmore's Treasure!: Rackmore's Golden Key,405,11.8,not used for this pack: far from the spot
+H_26_StranglethornVale,21,Hunt for Yenniku + Bloody Bone Necklaces + The Defense of Grom'gol + Mok'thardin's Enchantment + Raptor Mastery,33,29.34,20.00,4,3,41,Hunt for Yenniku: Bloodscalp Tusk,33,8.3,not used for this pack: far from the spot
+H_26_StranglethornVale,21,Hunt for Yenniku + Bloody Bone Necklaces + The Defense of Grom'gol + Mok'thardin's Enchantment + Raptor Mastery,33,29.34,20.00,4,3,41,Bloody Bone Necklaces: Bloody Bone Necklace,33,8.3,not used for this pack: far from the spot
+H_26_StranglethornVale,21,Hunt for Yenniku + Bloody Bone Necklaces + The Defense of Grom'gol + Mok'thardin's Enchantment + Raptor Mastery,33,29.34,20.00,4,3,41,Mok'thardin's Enchantment: Shadowmaw Claw,33,23.2,not used for this pack: far from the spot
+H_26_StranglethornVale,21,Hunt for Yenniku + Bloody Bone Necklaces + The Defense of Grom'gol + Mok'thardin's Enchantment + Raptor Mastery,33,29.34,20.00,4,3,41,Mok'thardin's Enchantment: Pristine Tigress Fang,33,23.2,not used for this pack: far from the spot
+H_26_StranglethornVale,54,Some Assembly Required + Hostile Takeover + Bloodscalp Ears,33,41.35,19.11,2,15,31,Bloodscalp Ears: Bloodscalp Ear,33,16.8,not used for this pack: far from the spot
+H_31_StranglethornVale,16,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter I: Green Hills of Stranglethorn - Page 1,33,32.3,not used for this pack: far from the spot
+H_31_StranglethornVale,16,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter II: Green Hills of Stranglethorn - Page 10,33,32.3,not used for this pack: far from the spot
+H_31_StranglethornVale,16,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter III: Green Hills of Stranglethorn - Page 18,33,32.3,not used for this pack: far from the spot
+H_31_StranglethornVale,16,Chapter I + Chapter II + Chapter III + Chapter IV,33,45.00,38.06,4,441,2205,Chapter IV: Green Hills of Stranglethorn - Page 25,33,32.3,not used for this pack: far from the spot
+H_32_Badlands,21,Study of the Elements: Rock + Badlands Reagent Run,3,44.34,83.94,2,10,20,Badlands Reagent Run: Rock Elemental Shard,3,42.9,not used for this pack: far from the spot
+H_32_Badlands,28,Pearl Diving + Barbecued Buzzard Wings + Power Stones,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_32_Badlands,33,Badlands Reagent Run + Badlands Reagent Run,3,4.11,79.91,2,14,28,Badlands Reagent Run: Rock Elemental Shard,3,36.5,not used for this pack: far from the spot
+H_32_Badlands,33,Badlands Reagent Run + Badlands Reagent Run,3,4.11,79.91,2,14,28,Badlands Reagent Run: Rock Elemental Shard,3,36.5,not used for this pack: far from the spot
+H_33_SwampofSorrows,17,Lack of Surplus + Fresh Meat,8,76.27,97.38,2,2,4,,,,no hunting route
+H_35_DustwallowMarsh,6,Identifying the Brood + Army of the Black Dragon,15,45.95,67.21,2,24,62,,,,no hunting route
+H_37_Tanaris,20,Wastewander Justice + Water Pouch Bounty,440,63.54,33.07,2,27,69,,,,no hunting route
+H_37_Tanaris,36,Southsea Shakedown + WANTED: Andre Firebeard + Pirate Hats Ahoy!,440,72.97,45.18,3,1,230,Southsea Shakedown: Southsea Dock Worker,440,2.4,used
+H_37_Tanaris,36,Southsea Shakedown + WANTED: Andre Firebeard + Pirate Hats Ahoy!,440,72.97,45.18,3,1,230,Southsea Shakedown: Southsea Swashbuckler,440,2.2,used
+H_38_Feralas,7,War on the Woodpaw + A New Cloak's Sheen,357,68.92,49.10,2,13,42,,,,no hunting route
+H_38_Feralas,22,A Grim Discovery + The Ogres of Feralas,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_38_Feralas,29,The Mark of Quality + The Ogres of Feralas,357,59.46,56.97,2,5,19,,,,no hunting route
+H_39_Hinterlands,8,Stalking the Stalkers + Cannibalistic Cousins + Hunt the Savages + Avenging the Fallen,47,63.03,42.86,3,2,10,,,,no hunting route
+H_41_SearingGorge,15,Incendosaurs? Whateverosaur is More Like It + The Flawless Flame + JOB OPPORTUNITY: Culling the Competition + STOLEN: Smithing Tuyere and Lookout's Spyglass + Curse These Fat Fingers + The Flawless Flame,51,40.52,51.14,5,2,22,,,,no hunting route
+H_45_Azshara,15,A Land Filled with Hatred + Spiritual Unrest,16,19.10,64.04,2,4,17,,,,no hunting route
+H_46_Hinterlands,17,"Snapjaws, Mon! + Job Opening: Guard Captain of Revantusk Village",,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_47_BlastedLands,10,Vulture's Vigor + The Basilisk's Bite + The Decisive Striker + A Boar's Vitality + Snickerfang Jowls + To Serve Kum'isha + Everything Counts In Large Amounts,4,61.82,26.17,7,2,53,To Serve Kum'isha: Flawless Draenethyst Sphere,4,20.4,not used for this pack: far from the spot
+H_47_BlastedLands,10,Vulture's Vigor + The Basilisk's Bite + The Decisive Striker + A Boar's Vitality + Snickerfang Jowls + To Serve Kum'isha + Everything Counts In Large Amounts,4,61.82,26.17,7,2,53,Everything Counts In Large Amounts: Imperfect Draenethyst Fragment,4,20.4,not used for this pack: far from the spot
+H_48_UnGoroCrater,17,Beware of Pterrordax + Roll the Bones + Crystals of Power + Shizzle's Flyer + Larion and Muigin,490,34.52,36.76,5,4,93,,,,no hunting route
+H_52_Winterspring,21,"Ursius of the Shardtooth + Are We There, Yeti?",,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_55_EasternPlaguelands,25,Demon Dogs + Carrion Grubbage + Blood Tinged Skies,139,16.49,78.74,3,5,23,,,,no hunting route
+H_57_Silithus,21,Secret Communication + Securing the Supply Lines + Deadly Desert Venom + The Twilight Mystery,1377,28.49,27.24,4,1,8,,,,no hunting route
+H_57_Silithus,34,Stepping Up Security + Noggle's Last Hope,1377,51.43,62.27,2,8,19,,,,no hunting route
+H_OrcTroll_Durotar,38,Vile Familiars + Vile Familiars + Call of Earth,14,43.71,55.47,3,16,90,,,,no hunting route
+H_OrcTroll_Durotar,54,Vanquish the Betrayers + Carry Your Weight + Carry Your Weight,14,58.19,56.79,3,44,132,,,,no hunting route
+H_OrcTroll_Durotar,104,Zalazane + Practical Prey,14,65.89,84.01,2,6,33,,,,no hunting route
+H_OrcTroll_Durotar,123,Garments of Spirituality + Encroachment + Carry Your Weight + Carry Your Weight,14,58.19,56.79,2,44,88,,,,no hunting route
+H_OrcTroll_Durotar,169,Lost But Not Forgotten + Hidden Enemies,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint
+H_Tauren_Mulgore,29,The Battleboars + Break Sharptusk!,215,62.25,79.22,2,1,25,The Battleboars: Battleboar Snout,215,6.8,used
+H_Tauren_Mulgore,49,Poison Water + Sharing the Land,215,50.10,74.18,2,20,41,Poison Water: Plainstrider Talon,215,0.9,used
+H_Tauren_Mulgore,60,Mazzranache + Thunderhorn Totem,215,51.83,43.20,2,34,84,Mazzranache: Plainstrider Scale,215,31.9,not used for this pack: far from the spot
+H_Tauren_Mulgore,92,The Venture Co. + Supervisor Fizsprocket,215,63.53,40.94,2,1,120,,,,no hunting route
+H_Undead_Tirisfal,14,Rattling the Rattlecages + Piercing the Veil,85,32.98,63.00,2,20,40,Rattling the Rattlecages: Rattlecage Skeleton,85,1.1,used
+H_Undead_Tirisfal,14,Rattling the Rattlecages + Piercing the Veil,85,32.98,63.00,2,20,40,Piercing the Veil: Rattlecage Skull,85,1.1,used
+H_Undead_Tirisfal,56,Garments of Darkness + A Putrid Task,85,56.05,47.63,2,1,21,,,,no hunting route
+H_Undead_Tirisfal,70,Wanted: Maggot Eye + Graverobbers,85,59.35,33.69,2,1,46,,,,no hunting route
+H_Undead_Tirisfal,77,A New Plague + Proof of Demise + At War With The Scarlet Crusade,85,85.13,44.04,3,13,49,Proof of Demise: Scarlet Insignia Ring,85,38.6,not used for this pack: far from the spot
+H_Undead_Tirisfal,87,The Mills Overrun + A New Plague,85,40.88,34.96,2,3,12,The Mills Overrun: Blackened Skull,85,7.1,used
+H_Undead_Tirisfal,87,The Mills Overrun + A New Plague,85,40.88,34.96,2,3,12,A New Plague: Vile Fin Scale,85,18.9,not used for this pack: far from the spot
+H_Undead_Tirisfal,110,Deaths in the Family + The Haunted Mills,,,,0,0,0,,,,no spot where two of its steps' mobs meet: each step keeps its own waypoint

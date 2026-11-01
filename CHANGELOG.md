@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fixed: the arrow for a kill pack led away from where its mobs meet.** While two or more steps of a kill pack are open, the arrow now points at the spot where all their mobs spawn, instead of following the first step's hunting route. Example: Stocking Jetsteam and The Grizzled Den in Dun Morogh now lead to the wendigo cave (about 43, 56.5), where boars and wendigos meet, not to the boars about 1,000 yards west. A hunting route of a pack step that never comes within 8 map percent of the pack's spot is no longer used for it, even after the other steps are done; the arrow then shows the nearest spawn. The new `tools/research/pack_spots.py` checks every guide: 30 such routes in Classic Era and 25 in TBC were affected.
+
 ## 0.1.0-alpha.24 (2026-11-01)
 
 - **Fixed: item quests pointed at mobs far above the quest's level.** When ordinary mobs near the quest's level drop a quest item, the arrow, raid markers, target list and patrol hints now leave out the rares, elites and mobs more than 3 levels higher that drop it too. Example: The Grizzled Den now sends you to Young Wendigos and Wendigos, not Edan the Howler (rare, level 9) or the level 11 elites Old Icebeard and Vagash. The same goes for every guide: 132 item objectives in Classic Era and 136 in TBC had such droppers (for example Chunk of Boar Meat for Stocking Jetsteam no longer lists the level 10-16 boars of other zones). When no ordinary mob near the level drops an item, all droppers still count.

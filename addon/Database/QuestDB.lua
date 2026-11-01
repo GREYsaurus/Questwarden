@@ -284,6 +284,32 @@ function DB.ObjectiveNpcIds(questId, zone)
     return next(ids) and ids or nil
 end
 
+-- Every known spawn in `zone` of a quest's open objectives (kill targets, kill credit, objects, item droppers by
+-- DB.QuestItemDroppers, item objects), as {x, y} in map percent. `isDone(name)` as for DB.GetObjectiveLocation.
+function DB.ObjectiveSpawns(questId, zone, isDone)
+    local q = rawQuest(questId)
+    local out = {}
+    if not (q and zone) then return out end
+    local obj = q[Q.OBJECTIVES] or EMPTY
+    local function open(name) return not (isDone and name and isDone(name)) end
+    local function add(spawns)
+        for _, p in ipairs(spawns and spawns[zone] or EMPTY) do out[#out + 1] = p end
+    end
+    local function npc(id) local r = QDB.npcs[id] add(r and r[N.SPAWNS]) end
+    local function object(id) local r = QDB.objects[id] add(r and r[O.SPAWNS]) end
+    for _, id in ipairs(obj.c or EMPTY) do if open(DB.GetNPCName(id)) then npc(id) end end
+    for _, id in ipairs(obj.k or EMPTY) do npc(id) end
+    for _, id in ipairs(obj.o or EMPTY) do if open(DB.GetObjectName(id)) then object(id) end end
+    for _, itemId in ipairs(obj.i or EMPTY) do
+        local it = QDB.items[itemId]
+        if it and open(it[I.NAME]) then
+            for _, id in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do npc(id) end
+            for _, id in ipairs(it[I.OBJECT_DROPS] or EMPTY) do object(id) end
+        end
+    end
+    return out
+end
+
 -- Best target for a quest objective: objective mobs, objects, item droppers, exploration trigger. `isDone(name)`,
 -- when given, says whether the objective of that creature, object or item name is finished (the quest log); those
 -- are left out, so the target moves on to the next one. Of the open objectives, the one nearest to (nearX, nearY)
