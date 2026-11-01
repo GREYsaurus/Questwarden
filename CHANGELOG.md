@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **No chat ranking of quest rewards.** Choosing a quest reward no longer prints "Reward comparison ..." with a line per item; hovering a reward still shows how it compares with what you wear. The ranking can be turned back on with *Quest Reward Recommendation* (Gear settings, now off by default) or `/qw set gearQuestRewards on`. Saved settings are switched off once.
+
 ## 0.1.0-alpha.18 (2026-11-01)
 
 - **Patrolling NPCs.** When a step needs an NPC that walks a path (a quest giver, a turn-in NPC or a named mob), the arrow goes to the nearer end of its path and then along it, point by point, until the step is done: back along the path at the far end, round again on a loop. The path is dotted on the world map and the minimap, and the step says the NPC patrols. Only NPCs with at most 2 known spawns are followed, so common mobs that patrol keep their normal waypoint. Paths come from the waypoints in QuestieDB (the same pinned source), in a new `Database/Questie/Patrols.lua`: 215 NPCs on Classic Era, 332 on TBC, with paths under 2% of the map left out. New setting *Follow Patrolling NPCs* (on). Details: docs/PATROLS.md.

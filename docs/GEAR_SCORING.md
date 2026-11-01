@@ -1,6 +1,6 @@
 # Gear scoring
 
-Questwarden compares items with what you wear: on item tooltips, for quest rewards (ranked in chat when a quest offers a choice), and with `/qw gear` (also `/qwgear`). Nothing on this page equips, buys or chooses anything. Quest rewards are picked by you unless you turn on *Quest auto rewards*.
+Questwarden compares items with what you wear: on item tooltips, for quest rewards (hover a reward to see its score; ranking the choices in chat is an option, off by default), and with `/qw gear` (also `/qwgear`). Nothing on this page equips, buys or chooses anything. Quest rewards are picked by you unless you turn on *Quest auto rewards*.
 
 **Automatic upgrades** (opt-in) and the Bind-on-Equip bag markers use a separate evaluator with the profile you choose. For priority-only profiles it uses **estimated** weights, labelled as such. See [AUTO_EQUIP.md](AUTO_EQUIP.md).
 

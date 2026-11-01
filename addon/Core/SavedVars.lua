@@ -59,7 +59,7 @@ local profileDefaults = {
         -- Gear scoring (docs/GEAR_RESEARCH.md); read-only, never equips or chooses anything
         gearEnabled = true,
         gearTooltip = true,         -- score lines on item tooltips
-        gearQuestRewards = true,    -- rank reward choices in chat
+        gearQuestRewards = false,   -- rank reward choices in chat (the reward tooltips compare them anyway)
         gearShowPercent = true,     -- relative score change (%), only when both scores are valid
         gearShowConfidence = true,
         -- Automatic upgrades (Gear/AutoEquip.lua, docs/AUTO_EQUIP.md). Opt-in; never equips unbound BoE items.
@@ -267,6 +267,13 @@ function ns:InitSavedVariables()
     if not mig.markWithMacro10 then
         mig.markWithMacro10 = true
         for _, p in pairs(profiles) do p.markWithMacro = false end
+    end
+    -- 0.1.0-alpha.19: the chat ranking of quest rewards is off by default; saved profiles held the old "on".
+    if not mig.rewardChat19 then
+        mig.rewardChat19 = true
+        for _, p in pairs(profiles) do
+            if not fresh and p.gearQuestRewards == true then p.gearQuestRewards = false end
+        end
     end
     -- Active profile for this character.
     local key = ns.CharKey()

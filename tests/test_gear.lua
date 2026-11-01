@@ -195,10 +195,25 @@ fire(tt)
 check(#tt.lines == 0, "unknown item adds nothing")
 
 -- Quest rewards -------------------------------------------------------------------------------------------------
+-- Off by default: the reward tooltips compare the choices, no chat lines.
+check(ns.PROFILE_DEFAULTS.gearQuestRewards == false and ns.GearUI.DEFAULTS.gearQuestRewards == false, "reward ranking in chat is off by default")
 MOCK.calls, MOCK.printed = {}, {}
-MOCK.dialog = { questID = 77001, title = "Boot Quest", choices = 2, completable = true }
+MOCK.dialog = { questID = 77000, title = "Quiet Quest", choices = 2, completable = true }
 MOCK.questChoices = { 90002, 90001 }
 MOCK.equipped[8] = nil
+ns.db.profile.gearQuestRewards = false
+MOCK.fire("QUEST_COMPLETE")
+MOCK.tick(1)
+check(not string.find(table.concat(MOCK.printed, "\n"), "Reward comparison", 1, true), "setting off: no reward lines in chat")
+local mig = _G[ns.svAccount].migrations
+ns.db.profile.gearQuestRewards, mig.rewardChat19 = true, nil
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == false and mig.rewardChat19, "a saved 'on' from before is switched off once")
+ns.db.profile.gearQuestRewards = true
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == true, "turning it on afterwards sticks")
+MOCK.calls, MOCK.printed = {}, {}
+MOCK.dialog = { questID = 77001, title = "Boot Quest", choices = 2, completable = true }
 MOCK.fire("QUEST_COMPLETE")
 MOCK.tick(1)
 local out = table.concat(MOCK.printed, "\n")
@@ -213,6 +228,7 @@ MOCK.fire("QUEST_COMPLETE")
 MOCK.tick(1)
 check(not string.find(table.concat(MOCK.printed, "\n"), "Reward comparison", 1, true), "each quest's rewards are ranked once")
 MOCK.dialog, MOCK.questChoices = nil, {}
+ns.db.profile.gearQuestRewards = false
 
 -- /cg gear and /cggear ------------------------------------------------------------------------------------
 MOCK.printed = {}
