@@ -6,7 +6,7 @@
 
 1. Download `Questwarden-<version>.zip` from the GitHub **Releases** page, or build it yourself (it lands in `dist/`). The same zip serves both games. Do **not** copy the repository's `addon/` folder: it is not a complete add-on until the build has staged it.
 2. Close World of Warcraft.
-3. Extract the zip into the game's `Interface\AddOns` folder, so that the `Questwarden` folder holds `Questwarden_Vanilla.toc` and `Questwarden_TBC.toc`. For Classic Era:
+3. Extract the zip into the game's `Interface\AddOns` folder, so that the `Questwarden` folder holds `Questwarden_Vanilla.toc` and `Questwarden_TBC.toc` (and `Questwarden.toc`, which the CurseForge app needs). For Classic Era:
    ```
    World of Warcraft\_classic_era_\Interface\AddOns\Questwarden\Questwarden_Vanilla.toc
    ```

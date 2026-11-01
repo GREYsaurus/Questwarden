@@ -1,6 +1,6 @@
 # Publishing on CurseForge
 
-Questwarden releases are built and checked locally (`tools/build.ps1 package`) and published as GitHub releases. The workflow `.github/workflows/curseforge.yml` then uploads **the same zip** to CurseForge whenever a GitHub release is published. The zip serves both games: it holds `Questwarden_Vanilla.toc` (Classic Era) and `Questwarden_TBC.toc` (TBC Classic Anniversary), and each client loads its own. A tag containing `alpha` goes up as **alpha**, other pre-releases as **beta**.
+Questwarden releases are built and checked locally (`tools/build.ps1 package`) and published as GitHub releases. The workflow `.github/workflows/curseforge.yml` then uploads **the same zip** to CurseForge whenever a GitHub release is published. The zip serves both games: it holds `Questwarden_Vanilla.toc` (Classic Era) and `Questwarden_TBC.toc` (TBC Classic Anniversary), and each client loads its own. It also holds a plain `Questwarden.toc` (a copy of the Vanilla one): the CurseForge app installs a zip only when its root folder has a TOC named like the folder. Both clients load their suffixed TOC before the plain one. A tag containing `alpha` goes up as **alpha**, other pre-releases as **beta**.
 
 The one-time setup below needs the project owner's CurseForge account; it cannot be done for you.
 

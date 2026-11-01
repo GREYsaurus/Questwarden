@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fixed: the CurseForge app could not install Questwarden** ("Mod is not supported by the application"). The download now also holds a plain `Questwarden.toc`, a copy of the Classic Era one, because the app needs a TOC named like the add-on folder. Classic Era and TBC still load their own TOC (`Questwarden_Vanilla.toc`, `Questwarden_TBC.toc`).
+
 ## 0.1.0-alpha.25 (2026-11-01)
 
 - **Fixed: the arrow for a kill pack led away from where its mobs meet.** While two or more steps of a kill pack are open, the arrow now points at the spot where all their mobs spawn, instead of following the first step's hunting route. Example: Stocking Jetsteam and The Grizzled Den in Dun Morogh now lead to the wendigo cave (about 43, 56.5), where boars and wendigos meet, not to the boars about 1,000 yards west. A hunting route of a pack step that never comes within 8 map percent of the pack's spot is no longer used for it, even after the other steps are done; the arrow then shows the nearest spawn. The new `tools/research/pack_spots.py` checks every guide: 30 such routes in Classic Era and 25 in TBC were affected.
