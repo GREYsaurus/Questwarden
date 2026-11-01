@@ -70,9 +70,14 @@ turnin 662 Deep Sea Salvage
 turnin 664 Drowned Sorrows
 turnin 665 Sunken Treasure
 turnin 688 Myzrael's Allies
+accept 640 The Broken Sigil
 accept 666 Sunken Treasure
+complete 640 The Broken Sigil
 complete 666 Sunken Treasure
 turnin 666 Sunken Treasure
+turnin 640 The Broken Sigil
 accept 668 Sunken Treasure
+accept 641 Sigil of Thoradin
 turnin 668 Sunken Treasure
+turnin 641 Sigil of Thoradin
 level 37 | Alterac Mountains starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -16,6 +16,7 @@ accept The Bladespire Threat | Tor'chunk Twoclaws.
 accept They Stole Me Hookah and Me Brews! | T'chali the Witch Doctor.
 accept Killing the Crawlers | Grunt Grahk.
 accept The Encroaching Wilderness | Gor'drek.
+accept 10489 Felling an Ancient Tree
 complete The Encroaching Wilderness
 accept 10524 Thunderlord Clan Artifacts
 complete The Bladespire Threat | Elite: Bladespire Sober Defender; bring help or skip.
@@ -32,10 +33,12 @@ complete Dust from the Drakes | Dust of the Fey Drake drops from Fey Drake.
 complete The Bloodmaul Ogres
 turnin The Bloodmaul Ogres
 turnin They Stole Me Hookah and Me Brews!
+complete 10489 Felling an Ancient Tree
 accept Bladespire Kegger | Group quest: Bladespire Sober Defender is elite.
 complete Bladespire Kegger | Elite: Bladespire Sober Defender; bring help or skip.
 turnin Bladespire Kegger
 turnin Dust from the Drakes
+turnin 10489 Felling an Ancient Tree
 accept Protecting Our Own
 complete Protecting Our Own
 turnin Protecting Our Own
@@ -64,7 +67,9 @@ complete Mok'Nathal Treats [optional] | Raptor Ribs drops from Bladespire Raptor
 turnin Mok'Nathal Treats [optional]
 fp Mok'Nathal Village
 accept Silkwing Cocoons | Taerek, Mok'Nathal Village.
+accept 10618 The Softest Wings
 accept The Stones of Vekh'nir | Dertrok.
+complete 10618 The Softest Wings
 complete The Stones of Vekh'nir
 turnin The Stones of Vekh'nir
 accept Trial and Error
@@ -75,6 +80,7 @@ complete Silkwing Cocoons | Silkwing Cocoons from Silkwing Larvae in the same va
 turnin Trial and Error | Dertrok.
 turnin Understanding the Mok'Nathal | Leoroxx.
 turnin Silkwing Cocoons | Taerek.
+turnin 10618 The Softest Wings
 accept 10843 Since Time Forgotten... | Leoroxx.
 accept The Totems of My Enemy | Spiritcaller Dohgar.
 complete 10843 Since Time Forgotten... | Gnosh Brognat, west of the village.

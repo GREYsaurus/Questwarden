@@ -16,6 +16,7 @@ accept War on the Woodpaw | Hadoken Swiftstrider, Camp Mojache.
 accept A New Cloak's Sheen | Krueg Skullsplitter.
 accept 2975 The Ogres of Feralas | Rok Orhan.
 accept The Mark of Quality | Jangdor Swiftstrider.
+accept 3128 Natural Materials
 complete War on the Woodpaw | Woodpaw Gnoll Manes from the gnolls south-west of the camp.
 complete A New Cloak's Sheen | Iridescent Sprite Darter Wings from Sprite Darters by the gnoll camp.
 turnin War on the Woodpaw
@@ -44,6 +45,7 @@ complete 2980 The Ogres of Feralas | Gordunni Shamans, Warlocks and Maulers at t
 accept Zapped Giants | Zorbin Fandazzle on the coast.
 accept 2766 Find OOX-22/FE! [iffound] | Shown only if you find OOX-22/FE Distress Beacon.
 turnin 2766 Find OOX-22/FE! [iffound]
+complete 3128 Natural Materials
 accept Fuel for the Zapping
 complete Zapped Giants | Use Zorbin's Ultra-Shrinker on Wave Striders and Land Walkers.
 complete Fuel for the Zapping | Water elementals on the coast.
@@ -55,6 +57,7 @@ turnin Vengeance on the Northspring | Camp Mojache.
 turnin Dark Heart
 turnin 2980 The Ogres of Feralas | Rok Orhan.
 turnin The Mark of Quality | Jangdor Swiftstrider.
+turnin 3128 Natural Materials
 level 46
 train
 note Fly to Revantusk Village in the Hinterlands (via the Undercity or Tarren Mill).

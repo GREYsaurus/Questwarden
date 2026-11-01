@@ -20,6 +20,7 @@ accept 6393 Elemental War
 complete 1087 Cenarius' Legacy
 turnin 1087 Cenarius' Legacy
 accept 6381 New Life
+complete 3514 Horde Presence [optional]
 complete 6393 Elemental War
 complete 6381 New Life
 turnin 6393 Elemental War
@@ -28,4 +29,4 @@ note  [class=Shaman; race=Orc,Tauren,Troll] | The next quest, Vorsha the Lasher,
 accept 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort quest: start it when you are ready to follow.
 complete 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Escort: stay close; it fails if the NPC dies.
 turnin 6641 Vorsha the Lasher [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Ashenvale.
-level 25 | Southern Barrens starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 25 Bloodfury Windcaller, Bloodfury Harpy, Bloodfury Roguefeather [at=32.4,64.1] | Southern Barrens starts at 25 and the quests here don't quite get you there: grind these until you reach it.

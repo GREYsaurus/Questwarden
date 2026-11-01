@@ -129,6 +129,6 @@ ns.Guides:Register({
     {"accept",q=888,title="Stolen Booty",npc="Gazlowe",z=17,x=62.7,y=36.2,v=1},
     {"complete",q=888,title="Stolen Booty",text="Back to the pirate camp north of Ratchet for Tazan.",v=1},
     {"turnin",q=888,title="Stolen Booty",npc="Gazlowe",z=17,x=62.7,y=36.2,v=1},
-    {"level",text="Stonetalon Mountains starts at 20. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=20,v=1},
+    {"grind",z=17,x=62.5,y=34.1,text="Stonetalon Mountains starts at 20 and the quests here don't quite get you there: grind these until you reach it.",level=20,mobs={"Savannah Matriarch","Slimeshell Makrura"},v=0},
   },
 })

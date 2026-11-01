@@ -15,6 +15,8 @@ note From Ironforge fly to Menethil Harbor and take the boat to Auberdine. Fly t
 fp Nijel's Point
 bind Nijel's Point [area=608]
 accept Centaur Bounty | Corporal Melkins.
+accept 1382 Strange Alliance
+complete 1382 Strange Alliance
 accept 1437 Vahlarriel's Search | Vahlarriel Demonslayer.
 accept Brutal Politics | Captain Pentigast. Choose the Magram side: do not also take Strange Alliance.
 turnin Reclaimers' Business in Desolace | Kreldig Ungor.
@@ -50,23 +52,41 @@ turnin 1456 The Karnitol Shipwreck | Nijel's Point.
 accept 1457 The Karnitol Shipwreck | Turned in at Ironforge; keep it for the trip to the Badlands.
 accept Bone Collector | Bibbly F'utzbuckle at Kormek's Hut.
 accept Kodo Roundup | Smeed Scrabblescrew at the caravan camp.
+note The next quest, Gizelton Caravan, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5943 Gizelton Caravan
+complete 5943 Gizelton Caravan | Escort: stay close; it fails if the NPC dies.
+note The next quest, Bodyguard for Hire, is an escort: pick it up only when you are ready to follow the NPC.
+accept 5821 Bodyguard for Hire
+complete 5821 Bodyguard for Hire | Escort: stay close; it fails if the NPC dies.
+turnin 5943 Gizelton Caravan
+turnin 5821 Bodyguard for Hire
+turnin 1382 Strange Alliance
 complete Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
 complete Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.
 complete 1459 Reagents for Reclaimers Inc. [obj=2] | Aged Kodo Hide from Aged Kodos around the graveyard.
 turnin Kodo Roundup
+accept 1384 Raid on the Kolkar
 turnin Brutal Politics | Warug in the Magram village, east.
 accept Assault on the Kolkar
 complete Assault on the Kolkar | Kolkar village north of the Magram.
 complete Centaur Bounty | Centaur Ears from the same Kolkar.
 turnin Assault on the Kolkar
 turnin Bone Collector | Kormek's Hut.
+complete 1384 Raid on the Kolkar
+accept 1369 Broken Tears
 turnin Centaur Bounty | Nijel's Point.
+turnin 1384 Raid on the Kolkar
+complete 1369 Broken Tears
 turnin 1459 Reagents for Reclaimers Inc.
+accept 1370 Stealing Supplies
+turnin 1369 Broken Tears
 accept 1466 Reagents for Reclaimers Inc. [optional] | Mannoroc Coven demons; level 38-40 and they hit hard.
+complete 1370 Stealing Supplies
 accept Down the Scarlet Path | Brother Anton. Needs level 34.
 complete 1466 Reagents for Reclaimers Inc. [optional] | Mana Eaters, Nether Maidens and Doomwarder Captains at the Mannoroc Coven.
 complete Down the Scarlet Path | Undead Ravagers in the Valley of Bones, far south.
 turnin 1466 Reagents for Reclaimers Inc. [optional] | Nijel's Point.
+turnin 1370 Stealing Supplies
 turnin Down the Scarlet Path
 level 36
 train

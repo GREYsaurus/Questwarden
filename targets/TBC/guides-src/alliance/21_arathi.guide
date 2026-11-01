@@ -18,22 +18,31 @@ turnin The Princess Trapped
 accept Stones of Binding
 fp Refuge Pointe
 accept Wanted!  Marez Cowl [elite; group=3; optional]
+accept 658 Hints of a New Plague?
 accept Wanted!  Otto and Falconcrest [elite; group=3; optional]
+complete 658 Hints of a New Plague?
 accept Northfold Manor | Captain Nials, Refuge Pointe.
+turnin 658 Hints of a New Plague?
 complete Northfold Manor | Syndicate at Northfold Manor, north-west.
 turnin Northfold Manor
+accept 657 Hints of a New Plague?
 accept Stromgarde Badges
+turnin 657 Hints of a New Plague?
 complete Stromgarde Badges | Syndicate inside Stromgarde Keep (west).
 turnin Stromgarde Badges
+note The next quest, Hints of a New Plague?, is an escort: pick it up only when you are ready to follow the NPC.
+accept 660 Hints of a New Plague?
+complete 660 Hints of a New Plague? | Escort: stay close; it fails if the NPC dies.
 complete Wanted!  Marez Cowl [elite; group=3; optional] | Marez's Head drops from Marez Cowl.
 complete Wanted!  Otto and Falconcrest [elite; group=3; optional] | Otto's Head drops from Otto. Falconcrest's Head drops from Lord Falconcrest.
 turnin Wanted!  Marez Cowl [optional]
+turnin 660 Hints of a New Plague?
 turnin Wanted!  Otto and Falconcrest [optional]
 complete Stones of Binding | Collect the three Cresting, Thundering and Burning keys at the stones.
 turnin Stones of Binding
 accept Breaking the Keystone
 complete Breaking the Keystone | Rod of Order drops from Fozruk.
 turnin Breaking the Keystone
-level 33
+grind 33 Boulderfist Enforcer, Boulderfist Ogre, Witherbark Troll [at=34.0,45.0] | The next steps expect level 33 and the quests here don't quite get you there: grind these until you reach it.
 train
 note Next: Desolace in Kalimdor. Fly from Refuge Pointe to Ironforge first (a Desolace quest starts there).

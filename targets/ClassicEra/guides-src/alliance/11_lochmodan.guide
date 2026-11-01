@@ -96,6 +96,7 @@ accept 297 Gathering Idols | Magmar Fellhew at the excavation.
 turnin 436 Ironband's Excavation
 complete 297 Gathering Idols | Troggs at the excavation site drop Carved Stone Idols.
 turnin 297 Gathering Idols
+grind 19.9 Stonesplinter Digger, Stonesplinter Geomancer, Berserk Trogg [at=70.1,64.9] | Darkshore starts at 20: grind these to 90% through level 19, and the quests left here bring you the rest of the way.
 accept 250 A Dark Threat Looms
 turnin 250 A Dark Threat Looms
 accept 199 A Dark Threat Looms

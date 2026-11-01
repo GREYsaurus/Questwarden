@@ -31,6 +31,7 @@ ns.Guides:Register({
     {"accept",q=9476,title="In Pursuit of Featherbeard",npc="Featherbeard's Journal",z=47,x=13.4,y=55.2,v=1},
     {"turnin",q=9476,title="In Pursuit of Featherbeard",npc="Featherbeard's Remains",z=47,x=37.2,y=71.6,v=1},
     {"accept",q=9475,title="Reclaiming the Eggs",npc="Featherbeard's Remains",z=47,x=37.2,y=71.6,v=1},
+    {"grind",z=47,x=45.9,y=65.7,text="The next steps expect level 48: grind these to 60% through level 47, and the quests left here bring you the rest of the way.",level=47,pct=60,mobs={"Vilebranch Axe Thrower","Vilebranch Soothsayer","Silvermane Howler"},v=0},
     {"turnin",q=9471,title="Preying on the Predators",npc="Ambassador Rualeth",z=47,x=15.1,y=47.2,v=1},
     {"turnin",q=9470,title="A Gesture of Goodwill",npc="Ambassador Rualeth",z=47,x=15.1,y=47.2,v=1},
     {"complete",q=9475,title="Reclaiming the Eggs",text="Gryphon Egg: loot Gryphon Egg.",v=1},

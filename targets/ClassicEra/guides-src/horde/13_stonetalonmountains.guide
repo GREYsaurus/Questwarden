@@ -15,6 +15,7 @@
 travel Stonetalon Mountains
 train
 turnin 1060 Letter to Jin'Zil [optional] | Witch Doctor Jin'Zil, if you took the letter in the Barrens.
+accept 6542 Report to Kadrak
 turnin 1510 News of Dogran [class=Warlock; race=Orc,Undead]
 accept 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead]
 turnin 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
@@ -45,4 +46,4 @@ complete 1090 Gerenzo's Orders | Venture Co. at Windshear Crag.
 turnin 1090 Gerenzo's Orders
 accept 1092 Gerenzo's Orders
 turnin 1092 Gerenzo's Orders
-level 22 | Southern Barrens starts at 22. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 22 Windshear Digger, Windshear Overlord, Windshear Geomancer [at=73.3,59.5] | Southern Barrens starts at 22 and the quests here don't quite get you there: grind these until you reach it.

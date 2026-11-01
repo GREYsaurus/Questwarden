@@ -148,6 +148,13 @@ accept Prowlers of the Barrens
 accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
 accept Raptor Horns | Mebok Mizzyrix.
 turnin Chen's Empty Keg [optional] | Brewmaster Drohn.
+accept 891 The Guns of Northwatch
+note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
+accept 898 Free From the Hold
+complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.
+complete 891 The Guns of Northwatch
+turnin 898 Free From the Hold
+turnin 891 The Guns of Northwatch
 accept 821 Chen's Empty Keg
 turnin Wharfmaster Dizzywig [optional]
 turnin 890 The Missing Shipment | Wharfmaster Dizzywig, Ratchet docks.
@@ -250,6 +257,9 @@ turnin Serena Bloodfeather
 accept Letter to Jin'Zil [optional]
 turnin Verog the Dervish
 accept Hezrul Bloodmark
+accept 868 Egg Hunt
+accept 6541 Report to Kadrak
+turnin 6541 Report to Kadrak
 turnin 1061 The Spirits of Stonetalon
 accept 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
 accept 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
@@ -282,6 +292,14 @@ turnin 878 Tribes at War [race=Undead,Blood Elf]
 turnin 878 Tribes at War [class=Shaman; race=Orc,Tauren,Troll]
 accept 883 Lakota'mani [optional]
 turnin 883 Lakota'mani [optional]
+accept 5052 Blood Shards of Agamaggan
+accept 893 Weapons of Choice
+accept 843 Gann's Reclamation
+complete 893 Weapons of Choice
+complete 843 Gann's Reclamation
+complete 868 Egg Hunt
+turnin 893 Weapons of Choice
+turnin 843 Gann's Reclamation
 turnin 897 The Harvester
 complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
 turnin Jorn Skyseer | Camp Taurajo.
@@ -311,7 +329,11 @@ turnin Stolen Booty
 turnin 6386 Return to the Crossroads. [race=Orc,Troll; optional]
 turnin 6364 Return to Jahan [class=Warrior,Hunter,Druid; race=Tauren]
 turnin Hezrul Bloodmark
+turnin 868 Egg Hunt
+complete 5052 Blood Shards of Agamaggan
 accept 4021 Counterattack! [optional]
+turnin 5052 Blood Shards of Agamaggan
+grind 21.9 Silithid Grub, Silithid Swarmer, Silithid Creeper [at=45.6,69.0] | The next steps expect level 22: grind these to 90% through level 21, and the quests left here bring you the rest of the way.
 complete 4021 Counterattack! [optional] | Piece of Krom'zar's Banner: loot Krom'zar's Banner.
 turnin 4021 Counterattack! [optional]
 turnin 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]

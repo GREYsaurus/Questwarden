@@ -16,4 +16,4 @@ travel Stonetalon Mountains
 accept 6421 Boulderslide Ravine
 complete 6421 Boulderslide Ravine
 turnin 6421 Boulderslide Ravine
-level 16 | The Barrens starts at 16. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 16 Deepmoss Creeper [at=57.1,75.5] | The Barrens starts at 16 and the quests here don't quite get you there: grind these until you reach it.

@@ -19,6 +19,7 @@ ns.Guides:Register({
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"turnin",q=1060,title="Letter to Jin'Zil",npc="Witch Doctor Jin'Zil",z=406,x=74.5,y=97.9,text="Witch Doctor Jin'Zil, if you took the letter in the Barrens.",optional=true,v=1},
+    {"accept",q=6542,title="Report to Kadrak",npc="Darn Talongrip",z=406,x=73.2,y=94.9,v=1},
     {"turnin",q=1510,title="News of Dogran",npc="Ken'zigla",z=406,x=73.2,y=95.1,classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
     {"accept",q=1511,title="Ken'zigla's Draught",npc="Ken'zigla",z=406,x=73.2,y=95.1,classes={"WARLOCK"},races={"Orc","Scourge"},v=1},
     {"turnin",q=6461,title="Blood Feeders",npc="Xen'Zilla",z=406,x=71.2,y=95,classes={"SHAMAN"},races={"Orc","Tauren","Troll"},v=1},
@@ -49,6 +50,6 @@ ns.Guides:Register({
     {"turnin",q=1090,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
     {"accept",q=1092,title="Gerenzo's Orders",npc="Piznik",z=406,x=71.9,y=60,v=1},
     {"turnin",q=1092,title="Gerenzo's Orders",npc="Ziz Fizziks",z=406,x=59,y=62.6,v=1},
-    {"level",text="Southern Barrens starts at 22. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=22,v=1},
+    {"grind",z=406,x=73.3,y=59.5,text="Southern Barrens starts at 22 and the quests here don't quite get you there: grind these until you reach it.",level=22,mobs={"Windshear Digger","Windshear Overlord","Windshear Geomancer"},v=0},
   },
 })

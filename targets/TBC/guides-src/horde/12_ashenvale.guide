@@ -11,6 +11,7 @@
 @next H_Hillsbrad
 
 accept Between a Rock and a Thistlefur | Karang Amakkar.
+accept 6462 Troll Charm
 accept Torek's Assault [group=2] | Torek.
 accept The Lost Pages | Gurda Ragescar.
 accept Ashenvale Outrunners | Kuray'bin.
@@ -39,6 +40,7 @@ turnin The Lost Pages
 complete Satyr Horns | Satyrs at Satyrnaar.
 complete Between a Rock and a Thistlefur | Thistlefur furbolgs at Thistlefur Village.
 accept 6482 Freedom to Ruul | Escort quest: start it when you are ready to follow.
+complete 6462 Troll Charm
 complete 6482 Freedom to Ruul | Escort: stay close; it fails if the NPC dies.
 accept 24 Shadumbra's Head [optional]
 turnin Satyr Horns
@@ -52,8 +54,10 @@ turnin 6482 Freedom to Ruul
 turnin Stonetalon Standstill
 turnin 1918 The Befouled Element
 accept 824 Je'neu of the Earthen Ring
+grind 26.6 Felmusk Shadowstalker, Felmusk Felsworn, Felmusk Satyr [at=67.5,54.8] | The next steps expect level 27: grind these to 60% through level 26, and the quests left here bring you the rest of the way.
 fp Zoram'gar Outpost
 turnin Between a Rock and a Thistlefur
+turnin 6462 Troll Charm
 turnin 824 Je'neu of the Earthen Ring
 accept 6564 Allegiance to the Old Gods
 turnin 6564 Allegiance to the Old Gods

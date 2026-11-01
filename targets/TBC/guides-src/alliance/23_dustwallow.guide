@@ -16,6 +16,7 @@ accept Defias in Dustwallow? | Captain Wymor.
 turnin Defias in Dustwallow? | Captain Wymor.
 accept Renn McGill
 accept Raptor Captor | Sergeant Lukas.
+accept 1219 The Orc Report
 complete Raptor Captor | Bloodfen raptors.
 turnin Raptor Captor
 accept Prisoners of the Grimtotems
@@ -29,7 +30,12 @@ complete Recover the Cargo! | Underwater near Renn McGill.
 turnin Recover the Cargo!
 accept Jaina Must Know
 turnin Jaina Must Know | Lady Jaina Proudmoore, top of the tower.
+accept 1282 They Call Him Smiling Jim
+turnin 1219 The Orc Report
+accept 11214 Mission to Mudsprocket
+accept 11212 Tabetha's Farm
 accept Survey Alcaz Island | Escort quest: start it when you are ready to follow.
+accept 1220 Captain Vimes
 complete Survey Alcaz Island | Escort: stay close; it fails if the NPC dies.
 turnin Survey Alcaz Island
 accept Warn Bolvar! [optional]
@@ -47,6 +53,8 @@ accept The End of the Deserters
 complete The End of the Deserters
 turnin The End of the Deserters
 accept Inspecting the Ruins | Captain Garran Vimes.
+turnin 1282 They Call Him Smiling Jim
+turnin 1220 Captain Vimes
 turnin This Old Lighthouse | Babs Fizzletorque at the lighthouse.
 accept Thresher Oil
 complete Thresher Oil | Young Murk Threshers along the coast.
@@ -71,9 +79,12 @@ turnin Direhorn Raiders [optional]
 turnin The Apothecary's Letter [optional] | Andello Porter, at Tabetha's farm.
 complete Inspecting the Ruins | Examine the burned-out Shady Rest Inn.
 turnin Inspecting the Ruins
+accept 1177 Hungry!
 complete Unleash the Raptors
 turnin Prisoners of the Grimtotems
+complete 1177 Hungry!
 turnin Unleash the Raptors
+turnin 1177 Hungry!
 accept Corrosion Prevention | Moxie Steelgrille at the crashed zeppelin, east of Tabetha's farm.
 accept Secure the Cargo! | Moxie Steelgrille.
 complete Corrosion Prevention | Corrosive, Acidic and Bubbling Swamp Oozes between Tabetha's farm and the crash.
@@ -81,7 +92,17 @@ complete Secure the Cargo! | Zeppelin Cargo scattered north of the crash.
 turnin Corrosion Prevention | Moxie Steelgrille.
 turnin Secure the Cargo!
 accept Help for Mudsprocket | Tabetha, at her farm.
+accept 1252 Lieutenant Paval Reethe
+accept 1253 The Black Shield
+accept 1284 Suspicious Hoofprints
+accept 11208 Delivery for Drazzit
+turnin 11212 Tabetha's Farm
 turnin Help for Mudsprocket | Drazzit Dripvalve, Mudsprocket (the goblin camp south of the marsh).
+turnin 1252 Lieutenant Paval Reethe
+turnin 1253 The Black Shield
+turnin 1284 Suspicious Hoofprints
+turnin 11208 Delivery for Drazzit
+turnin 11214 Mission to Mudsprocket
 fp Mudsprocket
 accept Bloodfen Feathers | Brogg, Mudsprocket.
 accept WANTED: Goreclaw the Ravenous | The wanted poster in Mudsprocket.
@@ -91,7 +112,9 @@ complete WANTED: Goreclaw the Ravenous | Goreclaw, a raptor among the Razormaws.
 complete Catch a Dragon by the Tail | Wyrmtails from Searing Whelps south of Mudsprocket.
 turnin Bloodfen Feathers
 turnin WANTED: Goreclaw the Ravenous | Drazzit Dripvalve.
+accept 1259 Lieutenant Paval Reethe
 turnin Catch a Dragon by the Tail
+turnin 1259 Lieutenant Paval Reethe
 level 41
 train
 note Fly from Mudsprocket to Gadgetzan (Tanaris). Get the Gadgetzan flight path on arrival.

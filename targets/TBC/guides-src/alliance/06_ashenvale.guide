@@ -42,7 +42,11 @@ turnin 973 The Tower of Althalaxx [class=Warrior,Paladin,Rogue,Priest,Mage; race
 turnin 973 The Tower of Althalaxx [race=Dwarf,Night Elf,Draenei; optional]
 complete Raene's Cleansing | Teronis' corpse is at the Zoram Strand ruins.
 turnin Raene's Cleansing
+note The next quest, Supplies to Auberdine, is an escort: pick it up only when you are ready to follow the NPC.
+accept 976 Supplies to Auberdine
+complete 976 Supplies to Auberdine | Escort: stay close; it fails if the NPC dies.
 accept 1023 Raene's Cleansing
+turnin 976 Supplies to Auberdine
 complete Ruuzel [group=2] | Ruuzel patrols the island off the strand.
 turnin Ruuzel
 turnin 4740 WANTED: Murkdeep! [optional] | Turned in at Darkshore.
@@ -54,13 +58,18 @@ turnin Culling the Threat
 complete 1023 Raene's Cleansing | Gnarled ancients near the lake drop the Glowing Soul Gem.
 turnin 1023 Raene's Cleansing
 accept An Aggressive Defense
+accept 1024 Raene's Cleansing
 complete An Aggressive Defense | Foulweald furbolgs south of Astranaar.
 turnin An Aggressive Defense
 turnin Orendil's Cure | Pelturas Whitemoon, Astranaar.
+turnin 1024 Raene's Cleansing
 accept Elune's Tear
+accept 1026 Raene's Cleansing
 complete Elune's Tear | The tear lies on the isle in Lake Iris.
 turnin Elune's Tear
+complete 1026 Raene's Cleansing
 accept The Ruins of Stardust
+turnin 1026 Raene's Cleansing
 complete The Ruins of Stardust | Stardust Covered Bushes south of Astranaar.
 turnin The Ruins of Stardust
 turnin 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Turned in at The Barrens.
@@ -75,6 +84,35 @@ turnin Mage Summoner
 turnin 741 The Absent Minded Prospector [optional] | Turned in at Darnassus.
 accept 942 The Absent Minded Prospector [optional]
 turnin A Helping Hand [optional]
+accept 9521 Report from the Northern Front
+turnin 9521 Report from the Northern Front
+accept 9519 The Lost Chalice
+accept 9518 Agents of Destruction
+accept 1022 The Howling Vale
+accept 9517 A Shameful Waste
+accept 1035 Fallen Sky Lake
+accept 4581 Kayneth Stillwind
+accept 1140 The Tower of Althalaxx
+complete 1022 The Howling Vale
+complete 1140 The Tower of Althalaxx
+complete 9519 The Lost Chalice
+complete 9517 A Shameful Waste
+complete 9518 Agents of Destruction
+complete 1035 Fallen Sky Lake
+turnin 9517 A Shameful Waste
+turnin 9519 The Lost Chalice
+turnin 4581 Kayneth Stillwind
+turnin 9518 Agents of Destruction
+turnin 1022 The Howling Vale
+turnin 1035 Fallen Sky Lake
+turnin 1140 The Tower of Althalaxx
+grind 23.7 Thistlefur Totemic, Thistlefur Ursa, Thistlefur Avenger [at=39.2,33.8] | The next steps expect level 24: grind these to 70% through level 23, and the quests left here bring you the rest of the way.
+accept 1011 Forsaken Diseases
+complete 1011 Forsaken Diseases
+turnin 1011 Forsaken Diseases
+accept 1012 Insane Druids
+complete 1012 Insane Druids
+turnin 1012 Insane Druids
 level 24
 train | Darnassus or Exodar trainers; Astranaar has some classes only.
 note Fly to Auberdine and take the boat to Menethil Harbor (Wetlands).

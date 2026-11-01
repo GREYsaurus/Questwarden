@@ -12,6 +12,7 @@
 fp Wildhammer Stronghold
 bind Wildhammer Stronghold [area=3745]
 accept Put On Yer Kneepads... | Thane Yoregar.
+accept 10680 The Hand of Gul'dan
 accept Spleendid! | Gnomus.
 accept A Ghost in the Machine | Zorus the Judicator.
 accept The Sketh'lon Wreckage | Gryphonrider Kieran.
@@ -36,6 +37,10 @@ turnin Blast the Infernals!
 accept The Deathforge
 complete The Deathforge
 turnin The Deathforge
+accept 10458 Enraged Spirits of Fire and Earth
+complete 10458 Enraged Spirits of Fire and Earth
+turnin 10458 Enraged Spirits of Fire and Earth
+turnin 10680 The Hand of Gul'dan
 accept Minions of the Shadow Council
 complete Minions of the Shadow Council
 turnin Minions of the Shadow Council
@@ -66,5 +71,9 @@ accept 10621 Illidari-Bane Shard
 turnin 10621 Illidari-Bane Shard
 complete Invasion Point: Cataclysm
 turnin Invasion Point: Cataclysm
+note The next quest, Escape from Coilskar Cistern, is an escort: pick it up only when you are ready to follow the NPC.
+accept 10451 Escape from Coilskar Cistern
+complete 10451 Escape from Coilskar Cistern | Escort: stay close; it fails if the NPC dies.
+turnin 10451 Escape from Coilskar Cistern
 level 70
 note Congratulations - level 70. Open /{slash} talents to switch to a level-70 build, and check the dungeon and heroic attunement quests for your next goals.

@@ -21,6 +21,7 @@ ns.Guides:Register({
     {"accept",q=8277,title="Deadly Desert Venom",npc="Beetix Ficklespragg",z=1377,x=51.6,y=38.6,v=1},
     {"accept",q=8280,title="Securing the Supply Lines",npc="Windcaller Proudhorn",z=1377,x=51.2,y=38.3,v=1},
     {"accept",q=8284,title="The Twilight Mystery",npc="Geologist Larksbane",z=1377,x=49.7,y=37.5,v=1},
+    {"accept",q=8859,title="Secrets of the Colossus - Zora",npc="Colossus Researcher Sophia",z=1377,x=49.5,y=37.4,v=1},
     {"accept",q=8318,title="Secret Communication",npc="Bor Wildmane",z=1377,x=48.6,y=37.8,v=1},
     {"accept",q=8304,title="Dearest Natalia",npc="Commander Mar'alith",z=1377,x=49.2,y=34.2,v=1},
     {"accept",q=9419,title="Scouring the Desert",npc="Marshal Bluewall",z=1377,x=33.3,y=51.1,v=1},

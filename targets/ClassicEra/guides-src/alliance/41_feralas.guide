@@ -32,4 +32,4 @@ turnin 2969 Freedom for All Creatures
 accept 2970 Doling Justice
 complete 2970 Doling Justice | Grimtotem tauren at the compound.
 turnin 2970 Doling Justice
-level 49 | Dustwallow Marsh starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 49 Ferocious Rage Scar, Rage Scar Yeti, Elder Rage Scar [at=53.2,32.1] | Dustwallow Marsh starts at 49 and the quests here don't quite get you there: grind these until you reach it.

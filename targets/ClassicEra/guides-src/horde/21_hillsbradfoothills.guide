@@ -19,7 +19,9 @@ accept 1066 Blood of Innocents [optional]
 accept 494 Time To Strike [optional] | Deathguard Lesh.
 accept 527 Battle of Hillsbrad | High Executor Darthalia.
 accept 547 Humbert's Sword
+accept 498 The Rescue
 accept 549 WANTED: Syndicate Personnel
+complete 498 The Rescue
 turnin 494 Time To Strike [optional] | High Executor Darthalia, Tarren Mill.
 complete 549 WANTED: Syndicate Personnel
 complete 527 Battle of Hillsbrad | Hillsbrad farmers and peasants on the farms.
@@ -32,6 +34,7 @@ accept 546 Souvenirs of Death | Deathguard Samsa (Classic: only after the first 
 accept 567 Dangerous!
 turnin 546 Souvenirs of Death
 turnin 496 Elixir of Suffering
+accept 676 The Hammer May Fall
 turnin 1066 Blood of Innocents [optional]
 accept 501 Elixir of Pain
 accept 509 Elixir of Agony
@@ -54,6 +57,7 @@ turnin 502 Elixir of Pain [optional]
 complete 567 Dangerous!
 turnin 567 Dangerous!
 turnin 547 Humbert's Sword
+turnin 498 The Rescue
 accept 539 Battle of Hillsbrad
 accept 552 Helcular's Revenge
 complete 552 Helcular's Revenge

@@ -14,13 +14,19 @@
 
 travel Felwood
 accept 8462 Speak to Nafien
+accept 5204 Retribution of the Light
 turnin 8462 Speak to Nafien
 turnin 5084 Falling to Corruption
 fp Bloodvenom Post
 accept 4102 Cleansing Felwood | Maybess Riverbreeze, Emerald Sanctuary.
+complete 5204 Retribution of the Light
+turnin 5204 Retribution of the Light
+turnin 6605 A Strange One [optional]
 complete 4102 Cleansing Felwood | Blood Amber drops from Dessecus, Warpwood Moss Flayer and Warpwood Shredder.
 turnin 4102 Cleansing Felwood
+accept 5385 The Remains of Trey Lightforge
 accept 5887 Salve via Hunting | Maybess Riverbreeze. Needs Cleansing Felwood turned in.
+turnin 5385 The Remains of Trey Lightforge
 complete 5887 Salve via Hunting | Corrupted Soul Shards from Cursed Oozes in the Ruins of Constellas, west of the road.
 turnin 5887 Salve via Hunting
-level 56 | Western Plaguelands starts at 56. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 56 Jaedenar Darkweaver, Jaedenar Legionnaire, Jaedenar Warlock [at=38.0,49.9] | Western Plaguelands starts at 56 and the quests here don't quite get you there: grind these until you reach it.

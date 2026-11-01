@@ -79,4 +79,4 @@ turnin 469 Daily Delivery [race=Human,Night Elf,Gnome; optional]
 complete 471 Apprentice's Duties | Giant Wetlands Crocolisks.
 turnin 471 Apprentice's Duties
 turnin 306 In Search of The Excavation Team | Tarrel Rockweaver, Menethil.
-level 28 | Duskwood starts at 28. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 28 Mottled Razormaw, Mottled Scytheclaw [at=33.6,48.6] | Duskwood starts at 28 and the quests here don't quite get you there: grind these until you reach it.

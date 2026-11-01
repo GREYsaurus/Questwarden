@@ -26,6 +26,6 @@ ns.Guides:Register({
     {"accept",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
     {"complete",q=969,title="Luck Be With You",v=1},
     {"turnin",q=969,title="Luck Be With You",npc="Witch Doctor Mau'ari",z=618,x=61.9,y=38.3,v=1},
-    {"level",level=60,v=1},
+    {"grind",z=618,x=67.6,y=39.5,text="The next steps expect level 60 and the quests here don't quite get you there: grind these until you reach it.",level=60,mobs={"Winterfall Ursa","Ice Thistle Patriarch"},v=0},
   },
 })

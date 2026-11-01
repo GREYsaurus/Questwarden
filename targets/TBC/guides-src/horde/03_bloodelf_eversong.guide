@@ -147,7 +147,9 @@ accept 9258 The Scorched Grove
 accept 8474 Old Whitebark's Pendant
 accept 9358 Ranger Sareyn
 accept 9395 Saltheril's Haven
+accept 8491 Pelt Collection
 accept 9254 The Wayward Apprentice
+complete 8491 Pelt Collection
 turnin 9358 Ranger Sareyn
 accept Defending Fairbreeze Village | Ranger Sareyn.
 complete Defending Fairbreeze Village | Rotlimb and Darkwraiths south of Fairbreeze.
@@ -218,6 +220,7 @@ accept 8477 The Spearcrafter's Hammer
 complete 8477 The Spearcrafter's Hammer | Otembe's Hammer drops from Spearcrafter Otembe.
 turnin 8477 The Spearcrafter's Hammer
 accept 9144 Missing in the Ghostlands [optional]
+turnin 8491 Pelt Collection
 turnin Research Notes [optional] | Silvermoon City.
 turnin 9363 Warning Fairbreeze Village [optional]
 turnin 9489 Cleansing the Scar [class=Priest; optional]

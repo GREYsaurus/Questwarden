@@ -142,7 +142,7 @@ ns.Guides:Register({
     {"train",npc="Austil de Mon",z=85,x=61.8,y=52.5,text="Undercity trainers (west of Brill).",classes={"WARRIOR"},v=1},
     {"accept",q=445,title="Delivery to Silverpine Forest",npc="Apothecary Johaan",z=85,x=59.4,y=52.4,text="Apothecary Johaan.",v=1},
     {"fp",npc="Michael Garrett",z=1497,x=63.2,y=48.6,place="Undercity",node=11,v=1},
-    {"level",level=11,v=1},
+    {"grind",z=85,x=76.8,y=59.7,text="The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.",level=11,mobs={"Bleeding Horror","Wandering Spirit","Scarlet Friar"},v=0},
     {"note",text="Ride south into Silverpine Forest; The Sepulcher is the Horde town.",v=1},
   },
 })

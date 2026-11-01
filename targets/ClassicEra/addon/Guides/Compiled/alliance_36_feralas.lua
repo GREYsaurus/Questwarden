@@ -54,6 +54,7 @@ ns.Guides:Register({
     {"complete",q=4135,title="The Writhing Deep",text="Inside the Zukk'ash hive at the Writhing Deep.",v=1},
     {"turnin",q=4135,title="The Writhing Deep",npc="Zukk'ash Pod",z=357,x=72.1,y=63.7,v=1},
     {"accept",q=4265,title="Freed from the Hive",npc="Zukk'ash Pod",z=357,x=72.1,y=63.7,v=1},
+    {"grind",z=357,x=74.6,y=62.3,text="Azshara starts at 46: grind these to 70% through level 45, and the quests left here bring you the rest of the way.",level=45,pct=70,mobs={"Zukk'ash Wasp","Zukk'ash Worker","Zukk'ash Stinger"},v=0},
     {"complete",q=2821,title="The Mark of Quality",v=1},
     {"turnin",q=4265,title="Freed from the Hive",npc="Ginro Hearthkindle",z=357,x=31.9,y=45.1,v=1},
     {"turnin",q=2821,title="The Mark of Quality",npc="Pratt McGrubben",z=357,x=30.6,y=42.7,v=1},

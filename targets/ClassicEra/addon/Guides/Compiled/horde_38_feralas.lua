@@ -58,6 +58,6 @@ ns.Guides:Register({
     {"complete",q=7734,title="Improved Quality",v=1},
     {"turnin",q=7734,title="Improved Quality",npc="Jangdor Swiftstrider",z=357,x=74.4,y=42.9,v=1},
     {"turnin",q=7731,title="Stinglasher",npc="Hadoken Swiftstrider",z=357,x=74.9,y=42.5,v=1},
-    {"level",text="The Hinterlands starts at 47. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=47,v=1},
+    {"grind",z=357,x=75.4,y=62.7,text="The Hinterlands starts at 47 and the quests here don't quite get you there: grind these until you reach it.",level=47,mobs={"Zukk'ash Stinger","Zukk'ash Tunneler","Zukk'ash Wasp"},v=0},
   },
 })

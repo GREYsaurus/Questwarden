@@ -40,6 +40,7 @@ ns.Guides:Register({
     {"complete",q=5149,title="Pamela's Doll",text="The doll's head, dress and stuffing are in the ruined houses of Darrowshire. Ghosts appear when you loot them.",v=1},
     {"turnin",q=5149,title="Pamela's Doll",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
     {"accept",q=5241,title="Uncle Carlin",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
+    {"accept",q=5152,title="Auntie Marlene",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
     {"complete",q=6021,title="Zaeldarr the Outcast",text="Zaeldarr in the Darrowshire crypt, west side of the village.",v=1},
     {"accept",q=6022,title="To Kill With Purpose",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,text="Nathanos Blightcaller at Marris Stead, west of Darrowshire.",v=1},
     {"turnin",q=5961,title="The Champion of the Banshee Queen",npc="Nathanos Blightcaller",z=139,x=26.5,y=74.7,v=1},

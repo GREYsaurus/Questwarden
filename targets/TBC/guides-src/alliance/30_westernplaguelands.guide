@@ -14,7 +14,9 @@ accept 5090 A Call to Arms: The Plaguelands! [zone=Ironforge] | Courier Hammerfa
 fp Chillwind Camp
 turnin 5090 A Call to Arms: The Plaguelands! | Commander Ashlam Valorfist, Chillwind Camp.
 turnin 6028 The Everlook Report [optional] | Argent Officer Pureheart, Chillwind Camp (from Winterspring).
+accept 5401 Argent Dawn Commission
 accept Clear the Way
+turnin 5401 Argent Dawn Commission
 accept A Plague Upon Thee | Nathaniel Dumah, Chillwind Camp.
 accept The Wildlife Suffers Too | Mulgris Deepriver.
 accept Unfinished Business | Kirsta Deepshadow. The Scarlet camps are in the north; this is done last.
@@ -30,6 +32,7 @@ turnin Clear the Way | Chillwind Camp.
 accept The Scourge Cauldrons
 accept All Along the Watchtowers | Commander Ashlam Valorfist.
 turnin The Scourge Cauldrons | High Priestess MacDonnell.
+accept 9474 The Mark of the Lightbringer
 accept Target: Felstone Field
 turnin A Plague Upon Thee
 accept 5904 A Plague Upon Thee
@@ -75,10 +78,18 @@ accept Mission Accomplished!
 turnin Mission Accomplished! | Commander Ashlam Valorfist.
 complete Unfinished Business | Scarlet Medics and Hunters at the Northridge Lumber Camp.
 turnin Unfinished Business
+complete 9474 The Mark of the Lightbringer
+accept 6389 A Plague Upon Thee
 accept 6023 Unfinished Business
+turnin 9474 The Mark of the Lightbringer
+turnin 6389 A Plague Upon Thee
 complete 6023 Unfinished Business | Huntsman Radley and Cavalier Durgen at Hearthglen.
 turnin 6023 Unfinished Business
+note The next quest, Tomb of the Lightbringer, is an escort: pick it up only when you are ready to follow the NPC.
+accept 9446 Tomb of the Lightbringer
+complete 9446 Tomb of the Lightbringer | Escort: stay close; it fails if the NPC dies.
 accept 6025 Unfinished Business
+turnin 9446 Tomb of the Lightbringer
 complete 6025 Unfinished Business
 turnin 6025 Unfinished Business
 level 57

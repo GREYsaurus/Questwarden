@@ -67,6 +67,7 @@ turnin Boiling Blood
 accept Apothecary Antonivich
 accept The Eyes of Grillok | Zezzak.
 turnin 10229 Decipher the Tome
+accept 10220 Make Them Listen
 complete The Eyes of Grillok
 turnin The Eyes of Grillok
 accept Grillok "Darkeye"
@@ -115,6 +116,8 @@ complete Grillok "Darkeye" | Grillok's Eyepatch drops from Grillok "Darkeye".
 turnin Void Ridge
 turnin Grillok "Darkeye"
 turnin Zeth'Gor Must Burn!
+complete 10220 Make Them Listen
+turnin 10220 Make Them Listen
 turnin Investigate the Crash
 turnin 9498 Falcon Watch [race=Orc,Troll,Tauren,Scourge]
 turnin 9499 Falcon Watch [race=BloodElf]
@@ -124,6 +127,7 @@ accept Arelion's Journal | Magistrix Carinda.
 accept Source of the Corruption | Apothecary Azethen.
 accept 9373 Missing Missive [iffound] | Shown only if you find Eroded Leather Case.
 turnin 9373 Missing Missive [iffound]
+accept 10403 Naladu
 accept In Need of Felblood | Ryathen the Somber.
 complete Birds of a Feather
 complete In Need of Felblood | Felblood Sample drops from Terrorfiend.
@@ -136,6 +140,10 @@ turnin Source of the Corruption
 turnin Arelion's Journal
 accept Arelion's Secret
 turnin Arelion's Secret
+accept 10367 A Traitor Among Us
+complete 10367 A Traitor Among Us
+turnin 10367 A Traitor Among Us
+turnin 10403 Naladu
 accept The Mistress Revealed
 turnin The Great Fissure
 accept Marking the Path
@@ -156,5 +164,5 @@ turnin The Mistress Revealed
 accept Arelion's Mistress
 complete Arelion's Mistress
 turnin Arelion's Mistress
-level 62
+grind 62 Quillfang Ravager, Quillfang Skitterer [at=23.7,66.6] | The next steps expect level 62 and the quests here don't quite get you there: grind these until you reach it.
 note Ride west from Falcon Watch into Zangarmarsh; Zabra'jin is the Horde town on the western side.

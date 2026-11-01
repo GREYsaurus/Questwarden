@@ -74,7 +74,7 @@ complete Burning Blade Medallion | Yarrog Baneshadow, deep in the cave.
 turnin Thazz'ril's Pick
 turnin Burning Blade Medallion
 accept Report to Sen'jin Village
-level 6 | Kill boars and scorpids in the valley if you are short of 6; the next quests expect it.
+grind 6 Felstalker, Vile Familiar, Razormane Quilboar [at=45.4,53.1] | The next steps expect level 6 and the quests here don't quite get you there: grind these until you reach it.
 turnin 3086 Glyphic Tablet [class=Mage; race=Troll]
 turnin 3090 Tainted Parchment [class=Warlock; race=Orc]
 turnin 3088 Encrypted Parchment [class=Rogue; race=Orc]
@@ -183,6 +183,7 @@ turnin Winds in the Desert
 accept Securing the Lines
 complete Securing the Lines | Dustwind harpies in Drygulch Ravine.
 turnin Securing the Lines
+grind 11.5 Dustwind Savage, Dustwind Storm Witch, Burning Blade Cultist [at=52.4,24.0] | The next steps expect level 12: grind these to 50% through level 11, and the quests left here bring you the rest of the way.
 turnin Need for a Cure
 turnin 5726 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Turned in at Orgrimmar.

@@ -12,6 +12,6 @@ ns.Guides:Register({
     {"accept",q=6421,title="Boulderslide Ravine",npc="Mor'rogal",z=406,x=47.2,y=64,v=1},
     {"complete",q=6421,title="Boulderslide Ravine",v=1},
     {"turnin",q=6421,title="Boulderslide Ravine",npc="Mor'rogal",z=406,x=47.2,y=64,v=1},
-    {"level",text="The Barrens starts at 16. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=16,v=1},
+    {"grind",z=406,x=57.1,y=75.5,text="The Barrens starts at 16 and the quests here don't quite get you there: grind these until you reach it.",level=16,mobs={"Deepmoss Creeper"},v=0},
   },
 })

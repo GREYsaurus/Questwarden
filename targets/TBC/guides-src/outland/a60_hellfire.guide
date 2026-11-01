@@ -51,6 +51,9 @@ complete Warlord of the Bleeding Hollow | Morkh's Shattered Armor drops from War
 turnin Warlord of the Bleeding Hollow
 accept Return to Honor Hold
 turnin Expedition Point | Forward Commander Kingston, Expedition Point.
+accept 10895 Zeth'Gor Must Burn!
+complete 10895 Zeth'Gor Must Burn!
+turnin 10895 Zeth'Gor Must Burn!
 accept Disrupt Their Reinforcements
 complete Disrupt Their Reinforcements | Demons at the two Legion portals near Expedition Point.
 turnin Disrupt Their Reinforcements
@@ -83,6 +86,7 @@ turnin Waste Not, Want Not
 accept Laying Waste to the Unwanted
 accept Unyielding Souls | Honor Guard Wesilow.
 accept When This Mine's a-Rockin' | Foreman Biggums.
+accept 9355 A Job for an Intelligent Man
 turnin Ravager Egg Roundup
 accept Helboar, the Other White Meat
 accept An Old Gift | Father Malgor Devidicus.
@@ -112,11 +116,14 @@ accept Voidwalkers Gone Wild
 complete Voidwalkers Gone Wild | Voidwalkers at Void Ridge.
 turnin Voidwalkers Gone Wild
 turnin The Longbeards | Gremni Longbeard.
+accept 10367 A Traitor Among Us
 accept Rampaging Ravagers | Gremni Longbeard. Needs level 60; {name} skips it if you are lower and brings it back when you ding.
 accept The Arakkoa Threat | Needs level 60. If you are lower, {name} skips it and moves on.
 turnin Unyielding Souls
+complete 9355 A Job for an Intelligent Man
 accept Looking to the Leadership
 turnin When This Mine's a-Rockin'
+turnin 9355 A Job for an Intelligent Man
 accept The Mastermind
 complete The Mastermind | Deep inside the Hellfire Quarry mine.
 turnin The Mastermind
@@ -165,6 +172,8 @@ accept Atonement
 turnin Atonement
 accept The Cenarion Expedition [optional] | Leads to Zangarmarsh.
 accept Keep Thornfang Hill Clear! | Mahuram Stouthoof.
+accept 10403 Naladu
+complete 10367 A Traitor Among Us
 accept Colossal Menace | Tola'thion.
 accept Demonic Contamination | Thiah Redmane, Cenarion Post.
 accept 9373 Missing Missive [iffound] | Shown only if you find Eroded Leather Case.
@@ -179,7 +188,9 @@ turnin Testing the Antidote
 turnin Colossal Menace
 turnin Keep Thornfang Hill Clear!
 turnin Rampaging Ravagers
+turnin 10367 A Traitor Among Us
+turnin 10403 Naladu
 turnin The Arakkoa Threat
-level 62
+grind 62 Quillfang Ravager, Kaliri Swooper, Haal'eshi Windwalker [at=24.7,71.1] | The next steps expect level 62 and the quests here don't quite get you there: grind these until you reach it.
 train | Hearth or take the Dark Portal back to a capital city to train.
 note Ride west from the Temple of Telhamat into Zangarmarsh; Telredor is the Alliance town.

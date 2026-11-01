@@ -83,6 +83,6 @@ ns.Guides:Register({
     {"complete",q=471,title="Apprentice's Duties",text="Giant Wetlands Crocolisks.",v=1},
     {"turnin",q=471,title="Apprentice's Duties",npc="James Halloran",z=11,x=8.6,y=55.7,v=1},
     {"turnin",q=306,title="In Search of The Excavation Team",npc="Tarrel Rockweaver",z=11,x=11.5,y=52.2,text="Tarrel Rockweaver, Menethil.",v=1},
-    {"level",text="Duskwood starts at 28. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=28,v=1},
+    {"grind",z=11,x=33.6,y=48.6,text="Duskwood starts at 28 and the quests here don't quite get you there: grind these until you reach it.",level=28,mobs={"Mottled Razormaw","Mottled Scytheclaw"},v=0},
   },
 })

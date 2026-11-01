@@ -56,6 +56,6 @@ ns.Guides:Register({
     {"accept",q=192,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
     {"complete",q=192,title="Panther Mastery",v=1},
     {"turnin",q=192,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
-    {"level",text="Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=40,v=1},
+    {"grind",z=33,x=44.2,y=36,text="Badlands starts at 40 and the quests here don't quite get you there: grind these until you reach it.",level=40,mobs={"Skullsplitter Axe Thrower","Skullsplitter Mystic","Skullsplitter Warrior"},v=0},
   },
 })

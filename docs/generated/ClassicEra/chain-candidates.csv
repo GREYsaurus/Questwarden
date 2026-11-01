@@ -1,90 +1,82 @@
 faction,quests,new,used,levels,xp_new,all_zones_on_route,zones,titles
-Alliance,37,37,0,60-60,242720,no,139:Both_EasternPlaguelands 440:- 1537:- 2557:-,8921 The Ectoplasmic Distiller; 8922 A Supernatural Device; 8924 Hunting for Ectoplasm; 8925 A Portable Power Source; 8928 A Shifty Merchant; 8929 In Search of Anthion; 8945 Dead Man's Plea; 8946 Proof of Life; 8947 Anthion's Strange Request; 8948 Anthion's Old Friend; 8949 Falrin's Vendetta; 8950 The Instigator's Enchantment; 8960 Bodley's Unfortunate Fate; 8961 Three Kings of Flame; 8962 Compone
-Alliance,19,19,0,57-60,89770,no,4:- 8:- 16:- 33:-,2681 The Stones That Bind Us; 2701 Heroes of Old; 2702 Heroes of Old; 2721 Kirith; 2743 The Cover of Darkness; 2744 The Demon Hunter; 2783 Petty Squabbles; 2801 A Tale of Sorrow; 3141 Loramus; 3508 Breaking the Ward; 3509 The Name of the Beast; 3510 The Name of the Beast; 3511 The Name of the Beast; 3602 Azsharite; 3621 The Formation of Felbane; 3625 Enchanted Azsharite Fel Weaponry; 3626 Return t
-Alliance,18,11,7,54-60,76460,no,44:- 46:A_BurningSteppes 618:Both_Winterspring 1519:- 1585:-,4182 Dragonkin Menace (used); 4183 The True Masters (used); 4184 The True Masters (used); 4185 The True Masters (used); 4186 The True Masters (used); 4223 The True Masters (used); 4224 The True Masters (used); 4241 Marshal Windsor; 4242 Abandoned Hope; 4264 A Crumpled Up Note; 4282 A Shred of Hope; 4322 Jail Break!; 6402 Stormwind Rendezvous; 6403 The Great Masquerade; 6501 The Dragon's Eye; 6502 
-Alliance,15,12,3,55-60,62110,yes,28:A_WesternPlaguelands 139:Both_EasternPlaguelands 618:Both_Winterspring,5142 Little Pamela (used); 5149 Pamela's Doll (used); 5152 Auntie Marlene; 5153 A Strange Historian; 5154 The Annals of Darrowshire; 5168 Heroes of Darrowshire; 5181 Villains of Darrowshire; 5206 Marauders of Darrowshire; 5210 Brother Carlin; 5211 Defenders of Darrowshire; 5241 Uncle Carlin (used); 5601 Sister Pamela; 5721 The Battle of Darrowshire; 5941 Return to Chromie; 5942 Hidden Treasures
-Alliance,7,7,0,56-60,58450,no,16:-,6804 Poisoned Water; 6805 Stormers and Rumblers; 6821 Eye of the Emberseer; 6822 The Molten Core; 6823 Agent of Hydraxis; 6824 Hands of the Enemy; 7486 A Hero's Reward
-Alliance,13,13,0,52-56,57100,no,361:A_Felwood 440:- 490:Both_UngoroCrater 618:Both_Winterspring,3844 It's a Secret to Everybody; 3845 It's a Secret to Everybody; 3908 It's a Secret to Everybody; 3909 The Videre Elixir; 3912 Meet at the Grave; 3913 A Grave Situation; 3914 Linken's Sword; 3941 A Gnome's Assistance; 3942 Linken's Memory; 3961 Linken's Adventure; 3962 It's Dangerous to Go Alone; 4005 Aquementas; 4084 Silver Heart
-Alliance,9,8,1,60-60,56250,no,28:A_WesternPlaguelands 139:Both_EasternPlaguelands 2017:-,"5382 Doctor Theolen Krastinov, the Butcher (used); 5384 Kirtonos the Herald; 5461 The Human, Ras Frostwhisper; 5462 The Dying, Ras Frostwhisper; 5463 Menethil's Gift; 5464 Menethil's Gift; 5465 Soulbound Keepsake; 5466 The Lich, Ras Frostwhisper; 5515 Krastinov's Bag of Horrors"
-Alliance,8,8,0,44-58,53800,no,33:- 440:Both_Tanaris,3520 Screecher Spirits; 3527 The Prophecy of Mosh'aru; 3528 The God Hakkar; 4787 The Ancient Egg; 4788 The Final Tablets; 5065 The Lost Tablets of Mosh'aru; 8181 Confront Yeh'kinya; 8182 The Hand of Rastakhan
-Alliance,6,6,0,60-60,48050,no,1377:-,8304 Dearest Natalia; 8306 Into The Maw of Madness; 8309 Glyph Chasing; 8310 Breaking the Code; 8314 Unraveling the Mystery; 8315 The Calling
-Alliance,11,7,4,56-60,46500,yes,28:A_WesternPlaguelands 139:Both_EasternPlaguelands,5542 Demon Dogs (used); 5543 Blood Tinged Skies (used); 5544 Carrion Grubbage (used); 5742 Redemption (used); 5781 Of Forgotten Memories; 5845 Of Lost Honor; 5846 Of Love and Family; 5848 Of Love and Family; 5861 Find Myranda; 5862 Scarlet Subterfuge; 5944 In Dreams
-Alliance,10,7,3,52-60,38160,yes,46:A_BurningSteppes 139:Both_EasternPlaguelands 618:Both_Winterspring,4726 Broodling Essence (used); 4734 Egg Freezing; 4735 Egg Collection; 4771 Dawn's Gambit; 4808 Felnok Steelspring (used); 4809 Chillwind Horns (used); 4810 Return to Tinkee; 4907 Tinkee Steamboil; 5522 Leonid Barthalomew; 5531 Betina Bigglezink
+Alliance,37,37,0,60-60,242720,no,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 440:A_57_Tanaris 1537:- 2557:-,8921 The Ectoplasmic Distiller; 8922 A Supernatural Device; 8924 Hunting for Ectoplasm; 8925 A Portable Power Source; 8928 A Shifty Merchant; 8929 In Search of Anthion; 8945 Dead Man's Plea; 8946 Proof of Life; 8947 Anthion's Strange Request; 8948 Anthion's Old Friend; 8949 Falrin's Vendetta; 8950 The Instigator's Enchantment; 8960 Bodley's Unfortunate Fate; 8961 Three Kings of Flame; 8962 Compone
+Alliance,19,18,1,57-60,89170,no,4:- 8:- 16:A_56_Azshara 33:-,2681 The Stones That Bind Us; 2701 Heroes of Old; 2702 Heroes of Old; 2721 Kirith; 2743 The Cover of Darkness; 2744 The Demon Hunter; 2783 Petty Squabbles; 2801 A Tale of Sorrow (used); 3141 Loramus; 3508 Breaking the Ward; 3509 The Name of the Beast; 3510 The Name of the Beast; 3511 The Name of the Beast; 3602 Azsharite; 3621 The Formation of Felbane; 3625 Enchanted Azsharite Fel Weaponry; 3626 R
+Alliance,18,11,7,54-60,76460,no,44:- 46:A_51_BurningSteppes 618:A_49_Winterspring+A_61_Winterspring 1519:- 1585:-,4182 Dragonkin Menace (used); 4183 The True Masters (used); 4184 The True Masters (used); 4185 The True Masters (used); 4186 The True Masters (used); 4223 The True Masters (used); 4224 The True Masters (used); 4241 Marshal Windsor; 4242 Abandoned Hope; 4264 A Crumpled Up Note; 4282 A Shred of Hope; 4322 Jail Break!; 6402 Stormwind Rendezvous; 6403 The Great Masquerade; 6501 The Dragon's Eye; 6502 
+Alliance,15,12,3,55-60,62110,yes,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 618:A_49_Winterspring+A_61_Winterspring,5142 Little Pamela (used); 5149 Pamela's Doll (used); 5152 Auntie Marlene; 5153 A Strange Historian; 5154 The Annals of Darrowshire; 5168 Heroes of Darrowshire; 5181 Villains of Darrowshire; 5206 Marauders of Darrowshire; 5210 Brother Carlin; 5211 Defenders of Darrowshire; 5241 Uncle Carlin (used); 5601 Sister Pamela; 5721 The Battle of Darrowshire; 5941 Return to Chromie; 5942 Hidden Treasures
+Alliance,7,7,0,56-60,58450,yes,16:A_47_Azshara+A_56_Azshara,6804 Poisoned Water; 6805 Stormers and Rumblers; 6821 Eye of the Emberseer; 6822 The Molten Core; 6823 Agent of Hydraxis; 6824 Hands of the Enemy; 7486 A Hero's Reward
+Alliance,9,8,1,60-60,56250,no,28:A_54_WesternPlaguelands 139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 2017:-,"5382 Doctor Theolen Krastinov, the Butcher (used); 5384 Kirtonos the Herald; 5461 The Human, Ras Frostwhisper; 5462 The Dying, Ras Frostwhisper; 5463 Menethil's Gift; 5464 Menethil's Gift; 5465 Soulbound Keepsake; 5466 The Lich, Ras Frostwhisper; 5515 Krastinov's Bag of Horrors"
+Alliance,13,12,1,52-56,55850,yes,361:A_48_Felwood+A_50_Felwood+A_55_Felwood 440:A_43_Tanaris+A_57_Tanaris 490:A_46_UnGoroCrater+A_58_UnGoroCrater 618:A_49_Winterspring+A_61_Winterspring,3844 It's a Secret to Everybody (used); 3845 It's a Secret to Everybody; 3908 It's a Secret to Everybody; 3909 The Videre Elixir; 3912 Meet at the Grave; 3913 A Grave Situation; 3914 Linken's Sword; 3941 A Gnome's Assistance; 3942 Linken's Memory; 3961 Linken's Adventure; 3962 It's Dangerous to Go Alone; 4005 Aquementas; 4084 Silver Heart
+Alliance,8,8,0,44-58,53800,yes,33:A_33_StranglethornVale+A_39_StranglethornVale 440:A_35_Tanaris+A_43_Tanaris+A_57_Tanaris,3520 Screecher Spirits; 3527 The Prophecy of Mosh'aru; 3528 The God Hakkar; 4787 The Ancient Egg; 4788 The Final Tablets; 5065 The Lost Tablets of Mosh'aru; 8181 Confront Yeh'kinya; 8182 The Hand of Rastakhan
+Alliance,11,7,4,56-60,46500,yes,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,5542 Demon Dogs (used); 5543 Blood Tinged Skies (used); 5544 Carrion Grubbage (used); 5742 Redemption (used); 5781 Of Forgotten Memories; 5845 Of Lost Honor; 5846 Of Love and Family; 5848 Of Love and Family; 5861 Find Myranda; 5862 Scarlet Subterfuge; 5944 In Dreams
+Alliance,6,5,1,60-60,41450,yes,1377:A_59_Silithus,8304 Dearest Natalia (used); 8306 Into The Maw of Madness; 8309 Glyph Chasing; 8310 Breaking the Code; 8314 Unraveling the Mystery; 8315 The Calling
+Alliance,10,7,3,52-60,38160,yes,46:A_51_BurningSteppes 139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 618:A_49_Winterspring+A_61_Winterspring,4726 Broodling Essence (used); 4734 Egg Freezing; 4735 Egg Collection; 4771 Dawn's Gambit; 4808 Felnok Steelspring (used); 4809 Chillwind Horns (used); 4810 Return to Tinkee; 4907 Tinkee Steamboil; 5522 Leonid Barthalomew; 5531 Betina Bigglezink
 Alliance,7,7,0,54-59,38090,no,1537:- 1585:-,3701 The Smoldering Ruins of Thaurissan; 3702 The Smoldering Ruins of Thaurissan; 4341 Kharan Mighthammer; 4342 Kharan's Tale; 4361 The Bearer of Bad News; 4362 The Fate of the Kingdom; 4363 The Princess's Surprise
-Alliance,8,8,0,56-59,37950,yes,361:A_Felwood 618:Both_Winterspring,5083 Winterfall Firewater; 5084 Falling to Corruption; 5085 Mystery Goo; 5086 Toxic Horrors; 5087 Winterfall Runners; 5121 High Chief Winterfall; 5123 The Final Piece; 5128 Words of the High Chief
-Alliance,7,7,0,45-50,35550,no,33:- 47:A_Hinterlands 357:A_Feralas 440:Both_Tanaris,351 Find OOX-17/TN!; 485 Find OOX-09/HL!; 648 Rescue OOX-17/TN!; 836 Rescue OOX-09/HL!; 2766 Find OOX-22/FE!; 2767 Rescue OOX-22/FE!; 3721 An OOX of Your Own
-Alliance,6,6,0,60-60,34420,no,28:A_WesternPlaguelands 618:- 1583:-,5160 The Matron Protectorate; 5161 Wrath of the Blue Flight; 5162 Wrath of the Blue Flight; 5164 Catalogue of the Wayward; 5166 Breastplate of the Chromatic Flight; 5167 Legplates of the Chromatic Defier
-Alliance,22,9,13,50-60,34300,no,28:A_WesternPlaguelands 440:- 1519:- 1537:- 1657:-,"211 Alas, Andorhal; 5066 A Call to Arms: The Plaguelands!; 5090 A Call to Arms: The Plaguelands! (used); 5091 A Call to Arms: The Plaguelands!; 5092 Clear the Way (used); 5097 All Along the Watchtowers (used); 5215 The Scourge Cauldrons (used); 5216 Target: Felstone Field (used); 5217 Return to Chillwind Camp (used); 5219 Target: Dalson's Tears (used); 5220 Return to Chillwind Camp (used); 5222 Ta"
-Alliance,9,8,1,56-58,34260,no,139:Both_EasternPlaguelands 141:- 361:A_Felwood 618:Both_Winterspring 1657:-,5244 The Ruins of Kel'Theril (used); 5245 Troubled Spirits of Kel'Theril; 5246 Fragments of the Past; 5247 Fragments of the Past; 5248 Tormented By the Past; 5249 To Winterspring!; 5250 Starfall; 5252 Remorseful Highborne; 5253 The Crystal of Zin-Malor
-Alliance,5,4,1,60-60,33150,yes,139:Both_EasternPlaguelands,5251 The Archivist (used); 5262 The Truth Comes Crashing Down; 5263 Above and Beyond; 5264 Lord Maxwell Tyrosus; 5265 The Argent Hold
-Alliance,5,5,0,58-60,32300,no,1377:-,8279 The Twilight Lexicon; 8284 The Twilight Mystery; 8285 The Deserter; 8287 A Terrible Purpose; 8323 True Believers
-Alliance,11,11,0,55-57,31640,no,493:- 1377:- 1519:- 1537:- 1657:-,"1015 The New Frontier; 1019 The New Frontier; 1047 The New Frontier; 1124 Wasteland; 1125 The Spirits of Southwind; 1126 Hive in the Tower; 1185 Under the Chitin Was...; 6761 The New Frontier; 6762 Rabine Saturna; 6844 Umber, Archivist; 6845 Uncovering Past Secrets"
-Alliance,6,6,0,60-60,31120,no,28:A_WesternPlaguelands 1519:-,6182 The First and the Last; 6183 Honor the Dead; 6184 Flint Shadowmore; 6185 The Eastern Plagues; 6186 The Blightcaller Cometh; 6187 Order Must Be Restored
-Alliance,5,5,0,48-55,27150,no,51:Both_SearingGorge 1537:-,"3367 Suntara Stones; 3368 Suntara Stones; 3371 Dwarven Justice; 3372 Release Them; 3566 Rise, Obsidion!"
-Alliance,9,8,1,35-44,25850,yes,33:A_Stranglethorn+A_Stranglethorn_Late 45:A_Arathi,662 Deep Sea Salvage; 663 Land Ho! (used); 664 Drowned Sorrows; 665 Sunken Treasure; 666 Sunken Treasure; 667 Death From Below; 668 Sunken Treasure; 669 Sunken Treasure; 670 Sunken Treasure
-Alliance,5,5,0,47-59,25750,no,141:- 618:Both_Winterspring 1657:-,978 Moontouched Wildkin; 979 Find Ranshalla; 3661 Favored of Elune?; 4901 Guardians of the Altar; 4902 Wildkin of Elune
-Alliance,11,6,5,46-54,25620,no,440:Both_Tanaris 1657:-,10 The Scrimshank Redemption (used); 82 Noxious Lair Investigation (used); 110 Insect Part Analysis (used); 113 Insect Part Analysis (used); 162 Rise of the Silithid; 992 Gadgetzan Water Survey (used); 4493 March of the Silithid; 4496 Bungle in the Jungle; 4507 Pawn Captures Queen; 4508 Calm Before the Storm; 4510 Calm Before the Storm
-Alliance,8,8,0,47-50,24910,no,440:Both_Tanaris 1337:- 1537:-,2278 The Platinum Discs; 2279 The Platinum Discs; 2439 The Platinum Discs; 2946 Seeing What Happens; 2954 The Stone Watcher; 2963 Portents of Uldum; 2964 A Future Task; 2977 Return to Ironforge
-Alliance,6,6,0,19-60,24350,no,36:- 45:A_Arathi 331:A_Ashenvale+A_Ashenvale_Late 1519:- 1537:- 1657:-,8372 Fight for Warsong Gulch; 8399 Fight for Warsong Gulch; 8400 Fight for Warsong Gulch; 8401 Fight for Warsong Gulch; 8402 Fight for Warsong Gulch; 8403 Fight for Warsong Gulch
-Alliance,4,4,0,54-56,23650,no,331:- 361:A_Felwood,939 Flute of Xavaric; 4261 Ancient Spirit; 4441 Felbound Ancients; 4442 Purified!
-Alliance,4,4,0,55-57,23350,yes,361:A_Felwood,5202 A Strange Red Key; 5203 Rescue From Jaedenar; 5204 Retribution of the Light; 5385 The Remains of Trey Lightforge
+Alliance,6,6,0,60-60,34420,no,28:A_54_WesternPlaguelands 618:A_61_Winterspring 1583:-,5160 The Matron Protectorate; 5161 Wrath of the Blue Flight; 5162 Wrath of the Blue Flight; 5164 Catalogue of the Wayward; 5166 Breastplate of the Chromatic Flight; 5167 Legplates of the Chromatic Defier
+Alliance,9,7,2,56-58,33680,no,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 141:- 361:A_48_Felwood+A_50_Felwood+A_55_Felwood 618:A_49_Winterspring+A_61_Winterspring 1657:-,5244 The Ruins of Kel'Theril (used); 5245 Troubled Spirits of Kel'Theril; 5246 Fragments of the Past; 5247 Fragments of the Past; 5248 Tormented By the Past; 5249 To Winterspring! (used); 5250 Starfall; 5252 Remorseful Highborne; 5253 The Crystal of Zin-Malor
+Alliance,5,4,1,60-60,33150,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,5251 The Archivist (used); 5262 The Truth Comes Crashing Down; 5263 Above and Beyond; 5264 Lord Maxwell Tyrosus; 5265 The Argent Hold
+Alliance,11,11,0,55-57,31640,no,493:- 1377:A_59_Silithus 1519:- 1537:- 1657:-,"1015 The New Frontier; 1019 The New Frontier; 1047 The New Frontier; 1124 Wasteland; 1125 The Spirits of Southwind; 1126 Hive in the Tower; 1185 Under the Chitin Was...; 6761 The New Frontier; 6762 Rabine Saturna; 6844 Umber, Archivist; 6845 Uncovering Past Secrets"
+Alliance,6,6,0,60-60,31120,no,28:A_54_WesternPlaguelands 1519:-,6182 The First and the Last; 6183 Honor the Dead; 6184 Flint Shadowmore; 6185 The Eastern Plagues; 6186 The Blightcaller Cometh; 6187 Order Must Be Restored
+Alliance,8,6,2,56-59,30700,yes,361:A_48_Felwood+A_50_Felwood+A_55_Felwood 618:A_49_Winterspring+A_61_Winterspring,5083 Winterfall Firewater (used); 5084 Falling to Corruption (used); 5085 Mystery Goo; 5086 Toxic Horrors; 5087 Winterfall Runners; 5121 High Chief Winterfall; 5123 The Final Piece; 5128 Words of the High Chief
+Alliance,22,7,15,50-60,29240,no,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 440:A_43_Tanaris+A_57_Tanaris 1519:- 1537:- 1657:-,"211 Alas, Andorhal; 5066 A Call to Arms: The Plaguelands!; 5090 A Call to Arms: The Plaguelands! (used); 5091 A Call to Arms: The Plaguelands!; 5092 Clear the Way (used); 5097 All Along the Watchtowers (used); 5215 The Scourge Cauldrons (used); 5216 Target: Felstone Field (used); 5217 Return to Chillwind Camp (used); 5219 Target: Dalson's Tears (used); 5220 Return to Chillwind Camp (used); 5222 Ta"
+Alliance,5,5,0,48-55,27150,no,51:A_40_SearingGorge 1537:-,"3367 Suntara Stones; 3368 Suntara Stones; 3371 Dwarven Justice; 3372 Release Them; 3566 Rise, Obsidion!"
+Alliance,5,5,0,47-59,25750,no,141:- 618:A_49_Winterspring+A_61_Winterspring 1657:-,978 Moontouched Wildkin; 979 Find Ranshalla; 3661 Favored of Elune?; 4901 Guardians of the Altar; 4902 Wildkin of Elune
+Alliance,11,6,5,46-54,25620,no,440:A_35_Tanaris+A_43_Tanaris 1657:-,10 The Scrimshank Redemption (used); 82 Noxious Lair Investigation (used); 110 Insect Part Analysis (used); 113 Insect Part Analysis (used); 162 Rise of the Silithid; 992 Gadgetzan Water Survey (used); 4493 March of the Silithid; 4496 Bungle in the Jungle; 4507 Pawn Captures Queen; 4508 Calm Before the Storm; 4510 Calm Before the Storm
+Alliance,8,8,0,47-50,24910,no,440:A_35_Tanaris+A_43_Tanaris 1337:- 1537:-,2278 The Platinum Discs; 2279 The Platinum Discs; 2439 The Platinum Discs; 2946 Seeing What Happens; 2954 The Stone Watcher; 2963 Portents of Uldum; 2964 A Future Task; 2977 Return to Ironforge
+Alliance,6,6,0,19-60,24350,no,36:A_27_AlteracMountains 45:A_23_ArathiHighlands+A_28_ArathiHighlands 331:A_13_Ashenvale+A_16_Ashenvale+A_20_Ashenvale 1519:- 1537:- 1657:-,8372 Fight for Warsong Gulch; 8399 Fight for Warsong Gulch; 8400 Fight for Warsong Gulch; 8401 Fight for Warsong Gulch; 8402 Fight for Warsong Gulch; 8403 Fight for Warsong Gulch
 Alliance,5,5,0,44-44,23300,no,40:-,48 Sweet Amber; 49 Sweet Amber; 50 Sweet Amber; 51 Sweet Amber; 53 Sweet Amber
-Alliance,5,5,0,29-60,22900,no,36:- 45:A_Arathi 331:- 1519:- 1537:- 1657:-,8374 Claiming Arathi Basin; 8393 Claiming Arathi Basin; 8394 Claiming Arathi Basin; 8395 Claiming Arathi Basin; 8396 Claiming Arathi Basin
-Alliance,16,16,0,21-28,22510,no,331:A_Ashenvale+A_Ashenvale_Late 406:- 1519:- 1537:- 1657:-,1070 On Guard in Stonetalon; 1071 A Gnome's Respite; 1072 An Old Colleague; 1073 Ineptitude + Chemicals = Fun; 1074 Ineptitude + Chemicals = Fun; 1075 A Scroll from Mauren; 1076 Devils in Westfall; 1077 Special Delivery for Gaxim; 1079 Covert Ops - Alpha; 1080 Covert Ops - Beta; 1081 Reception from Tyrande; 1082 Update for Sentinel Thenysil; 1083 Enraged Spirits; 1084 Wounded Ancients; 1085 On Gua
-Alliance,7,7,0,43-50,21490,no,47:A_Hinterlands 1519:-,1448 In Search of The Temple; 1449 To The Hinterlands; 1450 Gryphon Master Talonaxe; 1451 Rhapsody Shindigger; 1452 Rhapsody's Kalimdor Kocktail; 1469 Rhapsody's Tale; 1475 Into The Temple of Atal'Hakkar
+Alliance,5,5,0,29-60,22900,no,36:A_27_AlteracMountains 45:A_23_ArathiHighlands+A_28_ArathiHighlands 331:A_20_Ashenvale 1519:- 1537:- 1657:-,8374 Claiming Arathi Basin; 8393 Claiming Arathi Basin; 8394 Claiming Arathi Basin; 8395 Claiming Arathi Basin; 8396 Claiming Arathi Basin
+Alliance,7,4,3,45-50,22850,yes,33:A_33_StranglethornVale+A_39_StranglethornVale 47:A_38_Hinterlands+A_44_Hinterlands 357:A_36_Feralas+A_41_Feralas 440:A_35_Tanaris+A_43_Tanaris,351 Find OOX-17/TN! (used); 485 Find OOX-09/HL! (used); 648 Rescue OOX-17/TN!; 836 Rescue OOX-09/HL!; 2766 Find OOX-22/FE! (used); 2767 Rescue OOX-22/FE!; 3721 An OOX of Your Own
+Alliance,7,7,0,43-50,21490,no,47:A_38_Hinterlands+A_44_Hinterlands 1519:-,1448 In Search of The Temple; 1449 To The Hinterlands; 1450 Gryphon Master Talonaxe; 1451 Rhapsody Shindigger; 1452 Rhapsody's Kalimdor Kocktail; 1469 Rhapsody's Tale; 1475 Into The Temple of Atal'Hakkar
 Alliance,3,3,0,60-60,20560,no,36:- 2597:-,7141 The Battle of Alterac; 7221 Speak with Prospector Stonehewer; 8271 Hero of the Stormpike
-Alliance,6,4,2,51-58,20200,no,17:- 361:A_Felwood,5155 Forces of Jaedenar (used); 5157 Collection of the Corrupt Water (used); 5158 Seeking Spiritual Aid; 5159 Cleansed Water Returns to Felwood; 5165 Dousing the Flames of Protection; 5242 A Final Blow
+Alliance,6,4,2,51-58,20200,no,17:- 361:A_48_Felwood+A_50_Felwood+A_55_Felwood,5155 Forces of Jaedenar (used); 5157 Collection of the Corrupt Water (used); 5158 Seeking Spiritual Aid; 5159 Cleansed Water Returns to Felwood; 5165 Dousing the Flames of Protection; 5242 A Final Blow
 Alliance,2,2,0,60-60,19900,no,1519:-,7781 The Lord of Blackrock; 7782 The Lord of Blackrock
-Alliance,3,3,0,60-60,19900,no,1377:-,"7785 Examine the Vessel; 7786 Thunderaan the Windseeker; 7787 Rise, Thunderfury!"
-Alliance,2,2,0,60-60,19900,no,440:- 3428:-,8801 C'Thun's Legacy; 8802 The Savior of Kalimdor
-Alliance,5,5,0,60-60,19900,yes,139:Both_EasternPlaguelands,9033 Echoes of War; 9120 The Fall of Kel'Thuzad; 9229 The Fate of Ramaladni; 9230 Ramaladni's Icy Grasp; 9232 The Only Song I Know...
-Alliance,3,3,0,60-60,19800,no,1377:-,8286 What Tomorrow Brings; 8288 Only One May Rise; 8301 The Path of the Righteous
-Alliance,4,4,0,51-51,19550,no,357:- 440:- 1477:-,3444 The Stone Circle; 3445 The Sunken Temple; 3446 Into the Depths; 3447 Secret of the Circle
-Alliance,7,7,0,47-50,19040,no,141:- 357:A_Feralas 440:Both_Tanaris,2879 The Stave of Equinex; 2939 In Search of Knowledge; 2940 Feralas: A History; 2941 The Borrower; 2942 The Morrow Stone; 2943 Return to Troyas; 2944 The Super Snapper FX
-Alliance,6,6,0,41-44,18430,no,1337:- 1537:-,2198 The Shattered Necklace; 2199 Lore for a Price; 2200 Back to Uldaman; 2201 Find the Gems; 2204 Restoring the Necklace; 2361 Restoring the Necklace
-Alliance,7,5,2,45-51,18400,no,4:- 47:A_Hinterlands,2988 Witherbark Cages (used); 2989 The Altar of Zul (used); 2990 Thadius Grimshade; 2991 Nekrum's Medallion; 2992 The Divination; 2993 Return to the Hinterlands; 2994 Saving Sharpbeak
+Alliance,3,3,0,60-60,19900,yes,1377:A_59_Silithus,"7785 Examine the Vessel; 7786 Thunderaan the Windseeker; 7787 Rise, Thunderfury!"
+Alliance,2,2,0,60-60,19900,no,440:A_57_Tanaris 3428:-,8801 C'Thun's Legacy; 8802 The Savior of Kalimdor
+Alliance,5,5,0,60-60,19900,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9033 Echoes of War; 9120 The Fall of Kel'Thuzad; 9229 The Fate of Ramaladni; 9230 Ramaladni's Icy Grasp; 9232 The Only Song I Know...
+Alliance,16,13,3,21-28,19865,no,331:A_13_Ashenvale+A_16_Ashenvale+A_20_Ashenvale 406:A_14_StonetalonMountains 1519:- 1537:- 1657:-,1070 On Guard in Stonetalon (used); 1071 A Gnome's Respite (used); 1072 An Old Colleague; 1073 Ineptitude + Chemicals = Fun; 1074 Ineptitude + Chemicals = Fun; 1075 A Scroll from Mauren; 1076 Devils in Westfall; 1077 Special Delivery for Gaxim; 1079 Covert Ops - Alpha; 1080 Covert Ops - Beta; 1081 Reception from Tyrande; 1082 Update for Sentinel Thenysil; 1083 Enraged Spirits; 1084 Wounded Ancient
+Alliance,3,3,0,60-60,19800,yes,1377:A_59_Silithus,8286 What Tomorrow Brings; 8288 Only One May Rise; 8301 The Path of the Righteous
+Alliance,4,4,0,51-51,19550,no,357:A_41_Feralas 440:A_43_Tanaris 1477:-,3444 The Stone Circle; 3445 The Sunken Temple; 3446 Into the Depths; 3447 Secret of the Circle
+Alliance,7,7,0,47-50,19040,no,141:- 357:A_36_Feralas+A_41_Feralas 440:A_35_Tanaris+A_43_Tanaris,2879 The Stave of Equinex; 2939 In Search of Knowledge; 2940 Feralas: A History; 2941 The Borrower; 2942 The Morrow Stone; 2943 Return to Troyas; 2944 The Super Snapper FX
+Alliance,7,5,2,45-51,18400,yes,4:A_45_BlastedLands 47:A_38_Hinterlands+A_44_Hinterlands,2988 Witherbark Cages (used); 2989 The Altar of Zul (used); 2990 Thadius Grimshade; 2991 Nekrum's Medallion; 2992 The Divination; 2993 Return to the Hinterlands; 2994 Saving Sharpbeak
 Alliance,2,2,0,60-60,18250,no,1583:-,4742 Seal of Ascension; 4743 Seal of Ascension
-Alliance,3,3,0,55-58,17850,no,1377:-,8277 Deadly Desert Venom; 8278 Noggle's Last Hope; 8282 Noggle's Lost Satchel
-Alliance,12,10,2,36-44,17740,no,17:- 33:A_Stranglethorn+A_Stranglethorn_Late 400:-,621 Zanzil's Secret (used); 1111 Wharfmaster Dizzywig (used); 1112 Parts for Kravel; 1114 Delivery to the Gnomes; 1115 The Rumormonger; 1116 Dream Dust in the Swamp; 1117 Rumors for Kravel; 1118 Back to Booty Bay; 1119 Zanzil's Mixture and a Fool's Stout; 1120 Get the Gnomes Drunk; 1121 Get the Goblins Drunk; 1122 Report Back to Fizzlebub
-Alliance,9,9,0,50-50,17650,no,357:- 1519:- 1537:- 1657:-,3763 Assisting Arch Druid Staghelm; 3764 Un'Goro Soil; 3781 Morrowgrain Research; 3785 Morrowgrain Research; 3787 Jonespyre's Request; 3788 Jonespyre's Request; 3789 Assisting Arch Druid Staghelm; 3790 Assisting Arch Druid Staghelm; 3791 The Mystery of Morrowgrain
-Alliance,8,6,2,47-48,17240,no,47:A_Hinterlands 357:A_Feralas 400:- 1657:-,2969 Freedom for All Creatures (used); 2970 Doling Justice (used); 2972 Doling Justice; 3841 An Orphan Looking For a Home; 3842 A Short Incubation; 3843 The Newest Member of the Family; 4297 Food for Baby; 4298 Becoming a Parent
-Alliance,7,6,1,32-39,15000,no,45:A_Arathi 1519:-,690 Malin's Request; 691 Worth Its Weight in Gold (used); 693 Wand over Fist; 694 Trelane's Defenses; 695 An Apprentice's Enchantment; 696 Attack on the Tower; 697 Malin's Request
+Alliance,4,3,1,54-56,18200,no,331:- 361:A_48_Felwood+A_50_Felwood+A_55_Felwood,939 Flute of Xavaric (used); 4261 Ancient Spirit; 4441 Felbound Ancients; 4442 Purified!
+Alliance,12,10,2,36-44,17740,no,17:- 33:A_24_StranglethornVale+A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale+A_39_StranglethornVale 400:A_25_ShimmeringFlats,621 Zanzil's Secret (used); 1111 Wharfmaster Dizzywig (used); 1112 Parts for Kravel; 1114 Delivery to the Gnomes; 1115 The Rumormonger; 1116 Dream Dust in the Swamp; 1117 Rumors for Kravel; 1118 Back to Booty Bay; 1119 Zanzil's Mixture and a Fool's Stout; 1120 Get the Gnomes Drunk; 1121 Get the Goblins Drunk; 1122 Report Back to Fizzlebub
+Alliance,9,9,0,50-50,17650,no,357:A_41_Feralas 1519:- 1537:- 1657:-,3763 Assisting Arch Druid Staghelm; 3764 Un'Goro Soil; 3781 Morrowgrain Research; 3785 Morrowgrain Research; 3787 Jonespyre's Request; 3788 Jonespyre's Request; 3789 Assisting Arch Druid Staghelm; 3790 Assisting Arch Druid Staghelm; 3791 The Mystery of Morrowgrain
+Alliance,8,6,2,47-48,17240,no,47:A_38_Hinterlands+A_44_Hinterlands 357:A_36_Feralas+A_41_Feralas 400:- 1657:-,2969 Freedom for All Creatures (used); 2970 Doling Justice (used); 2972 Doling Justice; 3841 An Orphan Looking For a Home; 3842 A Short Incubation; 3843 The Newest Member of the Family; 4297 Food for Baby; 4298 Becoming a Parent
+Alliance,6,5,1,41-44,15130,no,1337:- 1537:-,2198 The Shattered Necklace (used); 2199 Lore for a Price; 2200 Back to Uldaman; 2201 Find the Gems; 2204 Restoring the Necklace; 2361 Restoring the Necklace
 Alliance,2,2,0,60-60,14900,no,493:-,5526 Shards of the Felvine; 5527 A Reliquary of Purity
 Alliance,4,4,0,60-60,14850,no,141:- 1519:- 1537:-,9324 Stealing Orgrimmar's Flame; 9325 Stealing Thunder Bluff's Flame; 9326 Stealing the Undercity's Flame; 9365 A Thief's Reward
-Alliance,3,3,0,55-57,14450,no,1377:- 1537:-,8275 Taking Back Silithus; 8280 Securing the Supply Lines; 8281 Stepping Up Security
-Alliance,7,4,3,37-50,14300,no,3:A_Badlands 45:- 1537:-,642 The Princess Trapped (used); 651 Stones of Binding (used); 652 Breaking the Keystone (used); 653 Myzrael's Allies; 656 Summoning the Princess; 687 Theldurin the Lost; 692 The Lost Fragments
+Alliance,7,4,3,37-50,14300,no,3:A_31_Badlands 45:A_28_ArathiHighlands 1537:-,642 The Princess Trapped (used); 651 Stones of Binding (used); 652 Breaking the Keystone (used); 653 Myzrael's Allies; 656 Summoning the Princess; 687 Theldurin the Lost; 692 The Lost Fragments
 Alliance,3,3,0,48-48,14250,no,38:- 1537:-,3181 The Horn of the Beast; 3182 Proof of Deed; 3201 At Last!
-Alliance,17,8,9,28-38,13725,no,10:A_Duskwood 11:A_Wetlands 15:A_Dustwallow 1519:-,1241 The Missing Diplomat (used); 1242 The Missing Diplomat (used); 1243 The Missing Diplomat (used); 1244 The Missing Diplomat; 1245 The Missing Diplomat (used); 1246 The Missing Diplomat (used); 1247 The Missing Diplomat (used); 1248 The Missing Diplomat (used); 1249 The Missing Diplomat; 1250 The Missing Diplomat (used); 1264 The Missing Diplomat; 1265 The Missing Diplomat; 1266 The Missing Dip
-Alliance,15,3,12,30-43,13650,yes,33:A_Stranglethorn+A_Stranglethorn_Late,185 Tiger Mastery (used); 186 Tiger Mastery (used); 187 Tiger Mastery (used); 188 Tiger Mastery (used); 190 Panther Mastery (used); 191 Panther Mastery (used); 192 Panther Mastery (used); 193 Panther Mastery (used); 194 Raptor Mastery (used); 195 Raptor Mastery (used); 196 Raptor Mastery (used); 197 Raptor Mastery; 208 Big Game Hunter; 338 The Green Hills of Stranglethorn; 583 Welcome to the Jungl
-Alliance,3,3,0,43-51,13300,no,8:- 15:A_Dustwallow 47:A_Hinterlands,624 Cortello's Riddle; 625 Cortello's Riddle; 626 Cortello's Riddle
-Alliance,2,2,0,60-60,13200,no,1377:-,8320 Twilight Geolords; 8321 Vyral the Vile
+Alliance,17,8,9,28-38,13725,no,10:A_18_Duskwood 11:A_17_Wetlands+A_19_Wetlands+A_21_Wetlands 15:A_29_DustwallowMarsh 1519:-,1241 The Missing Diplomat (used); 1242 The Missing Diplomat (used); 1243 The Missing Diplomat (used); 1244 The Missing Diplomat; 1245 The Missing Diplomat (used); 1246 The Missing Diplomat (used); 1247 The Missing Diplomat (used); 1248 The Missing Diplomat (used); 1249 The Missing Diplomat; 1250 The Missing Diplomat (used); 1264 The Missing Diplomat; 1265 The Missing Diplomat; 1266 The Missing Dip
+Alliance,15,3,12,30-43,13650,yes,33:A_24_StranglethornVale+A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale+A_39_StranglethornVale,185 Tiger Mastery (used); 186 Tiger Mastery (used); 187 Tiger Mastery (used); 188 Tiger Mastery (used); 190 Panther Mastery (used); 191 Panther Mastery (used); 192 Panther Mastery (used); 193 Panther Mastery (used); 194 Raptor Mastery (used); 195 Raptor Mastery (used); 196 Raptor Mastery (used); 197 Raptor Mastery; 208 Big Game Hunter; 338 The Green Hills of Stranglethorn; 583 Welcome to the Jungl
+Alliance,3,3,0,43-51,13300,yes,8:A_32_SwampofSorrows 15:A_42_DustwallowMarsh 47:A_38_Hinterlands+A_44_Hinterlands,624 Cortello's Riddle; 625 Cortello's Riddle; 626 Cortello's Riddle
+Alliance,2,2,0,60-60,13200,yes,1377:A_59_Silithus,8320 Twilight Geolords; 8321 Vyral the Vile
 Alliance,2,2,0,52-54,13150,no,1537:-,4512 A Little Slime Goes a Long Way; 4513 A Little Slime Goes a Long Way
-Alliance,9,6,3,37-45,13100,yes,3:A_Badlands,710 Study of the Elements: Rock (used); 711 Study of the Elements: Rock (used); 712 Study of the Elements: Rock (used); 713 Coolant Heads Prevail; 714 Gyro... What?; 716 Stone Is Better than Cloth; 734 This Is Going to Be Hard; 777 This Is Going to Be Hard; 778 This Is Going to Be Hard
-Alliance,2,2,0,53-53,13100,no,16:-,"3601 Kim'jael Indeed!; 5534 Kim'jael's ""Missing"" Equipment"
-Alliance,5,3,2,52-54,13100,no,28:A_WesternPlaguelands 1497:- 1519:-,5021 Better Late Than Never (used); 5022 Better Late Than Never (used); 5048 Good Natured Emma; 5050 Good Luck Charm; 5051 Two Halves Become One
-Alliance,4,3,1,52-53,12850,no,357:- 490:Both_UngoroCrater,4141 Muigin and Larion (used); 4142 A Visit to Gregan; 4143 Haze of Evil; 4144 Bloodpetal Sprouts
+Alliance,9,6,3,37-45,13100,yes,3:A_31_Badlands,710 Study of the Elements: Rock (used); 711 Study of the Elements: Rock (used); 712 Study of the Elements: Rock (used); 713 Coolant Heads Prevail; 714 Gyro... What?; 716 Stone Is Better than Cloth; 734 This Is Going to Be Hard; 777 This Is Going to Be Hard; 778 This Is Going to Be Hard
+Alliance,5,3,2,52-54,13100,no,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 1497:- 1519:-,5021 Better Late Than Never (used); 5022 Better Late Than Never (used); 5048 Good Natured Emma; 5050 Good Luck Charm; 5051 Two Halves Become One
+Alliance,4,3,1,52-53,12850,yes,357:A_41_Feralas 490:A_46_UnGoroCrater,4141 Muigin and Larion (used); 4142 A Visit to Gregan; 4143 Haze of Evil; 4144 Bloodpetal Sprouts
 Alliance,12,12,0,22-31,12715,no,1519:-,350 Look to an Old Friend; 373 The Unsent Letter; 389 Bazil Thredd; 391 The Stockade Riots; 392 The Curious Visitor; 393 Shadow of the Past; 394 The Head of the Beast; 395 Brotherhood's End; 396 An Audience with the King; 434 The Attack!; 2745 Infiltrating the Castle; 2746 Items of Some Consequence
-Alliance,8,6,2,30-41,12550,no,3:A_Badlands 400:-,1104 Salt Flat Venom (used); 1105 Hardened Shells (used); 1106 Martek the Exiled; 1107 Encrusted Tail Fins; 1108 Indurium; 1137 News for Fizzle; 1190 Keeping Pace; 1194 Rizzle's Schematics
-Alliance,2,2,0,58-58,12400,yes,139:Both_EasternPlaguelands,"6026 That's Asking A Lot; 6041 When Smokey Sings, I Get Violent"
+Alliance,8,6,2,30-41,12550,yes,3:A_31_Badlands 400:A_25_ShimmeringFlats,1104 Salt Flat Venom (used); 1105 Hardened Shells (used); 1106 Martek the Exiled; 1107 Encrusted Tail Fins; 1108 Indurium; 1137 News for Fizzle; 1190 Keeping Pace; 1194 Rizzle's Schematics
+Alliance,2,2,0,58-58,12400,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,"6026 That's Asking A Lot; 6041 When Smokey Sings, I Get Violent"
 Alliance,4,4,0,60-60,12210,no,1519:-,7791 A Donation of Wool; 7793 A Donation of Silk; 7794 A Donation of Mageweave; 7795 A Donation of Runecloth
 Alliance,4,4,0,60-60,12210,no,1657:-,7792 A Donation of Wool; 7798 A Donation of Silk; 7799 A Donation of Mageweave; 7800 A Donation of Runecloth
 Alliance,4,4,0,60-60,12210,no,1537:-,7802 A Donation of Wool; 7803 A Donation of Silk; 7804 A Donation of Mageweave; 7805 A Donation of Runecloth
 Alliance,4,4,0,60-60,12210,no,1537:-,7807 A Donation of Wool; 7808 A Donation of Silk; 7809 A Donation of Mageweave; 7811 A Donation of Runecloth
-Alliance,4,4,0,40-44,11880,no,3:A_Badlands 1497:- 1537:-,"709 Solution to Doom; 727 To Ironforge for Yagyin's Digest; 735 The Star, the Hand and the Heart; 737 Forbidden Knowledge"
-Alliance,12,7,5,19-30,11660,yes,331:A_Ashenvale+A_Ashenvale_Late,991 Raene's Cleansing (used); 1023 Raene's Cleansing (used); 1024 Raene's Cleansing (used); 1025 An Aggressive Defense (used); 1026 Raene's Cleansing (used); 1027 Raene's Cleansing; 1028 Raene's Cleansing; 1029 Raene's Cleansing; 1030 Raene's Cleansing; 1045 Raene's Cleansing; 1046 Raene's Cleansing; 1055 Raene's Cleansing
-Alliance,12,2,10,48-58,11650,yes,46:A_BurningSteppes 51:Both_SearingGorge,3441 Divine Retribution (used); 3442 The Flawless Flame (used); 3443 Forging the Shaft (used); 3452 The Flame's Casing (used); 3453 The Torch of Retribution (used); 3454 The Torch of Retribution (used); 3462 Squire Maltrake (used); 3463 Set Them Ablaze! (used); 3481 Trinkets... (used); 4022 A Taste of Flame (used); 4023 A Taste of Flame; 4024 A Taste of Flame
-Alliance,4,4,0,35-42,11600,no,4:- 8:-,1396 Encroaching Wildlife; 1398 Driftwood; 1421 The Lost Caravan; 1425 Deliver the Shipment
+Alliance,7,5,2,32-39,12000,no,45:A_23_ArathiHighlands+A_28_ArathiHighlands 1519:-,690 Malin's Request; 691 Worth Its Weight in Gold (used); 693 Wand over Fist (used); 694 Trelane's Defenses; 695 An Apprentice's Enchantment; 696 Attack on the Tower; 697 Malin's Request
+Alliance,4,4,0,40-44,11880,no,3:A_31_Badlands 1497:- 1537:-,"709 Solution to Doom; 727 To Ironforge for Yagyin's Digest; 735 The Star, the Hand and the Heart; 737 Forbidden Knowledge"
+Alliance,12,7,5,19-30,11660,yes,331:A_13_Ashenvale+A_16_Ashenvale+A_20_Ashenvale,991 Raene's Cleansing (used); 1023 Raene's Cleansing (used); 1024 Raene's Cleansing (used); 1025 An Aggressive Defense (used); 1026 Raene's Cleansing (used); 1027 Raene's Cleansing; 1028 Raene's Cleansing; 1029 Raene's Cleansing; 1030 Raene's Cleansing; 1045 Raene's Cleansing; 1046 Raene's Cleansing; 1055 Raene's Cleansing
+Alliance,12,2,10,48-58,11650,yes,46:A_51_BurningSteppes 51:A_40_SearingGorge,3441 Divine Retribution (used); 3442 The Flawless Flame (used); 3443 Forging the Shaft (used); 3452 The Flame's Casing (used); 3453 The Torch of Retribution (used); 3454 The Torch of Retribution (used); 3462 Squire Maltrake (used); 3463 Set Them Ablaze! (used); 3481 Trinkets... (used); 4022 A Taste of Flame (used); 4023 A Taste of Flame; 4024 A Taste of Flame
 Alliance,3,3,0,60-60,11270,no,2557:-,7461 The Madness Within; 7462 The Treasure of the Shen'dralar; 7877 The Treasure of the Shen'dralar
-Alliance,2,2,0,52-56,10900,yes,46:A_BurningSteppes,4262 Overmaster Pyron; 4263 Incendius!
+Alliance,2,2,0,52-56,10900,yes,46:A_51_BurningSteppes,4262 Overmaster Pyron; 4263 Incendius!
 Alliance,3,3,0,52-52,10660,no,1537:-,3448 Passing the Burden; 3449 Arcane Runes; 3461 Return to Tymor
-Alliance,9,2,7,35-45,10500,no,3:A_Badlands 38:- 1537:-,720 A Sign of Hope (used); 721 A Sign of Hope (used); 722 Amulet of Secrets (used); 723 Prospect of Faith (used); 724 Prospect of Faith (used); 725 Passing Word of a Threat (used); 726 Passing Word of a Threat (used); 762 An Ambassador of Evil; 1139 The Lost Tablets of Will
-Alliance,3,2,1,53-53,10500,yes,490:Both_UngoroCrater,4243 Chasing A-Me 01 (used); 4244 Chasing A-Me 01; 4245 Chasing A-Me 01
-Alliance,10,9,1,30-41,10490,no,17:- 33:A_Stranglethorn+A_Stranglethorn_Late 400:- 440:Both_Tanaris,1176 Load Lightening (used); 1178 Goblin Sponsorship; 1180 Goblin Sponsorship; 1181 Goblin Sponsorship; 1182 Goblin Sponsorship; 1183 Goblin Sponsorship; 1186 The Eighteenth Pilot; 1187 Razzeric's Tweaking; 1188 Safety First; 1189 Safety First
-Alliance,4,4,0,50-51,10410,no,33:-,615 The Captain's Cutlass; 8552 The Monogrammed Sash; 8553 The Captain's Cutlass; 8554 Facing Negolash
-Alliance,2,2,0,45-51,10250,no,33:-,594 Message in a Bottle; 630 Message in a Bottle
-Alliance,3,3,0,35-60,10050,no,36:- 1537:-,7042 Stolen Winter Veil Treats; 7043 You're a Mean One...; 7045 A Smokywood Pastures' Thank You!
-Alliance,9,8,1,30-30,9975,no,10:- 17:- 33:- 331:- 1657:-,1022 The Howling Vale (used); 1037 Velinde Starsong; 1038 Velinde's Effects; 1039 The Barrens Port; 1040 Passage to Booty Bay; 1041 The Caravan Road; 1042 The Carevin Family; 1043 The Scythe of Elune; 1044 Answered Questions
-Alliance,1,1,0,60-60,9950,no,46:-,4866 Mother's Milk
+Alliance,9,2,7,35-45,10500,no,3:A_31_Badlands 38:- 1537:-,720 A Sign of Hope (used); 721 A Sign of Hope (used); 722 Amulet of Secrets (used); 723 Prospect of Faith (used); 724 Prospect of Faith (used); 725 Passing Word of a Threat (used); 726 Passing Word of a Threat (used); 762 An Ambassador of Evil; 1139 The Lost Tablets of Will
+Alliance,3,2,1,53-53,10500,yes,490:A_46_UnGoroCrater,4243 Chasing A-Me 01 (used); 4244 Chasing A-Me 01; 4245 Chasing A-Me 01
+Alliance,10,9,1,30-41,10490,no,17:- 33:A_24_StranglethornVale+A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale 400:A_25_ShimmeringFlats 440:A_35_Tanaris,1176 Load Lightening (used); 1178 Goblin Sponsorship; 1180 Goblin Sponsorship; 1181 Goblin Sponsorship; 1182 Goblin Sponsorship; 1183 Goblin Sponsorship; 1186 The Eighteenth Pilot; 1187 Razzeric's Tweaking; 1188 Safety First; 1189 Safety First
+Alliance,2,2,0,45-51,10250,yes,33:A_33_StranglethornVale+A_39_StranglethornVale,594 Message in a Bottle; 630 Message in a Bottle
+Alliance,3,3,0,35-60,10050,no,36:A_27_AlteracMountains 1537:-,7042 Stolen Winter Veil Treats; 7043 You're a Mean One...; 7045 A Smokywood Pastures' Thank You!
+Alliance,9,8,1,30-30,9975,no,10:A_18_Duskwood 17:- 33:A_24_StranglethornVale 331:A_20_Ashenvale 1657:-,1022 The Howling Vale (used); 1037 Velinde Starsong; 1038 Velinde's Effects; 1039 The Barrens Port; 1040 Passage to Booty Bay; 1041 The Caravan Road; 1042 The Carevin Family; 1043 The Scythe of Elune; 1044 Answered Questions
+Alliance,8,8,0,17-22,9950,no,40:- 44:- 1519:-,65 The Defias Brotherhood; 132 The Defias Brotherhood; 135 The Defias Brotherhood; 141 The Defias Brotherhood; 142 The Defias Brotherhood; 155 The Defias Brotherhood; 166 The Defias Brotherhood; 214 Red Silk Bandanas
 Alliance,1,1,0,60-60,9950,no,1583:-,4867 Urok Doomhowl
 Alliance,1,1,0,60-60,9950,yes,,7367 Defusing the Threat
 Alliance,1,1,0,60-60,9950,yes,,7402 Wanted: ORCS!
@@ -94,45 +86,42 @@ Alliance,1,1,0,60-60,9950,no,33:-,8240 A Bijou for Zanza
 Alliance,1,1,0,60-60,9950,yes,,8297 Arathi Basin Resources!
 Alliance,1,1,0,60-60,9950,no,36:- 45:- 331:- 1519:- 1537:- 1657:-,8375 Remember Alterac Valley!
 Alliance,2,2,0,60-60,9950,no,493:-,8446 Shrouded in Nightmare; 8447 Waking Legends
-Alliance,1,1,0,60-60,9950,no,1377:-,8791 The Fall of Ossirian
+Alliance,1,1,0,60-60,9950,yes,1377:A_59_Silithus,8791 The Fall of Ossirian
 Alliance,1,1,0,60-60,9950,no,1519:- 1537:-,8796 The Alliance Needs Your Help!
 Alliance,1,1,0,60-60,9950,no,1537:- 1657:-,8797 The Alliance Needs Your Help!
-Alliance,1,1,0,60-60,9950,no,33:- 1377:-,8857 Secrets of the Colossus - Ashi
-Alliance,1,1,0,60-60,9950,no,51:- 1377:-,8858 Secrets of the Colossus - Regal
-Alliance,1,1,0,60-60,9950,no,139:Both_EasternPlaguelands 1377:-,8859 Secrets of the Colossus - Zora
-Alliance,4,2,2,38-50,9500,yes,3:A_Badlands,717 Tremors of the Earth; 718 Mirages (used); 732 Tremors of the Earth; 733 Scrounging (used)
+Alliance,1,1,0,60-60,9950,no,33:- 1377:A_59_Silithus,8857 Secrets of the Colossus - Ashi
+Alliance,1,1,0,60-60,9950,no,51:- 1377:A_59_Silithus,8858 Secrets of the Colossus - Regal
+Alliance,1,1,0,60-60,9950,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 1377:A_59_Silithus,8859 Secrets of the Colossus - Zora
 Alliance,2,2,0,49-49,9100,no,405:-,7044 Legends of Maraudon; 7046 The Scepter of Celebras
 Alliance,2,2,0,57-57,9050,no,357:- 1519:- 1537:- 1657:-,7488 Lethtendris's Web; 7494 Feathermoon Stronghold
 Alliance,3,3,0,60-60,8910,no,46:- 1519:-,4764 Doomrigger's Clasp; 4765 Delivery to Ridgewell; 4766 Mayara Brightwing
-Alliance,8,7,1,17-22,8600,no,40:A_Westfall 44:A_Redridge 1519:-,65 The Defias Brotherhood (used); 132 The Defias Brotherhood; 135 The Defias Brotherhood; 141 The Defias Brotherhood; 142 The Defias Brotherhood; 155 The Defias Brotherhood; 166 The Defias Brotherhood; 214 Red Silk Bandanas
-Alliance,3,2,1,55-56,8600,no,490:- 618:Both_Winterspring,974 Finding the Source (used); 980 The New Springs; 4842 Strange Sources
-Alliance,4,4,0,37-42,8460,no,3:A_Badlands 38:- 1537:-,704 Agmond's Fate; 707 Ironband Wants You!; 738 Find Agmond; 739 Murdaloc
-Alliance,1,1,0,55-55,8450,no,4:-,2521 To Serve Kum'isha
+Alliance,4,3,1,35-42,8750,no,4:- 8:A_32_SwampofSorrows,1396 Encroaching Wildlife (used); 1398 Driftwood; 1421 The Lost Caravan; 1425 Deliver the Shipment
+Alliance,3,2,1,55-56,8600,yes,490:A_46_UnGoroCrater+A_58_UnGoroCrater 618:A_49_Winterspring+A_61_Winterspring,974 Finding the Source (used); 980 The New Springs; 4842 Strange Sources
+Alliance,4,4,0,37-42,8460,no,3:A_31_Badlands 38:- 1537:-,704 Agmond's Fate; 707 Ironband Wants You!; 738 Find Agmond; 739 Murdaloc
 Alliance,1,1,0,55-55,8450,yes,,8080 Arathi Basin Resources!
 Alliance,1,1,0,60-60,8300,no,2017:-,5125 Aurius' Reckoning
-Alliance,1,1,0,60-60,8300,yes,139:Both_EasternPlaguelands,5214 The Great Ezra Grimm
-Alliance,2,1,1,60-60,8300,yes,139:Both_EasternPlaguelands,5281 The Restless Souls (used); 5282 The Restless Souls
-Alliance,2,1,1,60-60,8300,yes,28:A_WesternPlaguelands,5343 Barov Family Fortune (used); 5344 The Last Barov
+Alliance,1,1,0,60-60,8300,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,5214 The Great Ezra Grimm
+Alliance,2,1,1,60-60,8300,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,5281 The Restless Souls (used); 5282 The Restless Souls
+Alliance,2,1,1,60-60,8300,yes,28:A_54_WesternPlaguelands,5343 Barov Family Fortune (used); 5344 The Last Barov
 Alliance,1,1,0,60-60,8300,no,357:-,7482 Elven Legends
 Alliance,1,1,0,60-60,8300,no,2557:-,7703 Unfinished Gordok Business
-Alliance,1,1,0,60-60,8300,no,1377:-,8308 Brann Bronzebeard's Lost Letter
 Alliance,1,1,0,60-60,8300,no,36:- 45:- 331:- 1519:- 1537:- 1657:-,8371 Concerted Efforts
-Alliance,7,4,3,37-40,8200,no,33:A_Stranglethorn+A_Stranglethorn_Late 36:-,"578 The Stone of the Tides (used); 601 Water Elementals (used); 602 Magical Analysis; 603 Ansirem's Key; 610 ""Pretty Boy"" Duncan; 611 The Curse of the Tides; 616 The Haunted Isle (used)"
+Alliance,7,4,3,37-40,8200,yes,33:A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale 36:A_27_AlteracMountains,"578 The Stone of the Tides (used); 601 Water Elementals (used); 602 Magical Analysis; 603 Ansirem's Key; 610 ""Pretty Boy"" Duncan; 611 The Curse of the Tides; 616 The Haunted Isle (used)"
 Alliance,3,3,0,34-35,8150,no,721:- 1537:-,2945 Grime-Encrusted Ring; 2947 Return of the Ring; 2948 Gnome Improvement
-Alliance,1,1,0,59-59,8050,no,1377:-,"8283 Wanted - Deathclasp, Terror of the Sands"
+Alliance,1,1,0,59-59,8050,yes,1377:A_59_Silithus,"8283 Wanted - Deathclasp, Terror of the Sands"
+Alliance,9,2,7,35-44,7800,yes,33:A_24_StranglethornVale+A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale+A_39_StranglethornVale 45:A_23_ArathiHighlands+A_28_ArathiHighlands,662 Deep Sea Salvage (used); 663 Land Ho! (used); 664 Drowned Sorrows (used); 665 Sunken Treasure (used); 666 Sunken Treasure (used); 667 Death From Below; 668 Sunken Treasure (used); 669 Sunken Treasure (used); 670 Sunken Treasure
 Alliance,1,1,0,58-58,7750,no,357:-,7441 Pusillin and the Elder Azj'Tordin
-Alliance,7,7,0,18-20,7700,no,11:- 38:A_LochModan,161 A Dark Threat Looms; 199 A Dark Threat Looms; 250 A Dark Threat Looms; 274 A Dark Threat Looms; 278 A Dark Threat Looms; 280 A Dark Threat Looms; 283 A Dark Threat Looms
-Alliance,3,3,0,55-55,7560,no,8:- 618:Both_Winterspring 1477:-,3373 The Essence of Eranikus; 3374 The Essence of Eranikus; 3512 In Eranikus' Own Words
-Alliance,3,3,0,35-35,7550,no,15:-,1203 Jarl Needs a Blade; 1206 Jarl Needs Eyes; 1218 Soothing Spices
+Alliance,4,2,2,50-51,7590,yes,33:A_39_StranglethornVale,615 The Captain's Cutlass; 8552 The Monogrammed Sash (used); 8553 The Captain's Cutlass (used); 8554 Facing Negolash
+Alliance,3,3,0,55-55,7560,no,8:- 618:A_49_Winterspring 1477:-,3373 The Essence of Eranikus; 3374 The Essence of Eranikus; 3512 In Eranikus' Own Words
+Alliance,3,3,0,35-35,7550,yes,15:A_29_DustwallowMarsh,1203 Jarl Needs a Blade; 1206 Jarl Needs Eyes; 1218 Soothing Spices
+Alliance,4,1,3,55-57,7550,yes,361:A_48_Felwood+A_50_Felwood+A_55_Felwood,5202 A Strange Red Key (used); 5203 Rescue From Jaedenar (used); 5204 Retribution of the Light (used); 5385 The Remains of Trey Lightforge
 Alliance,2,2,0,46-50,7505,no,400:- 1537:-,2769 The Brassbolts Brothers; 2770 Gahz'rilla
-Alliance,3,3,0,60-60,7260,no,618:-,969 Luck Be With You; 975 Cache of Mau'ari; 6606 A Little Luck
 Alliance,2,2,0,60-60,7260,no,36:- 2597:-,7121 The Quartermaster; 7122 Capture a Mine
-Alliance,4,2,2,25-38,7100,no,267:A_Hillsbrad 1519:-,337 An Old History Book (used); 538 Southshore (used); 540 Preserving Knowledge; 542 Return to Milton
+Alliance,4,2,2,25-38,7100,no,267:A_22_HillsbradFoothills 1519:-,337 An Old History Book (used); 538 Southshore (used); 540 Preserving Knowledge; 542 Return to Milton
 Alliance,1,1,0,50-50,7100,yes,,618 Facing Negolash
 Alliance,1,1,0,60-60,6600,yes,,1318 Unfinished Gordok Business
-Alliance,1,1,0,60-60,6600,no,267:-,1658 Crashing the Wickerman Festival
-Alliance,1,1,0,60-60,6600,no,618:-,"5047 Pip Quickwit, At Your Service!"
-Alliance,2,1,1,60-60,6600,yes,139:Both_EasternPlaguelands,5212 The Flesh Does Not Lie (used); 5213 The Active Agent
+Alliance,1,1,0,60-60,6600,yes,618:A_61_Winterspring,"5047 Pip Quickwit, At Your Service!"
+Alliance,2,1,1,60-60,6600,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,5212 The Flesh Does Not Lie (used); 5213 The Active Agent
 Alliance,1,1,0,60-60,6600,no,2557:-,5518 The Gordok Ogre Suit
 Alliance,1,1,0,60-60,6600,no,2557:-,5525 Free Knot!
 Alliance,1,1,0,60-60,6600,no,2597:-,7223 Armor Scraps
@@ -144,193 +133,187 @@ Alliance,1,1,0,60-60,6600,no,2597:-,7301 Fallen Sky Lords
 Alliance,1,1,0,60-60,6600,no,1583:-,7761 Blackhand's Command
 Alliance,1,1,0,60-60,6600,yes,,7848 Attunement to the Core
 Alliance,1,1,0,60-60,6600,no,1:-,8149 Honoring a Hero
-Alliance,1,1,0,60-60,6600,no,1377:-,8318 Secret Communication
-Alliance,1,1,0,60-60,6600,no,1377:-,8361 Abyssal Contacts
+Alliance,1,1,0,60-60,6600,yes,1377:A_59_Silithus,8361 Abyssal Contacts
 Alliance,1,1,0,60-60,6600,no,3428:-,8579 Mortal Champions
 Alliance,1,1,0,60-60,6600,no,493:-,8868 Elune's Blessing
-Alliance,1,1,0,60-60,6600,no,1377:-,9023 The Perfect Poison
-Alliance,1,1,0,60-60,6600,no,1377:-,9419 Scouring the Desert
-Alliance,1,1,0,60-60,6600,yes,139:Both_EasternPlaguelands,9664 Establishing New Outposts
-Alliance,4,3,1,39-40,6550,no,267:- 405:A_Desolace 1519:-,261 Down the Scarlet Path (used); 1052 Down the Scarlet Path; 1053 In the Name of the Light; 6141 Brother Anton
+Alliance,1,1,0,60-60,6600,yes,1377:A_59_Silithus,9023 The Perfect Poison
+Alliance,1,1,0,60-60,6600,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9664 Establishing New Outposts
+Alliance,4,3,1,39-40,6550,no,267:- 405:A_34_Desolace 1519:-,261 Down the Scarlet Path (used); 1052 Down the Scarlet Path; 1053 In the Name of the Light; 6141 Brother Anton
+Alliance,3,3,0,21-25,6500,no,44:-,19 Tharil'zun; 20 Blackrock Menace; 115 Shadow Magic
 Alliance,2,2,0,39-42,6450,no,38:-,17 Uldaman Reagent Run; 2500 Badlands Reagent Run
-Alliance,5,2,3,33-37,6400,yes,45:A_Arathi 267:A_Hillsbrad,657 Hints of a New Plague? (used); 658 Hints of a New Plague? (used); 659 Hints of a New Plague? (used); 660 Hints of a New Plague?; 661 Hints of a New Plague?
-Alliance,1,1,0,59-59,6400,yes,46:A_BurningSteppes,4729 Kibler's Exotic Pets
+Alliance,1,1,0,59-59,6400,yes,46:A_51_BurningSteppes,4729 Kibler's Exotic Pets
 Alliance,2,2,0,55-55,6210,no,1:- 4:-,4126 Hurley Blackbreath; 4128 Ragnar Thunderbrew
 Alliance,1,1,0,51-51,6100,no,405:-,7065 Corruption of Earth and Seed
 Alliance,1,1,0,51-51,6100,no,493:-,7066 Seed of Life
-Alliance,2,1,1,50-50,5900,no,51:Both_SearingGorge 1657:-,3377 Prayer to Elune (used); 3378 Prayer to Elune
-Alliance,1,1,0,45-45,5850,no,33:-,348 Stranglethorn Fever
+Alliance,4,1,3,38-50,5900,yes,3:A_31_Badlands,717 Tremors of the Earth; 718 Mirages (used); 732 Tremors of the Earth (used); 733 Scrounging (used)
+Alliance,2,1,1,50-50,5900,no,51:A_40_SearingGorge 1657:-,3377 Prayer to Elune (used); 3378 Prayer to Elune
+Alliance,5,5,0,18-25,5870,no,12:- 44:-,118 The Price of Shoes; 119 Return to Verner; 122 Underbelly Scales; 124 A Baying of Gnolls; 126 Howling in the Hills
+Alliance,1,1,0,45-45,5850,yes,33:A_33_StranglethornVale+A_39_StranglethornVale,348 Stranglethorn Fever
 Alliance,1,1,0,45-45,5850,yes,,8154 Arathi Basin Resources!
-Alliance,3,1,2,54-56,5800,no,28:A_WesternPlaguelands 1657:-,4984 The Wildlife Suffers Too (used); 4985 The Wildlife Suffers Too (used); 4986 Glyphed Oaken Branch
-Alliance,1,1,0,56-56,5800,yes,361:A_Felwood,8471 Winterfall Ritual Totem
-Alliance,1,1,0,55-55,5650,no,4:-,3501 Everything Counts In Large Amounts
-Alliance,2,1,1,55-55,5650,no,490:-,4289 The Apes of Un'Goro (used); 4301 The Mighty U'cha
-Alliance,2,1,1,55-55,5650,no,490:-,4491 A Little Help From My Friends; 4492 Lost! (used)
+Alliance,3,1,2,54-56,5800,no,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 1657:-,4984 The Wildlife Suffers Too (used); 4985 The Wildlife Suffers Too (used); 4986 Glyphed Oaken Branch
+Alliance,7,5,2,18-20,5670,no,11:- 38:A_11_LochModan,161 A Dark Threat Looms; 199 A Dark Threat Looms (used); 250 A Dark Threat Looms (used); 274 A Dark Threat Looms; 278 A Dark Threat Looms; 280 A Dark Threat Looms; 283 A Dark Threat Looms
 Alliance,1,1,0,55-55,5650,no,17:-,4502 Volcanic Activity
 Alliance,1,1,0,55-55,5650,no,45:-,8105 The Battle for Arathi Basin!
-Alliance,1,1,0,55-55,5650,yes,361:A_Felwood,8470 Deadwood Ritual Totem
 Alliance,2,2,0,52-52,5610,no,1585:-,3801 Dark Iron Legacy; 3802 Dark Iron Legacy
-Alliance,10,3,7,18-31,5570,yes,148:A_Darkshore 331:A_Ashenvale+A_Ashenvale_Late,965 The Tower of Althalaxx (used); 966 The Tower of Althalaxx (used); 967 The Tower of Althalaxx (used); 970 The Tower of Althalaxx (used); 973 The Tower of Althalaxx (used); 976 Supplies to Auberdine (used); 981 The Tower of Althalaxx; 1140 The Tower of Althalaxx (used); 1143 The Tower of Althalaxx; 1167 The Tower of Althalaxx
-Alliance,5,4,1,49-49,5460,no,440:-,2605 The Thirsty Goblin (used); 2606 In Good Taste; 2641 Sprinkle's Secret Ingredient; 2661 Delivery for Marin; 2662 Noggenfogger Elixir
+Alliance,10,3,7,18-31,5570,yes,148:A_10_Darkshore+A_12_Darkshore+A_15_Darkshore 331:A_13_Ashenvale+A_16_Ashenvale+A_20_Ashenvale,965 The Tower of Althalaxx (used); 966 The Tower of Althalaxx (used); 967 The Tower of Althalaxx (used); 970 The Tower of Althalaxx (used); 973 The Tower of Althalaxx (used); 976 Supplies to Auberdine (used); 981 The Tower of Althalaxx; 1140 The Tower of Althalaxx (used); 1143 The Tower of Althalaxx; 1167 The Tower of Althalaxx
 Alliance,1,1,0,54-54,5450,no,1585:-,4201 The Love Potion
 Alliance,1,1,0,54-54,5450,no,440:-,4504 Super Sticky
 Alliance,1,1,0,48-48,5450,no,405:-,7067 The Pariah's Instructions
-Alliance,3,3,0,21-27,5300,no,12:- 44:A_Redridge,94 A Watchful Eye; 248 Looking Further; 249 Morganth
-Alliance,1,1,0,47-47,5250,yes,51:Both_SearingGorge,4451 The Key to Freedom
-Alliance,1,1,0,47-47,5250,no,405:-,7028 Twisted Evils
+Alliance,3,3,0,21-27,5300,no,12:- 44:-,94 A Watchful Eye; 248 Looking Further; 249 Morganth
 Alliance,1,1,0,47-47,5250,no,405:-,7041 Vyletongue Corruption
-Alliance,3,3,0,18-27,5080,no,331:A_Ashenvale+A_Ashenvale_Late 357:- 406:-,1056 Journey to Stonetalon Peak; 1057 Reclaiming the Charred Vale; 1059 Reclaiming the Charred Vale
-Alliance,7,1,6,33-46,5050,yes,33:A_Stranglethorn+A_Stranglethorn_Late,202 Colonel Kurzen (used); 203 The Second Rebellion (used); 204 Bad Medicine (used); 205 Troll Witchery (used); 206 Mai'Zoth; 207 Kurzen's Mystery (used); 574 Special Forces (used)
-Alliance,2,1,1,45-46,5050,yes,51:Both_SearingGorge 440:Both_Tanaris,4449 Caught! (used); 4450 Ledger from Tanaris
+Alliance,7,1,6,33-46,5050,yes,33:A_24_StranglethornVale+A_26_StranglethornVale+A_30_StranglethornVale+A_33_StranglethornVale+A_39_StranglethornVale,202 Colonel Kurzen (used); 203 The Second Rebellion (used); 204 Bad Medicine (used); 205 Troll Witchery (used); 206 Mai'Zoth; 207 Kurzen's Mystery (used); 574 Special Forces (used)
+Alliance,2,1,1,45-46,5050,yes,51:A_40_SearingGorge 440:A_35_Tanaris+A_43_Tanaris,4449 Caught! (used); 4450 Ledger from Tanaris
+Alliance,5,3,2,49-49,5005,yes,440:A_43_Tanaris,2605 The Thirsty Goblin (used); 2606 In Good Taste (used); 2641 Sprinkle's Secret Ingredient; 2661 Delivery for Marin; 2662 Noggenfogger Elixir
 Alliance,5,2,3,30-31,5000,no,1537:-,637 Sully Balloo's Letter (used); 683 Sara Balloo's Plea (used); 686 A King's Tribute (used); 689 A King's Tribute; 700 A King's Tribute
 Alliance,7,7,0,60-60,4950,no,1519:-,"171 A Warden of the Alliance; 558 Jaina's Autograph; 1468 Children's Week; 1479 The Bough of the Eternals; 1558 The Stonewrought Dam; 1687 Spooky Lighthouse; 4822 You Scream, I Scream..."
-Alliance,3,2,1,37-37,4950,yes,33:A_Stranglethorn+A_Stranglethorn_Late,210 Krazek's Cookery (used); 622 Return to Corporal Kaleb; 627 Favor for Krazek
-Alliance,1,1,0,60-60,4950,no,440:-,2741 The Super Egg-O-Matic
+Alliance,1,1,0,60-60,4950,yes,440:A_57_Tanaris,2741 The Super Egg-O-Matic
 Alliance,1,1,0,60-60,4950,no,1537:-,8762 Metzen the Reindeer
 Alliance,1,1,0,51-51,4900,yes,,614 The Captain's Chest
 Alliance,6,6,0,30-30,4900,no,721:-,2951 The Sparklematic 5200!; 2952 The Sparklematic 5200!; 4601 The Sparklematic 5200!; 4602 The Sparklematic 5200!; 4605 The Sparklematic 5200!; 4606 The Sparklematic 5200!
 Alliance,3,3,0,27-30,4870,no,1:- 1537:-,2926 Gnogaine; 2927 The Day After; 2962 The Only Cure is More Green Glow
-Alliance,1,1,0,45-45,4850,yes,440:Both_Tanaris,2876 Ship Schedules
+Alliance,1,1,0,45-45,4850,yes,440:A_35_Tanaris,2876 Ship Schedules
 Alliance,1,1,0,40-40,4700,no,1519:-,212 A Meal Served Cold
 Alliance,2,1,1,36-40,4700,no,267:-,500 Crushridge Bounty (used); 504 Crushridge Warmongers
 Alliance,1,1,0,40-40,4700,no,1519:-,543 The Perenolde Tiara
-Alliance,1,1,0,50-50,4700,no,33:-,580 Whiskey Slim's Lost Grog
+Alliance,1,1,0,50-50,4700,yes,33:A_39_StranglethornVale,580 Whiskey Slim's Lost Grog
 Alliance,2,2,0,34-34,4700,no,357:-,1100 Lonebrow's Journal; 1101 The Crone of the Kraul
-Alliance,1,1,0,50-50,4700,no,4:-,2581 Snickerfang Jowls
-Alliance,1,1,0,50-50,4700,no,4:-,2583 A Boar's Vitality
-Alliance,1,1,0,50-50,4700,no,4:-,2585 The Decisive Striker
-Alliance,1,1,0,50-50,4700,no,4:-,2601 The Basilisk's Bite
-Alliance,1,1,0,50-50,4700,no,4:-,2603 Vulture's Vigor
-Alliance,1,1,0,50-50,4700,no,440:-,3362 Thistleshrub Valley
-Alliance,1,1,0,50-50,4700,yes,51:Both_SearingGorge,7704 Look at the Size of It!
+Alliance,1,1,0,50-50,4700,yes,51:A_40_SearingGorge,7704 Look at the Size of It!
+Alliance,9,2,7,33-40,4650,no,405:A_34_Desolace 1537:-,1453 Reclaimers' Business in Desolace (used); 1454 The Karnitol Shipwreck (used); 1455 The Karnitol Shipwreck (used); 1456 The Karnitol Shipwreck (used); 1457 The Karnitol Shipwreck; 1458 Reagents for Reclaimers Inc. (used); 1459 Reagents for Reclaimers Inc. (used); 1466 Reagents for Reclaimers Inc. (used); 1467 Reagents for Reclaimers Inc.
 Alliance,2,2,0,25-26,4650,no,17:- 1657:-,3370 In Nightmares; 6981 The Glowing Shard
-Alliance,5,5,0,35-35,4640,no,10:-,225 The Weathered Grave; 227 Morgan Ladimore; 228 Mor'Ladim; 229 The Daughter Who Lived; 231 A Daughter's Love
 Alliance,2,2,0,38-40,4610,no,267:-,522 Assassin's Contract; 523 Baron's Demise
-Alliance,2,1,1,49-49,4550,yes,357:A_Feralas,2844 The Giant Guardian (used); 2845 Wandering Shay
-Alliance,1,1,0,49-49,4550,no,440:-,5863 The Dunemaul Compound
+Alliance,2,1,1,49-49,4550,yes,357:A_36_Feralas+A_41_Feralas,2844 The Giant Guardian (used); 2845 Wandering Shay
 Alliance,2,2,0,37-37,4535,no,722:-,3523 Scourge of the Downs; 3525 Extinguishing the Idol
-Alliance,4,2,2,34-40,4500,no,36:- 267:A_Hillsbrad 1537:-,511 Encrypted Letter (used); 514 Letter to Stormpike (used); 525 Further Mysteries; 537 Dark Council
 Alliance,1,1,0,39-39,4500,yes,,8268 Ribbons of Sacrifice
 Alliance,1,1,0,42-42,4300,no,1519:-,3636 Bring the Light
-Alliance,3,2,1,45-45,4290,no,33:- 440:Both_Tanaris,2872 Stoley's Debt; 2873 Stoley's Shipment (used); 2874 Deliver to MacKinley
 Alliance,2,2,0,40-40,4215,no,1337:- 1537:-,2240 The Hidden Chamber; 2398 The Lost Dwarves
-Alliance,1,1,0,47-47,4200,no,16:-,5535 Spiritual Unrest
-Alliance,1,1,0,47-47,4200,no,16:-,5536 A Land Filled with Hatred
-Alliance,13,1,12,28-35,4100,no,10:A_Duskwood 12:- 40:- 1519:-,66 The Legend of Stalvan (used); 67 The Legend of Stalvan (used); 68 The Legend of Stalvan (used); 69 The Legend of Stalvan (used); 70 The Legend of Stalvan (used); 72 The Legend of Stalvan (used); 74 The Legend of Stalvan (used); 75 The Legend of Stalvan (used); 78 The Legend of Stalvan (used); 79 The Legend of Stalvan (used); 80 The Legend of Stalvan (used); 97 The Legend of Stalvan (used); 98 T
+Alliance,13,1,12,28-35,4100,no,10:A_18_Duskwood 12:- 40:- 1519:-,66 The Legend of Stalvan (used); 67 The Legend of Stalvan (used); 68 The Legend of Stalvan (used); 69 The Legend of Stalvan (used); 70 The Legend of Stalvan (used); 72 The Legend of Stalvan (used); 74 The Legend of Stalvan (used); 75 The Legend of Stalvan (used); 78 The Legend of Stalvan (used); 79 The Legend of Stalvan (used); 80 The Legend of Stalvan (used); 97 The Legend of Stalvan (used); 98 T
 Alliance,5,5,0,24-24,4085,no,12:- 44:- 1519:-,343 Speaking of Fortitude; 344 Brother Paxton; 345 Ink Supplies; 346 Return to Kristoff; 347 Rethban Ore
 Alliance,2,2,0,24-27,4050,no,719:- 1657:-,1198 In Search of Thaelrid; 1200 Blackfathom Villainy
-Alliance,1,1,0,45-45,3900,no,3:-,706 Fiery Blaze Enchantments
+Alliance,3,1,2,45-45,3900,yes,33:A_33_StranglethornVale+A_39_StranglethornVale 440:A_35_Tanaris,2872 Stoley's Debt (used); 2873 Stoley's Shipment (used); 2874 Deliver to MacKinley
 Alliance,1,1,0,45-45,3900,no,45:-,8166 The Battle for Arathi Basin!
 Alliance,2,2,0,28-30,3880,no,406:- 1537:-,2930 Data Rescue; 2931 Castpipe's Task
 Alliance,2,2,0,45-45,3870,no,4:- 10:- 1519:-,1395 Supplies for Nethergarde; 1477 Vital Supplies
-Alliance,2,2,0,24-24,3850,no,148:- 1519:-,1275 Researching the Corruption; 3765 The Corruption Abroad
-Alliance,15,1,14,24-30,3650,yes,10:A_Duskwood,133 Ghoulish Effigy (used); 134 Ogre Thieves (used); 148 Supplies from Darkshire (used); 149 Ghost Hair Thread (used); 154 Return the Comb (used); 156 Gather Rot Blossoms (used); 157 Deliver the Thread (used); 158 Zombie Juice (used); 159 Juice Delivery (used); 160 Note to the Mayor (used); 165 The Hermit (used); 251 Translate Abercrombie's Note (used); 252 Translation to Ello (used); 253 Bride of
+Alliance,2,2,0,24-24,3850,no,148:A_12_Darkshore+A_15_Darkshore 1519:-,1275 Researching the Corruption; 3765 The Corruption Abroad
+Alliance,5,3,2,35-35,3675,no,10:-,225 The Weathered Grave (used); 227 Morgan Ladimore (used); 228 Mor'Ladim; 229 The Daughter Who Lived; 231 A Daughter's Love
+Alliance,15,1,14,24-30,3650,yes,10:A_18_Duskwood,133 Ghoulish Effigy (used); 134 Ogre Thieves (used); 148 Supplies from Darkshire (used); 149 Ghost Hair Thread (used); 154 Return the Comb (used); 156 Gather Rot Blossoms (used); 157 Deliver the Thread (used); 158 Zombie Juice (used); 159 Juice Delivery (used); 160 Note to the Mayor (used); 165 The Hermit (used); 251 Translate Abercrombie's Note (used); 252 Translation to Ello (used); 253 Bride of
 Alliance,1,1,0,30-30,3650,no,15:-,1135 Highperch Venom
 Alliance,2,2,0,41-41,3630,no,4:- 1519:-,1363 Mazen's Behest; 1364 Mazen's Behest
 Alliance,1,1,0,43-43,3600,no,1537:-,1360 Reclaimed Treasures
-Alliance,1,1,0,50-50,3550,yes,490:Both_UngoroCrater,3884 Williden's Journal
-Alliance,2,1,1,33-38,3550,yes,405:A_Desolace,5741 Sceptre of Light (used); 6027 Book of the Ancients
-Alliance,17,2,15,23-32,3500,no,10:A_Duskwood 11:A_Wetlands 1519:-,55 Morbent Fel (used); 95 Sven's Revenge (used); 164 Deliveries to Sven (used); 230 Sven's Camp (used); 262 The Shadowy Figure (used); 265 The Shadowy Search Continues (used); 266 Inquire at the Inn (used); 268 Return to Sven (used); 269 Seeking Wisdom (used); 270 The Doomed Fleet (used); 321 Lightforge Iron (used); 322 Blessed Arm (used); 323 Proving Your Worth (used); 324 The Lost Ingots; 325 Ar
+Alliance,5,1,4,33-37,3550,yes,45:A_23_ArathiHighlands+A_28_ArathiHighlands 267:A_22_HillsbradFoothills,657 Hints of a New Plague? (used); 658 Hints of a New Plague? (used); 659 Hints of a New Plague? (used); 660 Hints of a New Plague? (used); 661 Hints of a New Plague?
+Alliance,2,1,1,33-38,3550,no,405:-,5741 Sceptre of Light (used); 6027 Book of the Ancients
+Alliance,17,2,15,23-32,3500,no,10:A_18_Duskwood 11:A_17_Wetlands+A_19_Wetlands+A_21_Wetlands 1519:-,55 Morbent Fel (used); 95 Sven's Revenge (used); 164 Deliveries to Sven (used); 230 Sven's Camp (used); 262 The Shadowy Figure (used); 265 The Shadowy Search Continues (used); 266 Inquire at the Inn (used); 268 Return to Sven (used); 269 Seeking Wisdom (used); 270 The Doomed Fleet (used); 321 Lightforge Iron (used); 322 Blessed Arm (used); 323 Proving Your Worth (used); 324 The Lost Ingots; 325 Ar
+Alliance,3,3,0,12-17,3490,no,40:-,12 The People's Militia; 13 The People's Militia; 14 The People's Militia
 Alliance,1,1,0,35-35,3450,no,17:-,6626 A Host of Evil
-Alliance,1,1,0,42-42,3450,yes,15:A_Dustwallow,7070 Shadowshard Fragments
+Alliance,1,1,0,42-42,3450,yes,15:A_29_DustwallowMarsh,7070 Shadowshard Fragments
 Alliance,1,1,0,35-35,3450,yes,,8156 Arathi Basin Resources!
-Alliance,11,2,9,43-46,3205,no,357:A_Feralas 1657:-,4124 The Missing Courier (used); 4125 The Missing Courier (used); 4127 Boat Wreckage (used); 4129 The Knife Revealed (used); 4130 Psychometric Reading (used); 4131 The Woodpaw Gnolls (used); 4135 The Writhing Deep (used); 4265 Freed from the Hive (used); 4266 A Hero's Welcome (used); 4267 Rise of the Silithid; 4281 Thalanaar Delivery
-Alliance,9,1,8,33-40,3150,no,405:A_Desolace 1537:-,1453 Reclaimers' Business in Desolace (used); 1454 The Karnitol Shipwreck (used); 1455 The Karnitol Shipwreck (used); 1456 The Karnitol Shipwreck (used); 1457 The Karnitol Shipwreck (used); 1458 Reagents for Reclaimers Inc. (used); 1459 Reagents for Reclaimers Inc. (used); 1466 Reagents for Reclaimers Inc. (used); 1467 Reagents for Reclaimers Inc.
-Alliance,1,1,0,30-30,3050,yes,45:A_Arathi 267:A_Hillsbrad,647 MacKreel's Moonshine
+Alliance,11,2,9,43-46,3205,no,357:A_36_Feralas+A_41_Feralas 1657:-,4124 The Missing Courier (used); 4125 The Missing Courier (used); 4127 Boat Wreckage (used); 4129 The Knife Revealed (used); 4130 Psychometric Reading (used); 4131 The Woodpaw Gnolls (used); 4135 The Writhing Deep (used); 4265 Freed from the Hive (used); 4266 A Hero's Welcome (used); 4267 Rise of the Silithid; 4281 Thalanaar Delivery
+Alliance,4,1,3,34-40,3150,no,36:A_27_AlteracMountains 267:A_22_HillsbradFoothills 1537:-,511 Encrypted Letter (used); 514 Letter to Stormpike (used); 525 Further Mysteries (used); 537 Dark Council
+Alliance,1,1,0,30-30,3050,yes,45:A_23_ArathiHighlands 267:A_22_HillsbradFoothills,647 MacKreel's Moonshine
 Alliance,1,1,0,30-30,3050,no,491:- 1657:-,1142 Mortality Wanes
 Alliance,1,1,0,30-30,3050,no,491:-,1144 Willix the Importer
 Alliance,1,1,0,25-25,3050,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9388 Flickering Flames in Kalimdor
 Alliance,1,1,0,25-25,3050,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9389 Flickering Flames in the Eastern Kingdoms
-Alliance,4,4,0,16-16,2890,yes,40:A_Westfall,136 Captain Sander's Hidden Treasure; 138 Captain Sander's Hidden Treasure; 139 Captain Sander's Hidden Treasure; 140 Captain Sander's Hidden Treasure
-Alliance,1,1,0,38-38,2850,no,8:-,1393 Galen's Escape
-Alliance,6,6,0,14-18,2810,no,10:A_Duskwood 40:A_Westfall 44:A_Redridge 1519:-,120 Messenger to Stormwind; 121 Messenger to Stormwind; 143 Messenger to Westfall; 144 Messenger to Westfall; 145 Messenger to Darkshire; 146 Messenger to Darkshire
-Alliance,2,1,1,34-36,2800,no,36:- 267:A_Hillsbrad,510 Foreboding Plans (used); 512 Noble Deaths
+Alliance,4,4,0,16-16,2890,no,40:-,136 Captain Sander's Hidden Treasure; 138 Captain Sander's Hidden Treasure; 139 Captain Sander's Hidden Treasure; 140 Captain Sander's Hidden Treasure
+Alliance,3,2,1,18-27,2880,no,331:A_13_Ashenvale+A_16_Ashenvale+A_20_Ashenvale 357:- 406:A_14_StonetalonMountains,1056 Journey to Stonetalon Peak; 1057 Reclaiming the Charred Vale (used); 1059 Reclaiming the Charred Vale
+Alliance,6,6,0,14-18,2810,no,10:- 40:- 44:- 1519:-,120 Messenger to Stormwind; 121 Messenger to Stormwind; 143 Messenger to Westfall; 144 Messenger to Westfall; 145 Messenger to Darkshire; 146 Messenger to Darkshire
+Alliance,2,1,1,34-36,2800,yes,36:A_27_AlteracMountains 267:A_22_HillsbradFoothills,510 Foreboding Plans (used); 512 Noble Deaths
+Alliance,3,1,2,55-57,2800,no,1377:A_59_Silithus 1537:-,8275 Taking Back Silithus; 8280 Securing the Supply Lines (used); 8281 Stepping Up Security (used)
 Alliance,1,1,0,23-23,2750,no,1537:-,971 Knowledge in the Deeps
-Alliance,1,1,0,35-35,2750,yes,45:A_Arathi,8167 The Battle for Arathi Basin!
-Alliance,2,1,1,43-43,2700,no,15:A_Dustwallow 33:-,617 Akiris by the Bundle (used); 623 Akiris by the Bundle
+Alliance,1,1,0,35-35,2750,yes,45:A_23_ArathiHighlands+A_28_ArathiHighlands,8167 The Battle for Arathi Basin!
+Alliance,2,1,1,43-43,2700,no,15:- 33:A_30_StranglethornVale+A_33_StranglethornVale+A_39_StranglethornVale,617 Akiris by the Bundle (used); 623 Akiris by the Bundle
+Alliance,1,1,0,26-26,2650,no,44:-,169 Wanted: Gath'Ilzogg
+Alliance,1,1,0,26-26,2650,no,44:-,180 Wanted: Lieutenant Fangore
 Alliance,2,1,1,26-26,2650,no,1519:- 1537:-,2922 Save Techbot's Brain!; 2923 Tinkmaster Overspark (used)
-Alliance,2,1,1,53-53,2650,no,46:A_BurningSteppes 440:-,4136 Ribbly Screwspigot (used); 4324 Yuka Screwspigot
+Alliance,2,1,1,53-53,2650,yes,46:A_51_BurningSteppes 440:A_43_Tanaris,4136 Ribbly Screwspigot (used); 4324 Yuka Screwspigot
 Alliance,1,1,0,25-25,2550,no,44:-,219 Missing In Action
 Alliance,1,1,0,25-25,2550,no,1657:-,1199 Twilight Falls
-Alliance,4,1,3,31-31,2500,yes,11:A_Wetlands 45:A_Arathi,631 The Thandol Span (used); 632 The Thandol Span; 633 The Thandol Span (used); 634 Plea To The Alliance (used)
+Alliance,4,1,3,31-31,2500,yes,11:A_19_Wetlands+A_21_Wetlands 45:A_23_ArathiHighlands,631 The Thandol Span (used); 632 The Thandol Span; 633 The Thandol Span (used); 634 Plea To The Alliance (used)
 Alliance,2,1,1,30-30,2450,no,1519:-,335 A Noble Brew; 336 A Noble Brew (used)
-Alliance,1,1,0,30-30,2450,no,400:- 1537:-,1179 The Brassbolts Brothers
-Alliance,1,1,0,30-30,2450,no,33:- 721:-,2904 A Fine Mess
+Alliance,1,1,0,30-30,2450,no,400:A_25_ShimmeringFlats 1537:-,1179 The Brassbolts Brothers
+Alliance,1,1,0,30-30,2450,no,33:A_24_StranglethornVale 721:-,2904 A Fine Mess
 Alliance,1,1,0,30-30,2450,no,1519:-,2928 Gyrodrillmatic Excavationators
+Alliance,2,2,0,16-20,2430,no,44:-,89 The Everstill Bridge; 125 The Lost Tools
 Alliance,1,1,0,50-50,2350,no,46:-,4296 Tablet of the Seven
-Alliance,4,2,2,16-20,2330,yes,38:A_LochModan,257 A Hunter's Boast (used); 258 A Hunter's Challenge (used); 271 Vyrin's Revenge; 531 Vyrin's Revenge
+Alliance,4,2,2,16-20,2330,yes,38:A_11_LochModan,257 A Hunter's Boast (used); 258 A Hunter's Challenge (used); 271 Vyrin's Revenge; 531 Vyrin's Revenge
 Alliance,2,2,0,40-40,2330,no,267:- 1537:-,551 The Ensorcelled Parchment; 554 Stormpike's Deciphering
-Alliance,1,1,0,39-39,2250,no,8:-,1392 Noboru the Cudgel
-Alliance,1,1,0,39-39,2250,yes,405:A_Desolace,6134 Ghost-o-plasm Round Up
+Alliance,1,1,0,39-39,2250,no,405:-,6134 Ghost-o-plasm Round Up
 Alliance,2,2,0,22-23,2210,no,1:- 38:- 1537:-,466 Search for Incendicite; 467 Stonegear's Search
 Alliance,1,1,0,26-26,2100,no,1519:-,1078 Retrieval for Mauren
 Alliance,1,1,0,26-26,2100,no,17:-,1221 Blueleaf Tubers
-Alliance,1,1,0,47-47,2100,no,141:- 440:Both_Tanaris,3022 Handle With Care
+Alliance,1,1,0,47-47,2100,no,141:- 440:A_35_Tanaris+A_43_Tanaris,3022 Handle With Care
 Alliance,1,1,0,25-25,2000,no,44:-,386 What Comes Around...
 Alliance,1,1,0,25-25,2000,yes,,8155 Arathi Basin Resources!
 Alliance,1,1,0,25-25,2000,no,45:-,8168 The Battle for Arathi Basin!
 Alliance,1,1,0,24-24,1950,no,44:-,34 An Unwelcome Guest
-Alliance,4,1,3,28-31,1900,yes,10:A_Duskwood,173 Worgen in the Woods (used); 221 Worgen in the Woods (used); 222 Worgen in the Woods; 223 Worgen in the Woods (used)
+Alliance,4,1,3,28-31,1900,yes,10:A_18_Duskwood,173 Worgen in the Woods (used); 221 Worgen in the Woods (used); 222 Worgen in the Woods; 223 Worgen in the Woods (used)
+Alliance,4,4,0,10-10,1890,no,40:- 1519:-,6181 A Swift Message; 6261 Dungar Longdrink; 6281 Continue to Stormwind; 6285 Return to Lewis
+Alliance,1,1,0,23-23,1850,no,44:-,91 Solomon's Law
+Alliance,2,2,0,15-20,1820,no,1519:- 1537:-,2040 Underground Assault; 2041 Speak with Shoni
 Alliance,1,1,0,22-22,1750,no,38:-,256 WANTED: Chok'sul
-Alliance,5,1,4,18-25,1700,no,12:- 44:A_Redridge,118 The Price of Shoes (used); 119 Return to Verner (used); 122 Underbelly Scales; 124 A Baying of Gnolls (used); 126 Howling in the Hills (used)
-Alliance,6,4,2,15-15,1695,no,38:A_LochModan 1537:-,273 Resupplying the Excavation; 298 Excavation Progress Report (used); 301 Report to Ironforge (used); 302 Powder to Ironband; 309 Protecting the Shipment; 454 After the Ambush
-Alliance,2,1,1,19-21,1650,yes,331:A_Ashenvale+A_Ashenvale_Late,1008 The Zoram Strand (used); 1134 Pridewings of Stonetalon
+Alliance,6,4,2,15-15,1695,no,38:A_11_LochModan 1537:-,273 Resupplying the Excavation; 298 Excavation Progress Report (used); 301 Report to Ironforge (used); 302 Powder to Ironband; 309 Protecting the Shipment; 454 After the Ambush
 Alliance,1,1,0,60-60,1650,no,1537:-,7025 Treats for Greatfather Winter
 Alliance,1,1,0,60-60,1650,no,1519:-,8311 Hallow's End Treats for Jesper!
 Alliance,1,1,0,60-60,1650,no,267:-,8373 The Power of Pine
-Alliance,6,2,4,14-24,1640,no,11:A_Wetlands 148:A_Darkshore 1657:-,729 The Absent Minded Prospector; 730 Trouble In Darkshore?; 731 The Absent Minded Prospector (used); 741 The Absent Minded Prospector (used); 942 The Absent Minded Prospector (used); 943 The Absent Minded Prospector (used)
+Alliance,6,2,4,14-24,1640,no,11:A_17_Wetlands 148:A_10_Darkshore+A_12_Darkshore+A_15_Darkshore 1657:-,729 The Absent Minded Prospector; 730 Trouble In Darkshore?; 731 The Absent Minded Prospector (used); 741 The Absent Minded Prospector (used); 942 The Absent Minded Prospector (used); 943 The Absent Minded Prospector (used)
 Alliance,1,1,0,17-17,1600,no,17:-,1486 Deviate Hides
-Alliance,1,1,0,20-20,1550,yes,44:A_Redridge,150 Murloc Poachers
+Alliance,1,1,0,20-20,1550,no,40:-,104 The Coastal Menace
+Alliance,1,1,0,20-20,1550,no,44:-,150 Murloc Poachers
 Alliance,1,1,0,20-20,1550,no,1519:-,167 Oh Brother. . .
-Alliance,1,1,0,20-20,1550,yes,148:A_Darkshore 331:A_Ashenvale,5321 The Sleeper Has Awakened
-Alliance,6,2,4,21-32,1415,no,11:A_Wetlands 38:-,455 The Algaz Gauntlet; 464 War Banners (used); 465 Nek'rosh's Gambit (used); 468 Report to Mountaineer Rockgar; 473 Report to Captain Stoutfist (used); 474 Defeat Nek'rosh (used)
+Alliance,1,1,0,19-19,1450,no,40:-,152 The Coast Isn't Clear
+Alliance,6,2,4,21-32,1415,yes,11:A_17_Wetlands+A_19_Wetlands+A_21_Wetlands 38:A_11_LochModan,455 The Algaz Gauntlet; 464 War Banners (used); 465 Nek'rosh's Gambit (used); 468 Report to Mountaineer Rockgar; 473 Report to Captain Stoutfist (used); 474 Defeat Nek'rosh (used)
 Alliance,1,1,0,23-23,1400,no,12:-,178 Theocritus' Retrieval
+Alliance,1,1,0,18-18,1350,no,44:-,92 Redridge Goulash
 Alliance,1,1,0,18-18,1350,no,1519:-,168 Collecting Memories
 Alliance,2,1,1,18-18,1350,no,17:-,865 Raptor Horns (used); 1491 Smart Drinks
+Alliance,1,1,0,15-15,1350,no,44:-,3741 Hilary's Necklace
+Alliance,2,2,0,10-13,1330,no,40:-,36 Westfall Stew; 38 Westfall Stew
 Alliance,2,2,0,60-60,1320,no,1537:-,7062 The Reason for the Season; 7063 The Feast of Winter Veil
-Alliance,4,2,2,10-10,1260,no,40:A_Westfall 1519:-,6181 A Swift Message (used); 6261 Dungar Longdrink; 6281 Continue to Stormwind (used); 6285 Return to Lewis
-Alliance,1,1,0,31-31,1250,no,33:- 400:-,5762 Hemet Nesingwary
-Alliance,2,2,0,20-20,1170,no,11:- 15:- 331:A_Ashenvale,1132 Fiora Longears; 1133 Journey to Astranaar
-Alliance,8,3,5,7-10,1145,no,141:A_NightElf_Teldrassil 1657:-,918 Timberling Seeds (used); 922 Rellian Greenspyre (used); 923 Tumors (used); 930 The Glowing Fruit (used); 931 The Shimmering Frond (used); 2399 The Sprouted Fronds; 2498 Return to Denalan; 2499 Oakenscowl
-Alliance,10,2,8,14-22,1145,yes,148:A_Darkshore 331:A_Ashenvale+A_Ashenvale_Late,984 How Big a Threat? (used); 985 How Big a Threat? (used); 986 A Lost Master (used); 990 Trek to Ashenvale; 993 A Lost Master (used); 994 Escape Through Force (used); 995 Escape Through Stealth; 4761 Thundris Windweaver (used); 4762 The Cliffspring River (used); 4763 The Blackwood Corrupted (used)
-Alliance,3,2,1,55-55,1120,no,28:A_WesternPlaguelands 85:- 139:Both_EasternPlaguelands,5401 Argent Dawn Commission (used); 5405 Argent Dawn Commission; 5503 Argent Dawn Commission
-Alliance,2,1,1,15-15,1050,no,12:A_Human_Elwynn 38:A_LochModan 44:A_Redridge 1519:-,353 Stormpike's Delivery; 1097 Elmore's Task (used)
+Alliance,1,1,0,21-21,1250,no,44:-,127 Selling Fish
+Alliance,1,1,0,14-14,1250,no,40:-,151 Poor Old Blanchy
+Alliance,2,2,0,16-17,1240,no,44:-,244 Encroaching Gnolls; 246 Assessing the Threat
+Alliance,2,2,0,20-20,1170,no,11:- 15:- 331:A_13_Ashenvale,1132 Fiora Longears; 1133 Journey to Astranaar
+Alliance,1,1,0,16-16,1150,no,40:-,103 Keeper of the Flame
+Alliance,10,2,8,14-22,1145,yes,148:A_10_Darkshore+A_12_Darkshore+A_15_Darkshore 331:A_13_Ashenvale+A_16_Ashenvale,984 How Big a Threat? (used); 985 How Big a Threat? (used); 986 A Lost Master (used); 990 Trek to Ashenvale; 993 A Lost Master (used); 994 Escape Through Force (used); 995 Escape Through Stealth; 4761 Thundris Windweaver (used); 4762 The Cliffspring River (used); 4763 The Blackwood Corrupted (used)
+Alliance,3,3,0,15-15,1080,no,44:-,129 A Free Lunch; 130 Visit the Herbalist; 131 Delivering Daffodils
+Alliance,1,1,0,15-15,1050,no,40:-,9 The Killing Fields
+Alliance,1,1,0,15-15,1050,no,44:-,116 Dry Times
+Alliance,1,1,0,15-15,1050,no,40:-,153 Red Leather Bandanas
+Alliance,2,1,1,15-15,1050,no,12:A_Human_Elwynn 38:A_11_LochModan 44:- 1519:-,353 Stormpike's Delivery; 1097 Elmore's Task (used)
 Alliance,1,1,0,15-15,1050,no,1519:-,399 Humble Beginnings
 Alliance,2,1,1,8-10,1050,yes,141:A_NightElf_Teldrassil,2541 The Sleeping Druid (used); 2561 Druid of the Claw
-Alliance,1,1,0,15-15,1050,no,148:A_Darkshore 331:-,5713 One Shot. One Kill.
-Alliance,4,1,3,10-10,1050,no,141:A_NightElf_Teldrassil 148:A_Darkshore 1657:-,6341 The Bounty of Teldrassil (used); 6342 Flight to Auberdine (used); 6343 Return to Nessa; 6344 Nessa Shadowsong (used)
-Alliance,3,1,2,11-11,880,no,141:A_NightElf_Teldrassil 148:A_Darkshore 1657:-,937 The Enchanted Glade (used); 940 Teldrassil (used); 952 Grove of the Ancients
+Alliance,1,1,0,15-15,1050,no,148:A_10_Darkshore 331:-,5713 One Shot. One Kill.
+Alliance,4,1,3,10-10,1050,no,141:A_NightElf_Teldrassil 148:A_10_Darkshore 1657:-,6341 The Bounty of Teldrassil (used); 6342 Flight to Auberdine (used); 6343 Return to Nessa; 6344 Nessa Shadowsong (used)
+Alliance,2,2,0,12-12,1000,no,2257:-,"6661 Deeprun Rat Roundup; 6662 Me Brother, Nipsy"
+Alliance,1,1,0,14-14,980,no,40:-,102 Patrolling Westfall
+Alliance,8,1,7,7-10,980,no,141:A_NightElf_Teldrassil 1657:-,918 Timberling Seeds (used); 922 Rellian Greenspyre (used); 923 Tumors (used); 930 The Glowing Fruit (used); 931 The Shimmering Frond (used); 2399 The Sprouted Fronds (used); 2498 Return to Denalan (used); 2499 Oakenscowl
+Alliance,1,1,0,12-12,910,no,40:-,22 Goretusk Liver Pie
+Alliance,1,1,0,12-12,910,no,40:-,64 The Forgotten Heirloom
+Alliance,3,1,2,11-11,880,no,141:A_NightElf_Teldrassil 148:A_10_Darkshore 1657:-,937 The Enchanted Glade (used); 940 Teldrassil (used); 952 Grove of the Ancients
 Alliance,8,1,7,10-10,840,yes,12:A_Human_Elwynn,35 Further Concerns (used); 37 Find the Lost Guards (used); 39 Deliver Thomas' Report (used); 40 A Fishy Peril (used); 45 Discover Rolf's Fate (used); 46 Bounty on Murlocs; 59 Cloth and Leather Armor (used); 71 Report to Thomas (used)
-Alliance,3,1,2,38-40,710,no,15:A_Dustwallow 1519:-,1204 Mudrock Soup and Bugs (used); 1258 ... and Bugs (used); 1260 Morgan Stern
-Alliance,12,1,11,35-40,690,no,11:- 15:A_Dustwallow 1519:-,1252 Lieutenant Paval Reethe (used); 1253 The Black Shield (used); 1259 Lieutenant Paval Reethe (used); 1282 They Call Him Smiling Jim (used); 1284 Suspicious Hoofprints (used); 1285 Daelin's Men (used); 1286 The Deserters (used); 1287 The Deserters (used); 1301 James Hyal (used); 1302 James Hyal; 1319 The Black Shield (used); 1320 The Black Shield (used)
+Alliance,3,1,2,38-40,710,no,15:A_29_DustwallowMarsh 1519:-,1204 Mudrock Soup and Bugs (used); 1258 ... and Bugs (used); 1260 Morgan Stern
+Alliance,12,1,11,35-40,690,no,11:- 15:A_29_DustwallowMarsh 1519:-,1252 Lieutenant Paval Reethe (used); 1253 The Black Shield (used); 1259 Lieutenant Paval Reethe (used); 1282 They Call Him Smiling Jim (used); 1284 Suspicious Hoofprints (used); 1285 Daelin's Men (used); 1286 The Deserters (used); 1287 The Deserters (used); 1301 James Hyal (used); 1302 James Hyal; 1319 The Black Shield (used); 1320 The Black Shield (used)
 Alliance,10,1,9,4-11,660,no,141:A_NightElf_Teldrassil 1657:-,916 Webwood Venom (used); 917 Webwood Egg (used); 920 Tenaron's Summons (used); 921 Crown of the Earth (used); 928 Crown of the Earth (used); 929 Crown of the Earth (used); 933 Crown of the Earth (used); 934 Crown of the Earth; 935 Crown of the Earth (used); 7383 Crown of the Earth (used)
 Alliance,1,1,0,60-60,660,no,1537:-,7022 Greatfather Winter is Here!
 Alliance,1,1,0,60-60,660,no,1519:- 1537:-,7023 Greatfather Winter is Here!
 Alliance,1,1,0,60-60,660,no,12:- 215:- 1537:-,7905 The Darkmoon Faire
 Alliance,1,1,0,60-60,660,no,15:- 1977:-,8227 Nat's Measuring Tape
-Alliance,1,1,0,60-60,660,no,1377:-,8800 Cenarion Battlegear
+Alliance,1,1,0,60-60,660,yes,1377:A_59_Silithus,8800 Cenarion Battlegear
 Alliance,1,1,0,60-60,660,no,1537:-,8795 The Alliance Needs Your Help!
 Alliance,5,5,0,60-60,660,no,493:- 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,8867 Lunar Fireworks; 8870 The Lunar Festival; 8871 The Lunar Festival; 8872 The Lunar Festival; 8883 Valadar Starsong
 Alliance,1,1,0,10-10,630,yes,1:A_DwarfGnome_DunMorogh,9261 Investigate the Scourge of Ironforge
 Alliance,1,1,0,10-10,630,no,1657:-,9262 Investigate the Scourge of Darnassus
 Alliance,2,1,1,9-10,590,no,1:A_DwarfGnome_DunMorogh 1537:-,287 Frostmane Hold; 291 The Reports (used)
+Alliance,3,1,2,55-55,560,no,28:A_52_WesternPlaguelands+A_54_WesternPlaguelands 85:- 139:A_53_EasternPlaguelands,5401 Argent Dawn Commission (used); 5405 Argent Dawn Commission (used); 5503 Argent Dawn Commission
 Alliance,1,1,0,55-55,560,no,33:-,7810 Arena Master
 Alliance,2,1,1,6-8,405,yes,141:A_NightElf_Teldrassil,2438 The Emerald Dreamcatcher; 2459 Ferocitas the Dream Eater (used)
-Alliance,2,1,1,46-46,405,no,15:- 1497:- 1519:- 1537:- 1637:-,2846 Tiara of the Deep (used); 2861 Tabetha's Task
+Alliance,2,1,1,46-46,405,no,15:A_42_DustwallowMarsh 1497:- 1519:- 1537:- 1637:-,2846 Tiara of the Deep (used); 2861 Tabetha's Task
 Alliance,1,1,0,6-6,405,no,1519:-,9260 Investigate the Scourge of Stormwind
-Alliance,2,1,1,45-45,390,no,33:- 440:Both_Tanaris,2864 Tran'rek; 2865 Scarab Shells (used)
-Alliance,1,1,0,35-35,275,yes,45:A_Arathi,635 Crystal in the Mountains
 Alliance,1,1,0,35-35,275,yes,,636 Legends of the Earth
-Alliance,2,1,1,15-15,270,no,38:A_LochModan 1537:-,2038 Bingles' Missing Supplies (used); 2039 Find Bingles
-Alliance,2,1,1,15-20,270,no,1519:- 1537:-,2040 Underground Assault (used); 2041 Speak with Shoni
+Alliance,2,1,1,15-15,270,no,38:A_11_LochModan 1537:-,2038 Bingles' Missing Supplies (used); 2039 Find Bingles
 Alliance,2,1,1,30-30,245,no,1537:- 1657:-,2924 Essential Artificials (used); 2925 Klockmort's Essentials
-Alliance,1,1,0,2-2,130,no,1519:-,332 Wine Shop Advert
-Alliance,1,1,0,2-2,130,no,1519:-,334 Package for Thurman
-Alliance,2,1,1,12-12,90,no,2257:-,"6661 Deeprun Rat Roundup (used); 6662 Me Brother, Nipsy"
-Alliance,1,1,0,2-2,85,no,1519:-,333 Harlan Needs a Resupply
-Alliance,3,1,2,10-12,85,no,1657:-,2518 Tears of the Moon (used); 2519 The Temple of the Moon; 2520 Sathrah's Sacrifice (used)
 Alliance,1,1,0,1-1,10,no,1:A_DwarfGnome_DunMorogh 11:- 14:- 33:- 85:- 440:- 1519:- 1537:-,8827 Winter's Presents
-Alliance,2,1,1,37-37,0,no,15:A_Dustwallow 1519:-,1222 Stinky's Escape (used); 1271 Feast at the Blue Recluse
+Alliance,3,1,2,60-60,0,yes,618:A_61_Winterspring,969 Luck Be With You (used); 975 Cache of Mau'ari; 6606 A Little Luck (used)
+Alliance,2,1,1,37-37,0,no,15:A_29_DustwallowMarsh 1519:-,1222 Stinky's Escape (used); 1271 Feast at the Blue Recluse
 Alliance,2,2,0,52-52,0,no,1537:-,3450 An Easy Pickup; 3451 Signal for Pickup
 Alliance,1,1,0,60-60,0,no,2557:-,5528 The Gordok Taste Test
 Alliance,1,1,0,1-1,0,yes,12:A_Human_Elwynn,5805 Welcome!
@@ -367,14 +350,14 @@ Alliance,1,1,0,60-60,0,no,1519:-,8646 Hammershout the Elder
 Alliance,1,1,0,60-60,0,no,4:-,8647 Bellowrage the Elder
 Alliance,1,1,0,60-60,0,no,1497:-,8648 Darkcore the Elder
 Alliance,1,1,0,60-60,0,no,12:-,8649 Stormbrow the Elder
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,8650 Snowcrown the Elder
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,8650 Snowcrown the Elder
 Alliance,1,1,0,60-60,0,no,51:-,8651 Ironband the Elder
 Alliance,1,1,0,60-60,0,no,85:-,8652 Graveborn the Elder
 Alliance,1,1,0,60-60,0,no,1:-,8653 Goldwell the Elder
-Alliance,1,1,0,60-60,0,no,1377:-,8654 Primestone the Elder
+Alliance,1,1,0,60-60,0,yes,1377:A_59_Silithus,8654 Primestone the Elder
 Alliance,1,1,0,60-60,0,no,14:-,8670 Runetotem the Elder
-Alliance,1,1,0,60-60,0,no,440:-,8671 Ragetotem the Elder
-Alliance,1,1,0,60-60,0,no,618:-,8672 Stonespire the Elder
+Alliance,1,1,0,60-60,0,yes,440:A_57_Tanaris,8671 Ragetotem the Elder
+Alliance,1,1,0,60-60,0,yes,618:A_61_Winterspring,8672 Stonespire the Elder
 Alliance,1,1,0,60-60,0,no,215:-,8673 Bloodhoof the Elder
 Alliance,1,1,0,60-60,0,no,33:-,8674 Winterhoof the Elder
 Alliance,1,1,0,60-60,0,no,40:-,8675 Skychaser the Elder
@@ -383,140 +366,130 @@ Alliance,1,1,0,60-60,0,no,1637:-,8677 Darkhorn the Elder
 Alliance,1,1,0,60-60,0,no,1638:-,8678 Proudhorn the Elder
 Alliance,1,1,0,60-60,0,no,357:-,8679 Grimtotem the Elder
 Alliance,1,1,0,60-60,0,no,17:-,8680 Windtotem the Elder
-Alliance,1,1,0,60-60,0,no,490:-,8681 Thunderhorn the Elder
+Alliance,1,1,0,60-60,0,yes,490:A_58_UnGoroCrater,8681 Thunderhorn the Elder
 Alliance,1,1,0,60-60,0,no,400:-,8682 Skyseer the Elder
 Alliance,1,1,0,60-60,0,no,46:-,8683 Dawnstrider the Elder
-Alliance,1,1,0,60-60,0,no,440:-,8684 Dreamseer the Elder
+Alliance,1,1,0,60-60,0,yes,440:A_57_Tanaris,8684 Dreamseer the Elder
 Alliance,1,1,0,60-60,0,yes,,8685 Mistwalker the Elder
 Alliance,1,1,0,60-60,0,no,17:-,8686 High Mountain the Elder
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,8688 Windrun the Elder
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,8688 Windrun the Elder
 Alliance,1,1,0,60-60,0,no,1477:-,8713 Starsong the Elder
-Alliance,1,1,0,60-60,0,yes,28:A_WesternPlaguelands,8714 Moonstrike the Elder
+Alliance,1,1,0,60-60,0,yes,28:A_54_WesternPlaguelands,8714 Moonstrike the Elder
 Alliance,1,1,0,60-60,0,no,141:-,8715 Bladeleaf the Elder
 Alliance,1,1,0,60-60,0,no,33:-,8716 Starglade the Elder
 Alliance,1,1,0,60-60,0,no,17:-,8717 Moonwarden the Elder
 Alliance,1,1,0,60-60,0,no,1657:-,8718 Bladeswift the Elder
-Alliance,1,1,0,60-60,0,no,1377:-,8719 Bladesing the Elder
-Alliance,1,1,0,60-60,0,no,16:-,8720 Skygleam the Elder
+Alliance,1,1,0,60-60,0,yes,1377:A_59_Silithus,8719 Bladesing the Elder
+Alliance,1,1,0,60-60,0,yes,16:A_56_Azshara,8720 Skygleam the Elder
 Alliance,1,1,0,60-60,0,no,148:-,8721 Starweave the Elder
-Alliance,1,1,0,60-60,0,yes,28:A_WesternPlaguelands,8722 Meadowrun the Elder
-Alliance,1,1,0,60-60,0,no,361:-,8723 Nightwind the Elder
+Alliance,1,1,0,60-60,0,yes,28:A_54_WesternPlaguelands,8722 Meadowrun the Elder
+Alliance,1,1,0,60-60,0,yes,361:A_55_Felwood,8723 Nightwind the Elder
 Alliance,1,1,0,60-60,0,no,400:-,8724 Morningdew the Elder
 Alliance,1,1,0,60-60,0,no,331:-,8725 Riversong the Elder
-Alliance,1,1,0,60-60,0,no,618:-,8726 Brightspear the Elder
+Alliance,1,1,0,60-60,0,yes,618:A_61_Winterspring,8726 Brightspear the Elder
 Alliance,1,1,0,60-60,0,no,2017:-,8727 Farwhisper the Elder
 Alliance,1,1,0,1-1,0,no,1537:- 1637:-,8744 A Carefully Wrapped Present
 Alliance,1,1,0,20-20,0,no,1537:- 1637:-,8768 A Gaily Wrapped Present
 Alliance,1,1,0,40-40,0,no,1537:- 1637:-,8769 A Ticking Present
 Alliance,1,1,0,10-10,0,no,1537:- 1637:-,8803 A Festive Gift
-Alliance,1,1,0,60-60,0,no,1:- 11:- 14:- 33:- 85:- 440:- 1519:-,8860 New Year Celebrations!
+Alliance,1,1,0,60-60,0,no,1:- 11:- 14:- 33:- 85:- 440:A_57_Tanaris 1519:-,8860 New Year Celebrations!
 Alliance,1,1,0,60-60,0,no,493:-,8862 Elune's Candle
 Alliance,1,1,0,60-60,0,no,1537:-,8866 Bronzebeard the Elder
 Alliance,10,10,0,60-60,0,no,36:- 1519:- 1537:- 1657:-,"8897 Dearest Colara,; 8898 Dearest Colara,; 8899 Dearest Colara,; 8903 Dangerous Love; 9024 Aristan's Hunch; 9025 Morgan's Discovery; 9026 Tracing the Source; 9027 Tracing the Source; 9028 The Source Revealed; 9029 A Bubbling Cauldron"
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9085 Shadows of Doom
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9153 Under the Shadow
-Alliance,1,1,0,60-60,0,no,139:Both_EasternPlaguelands 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,9154 Light's Hope Chapel
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9247 The Keeper's Call
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9085 Shadows of Doom
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9153 Under the Shadow
+Alliance,1,1,0,60-60,0,no,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,9154 Light's Hope Chapel
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9247 The Keeper's Call
 Alliance,1,1,0,60-60,0,no,1519:-,9292 Cracked Necrotic Crystal
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9295 Letter from the Front
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9299 Note from the Front
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9300 Page from the Front
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9301 Envelope from the Front
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9302 Missive from the Front
-Alliance,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9304 Document from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9295 Letter from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9299 Note from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9300 Page from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9301 Envelope from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9302 Missive from the Front
+Alliance,1,1,0,60-60,0,yes,139:A_53_EasternPlaguelands+A_60_EasternPlaguelands,9304 Document from the Front
 Alliance,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9319 A Light in Dark Places
 Alliance,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9322 Wild Fires in Kalimdor
 Alliance,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9323 Wild Fires in the Eastern Kingdoms
 Alliance,1,1,0,60-60,0,no,141:- 1519:- 1537:-,9367 The Festival of Fire
 Alliance,1,1,0,60-60,0,yes,,9378 DND FLAG The Dread Citadel - Naxxramas
-Alliance,1,1,0,60-60,0,no,1377:-,9415 Report to Marshal Bluewall
-Horde,37,37,0,60-60,242720,no,139:Both_EasternPlaguelands 440:- 1637:- 2557:-,8921 The Ectoplasmic Distiller; 8923 A Supernatural Device; 8924 Hunting for Ectoplasm; 8925 A Portable Power Source; 8928 A Shifty Merchant; 8930 In Search of Anthion; 8945 Dead Man's Plea; 8946 Proof of Life; 8947 Anthion's Strange Request; 8948 Anthion's Old Friend; 8949 Falrin's Vendetta; 8950 The Instigator's Enchantment; 8961 Three Kings of Flame; 8962 Components of Importance; 8963 Componen
-Horde,16,16,0,60-60,106510,no,3:- 15:- 28:H_WesternPlaguelands 357:- 1637:-,"4903 Warlord's Command; 4941 Eitrigg's Wisdom; 4974 For The Horde!; 6566 What the Wind Carries; 6567 The Champion of the Horde; 6568 The Testament of Rexxar; 6569 Oculus Illusions; 6570 Emberstrife; 6582 The Test of Skulls, Scryer; 6583 The Test of Skulls, Somnus; 6584 The Test of Skulls, Chronalis; 6585 The Test of Skulls, Axtroz; 6601 Ascension...; 6602 Blood of the Black Dragon Champion; 7490 V"
-Horde,22,22,0,50-60,93790,no,8:- 16:- 33:-,2621 The Disgraced One; 2622 The Missing Orders; 2623 The Swamp Talker; 2681 The Stones That Bind Us; 2701 Heroes of Old; 2702 Heroes of Old; 2721 Kirith; 2743 The Cover of Darkness; 2744 The Demon Hunter; 2784 Fall From Grace; 2801 A Tale of Sorrow; 3141 Loramus; 3508 Breaking the Ward; 3509 The Name of the Beast; 3510 The Name of the Beast; 3511 The Name of the Beast; 3602 Azsharite; 3621 The Fo
-Horde,15,12,3,55-60,62110,yes,28:H_WesternPlaguelands 139:Both_EasternPlaguelands 618:Both_Winterspring,5142 Little Pamela (used); 5149 Pamela's Doll (used); 5152 Auntie Marlene; 5153 A Strange Historian; 5154 The Annals of Darrowshire; 5168 Heroes of Darrowshire; 5181 Villains of Darrowshire; 5206 Marauders of Darrowshire; 5210 Brother Carlin; 5211 Defenders of Darrowshire; 5241 Uncle Carlin (used); 5601 Sister Pamela; 5721 The Battle of Darrowshire; 5941 Return to Chromie; 5942 Hidden Treasures
-Horde,7,7,0,56-60,58450,no,16:-,6804 Poisoned Water; 6805 Stormers and Rumblers; 6821 Eye of the Emberseer; 6822 The Molten Core; 6823 Agent of Hydraxis; 6824 Hands of the Enemy; 7486 A Hero's Reward
-Horde,13,13,0,52-56,57100,no,361:H_Felwood 440:- 490:Both_UngoroCrater 618:Both_Winterspring,3844 It's a Secret to Everybody; 3845 It's a Secret to Everybody; 3908 It's a Secret to Everybody; 3909 The Videre Elixir; 3912 Meet at the Grave; 3913 A Grave Situation; 3914 Linken's Sword; 3941 A Gnome's Assistance; 3942 Linken's Memory; 3961 Linken's Adventure; 3962 It's Dangerous to Go Alone; 4005 Aquementas; 4084 Silver Heart
-Horde,9,8,1,60-60,56250,no,28:H_WesternPlaguelands 139:Both_EasternPlaguelands 2017:-,"5382 Doctor Theolen Krastinov, the Butcher (used); 5384 Kirtonos the Herald; 5461 The Human, Ras Frostwhisper; 5462 The Dying, Ras Frostwhisper; 5463 Menethil's Gift; 5464 Menethil's Gift; 5465 Soulbound Keepsake; 5466 The Lich, Ras Frostwhisper; 5515 Krastinov's Bag of Horrors"
-Horde,8,8,0,44-58,53800,no,33:- 440:Both_Tanaris,3520 Screecher Spirits; 3527 The Prophecy of Mosh'aru; 3528 The God Hakkar; 4787 The Ancient Egg; 4788 The Final Tablets; 5065 The Lost Tablets of Mosh'aru; 8181 Confront Yeh'kinya; 8182 The Hand of Rastakhan
-Horde,6,6,0,60-60,48050,no,1377:-,8304 Dearest Natalia; 8306 Into The Maw of Madness; 8309 Glyph Chasing; 8310 Breaking the Code; 8314 Unraveling the Mystery; 8315 The Calling
-Horde,11,7,4,56-60,46500,yes,28:H_WesternPlaguelands 139:Both_EasternPlaguelands,5542 Demon Dogs (used); 5543 Blood Tinged Skies (used); 5544 Carrion Grubbage (used); 5742 Redemption (used); 5781 Of Forgotten Memories; 5845 Of Lost Honor; 5846 Of Love and Family; 5848 Of Love and Family; 5861 Find Myranda; 5862 Scarlet Subterfuge; 5944 In Dreams
-Horde,11,8,3,58-60,45260,no,139:Both_EasternPlaguelands 1497:-,"6022 To Kill With Purpose (used); 6042 Un-Life's Little Annoyances (used); 6133 The Ranger Lord's Behest (used); 6135 Duskwing, Oh How I Hate Thee...; 6136 The Corpulent One; 6144 The Call to Command; 6145 The Crimson Courier; 6146 Nathanos' Ruse; 6147 Return to Nathanos; 6148 The Scarlet Oracle, Demetria; 6163 Ramstein"
+Alliance,1,1,0,60-60,0,yes,1377:A_59_Silithus,9415 Report to Marshal Bluewall
+Horde,37,37,0,60-60,242720,no,139:H_55_EasternPlaguelands 440:- 1637:- 2557:-,8921 The Ectoplasmic Distiller; 8923 A Supernatural Device; 8924 Hunting for Ectoplasm; 8925 A Portable Power Source; 8928 A Shifty Merchant; 8930 In Search of Anthion; 8945 Dead Man's Plea; 8946 Proof of Life; 8947 Anthion's Strange Request; 8948 Anthion's Old Friend; 8949 Falrin's Vendetta; 8950 The Instigator's Enchantment; 8961 Three Kings of Flame; 8962 Components of Importance; 8963 Componen
+Horde,16,16,0,60-60,106510,no,3:- 15:- 28:H_56_WesternPlaguelands 357:- 1637:-,"4903 Warlord's Command; 4941 Eitrigg's Wisdom; 4974 For The Horde!; 6566 What the Wind Carries; 6567 The Champion of the Horde; 6568 The Testament of Rexxar; 6569 Oculus Illusions; 6570 Emberstrife; 6582 The Test of Skulls, Scryer; 6583 The Test of Skulls, Somnus; 6584 The Test of Skulls, Chronalis; 6585 The Test of Skulls, Axtroz; 6601 Ascension...; 6602 Blood of the Black Dragon Champion; 7490 V"
+Horde,22,17,5,50-60,84670,yes,8:H_42_SwampofSorrows 16:H_45_Azshara+H_50_Azshara 33:H_40_StranglethornVale,2621 The Disgraced One (used); 2622 The Missing Orders (used); 2623 The Swamp Talker (used); 2681 The Stones That Bind Us; 2701 Heroes of Old; 2702 Heroes of Old; 2721 Kirith; 2743 The Cover of Darkness; 2744 The Demon Hunter; 2784 Fall From Grace (used); 2801 A Tale of Sorrow (used); 3141 Loramus; 3508 Breaking the Ward; 3509 The Name of the Beast; 3510 The Name of the Beast; 3511 The Name of the
+Horde,15,12,3,55-60,62110,yes,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 139:H_55_EasternPlaguelands 618:H_52_Winterspring+H_58_Winterspring,5142 Little Pamela (used); 5149 Pamela's Doll (used); 5152 Auntie Marlene; 5153 A Strange Historian; 5154 The Annals of Darrowshire; 5168 Heroes of Darrowshire; 5181 Villains of Darrowshire; 5206 Marauders of Darrowshire; 5210 Brother Carlin; 5211 Defenders of Darrowshire; 5241 Uncle Carlin (used); 5601 Sister Pamela; 5721 The Battle of Darrowshire; 5941 Return to Chromie; 5942 Hidden Treasures
+Horde,7,7,0,56-60,58450,yes,16:H_50_Azshara,6804 Poisoned Water; 6805 Stormers and Rumblers; 6821 Eye of the Emberseer; 6822 The Molten Core; 6823 Agent of Hydraxis; 6824 Hands of the Enemy; 7486 A Hero's Reward
+Horde,9,8,1,60-60,56250,no,28:H_56_WesternPlaguelands 139:H_55_EasternPlaguelands 2017:-,"5382 Doctor Theolen Krastinov, the Butcher (used); 5384 Kirtonos the Herald; 5461 The Human, Ras Frostwhisper; 5462 The Dying, Ras Frostwhisper; 5463 Menethil's Gift; 5464 Menethil's Gift; 5465 Soulbound Keepsake; 5466 The Lich, Ras Frostwhisper; 5515 Krastinov's Bag of Horrors"
+Horde,13,12,1,52-56,55850,yes,361:H_51_Felwood+H_53_Felwood 440:H_44_Tanaris 490:H_48_UnGoroCrater 618:H_52_Winterspring+H_58_Winterspring,3844 It's a Secret to Everybody (used); 3845 It's a Secret to Everybody; 3908 It's a Secret to Everybody; 3909 The Videre Elixir; 3912 Meet at the Grave; 3913 A Grave Situation; 3914 Linken's Sword; 3941 A Gnome's Assistance; 3942 Linken's Memory; 3961 Linken's Adventure; 3962 It's Dangerous to Go Alone; 4005 Aquementas; 4084 Silver Heart
+Horde,8,8,0,44-58,53800,yes,33:H_34_StranglethornVale+H_40_StranglethornVale 440:H_37_Tanaris+H_44_Tanaris,3520 Screecher Spirits; 3527 The Prophecy of Mosh'aru; 3528 The God Hakkar; 4787 The Ancient Egg; 4788 The Final Tablets; 5065 The Lost Tablets of Mosh'aru; 8181 Confront Yeh'kinya; 8182 The Hand of Rastakhan
+Horde,11,7,4,56-60,46500,yes,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 139:H_55_EasternPlaguelands,5542 Demon Dogs (used); 5543 Blood Tinged Skies (used); 5544 Carrion Grubbage (used); 5742 Redemption (used); 5781 Of Forgotten Memories; 5845 Of Lost Honor; 5846 Of Love and Family; 5848 Of Love and Family; 5861 Find Myranda; 5862 Scarlet Subterfuge; 5944 In Dreams
+Horde,11,8,3,58-60,45260,no,139:H_55_EasternPlaguelands 1497:-,"6022 To Kill With Purpose (used); 6042 Un-Life's Little Annoyances (used); 6133 The Ranger Lord's Behest (used); 6135 Duskwing, Oh How I Hate Thee...; 6136 The Corpulent One; 6144 The Call to Command; 6145 The Crimson Courier; 6146 Nathanos' Ruse; 6147 Return to Nathanos; 6148 The Scarlet Oracle, Demetria; 6163 Ramstein"
 Horde,8,8,0,52-60,41490,no,3:- 1585:- 1637:-,3906 Disharmony of Flame; 3907 Disharmony of Fire; 3981 Commander Gor'shak; 4001 What Is Going On?; 4002 The Eastern Kingdom; 4003 The Royal Rescue; 4004 The Princess Saved?; 7201 The Last Element
-Horde,10,7,3,52-60,38160,no,46:- 139:Both_EasternPlaguelands 618:Both_Winterspring,4726 Broodling Essence (used); 4734 Egg Freezing; 4735 Egg Collection; 4771 Dawn's Gambit; 4808 Felnok Steelspring (used); 4809 Chillwind Horns (used); 4810 Return to Tinkee; 4907 Tinkee Steamboil; 5522 Leonid Barthalomew; 5531 Betina Bigglezink
-Horde,8,8,0,56-59,37950,yes,361:H_Felwood 618:Both_Winterspring,5083 Winterfall Firewater; 5084 Falling to Corruption; 5085 Mystery Goo; 5086 Toxic Horrors; 5087 Winterfall Runners; 5121 High Chief Winterfall; 5123 The Final Piece; 5128 Words of the High Chief
-Horde,7,7,0,45-50,35550,no,33:- 47:H_Hinterlands 357:H_Feralas 440:Both_Tanaris,351 Find OOX-17/TN!; 485 Find OOX-09/HL!; 648 Rescue OOX-17/TN!; 836 Rescue OOX-09/HL!; 2766 Find OOX-22/FE!; 2767 Rescue OOX-22/FE!; 3721 An OOX of Your Own
-Horde,6,6,0,60-60,34420,no,28:H_WesternPlaguelands 618:- 1583:-,5160 The Matron Protectorate; 5161 Wrath of the Blue Flight; 5162 Wrath of the Blue Flight; 5164 Catalogue of the Wayward; 5166 Breastplate of the Chromatic Flight; 5167 Legplates of the Chromatic Defier
-Horde,22,9,13,50-60,34300,no,28:H_WesternPlaguelands 85:- 440:- 1497:- 1637:- 1638:-,"105 Alas, Andorhal; 838 Scholomance; 964 Skeletal Fragments; 5093 A Call to Arms: The Plaguelands!; 5094 A Call to Arms: The Plaguelands! (used); 5095 A Call to Arms: The Plaguelands!; 5096 Scarlet Diversions (used); 5098 All Along the Watchtowers (used); 5228 The Scourge Cauldrons (used); 5229 Target: Felstone Field (used); 5230 Return to the Bulwark (used); 5231 Target: Dalson's Tears (used); 52"
-Horde,9,9,0,45-50,34020,no,357:H_Feralas 1637:-,3121 A Strange Request; 3122 Return to Witch Doctor Uzer'i; 3123 Testing the Vessel; 3124 Hippogryph Muisek; 3125 Faerie Dragon Muisek; 3126 Treant Muisek; 3127 Mountain Giant Muisek; 3128 Natural Materials; 3129 Weapons of Spirit
-Horde,18,8,10,42-54,33970,no,357:H_Feralas 440:Both_Tanaris 1637:-,10 The Scrimshank Redemption (used); 32 Rise of the Silithid; 82 Noxious Lair Investigation (used); 110 Insect Part Analysis (used); 113 Insect Part Analysis (used); 992 Gadgetzan Water Survey (used); 2862 War on the Woodpaw (used); 2863 Alpha Strike (used); 2902 Woodpaw Investigation (used); 2903 The Battle Plans (used); 4494 March of the Silithid; 4496 Bungle in the Jungle; 4507 Pawn Captures Qu
-Horde,5,4,1,60-60,33150,yes,139:Both_EasternPlaguelands,5251 The Archivist (used); 5262 The Truth Comes Crashing Down; 5263 Above and Beyond; 5264 Lord Maxwell Tyrosus; 5265 The Argent Hold
-Horde,5,5,0,58-60,32300,no,1377:-,8279 The Twilight Lexicon; 8284 The Twilight Mystery; 8285 The Deserter; 8287 A Terrible Purpose; 8323 True Believers
-Horde,5,5,0,52-58,32250,no,3:- 46:-,4081 KILL ON SIGHT: Dark Iron Dwarves; 4082 KILL ON SIGHT: High Ranking Dark Iron Officials; 4121 Precarious Predicament; 4122 Grark Lorkrub; 4132 Operation: Death to Angerforge
-Horde,6,6,0,43-55,32150,no,14:- 47:H_Hinterlands 267:- 1497:-,2933 Venom Bottles; 2934 Undamaged Venom Sac; 2935 Consult Master Gadrin; 2936 The Spider God; 2937 Summoning Shadra; 2938 Venom to the Undercity
-Horde,10,10,0,55-57,31080,no,493:- 1377:- 1497:- 1637:- 1638:-,"1000 The New Frontier; 1004 The New Frontier; 1018 The New Frontier; 1123 Rabine Saturna; 1124 Wasteland; 1125 The Spirits of Southwind; 1126 Hive in the Tower; 1185 Under the Chitin Was...; 6844 Umber, Archivist; 6845 Uncovering Past Secrets"
-Horde,9,9,0,52-52,30500,no,16:- 1497:- 1637:- 1638:-,3517 Stealing Knowledge; 3518 Delivery to Magatha; 3541 Delivery to Jes'rimon; 3542 Delivery to Andron Gant; 3561 Delivery to Archmage Xylem; 3562 Magatha's Payment to Jediga; 3563 Jes'rimon's Payment to Jediga; 3564 Andron's Payment to Jediga; 3565 Xylem's Payment to Jediga
-Horde,5,5,0,56-59,28000,no,361:H_Felwood 1638:-,4521 Wild Guardians; 4721 Wild Guardians; 4741 Wild Guardians; 4882 Guarding Secrets; 4883 Guarding Secrets
-Horde,9,8,1,35-44,25850,yes,33:H_Stranglethorn+H_Stranglethorn_Late 45:H_Arathi,662 Deep Sea Salvage; 663 Land Ho! (used); 664 Drowned Sorrows; 665 Sunken Treasure; 666 Sunken Treasure; 667 Death From Below; 668 Sunken Treasure; 669 Sunken Treasure; 670 Sunken Treasure
-Horde,8,8,0,47-50,24910,no,440:Both_Tanaris 1337:- 1638:-,2278 The Platinum Discs; 2280 The Platinum Discs; 2440 The Platinum Discs; 2954 The Stone Watcher; 2965 Portents of Uldum; 2966 Seeing What Happens; 2967 Return to Thunder Bluff; 2968 A Future Task
-Horde,6,6,0,19-60,24350,no,17:H_Barrens 36:- 45:H_Arathi 1497:- 1637:- 1638:-,8368 Battle of Warsong Gulch; 8426 Battle of Warsong Gulch; 8427 Battle of Warsong Gulch; 8428 Battle of Warsong Gulch; 8429 Battle of Warsong Gulch; 8430 Battle of Warsong Gulch
-Horde,4,4,0,55-57,23350,yes,361:H_Felwood,5202 A Strange Red Key; 5203 Rescue From Jaedenar; 5204 Retribution of the Light; 5385 The Remains of Trey Lightforge
-Horde,5,5,0,29-60,22900,no,17:- 36:- 45:H_Arathi 1497:- 1637:- 1638:-,8370 Conquering Arathi Basin; 8436 Conquering Arathi Basin; 8437 Conquering Arathi Basin; 8438 Conquering Arathi Basin; 8439 Conquering Arathi Basin
+Horde,6,5,1,60-60,41450,yes,1377:H_57_Silithus,8304 Dearest Natalia (used); 8306 Into The Maw of Madness; 8309 Glyph Chasing; 8310 Breaking the Code; 8314 Unraveling the Mystery; 8315 The Calling
+Horde,10,7,3,52-60,38160,yes,46:H_49_BurningSteppes 139:H_55_EasternPlaguelands 618:H_52_Winterspring+H_58_Winterspring,4726 Broodling Essence (used); 4734 Egg Freezing; 4735 Egg Collection; 4771 Dawn's Gambit; 4808 Felnok Steelspring (used); 4809 Chillwind Horns (used); 4810 Return to Tinkee; 4907 Tinkee Steamboil; 5522 Leonid Barthalomew; 5531 Betina Bigglezink
+Horde,6,6,0,60-60,34420,no,28:H_56_WesternPlaguelands 618:H_58_Winterspring 1583:-,5160 The Matron Protectorate; 5161 Wrath of the Blue Flight; 5162 Wrath of the Blue Flight; 5164 Catalogue of the Wayward; 5166 Breastplate of the Chromatic Flight; 5167 Legplates of the Chromatic Defier
+Horde,9,9,0,45-50,34020,no,357:H_38_Feralas 1637:-,3121 A Strange Request; 3122 Return to Witch Doctor Uzer'i; 3123 Testing the Vessel; 3124 Hippogryph Muisek; 3125 Faerie Dragon Muisek; 3126 Treant Muisek; 3127 Mountain Giant Muisek; 3128 Natural Materials; 3129 Weapons of Spirit
+Horde,5,4,1,60-60,33150,yes,139:H_55_EasternPlaguelands,5251 The Archivist (used); 5262 The Truth Comes Crashing Down; 5263 Above and Beyond; 5264 Lord Maxwell Tyrosus; 5265 The Argent Hold
+Horde,5,5,0,52-58,32250,no,3:- 46:H_49_BurningSteppes,4081 KILL ON SIGHT: Dark Iron Dwarves; 4082 KILL ON SIGHT: High Ranking Dark Iron Officials; 4121 Precarious Predicament; 4122 Grark Lorkrub; 4132 Operation: Death to Angerforge
+Horde,6,6,0,43-55,32150,no,14:- 47:H_39_Hinterlands+H_46_Hinterlands 267:- 1497:-,2933 Venom Bottles; 2934 Undamaged Venom Sac; 2935 Consult Master Gadrin; 2936 The Spider God; 2937 Summoning Shadra; 2938 Venom to the Undercity
+Horde,10,10,0,55-57,31080,no,493:- 1377:H_57_Silithus 1497:- 1637:- 1638:-,"1000 The New Frontier; 1004 The New Frontier; 1018 The New Frontier; 1123 Rabine Saturna; 1124 Wasteland; 1125 The Spirits of Southwind; 1126 Hive in the Tower; 1185 Under the Chitin Was...; 6844 Umber, Archivist; 6845 Uncovering Past Secrets"
+Horde,8,6,2,56-59,30700,yes,361:H_51_Felwood+H_53_Felwood 618:H_52_Winterspring+H_58_Winterspring,5083 Winterfall Firewater (used); 5084 Falling to Corruption (used); 5085 Mystery Goo; 5086 Toxic Horrors; 5087 Winterfall Runners; 5121 High Chief Winterfall; 5123 The Final Piece; 5128 Words of the High Chief
+Horde,18,7,11,42-54,29770,no,357:H_38_Feralas 440:H_37_Tanaris+H_44_Tanaris 1637:-,10 The Scrimshank Redemption (used); 32 Rise of the Silithid; 82 Noxious Lair Investigation (used); 110 Insect Part Analysis (used); 113 Insect Part Analysis (used); 992 Gadgetzan Water Survey (used); 2862 War on the Woodpaw (used); 2863 Alpha Strike (used); 2902 Woodpaw Investigation (used); 2903 The Battle Plans (used); 4494 March of the Silithid; 4496 Bungle in the Jungle; 4507 Pawn Captures Qu
+Horde,22,7,15,50-60,29240,no,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 85:- 440:H_44_Tanaris 1497:- 1637:- 1638:-,"105 Alas, Andorhal; 838 Scholomance (used); 964 Skeletal Fragments (used); 5093 A Call to Arms: The Plaguelands!; 5094 A Call to Arms: The Plaguelands! (used); 5095 A Call to Arms: The Plaguelands!; 5096 Scarlet Diversions (used); 5098 All Along the Watchtowers (used); 5228 The Scourge Cauldrons (used); 5229 Target: Felstone Field (used); 5230 Return to the Bulwark (used); 5231 Target: Dalson's Te"
+Horde,5,5,0,56-59,28000,no,361:H_51_Felwood+H_53_Felwood 1638:-,4521 Wild Guardians; 4721 Wild Guardians; 4741 Wild Guardians; 4882 Guarding Secrets; 4883 Guarding Secrets
+Horde,8,8,0,47-50,24910,no,440:H_37_Tanaris+H_44_Tanaris 1337:- 1638:-,2278 The Platinum Discs; 2280 The Platinum Discs; 2440 The Platinum Discs; 2954 The Stone Watcher; 2965 Portents of Uldum; 2966 Seeing What Happens; 2967 Return to Thunder Bluff; 2968 A Future Task
+Horde,6,6,0,19-60,24350,no,17:H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens 36:H_28_AlteracMountains 45:H_22_ArathiHighlands+H_27_ArathiHighlands 1497:- 1637:- 1638:-,8368 Battle of Warsong Gulch; 8426 Battle of Warsong Gulch; 8427 Battle of Warsong Gulch; 8428 Battle of Warsong Gulch; 8429 Battle of Warsong Gulch; 8430 Battle of Warsong Gulch
+Horde,5,5,0,29-60,22900,no,17:- 36:H_28_AlteracMountains 45:H_22_ArathiHighlands+H_27_ArathiHighlands 1497:- 1637:- 1638:-,8370 Conquering Arathi Basin; 8436 Conquering Arathi Basin; 8437 Conquering Arathi Basin; 8438 Conquering Arathi Basin; 8439 Conquering Arathi Basin
+Horde,7,4,3,45-50,22850,yes,33:H_34_StranglethornVale+H_40_StranglethornVale 47:H_39_Hinterlands+H_46_Hinterlands 357:H_38_Feralas 440:H_37_Tanaris+H_44_Tanaris,351 Find OOX-17/TN! (used); 485 Find OOX-09/HL! (used); 648 Rescue OOX-17/TN!; 836 Rescue OOX-09/HL!; 2766 Find OOX-22/FE! (used); 2767 Rescue OOX-22/FE!; 3721 An OOX of Your Own
 Horde,3,3,0,60-60,20560,no,36:-,7142 The Battle for Alterac; 7222 Speak with Voggah Deathgrip; 8272 Hero of the Frostwolf
-Horde,6,4,2,51-58,20200,no,17:- 361:H_Felwood,5155 Forces of Jaedenar (used); 5157 Collection of the Corrupt Water (used); 5158 Seeking Spiritual Aid; 5159 Cleansed Water Returns to Felwood; 5165 Dousing the Flames of Protection; 5242 A Final Blow
+Horde,6,4,2,51-58,20200,no,17:- 361:H_51_Felwood+H_53_Felwood,5155 Forces of Jaedenar (used); 5157 Collection of the Corrupt Water (used); 5158 Seeking Spiritual Aid; 5159 Cleansed Water Returns to Felwood; 5165 Dousing the Flames of Protection; 5242 A Final Blow
 Horde,2,2,0,60-60,19900,no,1637:-,7783 The Lord of Blackrock; 7784 The Lord of Blackrock
-Horde,3,3,0,60-60,19900,no,1377:-,"7785 Examine the Vessel; 7786 Thunderaan the Windseeker; 7787 Rise, Thunderfury!"
+Horde,3,3,0,60-60,19900,yes,1377:H_57_Silithus,"7785 Examine the Vessel; 7786 Thunderaan the Windseeker; 7787 Rise, Thunderfury!"
 Horde,2,2,0,60-60,19900,no,440:- 3428:-,8801 C'Thun's Legacy; 8802 The Savior of Kalimdor
-Horde,5,5,0,60-60,19900,yes,139:Both_EasternPlaguelands,9033 Echoes of War; 9120 The Fall of Kel'Thuzad; 9229 The Fate of Ramaladni; 9230 Ramaladni's Icy Grasp; 9232 The Only Song I Know...
-Horde,3,3,0,60-60,19800,no,1377:-,8286 What Tomorrow Brings; 8288 Only One May Rise; 8301 The Path of the Righteous
-Horde,4,4,0,51-51,19550,no,357:- 440:- 1477:-,3380 The Sunken Temple; 3444 The Stone Circle; 3446 Into the Depths; 3447 Secret of the Circle
+Horde,5,5,0,60-60,19900,yes,139:H_55_EasternPlaguelands,9033 Echoes of War; 9120 The Fall of Kel'Thuzad; 9229 The Fate of Ramaladni; 9230 Ramaladni's Icy Grasp; 9232 The Only Song I Know...
+Horde,3,3,0,60-60,19800,yes,1377:H_57_Silithus,8286 What Tomorrow Brings; 8288 Only One May Rise; 8301 The Path of the Righteous
+Horde,4,4,0,51-51,19550,no,357:- 440:H_44_Tanaris 1477:-,3380 The Sunken Temple; 3444 The Stone Circle; 3446 Into the Depths; 3447 Secret of the Circle
 Horde,3,3,0,59-59,19200,no,3:- 1583:-,4981 Operative Bijou; 4982 Bijou's Belongings; 4983 Bijou's Reconnaissance Report
-Horde,4,4,0,53-56,18250,no,16:- 1637:-,3504 Betrayed; 3505 Betrayed; 3506 Betrayed; 3507 Betrayed
+Horde,9,6,3,52-52,19050,no,16:H_45_Azshara+H_50_Azshara 1497:- 1637:- 1638:-,3517 Stealing Knowledge (used); 3518 Delivery to Magatha; 3541 Delivery to Jes'rimon; 3542 Delivery to Andron Gant; 3561 Delivery to Archmage Xylem (used); 3562 Magatha's Payment to Jediga; 3563 Jes'rimon's Payment to Jediga; 3564 Andron's Payment to Jediga; 3565 Xylem's Payment to Jediga (used)
+Horde,4,4,0,53-56,18250,no,16:H_45_Azshara+H_50_Azshara 1637:-,3504 Betrayed; 3505 Betrayed; 3506 Betrayed; 3507 Betrayed
 Horde,2,2,0,60-60,18250,no,1583:-,4742 Seal of Ascension; 4743 Seal of Ascension
-Horde,6,6,0,22-42,18000,no,36:- 267:H_Hillsbrad,498 The Rescue; 503 Gol'dir; 506 Blackmoore's Legacy; 507 Lord Aliden Perenolde; 508 Taretha's Gift; 533 Infiltration
+Horde,6,6,0,22-42,18000,yes,36:H_28_AlteracMountains 267:H_21_HillsbradFoothills,498 The Rescue; 503 Gol'dir; 506 Blackmoore's Legacy; 507 Lord Aliden Perenolde; 508 Taretha's Gift; 533 Infiltration
 Horde,3,3,0,52-56,17950,no,1497:-,4293 A Sample of Slime...; 4294 ... and a Batch of Ooze; 4642 Melding of Influences
-Horde,3,3,0,55-58,17850,no,1377:-,8277 Deadly Desert Venom; 8278 Noggle's Last Hope; 8282 Noggle's Lost Satchel
-Horde,12,10,2,36-44,17740,no,17:- 33:H_Stranglethorn+H_Stranglethorn_Late 400:-,621 Zanzil's Secret (used); 1111 Wharfmaster Dizzywig (used); 1112 Parts for Kravel; 1114 Delivery to the Gnomes; 1115 The Rumormonger; 1116 Dream Dust in the Swamp; 1117 Rumors for Kravel; 1118 Back to Booty Bay; 1119 Zanzil's Mixture and a Fool's Stout; 1120 Get the Gnomes Drunk; 1121 Get the Goblins Drunk; 1122 Report Back to Fizzlebub
-Horde,7,7,0,41-44,17305,no,3:H_Badlands 1337:- 1637:-,"2283 Necklace Recovery; 2284 Necklace Recovery, Take 2; 2318 Translating the Journal; 2338 Translating the Journal; 2339 Find the Gems and Power Source; 2340 Deliver the Gems; 2341 Necklace Recovery, Take 3"
-Horde,8,7,1,37-42,16085,yes,33:H_Stranglethorn+H_Stranglethorn_Late 45:H_Arathi,638 Trollbane; 639 Sigil of Strom (used); 640 The Broken Sigil; 641 Sigil of Thoradin; 643 Sigil of Arathor; 644 Sigil of Trollbane; 645 Trol'kalar; 646 Trol'kalar
-Horde,5,4,1,52-54,15650,no,28:H_WesternPlaguelands 1497:- 1519:-,5021 Better Late Than Never (used); 5023 Better Late Than Never; 5049 The Jeremiah Blues; 5050 Good Luck Charm; 5051 Two Halves Become One
-Horde,6,6,0,45-46,14930,no,440:Both_Tanaris 1497:-,232 Errand for Apothecary Zinge; 238 Errand for Apothecary Zinge; 243 Into the Field; 379 Slake That Thirst; 654 Tanaris Field Sampling; 864 Return to Apothecary Zinge
+Horde,12,10,2,36-44,17740,no,17:- 33:H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale+H_40_StranglethornVale 400:H_29_ThousandNeedles,621 Zanzil's Secret (used); 1111 Wharfmaster Dizzywig (used); 1112 Parts for Kravel; 1114 Delivery to the Gnomes; 1115 The Rumormonger; 1116 Dream Dust in the Swamp; 1117 Rumors for Kravel; 1118 Back to Booty Bay; 1119 Zanzil's Mixture and a Fool's Stout; 1120 Get the Gnomes Drunk; 1121 Get the Goblins Drunk; 1122 Report Back to Fizzlebub
+Horde,7,7,0,41-44,17305,no,3:H_32_Badlands 1337:- 1637:-,"2283 Necklace Recovery; 2284 Necklace Recovery, Take 2; 2318 Translating the Journal; 2338 Translating the Journal; 2339 Find the Gems and Power Source; 2340 Deliver the Gems; 2341 Necklace Recovery, Take 3"
+Horde,5,4,1,52-54,15650,no,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 1497:- 1519:-,5021 Better Late Than Never (used); 5023 Better Late Than Never; 5049 The Jeremiah Blues; 5050 Good Luck Charm; 5051 Two Halves Become One
+Horde,8,6,2,37-42,15375,yes,33:H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale 45:H_27_ArathiHighlands,638 Trollbane (used); 639 Sigil of Strom (used); 640 The Broken Sigil; 641 Sigil of Thoradin; 643 Sigil of Arathor; 644 Sigil of Trollbane; 645 Trol'kalar; 646 Trol'kalar
+Horde,6,6,0,45-46,14930,no,440:H_37_Tanaris+H_44_Tanaris 1497:-,232 Errand for Apothecary Zinge; 238 Errand for Apothecary Zinge; 243 Into the Field; 379 Slake That Thirst; 654 Tanaris Field Sampling; 864 Return to Apothecary Zinge
 Horde,2,2,0,60-60,14900,no,493:-,5526 Shards of the Felvine; 5527 A Reliquary of Purity
 Horde,4,4,0,60-60,14850,no,1497:- 1637:- 1638:-,9330 Stealing Stormwind's Flame; 9331 Stealing Ironforge's Flame; 9332 Stealing Darnassus's Flame; 9339 A Thief's Reward
-Horde,3,3,0,55-57,14450,no,1377:- 1637:-,8276 Taking Back Silithus; 8280 Securing the Supply Lines; 8281 Stepping Up Security
-Horde,7,4,3,37-50,14300,no,3:H_Badlands 45:H_Arathi 1537:-,642 The Princess Trapped (used); 651 Stones of Binding (used); 652 Breaking the Keystone (used); 656 Summoning the Princess; 687 Theldurin the Lost; 688 Myzrael's Allies; 692 The Lost Fragments
 Horde,5,5,0,39-43,13900,no,267:- 1497:-,495 The Crown of Will; 518 The Crown of Will; 519 The Crown of Will; 520 The Crown of Will; 521 The Crown of Will
-Horde,15,3,12,30-43,13650,yes,33:H_Stranglethorn+H_Stranglethorn_Late,185 Tiger Mastery (used); 186 Tiger Mastery (used); 187 Tiger Mastery (used); 188 Tiger Mastery (used); 190 Panther Mastery (used); 191 Panther Mastery (used); 192 Panther Mastery (used); 193 Panther Mastery (used); 194 Raptor Mastery (used); 195 Raptor Mastery (used); 196 Raptor Mastery (used); 197 Raptor Mastery; 208 Big Game Hunter; 338 The Green Hills of Stranglethorn; 583 Welcome to the Jungl
-Horde,4,4,0,48-48,13640,no,47:H_Hinterlands 1637:-,77 A Sticky Situation; 81 Ripple Delivery; 649 Ripple Recovery; 650 Ripple Recovery
-Horde,4,3,1,43-50,13400,yes,8:H_SwampOfSorrows 47:H_Hinterlands,1424 Pool of Tears (used); 1429 The Atal'ai Exile; 1444 Return to Fel'Zerul; 1445 The Temple of Atal'Hakkar
-Horde,3,3,0,43-51,13300,yes,8:H_SwampOfSorrows 15:H_Dustwallow 47:H_Hinterlands,624 Cortello's Riddle; 625 Cortello's Riddle; 626 Cortello's Riddle
-Horde,2,2,0,60-60,13200,no,1377:-,8320 Twilight Geolords; 8321 Vyral the Vile
-Horde,9,6,3,37-45,13100,yes,3:H_Badlands,710 Study of the Elements: Rock (used); 711 Study of the Elements: Rock (used); 712 Study of the Elements: Rock (used); 713 Coolant Heads Prevail; 714 Gyro... What?; 716 Stone Is Better than Cloth; 734 This Is Going to Be Hard; 777 This Is Going to Be Hard; 778 This Is Going to Be Hard
-Horde,2,2,0,53-53,13100,no,16:-,"3601 Kim'jael Indeed!; 5534 Kim'jael's ""Missing"" Equipment"
-Horde,6,5,1,35-40,13050,no,15:H_Dustwallow 33:H_Stranglethorn+H_Stranglethorn_Late 1637:-,1238 The Lost Report (used); 1239 The Severed Head; 1240 The Troll Witchdoctor; 1261 Marg Speaks; 1262 Report to Zor; 7541 Service to the Horde
+Horde,15,3,12,30-43,13650,yes,33:H_23_StranglethornVale+H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale,185 Tiger Mastery (used); 186 Tiger Mastery (used); 187 Tiger Mastery (used); 188 Tiger Mastery (used); 190 Panther Mastery (used); 191 Panther Mastery (used); 192 Panther Mastery (used); 193 Panther Mastery (used); 194 Raptor Mastery (used); 195 Raptor Mastery (used); 196 Raptor Mastery (used); 197 Raptor Mastery; 208 Big Game Hunter; 338 The Green Hills of Stranglethorn; 583 Welcome to the Jungl
+Horde,4,4,0,48-48,13640,no,47:H_39_Hinterlands+H_46_Hinterlands 1637:-,77 A Sticky Situation; 81 Ripple Delivery; 649 Ripple Recovery; 650 Ripple Recovery
+Horde,4,3,1,43-50,13400,yes,8:H_33_SwampofSorrows+H_42_SwampofSorrows 47:H_39_Hinterlands+H_46_Hinterlands,1424 Pool of Tears (used); 1429 The Atal'ai Exile; 1444 Return to Fel'Zerul; 1445 The Temple of Atal'Hakkar
+Horde,3,3,0,43-51,13300,yes,8:H_33_SwampofSorrows+H_42_SwampofSorrows 15:H_35_DustwallowMarsh+H_43_DustwallowMarsh 47:H_39_Hinterlands+H_46_Hinterlands,624 Cortello's Riddle; 625 Cortello's Riddle; 626 Cortello's Riddle
+Horde,2,2,0,60-60,13200,yes,1377:H_57_Silithus,8320 Twilight Geolords; 8321 Vyral the Vile
+Horde,9,6,3,37-45,13100,yes,3:H_32_Badlands,710 Study of the Elements: Rock (used); 711 Study of the Elements: Rock (used); 712 Study of the Elements: Rock (used); 713 Coolant Heads Prevail; 714 Gyro... What?; 716 Stone Is Better than Cloth; 734 This Is Going to Be Hard; 777 This Is Going to Be Hard; 778 This Is Going to Be Hard
 Horde,3,3,0,54-58,13000,no,3:-,4061 The Rise of the Machines; 4062 The Rise of the Machines; 4063 The Rise of the Machines
-Horde,8,6,2,30-41,12550,yes,3:H_Badlands 400:H_ThousandNeedles,1104 Salt Flat Venom (used); 1105 Hardened Shells (used); 1106 Martek the Exiled; 1107 Encrusted Tail Fins; 1108 Indurium; 1137 News for Fizzle; 1190 Keeping Pace; 1194 Rizzle's Schematics
-Horde,2,2,0,58-58,12400,yes,139:Both_EasternPlaguelands,"6026 That's Asking A Lot; 6041 When Smokey Sings, I Get Violent"
+Horde,8,6,2,30-41,12550,yes,3:H_32_Badlands 400:H_20_ThousandNeedles+H_24_ShimmeringFlats+H_29_ThousandNeedles,1104 Salt Flat Venom (used); 1105 Hardened Shells (used); 1106 Martek the Exiled; 1107 Encrusted Tail Fins; 1108 Indurium; 1137 News for Fizzle; 1190 Keeping Pace; 1194 Rizzle's Schematics
+Horde,2,2,0,58-58,12400,yes,139:H_55_EasternPlaguelands,"6026 That's Asking A Lot; 6041 When Smokey Sings, I Get Violent"
 Horde,4,4,0,60-60,12210,no,1497:-,7813 A Donation of Wool; 7814 A Donation of Silk; 7817 A Donation of Mageweave; 7818 A Donation of Runecloth
 Horde,4,4,0,60-60,12210,no,1638:-,7820 A Donation of Wool; 7821 A Donation of Silk; 7822 A Donation of Mageweave; 7823 A Donation of Runecloth
 Horde,4,4,0,60-60,12210,no,1637:-,7824 A Donation of Runecloth; 7826 A Donation of Wool; 7827 A Donation of Silk; 7831 A Donation of Mageweave
 Horde,4,4,0,60-60,12210,no,1637:-,7833 A Donation of Wool; 7834 A Donation of Silk; 7835 A Donation of Mageweave; 7836 A Donation of Runecloth
-Horde,4,4,0,40-44,11880,no,3:H_Badlands 1497:- 1537:-,"709 Solution to Doom; 728 To the Undercity for Yagyin's Digest; 736 The Star, the Hand and the Heart; 737 Forbidden Knowledge"
-Horde,12,2,10,48-58,11650,no,46:- 51:Both_SearingGorge,3441 Divine Retribution (used); 3442 The Flawless Flame (used); 3443 Forging the Shaft (used); 3452 The Flame's Casing (used); 3453 The Torch of Retribution (used); 3454 The Torch of Retribution (used); 3462 Squire Maltrake (used); 3463 Set Them Ablaze! (used); 3481 Trinkets... (used); 4022 A Taste of Flame (used); 4023 A Taste of Flame; 4024 A Taste of Flame
-Horde,4,3,1,52-53,11600,no,17:- 490:Both_UngoroCrater,4145 Larion and Muigin (used); 4146 Zapper Fuel; 4147 Marvon's Workshop; 4148 Bloodpetal Zapper
-Horde,4,2,2,56-60,11600,yes,618:Both_Winterspring,5054 Ursius of the Shardtooth (used); 5055 Brumeran of the Chillwind (used); 5056 Shy-Rotam; 5057 Past Endeavors
+Horde,7,3,4,37-50,11950,no,3:H_32_Badlands 45:H_27_ArathiHighlands 1537:-,642 The Princess Trapped (used); 651 Stones of Binding (used); 652 Breaking the Keystone (used); 656 Summoning the Princess; 687 Theldurin the Lost; 688 Myzrael's Allies (used); 692 The Lost Fragments
+Horde,4,4,0,40-44,11880,no,3:H_32_Badlands 1497:- 1537:-,"709 Solution to Doom; 728 To the Undercity for Yagyin's Digest; 736 The Star, the Hand and the Heart; 737 Forbidden Knowledge"
+Horde,12,2,10,48-58,11650,yes,46:H_49_BurningSteppes 51:H_41_SearingGorge,3441 Divine Retribution (used); 3442 The Flawless Flame (used); 3443 Forging the Shaft (used); 3452 The Flame's Casing (used); 3453 The Torch of Retribution (used); 3454 The Torch of Retribution (used); 3462 Squire Maltrake (used); 3463 Set Them Ablaze! (used); 3481 Trinkets... (used); 4022 A Taste of Flame (used); 4023 A Taste of Flame; 4024 A Taste of Flame
+Horde,4,3,1,52-53,11600,no,17:- 490:H_48_UnGoroCrater,4145 Larion and Muigin (used); 4146 Zapper Fuel; 4147 Marvon's Workshop; 4148 Bloodpetal Zapper
+Horde,4,2,2,56-60,11600,yes,618:H_52_Winterspring+H_58_Winterspring,5054 Ursius of the Shardtooth (used); 5055 Brumeran of the Chillwind (used); 5056 Shy-Rotam; 5057 Past Endeavors
 Horde,6,6,0,50-50,11280,no,1497:- 1637:- 1638:-,936 Assisting Arch Druid Runetotem; 3761 Un'Goro Soil; 3762 Assisting Arch Druid Runetotem; 3782 Morrowgrain Research; 3784 Assisting Arch Druid Runetotem; 3786 Morrowgrain Research
-Horde,10,7,3,26-36,11040,no,400:H_ThousandNeedles 406:H_Stonetalon 1497:-,1149 Test of Faith (used); 1150 Test of Endurance (used); 1151 Test of Strength (used); 1152 Test of Lore; 1154 Test of Lore; 1159 Test of Lore; 1160 Test of Lore; 1394 Final Passage; 6627 Test of Lore; 6628 Test of Lore
-Horde,5,5,0,33-40,10875,yes,405:H_Desolace,1480 The Corrupter; 1481 The Corrupter; 1482 The Corrupter; 1484 The Corrupter; 1488 The Corrupter
+Horde,10,7,3,26-36,11040,no,400:H_17_ThousandNeedles+H_20_ThousandNeedles+H_24_ShimmeringFlats+H_29_ThousandNeedles 406:H_15_StonetalonMountains+H_19_StonetalonMountains 1497:-,1149 Test of Faith (used); 1150 Test of Endurance (used); 1151 Test of Strength (used); 1152 Test of Lore; 1154 Test of Lore; 1159 Test of Lore; 1160 Test of Lore; 1394 Final Passage; 6627 Test of Lore; 6628 Test of Lore
+Horde,6,4,2,35-40,11000,no,15:H_30_DustwallowMarsh+H_35_DustwallowMarsh 33:H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale 1637:-,1238 The Lost Report (used); 1239 The Severed Head (used); 1240 The Troll Witchdoctor; 1261 Marg Speaks; 1262 Report to Zor; 7541 Service to the Horde
 Horde,2,2,0,60-60,10610,no,2557:-,7461 The Madness Within; 7877 The Treasure of the Shen'dralar
-Horde,3,3,0,47-47,10500,no,47:H_Hinterlands 1497:-,2742 Rin'ji is Trapped!; 2782 Rin'ji's Secret; 8273 Oran's Gratitude
-Horde,3,2,1,53-53,10500,yes,490:Both_UngoroCrater,4243 Chasing A-Me 01 (used); 4244 Chasing A-Me 01; 4245 Chasing A-Me 01
-Horde,10,9,1,30-41,10490,no,17:- 33:H_Stranglethorn+H_Stranglethorn_Late 400:H_ThousandNeedles 440:Both_Tanaris,1176 Load Lightening (used); 1178 Goblin Sponsorship; 1180 Goblin Sponsorship; 1181 Goblin Sponsorship; 1182 Goblin Sponsorship; 1183 Goblin Sponsorship; 1186 The Eighteenth Pilot; 1187 Razzeric's Tweaking; 1188 Safety First; 1189 Safety First
-Horde,4,4,0,50-51,10410,no,33:-,615 The Captain's Cutlass; 8552 The Monogrammed Sash; 8553 The Captain's Cutlass; 8554 Facing Negolash
+Horde,3,2,1,53-53,10500,yes,490:H_48_UnGoroCrater,4243 Chasing A-Me 01 (used); 4244 Chasing A-Me 01; 4245 Chasing A-Me 01
+Horde,10,9,1,30-41,10490,no,17:- 33:H_23_StranglethornVale+H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale 400:H_20_ThousandNeedles+H_24_ShimmeringFlats+H_29_ThousandNeedles 440:H_37_Tanaris,1176 Load Lightening (used); 1178 Goblin Sponsorship; 1180 Goblin Sponsorship; 1181 Goblin Sponsorship; 1182 Goblin Sponsorship; 1183 Goblin Sponsorship; 1186 The Eighteenth Pilot; 1187 Razzeric's Tweaking; 1188 Safety First; 1189 Safety First
 Horde,2,2,0,52-53,10350,no,3:-,3821 Dreadmaul Rock; 3822 Krom'Grul
-Horde,2,2,0,45-51,10250,no,33:-,594 Message in a Bottle; 630 Message in a Bottle
-Horde,9,2,7,34-46,10100,yes,33:H_Stranglethorn+H_Stranglethorn_Late,581 Hunt for Yenniku (used); 582 Headhunting (used); 584 Bloodscalp Clan Heads (used); 585 Speaking with Nezzliok (used); 586 Speaking with Gan'zulah (used); 588 The Fate of Yenniku (used); 589 The Singing Crystals (used); 591 The Mind's Eye; 592 Saving Yenniku
-Horde,3,3,0,35-60,10050,no,36:- 1637:-,6963 Stolen Winter Veil Treats; 6983 You're a Mean One...; 6984 A Smokywood Pastures' Thank You!
-Horde,1,1,0,60-60,9950,no,46:-,4866 Mother's Milk
+Horde,2,2,0,45-51,10250,yes,33:H_34_StranglethornVale+H_40_StranglethornVale,594 Message in a Bottle; 630 Message in a Bottle
+Horde,9,2,7,34-46,10100,yes,33:H_23_StranglethornVale+H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale+H_40_StranglethornVale,581 Hunt for Yenniku (used); 582 Headhunting (used); 584 Bloodscalp Clan Heads (used); 585 Speaking with Nezzliok (used); 586 Speaking with Gan'zulah (used); 588 The Fate of Yenniku (used); 589 The Singing Crystals (used); 591 The Mind's Eye; 592 Saving Yenniku
+Horde,3,3,0,35-60,10050,no,36:H_28_AlteracMountains 1637:-,6963 Stolen Winter Veil Treats; 6983 You're a Mean One...; 6984 A Smokywood Pastures' Thank You!
 Horde,1,1,0,60-60,9950,no,1583:-,4867 Urok Doomhowl
 Horde,1,1,0,60-60,9950,yes,,7368 Defusing the Threat
 Horde,1,1,0,60-60,9950,no,2597:-,7401 Wanted: DWARVES!
@@ -526,52 +499,51 @@ Horde,1,1,0,60-60,9950,no,33:-,8201 A Collection of Heads
 Horde,1,1,0,60-60,9950,no,33:-,8240 A Bijou for Zanza
 Horde,1,1,0,60-60,9950,yes,,8299 Cut Arathor Supply Lines
 Horde,2,2,0,60-60,9950,no,493:-,8446 Shrouded in Nightmare; 8447 Waking Legends
-Horde,1,1,0,60-60,9950,no,1377:-,8791 The Fall of Ossirian
+Horde,1,1,0,60-60,9950,yes,1377:H_57_Silithus,8791 The Fall of Ossirian
 Horde,1,1,0,60-60,9950,no,1497:- 1637:-,8793 The Horde Needs Your Help!
 Horde,1,1,0,60-60,9950,no,1637:-,8794 The Horde Needs Your Help!
-Horde,1,1,0,60-60,9950,no,33:- 1377:-,8857 Secrets of the Colossus - Ashi
-Horde,1,1,0,60-60,9950,no,51:- 1377:-,8858 Secrets of the Colossus - Regal
-Horde,1,1,0,60-60,9950,no,139:Both_EasternPlaguelands 1377:-,8859 Secrets of the Colossus - Zora
-Horde,5,3,2,32-40,9600,yes,45:H_Arathi 267:H_Hillsbrad,676 The Hammer May Fall; 677 Call to Arms (used); 678 Call to Arms (used); 679 Call to Arms; 680 The Real Threat
-Horde,2,2,0,43-50,9500,no,3:-,782 Broken Alliances; 793 Broken Alliances
+Horde,1,1,0,60-60,9950,no,33:- 1377:H_57_Silithus,8857 Secrets of the Colossus - Ashi
+Horde,1,1,0,60-60,9950,no,51:- 1377:H_57_Silithus,8858 Secrets of the Colossus - Regal
+Horde,1,1,0,60-60,9950,yes,139:H_55_EasternPlaguelands 1377:H_57_Silithus,8859 Secrets of the Colossus - Zora
+Horde,5,3,2,32-40,9600,yes,45:H_22_ArathiHighlands+H_27_ArathiHighlands 267:H_21_HillsbradFoothills,676 The Hammer May Fall; 677 Call to Arms (used); 678 Call to Arms (used); 679 Call to Arms; 680 The Real Threat
+Horde,5,4,1,33-40,9575,yes,405:H_25_Desolace,1480 The Corrupter (used); 1481 The Corrupter; 1482 The Corrupter; 1484 The Corrupter; 1488 The Corrupter
+Horde,11,11,0,14-24,9245,no,85:H_Undead_Tirisfal 130:- 1497:-,437 The Dead Fields; 438 The Decrepit Ferry; 439 Rot Hide Clues; 440 The Engraved Ring; 441 Raleigh and the Undercity; 442 Assault on Fenris Isle; 443 Rot Hide Ichor; 444 Rot Hide Origins; 446 Thule Ravenclaw; 448 Report to Hadrec; 530 A Husband's Revenge
 Horde,2,2,0,49-49,9100,no,405:-,7044 Legends of Maraudon; 7046 The Scepter of Celebras
-Horde,5,4,1,28-30,9050,no,267:H_Hillsbrad 1497:-,509 Elixir of Agony (used); 513 Elixir of Agony; 515 Elixir of Agony; 517 Elixir of Agony; 524 Elixir of Agony
+Horde,5,4,1,28-30,9050,no,267:H_21_HillsbradFoothills 1497:-,509 Elixir of Agony (used); 513 Elixir of Agony; 515 Elixir of Agony; 517 Elixir of Agony; 524 Elixir of Agony
 Horde,2,2,0,57-57,9050,no,357:- 1497:- 1637:- 1638:-,7489 Lethtendris's Web; 7492 Camp Mojache
 Horde,2,2,0,60-60,8960,no,3:- 1497:-,4768 The Darkstone Tablet; 4769 Vivian Lagrave and the Darkstone Tablet
-Horde,3,2,1,55-56,8600,no,490:- 618:Both_Winterspring,974 Finding the Source (used); 980 The New Springs; 4842 Strange Sources
-Horde,1,1,0,55-55,8450,no,4:-,2521 To Serve Kum'isha
-Horde,3,2,1,55-55,8450,no,28:H_WesternPlaguelands 85:-,5901 A Plague Upon Thee (used); 5902 A Plague Upon Thee; 6390 A Plague Upon Thee
+Horde,3,2,1,55-56,8600,yes,490:H_48_UnGoroCrater 618:H_52_Winterspring+H_58_Winterspring,974 Finding the Source (used); 980 The New Springs; 4842 Strange Sources
 Horde,1,1,0,55-55,8450,yes,,8123 Cut Arathor Supply Lines
 Horde,1,1,0,60-60,8300,no,2017:-,5125 Aurius' Reckoning
-Horde,1,1,0,60-60,8300,yes,139:Both_EasternPlaguelands,5214 The Great Ezra Grimm
-Horde,2,1,1,60-60,8300,yes,139:Both_EasternPlaguelands,5281 The Restless Souls (used); 5282 The Restless Souls
+Horde,1,1,0,60-60,8300,yes,139:H_55_EasternPlaguelands,5214 The Great Ezra Grimm
+Horde,2,1,1,60-60,8300,yes,139:H_55_EasternPlaguelands,5281 The Restless Souls (used); 5282 The Restless Souls
 Horde,2,1,1,60-60,8300,no,85:-,5341 Barov Family Fortune (used); 5342 The Last Barov
 Horde,1,1,0,60-60,8300,no,357:-,7481 Elven Legends
 Horde,1,1,0,60-60,8300,no,2557:-,7703 Unfinished Gordok Business
-Horde,1,1,0,60-60,8300,no,1377:-,8308 Brann Bronzebeard's Lost Letter
 Horde,1,1,0,60-60,8300,no,17:- 36:- 45:- 1497:- 1637:- 1638:-,8367 For Great Honor
 Horde,1,1,0,60-60,8300,no,17:- 36:- 45:- 1497:- 1637:- 1638:-,8369 Invaders of Alterac Valley
 Horde,3,3,0,52-52,8160,no,1497:-,3568 Seeping Corruption; 3569 Seeping Corruption; 3570 Seeping Corruption
 Horde,3,3,0,34-35,8150,no,721:- 1637:-,2945 Grime-Encrusted Ring; 2949 Return of the Ring; 2950 Nogg's Ring Redo
-Horde,1,1,0,59-59,8050,no,1377:-,"8283 Wanted - Deathclasp, Terror of the Sands"
-Horde,3,3,0,43-47,7950,no,357:H_Feralas 1637:-,2978 The Gordunni Scroll; 2979 Dark Ceremony; 3002 The Gordunni Orb
+Horde,1,1,0,59-59,8050,yes,1377:H_57_Silithus,"8283 Wanted - Deathclasp, Terror of the Sands"
+Horde,3,3,0,43-47,7950,no,357:H_38_Feralas 1637:-,2978 The Gordunni Scroll; 2979 Dark Ceremony; 3002 The Gordunni Orb
+Horde,9,2,7,35-44,7800,yes,33:H_26_StranglethornVale+H_31_StranglethornVale+H_34_StranglethornVale+H_40_StranglethornVale 45:H_27_ArathiHighlands,662 Deep Sea Salvage (used); 663 Land Ho! (used); 664 Drowned Sorrows (used); 665 Sunken Treasure (used); 666 Sunken Treasure (used); 667 Death From Below; 668 Sunken Treasure (used); 669 Sunken Treasure (used); 670 Sunken Treasure
 Horde,1,1,0,58-58,7750,no,357:-,7441 Pusillin and the Elder Azj'Tordin
 Horde,2,2,0,36-36,7700,no,1497:-,6521 An Unholy Alliance; 6522 An Unholy Alliance
-Horde,3,3,0,55-55,7560,no,8:- 618:Both_Winterspring 1477:-,3373 The Essence of Eranikus; 3374 The Essence of Eranikus; 3512 In Eranikus' Own Words
-Horde,3,3,0,35-35,7550,no,15:-,1203 Jarl Needs a Blade; 1206 Jarl Needs Eyes; 1218 Soothing Spices
-Horde,4,4,0,42-42,7540,no,8:H_SwampOfSorrows 10:-,1372 Nothing But The Truth; 1383 Nothing But The Truth; 1388 Nothing But The Truth; 1391 Nothing But The Truth
-Horde,5,4,1,33-35,7400,no,17:- 400:H_ThousandNeedles 1637:-,1145 The Swarm Grows (used); 1146 The Swarm Grows; 1147 The Swarm Grows; 1148 Parts of the Swarm; 1184 Parts of the Swarm
-Horde,6,5,1,30-33,7375,no,405:H_Desolace 1637:-,1431 Alliance Relations; 1432 Alliance Relations; 1433 Alliance Relations; 1434 Befouled by Satyr (used); 1435 The Burning of Spirits; 1436 Alliance Relations
-Horde,8,3,5,24-32,7300,no,267:H_Hillsbrad 1497:-,527 Battle of Hillsbrad (used); 528 Battle of Hillsbrad (used); 529 Battle of Hillsbrad (used); 532 Battle of Hillsbrad (used); 539 Battle of Hillsbrad; 541 Battle of Hillsbrad; 546 Souvenirs of Death (used); 550 Battle of Hillsbrad
-Horde,3,3,0,60-60,7260,no,618:-,969 Luck Be With You; 975 Cache of Mau'ari; 6606 A Little Luck
+Horde,4,2,2,50-51,7590,yes,33:H_40_StranglethornVale,615 The Captain's Cutlass; 8552 The Monogrammed Sash (used); 8553 The Captain's Cutlass (used); 8554 Facing Negolash
+Horde,3,3,0,55-55,7560,no,8:- 618:H_52_Winterspring 1477:-,3373 The Essence of Eranikus; 3374 The Essence of Eranikus; 3512 In Eranikus' Own Words
+Horde,3,3,0,35-35,7550,yes,15:H_30_DustwallowMarsh,1203 Jarl Needs a Blade; 1206 Jarl Needs Eyes; 1218 Soothing Spices
+Horde,4,1,3,55-57,7550,yes,361:H_51_Felwood+H_53_Felwood,5202 A Strange Red Key (used); 5203 Rescue From Jaedenar (used); 5204 Retribution of the Light (used); 5385 The Remains of Trey Lightforge
+Horde,4,4,0,42-42,7540,no,8:H_33_SwampofSorrows 10:-,1372 Nothing But The Truth; 1383 Nothing But The Truth; 1388 Nothing But The Truth; 1391 Nothing But The Truth
+Horde,5,4,1,33-35,7400,no,17:- 400:H_24_ShimmeringFlats+H_29_ThousandNeedles 1637:-,1145 The Swarm Grows (used); 1146 The Swarm Grows; 1147 The Swarm Grows; 1148 Parts of the Swarm; 1184 Parts of the Swarm
+Horde,6,5,1,30-33,7375,no,405:H_25_Desolace 1637:-,1431 Alliance Relations; 1432 Alliance Relations; 1433 Alliance Relations; 1434 Befouled by Satyr (used); 1435 The Burning of Spirits; 1436 Alliance Relations
 Horde,2,2,0,60-60,7260,no,36:- 2597:-,7123 Speak with our Quartermaster; 7124 Capture a Mine
 Horde,1,1,0,50-50,7100,yes,,618 Facing Negolash
 Horde,1,1,0,50-50,7100,no,400:-,2770 Gahz'rilla
-Horde,9,4,5,17-23,6900,no,17:H_Barrens 267:- 1637:- 1638:-,1061 The Spirits of Stonetalon (used); 1062 Goblin Invaders (used); 1063 The Elder Crone (used); 1064 Forsaken Aid (used); 1065 Journey to Tarren Mill; 1066 Blood of Innocents (used); 1067 Return to Thunder Bluff; 1068 Shredding Machines; 1086 The Flying Machine Airport
+Horde,9,4,5,17-23,6900,no,17:H_10_Barrens+H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens 267:- 1637:- 1638:-,1061 The Spirits of Stonetalon (used); 1062 Goblin Invaders (used); 1063 The Elder Crone (used); 1064 Forsaken Aid (used); 1065 Journey to Tarren Mill; 1066 Blood of Innocents (used); 1067 Return to Thunder Bluff; 1068 Shredding Machines; 1086 The Flying Machine Airport
 Horde,2,2,0,33-33,6600,no,1497:-,"1109 Going, Going, Guano!; 1113 Hearts of Zeal"
 Horde,1,1,0,60-60,6600,yes,,1318 Unfinished Gordok Business
-Horde,1,1,0,60-60,6600,no,618:-,"5047 Pip Quickwit, At Your Service!"
-Horde,2,1,1,60-60,6600,yes,139:Both_EasternPlaguelands,5212 The Flesh Does Not Lie (used); 5213 The Active Agent
+Horde,1,1,0,60-60,6600,yes,618:H_58_Winterspring,"5047 Pip Quickwit, At Your Service!"
+Horde,2,1,1,60-60,6600,yes,139:H_55_EasternPlaguelands,5212 The Flesh Does Not Lie (used); 5213 The Active Agent
 Horde,1,1,0,60-60,6600,no,2557:-,5518 The Gordok Ogre Suit
 Horde,1,1,0,60-60,6600,no,2557:-,5525 Free Knot!
 Horde,1,1,0,60-60,6600,no,2597:-,7224 Enemy Booty
@@ -583,176 +555,153 @@ Horde,1,1,0,60-60,6600,no,2597:-,7302 Fallen Sky Lords
 Horde,1,1,0,60-60,6600,no,1583:-,7761 Blackhand's Command
 Horde,1,1,0,60-60,6600,yes,,7848 Attunement to the Core
 Horde,1,1,0,60-60,6600,no,14:-,8150 Honoring a Hero
-Horde,1,1,0,60-60,6600,no,1377:-,8318 Secret Communication
-Horde,1,1,0,60-60,6600,no,1377:-,8361 Abyssal Contacts
+Horde,1,1,0,60-60,6600,yes,1377:H_57_Silithus,8361 Abyssal Contacts
 Horde,1,1,0,60-60,6600,no,3428:-,8579 Mortal Champions
 Horde,1,1,0,60-60,6600,no,493:-,8868 Elune's Blessing
-Horde,1,1,0,60-60,6600,no,1377:-,9023 The Perfect Poison
-Horde,1,1,0,60-60,6600,no,1377:-,9422 Scouring the Desert
-Horde,1,1,0,60-60,6600,yes,139:Both_EasternPlaguelands,9665 Bolstering Our Defenses
+Horde,1,1,0,60-60,6600,yes,1377:H_57_Silithus,9023 The Perfect Poison
+Horde,1,1,0,60-60,6600,yes,139:H_55_EasternPlaguelands,9665 Bolstering Our Defenses
 Horde,1,1,0,59-59,6400,no,3:-,4724 The Pack Mistress
 Horde,1,1,0,59-59,6400,no,46:-,4729 Kibler's Exotic Pets
-Horde,2,2,0,38-38,6400,yes,405:H_Desolace,5381 Hand of Iruxos; 5581 Portals of the Legion
+Horde,2,2,0,38-38,6400,no,405:-,5381 Hand of Iruxos; 5581 Portals of the Legion
+Horde,3,2,1,47-47,6300,no,47:H_39_Hinterlands+H_46_Hinterlands 1497:-,2742 Rin'ji is Trapped! (used); 2782 Rin'ji's Secret; 8273 Oran's Gratitude
 Horde,2,2,0,55-55,6210,no,3:- 1497:-,4133 Vivian Lagrave; 4134 Lost Thunderbrew Recipe
 Horde,1,1,0,51-51,6100,no,405:-,7064 Corruption of Earth and Seed
 Horde,1,1,0,51-51,6100,no,493:-,7066 Seed of Life
-Horde,2,2,0,33-33,5950,yes,267:H_Hillsbrad,552 Helcular's Revenge; 553 Helcular's Revenge
-Horde,3,1,2,48-50,5900,yes,47:H_Hinterlands,7841 Message to the Wildhammer (used); 7842 Another Message to the Wildhammer (used); 7843 The Final Message to the Wildhammer
-Horde,1,1,0,45-45,5850,no,33:-,348 Stranglethorn Fever
+Horde,2,1,1,43-50,5900,yes,3:H_32_Badlands,782 Broken Alliances (used); 793 Broken Alliances
+Horde,3,1,2,48-50,5900,yes,47:H_39_Hinterlands+H_46_Hinterlands,7841 Message to the Wildhammer (used); 7842 Another Message to the Wildhammer (used); 7843 The Final Message to the Wildhammer
+Horde,1,1,0,45-45,5850,yes,33:H_34_StranglethornVale+H_40_StranglethornVale,348 Stranglethorn Fever
 Horde,1,1,0,45-45,5850,yes,,8160 Cut Arathor Supply Lines
-Horde,3,1,2,54-56,5800,no,28:H_WesternPlaguelands 1638:-,4984 The Wildlife Suffers Too (used); 4985 The Wildlife Suffers Too (used); 4987 Glyphed Oaken Branch
-Horde,1,1,0,56-56,5800,yes,361:H_Felwood,8471 Winterfall Ritual Totem
-Horde,1,1,0,55-55,5650,no,4:-,3501 Everything Counts In Large Amounts
-Horde,2,1,1,55-55,5650,no,490:-,4289 The Apes of Un'Goro (used); 4301 The Mighty U'cha
-Horde,2,1,1,55-55,5650,no,490:-,4491 A Little Help From My Friends; 4492 Lost! (used)
+Horde,3,1,2,54-56,5800,no,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 1638:-,4984 The Wildlife Suffers Too (used); 4985 The Wildlife Suffers Too (used); 4987 Glyphed Oaken Branch
 Horde,1,1,0,55-55,5650,no,17:-,4502 Volcanic Activity
 Horde,1,1,0,55-55,5650,no,45:-,8120 The Battle for Arathi Basin!
-Horde,1,1,0,55-55,5650,yes,361:H_Felwood,8470 Deadwood Ritual Totem
 Horde,2,2,0,52-52,5610,no,1585:-,3801 Dark Iron Legacy; 3802 Dark Iron Legacy
-Horde,2,2,0,25-29,5500,yes,17:H_Barrens,3513 The Runed Scroll; 3514 Horde Presence
-Horde,5,4,1,49-49,5460,no,440:-,2605 The Thirsty Goblin (used); 2606 In Good Taste; 2641 Sprinkle's Secret Ingredient; 2661 Delivery for Marin; 2662 Noggenfogger Elixir
 Horde,1,1,0,54-54,5450,no,1585:-,4201 The Love Potion
 Horde,1,1,0,54-54,5450,no,440:-,4504 Super Sticky
 Horde,1,1,0,48-48,5450,no,405:-,7067 The Pariah's Instructions
 Horde,2,2,0,34-35,5400,no,267:-,544 Prison Break In; 545 Dalaran Patrols
-Horde,2,2,0,32-34,5250,yes,267:H_Hillsbrad,556 Stone Tokens; 557 Bracers of Binding
-Horde,1,1,0,47-47,5250,yes,51:Both_SearingGorge,4451 The Key to Freedom
-Horde,1,1,0,47-47,5250,no,405:-,7028 Twisted Evils
-Horde,1,1,0,47-47,5250,no,405:-,7029 Vyletongue Corruption
+Horde,2,2,0,32-34,5250,yes,267:H_21_HillsbradFoothills,556 Stone Tokens; 557 Bracers of Binding
+Horde,1,1,0,47-47,5250,yes,405:H_36_Desolace,7029 Vyletongue Corruption
 Horde,1,1,0,42-42,5150,no,1497:-,1048 Into The Scarlet Monastery
+Horde,5,5,0,10-15,5100,no,130:-,99 Arugal's Folly; 421 Prove Your Worth; 422 Arugal's Folly; 423 Arugal's Folly; 424 Arugal's Folly
 Horde,1,1,0,52-52,5100,no,357:-,4120 The Strength of Corruption
 Horde,1,1,0,52-52,5100,no,1637:-,4300 Bone-Bladed Weapons
-Horde,2,1,1,45-46,5050,yes,51:Both_SearingGorge 440:Both_Tanaris,4449 Caught! (used); 4450 Ledger from Tanaris
+Horde,2,1,1,45-46,5050,yes,51:H_41_SearingGorge 440:H_37_Tanaris+H_44_Tanaris,4449 Caught! (used); 4450 Ledger from Tanaris
+Horde,5,3,2,49-49,5005,yes,440:H_44_Tanaris,2605 The Thirsty Goblin (used); 2606 In Good Taste (used); 2641 Sprinkle's Secret Ingredient; 2661 Delivery for Marin; 2662 Noggenfogger Elixir
 Horde,7,7,0,60-60,4950,no,1637:-,"172 Children's Week; 910 Down at the Docks; 911 Gateway to the Frontier; 915 You Scream, I Scream...; 925 Cairne's Hoofprint; 1800 Lordaeron Throne Room; 5502 A Warden of the Horde"
 Horde,1,1,0,60-60,4950,no,440:-,2741 The Super Egg-O-Matic
 Horde,1,1,0,60-60,4950,no,1637:-,8746 Metzen the Reindeer
-Horde,3,2,1,25-29,4900,no,400:H_ThousandNeedles 1638:-,1195 The Sacred Flame; 1196 The Sacred Flame (used); 1197 The Sacred Flame
 Horde,6,6,0,30-30,4900,no,721:-,2951 The Sparklematic 5200!; 2952 The Sparklematic 5200!; 4601 The Sparklematic 5200!; 4602 The Sparklematic 5200!; 4605 The Sparklematic 5200!; 4606 The Sparklematic 5200!
-Horde,5,1,4,43-45,4850,yes,15:H_Dustwallow,1169 Identifying the Brood (used); 1170 The Brood of Onyxia (used); 1171 The Brood of Onyxia (used); 1172 The Brood of Onyxia (used); 1173 Challenge Overlord Mok'Morokk
-Horde,1,1,0,45-45,4850,yes,440:Both_Tanaris,2876 Ship Schedules
-Horde,3,1,2,45-45,4850,no,357:H_Feralas 1637:-,2973 A New Cloak's Sheen (used); 2974 A Grim Discovery (used); 2976 A Grim Discovery
-Horde,1,1,0,50-50,4700,no,33:-,580 Whiskey Slim's Lost Grog
-Horde,1,1,0,50-50,4700,no,4:-,2581 Snickerfang Jowls
-Horde,1,1,0,50-50,4700,no,4:-,2583 A Boar's Vitality
-Horde,1,1,0,50-50,4700,no,4:-,2585 The Decisive Striker
-Horde,1,1,0,50-50,4700,no,4:-,2601 The Basilisk's Bite
-Horde,1,1,0,50-50,4700,no,4:-,2603 Vulture's Vigor
-Horde,1,1,0,50-50,4700,no,440:-,3362 Thistleshrub Valley
-Horde,1,1,0,50-50,4700,yes,51:Both_SearingGorge,7704 Look at the Size of It!
-Horde,2,2,0,25-26,4650,no,17:H_Barrens 1638:-,3369 In Nightmares; 6981 The Glowing Shard
-Horde,1,1,0,49-49,4550,no,440:-,5863 The Dunemaul Compound
+Horde,5,1,4,43-45,4850,yes,15:H_35_DustwallowMarsh,1169 Identifying the Brood (used); 1170 The Brood of Onyxia (used); 1171 The Brood of Onyxia (used); 1172 The Brood of Onyxia (used); 1173 Challenge Overlord Mok'Morokk
+Horde,1,1,0,45-45,4850,yes,440:H_37_Tanaris,2876 Ship Schedules
+Horde,3,1,2,45-45,4850,no,357:H_38_Feralas 1637:-,2973 A New Cloak's Sheen (used); 2974 A Grim Discovery (used); 2976 A Grim Discovery
+Horde,6,6,0,14-22,4820,no,130:-,477 Border Crossings; 478 Maps and Runes; 479 Ambermill Investigations; 480 The Weaver; 481 Dalar's Analysis; 482 Dalaran's Intentions
+Horde,1,1,0,50-50,4700,yes,33:H_40_StranglethornVale,580 Whiskey Slim's Lost Grog
+Horde,1,1,0,50-50,4700,yes,51:H_41_SearingGorge,7704 Look at the Size of It!
+Horde,2,2,0,25-26,4650,no,17:H_14_SouthernBarrens+H_16_SouthernBarrens 1638:-,3369 In Nightmares; 6981 The Glowing Shard
 Horde,2,2,0,37-37,4535,no,722:-,3523 Scourge of the Downs; 3525 Extinguishing the Idol
 Horde,1,1,0,39-39,4500,yes,,8266 Ribbons of Sacrifice
-Horde,2,1,1,46-48,4400,yes,357:H_Feralas,2822 The Mark of Quality (used); 7734 Improved Quality
-Horde,4,2,2,22-26,4400,yes,331:H_Ashenvale 406:H_Stonetalon,6562 Trouble in the Deeps (used); 6563 The Essence of Aku'Mai (used); 6564 Allegiance to the Old Gods; 6565 Allegiance to the Old Gods
+Horde,4,2,2,22-26,4400,yes,331:H_18_Ashenvale 406:H_13_StonetalonMountains+H_15_StonetalonMountains+H_19_StonetalonMountains,6562 Trouble in the Deeps (used); 6563 The Essence of Aku'Mai (used); 6564 Allegiance to the Old Gods; 6565 Allegiance to the Old Gods
+Horde,3,3,0,12-18,4310,no,130:- 1497:-,447 A Recipe For Death; 450 A Recipe For Death; 451 A Recipe For Death
 Horde,1,1,0,42-42,4300,no,1497:-,3341 Bring the End
-Horde,3,2,1,45-45,4290,no,33:- 440:Both_Tanaris,2872 Stoley's Debt; 2873 Stoley's Shipment (used); 2874 Deliver to MacKinley
 Horde,3,2,1,30-37,4250,no,17:- 1638:-,1130 Melor Sends Word; 1131 Steelsnap (used); 1136 Frostmaw
-Horde,1,1,0,47-47,4200,no,16:-,5535 Spiritual Unrest
-Horde,1,1,0,47-47,4200,no,16:-,5536 A Land Filled with Hatred
 Horde,1,1,0,45-45,3900,no,1638:-,1205 Deadmire
+Horde,3,1,2,45-45,3900,yes,33:H_34_StranglethornVale+H_40_StranglethornVale 440:H_37_Tanaris,2872 Stoley's Debt (used); 2873 Stoley's Shipment (used); 2874 Deliver to MacKinley
 Horde,1,1,0,45-45,3900,no,45:-,8169 The Battle for Arathi Basin!
-Horde,2,2,0,35-40,3700,yes,3:H_Badlands 8:H_SwampOfSorrows,1418 Neeka Bloodscar; 1420 Report to Helgrum
-Horde,8,4,4,14-19,3680,no,17:H_Barrens 1637:-,894 Samophlange (used); 900 Samophlange (used); 901 Samophlange (used); 902 Samophlange (used); 3921 Wenikee Boltbucket; 3922 Nugget Slugs; 3923 Rilli Greasygob; 3924 Samophlange Manual
-Horde,8,4,4,10-22,3655,no,17:H_Barrens 130:H_Silverpine 1638:-,870 The Forgotten Pools (used); 877 The Stagnant Oasis (used); 880 Altered Beings (used); 886 The Barrens Oases (used); 914 Leaders of the Fang; 1489 Hamuul Runetotem; 1490 Nara Wildmane; 3301 Mura Runetotem
 Horde,4,4,0,60-60,3630,no,1497:- 1637:-,6961 Great-father Winter is Here!; 6962 Treats for Great-father Winter; 7021 Great-father Winter is Here!; 7024 Great-father Winter is Here!
 Horde,1,1,0,43-43,3600,no,1497:-,2342 Reclaimed Treasures
-Horde,1,1,0,43-43,3600,yes,357:H_Feralas,2987 Gordunni Cobalt
-Horde,7,1,6,35-37,3550,no,15:H_Dustwallow 1638:-,1251 The Black Shield (used); 1269 Lieutenant Paval Reethe (used); 1273 Questioning Reethe; 1276 The Black Shield (used); 1321 The Black Shield (used); 1322 The Black Shield (used); 1323 The Black Shield (used)
-Horde,1,1,0,50-50,3550,yes,490:Both_UngoroCrater,3884 Williden's Journal
-Horde,2,1,1,33-38,3550,yes,405:H_Desolace,5741 Sceptre of Light (used); 6027 Book of the Ancients
-Horde,2,1,1,39-42,3450,yes,3:H_Badlands,2202 Uldaman Reagent Run; 2258 Badlands Reagent Run (used)
-Horde,1,1,0,42-42,3450,yes,33:H_Stranglethorn+H_Stranglethorn_Late,2932 Grim Message
+Horde,1,1,0,43-43,3600,yes,357:H_38_Feralas,2987 Gordunni Cobalt
+Horde,7,1,6,35-37,3550,no,15:H_30_DustwallowMarsh 1638:-,1251 The Black Shield (used); 1269 Lieutenant Paval Reethe (used); 1273 Questioning Reethe; 1276 The Black Shield (used); 1321 The Black Shield (used); 1322 The Black Shield (used); 1323 The Black Shield (used)
+Horde,2,1,1,33-38,3550,yes,405:H_25_Desolace,5741 Sceptre of Light (used); 6027 Book of the Ancients
+Horde,1,1,0,42-42,3450,yes,33:H_31_StranglethornVale+H_34_StranglethornVale,2932 Grim Message
 Horde,1,1,0,35-35,3450,no,17:-,6626 A Host of Evil
 Horde,1,1,0,42-42,3450,no,1637:-,7068 Shadowshard Fragments
 Horde,1,1,0,35-35,3450,yes,,8161 Cut Arathor Supply Lines
-Horde,7,4,3,20-30,3360,no,331:H_Ashenvale 1637:- 1638:-,2 Sharptalon's Claw (used); 23 Ursangous's Paw (used); 24 Shadumbra's Head (used); 235 The Ashenvale Hunt; 247 The Hunt Completed; 742 The Ashenvale Hunt; 6383 The Ashenvale Hunt
+Horde,8,3,5,10-22,3365,no,17:H_10_Barrens+H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens 130:- 1638:-,870 The Forgotten Pools (used); 877 The Stagnant Oasis (used); 880 Altered Beings (used); 886 The Barrens Oases (used); 914 Leaders of the Fang; 1489 Hamuul Runetotem (used); 1490 Nara Wildmane; 3301 Mura Runetotem
 Horde,1,1,0,27-27,3300,no,130:-,1014 Arugal Must Die
-Horde,1,1,0,33-33,3300,no,267:H_Hillsbrad 796:-,1051 Vorrel's Revenge
+Horde,1,1,0,33-33,3300,no,267:H_21_HillsbradFoothills 796:-,1051 Vorrel's Revenge
 Horde,2,2,0,60-60,3300,no,85:- 267:-,8322 Rotten Eggs; 8409 Ruined Kegs
-Horde,2,1,1,22-40,3150,yes,267:H_Hillsbrad,549 WANTED: Syndicate Personnel (used); 566 WANTED: Baron Vardus
-Horde,2,1,1,33-40,3150,yes,45:H_Arathi,671 Foul Magics (used); 673 Foul Magics
+Horde,2,1,1,22-40,3150,yes,267:H_21_HillsbradFoothills,549 WANTED: Syndicate Personnel (used); 566 WANTED: Baron Vardus
+Horde,2,1,1,33-40,3150,yes,45:H_22_ArathiHighlands+H_27_ArathiHighlands,671 Foul Magics (used); 673 Foul Magics
 Horde,1,1,0,47-47,3150,no,1497:-,2995 Lines of Communication
 Horde,1,1,0,30-30,3050,no,491:-,1144 Willix the Importer
-Horde,1,1,0,30-30,3050,yes,331:H_Ashenvale,6922 Baron Aquanis
+Horde,1,1,0,30-30,3050,yes,331:H_18_Ashenvale,6922 Baron Aquanis
 Horde,1,1,0,25-25,3050,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9388 Flickering Flames in Kalimdor
 Horde,1,1,0,25-25,3050,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9389 Flickering Flames in the Eastern Kingdoms
-Horde,3,3,0,17-18,3010,no,130:H_Silverpine 1497:-,460 Resting in Pieces; 461 The Hidden Niche; 491 Wand to Bethor
-Horde,3,1,2,25-29,2950,yes,406:H_Stonetalon,1087 Cenarius' Legacy (used); 1088 Ordanus (used); 1089 The Den
+Horde,3,3,0,17-18,3010,no,130:- 1497:-,460 Resting in Pieces; 461 The Hidden Niche; 491 Wand to Bethor
+Horde,2,1,1,25-29,2950,yes,17:H_14_SouthernBarrens+H_16_SouthernBarrens,3513 The Runed Scroll (used); 3514 Horde Presence
 Horde,4,4,0,16-16,2890,no,40:-,136 Captain Sander's Hidden Treasure; 138 Captain Sander's Hidden Treasure; 139 Captain Sander's Hidden Treasure; 140 Captain Sander's Hidden Treasure
-Horde,1,1,0,37-37,2850,no,15:H_Dustwallow 17:-,1270 Stinky's Escape
-Horde,1,1,0,38-38,2850,yes,8:H_SwampOfSorrows,1393 Galen's Escape
+Horde,1,1,0,37-37,2850,no,15:H_30_DustwallowMarsh 17:-,1270 Stinky's Escape
 Horde,1,1,0,36-36,2800,no,1497:-,1164 To Steal From Thieves
+Horde,3,1,2,55-57,2800,no,1377:H_57_Silithus 1637:-,8276 Taking Back Silithus; 8280 Securing the Supply Lines (used); 8281 Stepping Up Security (used)
 Horde,1,1,0,35-35,2750,no,1637:-,2841 Rig Wars
-Horde,1,1,0,35-35,2750,yes,45:H_Arathi,8170 The Battle for Arathi Basin!
-Horde,2,1,1,24-26,2650,yes,331:H_Ashenvale,216 Between a Rock and a Thistlefur (used); 6621 King of the Foulweald
-Horde,2,1,1,53-53,2650,no,46:- 440:-,4136 Ribbly Screwspigot (used); 4324 Yuka Screwspigot
+Horde,1,1,0,35-35,2750,yes,45:H_27_ArathiHighlands,8170 The Battle for Arathi Basin!
+Horde,2,1,1,24-26,2650,yes,331:H_18_Ashenvale,216 Between a Rock and a Thistlefur (used); 6621 King of the Foulweald
+Horde,2,1,1,53-53,2650,yes,46:H_49_BurningSteppes 440:H_44_Tanaris,4136 Ribbly Screwspigot (used); 4324 Yuka Screwspigot
 Horde,8,5,3,8-12,2645,no,85:H_Undead_Tirisfal 1497:-,357 The Lich's Identity; 358 Graverobbers (used); 359 Forsaken Duties (used); 360 Return to the Magistrate (used); 366 Return the Book; 405 The Prodigal Lich; 409 Proving Allegiance; 411 The Prodigal Lich Returns
-Horde,1,1,0,30-30,2450,no,33:- 721:-,2904 A Fine Mess
-Horde,1,1,0,24-24,2400,yes,17:H_Barrens,897 The Harvester
+Horde,5,5,0,11-15,2565,no,17:H_10_Barrens+H_12_Barrens 130:- 1497:-,435 Escorting Erland; 449 The Deathstalkers' Report; 1358 Sample for Helbrim; 1359 Zinge's Delivery; 3221 Speak with Renferrel
+Horde,8,1,7,24-32,2550,no,267:H_21_HillsbradFoothills 1497:-,527 Battle of Hillsbrad (used); 528 Battle of Hillsbrad (used); 529 Battle of Hillsbrad (used); 532 Battle of Hillsbrad (used); 539 Battle of Hillsbrad (used); 541 Battle of Hillsbrad (used); 546 Souvenirs of Death (used); 550 Battle of Hillsbrad
+Horde,3,1,2,25-29,2550,no,400:H_17_ThousandNeedles+H_20_ThousandNeedles+H_24_ShimmeringFlats 1638:-,1195 The Sacred Flame; 1196 The Sacred Flame (used); 1197 The Sacred Flame (used)
+Horde,1,1,0,30-30,2450,no,33:H_23_StranglethornVale 721:-,2904 A Fine Mess
 Horde,1,1,0,24-24,2400,no,719:- 1657:-,1198 In Search of Thaelrid
-Horde,1,1,0,50-50,2350,no,46:-,4296 Tablet of the Seven
+Horde,1,1,0,50-50,2350,yes,46:H_49_BurningSteppes,4296 Tablet of the Seven
 Horde,2,2,0,16-16,2330,no,1638:- 2437:-,5722 Searching for the Lost Satchel; 5724 Returning the Lost Satchel
-Horde,1,1,0,39-39,2250,yes,8:H_SwampOfSorrows,1392 Noboru the Cudgel
 Horde,1,1,0,39-39,2250,no,405:-,6134 Ghost-o-plasm Round Up
-Horde,11,2,9,14-24,2130,no,85:H_Undead_Tirisfal 130:H_Silverpine 1497:-,437 The Dead Fields (used); 438 The Decrepit Ferry (used); 439 Rot Hide Clues (used); 440 The Engraved Ring (used); 441 Raleigh and the Undercity; 442 Assault on Fenris Isle (used); 443 Rot Hide Ichor (used); 444 Rot Hide Origins (used); 446 Thule Ravenclaw (used); 448 Report to Hadrec (used); 530 A Husband's Revenge
 Horde,1,1,0,26-26,2100,no,1497:-,1013 The Book of Ur
-Horde,1,1,0,26-26,2100,no,17:-,1221 Blueleaf Tubers
-Horde,1,1,0,37-37,2100,yes,405:H_Desolace,5386 Catch of the Day
-Horde,3,1,2,12-18,2050,no,130:H_Silverpine 1497:-,447 A Recipe For Death (used); 450 A Recipe For Death (used); 451 A Recipe For Death
+Horde,1,1,0,26-26,2100,yes,17:H_14_SouthernBarrens+H_16_SouthernBarrens,1221 Blueleaf Tubers
+Horde,1,1,0,37-37,2100,yes,405:H_25_Desolace,5386 Catch of the Day
 Horde,1,1,0,25-25,2000,no,130:- 209:-,1098 Deathstalkers in Shadowfang
 Horde,1,1,0,25-25,2000,yes,,8162 Cut Arathor Supply Lines
 Horde,1,1,0,25-25,2000,no,45:-,8171 The Battle for Arathi Basin!
-Horde,3,2,1,19-19,1945,yes,17:H_Barrens 406:H_Stonetalon,6541 Report to Kadrak (used); 6542 Report to Kadrak; 6543 The Warsong Reports
-Horde,3,1,2,23-26,1850,yes,17:H_Barrens,843 Gann's Reclamation; 846 Revenge of Gann (used); 849 Revenge of Gann (used)
+Horde,3,2,1,19-19,1945,yes,17:H_12_Barrens+H_14_SouthernBarrens 406:H_11_StonetalonMountains+H_13_StonetalonMountains,6541 Report to Kadrak (used); 6542 Report to Kadrak; 6543 The Warsong Reports
+Horde,4,4,0,10-10,1890,no,130:- 1497:-,6321 Supplying the Sepulcher; 6322 Michael Garrett; 6323 Ride to the Undercity; 6324 Return to Podrig
+Horde,3,1,2,23-26,1850,yes,17:H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens,843 Gann's Reclamation; 846 Revenge of Gann (used); 849 Revenge of Gann (used)
+Horde,8,1,7,14-19,1800,no,17:H_10_Barrens+H_12_Barrens+H_14_SouthernBarrens 1637:-,894 Samophlange (used); 900 Samophlange (used); 901 Samophlange (used); 902 Samophlange (used); 3921 Wenikee Boltbucket (used); 3922 Nugget Slugs (used); 3923 Rilli Greasygob (used); 3924 Samophlange Manual
+Horde,4,4,0,11-12,1780,no,130:-,425 Ivar the Foul; 428 Lost Deathstalkers; 429 Wild Hearts; 430 Return to Quinn
 Horde,2,1,1,22-22,1750,no,267:-,496 Elixir of Suffering (used); 499 Elixir of Suffering
-Horde,1,1,0,22-22,1750,yes,17:H_Barrens,868 Egg Hunt
-Horde,4,3,1,10-10,1680,no,130:H_Silverpine 1497:-,6321 Supplying the Sepulcher (used); 6322 Michael Garrett; 6323 Ride to the Undercity; 6324 Return to Podrig
+Horde,1,1,0,22-22,1750,yes,17:H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens,868 Egg Hunt
 Horde,1,1,0,60-60,1650,no,85:-,1657 Stinking Up Southshore
 Horde,1,1,0,60-60,1650,no,1637:-,8312 Hallow's End Treats for Spoops!
-Horde,1,1,0,17-17,1600,yes,17:H_Barrens,1486 Deviate Hides
+Horde,1,1,0,17-17,1600,yes,17:H_10_Barrens+H_12_Barrens,1486 Deviate Hides
 Horde,5,2,3,12-16,1555,no,1637:-,5726 Hidden Enemies (used); 5727 Hidden Enemies (used); 5728 Hidden Enemies (used); 5729 Hidden Enemies; 5730 Hidden Enemies
-Horde,2,1,1,18-20,1550,yes,406:H_Stonetalon,6421 Boulderslide Ravine (used); 6481 Earthen Arise
-Horde,1,1,0,56-56,1450,no,139:Both_EasternPlaguelands 1497:-,5961 The Champion of the Banshee Queen
+Horde,1,1,0,20-20,1550,no,40:-,104 The Coastal Menace
+Horde,2,1,1,18-20,1550,yes,406:H_11_StonetalonMountains+H_13_StonetalonMountains+H_15_StonetalonMountains,6421 Boulderslide Ravine (used); 6481 Earthen Arise
+Horde,1,1,0,19-19,1450,no,40:-,152 The Coast Isn't Clear
+Horde,1,1,0,16-16,1450,no,1497:-,5725 The Power to Destroy...
 Horde,1,1,0,19-19,1450,no,331:-,6442 Naga at the Zoram Strand
-Horde,5,1,4,10-15,1350,yes,130:H_Silverpine,99 Arugal's Folly; 421 Prove Your Worth (used); 422 Arugal's Folly (used); 423 Arugal's Folly (used); 424 Arugal's Folly (used)
-Horde,1,1,0,15-15,1350,yes,130:H_Silverpine,452 Pyrewood Ambush
-Horde,2,1,1,18-18,1350,yes,17:H_Barrens,865 Raptor Horns (used); 1491 Smart Drinks
+Horde,1,1,0,15-15,1350,no,130:-,452 Pyrewood Ambush
+Horde,2,1,1,18-18,1350,yes,17:H_10_Barrens+H_12_Barrens,865 Raptor Horns (used); 1491 Smart Drinks
 Horde,1,1,0,18-18,1350,no,1638:-,962 Serpentbloom
+Horde,2,1,1,35-40,1350,yes,3:H_32_Badlands 8:H_33_SwampofSorrows,1418 Neeka Bloodscar; 1420 Report to Helgrum (used)
+Horde,1,1,0,15-15,1350,no,44:-,3741 Hilary's Necklace
 Horde,2,2,0,60-60,1320,no,1637:- 1638:-,6964 The Reason for the Season; 7061 The Feast of Winter Veil
-Horde,2,2,0,32-32,1280,no,17:- 267:H_Hillsbrad 405:H_Desolace 1637:-,1361 Regthar Deathgate; 1362 The Kolkar of Desolace
 Horde,1,1,0,21-21,1250,no,130:-,516 Beren's Peril
-Horde,1,1,0,31-31,1250,no,33:- 400:H_ThousandNeedles,5762 Hemet Nesingwary
-Horde,5,3,2,11-15,1245,no,17:H_Barrens 130:H_Silverpine 1497:-,435 Escorting Erland (used); 449 The Deathstalkers' Report (used); 1358 Sample for Helbrim; 1359 Zinge's Delivery; 3221 Speak with Renferrel
-Horde,1,1,0,20-20,1150,no,130:H_Silverpine 267:-,493 Journey to Hillsbrad Foothills
-Horde,1,1,0,28-28,1150,no,400:H_ThousandNeedles 406:-,5881 Calling in the Reserves
-Horde,3,2,1,55-55,1120,no,28:H_WesternPlaguelands 85:- 139:Both_EasternPlaguelands,5401 Argent Dawn Commission (used); 5405 Argent Dawn Commission; 5503 Argent Dawn Commission
+Horde,1,1,0,16-16,1150,no,40:-,103 Keeper of the Flame
+Horde,1,1,0,20-20,1150,no,130:- 267:-,493 Journey to Hillsbrad Foothills
 Horde,4,1,3,10-13,910,yes,85:H_Undead_Tirisfal,354 Deaths in the Family (used); 355 Speak with Sevren (used); 362 The Haunted Mills (used); 408 The Family Crypt
-Horde,3,1,2,43-44,890,no,357:H_Feralas 1637:-,2975 The Ogres of Feralas (used); 2980 The Ogres of Feralas (used); 2981 A Threat in Feralas
-Horde,4,1,3,6-11,880,yes,85:H_Undead_Tirisfal,367 A New Plague (used); 368 A New Plague (used); 369 A New Plague (used); 492 A New Plague
+Horde,3,1,2,43-44,890,no,357:H_38_Feralas 1637:-,2975 The Ogres of Feralas (used); 2980 The Ogres of Feralas (used); 2981 A Threat in Feralas
 Horde,1,1,0,15-15,800,no,1638:-,5723 Testing an Enemy's Strength
 Horde,1,1,0,60-60,660,no,12:- 215:- 1637:-,7926 The Darkmoon Faire
 Horde,1,1,0,60-60,660,no,15:- 1977:-,8227 Nat's Measuring Tape
-Horde,1,1,0,60-60,660,no,1377:-,8800 Cenarion Battlegear
+Horde,1,1,0,60-60,660,yes,1377:H_57_Silithus,8800 Cenarion Battlegear
 Horde,1,1,0,60-60,660,no,1637:- 1638:-,8792 The Horde Needs Your Help!
 Horde,5,5,0,60-60,660,no,493:- 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,8867 Lunar Fireworks; 8873 The Lunar Festival; 8874 The Lunar Festival; 8875 The Lunar Festival; 8883 Valadar Starsong
+Horde,2,1,1,32-32,640,no,17:- 267:H_21_HillsbradFoothills 405:H_25_Desolace 1637:-,1361 Regthar Deathgate; 1362 The Kolkar of Desolace (used)
 Horde,1,1,0,10-10,630,no,1637:-,9263 Investigate the Scourge of Orgrimmar
 Horde,1,1,0,10-10,630,no,1638:-,9264 Investigate the Scourge of Thunder Bluff
+Horde,3,1,2,55-55,560,no,28:H_54_WesternPlaguelands+H_56_WesternPlaguelands 85:- 139:H_55_EasternPlaguelands,5401 Argent Dawn Commission (used); 5405 Argent Dawn Commission (used); 5503 Argent Dawn Commission
 Horde,1,1,0,55-55,560,no,33:-,7810 Arena Master
-Horde,1,1,0,15-15,540,no,130:H_Silverpine 1638:-,264 Until Death Do Us Part
-Horde,3,1,2,54-54,540,yes,361:H_Felwood 618:Both_Winterspring,4505 Well of Corruption (used); 4506 Corrupted Sabers (used); 6605 A Strange One
+Horde,1,1,0,15-15,540,no,130:- 1638:-,264 Until Death Do Us Part
+Horde,3,1,2,54-54,540,yes,361:H_51_Felwood+H_53_Felwood 618:H_52_Winterspring,4505 Well of Corruption (used); 4506 Corrupted Sabers (used); 6605 A Strange One
 Horde,1,1,0,8-8,530,no,1497:-,9265 Investigate the Scourge of the Undercity
-Horde,1,1,0,7-7,475,yes,85:H_Undead_Tirisfal,361 A Letter Undelivered
-Horde,2,1,1,46-46,405,no,15:- 1497:- 1519:- 1537:- 1637:-,2846 Tiara of the Deep (used); 2861 Tabetha's Task
-Horde,14,1,13,10-27,390,no,17:H_Barrens 215:H_Tauren_Mulgore 331:H_Ashenvale 1638:-,844 Plainstrider Menace (used); 845 The Zhevra (used); 860 Sergra Darkthorn (used); 861 The Hunter's Way (used); 873 Isha Awak (used); 874 Mahren Skyseer (used); 881 Echeyakee (used); 882 Ishamuhale (used); 903 Prowlers of the Barrens (used); 905 The Angry Scytheclaws (used); 907 Enraged Thunder Lizards (used); 913 Cry of the Thunderhawk (used); 3261 Jorn Skyseer (used); 6382 The Ashenvale Hunt
-Horde,2,1,1,45-45,390,no,33:- 440:Both_Tanaris,2864 Tran'rek; 2865 Scarab Shells (used)
-Horde,1,1,0,35-35,275,yes,45:H_Arathi,635 Crystal in the Mountains
+Horde,2,1,1,46-46,405,no,15:H_35_DustwallowMarsh+H_43_DustwallowMarsh 1497:- 1519:- 1537:- 1637:-,2846 Tiara of the Deep (used); 2861 Tabetha's Task
+Horde,14,1,13,10-27,390,no,17:H_10_Barrens+H_12_Barrens+H_14_SouthernBarrens+H_16_SouthernBarrens 215:H_Tauren_Mulgore 331:H_18_Ashenvale 1638:-,844 Plainstrider Menace (used); 845 The Zhevra (used); 860 Sergra Darkthorn (used); 861 The Hunter's Way (used); 873 Isha Awak (used); 874 Mahren Skyseer (used); 881 Echeyakee (used); 882 Ishamuhale (used); 903 Prowlers of the Barrens (used); 905 The Angry Scytheclaws (used); 907 Enraged Thunder Lizards (used); 913 Cry of the Thunderhawk (used); 3261 Jorn Skyseer (used); 6382 The Ashenvale Hunt
+Horde,7,3,4,20-30,310,no,331:H_18_Ashenvale 1637:- 1638:-,2 Sharptalon's Claw (used); 23 Ursangous's Paw (used); 24 Shadumbra's Head (used); 235 The Ashenvale Hunt; 247 The Hunt Completed (used); 742 The Ashenvale Hunt; 6383 The Ashenvale Hunt
 Horde,1,1,0,35-35,275,yes,,636 Legends of the Earth
-Horde,2,2,0,35-35,275,no,33:H_Stranglethorn 1637:-,2842 Chief Engineer Scooty; 2843 Gnomer-gooooone!
-Horde,1,1,0,34-34,270,no,36:-,535 Valik
+Horde,2,2,0,35-35,275,no,33:H_26_StranglethornVale+H_31_StranglethornVale 1637:-,2842 Chief Engineer Scooty; 2843 Gnomer-gooooone!
 Horde,2,1,1,5-5,110,yes,85:H_Undead_Tirisfal,8 A Rogue's Deal (used); 590 A Rogue's Deal
 Horde,5,1,4,1-3,40,no,14:H_OrcTroll_Durotar 1637:-,787 The New Horde; 788 Cutting Teeth (used); 789 Sting of the Scorpid (used); 4402 Galgar's Cactus Apple Surprise (used); 4641 Your Place In The World (used)
 Horde,1,1,0,1-1,10,no,1:- 11:- 14:H_OrcTroll_Durotar 33:- 85:H_Undead_Tirisfal 440:- 1519:- 1637:-,8828 Winter's Presents
+Horde,3,1,2,60-60,0,yes,618:H_58_Winterspring,969 Luck Be With You (used); 975 Cache of Mau'ari; 6606 A Little Luck (used)
 Horde,1,1,0,60-60,0,no,2557:-,5528 The Gordok Taste Test
 Horde,1,1,0,1-1,0,yes,14:H_OrcTroll_Durotar,5843 Welcome!
 Horde,1,1,0,1-1,0,yes,215:H_Tauren_Mulgore,5844 Welcome!
@@ -789,14 +738,14 @@ Horde,1,1,0,60-60,0,no,1519:-,8646 Hammershout the Elder
 Horde,1,1,0,60-60,0,no,4:-,8647 Bellowrage the Elder
 Horde,1,1,0,60-60,0,no,1497:-,8648 Darkcore the Elder
 Horde,1,1,0,60-60,0,no,12:-,8649 Stormbrow the Elder
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,8650 Snowcrown the Elder
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,8650 Snowcrown the Elder
 Horde,1,1,0,60-60,0,no,51:-,8651 Ironband the Elder
 Horde,1,1,0,60-60,0,no,85:-,8652 Graveborn the Elder
 Horde,1,1,0,60-60,0,no,1:-,8653 Goldwell the Elder
-Horde,1,1,0,60-60,0,no,1377:-,8654 Primestone the Elder
+Horde,1,1,0,60-60,0,yes,1377:H_57_Silithus,8654 Primestone the Elder
 Horde,1,1,0,60-60,0,no,14:-,8670 Runetotem the Elder
 Horde,1,1,0,60-60,0,no,440:-,8671 Ragetotem the Elder
-Horde,1,1,0,60-60,0,no,618:-,8672 Stonespire the Elder
+Horde,1,1,0,60-60,0,yes,618:H_58_Winterspring,8672 Stonespire the Elder
 Horde,1,1,0,60-60,0,no,215:-,8673 Bloodhoof the Elder
 Horde,1,1,0,60-60,0,no,33:-,8674 Winterhoof the Elder
 Horde,1,1,0,60-60,0,no,40:-,8675 Skychaser the Elder
@@ -811,21 +760,21 @@ Horde,1,1,0,60-60,0,no,46:-,8683 Dawnstrider the Elder
 Horde,1,1,0,60-60,0,no,440:-,8684 Dreamseer the Elder
 Horde,1,1,0,60-60,0,yes,,8685 Mistwalker the Elder
 Horde,1,1,0,60-60,0,no,17:-,8686 High Mountain the Elder
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,8688 Windrun the Elder
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,8688 Windrun the Elder
 Horde,1,1,0,60-60,0,no,1477:-,8713 Starsong the Elder
-Horde,1,1,0,60-60,0,yes,28:H_WesternPlaguelands,8714 Moonstrike the Elder
+Horde,1,1,0,60-60,0,yes,28:H_56_WesternPlaguelands,8714 Moonstrike the Elder
 Horde,1,1,0,60-60,0,no,141:-,8715 Bladeleaf the Elder
 Horde,1,1,0,60-60,0,no,33:-,8716 Starglade the Elder
 Horde,1,1,0,60-60,0,no,17:-,8717 Moonwarden the Elder
 Horde,1,1,0,60-60,0,no,1657:-,8718 Bladeswift the Elder
-Horde,1,1,0,60-60,0,no,1377:-,8719 Bladesing the Elder
+Horde,1,1,0,60-60,0,yes,1377:H_57_Silithus,8719 Bladesing the Elder
 Horde,1,1,0,60-60,0,no,16:-,8720 Skygleam the Elder
 Horde,1,1,0,60-60,0,no,148:-,8721 Starweave the Elder
-Horde,1,1,0,60-60,0,yes,28:H_WesternPlaguelands,8722 Meadowrun the Elder
+Horde,1,1,0,60-60,0,yes,28:H_56_WesternPlaguelands,8722 Meadowrun the Elder
 Horde,1,1,0,60-60,0,no,361:-,8723 Nightwind the Elder
 Horde,1,1,0,60-60,0,no,400:-,8724 Morningdew the Elder
 Horde,1,1,0,60-60,0,no,331:-,8725 Riversong the Elder
-Horde,1,1,0,60-60,0,no,618:-,8726 Brightspear the Elder
+Horde,1,1,0,60-60,0,yes,618:H_58_Winterspring,8726 Brightspear the Elder
 Horde,1,1,0,60-60,0,no,2017:-,8727 Farwhisper the Elder
 Horde,1,1,0,1-1,0,no,1537:- 1637:-,8744 A Carefully Wrapped Present
 Horde,1,1,0,20-20,0,no,1537:- 1637:-,8768 A Gaily Wrapped Present
@@ -835,20 +784,20 @@ Horde,1,1,0,60-60,0,no,1:- 11:- 14:- 33:- 85:- 440:- 1519:- 1638:-,8861 New Year
 Horde,1,1,0,60-60,0,no,493:-,8862 Elune's Candle
 Horde,1,1,0,60-60,0,no,1537:-,8866 Bronzebeard the Elder
 Horde,10,10,0,60-60,0,no,36:- 85:- 1497:- 1637:- 1638:-,"8900 Dearest Elenia,; 8901 Dearest Elenia,; 8902 Dearest Elenia,; 8904 Dangerous Love; 8979 Fenstad's Hunch; 8980 Zinge's Assessment; 8982 Tracing the Source; 8983 Tracing the Source; 8984 The Source Revealed; 9029 A Bubbling Cauldron"
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9085 Shadows of Doom
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9153 Under the Shadow
-Horde,1,1,0,60-60,0,no,139:Both_EasternPlaguelands 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,9154 Light's Hope Chapel
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9247 The Keeper's Call
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9295 Letter from the Front
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9299 Note from the Front
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9300 Page from the Front
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9301 Envelope from the Front
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9302 Missive from the Front
-Horde,1,1,0,60-60,0,yes,139:Both_EasternPlaguelands,9304 Document from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9085 Shadows of Doom
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9153 Under the Shadow
+Horde,1,1,0,60-60,0,no,139:H_55_EasternPlaguelands 1497:- 1519:- 1537:- 1637:- 1638:- 1657:-,9154 Light's Hope Chapel
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9247 The Keeper's Call
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9295 Letter from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9299 Note from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9300 Page from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9301 Envelope from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9302 Missive from the Front
+Horde,1,1,0,60-60,0,yes,139:H_55_EasternPlaguelands,9304 Document from the Front
 Horde,1,1,0,60-60,0,no,1497:-,9310 Faint Necrotic Crystal
 Horde,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9319 A Light in Dark Places
 Horde,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9322 Wild Fires in Kalimdor
 Horde,1,1,0,60-60,0,no,141:- 1497:- 1519:- 1537:- 1637:- 1638:-,9323 Wild Fires in the Eastern Kingdoms
 Horde,1,1,0,60-60,0,no,1497:- 1637:- 1638:-,9368 The Festival of Fire
 Horde,1,1,0,60-60,0,yes,,9378 DND FLAG The Dread Citadel - Naxxramas
-Horde,1,1,0,60-60,0,no,1377:-,9416 Report to General Kirika
+Horde,1,1,0,60-60,0,yes,1377:H_57_Silithus,9416 Report to General Kirika

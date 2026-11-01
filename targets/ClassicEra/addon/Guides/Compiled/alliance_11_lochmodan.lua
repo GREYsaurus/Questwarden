@@ -92,6 +92,7 @@ ns.Guides:Register({
     {"turnin",q=436,title="Ironband's Excavation",npc="Magmar Fellhew",z=38,x=64.9,y=66.7,v=1},
     {"complete",q=297,title="Gathering Idols",text="Troggs at the excavation site drop Carved Stone Idols.",v=1},
     {"turnin",q=297,title="Gathering Idols",npc="Magmar Fellhew",z=38,x=64.9,y=66.7,v=1},
+    {"grind",z=38,x=70.1,y=64.9,text="Darkshore starts at 20: grind these to 90% through level 19, and the quests left here bring you the rest of the way.",level=19,pct=90,mobs={"Stonesplinter Digger","Stonesplinter Geomancer","Berserk Trogg"},v=0},
     {"accept",q=250,title="A Dark Threat Looms",npc="Chief Engineer Hinderweir VII",z=38,x=46,y=13.6,v=1},
     {"turnin",q=250,title="A Dark Threat Looms",npc="Suspicious Barrel",z=38,x=56,y=13.2,v=1},
     {"accept",q=199,title="A Dark Threat Looms",npc="Suspicious Barrel",z=38,x=56,y=13.2,v=1},

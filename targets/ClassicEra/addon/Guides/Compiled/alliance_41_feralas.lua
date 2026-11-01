@@ -36,6 +36,6 @@ ns.Guides:Register({
     {"accept",q=2970,title="Doling Justice",npc="Jer'kai Moonweaver",z=357,x=66,y=45.6,v=1},
     {"complete",q=2970,title="Doling Justice",text="Grimtotem tauren at the compound.",v=1},
     {"turnin",q=2970,title="Doling Justice",npc="Jer'kai Moonweaver",z=357,x=66,y=45.6,v=1},
-    {"level",text="Dustwallow Marsh starts at 49. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=49,v=1},
+    {"grind",z=357,x=53.2,y=32.1,text="Dustwallow Marsh starts at 49 and the quests here don't quite get you there: grind these until you reach it.",level=49,mobs={"Ferocious Rage Scar","Rage Scar Yeti","Elder Rage Scar"},v=0},
   },
 })

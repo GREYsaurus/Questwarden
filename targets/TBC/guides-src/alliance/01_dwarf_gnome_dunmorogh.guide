@@ -75,6 +75,7 @@ accept Beer Basted Boar Ribs
 accept Tools for Steelgrill
 accept Operation Recombobulation | Razzle Sprysprocket in the gnome building of Kharanos.
 accept Stocking Jetsteam | Pilot Bellowfiz, north side of Kharanos.
+accept 9261 Investigate the Scourge of Ironforge
 accept The Grizzled Den | Pilot Stonegear, same house.
 accept Ammo for Rumbleshot
 train | Your trainer is in Kharanos.
@@ -82,7 +83,9 @@ complete Operation Recombobulation | Leper Gnomes at the Gnomeregan entrance and
 turnin Operation Recombobulation
 complete Stocking Jetsteam | Boars and bears south of Kharanos.
 turnin Stocking Jetsteam
+complete 9261 Investigate the Scourge of Ironforge
 accept Evershine
+turnin 9261 Investigate the Scourge of Ironforge
 complete Frostmane Hold | Explore Frostmane Hold, the troll cave west of Kharanos.
 accept Bitter Rivals | Marleth Barleybrew, Brewnall Village.
 accept The Perfect Stout | Rejold Barleybrew, Brewnall Village.
@@ -127,8 +130,10 @@ turnin The Perfect Stout
 accept Shimmer Stout
 turnin 6086 Training the Beast [class=Hunter; race=Dwarf] | Turned in at Ironforge.
 accept Protecting the Herd | Rudra Amberstill at the Amberstill Ranch.
+accept 415 Rejold's New Brew
 complete Protecting the Herd | Vagash is a wandering yeti on the hill above the ranch.
 turnin Protecting the Herd
+turnin 415 Rejold's New Brew
 accept The Public Servant
 accept Those Blasted Troggs! | Foreman Stonebrow, Gol'Bolar Quarry.
 complete Those Blasted Troggs! | Troggs in the quarry.

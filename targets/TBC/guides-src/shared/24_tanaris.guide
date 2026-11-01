@@ -53,9 +53,13 @@ turnin Pirate Hats Ahoy!
 accept Gahz'ridian [optional] | Marvon Rivetseeker, south of Gadgetzan. Needs level 43.
 accept 351 Find OOX-17/TN! [iffound] | Shown only if you find OOX-17/TN Distress Beacon.
 turnin 351 Find OOX-17/TN! [iffound]
+note The next quest, Tooga's Quest, is an escort: pick it up only when you are ready to follow the NPC.
+accept 1560 Tooga's Quest
+complete 1560 Tooga's Quest | Escort: stay close; it fails if the NPC dies.
 complete Gahz'ridian [optional] | Wear the Gahz'ridian Detector helmet he gives you and dig up Gahz'ridian Ornaments in the Gahz'ridian ruins, south-west.
 turnin Gahz'ridian [optional]
 accept The Thirsty Goblin [optional] | Marin Noggenfogger, Gadgetzan. Needs level 44.
+turnin 1560 Tooga's Quest
 complete The Thirsty Goblin [optional] | Laden Dew Glands from Thistleshrub Dew Collectors in the south-west of Tanaris.
 turnin The Thirsty Goblin [optional]
 level 44

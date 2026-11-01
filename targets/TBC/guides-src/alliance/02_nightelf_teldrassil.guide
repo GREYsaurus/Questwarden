@@ -60,6 +60,7 @@ accept Dolanaar Delivery | Porthannius on the path out of Shadowglen.
 turnin Dolanaar Delivery | Innkeeper Keldamyr, Dolanaar.
 bind Dolanaar [area=186]
 accept The Road to Darnassus [optional] | Moon Priestess Amara patrols the road.
+accept 2541 The Sleeping Druid
 complete The Road to Darnassus [optional] | Gnarlpine Ambushers along the road west of Dolanaar.
 turnin The Road to Darnassus [optional]
 accept Denalan's Earth | Syral Bladeleaf.
@@ -83,7 +84,9 @@ complete Timberling Seeds | Timberlings around the lake.
 turnin Timberling Seeds
 accept 922 Rellian Greenspyre
 turnin 928 Crown of the Earth | Corithras Moonrage, Dolanaar.
+complete 2541 The Sleeping Druid
 accept 929 Crown of the Earth
+turnin 2541 The Sleeping Druid
 complete Timberling Sprouts | Sprouts on the ground around the lake.
 complete 929 Crown of the Earth | Fill the phial at the Starbreeze Village moonwell.
 complete Twisted Hatred | Lord Melenas in Fel Rock, near Dolanaar.
@@ -118,6 +121,9 @@ complete 937 The Enchanted Glade | Bloodfeather Belt drops from Bloodfeather Har
 turnin 937 The Enchanted Glade
 accept 940 Teldrassil
 accept 931 The Shimmering Frond
+note The next quest, Mist, is an escort: pick it up only when you are ready to follow the NPC.
+accept 938 Mist
+complete 938 Mist | Escort: stay close; it fails if the NPC dies.
 turnin 2241 The Apple Falls [class=Rogue] | Turned in at Darnassus.
 accept 2242 Destiny Calls [class=Rogue] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin 922 Rellian Greenspyre [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.
@@ -143,6 +149,8 @@ turnin 927 The Moss-twined Heart [class=Warrior,Hunter,Priest,Druid; optional]
 turnin 927 The Moss-twined Heart [class=Rogue; optional]
 complete 2242 Destiny Calls [class=Rogue]
 turnin Timberling Sprouts
+accept 941 Planting the Heart
+accept 2399 The Sprouted Fronds
 turnin 2242 Destiny Calls [class=Rogue] | Turned in at Darnassus.
 turnin 923 Tumors | Turned in at Darnassus.
 turnin 940 Teldrassil [class=Warrior,Hunter,Priest,Druid] | Turned in at Darnassus.
@@ -166,6 +174,9 @@ complete 6102 Taming the Beast [class=Hunter] | Escort: stay close; it fails if 
 turnin 6102 Taming the Beast [class=Hunter]
 accept 6103 Training the Beast [class=Hunter]
 turnin 489 Seek Redemption! [optional]
+turnin 941 Planting the Heart
+turnin 938 Mist
+turnin 2399 The Sprouted Fronds
 turnin 5931 Back to Darnassus [class=Druid] | Turned in at Darnassus.
 accept 6001 Body and Heart [class=Druid; optional] | Escort quest: start it when you are ready to follow.
 turnin 6103 Training the Beast [class=Hunter] | Turned in at Darnassus.

@@ -37,6 +37,7 @@ accept Planting the Banner
 turnin Getting the Bladespire Tanked
 turnin Scratches
 accept The Encroaching Wilderness | Rina Moonspring, Sylvanaar.
+accept 10690 The Den Mother
 complete The Encroaching Wilderness
 turnin The Encroaching Wilderness
 accept Marauding Wolves
@@ -59,6 +60,8 @@ accept Where Did Those Darn Gnomes Go?
 complete The Bladespire Ogres | Elite: Bladespire Sober Defender; bring help or skip.
 turnin The Bladespire Ogres
 turnin Where Did Those Darn Gnomes Go?
+complete 10690 The Den Mother
+turnin 10690 The Den Mother
 accept Follow the Breadcrumbs
 fp Toshley's Station
 accept What Came First, the Drake or the Egg? | Fizit "Doc" Clocktock.
@@ -73,6 +76,10 @@ accept Ride the Lightning
 turnin Crystal Clear
 accept Gauging the Resonant Frequency | Escort quest: start it when you are ready to follow.
 accept Cutting Your Teeth
+accept 10710 Test Flight: The Singing Ridge
+accept 10557 Test Flight: The Zephyrium Capacitorium
+turnin 10710 Test Flight: The Singing Ridge
+turnin 10557 Test Flight: The Zephyrium Capacitorium
 accept Ridgespine Menace
 complete Ridgespine Menace
 complete Cutting Your Teeth | Extra Sharp Daggermaw Tooth drops from Daggermaw Lashtail.
@@ -99,7 +106,12 @@ turnin 10825 The Truth Unorbed [iffound]
 turnin A Time for Negotiation...
 accept ...and a Time for Action
 accept Culling the Wild | Faradrella.
+accept 10795 A Date with Dorgok
+accept 10796 Crush the Bloodmaul Camp!
 accept Little Embers | Mosswood the Ancient.
+accept 10797 Favor of the Gronn
+complete 10795 A Date with Dorgok
+complete 10796 Crush the Bloodmaul Camp!
 accept From the Ashes
 accept Poaching from Poachers
 accept 10719 Did You Get The Note?
@@ -114,6 +126,9 @@ turnin ...and a Time for Action
 turnin 10719 Did You Get The Note?
 turnin 10810 Damaged Mask
 turnin Culling the Wild
+turnin 10795 A Date with Dorgok
+turnin 10796 Crush the Bloodmaul Camp!
+turnin 10797 Favor of the Gronn
 turnin Little Embers
 turnin From the Ashes
 level 68

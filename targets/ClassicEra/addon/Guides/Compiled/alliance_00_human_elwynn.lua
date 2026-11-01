@@ -57,7 +57,7 @@ ns.Guides:Register({
     {"turnin",q=6,title="Bounty on Garrick Padfoot",npc="Deputy Willem",z=12,x=48.2,y=42.9,v=1},
     {"turnin",q=21,title="Skirmish at Echo Ridge",npc="Marshal McBride",z=12,x=48.9,y=41.6,v=1},
     {"accept",q=54,title="Report to Goldshire",npc="Marshal McBride",z=12,x=48.9,y=41.6,v=1},
-    {"level",text="Kill kobolds and wolves in the valley if you are short of 5; Goldshire's quests expect it.",level=5,v=1},
+    {"grind",z=12,x=48.4,y=33,text="The next steps expect level 5 and the quests here don't quite get you there: grind these until you reach it.",level=5,mobs={"Kobold Worker","Kobold Laborer"},v=0},
     {"turnin",q=3905,title="Grape Manifest",npc="Brother Neals",z=12,x=49.5,y=41.6,text="Brother Neals is at the top of the abbey bell tower.",v=1},
     {"turnin",q=1598,title="The Stolen Tome",npc="Drusilla La Salle",z=12,x=49.9,y=42.6,classes={"WARLOCK"},v=1},
     {"train",npc="Khelden Bremen",z=12,x=49.7,y=39.4,text="Level 4 abilities.",classes={"MAGE"},v=1},

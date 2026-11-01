@@ -13,6 +13,10 @@
 turnin 1457 The Karnitol Shipwreck [zone=Ironforge; optional] | Roetten Stonehammer, Hall of Explorers (from Desolace).
 note From Ironforge fly to Thelsamar and ride south through Loch Modan into the Badlands.
 accept Power Stones | Rigglefuzz at the camp in the middle of the Badlands.
+accept 705 Pearl Diving
+accept 703 Barbecued Buzzard Wings
+complete 703 Barbecued Buzzard Wings
+turnin 703 Barbecued Buzzard Wings
 accept 710 Study of the Elements: Rock | Lotwil Veriatus, west.
 complete 710 Study of the Elements: Rock | Lesser Rock Elementals around Lotwil's camp.
 turnin 710 Study of the Elements: Rock
@@ -22,6 +26,7 @@ turnin 711 Study of the Elements: Rock
 accept A Dwarf and His Tools | Prospector Ryedol, east of the middle.
 accept Mirages | Sigrun Ironhew, next to Ryedol.
 accept 720 A Sign of Hope | The Crumpled Map on the ground north of Ryedol.
+complete 705 Pearl Diving
 complete A Dwarf and His Tools | Ryedol's Lucky Pick drops from Shadowforge Tunnelers at Angor Fortress.
 complete Mirages | The Excavation Supply Crate in the north-east hills.
 turnin 720 A Sign of Hope | Prospector Ryedol.
@@ -39,6 +44,7 @@ turnin 723 Prospect of Faith | Prospector Ryedol.
 accept 724 Prospect of Faith | Turned in at Ironforge on your way to Dustwallow.
 complete Scrounging | Dustbelcher ogres in the west.
 turnin Power Stones | Rigglefuzz.
+turnin 705 Pearl Diving
 turnin Scrounging | Sigrun Ironhew.
 accept 712 Study of the Elements: Rock [optional] | Needs level 42 to kill the Greater Rock Elementals comfortably.
 complete 712 Study of the Elements: Rock [optional] | Bracers of Rock Binding from Greater Rock Elementals in the far south-west.

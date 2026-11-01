@@ -58,7 +58,7 @@ complete Skirmish at Echo Ridge | Kill Kobold Laborers inside Echo Ridge Mine.
 turnin Bounty on Garrick Padfoot
 turnin Skirmish at Echo Ridge
 accept Report to Goldshire
-level 5 | Kill kobolds and wolves in the valley if you are short of 5; Goldshire's quests expect it.
+grind 5 Kobold Worker, Kobold Laborer [at=48.4,33.0] | The next steps expect level 5 and the quests here don't quite get you there: grind these until you reach it.
 turnin Grape Manifest | Brother Neals is at the top of the abbey bell tower.
 turnin 1598 The Stolen Tome [class=Warlock]
 train | Level 4 abilities.

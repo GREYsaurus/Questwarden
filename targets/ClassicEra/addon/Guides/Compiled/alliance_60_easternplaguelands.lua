@@ -15,6 +15,7 @@ ns.Guides:Register({
     {"turnin",q=5281,title="The Restless Souls",npc="Egan",z=139,x=14.4,y=33.7,v=1},
     {"accept",q=5212,title="The Flesh Does Not Lie",npc="Betina Bigglezink",z=139,x=81.5,y=59.7,dungeon="Stratholme",v=1},
     {"accept",q=5243,title="Houses of the Holy",npc="Leonid Barthalomew the Revered",z=139,x=81.7,y=57.8,dungeon="Stratholme",v=1},
+    {"turnin",q=8859,title="Secrets of the Colossus - Zora",npc="Lord Maxwell Tyrosus",z=139,x=81.7,y=58,optional=true,v=1},
     {"complete",q=5251,title="The Archivist",dungeon="Stratholme",v=1},
     {"turnin",q=5251,title="The Archivist",npc="Duke Nicholas Zverenhoff",z=139,x=81.4,y=59.8,dungeon="Stratholme",v=1},
     {"complete",q=6024,title="Hameya's Plea",v=1},

@@ -13,9 +13,11 @@
 turnin Delivery to Silverpine Forest | Apothecary Renferrel, The Sepulcher.
 accept 447 A Recipe For Death
 accept Lost Deathstalkers | High Executor Hadrec.
+accept 6321 Supplying the Sepulcher
 accept The Dead Fields
 accept Prove Your Worth | Dalar Dawnweaver.
 accept Border Crossings | Shadow Priest Allister.
+turnin 6321 Supplying the Sepulcher
 fp The Sepulcher
 bind The Sepulcher [area=228]
 turnin Lost Deathstalkers | Rane Yorick, at the hut on the northern coast.
@@ -78,12 +80,25 @@ complete Thule Ravenclaw | Fenris Keep, on Fenris Isle.
 turnin Thule Ravenclaw
 accept Report to Hadrec
 turnin Report to Hadrec
+accept 480 The Weaver
 accept Assault on Fenris Isle
+complete 480 The Weaver
 complete Assault on Fenris Isle | Rot Hide gnolls on Fenris Isle.
 turnin Assault on Fenris Isle
+turnin 480 The Weaver
 turnin 423 Arugal's Folly
 accept 424 Arugal's Folly
 complete 424 Arugal's Folly | Pyrewood Village.
 turnin 424 Arugal's Folly
-level 17
+accept 99 Arugal's Folly
+accept 516 Beren's Peril
+accept 3221 Speak with Renferrel
+accept 461 The Hidden Niche
+complete 516 Beren's Peril
+complete 99 Arugal's Folly
+turnin 516 Beren's Peril
+turnin 99 Arugal's Folly
+turnin 3221 Speak with Renferrel
+turnin 461 The Hidden Niche
+grind 17 Lake Creeper, Vile Fin Shorecreeper, Vile Fin Tidecaller [at=77.4,30.7] | The next steps expect level 17 and the quests here don't quite get you there: grind these until you reach it.
 note Take the zeppelin from Tirisfal to Orgrimmar, then ride to the Crossroads.

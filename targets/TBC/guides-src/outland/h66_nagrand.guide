@@ -19,6 +19,7 @@ accept Wanted: Zorbo the Advisor
 accept Proving Your Strength | Warden Bullrok.
 accept The Missing War Party | Farseer Corhuk.
 accept Murkblood Leaders... | Farseer Margadesh.
+accept 9913 The Consortium Needs You!
 complete The Missing War Party
 complete Murkblood Leaders... | Head of Ortor of Murkblood drops from Ortor of Murkblood.
 turnin Murkblood Leaders...
@@ -126,9 +127,12 @@ turnin 9850 Clefthoof Mastery
 turnin 9855 Windroc Mastery
 note Ride west to Aeris Landing, the Consortium camp by the lake south-west of Sunspring Post.
 accept Stealing from Thieves | Gezhe, Aeris Landing.
+accept 9991 Survey the Land
+turnin 9913 The Consortium Needs You!
 accept Matters of Security | Zerid, Aeris Landing.
 accept Gava'xi | Zerid. Needs level 65.
 accept A Head Full of Ivory | Shadrek, Aeris Landing.
+turnin 9991 Survey the Land
 complete Stealing from Thieves | Oshu'gun Crystal Fragments from Vir'aani Raiders north of Oshu'gun, south of the camp.
 complete Matters of Security | Voidspawn around Oshu'gun.
 complete Gava'xi | Gava'xi, near Oshu'gun.
@@ -140,5 +144,5 @@ accept I Must Have Them! | Wazat, in east-central Nagrand.
 complete I Must Have Them! | Air Elemental Gas from Dust Howlers in the east of Nagrand.
 turnin I Must Have Them! | Wazat.
 turnin A Head Full of Ivory | Shadrek, back at Aeris Landing.
-level 67
+grind 67 Agitated Orc Spirit, Lake Surger, Murkblood Invader [at=30.7,59.3] | The next steps expect level 67 and the quests here don't quite get you there: grind these until you reach it.
 note Fly to Shattrath, then to Thunderlord Stronghold in Blade's Edge (or ride north from Zangarmarsh).

@@ -56,6 +56,7 @@ ns.Guides:Register({
     {"accept",q=1480,title="The Corrupter",text="Starts from the item Flayed Demon Skin.",starter=20310,drops={4663,4664,4665,4666,4667,4668,4705,13019},via={47},v=1},
     {"complete",q=5741,title="Sceptre of Light",text="The Sceptre drops from the Burning Blade Seer at the top of the Thunder Axe Fortress tower.",v=1},
     {"turnin",q=5741,title="Sceptre of Light",npc="Azore Aldamort",z=405,x=38.9,y=27.2,text="Azore Aldamort.",v=1},
+    {"grind",z=405,x=35.3,y=24.9,text="Stranglethorn Vale starts at 34: grind these to 90% through level 33, and the quests left here bring you the rest of the way.",level=33,pct=90,mobs={"Slitherblade Naga","Slitherblade Warrior","Slitherblade Sorceress"},v=0},
     {"turnin",q=1480,title="The Corrupter",npc="Maurin Bonesplitter",z=405,x=52.2,y=53.4,v=1},
     {"turnin",q=6143,title="Other Fish to Fry",npc="Drulzegar Skraghook",z=405,x=23.3,y=72.9,text="Shadowprey Village.",v=1},
     {"turnin",q=6142,title="Clam Bait",npc="Mai'Lahii",z=405,x=22.6,y=72,v=1},

@@ -38,6 +38,7 @@ ns.Guides:Register({
     {"complete",q=5149,title="Pamela's Doll",text="The doll's head, dress and stuffing are in the ruined houses of Darrowshire. Ghosts appear when you loot them.",v=1},
     {"turnin",q=5149,title="Pamela's Doll",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
     {"accept",q=5241,title="Uncle Carlin",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
+    {"accept",q=5152,title="Auntie Marlene",npc="Pamela Redpath",z=139,x=36.4,y=90.8,v=1},
     {"complete",q=6021,title="Zaeldarr the Outcast",text="Zaeldarr in the Darrowshire crypt, west side of the village.",v=1},
     {"turnin",q=5542,title="Demon Dogs",npc="Tirion Fordring",z=139,x=7.6,y=43.7,text="Tirion Fordring.",v=1},
     {"turnin",q=5543,title="Blood Tinged Skies",npc="Tirion Fordring",z=139,x=7.6,y=43.7,v=1},

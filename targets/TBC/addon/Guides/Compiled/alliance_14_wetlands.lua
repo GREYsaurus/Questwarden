@@ -110,7 +110,7 @@ ns.Guides:Register({
     {"complete",q=290,title="Lifting the Curse",text="Intrepid Strongbox Key drops from Captain Halyndor.",v=1},
     {"turnin",q=290,title="Lifting the Curse",npc="Intrepid's Locked Strongbox",z=11,x=14.4,y=24,v=1},
     {"accept",q=292,title="The Eye of Paleth",npc="Intrepid's Locked Strongbox",z=11,x=14.4,y=24,v=1},
-    {"level",level=28,v=1},
+    {"grind",z=11,x=15.1,y=27,text="The next steps expect level 28 and the quests here don't quite get you there: grind these until you reach it.",level=28,mobs={"Cursed Marine","Cursed Sailor","Giant Wetlands Crocolisk"},v=0},
     {"train",text="Ironforge via the Dun Algaz pass and Thelsamar.",classes={"DRUID"},v=1},
     {"train",text="Ironforge via the Dun Algaz pass and Thelsamar.",classes={"HUNTER"},v=1},
     {"train",text="Ironforge via the Dun Algaz pass and Thelsamar.",classes={"MAGE"},v=1},

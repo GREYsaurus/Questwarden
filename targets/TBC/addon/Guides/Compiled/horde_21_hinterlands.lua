@@ -62,7 +62,7 @@ ns.Guides:Register({
     {"turnin",q=7850,title="Dark Vessels",npc="Primal Torntusk",z=47,x=78.2,y=81.2,v=1},
     {"turnin",q=7861,title="Wanted: Vile Priestess Hexx and Her Minions",npc="Primal Torntusk",z=47,x=78.2,y=81.2,optional=true,v=1},
     {"turnin",q=7849,title="Separation Anxiety",npc="Huntsman Markhor",z=47,x=79.2,y=79.5,text="Huntsman Markhor.",v=1},
-    {"level",level=49,v=1},
+    {"grind",z=47,x=66,y=73.3,text="The next steps expect level 49 and the quests here don't quite get you there: grind these until you reach it.",level=49,mobs={"Vilebranch Berserker","Vilebranch Hideskinner","Vilebranch Headhunter"},v=0},
     {"train",text="No druid trainer in this zone - train at the next town or capital.",classes={"DRUID"},v=1},
     {"train",text="No hunter trainer in this zone - train at the next town or capital.",classes={"HUNTER"},v=1},
     {"train",text="No mage trainer in this zone - train at the next town or capital.",classes={"MAGE"},v=1},

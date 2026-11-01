@@ -78,6 +78,13 @@ accept 123 The Collector [race=Dwarf,Night Elf,Gnome,Draenei; optional]
 turnin 123 The Collector [class=Warrior,Rogue,Mage; race=Gnome; optional] | Turned in at Elwynn Forest.
 turnin 123 The Collector [race=Dwarf,Night Elf,Draenei; optional] | Turned in at Elwynn Forest.
 turnin 123 The Collector [class=Warlock; race=Gnome; optional] | Turned in at Elwynn Forest.
+accept 138 Captain Sander's Hidden Treasure
+turnin 138 Captain Sander's Hidden Treasure
+accept 139 Captain Sander's Hidden Treasure
+turnin 139 Captain Sander's Hidden Treasure
+accept 140 Captain Sander's Hidden Treasure
+grind 14.9 Murloc Minor Oracle, Murloc Netter, Riverpaw Scout [at=36.8,16.5] | The next steps expect level 15: grind these to 90% through level 14, and the quests left here bring you the rest of the way.
+turnin 140 Captain Sander's Hidden Treasure
 level 15 | Grind Defias around Moonbrook if needed.
 train | Train in Stormwind or Goldshire before leaving.
 note The Deadmines (dungeon, 17-21) starts in Moonbrook. Most of its quests come later with the Defias Brotherhood chain.

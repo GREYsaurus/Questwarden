@@ -12,9 +12,13 @@
 fp Shadowmoon Village
 bind Shadowmoon Village [area=3744]
 accept A Grunt's Work... | Overlord Or'barokh.
+accept 10681 The Hand of Gul'dan
 accept A Haunted History | Chief Apothecary Hildagard.
 accept What Strange Creatures... | Researcher Tiorus.
 accept The Sketh'lon Wreckage | Sergeant Kargrul.
+note The next quest, Escape from Coilskar Cistern, is an escort: pick it up only when you are ready to follow the NPC.
+accept 10451 Escape from Coilskar Cistern
+complete 10451 Escape from Coilskar Cistern | Escort: stay close; it fails if the NPC dies.
 complete The Sketh'lon Wreckage | Sketh'lon Commander's Journal - Page 1 drops from Dark Conclave Hawkeye, Dark Conclave Ravenguard and Dark Conclave Shadowmancer. Sketh'lon Commander's Journal 
 complete A Grunt's Work...
 turnin The Sketh'lon Wreckage
@@ -66,5 +70,10 @@ complete Find the Deserter
 turnin Spectrecles
 turnin Frankly, It Makes No Sense...
 turnin Find the Deserter
+accept 10458 Enraged Spirits of Fire and Earth
+complete 10458 Enraged Spirits of Fire and Earth
+turnin 10451 Escape from Coilskar Cistern
+turnin 10458 Enraged Spirits of Fire and Earth
+turnin 10681 The Hand of Gul'dan
 level 70
 note Congratulations - level 70. Open /{slash} talents to switch to a level-70 build.

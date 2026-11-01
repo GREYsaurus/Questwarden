@@ -23,4 +23,4 @@ accept 3561 Delivery to Archmage Xylem
 turnin 3561 Delivery to Archmage Xylem
 accept 3565 Xylem's Payment to Jediga
 turnin 3565 Xylem's Payment to Jediga
-level 54 | Felwood starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 54 Blood Elf Reclaimer, Blood Elf Surveyor, Legashi Satyr [at=58.7,27.0] | Felwood starts at 54 and the quests here don't quite get you there: grind these until you reach it.

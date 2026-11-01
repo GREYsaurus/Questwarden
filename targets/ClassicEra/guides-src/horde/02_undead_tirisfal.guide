@@ -138,5 +138,5 @@ turnin 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage] | Turned in at
 train | Undercity trainers (west of Brill).
 accept Delivery to Silverpine Forest | Apothecary Johaan.
 fp Undercity [zone=Undercity]
-level 11
+grind 11 Bleeding Horror, Wandering Spirit, Scarlet Friar [at=76.8,59.7] | The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.
 note Ride south into Silverpine Forest; The Sepulcher is the Horde town.

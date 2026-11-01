@@ -70,6 +70,6 @@ ns.Guides:Register({
     {"accept",q=191,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
     {"complete",q=191,title="Panther Mastery",v=1},
     {"turnin",q=191,title="Panther Mastery",npc="Sir S. J. Erlgadin",z=33,x=35.6,y=10.6,v=1},
-    {"level",text="Arathi Highlands starts at 36. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=36,v=1},
+    {"grind",z=33,x=25.2,y=12.4,text="Arathi Highlands starts at 36 and the quests here don't quite get you there: grind these until you reach it.",level=36,mobs={"Bloodscalp Hunter","Bloodscalp Mystic","Bloodscalp Scout"},v=0},
   },
 })

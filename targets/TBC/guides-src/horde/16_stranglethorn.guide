@@ -14,13 +14,18 @@ fp Grom'gol
 bind Grom'gol [area=117]
 accept Mok'thardin's Enchantment | Far Seer Mok'thardin.
 accept The Defense of Grom'gol | Commander Aggro'gosh.
+accept 9436 Bloodscalp Insight
 accept Bloody Bone Necklaces | Kin'weelay.
+accept 629 The Vile Reef
 accept Welcome to the Jungle | Barnil Stonepot, Nesingwary's Expedition.
 turnin Welcome to the Jungle
+turnin 5763 Hunting in Stranglethorn [optional]
 accept 194 Raptor Mastery
 accept 185 Tiger Mastery
 accept 190 Panther Mastery
 accept Hunt for Yenniku | Nimboya, Grom'gol.
+complete 9436 Bloodscalp Insight
+complete 629 The Vile Reef
 complete Hunt for Yenniku | Bloodscalp trolls west of Grom'gol.
 complete Bloody Bone Necklaces | Bloodscalp trolls.
 complete The Defense of Grom'gol | Raptors around Grom'gol.
@@ -31,8 +36,10 @@ complete 194 Raptor Mastery
 turnin Hunt for Yenniku
 accept Headhunting
 turnin The Defense of Grom'gol
+turnin 9436 Bloodscalp Insight
 accept 569 The Defense of Grom'gol
 turnin Bloody Bone Necklaces
+turnin 629 The Vile Reef
 turnin 185 Tiger Mastery
 accept 186 Tiger Mastery
 turnin 190 Panther Mastery
@@ -43,16 +50,34 @@ complete 186 Tiger Mastery
 complete 191 Panther Mastery
 turnin 186 Tiger Mastery
 turnin 191 Panther Mastery
+accept 187 Tiger Mastery
 turnin 194 Raptor Mastery
+complete 187 Tiger Mastery
+accept 192 Panther Mastery
 accept 195 Raptor Mastery
+turnin 187 Tiger Mastery
 complete 195 Raptor Mastery
 turnin 195 Raptor Mastery
+accept 188 Tiger Mastery
 turnin Headhunting
+complete 188 Tiger Mastery
+accept 196 Raptor Mastery
+accept 598 Split Bone Necklace
 turnin 569 The Defense of Grom'gol
+accept 584 Bloodscalp Clan Heads
+turnin 188 Tiger Mastery
+complete 192 Panther Mastery
 turnin Mok'thardin's Enchantment
+complete 584 Bloodscalp Clan Heads
+turnin 192 Panther Mastery
+complete 196 Raptor Mastery
+complete 598 Split Bone Necklace
 fp Booty Bay
 accept Singing Blue Shards | Crank Fizzlebub.
+accept 617 Akiris by the Bundle
+accept 189 Bloodscalp Ears
 accept Scaring Shaky | "Sea Wolf" MacKinley.
+accept 595 The Bloodsail Buccaneers
 accept Supply and Demand | Drizzlik, Booty Bay.
 complete Supply and Demand | Large River Crocolisk Skin drops from River Crocolisk.
 complete Singing Blue Shards | Singing Crystal Shard drops from Cold Eye Basilisk, Crystal Spine Basilisk and Stone Maw Basilisk and others.
@@ -63,11 +88,38 @@ turnin Singing Blue Shards
 accept Venture Company Mining
 complete Some Assembly Required | Snapjaw Crocolisk Skin drops from Snapjaw Crocolisk.
 turnin Scaring Shaky
+turnin 584 Bloodscalp Clan Heads
+accept 193 Panther Mastery
+turnin 196 Raptor Mastery
+turnin 595 The Bloodsail Buccaneers
+accept 572 Mok'thardin's Enchantment
+complete 617 Akiris by the Bundle
+complete 189 Bloodscalp Ears
+turnin 598 Split Bone Necklace
 accept Return to MacKinley
+accept 585 Speaking with Nezzliok
+accept 586 Speaking with Gan'zulah
+complete 193 Panther Mastery
+accept 197 Raptor Mastery
+accept 597 The Bloodsail Buccaneers
+complete 572 Mok'thardin's Enchantment
 turnin Return to MacKinley
+complete 585 Speaking with Nezzliok
+complete 586 Speaking with Gan'zulah
+turnin 193 Panther Mastery
+complete 197 Raptor Mastery
+turnin 597 The Bloodsail Buccaneers
+turnin 572 Mok'thardin's Enchantment
 complete Venture Company Mining | Singing Blue Crystal drops from Venture Co. Foreman, Venture Co. Strip Miner and Venture Co. Surveyor and others.
 turnin Some Assembly Required
+accept 599 The Bloodsail Buccaneers
 turnin Venture Company Mining
+turnin 585 Speaking with Nezzliok
+turnin 586 Speaking with Gan'zulah
+turnin 197 Raptor Mastery
+turnin 599 The Bloodsail Buccaneers
+turnin 617 Akiris by the Bundle
+turnin 189 Bloodscalp Ears
 level 39
 train
 note Next: the Swamp of Sorrows, north through Duskwood and Deadwind Pass.

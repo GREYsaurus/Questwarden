@@ -105,6 +105,11 @@ turnin Ironband's Excavation
 complete Gathering Idols | Troggs at the excavation site drop Carved Stone Idols.
 turnin Gathering Idols
 turnin 161 A Dark Threat Looms [optional] | Ashlan Stonesmirk in the Wetlands. Leave it if you are going straight to Redridge.
-level 17 | Finish leftover kills here if you are not 17 yet.
+accept 271 Vyrin's Revenge
+complete 271 Vyrin's Revenge
+turnin 271 Vyrin's Revenge
+accept 531 Vyrin's Revenge
+turnin 531 Vyrin's Revenge
+grind 17 Stonesplinter Geomancer [at=71.7,64.6] | The next steps expect level 17 and the quests here don't quite get you there: grind these until you reach it.
 train
 note Fly from Thelsamar to Ironforge, take the Deeprun Tram to Stormwind, and walk east through Elwynn to Redridge.

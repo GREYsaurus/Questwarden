@@ -20,10 +20,14 @@ accept 5235 Target: Gahrron's Withering [zone=Tirisfal Glades]
 turnin 6390 A Plague Upon Thee
 complete 5235 Target: Gahrron's Withering | The cauldron at Gahrron's Withering.
 turnin 5235 Target: Gahrron's Withering
+turnin 5152 Auntie Marlene [optional]
 accept 5236 Return to the Bulwark
+accept 5153 A Strange Historian
 turnin 5236 Return to the Bulwark [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept 5238 Mission Accomplished! [zone=Tirisfal Glades]
 turnin 5238 Mission Accomplished! [zone=Tirisfal Glades] | Turned in at Tirisfal Glades.
 accept 6025 Unfinished Business
+complete 5153 A Strange Historian
 turnin 6025 Unfinished Business
+turnin 5153 A Strange Historian
 level 58 | Silithus starts at 58. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

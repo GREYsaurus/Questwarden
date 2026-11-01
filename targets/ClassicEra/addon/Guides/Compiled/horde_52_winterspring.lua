@@ -27,6 +27,7 @@ ns.Guides:Register({
     {"accept",q=6029,title="The Everlook Report",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at the Bulwark (Western Plaguelands).",v=1},
     {"accept",q=6030,title="Duke Nicholas Zverenhoff",npc="Gregor Greystone",z=618,x=61.4,y=39,text="Gregor Greystone. Turned in at Light's Hope Chapel (Eastern Plaguelands).",v=1},
     {"accept",q=6603,title="Trouble in Winterspring!",npc="Meggi Peppinrocker",z=618,x=60.7,y=38.2,text="Meggi Peppinrocker, Everlook. Turned in to Donova Snowden on the way out.",v=1},
+    {"accept",q=6605,title="A Strange One",npc="Harlo Wigglesworth",z=618,x=61.1,y=38.4,v=1},
     {"complete",q=5054,title="Ursius of the Shardtooth",text="Ursius, a big bear in the hills north of Everlook.",v=1},
     {"turnin",q=5054,title="Ursius of the Shardtooth",npc="Storm Shadowhoof",z=618,x=61.9,y=38.4,text="Storm Shadowhoof.",v=1},
     {"complete",q=3783,title="Are We There, Yeti?",text="Thick Yeti Fur from Rogue Ice Thistle yetis on the road west of Everlook.",v=1},

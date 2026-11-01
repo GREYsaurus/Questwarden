@@ -39,11 +39,15 @@ accept 5052 Blood Shards of Agamaggan
 complete 5052 Blood Shards of Agamaggan
 turnin 5052 Blood Shards of Agamaggan
 accept 1483 Ziz Fizziks [optional]
+accept 1221 Blueleaf Tubers
 turnin 3513 The Runed Scroll
+turnin 6542 Report to Kadrak [optional]
 turnin 1483 Ziz Fizziks [optional] | Turned in at Stonetalon Mountains.
 accept 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll]
 complete 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Super Reaper 6000 Blueprints drops from Venture Co. Operator.
 turnin 1093 Super Reaper 6000 [class=Shaman; race=Orc,Tauren,Troll] | Turned in at Stonetalon Mountains.
 accept 1094 Further Instructions
 turnin 1094 Further Instructions
+accept 3514 Horde Presence
+complete 1221 Blueleaf Tubers
 level 23 | Stonetalon Mountains starts at 23. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

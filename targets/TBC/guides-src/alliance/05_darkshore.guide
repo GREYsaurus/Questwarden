@@ -106,6 +106,7 @@ complete The Blackwood Corrupted | Blackwood furbolg camp in the north.
 turnin The Blackwood Corrupted
 complete Buzzbox 411 | Thresher eyes from threshers off the coast.
 turnin Buzzbox 411
+accept 4723 Beached Sea Creature
 accept Buzzbox 323
 complete Buzzbox 323 | Moonstalkers.
 turnin Buzzbox 323
@@ -122,8 +123,14 @@ accept 4727 Beached Sea Turtle [race=Dwarf,Night Elf,Draenei; optional]
 complete Therylune's Escape [optional] | Escort quest.
 turnin Therylune's Escape [optional]
 accept 4722 Beached Sea Turtle [optional]
+accept 4728 Beached Sea Creature
 complete Buzzbox 525
 turnin Buzzbox 525
+accept 951 Mathystra Relics
+accept 4731 Beached Sea Turtle
+accept 4732 Beached Sea Turtle
+accept 4733 Beached Sea Creature
+accept 4730 Beached Sea Creature
 complete 967 The Tower of Althalaxx
 turnin 967 The Tower of Althalaxx
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Rogue,Mage; race=Gnome; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
@@ -133,6 +140,7 @@ accept 4725 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 accept 4725 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 accept 4725 Beached Sea Turtle [race=Dwarf,Night Elf,Draenei; optional]
 turnin 955 Bashal'Aran
+complete 951 Mathystra Relics
 accept 956 Bashal'Aran
 complete 956 Bashal'Aran
 turnin 956 Bashal'Aran
@@ -152,6 +160,14 @@ turnin 4727 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 4727 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 4727 Beached Sea Turtle [race=Dwarf,Night Elf,Draenei; optional]
 turnin 4722 Beached Sea Turtle [optional]
+turnin 951 Mathystra Relics
+grind 18.6 Greymist Hunter, Twilight Thug, Grizzled Thistle Bear [at=37.7,82.6] | The next steps expect level 19: grind these to 60% through level 18, and the quests left here bring you the rest of the way.
+turnin 4731 Beached Sea Turtle
+turnin 4732 Beached Sea Turtle
+turnin 4733 Beached Sea Creature
+turnin 4730 Beached Sea Creature
+turnin 4728 Beached Sea Creature
+turnin 4723 Beached Sea Creature
 turnin 4725 Beached Sea Turtle [class=Warrior,Rogue,Mage; race=Gnome; optional]
 turnin 4725 Beached Sea Turtle [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional]
 turnin 4725 Beached Sea Turtle [race=Dwarf,Night Elf,Draenei; optional]

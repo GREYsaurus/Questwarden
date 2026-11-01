@@ -110,6 +110,7 @@ accept 4722 Beached Sea Turtle [optional]
 accept 4728 Beached Sea Creature
 complete 1003 Buzzbox 525
 turnin 1003 Buzzbox 525
+grind 16.2 Grizzled Thistle Bear, Twilight Thug, Moonstalker Sire [at=39.3,81.6] | Loch Modan starts at 17: grind these to 20% through level 16, and the quests left here bring you the rest of the way.
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Rogue,Mage; race=Gnome; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
 complete 982 Deep Ocean, Vast Sea [class=Warrior,Paladin,Rogue,Priest,Mage; race=Human; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.
 complete 982 Deep Ocean, Vast Sea [race=Dwarf,Night Elf; optional] | Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.

@@ -15,6 +15,8 @@
 travel The Barrens
 accept 874 Mahren Skyseer [optional]
 accept 1095 Further Instructions
+turnin 3514 Horde Presence [optional]
+turnin 1221 Blueleaf Tubers [optional]
 accept 1131 Steelsnap | Needs level 20. If you are lower, {name} skips it and moves on.
 accept 893 Weapons of Choice
 complete 893 Weapons of Choice

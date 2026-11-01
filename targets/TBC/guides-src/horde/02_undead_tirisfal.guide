@@ -74,6 +74,7 @@ complete A Putrid Task | Rotting Dead and Ravaged Corpses.
 complete 427 At War With The Scarlet Crusade | Scarlet Warriors at Solliden Farmstead.
 turnin 427 At War With The Scarlet Crusade
 accept 370 At War With The Scarlet Crusade
+accept 374 Proof of Demise
 complete Wanted: Maggot Eye | Maggot Eye at the Garren's Haunt farm.
 complete Graverobbers
 turnin Wanted: Maggot Eye
@@ -85,11 +86,14 @@ complete 367 A New Plague
 turnin 367 A New Plague
 accept 368 A New Plague
 turnin A Putrid Task
+accept 5482 Doom Weed
 accept The Mills Overrun
+complete 5482 Doom Weed
 accept 361 A Letter Undelivered
 complete The Mills Overrun | Agamand Mills, north.
 complete 368 A New Plague | Vile Fin murlocs on the coast.
 turnin The Mills Overrun
+turnin 5482 Doom Weed
 turnin 368 A New Plague
 accept 369 A New Plague
 complete 370 At War With The Scarlet Crusade | Captain Perrine, Scarlet Crusade camp.
@@ -103,25 +107,32 @@ accept 372 At War With The Scarlet Crusade [optional]
 complete 372 At War With The Scarlet Crusade [optional]
 turnin 372 At War With The Scarlet Crusade [optional]
 turnin Graverobbers
+complete 374 Proof of Demise
 accept Forsaken Duties
 accept Deaths in the Family | Coleman Farthing, Brill inn.
+turnin 374 Proof of Demise
 turnin 361 A Letter Undelivered
 accept The Haunted Mills
 complete Deaths in the Family | Agamand relatives in the mills crypt.
 complete The Haunted Mills | Devlin Agamand in the mills.
 turnin Deaths in the Family
 turnin The Haunted Mills
+accept 355 Speak with Sevren
 accept The Chill of Death | Gretchen Dedmar.
 complete The Chill of Death | Duskbats and Vile Fin murlocs.
 turnin The Chill of Death
 turnin Forsaken Duties | Deathguard Linnea, the bridge north.
+accept 356 Rear Guard Patrol
+complete 356 Rear Guard Patrol
+turnin 356 Rear Guard Patrol
 accept Return to the Magistrate
 turnin 407 Fields of Grief
 turnin Return to the Magistrate
+turnin 355 Speak with Sevren
 accept 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage]
 turnin 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage] | Turned in at Durotar.
 train | Undercity trainers (west of Brill).
 accept Delivery to Silverpine Forest | Apothecary Johaan.
 fp Undercity [zone=Undercity]
-level 11
+grind 11 Bleeding Horror, Wandering Spirit, Scarlet Friar [at=76.9,59.5] | The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.
 note Ride south into Silverpine Forest; The Sepulcher is the Horde town.

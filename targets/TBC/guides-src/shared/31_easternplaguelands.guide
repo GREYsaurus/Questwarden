@@ -22,28 +22,59 @@ turnin Augustus' Receipt Book
 note Ride the road east across the zone to Light's Hope Chapel.
 fp Light's Hope Chapel
 turnin Duke Nicholas Zverenhoff [optional] | Duke Nicholas Zverenhoff, Light's Hope Chapel (from Winterspring).
+accept 9126 Bonescythe Digs
+accept 9664 Establishing New Outposts [faction=Alliance]
+accept 9665 Bolstering Our Defenses [faction=Horde]
+accept 5503 Argent Dawn Commission
+turnin 5503 Argent Dawn Commission
 accept Zaeldarr the Outcast | Caretaker Alen, Light's Hope Chapel.
+accept 5281 The Restless Souls
 complete Demon Dogs | Plaguehounds and Frenzied Plaguehounds around Light's Hope and the north; Plaguehound Runts in the south.
 complete Carrion Grubbage | Slabs of Carrion Worm Meat from Carrion Grubs, often next to the plaguehounds.
 complete Blood Tinged Skies | Plaguebats are everywhere south of the road.
 turnin Little Pamela | Pamela Redpath in Darrowshire, south.
+turnin 5601 Sister Pamela [faction=Alliance; optional]
+turnin 5601 Sister Pamela [faction=Horde; optional]
 accept Pamela's Doll
 complete Pamela's Doll | The doll's head, dress and stuffing are in the ruined houses of Darrowshire. Ghosts appear when you loot them.
 turnin Pamela's Doll
 accept Uncle Carlin
 complete Zaeldarr the Outcast | Zaeldarr in the Darrowshire crypt, west side of the village.
 accept To Kill With Purpose [faction=Horde] | Nathanos Blightcaller at Marris Stead, west of Darrowshire.
+accept 6133 The Ranger Lord's Behest [faction=Horde]
+accept 6136 The Corpulent One [faction=Horde]
+complete 9664 Establishing New Outposts [faction=Alliance]
+complete 9665 Bolstering Our Defenses [faction=Horde]
 accept Un-Life's Little Annoyances [faction=Horde] | Nathanos Blightcaller.
 complete To Kill With Purpose [faction=Horde] | Coagulated Rot from the ghouls and flayers around Darrowshire and the Marris Stead.
 complete Un-Life's Little Annoyances [faction=Horde] | Noxious Plaguebats south, Monstrous Plaguebats north.
 turnin To Kill With Purpose [faction=Horde]
 turnin Un-Life's Little Annoyances [faction=Horde]
 turnin Demon Dogs | Tirion Fordring.
+complete 9126 Bonescythe Digs
+turnin 5281 The Restless Souls
 turnin Blood Tinged Skies
 turnin Carrion Grubbage
 note Ride back east to Light's Hope Chapel.
 turnin Zaeldarr the Outcast | Caretaker Alen.
 turnin Uncle Carlin | Carlin Redpath.
+accept 9124 Cryptstalker Armor Doesn't Make Itself...
+accept 9128 The Elemental Equation
+complete 6133 The Ranger Lord's Behest [faction=Horde]
+complete 6136 The Corpulent One [faction=Horde]
+complete 9124 Cryptstalker Armor Doesn't Make Itself...
+complete 9128 The Elemental Equation
+turnin 6133 The Ranger Lord's Behest [faction=Horde]
+accept 5742 Redemption [faction=Alliance]
+accept 5742 Redemption [faction=Horde]
+turnin 6136 The Corpulent One [faction=Horde]
+turnin 5742 Redemption [faction=Alliance]
+turnin 5742 Redemption [faction=Horde]
+turnin 9124 Cryptstalker Armor Doesn't Make Itself...
+turnin 9126 Bonescythe Digs
+turnin 9128 The Elemental Equation
+turnin 9664 Establishing New Outposts [faction=Alliance]
+turnin 9665 Bolstering Our Defenses [faction=Horde]
 level 58
 train
 note At 58 go to the Dark Portal in the Blasted Lands. Alliance: fly to Stormwind, then Nethergarde Keep (the herald for Through the Dark Portal is in Stormwind or Nethergarde). Horde: fly to Orgrimmar or the Undercity (the herald is there), then Stonard and ride south.

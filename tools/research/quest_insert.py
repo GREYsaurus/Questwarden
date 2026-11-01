@@ -18,7 +18,8 @@
 # This writes guide sources, which are our own content. Run the compiler and the route audit afterwards:
 # they reject impossible orders and quest-log overflow, and every added quest is reviewed in the diff.
 #
-# Usage: python tools/research/quest_insert.py ClassicEra [--max-per-guide N] [--dry-run]
+# Usage: python tools/research/quest_insert.py ClassicEra [--max-per-guide N] [--min-grind L] [--dry-run]
+#   --min-grind L  only guides whose route model still grinds at least L levels (guide-xp.csv grindLevels)
 import csv
 import glob
 import json
@@ -35,6 +36,10 @@ MAXPER = 999
 for i, a in enumerate(sys.argv):
     if a == "--max-per-guide":
         MAXPER = int(sys.argv[i + 1])
+MIN_GRIND = None
+for i, a in enumerate(sys.argv):
+    if a == "--min-grind":
+        MIN_GRIND = float(sys.argv[i + 1])
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from qdb import ESCORT_STEP, escort, escort_note  # noqa: E402
 
@@ -247,10 +252,16 @@ def centroid(pts):
 
 
 VERB_RE = re.compile(r"^(accept|turnin|complete)\s")
+GRIND = {}
+if MIN_GRIND is not None:
+    for r in csv.DictReader(open(os.path.join(ROOT, "docs", "generated", target, "guide-xp.csv"), encoding="utf-8")):
+        GRIND[r["guide"]] = float(r["grindLevels"])
 report = []
 WHY = {}
 for gid, g in sorted(comp.items(), key=lambda kv: kv[1]["min"]):
     if not g["file"] or gid not in cands:
+        continue
+    if MIN_GRIND is not None and GRIND.get(gid, 0) < MIN_GRIND:
         continue
     zone = g["zone"]
     src = open(g["file"], encoding="utf-8", newline="").read()

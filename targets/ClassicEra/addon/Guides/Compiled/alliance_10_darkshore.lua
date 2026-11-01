@@ -114,6 +114,7 @@ ns.Guides:Register({
     {"accept",q=4728,title="Beached Sea Creature",npc="Beached Sea Creature",z=148,x=36,y=70.9,v=1},
     {"complete",q=1003,title="Buzzbox 525",v=1},
     {"turnin",q=1003,title="Buzzbox 525",npc="Buzzbox 525",z=148,x=41.4,y=80.6,v=1},
+    {"grind",z=148,x=39.3,y=81.6,text="Loch Modan starts at 17: grind these to 20% through level 16, and the quests left here bring you the rest of the way.",level=16,pct=20,mobs={"Grizzled Thistle Bear","Twilight Thug","Moonstalker Sire"},v=0},
     {"complete",q=982,title="Deep Ocean, Vast Sea",text="Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.",classes={"WARRIOR","ROGUE","MAGE"},races={"Gnome"},optional=true,v=1},
     {"complete",q=982,title="Deep Ocean, Vast Sea",text="Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.",classes={"WARRIOR","PALADIN","ROGUE","PRIEST","MAGE"},races={"Human"},optional=true,v=1},
     {"complete",q=982,title="Deep Ocean, Vast Sea",text="Silver Dawning's Lockbox: loot Silver Dawning's Lockbox. Mist Veil's Lockbox: loot Mist Veil's Lockbox.",races={"Dwarf","NightElf"},optional=true,v=1},

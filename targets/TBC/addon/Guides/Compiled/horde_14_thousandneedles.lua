@@ -110,6 +110,7 @@ ns.Guides:Register({
     {"turnin",q=906,title="Betrayal from Within",npc="Thork",z=17,x=51.5,y=30.9,text="Turned in at The Barrens.",optional=true,v=1},
     {"accept",q=1145,title="The Swarm Grows",npc="Korran",z=17,x=51.1,y=29.6,v=1},
     {"turnin",q=4904,title="Free at Last",npc="Thalia Amberhide",z=400,x=46,y=51.6,optional=true,v=1},
+    {"accept",q=5361,title="Family Tree",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=5064,title="Grimtotem Spying",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,v=1},
     {"turnin",q=5147,title="Wanted - Arnak Grimtotem",npc="Cliffwatcher Longhorn",z=400,x=45.7,y=50.7,optional=true,v=1},
     {"turnin",q=9434,title="Testing the Tonic",npc="Magistrix Elosai",z=400,x=46.2,y=50.4,optional=true,v=1},

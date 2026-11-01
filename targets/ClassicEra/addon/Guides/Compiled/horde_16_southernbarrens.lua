@@ -11,6 +11,8 @@ ns.Guides:Register({
     {"travel",text="Travel to The Barrens",dest="The Barrens",v=1},
     {"accept",q=874,title="Mahren Skyseer",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
     {"accept",q=1095,title="Further Instructions",npc="Sputtervalve",z=17,x=63,y=37.2,v=1},
+    {"turnin",q=3514,title="Horde Presence",npc="Kadrak",z=17,x=48.1,y=5.4,optional=true,v=1},
+    {"turnin",q=1221,title="Blueleaf Tubers",npc="Mebok Mizzyrix",z=17,x=62.4,y=37.6,optional=true,v=1},
     {"accept",q=1131,title="Steelsnap",npc="Melor Stonehoof",z=1638,x=61.5,y=80.9,text="Needs level 20. If you are lower, {name} skips it and moves on.",v=1},
     {"accept",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
     {"complete",q=893,title="Weapons of Choice",v=1},

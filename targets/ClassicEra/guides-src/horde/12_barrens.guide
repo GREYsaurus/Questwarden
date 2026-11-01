@@ -125,4 +125,4 @@ accept 1489 Hamuul Runetotem
 accept 888 Stolen Booty
 complete 888 Stolen Booty | Back to the pirate camp north of Ratchet for Tazan.
 turnin 888 Stolen Booty
-level 20 | Stonetalon Mountains starts at 20. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+grind 20 Savannah Matriarch, Slimeshell Makrura [at=62.5,34.1] | Stonetalon Mountains starts at 20 and the quests here don't quite get you there: grind these until you reach it.

@@ -15,6 +15,8 @@
 travel Arathi Highlands
 train
 accept 677 Call to Arms | Drum Fel.
+complete 676 The Hammer May Fall [optional]
 complete 677 Call to Arms | Syndicate at Northfold Manor.
 turnin 677 Call to Arms
+turnin 676 The Hammer May Fall [optional]
 level 30 | Stranglethorn Vale starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
