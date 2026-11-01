@@ -117,6 +117,7 @@ local profileDefaults = {
         markFriendly = true,        -- also mark the quest giver/finisher of the current step
         markInGroup = true,         -- allow automatic marking while in a group
         targetMacro = true,         -- keep a "Questwarden" macro targeting the current step's NPCs
+        markWithMacro = true,       -- that macro also marks them (/tm); the add-on then never marks by itself
         targetNotify = true,        -- chat note when a current-step mob or NPC first comes into view
         announceLevelEmote = false, announceLevelParty = false, announceLevelGuild = false,
         tipsEnabled = true,

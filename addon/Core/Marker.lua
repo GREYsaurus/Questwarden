@@ -196,6 +196,7 @@ function M:OnStep()
     if rule then
         for _, u in ipairs(C.MarkableUnits()) do self:Consider(u) end
     end
+    if ns.Assist then ns.Assist:UpdateMacro() end -- the macro marks with this rule's icons
 end
 
 -- Steps after the current one finished (or settings changed): refresh the rule but keep the
@@ -210,6 +211,7 @@ function M:OnRefresh()
     if rule then
         for _, u in ipairs(C.MarkableUnits()) do self:Consider(u) end
     end
+    if ns.Assist then ns.Assist:UpdateMacro() end
 end
 
 -- Finds a currently visible unit token for a GUID (target, mouseover, focus, nameplates).
@@ -256,6 +258,8 @@ function M:Consider(unit)
     local icon = r.types[id]
     local name = UnitName and UnitName(unit) or "target"
     if not icon then return self:Note("not an NPC of the current step", name) end
+    -- With markWithMacro the targeting macro marks (on your key press); the add-on does not mark by itself.
+    if prof().markWithMacro then return self:Note("marking is done by the targeting macro", name) end
     self.lastSeen[guid] = GetTime()
     if self.blocked then return self:Note("blocked by the client", name) end
     if not prof().markInGroup and ns.Assist and ns.Assist:InGroup() then return self:Note("marking in groups is off", name) end

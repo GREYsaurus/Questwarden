@@ -237,6 +237,7 @@ ns.Engine:Load("A_Human_Elwynn")
 TEST = { check = check, ns = ns }
 dofile("tests/test_automation.lua")
 dofile("tests/test_markers.lua")
+dofile("tests/test_target_macro.lua")
 dofile("tests/test_gear.lua")
 dofile("tests/test_minimap.lua")
 dofile("tests/test_config.lua")

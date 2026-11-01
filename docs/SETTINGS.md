@@ -92,6 +92,7 @@ None of this has been tested in the game client yet.
   - Replace and clear options, and the default marker. See [RAID_MARKERS.md](RAID_MARKERS.md).
 - **Targeting Macro:**
   - *Create Targeting Macro* keeps a "Questwarden" macro with `/tar` lines for the current step's NPCs. Drag it to an action bar from the Macros window, General tab. It's never edited in combat.
+  - *Mark with the Targeting Macro* (on): each press of that macro also marks the nearest visible mob of each kind with its raid icon, and moves the icons on to the next or nearer mobs on later presses. Questwarden then never marks by itself (docs/RAID_MARKERS.md).
   - *Notify on new target* prints one chat line when a current-step NPC first comes into view.
 - **Raid Marker Bar:** shows or hides the marker bar.
 - **Active Target Frame:** click-to-target buttons (`/tar <name>`) for the current step's NPCs.

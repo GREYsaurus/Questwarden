@@ -17,11 +17,34 @@ Settings live under **Interface > AddOns > Questwarden > Raid markers**, or `/qw
 
 With no target you get a short message, never an error. Marking an icon the target already has is a no-op. The raw API would toggle it off; Questwarden never does.
 
+## Marking with the targeting macro (default)
+
+**Setting:** `markWithMacro` (*Mark with the Targeting Macro*), on by default since 0.1.0-alpha.9. While it is on, Questwarden never marks by itself; the "Questwarden" targeting macro does it when you press it.
+
+**What one press does:** for each kind of mob the guide wants right now (the same icons as the rule below), the macro runs three lines:
+1. `/cleartarget`
+2. `/tar <name>`: the nearest one you can see
+3. `/tm [harm,nodead]!<icon>`: give it that kind's icon
+
+**Why it can't go wrong:**
+- **A kind that isn't in view marks nothing:** after `/cleartarget`, `[harm]` needs a target.
+- **A mark is never toggled off:** `!` keeps the icon if the mob already has it.
+- **Marks are never stuck:** each press re-picks the nearest living mob of each kind. After a kill, or when a nearer mob of that kind shows up, the next press moves the icon to it.
+- **You end on the right mob:** the current step's own mobs come last, so you are left targeting one of them.
+
+**Limits:**
+- The macro has a 255-character limit, about four kinds of mob.
+- The game does not allow macros to be changed in combat, so a step change during a fight updates the macro afterwards.
+- In a group, marking needs leader or assist, as for any marking.
+
+**Turning it off** brings back the automatic marking described below.
+
 ## Settings and defaults
 
 | Setting (`/qw set ...`) | Default | What it does |
 |---|---|---|
 | `markEnabled` | on | Turns commands, the bar and guide marking on or off |
+| `markWithMacro` | on (0.1.0-alpha.9) | The targeting macro marks the step's mobs on your key press; Questwarden does not mark by itself |
 | `autoMark` | on | Guide marking: NPCs that the current steps name with `[mark=...]` |
 | `autoMarkObjectives` | on (changed after 0.4.0) | Also marks the kill objectives of the current `complete` steps, one icon per step (see below). Settings saved by older versions are switched on once, with a chat note |
 | `markReplace` | off | Lets automatic marking replace an icon that is already on the unit |

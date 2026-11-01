@@ -173,21 +173,40 @@ function A:StepNpcIds()
     return ids
 end
 
--- "/cleartarget" plus one "/tar <name>" per NPC name, within the 255-character macro limit.
+-- The targeting macro, within the 255-character macro limit. Per NPC name of the step: "/cleartarget", "/tar <name>"
+-- and, with markWithMacro and an icon for it in the marker rule (Core/Marker.lua), "/tm [harm,nodead]!<icon>".
+-- One press so targets and marks the nearest visible mob of each kind: /cleartarget first means a kind not in view
+-- marks nothing ([harm] needs a target), and "!" never toggles an icon the mob already has. The current step's
+-- own mobs come last, so you end up targeting one of them. Marks set by your key press, not by add-on code.
 function A:MacroBody()
-    local names, seen = {}, {}
-    for id in pairs(self:StepNpcIds()) do
+    local rule = ns.Marker and ns.Marker.rule
+    local mark = prof().markWithMacro and prof().markEnabled and rule
+    local names, byName = {}, {}
+    local function add(id, primary)
         local n = ns.DB.GetNPCName(id)
-        if n and not seen[n] then seen[n] = true names[#names + 1] = n end
+        if not n then return end
+        local e = byName[n]
+        if not e then e = { name = n } byName[n] = e names[#names + 1] = e end
+        e.primary = e.primary or primary
+        e.icon = e.icon or (mark and rule.types[id]) or nil
     end
-    table.sort(names)
-    local body = "/cleartarget"
-    for _, n in ipairs(names) do
-        local line = "\n/tar " .. n
-        if #body + #line > 255 then break end
-        body = body .. line
+    for id in pairs(self:StepNpcIds()) do add(id, true) end
+    for id in pairs(mark and rule.types or {}) do add(id, false) end
+    -- Others first, then the current step's own; icon order within each, then by name.
+    table.sort(names, function(a, b)
+        if a.primary ~= b.primary then return not a.primary end
+        if (a.icon or 0) ~= (b.icon or 0) then return (a.icon or 0) < (b.icon or 0) end
+        return a.name < b.name
+    end)
+    local body, n = "", 0
+    for _, e in ipairs(names) do
+        local part = "/cleartarget\n/tar " .. e.name .. (e.icon and ("\n/tm [harm,nodead]!" .. e.icon) or "")
+        local nb = body == "" and part or (body .. "\n" .. part)
+        if #nb > 255 then break end
+        body, n = nb, n + 1
     end
-    return body, #names
+    if body == "" then body = "/cleartarget" end
+    return body, n
 end
 
 A.MACRO = ns.name

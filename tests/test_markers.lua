@@ -25,7 +25,9 @@ local function target(u) MOCK.units.target = u; MOCK.fire("PLAYER_TARGET_CHANGED
 local function iconOf(u) return MOCK.icons[u.guid] end
 
 check(M.Parse("skull") == 8 and M.Parse("Star") == 1 and M.Parse("7") == 7 and M.Parse("bogus") == nil, "marker names parse")
-check(prof.markEnabled and prof.autoMark and not prof.markReplace and prof.defaultMarker == 8, "documented marker defaults")
+check(prof.markEnabled and prof.autoMark and not prof.markReplace and prof.defaultMarker == 8 and prof.markWithMacro, "documented marker defaults (marking by the targeting macro)")
+-- These tests drive the automatic marking (markWithMacro off); the macro is tested in tests/test_target_macro.lua.
+prof.markWithMacro = false
 
 -- 1) No target ---------------------------------------------------------------------------------
 reset()
@@ -357,5 +359,6 @@ end
 ns.db.profile.defaultMarker = 42
 ns:InitSavedVariables()
 check(ns.db.profile.defaultMarker == 8, "invalid default marker repaired")
+prof.markWithMacro = true
 check(#ns.errors == 0, "no captured errors after marker tests: " .. table.concat(ns.errors, " | "))
 reset()
