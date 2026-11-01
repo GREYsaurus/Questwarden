@@ -75,6 +75,29 @@ local function objectiveNpcs(s)
     return s.q and ns.DB.ObjectiveNpcIds(s.q, ns.Completionist:Here()) or nil
 end
 
+-- The trainer of a train step, as NPC ids: the NPC the step names (guide steps name it, e.g. npc="Llane
+-- Beshere"), or, for a train step without a name, your class trainers; friendly to your faction and with a spawn in
+-- the step's zone (or yours). Cached per step name/zone.
+local trainerCache = {}
+local function trainerNpcs(s)
+    local info = ns.Compat.PlayerInfo()
+    local zone = s.z or ns.Completionist:Here()
+    local key = tostring(s.npc) .. "|" .. tostring(zone) .. "|" .. tostring(info.faction) .. "|" .. tostring(info.class)
+    if trainerCache[key] ~= nil then return trainerCache[key] or nil end
+    local N, side = ns.QDB.NPC, info.faction == "Alliance" and "A" or "H"
+    local sub = not s.npc and info.class and (info.class:sub(1, 1) .. info.class:sub(2):lower() .. " Trainer")
+    local parent = zone and ns.DB.ParentZone(zone)
+    local npcs = {}
+    for id, r in pairs(ns.QDB.npcs) do
+        local f, spawns = r[N.FRIENDLY], r[N.SPAWNS]
+        if f and string.find(f, side, 1, true) and ((s.npc and r[N.NAME] == s.npc) or (sub and r[N.SUBNAME] == sub)) then
+            if not zone or (spawns and (spawns[zone] or (parent and spawns[parent]))) then npcs[id] = true end
+        end
+    end
+    trainerCache[key] = next(npcs) and npcs or false
+    return trainerCache[key] or nil
+end
+
 -- Builds the rule for the active guide position, or nil plus the reason there is none.
 function M:BuildRule()
     local p = prof()
@@ -95,6 +118,9 @@ function M:BuildRule()
                 parts[#parts + 1] = { icon = s.mark.i, npcs = npcs, step = i }
             elseif p.autoMarkObjectives and s[1] == "complete" then
                 local npcs = objectiveNpcs(s)
+                if npcs then parts[#parts + 1] = { npcs = npcs, step = i } end
+            elseif p.markFriendly and i == cur and s[1] == "train" then
+                local npcs = trainerNpcs(s)
                 if npcs then parts[#parts + 1] = { npcs = npcs, step = i } end
             elseif p.markFriendly and i == cur and (s[1] == "accept" or s[1] == "turnin") and s.q then
                 local q = ns.DB.GetQuestByID(s.q)

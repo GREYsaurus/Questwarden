@@ -164,7 +164,7 @@ pages.targeting = { title = "Targeting", items = function() return {
     H("Target Markers"),
     T("autoMark", "Mark Enemy Targets", { tip = "NPCs a guide step names with [mark=...]." }),
     T("autoMarkObjectives", "Mark Enemy Mobs", { tip = "The kill objectives of your current kill steps, one icon per mob type." }),
-    T("markFriendly", "Mark Friendly Targets", { tip = "The NPC who gives or takes the current step's quest." }),
+    T("markFriendly", "Mark Friendly Targets", { tip = "The NPC who gives or takes the current step's quest, and your trainer on a training step." }),
     T("markInGroup", "Enable Target Markers (Group)", { tip = "Allow automatic marking while you are in a party or raid (icons are visible to the group)." }),
     T("markReplace", "Replace existing markers"),
     T("markNotify", "Chat messages for markers"),

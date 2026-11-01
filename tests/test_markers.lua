@@ -317,6 +317,22 @@ MOCK.tick(0.6)
 MOCK.units.target = nil
 M.failures, M.stopped = 0, false
 
+-- Training steps: the trainer the step names gets the icon (Mark Friendly Targets)
+reset()
+local keepClass, keepFaction = MOCK.player.class, MOCK.player.faction
+MOCK.player.class, MOCK.player.faction = "WARRIOR", "Alliance"
+j = loadStepWith("A_Human_Elwynn", function(s) return s[1] == "train" and s.npc == "Llane Beshere" end)
+check(j and M.rule and M.rule.types[911], "a warrior's train step marks Llane Beshere (Warrior Trainer, npc 911)")
+local llane = MOCK.creature(911, 71, "Llane Beshere")
+target(llane)
+check(iconOf(llane) ~= nil, "targeting the trainer on a train step marks it")
+prof.markFriendly = false
+M:OnStep()
+check(not (M.rule and M.rule.types[911]), "Mark Friendly Targets off: trainers are not marked")
+prof.markFriendly = true
+MOCK.player.class, MOCK.player.faction = keepClass, keepFaction
+MOCK.units.target = nil
+
 -- 13) Several kill steps done together: each mob type gets its own icon
 reset()
 -- Dun Morogh: "complete A New Threat" (troggs 707/724) is followed by "complete The Boar Hunter" (708).
