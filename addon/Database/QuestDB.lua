@@ -237,8 +237,28 @@ function DB.GetObjectPosition(objectId, preferZone, nearX, nearY)
     return pickSpawn(r[O.SPAWNS], preferZone or r[O.ZONE], nearX, nearY)
 end
 
+-- The NPCs worth hunting for a quest item: its droppers without the incidental ones. An elite, rare or boss, or
+-- a mob more than DROPPER_LEVEL_GAP levels above the quest, is left out when an ordinary mob near the quest's
+-- level drops the item too. Example: Wendigo Mane (The Grizzled Den, level 7) drops from Young Wendigo and
+-- Wendigo, and also from Edan the Howler (rare, 9), Old Icebeard and Vagash (elites, 11): only the first two count.
+-- With no ordinary dropper near the level, all of them count.
+local DROPPER_LEVEL_GAP = 3
+function DB.QuestItemDroppers(itemId, questLevel)
+    local it = itemId and QDB.items[itemId]
+    local drops = it and it[I.NPC_DROPS] or EMPTY
+    local fit = {}
+    for _, id in ipairs(drops) do
+        local r = QDB.npcs[id]
+        if r and (r[N.RANK] or 0) == 0
+            and (not questLevel or questLevel <= 0 or (r[N.MIN_LEVEL] or 0) <= questLevel + DROPPER_LEVEL_GAP) then
+            fit[#fit + 1] = id
+        end
+    end
+    return #fit > 0 and fit or drops
+end
+
 -- NPC ids a quest's objectives are about: kill objectives, kill-credit NPCs and the NPCs that drop its quest
--- items. An item dropped by more than DROPPER_MAX kinds of NPC keeps only those that spawn in `zone` (the
+-- items (DB.QuestItemDroppers). An item dropped by more than DROPPER_MAX kinds of NPC keeps only those that spawn in `zone` (the
 -- player's zone), so the target list and markers stay short; nil when nothing is left.
 local DROPPER_MAX = 6
 function DB.ObjectiveNpcIds(questId, zone)
@@ -249,8 +269,7 @@ function DB.ObjectiveNpcIds(questId, zone)
     for _, id in ipairs(q.objectives.killCredit) do ids[id] = true end
     local parent = zone and DB.ParentZone(zone)
     for _, itemId in ipairs(q.objectives.items) do
-        local it = DB.GetItemByID(itemId)
-        local drops = it and it.npcDrops or EMPTY
+        local drops = DB.QuestItemDroppers(itemId, q.level)
         if #drops <= DROPPER_MAX then
             for _, id in ipairs(drops) do ids[id] = true end
         elseif zone then
@@ -301,7 +320,7 @@ function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone)
     for _, itemId in ipairs(obj.i or EMPTY) do
         local it = QDB.items[itemId]
         if it and open(it[I.NAME]) then
-            for _, npcId in ipairs(it[I.NPC_DROPS] or EMPTY) do
+            for _, npcId in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do
                 local z, x, y = DB.GetNPCPosition(npcId, preferZone, nearX, nearY)
                 consider(z, x, y, DB.GetNPCName(npcId))
             end

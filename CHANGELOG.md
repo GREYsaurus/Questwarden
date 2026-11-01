@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fixed: item quests pointed at mobs far above the quest's level.** When ordinary mobs near the quest's level drop a quest item, the arrow, raid markers, target list and patrol hints now leave out the rares, elites and mobs more than 3 levels higher that drop it too. Example: The Grizzled Den now sends you to Young Wendigos and Wendigos, not Edan the Howler (rare, level 9) or the level 11 elites Old Icebeard and Vagash. The same goes for every guide: 132 item objectives in Classic Era and 136 in TBC had such droppers (for example Chunk of Boar Meat for Stocking Jetsteam no longer lists the level 10-16 boars of other zones). When no ordinary mob near the level drops an item, all droppers still count.
+
 ## 0.1.0-alpha.23 (2026-11-01)
 
 - **Timed quests.** Questwarden now knows the 29 timed quests of Classic Era and the 40 of TBC, with their time limits (from the CMaNGOS quest tables).

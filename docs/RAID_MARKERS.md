@@ -70,7 +70,7 @@ accept Some Quest                                          # no flag: markers ar
 | `accept` | the quest's giver NPCs |
 | `turnin` | the quest's finisher NPCs |
 | `talk` | that NPC |
-| `complete` | the kill-objective creatures, plus the NPCs that drop its quest items: all of them when at most 6 kinds drop the item, otherwise those that spawn in your zone (`DB.ObjectiveNpcIds`) |
+| `complete` | the kill-objective creatures, plus the NPCs that drop its quest items: all of them when at most 6 kinds drop the item, otherwise those that spawn in your zone (`DB.ObjectiveNpcIds`). Rares, elites, bosses and mobs more than 3 levels above the quest are left out when an ordinary mob near the quest's level drops the item too (`DB.QuestItemDroppers`); the arrow and the patrol hint follow the same list |
 
 - `[mark=icon:<id>]` names an NPC ID, which must exist in the database.
 - `[mark=icon:<name>]` names an NPC by exact name. The compiler narrows it to the NPCs the step is about, then to the zone. **If more than one NPC ID remains, the build fails** and lists the IDs to choose from.

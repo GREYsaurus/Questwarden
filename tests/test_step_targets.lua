@@ -49,3 +49,13 @@ local rule = M:BuildRule()
 check(E.current == 1 and rule and rule.types[1247], "the current bind step's innkeeper gets a raid marker")
 p.markEnabled, p.autoMark, p.markFriendly = old[1], old[2], old[3]
 E:Load("A_Human_Elwynn", { reset = true })
+
+-- Quest-item droppers: ordinary mobs near the quest's level, not rares, elites or much higher mobs.
+-- The Grizzled Den (313, level 7): Wendigo Mane from Young Wendigo and Wendigo, not Edan the Howler, Old Icebeard or Vagash.
+local d = {}
+for _, id in ipairs(DB.QuestItemDroppers(2671, 7)) do d[id] = true end
+check(d[1134] and d[1135] and not d[1137] and not d[1271] and not d[1388], "Wendigo Mane: only the level-fitting wendigos")
+local obj = DB.ObjectiveNpcIds(313, 1) or {}
+check(obj[1134] and not obj[1137] and not obj[1271], "The Grizzled Den: targets and marks leave out Edan the Howler and the elites")
+local _, _, _, wl = DB.GetObjectiveLocation(313, 1, 39, 47.5)
+check(wl == "Young Wendigo" or wl == "Wendigo", "The Grizzled Den: the arrow goes to a wendigo, not Edan the Howler")
