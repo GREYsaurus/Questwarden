@@ -204,6 +204,14 @@ if STAGE.target == "ClassicEra" then
         for _, st in ipairs(fg and fg.steps or {}) do if st[1] == "fly" and st.node then flyStep = flyStep or st end end
     end
     check(flyStep and ns.Flights.nodes[flyStep.node], "route fly steps carry their flight node")
+    -- Completionist mode on Classic data: a new Tauren starts in Mulgore; later quests wait; no false completion.
+    local CMs = ns.Completionist
+    local cctx = { race = "Tauren", class = "WARRIOR", faction = "Horde", level = 1,
+                   completed = function() return false end, inLog = function() return false end }
+    local cseg = CMs:Plan(cctx, { 215, 45, 75 })
+    check(cseg.kind == "quests" and cseg.zone == 215 and #cseg.accepted > 0, "Completionist: a new Tauren starts with Mulgore quests (Classic data)")
+    local csum = CMs:Summary(cseg.inv)
+    check(csum.completed == 0 and csum.deferred > 0 and csum.routable > 300, "Completionist: nothing counted done without completion data; later quests deferred (" .. csum.routable .. " routable)")
     -- Spirit healers (Database/Questie/SpiritHealers.lua): one per graveyard, shown as map pins on request.
     local nGy, nGyZones = 0, 0
     for _, pts in pairs(ns.QDB.spiritHealers) do nGyZones = nGyZones + 1; nGy = nGy + #pts end

@@ -65,6 +65,16 @@ commands.browser = commands.guide
 commands.talents = function(arg) if arg == "plan" then return ns.Talents:PrintPlan() end ns.TalentFrame:Toggle() end
 commands.talent = commands.talents
 commands.tracker = function() ns.LevelTracker:ToggleReport() end
+-- /qw completionist [status|replan|on|off]: Completionist mode (Core/Completionist.lua).
+commands.completionist = function(arg)
+    local CM = ns.Completionist
+    arg = string.lower(arg or "")
+    if arg == "on" then CM:SetMode("completionist") ns:Print("Completionist mode on.")
+    elseif arg == "off" then CM:SetMode("speed") ns:Print("Speed mode on (your leveling guide and its progress are back).")
+    elseif arg == "replan" then if CM:Active() then CM:Replan("replanned") else ns:Print("Completionist mode is off.") end
+    else for _, l in ipairs(CM:StatusLines()) do ns:Print(l) end end
+end
+commands.cm = commands.completionist
 commands.pet = function(arg)
     arg = string.lower(arg or "")
     if arg == "defer" or arg == "skip" then

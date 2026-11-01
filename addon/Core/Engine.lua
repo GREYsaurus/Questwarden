@@ -253,6 +253,8 @@ end
 
 function Engine:OnGuideFinished()
     local g = self.guide
+    -- A finished Completionist segment plans the next one (Core/Completionist.lua).
+    if g and g.dynamic and ns.Completionist and ns.Completionist:OnSegmentFinished() then return end
     local nextG = ns.Selector:NextAfter(g, info())
     if nextG then
         ns:Print("Guide complete: " .. g.name .. ". Next: " .. nextG.name)

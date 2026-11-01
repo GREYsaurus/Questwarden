@@ -252,6 +252,7 @@ dofile("tests/test_costs_pets.lua")
 dofile("tests/test_bind.lua")
 dofile("tests/test_roam.lua")
 dofile("tests/test_corpse.lua")
+dofile("tests/test_completionist.lua")
 
 print(string.format("%d passed, %d failed", passes, failures))
 os.exit(failures == 0 and 0 or 1)

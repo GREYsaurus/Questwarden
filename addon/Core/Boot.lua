@@ -66,7 +66,10 @@ ns:On("PLAYER_LOGIN", function()
     stage("first-login setup", function() ns.Welcome:Migrate() end)
     stage("guide selection", function()
         local active = ns.char.activeGuide
-        if active and ns.Guides:Get(active) then
+        if ns.Completionist:Active() then
+            -- Completionist characters get a fresh segment once the quest log has been read.
+            C_Timer.After(2, function() ns.Completionist:Replan() end)
+        elseif active and ns.Guides:Get(active) then
             ns.Engine:Load(active)
         elseif ns.db.profile.autoSelectGuide then
             local g, why = ns.Selector:Recommend()

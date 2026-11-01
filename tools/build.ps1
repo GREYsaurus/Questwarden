@@ -21,6 +21,7 @@
 #   report           Write docs/generated/<Target>/COVERAGE_REPORT.md
 #   crosscheck       Compare our data with a reference add-on's data files: -Reference <folder outside the
 #                    repository>. Writes only docs/generated/CROSSCHECK.md (docs/DATA_POLICY.md)
+#   completionist-coverage  Write docs/generated/<Target>/completionist-coverage.md (Completionist planner, all race/classes)
 #   routes           Route model: walk every race/class route, write docs/generated/<Target>/ROUTE_AUDIT.md
 #                    (fails on impossible quest order / quest-log overflow)
 #   test             Headless Lua 5.1 tests against the staged add-on (lua5.1, or Python's lupa package)
@@ -239,6 +240,19 @@ function Invoke-ImportQuestie {
     $lines += $data.Warnings
     $lines | Set-Content $log -Encoding UTF8
     Write-Host "Wrote $out (log: $log)"
+}
+
+# Completionist coverage matrix: the add-on's planner classifies every quest for every race/class.
+function Invoke-CompletionistCoverage {
+    Invoke-Stage
+    $env:GUIDE_TARGET = $Target
+    Push-Location $Root
+    try {
+        $lua = Get-Command lua5.1 -ErrorAction SilentlyContinue
+        if ($lua) { & $lua.Source "tests/completionist_coverage.lua"; $code = $LASTEXITCODE }
+        else { python (Join-Path $PSScriptRoot "lua51.py") "tests/completionist_coverage.lua"; $code = $LASTEXITCODE }
+    } finally { Pop-Location }
+    if ($code -ne 0) { throw "Completionist coverage failed." }
 }
 
 function Invoke-Crosscheck {
@@ -463,6 +477,7 @@ switch ($Command) {
     "import-questie" { Invoke-ImportQuestie }
     "import-client" { Invoke-ImportClient }
     "crosscheck" { Invoke-Crosscheck }
+    "completionist-coverage" { Invoke-CompletionistCoverage }
     "guides" { Invoke-Guides }
     "lint" { Invoke-Lint }
     "validate" { Invoke-Validate }

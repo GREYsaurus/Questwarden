@@ -1,4 +1,4 @@
--- Questwarden - first-login setup: starting guide, spec profile, automatic upgrades (explicit choice)
+-- Questwarden - first-login setup: leveling mode, starting guide, spec profile, automatic upgrades (explicit choice)
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -38,6 +38,7 @@ function WL:Draft()
         d.guide = g and g.id or false
     end
     if d.profile == nil then d.profile = ns.char.gearProfile or false end
+    if d.mode == nil then d.mode = ns.char.mode == "completionist" and "completionist" or "speed" end
     if d.autoEquip == nil then d.autoEquip = false end
     return d
 end
@@ -51,6 +52,16 @@ function WL:GuideChoices()
     end
     return out
 end
+
+-- Leveling modes (Core/Completionist.lua). Speed is the default and the existing guides.
+WL.MODES = {
+    { "speed", "Speed (the leveling guides)" },
+    { "completionist", "Completionist (every eligible quest)" },
+}
+WL.MODE_TEXT = {
+    speed = "Follows the leveling guides for your race and class, in their zone order, using the quests that level you fastest.",
+    completionist = "Does every quest the add-on knows for this character, lowest level first and zone by zone, and comes back to zones when more of their quests open up. Slower than Speed. Dungeon, group, profession, reputation, event and repeatable quests are counted but only routed if you turn them on in the settings. Quests the database lacks or places nowhere are not covered.",
+}
 
 function WL:ProfileChoices()
     local out = { { false, "Choose later" } }
@@ -66,9 +77,17 @@ end
 -- when ticked AND a spec profile is chosen; the normal safety checks then decide what may happen.
 function WL:Finish()
     local d = self:Draft()
-    if d.guide and ns.Guides:Get(d.guide) then
+    if d.mode == "completionist" then
+        -- The chosen speed guide is remembered for a later switch back; the route itself is planned now.
+        if d.guide and ns.Guides:Get(d.guide) then ns.char.speedGuide = d.guide end
+        ns.Completionist:SetMode("completionist")
+        if ns.MainFrame then ns.MainFrame:Show() end
+    elseif d.guide and ns.Guides:Get(d.guide) then
+        ns.char.mode = "speed"
         if ns.char.activeGuide ~= d.guide then ns.Engine:Load(d.guide) end
         if ns.MainFrame then ns.MainFrame:Show() end
+    else
+        ns.char.mode = "speed"
     end
     if d.profile and ns.Gear:ProfileById(d.profile) then
         ns.char.gearProfile = d.profile
@@ -106,7 +125,7 @@ end
 
 function WL:Build()
     if self.frame then return self.frame end
-    local f = W.Panel(ns.name .. "Welcome", UIParent, 460, 360)
+    local f = W.Panel(ns.name .. "Welcome", UIParent, 460, 500)
     f:SetPoint("CENTER")
     f:SetFrameStrata("DIALOG")
     f:EnableMouse(true)
@@ -126,20 +145,26 @@ function WL:Build()
         fs:SetPoint("TOPLEFT", 16, y)
         y = y - 20
     end
-    text("Three quick choices for this character. You can change all of them later in the settings.", nil, 26)
-    section("1. Starting guide")
+    text("Four quick choices for this character. You can change all of them later in the settings.", nil, 26)
+    section("1. Leveling mode")
+    local mdd = dropdown(f, ns.name .. "WelcomeMode", 300, function() return WL.MODES end,
+        function() return WL:Draft().mode end, function(v) WL:Draft().mode = v WL:Sync() end)
+    mdd:SetPoint("TOPLEFT", 0, y)
+    y = y - 34
+    self.modeText = text("", nil, 70)
+    section("2. Starting guide (Speed mode)")
     local gdd = dropdown(f, ns.name .. "WelcomeGuide", 300, function() return WL:GuideChoices() end,
         function() return WL:Draft().guide end, function(v) WL:Draft().guide = v end)
     gdd:SetPoint("TOPLEFT", 0, y)
     y = y - 34
     text("Suggested from your race, class, level and zone. Progress you already have in a guide is kept.", nil, 26)
-    section("2. Spec profile")
+    section("3. Spec profile")
     local pdd = dropdown(f, ns.name .. "WelcomeProfile", 300, function() return WL:ProfileChoices() end,
         function() return WL:Draft().profile end, function(v) WL:Draft().profile = v WL:Sync() end)
     pdd:SetPoint("TOPLEFT", 0, y)
     y = y - 34
     text("Used for gear recommendations (tooltips, quest rewards, bag markers) and talent suggestions. * = estimated weights.", nil, 26)
-    section("3. Automatic upgrades")
+    section("4. Automatic upgrades")
     local cb = W.Check(f)
     cb:SetPoint("TOPLEFT", 20, y)
     local cl = W.Text(f, "GameFontHighlight", "LEFT")
@@ -159,6 +184,7 @@ end
 function WL:Sync()
     if not self.frame then return end
     local d = self:Draft()
+    if self.modeText then self.modeText:SetText(WL.MODE_TEXT[d.mode] or "") end
     self.check:SetChecked(d.autoEquip and true or false)
     if d.profile then self.check:Enable() else self.check:SetChecked(false) d.autoEquip = false self.check:Disable() end
 end

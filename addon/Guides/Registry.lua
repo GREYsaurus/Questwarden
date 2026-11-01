@@ -53,6 +53,19 @@ function Guides:Register(g)
     g.order = #self.list
 end
 
+-- A guide generated at runtime (Core/Completionist.lua) replaces its previous version under the same id.
+-- Generated guides are kept out of the guide browser and first-login choices (g.dynamic).
+function Guides:RegisterDynamic(g)
+    local old = type(g) == "table" and self.byId[g.id]
+    if old then
+        self.byId[g.id] = nil
+        for i = #self.list, 1, -1 do if self.list[i] == old then table.remove(self.list, i) end end
+    end
+    local before = #self.list
+    self:Register(g)
+    return #self.list > before
+end
+
 function Guides:Get(id) return id and self.byId[id] end
 
 -- Does guide `g` apply to a character (race/class/faction)?
@@ -87,7 +100,7 @@ end
 function Guides:Filter(f)
     local out = {}
     for _, g in ipairs(self.list) do
-        local ok = true
+        local ok = not g.dynamic -- generated Completionist segments are not browsable guides
         if f.faction and g.faction ~= "Both" and g.faction ~= f.faction then ok = false end
         if ok and f.race and g.races and not ns.Contains(g.races, f.race) then ok = false end
         if ok and f.class and g.classes and not ns.Contains(g.classes, f.class) then ok = false end

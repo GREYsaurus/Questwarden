@@ -67,6 +67,8 @@ None of this has been tested in the game client yet.
   - *Enable Talent Plan* and *Talent Plan Number* add your build's next picks to those reminders. `/qw talents plan` shows them any time.
 
 ### Guide Routing
+- **Leveling mode** (per character): *Speed* (the leveling guides, default) or *Completionist* (every eligible quest, lowest level first, zone by zone, with return visits; docs/COMPLETIONIST.md). Also chosen in first-time setup. *Completionist status* prints progress; *Plan next Completionist segment* replans now.
+- *Completionist: route dungeon / group and elite / raid / profession / reputation / event quests* (all off): these quests are always counted, and routed only when switched on.
 - *Skip overleveled steps* (on) skips picking up quests that are grey for your level, unless a later quest in the guide needs them.
 - *Show Group Quests*, *Maximum-speed route*, *Advance steps automatically* and *Pick a guide on first login*.
 - **Include Dungeon Quests** (on by default). Off leaves out every step tagged as a dungeon quest: its pickup, objective and turn-in.

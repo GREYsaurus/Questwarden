@@ -94,7 +94,21 @@ pages.general = { title = "General", items = function() return {
     { type = "range", key = "talentPlanCount", label = "Talent Plan Number", min = 1, max = ns.Target.maxLevel, step = 1, tip = "How many upcoming picks the plan lists." },
 } end }
 
-pages.guide = { title = "Guide Routing", items = function() return {
+pages.guide = { title = "Guide Routing", items = function() local CM = ns.Completionist return {
+    { type = "select", label = "Leveling mode",
+      tip = "Speed follows the leveling guides. Completionist does every quest the add-on knows for this character, lowest level first and zone by zone, coming back to zones as more quests open up. Saved for this character. Switching never changes your quest history; each mode keeps its own route progress.",
+      values = function() return ns.Welcome.MODES end,
+      get = function() return CM:Mode() end,
+      set = function(v) CM:SetMode(v) end },
+    { type = "button", label = "Completionist status", func = function() for _, l in ipairs(CM:StatusLines()) do ns:Print(l) end end },
+    { type = "button", label = "Plan next Completionist segment", func = function() if CM:Active() then CM:Replan("replanned") end end },
+    { type = "toggle", label = "Completionist: route dungeon quests", get = function() return not CM:State().exclude.dungeon end, set = function(v) CM:SetIncluded("dungeon", v) end },
+    { type = "toggle", label = "Completionist: route group and elite quests", get = function() return not CM:State().exclude.group end, set = function(v) CM:SetIncluded("group", v) end },
+    { type = "toggle", label = "Completionist: route raid quests", get = function() return not CM:State().exclude.raid end, set = function(v) CM:SetIncluded("raid", v) end },
+    { type = "toggle", label = "Completionist: route profession quests", get = function() return not CM:State().exclude.profession end, set = function(v) CM:SetIncluded("profession", v) end },
+    { type = "toggle", label = "Completionist: route reputation quests", get = function() return not CM:State().exclude.reputation end, set = function(v) CM:SetIncluded("reputation", v) end },
+    { type = "toggle", label = "Completionist: route event quests", get = function() return not CM:State().exclude.event end, set = function(v) CM:SetIncluded("event", v) end },
+    { type = "newline" },
     T("skipOverleveled", "Skip overleveled steps", { tip = "Skips picking up quests that are grey for your level, unless a later quest in the guide needs them." }),
     T("showElite", "Show Group Quests"),
     T("speedRoute", "Maximum-speed route", { tip = "Hides optional side quests." }),
