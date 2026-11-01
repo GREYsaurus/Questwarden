@@ -37,6 +37,7 @@ accept 1339 Mountaineer Stormpike's Task
 accept 6387 Honor Students [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 accept 6387 Honor Students [race=Gnome]
 complete 416 Rat Catching | Tunnel Rat Kobolds at the Silver Stream Mine, north of Thelsamar.
+complete 237 In Defense of the King's Lands | Stonesplinter troggs at Grizzlepaw Ridge.
 turnin 416 Rat Catching
 complete 418 Thelsamar Blood Sausages | Bears and spiders around Thelsamar.
 turnin 418 Thelsamar Blood Sausages
@@ -44,7 +45,6 @@ turnin 6387 Honor Students [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 turnin 6387 Honor Students [race=Gnome]
 accept 6391 Ride to Ironforge [class=Warrior,Paladin,Rogue,Priest; race=Dwarf]
 accept 6391 Ride to Ironforge [race=Gnome]
-complete 237 In Defense of the King's Lands | Stonesplinter troggs at Grizzlepaw Ridge.
 turnin 237 In Defense of the King's Lands
 accept 263 In Defense of the King's Lands
 complete 263 In Defense of the King's Lands | Troggs at the southern Stonesplinter Valley.

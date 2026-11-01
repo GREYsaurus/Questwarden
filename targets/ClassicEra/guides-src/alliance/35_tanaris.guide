@@ -39,10 +39,10 @@ accept 2873 Stoley's Shipment
 complete 8366 Southsea Shakedown | Pirates at Lost Rigger Cove.
 complete 2875 WANTED: Andre Firebeard | Andre Firebeard at Lost Rigger Cove, in the pirate camp on the coast.
 complete 8365 Pirate Hats Ahoy! | Southsea Pirate Hat drops from Southsea Dock Worker, Southsea Freebooter and Southsea Pirate and others.
+complete 2873 Stoley's Shipment
 turnin 8366 Southsea Shakedown
 turnin 2875 WANTED: Andre Firebeard | Security Chief Bilgewhizzle, Steamwheedle Port.
 turnin 8365 Pirate Hats Ahoy!
-complete 2873 Stoley's Shipment
 accept 3042 Troll Temper [dungeon=Zul'Farrak]
 turnin 2873 Stoley's Shipment
 complete 2865 Scarab Shells [dungeon=Zul'Farrak]

@@ -73,11 +73,11 @@ accept A Fishy Peril
 train | Visit your trainer in Goldshire when you reach level 6.
 accept 5635 Desperate Prayer [class=Priest; optional] | Needs level 10. If you are lower, {name} skips it and moves on.
 complete Kobold Candles | Kobolds in and around Fargodeep Mine.
-turnin Kobold Candles
 complete The Fargodeep Mine | Explore the Fargodeep Mine entrance south of the farms.
+complete Gold Dust Exchange | Same kobolds; collect Gold Dust.
+turnin Kobold Candles
 turnin The Fargodeep Mine
 accept Lost Necklace | "Auntie" Bernice Stonefield is at the Stonefield Farm, south-west of Goldshire.
-complete Gold Dust Exchange | Same kobolds; collect Gold Dust.
 turnin Lost Necklace | Billy Maclure is at the Maclure Vineyards.
 accept Pie for Billy
 complete Pie for Billy | Kill boars around the farms for Chunks of Boar Meat.

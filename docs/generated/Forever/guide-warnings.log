@@ -22,13 +22,13 @@ horde/01_tauren_mulgore.guide:67: 'The Ravaged Caravan' has no objective locatio
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
-horde/02_undead_tirisfal.guide:85: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
+horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:131: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/20_thousandneedles.guide:21: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
 horde/20_thousandneedles.guide:25: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
 horde/20_thousandneedles.guide:49: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
-horde/27_arathihighlands.guide:27: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:28: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:37: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:46: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/27_arathihighlands.guide:49: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
@@ -51,14 +51,14 @@ alliance/24_stranglethornvale.guide:43 (Worgen in the Woods): prerequisite 222 '
 alliance/24_stranglethornvale.guide:48 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:88 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 horde/10_barrens.guide:49 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_barrens.guide:29 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_barrens.guide:30 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_barrens.guide:94 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:21 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/17_thousandneedles.guide:23 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/18_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/18_ashenvale.guide:42 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/18_ashenvale.guide:46 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/18_ashenvale.guide:43 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/18_ashenvale.guide:47 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/20_thousandneedles.guide:17 (The Sacred Flame): prerequisite 1195 'The Sacred Flame' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/21_hillsbradfoothills.guide:18 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/25_desolace.guide:24 (Befouled by Satyr): prerequisite 1432 'Alliance Relations' is not turned in anywhere on Horde routes (one of several alternatives)

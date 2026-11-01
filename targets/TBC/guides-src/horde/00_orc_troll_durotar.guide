@@ -107,13 +107,13 @@ accept Minshina's Skull
 accept Zalazane
 complete Minshina's Skull | Echo Isles (walk across the shallow water).
 complete Zalazane | Zalazane is on the largest Echo Isle.
+complete Practical Prey | Durotar Tigers.
 turnin Minshina's Skull
 turnin Zalazane
 accept Report to Orgnil
 accept A Solvent Spirit | Master Vornal.
 complete A Solvent Spirit | Makrura on the shore around Sen'jin.
 complete 825 From The Wreckage.... | Gnomish Tools: loot Gnomish Toolbox.
-complete Practical Prey | Durotar Tigers.
 turnin A Solvent Spirit
 turnin Practical Prey
 turnin 5649 In Favor of Spirituality [class=Priest; race=Troll]
@@ -128,11 +128,11 @@ accept 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 complete 5648 Garments of Spirituality [class=Priest; race=Troll]
 complete 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
+complete Break a Few Eggs | Taillasher eggs south of Razor Hill.
 turnin 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional]
 turnin 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 bind Razor Hill [area=362]
 complete Encroachment | Quilboars and Razormane scouts west of Razor Hill.
-complete Break a Few Eggs | Taillasher eggs south of Razor Hill.
 turnin Break a Few Eggs
 accept 6062 Taming the Beast [class=Hunter] | Escort quest: start it when you are ready to follow. Needs level 10. If you are lower, {name} skips it and moves on.
 complete 6062 Taming the Beast [class=Hunter] | Escort: stay close; it fails if the NPC dies.

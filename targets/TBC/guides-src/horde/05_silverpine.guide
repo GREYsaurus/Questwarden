@@ -21,6 +21,7 @@ bind The Sepulcher [area=228]
 turnin Lost Deathstalkers | Rane Yorick, at the hut on the northern coast.
 accept Wild Hearts
 complete Wild Hearts | Worgs around the Yorick hut.
+complete Prove Your Worth | Moonrage worgen near the Sepulcher.
 turnin Wild Hearts
 accept Return to Quinn
 turnin Return to Quinn
@@ -31,7 +32,6 @@ accept Escorting Erland [group=2] | Deathstalker Erland at the hut.
 complete Escorting Erland [group=2]
 turnin Escorting Erland
 accept The Deathstalkers' Report
-complete Prove Your Worth | Moonrage worgen near the Sepulcher.
 complete The Dead Fields | Explore the Dead Field north of the Sepulcher.
 complete 447 A Recipe For Death
 complete Border Crossings | Dalaran apprentices along the Ambermill road.

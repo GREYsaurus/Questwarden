@@ -112,13 +112,13 @@ accept Zalazane
 complete Minshina's Skull | Echo Isles (walk across the shallow water).
 note [hc=only] | Hardcore: Zalazane is level 10 and the Echo Isles trolls stand close together. Clear a path to him first, and leave him for later if you are below 8.
 complete Zalazane | Zalazane is on the largest Echo Isle.
+complete Practical Prey | Durotar Tigers.
 turnin Minshina's Skull
 turnin Zalazane
 accept Report to Orgnil
 accept A Solvent Spirit | Master Vornal.
 complete A Solvent Spirit | Makrura on the shore around Sen'jin.
 complete 825 From The Wreckage.... | Gnomish Tools: loot Gnomish Toolbox.
-complete Practical Prey | Durotar Tigers.
 turnin A Solvent Spirit
 turnin Practical Prey
 turnin 5649 In Favor of Spirituality [class=Priest; race=Troll]
@@ -133,11 +133,11 @@ accept 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 complete 5648 Garments of Spirituality [class=Priest; race=Troll]
 complete 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
+complete Break a Few Eggs | Taillasher eggs south of Razor Hill.
 turnin 791 Carry Your Weight [class=Hunter,Shaman; race=Troll; optional]
 turnin 791 Carry Your Weight [class=Hunter,Shaman,Warlock; race=Orc; optional]
 bind Razor Hill [area=362]
 complete Encroachment | Quilboars and Razormane scouts west of Razor Hill.
-complete Break a Few Eggs | Taillasher eggs south of Razor Hill.
 turnin Break a Few Eggs
 level 10 [class=Hunter] | The taming quests need level 10.
 accept 6062 Taming the Beast [class=Hunter] | Thotar, Razor Hill. Needs level 10. If you are lower, {name} skips it and moves on.
@@ -148,10 +148,10 @@ complete 6083 Taming the Beast [class=Hunter] | Use the Taming Rod on a Surf Cra
 turnin 6083 Taming the Beast [class=Hunter]
 accept 6082 Taming the Beast [class=Hunter] | Thotar again.
 complete 6082 Taming the Beast [class=Hunter] | Use the Taming Rod on an Armored Scorpid.
-turnin 6082 Taming the Beast [class=Hunter]
-accept 6081 Training the Beast [class=Hunter] | Needs level 10. If you are lower, {name} skips it and moves on.
 note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
 complete Dark Storms | Burning Blade cultists at Thunder Ridge.
+turnin 6082 Taming the Beast [class=Hunter]
+accept 6081 Training the Beast [class=Hunter] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin Encroachment
 turnin Dark Storms
 accept Margoz

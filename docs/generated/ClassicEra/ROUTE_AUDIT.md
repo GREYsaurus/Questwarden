@@ -184,7 +184,7 @@ None.
 
 - A_10_Darkshore: level-gated pickup: Beached Sea Creature (4730) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:35, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Cave Mushrooms (947) needs 12, model level 11.0 (quests only: 11) [alliance/10_darkshore.guide:18, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: Deep Ocean, Vast Sea (982) needs 13, model level 13.0 (quests only: 12) [alliance/10_darkshore.guide:68, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Deep Ocean, Vast Sea (982) needs 13, model level 13.0 (quests only: 12) [alliance/10_darkshore.guide:69, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Fruit of the Sea (1138) needs 15, model level 14.1 (quests only: 13) [alliance/10_darkshore.guide:80, Human/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Onu (948) needs 12, model level 11.2 (quests only: 11) [alliance/10_darkshore.guide:21, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: The Master's Glaive (944) needs 12, model level 11.8 (quests only: 11) [alliance/10_darkshore.guide:32, Dwarf/WARRIOR]

@@ -20,11 +20,11 @@ accept 2877 Skulk Rock Clean-up
 accept 2988 Witherbark Cages | Gryphon Master Talonaxe.
 complete 2988 Witherbark Cages | Witherbark trolls' cages around the Hinterlands.
 complete 2880 Troll Necklace Bounty | Any Witherbark trolls.
+complete 2877 Skulk Rock Clean-up | Oozes at Skulk Rock.
 turnin 2988 Witherbark Cages
 accept 2989 The Altar of Zul
 complete 2989 The Altar of Zul | Explore the altar (trolls are dense here).
 turnin 2989 The Altar of Zul
 turnin 2880 Troll Necklace Bounty
-complete 2877 Skulk Rock Clean-up | Oozes at Skulk Rock.
 turnin 2877 Skulk Rock Clean-up
 level 46 | Stranglethorn Vale starts at 46. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

@@ -345,7 +345,7 @@ None.
 - H_BloodElf_Eversong: level-gated pickup: Thirst Unending (8346) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:15, BloodElf/PALADIN]
 - H_BloodElf_Eversong: reduced-XP quest: A Rogue's Deal (8, level 5) at estimated level 12.1
 - H_BloodElf_Ghostlands: level-gated pickup: A Discreet Inquiry (10372) needs 16, model level 12.5 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:14, BloodElf/ROGUE]
-- H_BloodElf_Ghostlands: level-gated pickup: Greed (9491) needs 16, model level 13.5 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:70, BloodElf/ROGUE]
+- H_BloodElf_Ghostlands: level-gated pickup: Greed (9491) needs 16, model level 13.5 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:72, BloodElf/ROGUE]
 - H_BloodElf_Ghostlands: level-gated pickup: Retaking Windrunner Spire (9173) needs 15, model level 12.8 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:56, BloodElf/PALADIN]
 - H_BloodElf_Ghostlands: level-gated pickup: Rogues of the Shattered Hand (10794) needs 20, model level 13.1 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:52, BloodElf/ROGUE]
 - H_Hellfire: level-gated pickup: A Spirit Guide (9410) needs 60, model level 59.9 (quests only: 59) [outland/h60_hellfire.guide:103, Orc/WARRIOR]

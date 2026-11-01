@@ -51,11 +51,11 @@ horde/01_tauren_mulgore.guide:149: 'Body and Heart' has no objective locations i
 horde/01_tauren_mulgore.guide:152: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:155: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:158: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/02_undead_tirisfal.guide:82: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
+horde/02_undead_tirisfal.guide:83: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/03_bloodelf_eversong.guide:224: quest 9677 requires level 12 but guide ends at 11
 horde/03_bloodelf_eversong.guide:231: quest 9678 requires level 12 but guide ends at 11
 horde/04_bloodelf_ghostlands.guide:137: 'The Traitor's Shadow' has no objective locations in the database; add [at=x,y] or a goto
-horde/05_silverpine.guide:31: 'Escorting Erland' has no objective locations in the database; add [at=x,y] or a goto
+horde/05_silverpine.guide:32: 'Escorting Erland' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:37: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:52: 'Maps and Runes' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:60: 'The Engraved Ring' has no objective locations in the database; add [at=x,y] or a goto
@@ -71,12 +71,12 @@ horde/10_barrens.guide:266: quest 5881 requires level 23 but guide ends at 22
 horde/11_stonetalon.guide:26: 'Vorsha the Lasher' has no objective locations in the database; add [at=x,y] or a goto
 horde/11_stonetalon.guide:47: 'Gerenzo's Orders' has no objective locations in the database; add [at=x,y] or a goto
 horde/12_ashenvale.guide:28: 'Torek's Assault' has no objective locations in the database; add [at=x,y] or a goto
-horde/12_ashenvale.guide:39: 'Freedom to Ruul' has no objective locations in the database; add [at=x,y] or a goto
+horde/12_ashenvale.guide:40: 'Freedom to Ruul' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:71: 'Homeward Bound' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:73: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:80: 'Free at Last' has no objective locations in the database; add [at=x,y] or a goto
 horde/14_thousandneedles.guide:83: 'Protect Kanati Greycloud' has no objective locations in the database; add [at=x,y] or a goto
-horde/15_arathi.guide:23: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/15_arathi.guide:24: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:36: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:45: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/15_arathi.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
@@ -100,7 +100,7 @@ outland/h60_hellfire.guide:141: 'The Mistress Revealed' has no objective locatio
 outland/h66_nagrand.guide:22: 'The Missing War Party' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:32: 'Because Kilrath is a Coward' has no objective locations in the database; add [at=x,y] or a goto
 outland/h66_nagrand.guide:39: 'Missing Mag'hari Procession' has no objective locations in the database; add [at=x,y] or a goto
-outland/h66_nagrand.guide:66: 'He Will Walk The Earth...' has no objective locations in the database; add [at=x,y] or a goto
+outland/h66_nagrand.guide:68: 'He Will Walk The Earth...' has no objective locations in the database; add [at=x,y] or a goto
 outland/h69_shadowmoon.guide:37: 'The Deathforge' has no objective locations in the database; add [at=x,y] or a goto
 outland/h69_shadowmoon.guide:57: 'Invasion Point: Cataclysm' has no objective locations in the database; add [at=x,y] or a goto
 outland/h69_shadowmoon.guide:63: 'Find the Deserter' has no objective locations in the database; add [at=x,y] or a goto
@@ -132,8 +132,8 @@ horde/10_barrens.guide:324 (Steelsnap): prerequisite 1130 'Melor Sends Word' is 
 horde/11_stonetalon.guide:18 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/11_stonetalon.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_ashenvale.guide:40 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_ashenvale.guide:44 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:41 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_ashenvale.guide:45 (Sharptalon's Claw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_hillsbrad.guide:18 (Blood of Innocents): prerequisite 1065 'Journey to Tarren Mill' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14_thousandneedles.guide:15 (Betrayal from Within): prerequisite 5052 'Blood Shards of Agamaggan' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/14_thousandneedles.guide:22 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)

@@ -52,6 +52,7 @@ accept 4761 Thundris Windweaver
 accept 985 How Big a Threat?
 accept 2118 Plagued Lands | Tharnariun Treetender.
 complete 2118 Plagued Lands | Use the cage on a Rabid Thistle Bear.
+complete 983 Buzzbox 827 | Crawlers on the beach.
 turnin 2118 Plagued Lands
 accept 2138 Cleansing of the Infected
 complete 2138 Cleansing of the Infected | Rabid Thistle Bears.
@@ -71,7 +72,6 @@ complete 4812 As Water Cascades | Fill the bottle at the moonwell in Auberdine.
 turnin 4812 As Water Cascades
 accept 4813 The Fragments Within
 complete 955 Bashal'Aran | Deth'ryll Satyrs.
-complete 983 Buzzbox 827 | Crawlers on the beach.
 accept 953 The Fall of Ameth'Aran [optional]
 complete 953 The Fall of Ameth'Aran [optional] | Click The Fall of Ameth'Aran and The Lay of Ameth'Aran.
 turnin 953 The Fall of Ameth'Aran [optional]

@@ -54,9 +54,11 @@ accept The Nesingwary Safari | Ohlorn Farstrider.
 turnin Because Kilrath is a Coward
 accept Message in a Battle
 complete Message in a Battle
+complete Wanted: Giselda the Crone
 turnin Message in a Battle
 accept An Audacious Advance
 complete An Audacious Advance
+complete Wanted: Zorbo the Advisor
 turnin An Audacious Advance
 accept Diplomatic Measures | Escort quest: start it when you are ready to follow.
 accept The Throne of the Elements | Elementalist Yal'hah.
@@ -80,8 +82,6 @@ turnin Returning the Favor
 turnin Body of Evidence
 accept Message to Garadar
 turnin Proving Your Strength
-complete Wanted: Giselda the Crone
-complete Wanted: Zorbo the Advisor
 turnin Wanted: Giselda the Crone
 turnin Wanted: Zorbo the Advisor
 turnin Message to Garadar
@@ -130,12 +130,12 @@ accept A Head Full of Ivory | Shadrek, Aeris Landing.
 complete Stealing from Thieves | Oshu'gun Crystal Fragments from Vir'aani Raiders north of Oshu'gun, south of the camp.
 complete Matters of Security | Voidspawn around Oshu'gun.
 complete Gava'xi | Gava'xi, near Oshu'gun.
+complete A Head Full of Ivory | Pairs of Ivory Tusks from Wild Elekks in the east of Nagrand.
 turnin Stealing from Thieves | Gezhe.
 turnin Matters of Security | Zerid.
 turnin Gava'xi
 accept I Must Have Them! | Wazat, in east-central Nagrand.
 complete I Must Have Them! | Air Elemental Gas from Dust Howlers in the east of Nagrand.
-complete A Head Full of Ivory | Pairs of Ivory Tusks from Wild Elekks in the east of Nagrand.
 turnin I Must Have Them! | Wazat.
 turnin A Head Full of Ivory | Shadrek, back at Aeris Landing.
 level 67

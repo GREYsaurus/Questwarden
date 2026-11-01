@@ -63,12 +63,12 @@ complete 5821 Bodyguard for Hire | Escort: stay close; it fails if the NPC dies.
 note The next quest, Get Me Out of Here!, is an escort: pick it up only when you are ready to follow the NPC.
 accept 6132 Get Me Out of Here!
 complete 6132 Get Me Out of Here! | Escort: stay close; it fails if the NPC dies.
+complete 5561 Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
+complete 5501 Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.
 turnin 5943 Gizelton Caravan
 turnin 5821 Bodyguard for Hire
 turnin 6132 Get Me Out of Here!
 turnin 1382 Strange Alliance
-complete 5561 Kodo Roundup | Use the Kodo Kombobulator on Ancient, Aged or Dying Kodos in the Kodo Graveyard and lead them back to Smeed.
-complete 5501 Bone Collector | Kodo Bones on the ground in the Kodo Graveyard.
 complete 1459 Reagents for Reclaimers Inc. [obj=2] | Aged Kodo Hide from Aged Kodos around the graveyard.
 turnin 5561 Kodo Roundup
 turnin 1385 Brutal Politics | Warug in the Magram village, east.

@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Fix: guides sent you to a turn-in between objectives in the same place** (Elwynn: Kobold Candles was turned in at Goldshire before The Fargodeep Mine and Gold Dust Exchange, which are done at the same mine with the same kobolds). Across all Classic Era and TBC guides, 60 complete steps of quests already in your log now come before a far-away turn-in when their objectives are next to the ones you just finished. Each move was kept only if it shortens the walk. Saved progress follows the new step order.
 - **Fix: "find the way out" for a target in the same building** (William Pestle in the Lion's Pride Inn). Indoors, the arrow now says to find the way out only when the target is known to be outside, because you stood at it outdoors before. Otherwise it says the arrow shows only the direction, since the target may be outside or in another room.
 
 ## 0.1.0-alpha.14 (2026-11-01)

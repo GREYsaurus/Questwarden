@@ -195,7 +195,7 @@ No baseline file found.
 - A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 18.4
 - A_11_LochModan: reduced-XP quest: Honor Students (6387, level 10) at estimated level 17.8
 - A_11_LochModan: reduced-XP quest: Rat Catching (416, level 11) at estimated level 17.7
-- A_11_LochModan: reduced-XP quest: Ride to Ironforge (6391, level 10) at estimated level 18.0
+- A_11_LochModan: reduced-XP quest: Ride to Ironforge (6391, level 10) at estimated level 18.1
 - A_11_LochModan: reduced-XP quest: Thelsamar Blood Sausages (418, level 11) at estimated level 17.6
 - A_16_Ashenvale: accepted but never turned in on the route: 973 The Tower of Althalaxx
 - A_17_Wetlands: accepted but never turned in on the route: 469 Daily Delivery
