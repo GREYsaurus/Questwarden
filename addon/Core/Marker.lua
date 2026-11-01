@@ -376,8 +376,7 @@ function M:Verify(guid, gen, icon, id, name)
     if not u then return end -- out of sight: result unknown, claim nothing
     if C.GetRaidTargetIndex(u) == icon then
         self.marked[guid], self.markedNpc[guid], self.holder[icon] = icon, id, guid
-        self:Note("marked", name, true)
-        say("Marked " .. tostring(name) .. " with " .. M.Label(icon) .. ".")
+        self:Note("marked", name, true) -- automatic marks that work are not announced
     else
         if self.marked[guid] == icon then
             self.marked[guid], self.markedNpc[guid] = nil, nil

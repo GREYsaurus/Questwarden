@@ -49,7 +49,7 @@ With no target you get a short message, never an error. Marking an icon the targ
 | `autoMarkObjectives` | on (changed after 0.4.0) | Also marks the kill objectives of the current `complete` steps, one icon per step (see below). Settings saved by older versions are switched on once, with a chat note |
 | `markReplace` | off | Lets automatic marking replace an icon that is already on the unit |
 | `markClearOnAdvance` | on | Removes Questwarden's own automatic icons when the step changes or another guide is loaded |
-| `markNotify` | on | Chat messages for marking results |
+| `markNotify` | on | Chat messages when marking fails or pauses, and for `/qw mark`. Automatic marks that work are not announced |
 | Default marker | skull | Dropdown on the settings page, or `/qw marker <icon>` |
 
 ## Guide data: `[mark=...]`

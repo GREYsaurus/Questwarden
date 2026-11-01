@@ -171,7 +171,7 @@ pages.targeting = { title = "Targeting", items = function() return {
     T("markFriendly", "Mark Friendly Targets", { tip = "The NPC who gives or takes the current step's quest, and your trainer on a training step." }),
     T("markInGroup", "Enable Target Markers (Group)", { tip = "Allow automatic marking while you are in a party or raid (icons are visible to the group)." }),
     T("markReplace", "Replace existing markers"),
-    T("markNotify", "Chat messages for markers"),
+    T("markNotify", "Chat messages for markers", { tip = "Problems with automatic marking, and the result of /qw mark. Automatic marks that work are not announced." }),
     T("markClearOnAdvance", "Remove my markers on step change", { span = 2 }),
     { type = "select", key = "defaultMarker", label = "Default marker",
       values = function() local o = {} for i = 8, 1, -1 do o[#o + 1] = { i, ns.Marker.Label(i) } end return o end },

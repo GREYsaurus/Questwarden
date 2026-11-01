@@ -90,7 +90,7 @@ check(ns.Engine.current == idx and M.rule and M.rule.types[3281] == 8, "guide st
 local sarkoth = MOCK.creature(3281, 11, "Sarkoth")
 mark = #MOCK.printed
 target(sarkoth)
-check(iconOf(sarkoth) == 8 and printedSince(mark, "Marked Sarkoth"), "guide step marks its NPC when targeted")
+check(iconOf(sarkoth) == 8 and not printedSince(mark, "Marked Sarkoth"), "guide step marks its NPC when targeted, without a chat line")
 
 -- not every frame: considering the same unit again makes no new call
 local calls = MOCK.markCalls
