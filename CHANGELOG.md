@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.18 (2026-11-01)
 
 - **Patrolling NPCs.** When a step needs an NPC that walks a path (a quest giver, a turn-in NPC or a named mob), the arrow goes to the nearer end of its path and then along it, point by point, until the step is done: back along the path at the far end, round again on a loop. The path is dotted on the world map and the minimap, and the step says the NPC patrols. Only NPCs with at most 2 known spawns are followed, so common mobs that patrol keep their normal waypoint. Paths come from the waypoints in QuestieDB (the same pinned source), in a new `Database/Questie/Patrols.lua`: 215 NPCs on Classic Era, 332 on TBC, with paths under 2% of the map left out. New setting *Follow Patrolling NPCs* (on). Details: docs/PATROLS.md.
+
+**Tested:** offline only (TBC suite 4,928/4,928, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.17 (2026-11-01)
 
