@@ -372,11 +372,15 @@ end
 function Engine:Counts()
     local done, total = 0, 0
     if not self.guide then return 0, 0 end
+    -- A skipped step counts once you are past it, or when you skipped it yourself. Steps ahead of you that are
+    -- only skipped for now (e.g. "needs level N", picked up if you reach it) are not progress yet.
+    local cur = self.current or math.huge
+    local manual = self.progress and self.progress.skipped or {}
     for i = 1, #self.guide.steps do
         local st = self.status[i]
         if st ~= "na" then
             total = total + 1
-            if st == "done" or st == "skipped" then done = done + 1 end
+            if st == "done" or (st == "skipped" and (i < cur or manual[i])) then done = done + 1 end
         end
     end
     return done, total

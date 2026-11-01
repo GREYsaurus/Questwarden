@@ -98,6 +98,11 @@ if STAGE.target == "ClassicEra" then
     end
     check(trees == 27 and maxTier == 7, "27 talent trees, 7 tiers (" .. trees .. ", " .. maxTier .. ")")
     check(ns.Engine.guide and ns.Engine.guide.id == "A_Human_Elwynn", "a Human warrior gets the Elwynn start guide")
+    -- A fresh level-1 character has done nothing: steps ahead that wait for a level are not progress.
+    local pDone, pTotal = ns.Engine:Counts()
+    local ahead = 0
+    for i, st in pairs(ns.Engine.status) do if st == "skipped" and i > (ns.Engine.current or 0) then ahead = ahead + 1 end end
+    check(ahead > 0 and pDone <= 1 and pTotal > 50, "progress at level 1 with nothing done stays near 0 (" .. pDone .. "/" .. pTotal .. ", " .. ahead .. " later steps waiting for a level)")
     local noPlan = {}
     for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
         local ok = false
