@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.26 (2026-11-01)
 
 - **Fixed: the CurseForge app could not install Questwarden** ("Mod is not supported by the application"). The download now also holds a plain `Questwarden.toc`, a copy of the Classic Era one, because the app needs a TOC named like the add-on folder. Classic Era and TBC still load their own TOC (`Questwarden_Vanilla.toc`, `Questwarden_TBC.toc`).
+
+**Tested:** offline only (TBC suite 5,168/5,168, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.25 (2026-11-01)
 
