@@ -28,8 +28,8 @@ pages.general = { title = "General", items = function() return {
     T("showAllFrames", "Show all Enabled Frames", { tip = "Shows the guide window and the arrow. Off hides both." }),
     T("locked", "Lock Frames"),
     T("autohideRaid", "Autohide in Raids", { tip = "Hides the guide window and arrow while you are in a raid group." }),
-    { type = "button", label = "Open setup", tip = "The first-login setup: starting guide, spec profile and automatic upgrades.",
-      func = function() ns.Config.frame:Hide() ns.Welcome:Open() end },
+    { type = "button", label = "Run Setup Again", tip = "The setup wizard for this character: route and leveling mode, talent plan, dungeons and options. It starts from your current choices, and nothing changes until you press Finish Setup.",
+      func = function() ns.Config.frame:Hide() ns.Welcome:Open(true) end },
     H("Features"),
     T("showMinimapButton", "Enable Minimap Button"),
     T("worldMapButton", "Enable World Map Button", { tip = "A button on the world map that opens the guide browser." }),
@@ -102,15 +102,18 @@ pages.guide = { title = "Guide Routing", items = function() local CM = ns.Comple
       set = function(v) CM:SetMode(v) end },
     { type = "button", label = "Completionist status", func = function() for _, l in ipairs(CM:StatusLines()) do ns:Print(l) end end },
     { type = "button", label = "Plan next Completionist segment", func = function() if CM:Active() then CM:Replan("replanned") end end },
-    { type = "toggle", label = "Completionist: route dungeon quests", get = function() return not CM:State().exclude.dungeon end, set = function(v) CM:SetIncluded("dungeon", v) end },
-    { type = "toggle", label = "Completionist: route group and elite quests", get = function() return not CM:State().exclude.group end, set = function(v) CM:SetIncluded("group", v) end },
+    { type = "desc", text = "Completionist routes the quests of every dungeon (from each dungeon's usual level; run steps can be skipped). The dungeon choices below are for Speed." },
+    { type = "toggle", label = "Completionist: route group and elite quests", hidden = ns.Setup:Routing() ~= nil,
+      tip = "For characters that finished setup this follows Show Group Quests.",
+      get = function() return not CM:State().exclude.group end, set = function(v) CM:SetIncluded("group", v) end },
     { type = "toggle", label = "Completionist: route raid quests", get = function() return not CM:State().exclude.raid end, set = function(v) CM:SetIncluded("raid", v) end },
     { type = "toggle", label = "Completionist: route profession quests", get = function() return not CM:State().exclude.profession end, set = function(v) CM:SetIncluded("profession", v) end },
     { type = "toggle", label = "Completionist: route reputation quests", get = function() return not CM:State().exclude.reputation end, set = function(v) CM:SetIncluded("reputation", v) end },
     { type = "toggle", label = "Completionist: route event quests", get = function() return not CM:State().exclude.event end, set = function(v) CM:SetIncluded("event", v) end },
     { type = "newline" },
     T("skipOverleveled", "Skip overleveled steps", { tip = "Skips picking up quests that are grey for your level, unless a later quest in the guide needs them." }),
-    T("showElite", "Show Group Quests"),
+    { type = "toggle", label = "Show Group Quests", tip = "Elite and group quest steps. After setup this is saved for this character.",
+      get = function() return ns.Engine:EliteOn() end, set = function(v) ns.Setup:SetElite(v) end },
     T("speedRoute", "Maximum-speed route", { tip = "Hides optional side quests." }),
     { type = "toggle", label = "Hardcore character", hidden = not ns.Target.hardcore,
       tip = "This character plays Hardcore (one life). Guides follow their Hardcore route: risky steps are left out or come with a warning. Always on for characters on a Hardcore realm; elsewhere saved for this character only.",
@@ -121,18 +124,18 @@ pages.guide = { title = "Guide Routing", items = function() local CM = ns.Comple
     H("Expansion"),
     { type = "desc", text = ns.name .. " for " .. ns.Target.name .. " covers levels 1-" .. ns.Target.maxLevel .. " (" .. table.concat(ns.Target.chapters, ", ") .. ")." },
     H("Dungeons"),
-    T("showDungeonSteps", "Include Dungeon Quests", { tip = "When disabled, " .. ns.name .. " skips dungeon quests and recommends an outdoor leveling route where available. Quests already in your log stay in the guide." }),
+    { type = "toggle", label = "Include Dungeon Quests", tip = "When disabled, " .. ns.name .. " skips dungeon quests and recommends an outdoor leveling route where available. A dungeon quest already in your log keeps its turn-in, which appears once the quest is complete. After setup this is saved for this character.",
+      get = function() return ns.Setup:DungeonsOn() end, set = function(v) ns.Setup:SetDungeonsOn(v) end },
     { type = "newline" },
     { type = "desc", text = "Pick single dungeons below. * = the guides have quests for it; the others are listed for completeness. Recommended = not outleveled and at most 8 levels above you." },
     { type = "button", label = "Select Recommended Dungeons", func = function()
-        local lvl, off = UnitLevel and UnitLevel("player") or 1, {}
-        for _, d in ipairs(ns.Dungeons) do if not ns.DungeonRecommended(d, lvl) then off[d.name] = true end end
-        prof().dungeonOff = off
-        if ns.Engine.guide then ns.Engine:Refresh() end
+        local lvl = UnitLevel and UnitLevel("player") or 1
+        if not ns.Setup:Routing() then prof().dungeonOff = {} end
+        for _, d in ipairs(ns.Dungeons) do ns.Setup:SetDungeonSelected(d.name, ns.DungeonRecommended(d, lvl)) end
     end },
     { type = "button", label = "Select all Dungeons", func = function()
-        prof().dungeonOff = {}
-        if ns.Engine.guide then ns.Engine:Refresh() end
+        if not ns.Setup:Routing() then prof().dungeonOff = {} end
+        for _, d in ipairs(ns.Dungeons) do ns.Setup:SetDungeonSelected(d.name, true) end
     end },
     { type = "newline" },
 } end }
@@ -146,13 +149,9 @@ do
         for _, d in ipairs(ns.DungeonsFor(faction)) do
             out[#out + 1] = { type = "toggle", label = d.name .. (ns.DungeonHasQuests(d.name) and " *" or ""),
                 tip = string.format("Usually run at levels %d-%d.", d.min, d.max),
-                disabled = function() return not prof().showDungeonSteps end,
-                get = function() return not (type(prof().dungeonOff) == "table" and prof().dungeonOff[d.name]) end,
-                set = function(v)
-                    if type(prof().dungeonOff) ~= "table" then prof().dungeonOff = {} end
-                    prof().dungeonOff[d.name] = (not v) or nil
-                    if ns.Engine.guide then ns.Engine:Refresh() end
-                end }
+                disabled = function() return not ns.Setup:DungeonsOn() end,
+                get = function() return ns.Setup:DungeonSelected(d.name) end,
+                set = function(v) ns.Setup:SetDungeonSelected(d.name, v) end }
         end
         return out
     end

@@ -17,8 +17,9 @@ local CHECKS = {
     { "showArrow", "Show the navigation arrow" },
     { "showMapPins", "Show the current target on the world map" },
     { "useTomTom", "Send waypoints to TomTom (if installed)" },
-    { "showDungeonSteps", "Include Dungeon Quests" },
-    { "showElite", "Show elite / group quest steps" },
+    -- After setup these two are per character (Core/Setup.lua), so they go through its accessors.
+    { "showDungeonSteps", "Include Dungeon Quests", get = function() return ns.Setup:DungeonsOn() end, set = function(v) ns.Setup:SetDungeonsOn(v) end },
+    { "showElite", "Show elite / group quest steps", get = function() return ns.Engine:EliteOn() end, set = function(v) ns.Setup:SetElite(v) end },
     { "speedRoute", "Maximum-speed route: hide optional side quests" },
     { "talentHints", "Remind me to spend talent points (chat)" },
     { "showMinimapButton", "Show the minimap button" },
@@ -48,10 +49,10 @@ function Options:Create()
         text:SetPoint("LEFT", cb, "RIGHT", 8, 0)
         text:SetText(label)
         cb:SetScript("OnClick", function(self)
-            ns.db.profile[key] = self:GetChecked() and true or false
+            if c.set then c.set(self:GetChecked() and true or false) else ns.db.profile[key] = self:GetChecked() and true or false end
             Options:Apply()
         end)
-        cb.key = key
+        cb.key, cb.get = key, c.get
         self.checks[#self.checks + 1] = cb
         y = y - 26
     end
@@ -100,7 +101,7 @@ function Options:Create()
 end
 
 function Options:Sync()
-    for _, cb in ipairs(self.checks) do cb:SetChecked(ns.db.profile[cb.key] and true or false) end
+    for _, cb in ipairs(self.checks) do cb:SetChecked((cb.get and cb.get() or (not cb.get and ns.db.profile[cb.key])) and true or false) end
     self.steps:SetValue(ns.db.profile.stepsShown or 4)
     self.scale:SetValue(ns.db.profile.scale or 1)
 end

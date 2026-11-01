@@ -26,6 +26,7 @@ local HELP = {
     { "pet", "hunter pet skills and warlock Grimoires still to learn (pet defer | pet waypoint)" },
     { "route next|off|on", "hunting route: next point, normal objective waypoint for this step, or back on" },
     { "corpse off|on", "while a ghost: return the arrow to the guide, or point it at your corpse again" },
+    { "setup", "open the setup wizard (resumes an unfinished setup; afterwards: run it again). setup status: your confirmed choices" },
     { "options", "open settings" },
     { "minimap", "show/hide the minimap button" },
     { "automation", "open quest automation / junk selling settings" },
@@ -65,6 +66,16 @@ commands.browser = commands.guide
 commands.talents = function(arg) if arg == "plan" then return ns.Talents:PrintPlan() end ns.TalentFrame:Toggle() end
 commands.talent = commands.talents
 commands.tracker = function() ns.LevelTracker:ToggleReport() end
+-- /qw setup [status]: the setup wizard (Core/Setup.lua, UI/Welcome.lua).
+commands.setup = function(arg)
+    if arg == "status" then
+        local S = ns.Setup
+        ns:Print(S:Done() and ("Setup done" .. (S:State().legacy and " (character from before setup existed)" or "") .. ".") or "Setup not finished yet.")
+        for _, l in ipairs(S:Summary(S:Current())) do ns:Print(l) end
+        return
+    end
+    ns.Welcome:Open(ns.Setup:Done())
+end
 -- /qw completionist [status|replan|on|off]: Completionist mode (Core/Completionist.lua).
 commands.completionist = function(arg)
     local CM = ns.Completionist
@@ -213,8 +224,12 @@ commands.set = function(arg)
         table.sort(keys)
         return ns:Print("usage: /" .. ns.slash .. " set <option> on|off. Options: " .. table.concat(keys, ", "))
     end
-    ns.db.profile[key] = (val == "on" or val == "true" or val == "1")
-    ns:Print(key .. " = " .. tostring(ns.db.profile[key]))
+    local on = (val == "on" or val == "true" or val == "1")
+    -- Per character after setup (Core/Setup.lua).
+    if key == "showDungeonSteps" then ns.Setup:SetDungeonsOn(on)
+    elseif key == "showElite" then ns.Setup:SetElite(on)
+    else ns.db.profile[key] = on end
+    ns:Print(key .. " = " .. tostring(on))
     ns.Options:Apply()
 end
 

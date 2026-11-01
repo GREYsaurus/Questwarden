@@ -69,41 +69,56 @@ function CM:CompletionKnown()
     return (IsQuestFlaggedCompleted or GetQuestsCompleted) and true or false
 end
 
-local instanceZone
+local instanceZone, instanceName, dungeonQuests
 -- Forget cached zone classifications (the zone table changed: tests, data reload).
-function CM:ResetCache() instanceZone = nil end
+function CM:ResetCache() instanceZone, instanceName, dungeonQuests = nil, nil, nil end
 
+-- The dungeon list entry (Database/Dungeons.lua) called `name`, if any.
+function CM:DungeonEntry(name)
+    for _, d in ipairs(ns.Dungeons or {}) do if d.name == name then return d end end
+end
+
+-- Kind of an instance zone ("dungeon"/"raid") and, for listed dungeons, its name in the dungeon list. Zone
+-- names in the data are "<Instance> - Dungeon - <Part>"; the part before " - " is the dungeon's name.
 local function isInstance(zone)
     if not instanceZone then
-        instanceZone = {}
+        instanceZone, instanceName = {}, {}
         local dn = {}
         for _, d in ipairs(ns.Dungeons or {}) do dn[d.name] = true end
         for id, name in pairs(QDB().zones.names or {}) do
             if type(name) == "string" then
-                if dn[name] or string.find(name, " %- Dungeon", 1) then instanceZone[id] = "dungeon"
+                local base = string.match(name, "^(.-) %- ") or name
+                if dn[name] or string.find(name, " %- Dungeon", 1) then
+                    instanceZone[id] = "dungeon"
+                    if dn[base] then instanceName[id] = base end
                 elseif string.find(name, " %- Raid", 1) then instanceZone[id] = "raid" end
             end
         end
     end
-    return instanceZone[zone]
+    return instanceZone[zone], instanceName[zone]
 end
 
 -- Zones where a quest's objectives are: { [zone] = true } and the dungeon/raid kind if any is inside one.
 local function objectiveZones(r)
     local Q, N, O = QDB().QUEST, QDB().NPC, QDB().OBJECT
     local obj = r[Q.OBJECTIVES] or {}
-    local zones, inside = {}, nil
+    local zones, inside, dname = {}, nil, nil
     -- Instance spawns are dropped by the importer (QuestieDB marks them -1,-1), so the record's home zone
     -- also counts for telling dungeon and raid objectives apart.
+    local function at(z)
+        local kind, name = isInstance(z)
+        inside = inside or kind
+        dname = dname or name
+    end
     local function npc(id)
         local n = QDB().npcs[id]
-        for z in pairs(n and n[N.SPAWNS] or {}) do zones[z] = true; inside = inside or isInstance(z) end
-        if n and n[N.ZONE] then inside = inside or isInstance(n[N.ZONE]) end
+        for z in pairs(n and n[N.SPAWNS] or {}) do zones[z] = true; at(z) end
+        if n and n[N.ZONE] then at(n[N.ZONE]) end
     end
     local function object(id)
         local o = QDB().objects[id]
-        for z in pairs(o and o[O.SPAWNS] or {}) do zones[z] = true; inside = inside or isInstance(z) end
-        if o and o[O.ZONE] then inside = inside or isInstance(o[O.ZONE]) end
+        for z in pairs(o and o[O.SPAWNS] or {}) do zones[z] = true; at(z) end
+        if o and o[O.ZONE] then at(o[O.ZONE]) end
     end
     for _, id in ipairs(obj.c or {}) do npc(id) end
     for _, id in ipairs(obj.k or {}) do npc(id) end
@@ -113,7 +128,7 @@ local function objectiveZones(r)
         for _, id in ipairs(item and item[QDB().ITEM.NPC_DROPS] or {}) do npc(id) end
         for _, id in ipairs(item and item[QDB().ITEM.OBJECT_DROPS] or {}) do object(id) end
     end
-    return zones, inside
+    return zones, inside, dname
 end
 
 local function hostileElite(id)
@@ -149,7 +164,8 @@ end
 
 -- The special kind of a quest, or nil for an ordinary one: event, profession, reputation, repeatable,
 -- dungeon, raid or group (elite targets). Such quests are counted under their kind and routed only when the
--- player has turned that kind on.
+-- player has turned that kind on. Dungeon quests also return the dungeon's name (third value) when the
+-- instance is in the dungeon list.
 function CM:Special(r)
     local Q = QDB().QUEST
     local classes = r[Q.CLASSES] or 0
@@ -158,8 +174,8 @@ function CM:Special(r)
     if r[Q.REQ_SKILL] then return "profession" end
     if r[Q.REQ_MIN_REP] then return "reputation" end
     if ns.HasBit(r[Q.SPECIAL_FLAGS] or 0, QDB().SPECIAL_FLAG_REPEATABLE or 1) then return "repeatable" end
-    local _, inside = objectiveZones(r)
-    if inside then return inside end
+    local _, inside, dname = objectiveZones(r)
+    if inside then return inside, nil, dname end
     local obj = r[Q.OBJECTIVES] or {}
     for _, n in ipairs(obj.c or {}) do if hostileElite(n) then return "group", "elite target" end end
     for _, n in ipairs(obj.k or {}) do if hostileElite(n) then return "group", "elite target" end end
@@ -185,9 +201,8 @@ function CM:Classify(id, ctx, exclude)
     end
     local level, req = r[Q.LEVEL] or 0, r[Q.REQ_LEVEL] or 0
     if r[Q.MAX_LEVEL] and r[Q.MAX_LEVEL] > 0 and (ctx.level or 1) > r[Q.MAX_LEVEL] then return "ineligible", "too high level" end
-    local kind, why = self:Special(r)
-    exclude = exclude or self:State().exclude
-    if kind and exclude[kind] then return kind, why end
+    local kind, why, dname = self:Special(r)
+    if kind and not self:Routes(kind, dname, exclude) then return kind, why or dname end
     if done == nil then return "unknown" end
     if not self:GiverPos(r) or not self:FinisherPos(r) then return "missing", "no giver or finisher position" end
     for _, pre in ipairs(r[Q.PRE_GROUP] or {}) do
@@ -201,7 +216,50 @@ function CM:Classify(id, ctx, exclude)
     end
     if req > (ctx.level or 1) then return "deferred", req end
     if level > (ctx.level or 1) + self.AHEAD then return "deferred", level - self.AHEAD end
+    -- A selected dungeon's quests are picked up from the level the dungeon is usually run at, not earlier,
+    -- so they do not sit in the quest log for many levels.
+    local d = kind == "dungeon" and dname and self:DungeonEntry(dname)
+    if d and d.min > (ctx.level or 1) then return "deferred", d.min end
     return "actionable"
+end
+
+-- Whether a special kind is routed for this character. Dungeon quests: always (Completionist goes through every
+-- dungeon; the dungeon selection in setup is for Speed only), picked up from the dungeon's usual level and run
+-- through skippable run steps. Group/elite quests: the setup's group-quest choice (ns.char.routing). Characters
+-- that never confirmed setup, and every other kind, use the Completionist category switches (`exclude`).
+function CM:Routes(kind, dname, exclude)
+    if kind == "dungeon" then return true end
+    local r = ns.Setup and ns.Setup:Routing()
+    if r and kind == "group" then return r.elite == true end
+    exclude = exclude or self:State().exclude
+    return not exclude[kind]
+end
+
+-- Whether Completionist mode can run here, and why not: it needs a verified game version, the game's quest
+-- completion flags and the zone geography table.
+function CM:Available()
+    if not ns.Target.verified then return false, ns.Target.name .. " is not verified yet, so no route can be planned." end
+    if not self:CompletionKnown() then return false, "this game client does not report which quests you completed." end
+    if not ns.ZoneGeo or not next(ns.ZoneGeo) then return false, "the zone geography data is missing from this build." end
+    return true
+end
+
+-- Quests per listed dungeon that this race and class can take: { [name] = n } (cached; data does not change).
+function CM:DungeonQuestCounts(race, class)
+    local key = tostring(race) .. "/" .. tostring(class)
+    dungeonQuests = dungeonQuests or {}
+    if dungeonQuests[key] then return dungeonQuests[key] end
+    local Q, out = QDB().QUEST, {}
+    local rb, cb = QDB().RACE_BITS[race or ""], QDB().CLASS_BITS[class or ""]
+    for _, r in pairs(QDB().quests) do
+        local races, classes = r[Q.RACES] or 0, r[Q.CLASSES] or 0
+        if (races == 0 or not rb or ns.HasBit(races, rb)) and (classes == 0 or not cb or ns.HasBit(classes, cb)) then
+            local kind, _, dname = self:Special(r)
+            if kind == "dungeon" and dname then out[dname] = (out[dname] or 0) + 1 end
+        end
+    end
+    dungeonQuests[key] = out
+    return out
 end
 
 -- The character context from the live game.
@@ -285,14 +343,21 @@ function CM:Work(inv, ctx, here)
             if z then add(z, "pickups", id, x, y, name, b) end
         end
     end
+    -- Dungeon quests in the log that are not complete yet are not zone work: they become one "run" step per
+    -- dungeon (runs[name] = {ids}), and their turn-ins are planned only once the quest log says complete.
+    local runs = {}
     for _, id in ipairs(inv.byCat.inlog or {}) do
         local r = QDB().quests[id]
-        local kind = r and self:Special(r)
-        local skip = kind and exclude[kind]
-        if r and not skip then
-            if ns.Tracker:IsComplete(id) then
+        local kind, dname
+        if r then kind, _, dname = self:Special(r) end
+        local routed = not kind or self:Routes(kind, dname, exclude)
+        local complete = r and ns.Tracker:IsComplete(id)
+        if r and (routed or (complete and kind == "dungeon")) then
+            if complete then
                 local z, x, y, name = self:FinisherPos(r, hz, hx, hy)
                 if z then add(z, "turnins", id, x, y, name, minBand) end
+            elseif kind == "dungeon" then
+                if dname then runs[dname] = runs[dname] or {}; table.insert(runs[dname], id) end
             else
                 local z, x, y, name = DB().GetObjectiveLocation(id, hz, hx, hy)
                 if z then add(z, "objectives", id, x, y, name, minBand) end
@@ -301,7 +366,28 @@ function CM:Work(inv, ctx, here)
             end
         end
     end
-    return zones, minBand or 1
+    return zones, minBand or 1, runs
+end
+
+-- One manual "run" step per selected dungeon with open quests in the log, once the character is at the
+-- dungeon's usual level. Marking it done or skipping it never completes a quest: the turn-ins are planned
+-- from the quest log when the quests are complete, and the step comes back in later segments until then.
+function CM:RunSteps(runs, level)
+    local names, out = {}, {}
+    for name in pairs(runs or {}) do names[#names + 1] = name end
+    table.sort(names)
+    for _, name in ipairs(names) do
+        local d = self:DungeonEntry(name)
+        if not d or d.min <= (level or 1) then
+            local titles = {}
+            for _, id in ipairs(runs[name]) do titles[#titles + 1] = QDB().quests[id][1] end
+            table.sort(titles)
+            out[#out + 1] = { "note", dungeonRun = name, text = string.format(
+                "Dungeon: %s (%s). Run it with a group when you can. Skip this step to keep questing; the quests stay in your log, and their turn-ins appear once they are complete.",
+                name, table.concat(titles, ", ")) }
+        end
+    end
+    return out
 end
 
 -- Picks the zone for the next segment (policy steps 2-3 above): the current zone while its lowest band is
@@ -354,10 +440,12 @@ end
 function CM:Plan(ctx, here)
     ctx = ctx or self:Context()
     local inv = self:Inventory(ctx)
-    local zones, minBand = self:Work(inv, ctx, here)
+    local zones, minBand, runs = self:Work(inv, ctx, here)
     local w = self:PickZone(zones, here, minBand)
     local seg = { inv = inv, steps = {} }
+    local runSteps = self:RunSteps(runs, ctx.level)
     if not w then
+        for _, s in ipairs(runSteps) do seg.steps[#seg.steps + 1] = s end
         -- Nothing to do now: the next level that unlocks deferred quests.
         local nextLevel
         for _, id in ipairs(inv.byCat.deferred or {}) do
@@ -366,11 +454,11 @@ function CM:Plan(ctx, here)
         end
         if nextLevel and nextLevel > (ctx.level or 1) then
             seg.kind = "level"
-            seg.steps[1] = { "level", level = nextLevel, text = string.format(
+            seg.steps[#seg.steps + 1] = { "level", level = nextLevel, text = string.format(
                 "No quest you can do right now. Reach level %d: %d deferred quests then start opening up.", nextLevel, inv.counts.deferred or 0) }
             return seg
         end
-        seg.kind = "done"
+        seg.kind = #runSteps > 0 and "runs" or "done"
         return seg
     end
     seg.kind, seg.zone, seg.band = "quests", w.zone, minBand
@@ -443,6 +531,7 @@ function CM:Plan(ctx, here)
         local r = QDB().quests[it.q]
         seg.steps[#seg.steps + 1] = { "turnin", q = it.q, title = r[1], z = w.zone, x = it.x, y = it.y, npc = it.name }
     end
+    for _, s in ipairs(runSteps) do seg.steps[#seg.steps + 1] = s end
     seg.deferred = inv.counts.deferred or 0
     return seg
 end
@@ -512,9 +601,10 @@ function CM:Summary(inv)
     inv = inv or self:Inventory()
     local c = inv.counts
     local function n(k) return c[k] or 0 end
-    local exclude = self:State().exclude
+    -- A special kind is only a category when it is not routed (Classify), so its count is the excluded part;
+    -- dungeon quests can be partly routed (selected dungeons only).
     local excluded = 0
-    for k in pairs(exclude) do if exclude[k] then excluded = excluded + n(k) end end
+    for k in pairs(CM.EXCLUDE_DEFAULT) do excluded = excluded + n(k) end
     local routable = n("completed") + n("actionable") + n("inlog") + n("deferred") + n("blocked")
     return {
         completed = n("completed"), remaining = n("actionable") + n("inlog") + n("deferred") + n("blocked"),
@@ -530,8 +620,8 @@ function CM:StatusLines()
         string.format("Mode: %s.", self:Active() and "Completionist" or "Speed"),
         string.format("Eligible quests with routable data: %d done of %d (%d left: %d ready or in your log, %d later by level, %d waiting on a prerequisite).",
             s.completed, s.routable, s.remaining, s.remaining - s.deferred - s.blocked, s.deferred, s.blocked),
-        string.format("Not routed automatically (turn on in Settings): %d (dungeon %d, raid %d, group/elite %d, profession %d, reputation %d, event %d, repeatable %d).",
-            s.excluded, inv.counts.dungeon or 0, inv.counts.raid or 0, inv.counts.group or 0, inv.counts.profession or 0,
+        string.format("Not routed automatically (turn on in setup or Settings): %d (raid %d, group/elite %d, profession %d, reputation %d, event %d, repeatable %d). Dungeon quests are routed for every dungeon.",
+            s.excluded, inv.counts.raid or 0, inv.counts.group or 0, inv.counts.profession or 0,
             inv.counts.reputation or 0, inv.counts.event or 0, inv.counts.repeatable or 0),
         string.format("Other branch chosen: %d. Missing location data: %d. Completion unknown: %d.", s.exclusive, s.missing, s.unknown),
         "Coverage: every quest in the bundled QuestieDB data for this game; quests the data lacks or places nowhere are not routed.",

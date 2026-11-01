@@ -86,15 +86,34 @@ check(CM:Classify(102, c) == "deferred", "a required level above yours defers th
 check(CM:Classify(103, ctxFor(5, {})) == "blocked", "an open prerequisite blocks the quest")
 check(CM:Classify(103, ctxFor(5, { [101] = true })) == "actionable", "the prerequisite done unblocks it")
 check(CM:Classify(405, ctxFor(1, { [101] = true })) == "exclusive", "the other branch of a choice is not counted as unfinished")
-check(CM:Classify(402, ctxFor(20, {})) == "dungeon", "a quest with objectives inside an instance is a dungeon quest")
+check(CM:Special(QDB.quests[402]) == "dungeon" and select(3, CM:Special(QDB.quests[402])) == "Wailing Caverns", "a quest with objectives inside an instance is a dungeon quest of that dungeon")
 check(CM:Classify(407, ctxFor(20, {})) == "group", "a quest with an elite target is a group quest")
 check(CM:Classify(403, c) == "repeatable" and CM:Classify(404, c) == "event", "repeatable and event quests are their own categories")
 check(CM:Classify(406, c) == "missing", "a quest whose giver has no position is missing data, not routable")
 check(CM:Classify(101, ctxFor(1, {}, { unknown = true })) == "unknown", "without completion data the state is unknown, never assumed")
 check(CM:Classify(101, ctxFor(5, { [101] = true })) == "completed", "a completed quest is completed")
-CM:SetIncluded("dungeon", true)
-check(CM:Classify(402, ctxFor(20, {})) == "actionable", "turning dungeon quests on makes them routable")
-CM:SetIncluded("dungeon", false)
+check(CM:Classify(402, ctxFor(20, {})) == "actionable", "Completionist routes dungeon quests (every dungeon)")
+local wc = CM:DungeonEntry("Wailing Caverns")
+local wcMin = wc.min
+wc.min = 21
+check(select(1, CM:Classify(402, ctxFor(20, {}))) == "deferred" and select(2, CM:Classify(402, ctxFor(20, {}))) == 21,
+    "a dungeon quest waits for the dungeon's usual level, so it does not sit in the log early")
+wc.min = wcMin
+-- A dungeon quest in the log becomes a skippable run step; its turn-in waits for completion
+ns.Tracker.log[402] = { complete = false, objectives = {} }
+local runSeg = CM:Plan(ctxFor(20, { [101] = true, [102] = true, [103] = true }, { log = { [402] = true } }), { BAR, 50, 50 })
+local run, tin402 = nil, false
+for _, s in ipairs(runSeg.steps) do
+    if s.dungeonRun == "Wailing Caverns" then run = s end
+    if s[1] == "turnin" and s.q == 402 then tin402 = true end
+end
+check(run ~= nil and not tin402, "an open dungeon quest gets a run step and no blocking turn-in")
+ns.Tracker.log[402] = { complete = true, objectives = {} }
+runSeg = CM:Plan(ctxFor(20, { [101] = true, [102] = true, [103] = true }, { log = { [402] = true } }), { BAR, 50, 50 })
+tin402 = false
+for _, s in ipairs(runSeg.steps) do if s[1] == "turnin" and s.q == 402 then tin402 = true end end
+check(tin402, "once complete, its turn-in is planned")
+ns.Tracker.log = {}
 
 -- Level first, then geography ---------------------------------------------------------------------
 local done = { [303] = true }
@@ -131,8 +150,8 @@ check(seq == "215>215>215>17>17>14>14>17>17", "route: Mulgore, the Barrens, Duro
 local routed, ids = 0, {}
 for q in pairs(done) do routed = routed + 1 ids[#ids + 1] = q end
 table.sort(ids)
-check(routed == 10 and not done[401] and not done[402] and not done[403] and not done[404] and not done[405] and not done[406] and not done[407],
-    "every ordinary eligible quest is routed once; ineligible, excluded, exclusive and missing ones never are (" .. table.concat(ids, ",") .. ")")
+check(routed == 11 and done[402] and not done[401] and not done[403] and not done[404] and not done[405] and not done[406] and not done[407],
+    "every eligible quest (dungeon quests included) is routed once; ineligible, excluded, exclusive and missing ones never are (" .. table.concat(ids, ",") .. ")")
 
 -- Quest log capacity and unknown completion ---------------------------------------------------------
 local _, logMax = ns.Compat.QuestLogSize()
@@ -143,7 +162,7 @@ ns.Tracker.log = {}
 seg = CM:Plan(ctxFor(1, {}, { unknown = true }), { MUL, 40, 50 })
 check(seg.kind == "done" and (seg.inv.counts.unknown or 0) > 0, "unknown completion routes nothing and says so")
 local sum = CM:Summary(CM:Inventory(ctxFor(20, { [101] = true })))
-check(sum.completed == 1 and sum.excluded >= 4 and sum.routable == sum.completed + sum.remaining,
+check(sum.completed == 1 and sum.excluded >= 3 and sum.routable == sum.completed + sum.remaining,
     "the summary keeps completed, remaining and excluded apart, with one denominator")
 
 restore()
@@ -172,14 +191,14 @@ for _ in pairs(MOCK.completed) do completedAfter = completedAfter + 1 end
 check(ns.char.mode == "speed" and ns.char.activeGuide == before and completedAfter == completedBefore,
     "switching back restores the speed guide; quest history is untouched")
 
-local WL = ns.Welcome
-local setupBefore, draftBefore = ns.char.setupDone, ns.char.setupDraft
-ns.char.setupDone, ns.char.setupDraft = nil, nil
-check(WL:Draft().mode == "speed", "first-login setup proposes Speed")
-WL:Draft().mode = "completionist"
-check(not ns.char.setupDone, "choosing in setup does nothing before Finish")
-WL:Finish()
-check(ns.char.setupDone and ns.char.mode == "completionist" and E.guide.id == CM.GUIDE_ID, "Finish with Completionist saves the mode and plans the route")
+local S = ns.Setup
+local setupBefore, routingBefore = ns.char.setup, ns.char.routing
+ns.char.setup = nil
+local sd = S:Draft()
+check(sd.mode == "speed", "first-login setup proposes Speed")
+sd.mode = "completionist"
+check(not S:Done() and ns.char.mode == "speed", "choosing in setup does nothing before Finish")
+check(S:Finish(sd) and S:Done() and ns.char.mode == "completionist" and E.guide.id == CM.GUIDE_ID, "Finish with Completionist saves the mode and plans the route")
 CM:SetMode("speed")
-ns.char.setupDone, ns.char.setupDraft = setupBefore, draftBefore
+ns.char.setup, ns.char.routing = setupBefore, routingBefore
 check(#ns.errors == 0, "no captured errors after Completionist tests: " .. table.concat(ns.errors, " | "))

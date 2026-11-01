@@ -212,6 +212,22 @@ if STAGE.target == "ClassicEra" then
     check(cseg.kind == "quests" and cseg.zone == 215 and #cseg.accepted > 0, "Completionist: a new Tauren starts with Mulgore quests (Classic data)")
     local csum = CMs:Summary(cseg.inv)
     check(csum.completed == 0 and csum.deferred > 0 and csum.routable > 300, "Completionist: nothing counted done without completion data; later quests deferred (" .. csum.routable .. " routable)")
+    -- Setup on Classic data (Core/Setup.lua): Classic defaults, Hardcore choice, Classic plans and dungeons.
+    local S = ns.Setup
+    local sd = S:Current()
+    check(sd.dungeons == "questing" and sd.elite == false, "setup: Classic Era drafts start with questing only and no group quests")
+    check(sd.plan == "warrior_arms_iv" and S:PlanValid("warrior_fury_iv") and not S:PlanValid("warrior_arms_70"), "setup: Classic warrior plans only")
+    local cdq = CMs:DungeonQuestCounts("Human", "WARRIOR")
+    check((cdq["The Deadmines"] or 0) > 0 and (cdq["Blackrock Depths"] or 0) > 0, "setup: Completionist finds quests per Classic dungeon")
+    local sp, hasSup = S:SpeedDungeonQuests(), false
+    for _, row in ipairs(S:Dungeons("speed")) do if row.supported then hasSup = true end end
+    check(next(sp) ~= nil and hasSup, "setup: the Classic guides offer dungeons to select")
+    local hsd = S:Draft(true)
+    hsd.hardcore, hsd.dungeons = true, "questing"
+    local hcOk = S:Finish(hsd)
+    check(hcOk and ns.char.hardcore == true and ns:IsHardcore(), "setup: the Hardcore route choice is saved for the character")
+    ns.char.hardcore, ns.char.routing, ns.char.setup = false, nil, nil
+    ns.Engine:Load("A_Human_Elwynn")
     -- Spirit healers (Database/Questie/SpiritHealers.lua): one per graveyard, shown as map pins on request.
     local nGy, nGyZones = 0, 0
     for _, pts in pairs(ns.QDB.spiritHealers) do nGyZones = nGyZones + 1; nGy = nGy + #pts end

@@ -12,8 +12,11 @@ Raids count as instances for this purpose, so a raid-only quest is tagged and le
 
 ## Filtering
 
-- **Include Dungeon Quests** off, or the dungeon switched off under Guide Routing → Dungeons: the tagged steps are left out.
-- Quests already in your log or already turned in stay in the route.
+Who decides: a character that finished setup uses its own choice (questing only or selected dungeons, docs/SETUP.md); others use the settings profile's *Include Dungeon Quests* and dungeon switches.
+
+- **Include Dungeon Quests** off, or the dungeon not selected: the tagged steps are left out.
+- **A quest already in your log** is never dropped or marked done. While its dungeon is off, or after you skip its run (the `complete` step), its objective and turn-in are skipped with a reason; the turn-in comes back once the quest is complete. Turned-in quests count as done.
+- **Completionist** routes every dungeon's quests regardless of this selection (docs/COMPLETIONIST.md).
 - **Follow-up quests** that need an excluded dungeon quest are skipped with the reason "needs a dungeon quest", so no step waits on a quest you will not do (`Core/Engine.lua`, `NeedsExcluded`).
 
 ## XP

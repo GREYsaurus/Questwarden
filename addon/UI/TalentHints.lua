@@ -28,6 +28,8 @@ function TH:Enabled() return prof().showTalentSuggestions ~= false end
 -- The build to follow: the spec profile's plan; without a spec profile, the build chosen in the
 -- Questwarden talent window (or the class's leveling build).
 function TH:Build()
+    -- "No talent guidance" chosen in setup (Core/Setup.lua): no plan, no markers.
+    if ns.char.noTalentPlan then return nil, "no guidance", nil end
     local info = ns.Compat.PlayerInfo()
     local p = ns.char.gearProfile and ns.Gear:ProfileById(ns.char.gearProfile)
     if p and p.class == info.class then
@@ -144,7 +146,9 @@ function TH:PanelText(st)
     local L = {}
     if not st.build then
         L[1] = "|cffffd100" .. ns.name .. " talents|r"
-        if st.why == "no plan" and st.profile then
+        if st.why == "no guidance" then
+            L[2] = "No talent guidance (your setup choice). Pick a plan with /" .. ns.slash .. " setup to get suggestions."
+        elseif st.why == "no plan" and st.profile then
             L[2] = "No talent plan for " .. ns.Upgrade:ProfileName(st.profile) .. " yet. Pick another spec profile, or spend points your own way."
         else
             L[2] = "Choose a spec profile (Settings, Tips) for talent suggestions."

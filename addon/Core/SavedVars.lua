@@ -278,6 +278,11 @@ function ns:InitSavedVariables()
     end
     if type(_G[ns.svChar].levelLog) ~= "table" then _G[ns.svChar].levelLog = {} end
     if _G[ns.svChar].setupDraft ~= nil and type(_G[ns.svChar].setupDraft) ~= "table" then _G[ns.svChar].setupDraft = nil end
+    -- Setup (Core/Setup.lua): its state and routing record repair their own fields; wrong types are dropped.
+    for _, key in ipairs({ "setup", "routing" }) do
+        if _G[ns.svChar][key] ~= nil and type(_G[ns.svChar][key]) ~= "table" then _G[ns.svChar][key] = nil end
+    end
+    if _G[ns.svChar].noTalentPlan ~= nil and _G[ns.svChar].noTalentPlan ~= true then _G[ns.svChar].noTalentPlan = nil end
     if _G[ns.svChar].trainerDeferLevel ~= nil and type(_G[ns.svChar].trainerDeferLevel) ~= "number" then _G[ns.svChar].trainerDeferLevel = nil end
     if _G[ns.svChar].petDeferLevel ~= nil and type(_G[ns.svChar].petDeferLevel) ~= "number" then _G[ns.svChar].petDeferLevel = nil end
     if _G[ns.svChar].petSkills ~= nil and type(_G[ns.svChar].petSkills) ~= "table" then _G[ns.svChar].petSkills = nil end

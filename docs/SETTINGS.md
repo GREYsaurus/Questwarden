@@ -18,7 +18,7 @@ None of this has been tested in the game client yet.
 ## What each tab controls
 
 ### General
-- **First-login setup:** a new character gets a short setup window: guide, spec profile, and an explicit opt-in for automatic upgrades (off unless ticked, and only with a spec profile). Saved per character. *Skip* keeps the defaults; closing it keeps the choices for next time. *Open setup* (General) reopens it. Characters that already used Questwarden are not asked.
+- **Setup wizard** (docs/SETUP.md): a new character gets a five-step setup: route and leveling mode, talent plan and gear profile, dungeons, options (group quests, Completionist categories, automatic upgrades), review. Saved per character; nothing applies before *Finish Setup*. *Set Up Later* keeps the draft and does not finish setup. *Run Setup Again* (General) or `/qw setup` reopens it from the current choices. Characters that already used Questwarden are not asked.
 - **Window Management:** *Show all Enabled Frames* hides the guide window and arrow together when off. *Lock Frames* and *Autohide in Raids* do what they say.
 - **Features:** minimap button, world map button (opens the guide browser), *Hide Window* and *Hide waypoint arrow*.
 - **Automatically Navigate to Corpse** (on): after you release your spirit, the arrow points to your corpse until you are alive again, then returns to the guide. It uses the game's own corpse position and asks the map you died on, then your current map and its parents, without opening or changing the map. No position means no arrow (never a guessed one). Inside dungeons, raids and battlegrounds there is no outdoor position: you get a note, not an arrow. `/qw corpse off` hands the arrow back to the guide; `/qw corpse on` brings it back.
@@ -71,7 +71,7 @@ None of this has been tested in the game client yet.
 - *Completionist: route dungeon / group and elite / raid / profession / reputation / event quests* (all off): these quests are always counted, and routed only when switched on.
 - *Skip overleveled steps* (on) skips picking up quests that are grey for your level, unless a later quest in the guide needs them.
 - *Show Group Quests*, *Maximum-speed route*, *Advance steps automatically* and *Pick a guide on first login*.
-- **Include Dungeon Quests** (on by default). Off leaves out every step tagged as a dungeon quest: its pickup, objective and turn-in.
+- **Include Dungeon Quests** (on by default). Off leaves out every step tagged as a dungeon quest: its pickup, objective and turn-in. After setup this, the dungeon switches and *Show Group Quests* are saved for the character (docs/SETUP.md).
   - **Follow-ups** that need an excluded dungeon quest are skipped too, with the reason shown, and the guide continues with the next step.
   - **Already in your log:** a dungeon quest you have already accepted keeps its steps, and Questwarden never abandons quests.
   - **Applies immediately,** and turning it back on restores the steps without touching your progress.

@@ -63,10 +63,15 @@ ns:InitSavedVariables()
 check(ns.db.profile.showDungeonSteps == false, "the setting survives a reload")
 
 -- a dungeon quest already in the log is never dropped (Questwarden does not abandon quests)
-table.insert(MOCK.questLog, { id = 6921, title = "Amongst the Ruins", complete = false, objectives = {} })
+table.insert(MOCK.questLog, { id = 6921, title = "Amongst the Ruins", complete = false, objectives = { { text = "Sapphire of Aku'Mai", done = false } } })
 ns.Tracker:Scan()
 E:Refresh()
-check(E.status[comp] ~= "na" and E.status[tin] ~= "na", "accepted dungeon quest: its objective and turn-in stay")
+check(E.status[comp] == "skipped" and E.status[tin] == "skipped" and not ns.Tracker:IsTurnedIn(6921),
+    "accepted dungeon quest with dungeons off: set aside (never dropped or marked done), questing continues")
+MOCK.questLog[#MOCK.questLog].complete = true
+ns.Tracker:Scan()
+E:Refresh()
+check(E.status[tin] == "pending" or E.status[tin] == "active", "its turn-in comes back once the quest is complete")
 MOCK.questLog = {}
 ns.Tracker:Scan()
 E:Refresh()

@@ -77,11 +77,21 @@ function Engine:Load(guideId, opts)
     return true
 end
 
--- Whether the steps of dungeon `name` are left out: all dungeons off, or this one deselected.
+-- Whether the steps of dungeon `name` are left out: all dungeons off, or this one deselected. A character
+-- that confirmed setup has its own choice (ns.char.routing, Core/Setup.lua); others use the settings profile.
 function Engine:DungeonOff(name)
+    local r = ns.Setup:Routing()
+    if r then return r.dungeons ~= "selected" or not r.selected[name] end
     local prof = ns.db.profile
     if not prof.showDungeonSteps then return true end
     return type(prof.dungeonOff) == "table" and prof.dungeonOff[name] == true
+end
+
+-- Whether [elite]/[group] steps are in the route (per character after setup, as above).
+function Engine:EliteOn()
+    local r = ns.Setup:Routing()
+    if r then return r.elite == true end
+    return ns.db.profile.showElite and true or false
 end
 
 -- Whether quest q can only be taken after a dungeon quest that is excluded right now: one of its
@@ -142,6 +152,14 @@ function Engine:AutoSkipReason(s, ctx)
             return "needs a dungeon quest (Include Dungeon Quests is off)"
         end
     elseif s[1] == "turnin" or s[1] == "complete" then
+        -- A dungeon quest in your log whose run is not planned (dungeon not selected) or whose run step you
+        -- skipped: its objective and turn-in step aside until the quest is complete, so questing goes on.
+        -- Nothing is marked done; the turn-in comes back by itself once the quest log says complete.
+        if s.dungeon and T:InLog(s.q) and not T:IsComplete(s.q) then
+            if self:DungeonOff(s.dungeon) then return "dungeon not selected; turn it in once the quest is complete" end
+            local ci = s[1] == "turnin" and self.completeIndex and self.completeIndex[s.q]
+            if ci and self.status[ci] == "skipped" then return "dungeon run skipped; the turn-in comes back when the quest is complete" end
+        end
         if not T:InLog(s.q) and not T:IsTurnedIn(s.q) then
             -- The player never picked it up (or abandoned it). If the matching accept step was
             -- skipped / not applicable, skip this too rather than blocking the route.
@@ -169,9 +187,10 @@ function Engine:Refresh(silent)
     local p = self.progress
     local ctx = T:Context()
     local prof = ns.db.profile
-    self.acceptIndex = {}
+    self.acceptIndex, self.completeIndex = {}, {}
     for i, s in ipairs(g.steps) do
         if s[1] == "accept" and s.q then self.acceptIndex[s.q] = i end
+        if s[1] == "complete" and s.q then self.completeIndex[s.q] = i end
     end
     -- Dungeon quests left out by "Include Dungeon Quests" (never ones already in the log).
     -- A single dungeon can also be switched off (Guide Routing -> Dungeons).
@@ -204,7 +223,7 @@ function Engine:Refresh(silent)
         local st
         if not ns.Guides:StepApplies(s, ctx) then
             st = "na"
-        elseif (s.dungeon and self:DungeonOff(s.dungeon) and not (s.q and T:InLog(s.q))) or (s.elite and not prof.showElite)
+        elseif (s.dungeon and self:DungeonOff(s.dungeon) and not (s.q and T:InLog(s.q))) or (s.elite and not self:EliteOn())
             or (s.optional and prof.speedRoute)
             or (s.hcSkip and ns:IsHardcore()) or (s.hcOnly and not ns:IsHardcore()) then
             st = "na"

@@ -71,6 +71,7 @@ Core\QuestTracker.lua
 Core\Selector.lua
 Core\Engine.lua
 Core\Completionist.lua
+Core\Setup.lua
 Core\StepText.lua
 Core\Navigation.lua
 Core\Roam.lua

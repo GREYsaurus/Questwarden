@@ -254,6 +254,10 @@ function Talents:Init()
         if not ns.db.profile.talentHints then return end
         C_Timer.After(1, function()
             local unspent = ns.Compat.GetUnspentTalentPoints()
+            -- "No talent guidance" (setup): only the reminder, no plan picks.
+            if unspent > 0 and ns.char.noTalentPlan then
+                return ns:Print(string.format("You have %d unspent talent point(s).", unspent))
+            end
             local b = Talents:ActiveBuild()
             if unspent > 0 and b then
                 local live = Talents:ReadLive()

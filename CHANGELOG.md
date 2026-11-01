@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased
+
+- **Setup wizard** (docs/SETUP.md): a per-character, five-step setup replaces the one-page first-login window.
+  - **Steps:** route (Speed or Completionist, starting guide, Hardcore on Classic Era); talent plan (or *No talent guidance*) and gear profile; dungeons (questing only or selected dungeons, with level, coverage and status per dungeon); options (group quests, Completionist categories, automatic upgrades); review.
+  - **Back/Next** with per-step checks. Nothing applies before *Finish Setup*; a failed route start puts everything back and keeps the draft.
+  - **Set Up Later** no longer marks setup done: the draft resumes next session; the window does not reopen in the same session.
+  - **Reopening:** *Run Setup Again* in Settings → General, or `/qw setup` (`/qw setup status`). Existing characters are not asked again.
+- **Per-character dungeons and group quests:** after setup, *Include Dungeon Quests*, the dungeon switches and *Show Group Quests* are saved for the character (`ns.char.routing`) instead of the shared settings profile. Characters without setup keep using the profile.
+- **Dungeon runs no longer block the guide:** a dungeon quest in your log whose dungeon is off, or whose run you skipped, steps aside (nothing marked complete); its turn-in returns when the quest is complete.
+- **Completionist routes every dungeon:**
+  - quests are picked up from the dungeon's usual level;
+  - each dungeon gets a skippable run step, and turn-ins wait for completion;
+  - coverage is now about 1,190-1,410 routable quests per Classic Era character and 1,890-2,150 per TBC character.
+- **No talent guidance:** a per-character choice that turns off plan picks in reminders and the talent window.
+
 ## 0.1.0-alpha.2 (2026-10-31)
 
 - **Completionist mode** (docs/COMPLETIONIST.md). A second, per-character leveling mode next to Speed: every eligible quest in the bundled data, planned one zone visit at a time from the character's level, quest log, completion and position, and run through the normal engine as a generated guide.
