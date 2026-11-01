@@ -1,6 +1,6 @@
 # Data pipeline: refreshing the bundled database and talent data
 
-Players never run any of this. The released add-on already contains the generated files.
+Players never run any of this. The released add-on already contains the generated files.
 
 > **Per target.** Every command takes `-Target`. Which QuestieDB files a target imports (data folder, file prefix, corrections file and module, XP table, NPC flag values) and which client build its tables come from are set in `targets/<Target>/target.json` (`questie`, `clientTables`). Client tables are cached per build in `.cache/upstream/db2/<build>/`.
 >
@@ -75,6 +75,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 | `Database/RaceClass.lua` | client DB2 `CharBaseInfo`, `ChrRaces` | `ClientTables.cs` |
 | `Database/Flights.lua` | client DB2 `TaxiNodes`, `TaxiPath`, `UiMapAssignment` + bundled `Npcs.lua`, `Zones.lua` | `FlightTables.cs` |
 | `Guides/Compiled/*.lua` | `guides-src/*.guide` + the files above | `GuideCompiler.cs` |
+| `Database/DungeonEntrances.lua` | QuestieDB `support/Zones/dungeons.lua` at commit `8f55e69` (`tools/upstream.json` `questiedbDungeons`), base Classic/TBC table, limited to the target's `Database/Dungeons.lua` | `tools/research/dungeon_entrances.py <Target> <dungeons.lua> <commit>` |
 
 ## Quest flags (0.2.0)
 

@@ -38,6 +38,7 @@ Database\ZoneGeo.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
 Database\Dungeons.lua
+Database\DungeonEntrances.lua
 Database\QuestDB.lua
 
 # Guides (generated from guides-src/*.guide by tools/build.ps1)
@@ -71,6 +72,7 @@ Core\Selector.lua
 Core\Engine.lua
 Core\Completionist.lua
 Core\Setup.lua
+Core\DungeonRun.lua
 Core\StepText.lua
 Core\Navigation.lua
 Core\Roam.lua

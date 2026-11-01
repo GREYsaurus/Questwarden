@@ -10,7 +10,7 @@ This program is free software: you can redistribute it and/or modify it under th
 
 Releases include data derived from **QuestieDB** (from Phase 2; the 0.1.0 development builds contain none yet) (https://github.com/Questie/QuestieDB), which was imported from **Questie** (https://github.com/Questie/Questie):
 
-- Upstream commit `7901fee2753cecb577a72c2e4b7126198e05baec` (QuestieDB v1.0.9).
+- Upstream commit `7901fee2753cecb577a72c2e4b7126198e05baec` (QuestieDB v1.0.9). Dungeon entrance positions (`support/Zones/dungeons.lua`) come from the later commit `8f55e69de02e8a67229c4a54575f899244359cb8`, which added that file.
 - Data authors as credited upstream: Muehe, TheCrux (BreakBB), Drejjmit, Dyaxler, Cheeq, TechnoHunter, Yttrium and many other Questie contributors. Code by Logonz.
 - Redistributed under the GPLv3 terms the Questie team offers. The upstream licence statement is reproduced verbatim in `Database/Questie/UPSTREAM_LICENSE.md` (in each target's data), and the import history in `UPSTREAM_PROVENANCE.md`.
 - The data was transformed (trimmed, re-keyed and corrections applied) by `tools/src/QuestieImport.cs` and `tools/src/QuestieCorrections.cs`.

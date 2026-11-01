@@ -49,7 +49,10 @@ function StepText:Title(s)
         local who = s.npc and (" to " .. string.format(NPC, s.npc)) or ""
         return "Turn in " .. string.format(QUEST, questName(s)) .. who
     elseif k == "complete" then
+        if ns.DungeonRun:RunPhase(s) then return ns.DungeonRun:Title(s.dungeon) end
         return "Complete " .. string.format(QUEST, questName(s))
+    elseif k == "dungeon" then
+        return ns.DungeonRun:Title(s.dungeon)
     elseif k == "goto" then
         return s.text or ("Go to " .. (fmtCoords(s) or "the marked location"))
     elseif k == "train" then
@@ -80,6 +83,11 @@ end
 function StepText:Details(s)
     refreshColours()
     local lines = {}
+    -- Outside the dungeon a dungeon quest's objective step is the "time to run it" note (Core/DungeonRun.lua).
+    if (s[1] == "complete" and ns.DungeonRun:RunPhase(s)) or s[1] == "dungeon" then
+        lines[#lines + 1] = ns.DungeonRun:Note(s.dungeon)
+        if s.q then lines[#lines + 1] = string.format(DIM, "For " .. questName(s) .. ".") end
+    end
     if s[1] == "complete" and s.q then
         local e = ns.Tracker:GetEntry(s.q)
         if e and #e.objectives > 0 then
@@ -129,6 +137,8 @@ function StepText:Target(s)
         if s[1] == "grind" then return s.z, s.x, s.y, s.location or (s.mobs and s.mobs[1]) end
         return s.z, s.x, s.y, s.npc or s.text
     end
+    -- A dungeon run you are not in yet: its nearest entrance (none when the data has no entrance).
+    if s[1] == "dungeon" or (s[1] == "complete" and ns.DungeonRun:RunPhase(s)) then return ns.DungeonRun:Entrance(s.dungeon) end
     -- Train steps without a place: the nearest class trainer of your faction (Classes/Trainer.lua).
     if s[1] == "train" and ns.Trainer then return ns.Trainer:NearestTrainer() end
     if not s.q then return nil end

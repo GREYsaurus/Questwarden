@@ -14,8 +14,10 @@
 --     you are on and its parents up to the continent. The client returns nothing for maps the corpse
 --     is not on; 0,0 or no answer is never used. No map is opened or changed to ask.
 --   * Delayed data: up to RETRIES tries, RETRY seconds apart, then a one-time "not available" note.
---   * Instances: a corpse inside a dungeon, raid or battleground has no outdoor position. There is
---     no arrow then, only a note; no instance-entrance coordinates are guessed.
+--   * Instances: a corpse inside a dungeon, raid or battleground has no outdoor position. A death inside
+--     a listed dungeon points the arrow at that dungeon's entrance (Core/DungeonRun.lua, QuestieDB data;
+--     remembered in ns.char.deathDungeon so a reload as a ghost keeps it). Elsewhere, or without an
+--     entrance in the data, there is no arrow, only a note; no position is guessed.
 --   * While it owns the arrow, guide steps and hunting routes cannot replace it (Nav:Held). A waypoint
 --     you ask for yourself (manual) replaces it and counts as dismissing it. "/cg corpse off|on".
 --   * End: PLAYER_UNGHOST / PLAYER_ALIVE when no longer a ghost, setting off or dismissed. The arrow
@@ -73,11 +75,28 @@ function CP:Point(map, x, y)
     end
 end
 
+-- The arrow on a dungeon entrance for a ghost who died inside (zone area id, x, y).
+function CP:PointArea(zone, x, y, label)
+    if self.active and self.area == zone and self.x == x and self.y == y then return end
+    self.active, self.area, self.map, self.x, self.y = true, zone, nil, x, y
+    ns.Nav:SetTarget(zone, x, y, label, "corpse")
+end
+
 -- Finds the corpse and takes the arrow; retries a few times when the client has no position yet.
 function CP:Try(attempt)
     attempt = attempt or 1
     if not (prof().corpseNav and isGhost()) or self.dismissed then return end
-    if self.instanceDeath then
+    if self.instanceDeath or ns.char.deathDungeon then -- the saved dungeon covers a reload as a ghost
+        local name = self.deathDungeon or ns.char.deathDungeon
+        local z, x, y, label = ns.DungeonRun:Entrance(name)
+        if z then
+            self:PointArea(z, x, y, label)
+            if not self.toldInstance then
+                self.toldInstance = true
+                ns:Print("You died in " .. name .. "; the arrow points to its entrance. /" .. ns.slash .. " corpse off returns to the guide.")
+            end
+            return
+        end
         if not self.toldInstance then
             self.toldInstance = true
             ns:Print("Your corpse is inside an instance; " .. ns.name .. " has no outdoor position for it. Run back to the instance entrance.")
@@ -117,7 +136,8 @@ end
 -- Alive again: forget this death completely.
 function CP:Reset(why)
     self:Release(why)
-    self.dismissed, self.deathMap, self.instanceDeath = false, nil, nil
+    self.dismissed, self.deathMap, self.instanceDeath, self.deathDungeon, self.area = false, nil, nil, nil, nil
+    if ns.char then ns.char.deathDungeon = nil end
     self.told, self.toldMissing, self.toldInstance = nil, nil, nil
 end
 
@@ -125,6 +145,8 @@ function CP:OnDead()
     self:Reset("died again")
     self.deathMap = C_Map and C_Map.GetBestMapForUnit and C_Map.GetBestMapForUnit("player")
     self.instanceDeath = inInstance()
+    self.deathDungeon = self.instanceDeath and ns.DungeonRun:Current() or nil
+    ns.char.deathDungeon = self.deathDungeon
     dbg("died on map " .. tostring(self.deathMap) .. (self.instanceDeath and " (instance)" or ""))
 end
 
@@ -149,7 +171,11 @@ function CP:Resume()
     if not isGhost() then ns:Print("You are not a ghost.") return end
     self.dismissed, self.toldMissing = false, nil
     self.token = {}
-    if self.active then self:Point(self.map, self.x, self.y) else self:Try(1) end
+    if self.active and self.map then self:Point(self.map, self.x, self.y)
+    elseif self.active and self.area then
+        self.active = false
+        self:Try(1)
+    else self:Try(1) end
 end
 
 -- A waypoint you chose yourself replaced the corpse arrow: treat it as dismissed.

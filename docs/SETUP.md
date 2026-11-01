@@ -127,7 +127,7 @@ Changing the mode or guide never touches quest history or guide progress. Each S
 
 **Completionist (Core/Completionist.lua):**
 - **Every dungeon's quests are routed.** They are picked up from the dungeon's usual level (`Database/Dungeons.lua`), not earlier, so they do not fill the log.
-- **Open dungeon quests** become one manual run step per dungeon. Skipping it keeps you questing; it comes back in later segments.
+- **Open dungeon quests** become one run step per dungeon: find a group, arrow to the entrance, done when you enter (docs/DUNGEONS.md). Skipping it keeps you questing; it comes back in later segments.
 - **Turn-ins** are planned only once a quest is complete.
 
 ## Saved data

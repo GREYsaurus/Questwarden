@@ -71,5 +71,14 @@
     ],
     "urlTemplate": "https://wago.tools/db2/{table}/csv?build={build}",
     "_comment": "Product and build per target: targets/<Target>/target.json clientTables. Tables are cached per build in .cache/upstream/db2/<build>/."
+  },
+  "questiedbDungeons": {
+    "_comment": "Dungeon entrance positions (support/Zones/dungeons.lua) from a newer QuestieDB commit than the main import, which has no such file. Read by tools/research/dungeon_entrances.py into targets/<Target>/addon/Database/DungeonEntrances.lua; only the base (Classic/TBC) table is used.",
+    "repository": "https://github.com/Questie/QuestieDB",
+    "commit": "8f55e69de02e8a67229c4a54575f899244359cb8",
+    "file": "support/Zones/dungeons.lua",
+    "url": "https://raw.githubusercontent.com/Questie/QuestieDB/8f55e69de02e8a67229c4a54575f899244359cb8/support/Zones/dungeons.lua",
+    "sha256": "f36a9ef784322ed7da9916670b46bf76698f1f9a3cfede0895a49c6cbec64f60",
+    "cache": ".cache/upstream/questiedb-support/8f55e69de02e8a67229c4a54575f899244359cb8/dungeons.lua"
   }
 }

@@ -32,6 +32,8 @@ local COMPLETERS = {
     level = function(s) return (UnitLevel("player") or 1) >= (s.level or 1) end,
     -- The step's [area=] names in the client's language (Core/Bind.lua), or a bind Questwarden verified.
     bind = function(s) return ns.Bind:IsBoundFor(s) end,
+    -- Completionist's run step: done when you are inside that dungeon (Core/DungeonRun.lua).
+    dungeon = function(s) return ns.DungeonRun:Current() == s.dungeon end,
 }
 -- A grind step ends exactly like a level step: when the player reaches s.level. (UnitXP only
 -- counts XP into the current level, so an XP threshold would misfire after a level-up.)
@@ -39,7 +41,8 @@ COMPLETERS.grind = COMPLETERS.level
 
 -- Steps whose completion is remembered once observed (cannot be re-derived later).
 local STICKY = { ["goto"] = true, note = true, train = true, fp = true, fly = true, hs = true, travel = true,
-                 talk = true, buy = true, use = true, collect = true, bind = true, level = true, grind = true }
+                 talk = true, buy = true, use = true, collect = true, bind = true, level = true, grind = true,
+                 dungeon = true }
 
 function Engine:Init()
     T = ns.Tracker
@@ -80,6 +83,8 @@ end
 -- Whether the steps of dungeon `name` are left out: all dungeons off, or this one deselected. A character
 -- that confirmed setup has its own choice (ns.char.routing, Core/Setup.lua); others use the settings profile.
 function Engine:DungeonOff(name)
+    -- Completionist's generated segments route every dungeon (docs/COMPLETIONIST.md).
+    if self.guide and self.guide.dynamic then return false end
     local r = ns.Setup:Routing()
     if r then return r.dungeons ~= "selected" or not r.selected[name] end
     local prof = ns.db.profile

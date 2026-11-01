@@ -35,7 +35,7 @@ Each quest is classified for the character: *ready now*, *in your quest log*, *c
 
 **Dungeon quests are always routed:** Completionist goes through every dungeon; the dungeon selection in setup applies to Speed only.
 - A dungeon quest is picked up only from the dungeon's usual level (`Database/Dungeons.lua`), so it does not sit in the quest log for many levels.
-- Open dungeon quests in the log become one manual **run step** per dungeon. A run step never marks a quest complete: skip it to keep questing; it comes back in later segments.
+- Open dungeon quests in the log become one **run step** per dungeon: time to find a group, with the arrow on the entrance. It ends when you enter the dungeon; inside, a dungeon segment lists the quests' objectives, and leaving plans the route again (docs/DUNGEONS.md, "Dungeon runs"). A run step never marks a quest complete: skip it to keep questing; it comes back in later segments.
 - Their turn-ins are planned once the quest log says complete.
 
 Counted but **not routed by default** (setup's Options step or Settings → Guide Routing turns each on): raid, group/elite (an elite objective target), profession, reputation, event/seasonal (QuestieDB's special categories) and repeatable quests. For characters that finished setup, group/elite follows the setup's group-quest choice. Turning a kind on puts its quests through the normal level and prerequisite rules. Excluding a kind never counts it as done.

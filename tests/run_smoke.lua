@@ -227,6 +227,14 @@ if STAGE.target == "ClassicEra" then
     local sp, hasSup = S:SpeedDungeonQuests(), false
     for _, row in ipairs(S:Dungeons("speed")) do if row.supported then hasSup = true end end
     check(next(sp) ~= nil and hasSup, "setup: the Classic guides offer dungeons to select")
+    -- Dungeon runs (Core/DungeonRun.lua): every dungeon the Classic guides send you to has an entrance arrow.
+    local noEntrance = {}
+    for _, gd in ipairs(ns.Guides.list) do
+        for _, st in ipairs(gd.steps) do
+            if st.dungeon and not ns.DungeonRun:HasEntrance(st.dungeon) then noEntrance[st.dungeon] = true end
+        end
+    end
+    check(next(noEntrance) == nil and select(1, ns.DungeonRun:Entrance("The Deadmines")) == 40, "dungeon runs: every guide dungeon has an entrance (Deadmines in Westfall)")
     local wcRow
     for _, row in ipairs(S:Dungeons("speed")) do if row.id == "Wailing Caverns" then wcRow = row end end
     check(wcRow and not wcRow.supported and string.find(wcRow.note, "Speed leveling guides", 1, true) and string.find(wcRow.note, "Completionist mode still routes", 1, true),
@@ -343,14 +351,6 @@ if TC.ok then
     check(g and g.steps[1].text == ns.name .. " skips it; /" .. ns.slash .. " guide", "{name} and {slash} expand in guide text")
 end
 
--- Commands and windows without data ----------------------------------------------------------------
-for _, cmd in ipairs({ "help", "debug", "guide", "talents", "class", "gear", "orphans", "options" }) do
-    local ok, err = pcall(SlashCmdList[ns.key], cmd)
-    check(ok, "/" .. ns.slash .. " " .. cmd .. " runs without data: " .. tostring(err))
-end
-check(#ns.errors == 0, "no captured errors after commands: " .. table.concat(ns.errors, " | "))
-
-print(string.format("[%s] %d passed, %d failed", STAGE.target, passes, failures))
 -- Key bindings: each header is declared once (the client warns "Binding header ... loaded more than once").
 do
     local f = io.open("build/" .. STAGE.target .. "/" .. ns.name .. "/Bindings.xml", "r")
@@ -366,4 +366,12 @@ do
     check(headers >= 1 and not dup and bindings >= 2, "Bindings.xml declares each header once (" .. headers .. " header(s), " .. bindings .. " bindings)")
 end
 
+-- Commands and windows without data ----------------------------------------------------------------
+for _, cmd in ipairs({ "help", "debug", "guide", "talents", "class", "gear", "orphans", "options" }) do
+    local ok, err = pcall(SlashCmdList[ns.key], cmd)
+    check(ok, "/" .. ns.slash .. " " .. cmd .. " runs without data: " .. tostring(err))
+end
+check(#ns.errors == 0, "no captured errors after commands: " .. table.concat(ns.errors, " | "))
+
+print(string.format("[%s] %d passed, %d failed", STAGE.target, passes, failures))
 os.exit(failures == 0 and 0 or 1)

@@ -272,6 +272,7 @@ function CM:Context()
         return ns.Compat.IsQuestCompleted(id)
     end
     info.inLog = function(id) return ns.Tracker:InLog(id) end
+    info.inside = ns.DungeonRun and ns.DungeonRun:Current() -- the listed dungeon you are in, if any
     return info
 end
 
@@ -369,22 +370,23 @@ function CM:Work(inv, ctx, here)
     return zones, minBand or 1, runs
 end
 
--- One manual "run" step per selected dungeon with open quests in the log, once the character is at the
--- dungeon's usual level. Marking it done or skipping it never completes a quest: the turn-ins are planned
--- from the quest log when the quests are complete, and the step comes back in later segments until then.
-function CM:RunSteps(runs, level)
+-- One "dungeon" step per dungeon with open quests in the log, once the character is at the dungeon's usual
+-- level: it says it is time to find a group, points the arrow at the entrance and ends when you enter
+-- (Core/DungeonRun.lua). Skipping it never completes a quest: the turn-ins are planned from the quest log
+-- when the quests are complete, and the step comes back in later segments until then.
+function CM:RunSteps(runs, level, inside)
     local names, out = {}, {}
     for name in pairs(runs or {}) do names[#names + 1] = name end
     table.sort(names)
     for _, name in ipairs(names) do
         local d = self:DungeonEntry(name)
-        if not d or d.min <= (level or 1) then
+        if name ~= inside and (not d or d.min <= (level or 1)) then
             local titles = {}
             for _, id in ipairs(runs[name]) do titles[#titles + 1] = QDB().quests[id][1] end
             table.sort(titles)
-            out[#out + 1] = { "note", dungeonRun = name, text = string.format(
-                "Dungeon: %s (%s). Run it with a group when you can. Skip this step to keep questing; the quests stay in your log, and their turn-ins appear once they are complete.",
-                name, table.concat(titles, ", ")) }
+            out[#out + 1] = { "dungeon", dungeon = name, dungeonRun = name, text = string.format(
+                "Quests: %s. Not now? Skip this step to keep questing; the quests stay in your log, and their turn-ins appear once they are complete.",
+                table.concat(titles, ", ")) }
         end
     end
     return out
@@ -441,9 +443,21 @@ function CM:Plan(ctx, here)
     ctx = ctx or self:Context()
     local inv = self:Inventory(ctx)
     local zones, minBand, runs = self:Work(inv, ctx, here)
-    local w = self:PickZone(zones, here, minBand)
     local seg = { inv = inv, steps = {} }
-    local runSteps = self:RunSteps(runs, ctx.level)
+    -- Inside a dungeon with open quests for it: a dungeon segment, its objectives in the order of the quest ids.
+    -- Leaving the dungeon plans again (Init: DUNGEON_CHANGED).
+    if ctx.inside and runs[ctx.inside] then
+        seg.kind, seg.dungeon = "dungeon", ctx.inside
+        seg.steps[1] = { "note", text = string.format("You are in %s. Do its quests below; leaving with some unfinished is fine, they stay in your log.", ctx.inside) }
+        local ids = runs[ctx.inside]
+        table.sort(ids)
+        for _, id in ipairs(ids) do
+            seg.steps[#seg.steps + 1] = { "complete", q = id, title = QDB().quests[id][1], dungeon = ctx.inside }
+        end
+        return seg
+    end
+    local w = self:PickZone(zones, here, minBand)
+    local runSteps = self:RunSteps(runs, ctx.level, ctx.inside)
     if not w then
         for _, s in ipairs(runSteps) do seg.steps[#seg.steps + 1] = s end
         -- Nothing to do now: the next level that unlocks deferred quests.
@@ -586,6 +600,16 @@ function CM:SetMode(mode)
     local back = c.speedGuide and ns.Guides:Get(c.speedGuide) or ns.Selector:Recommend()
     if back then return ns.Engine:Load(back.id) end
     return true
+end
+
+-- Entering or leaving a dungeon plans again: a dungeon segment inside, the normal route outside.
+function CM:Init()
+    ns:Listen("DUNGEON_CHANGED", function(_, now, was)
+        if not CM:Active() then return end
+        if now or (CM.segment and CM.segment.kind == "dungeon") then
+            CM:Replan(now and ("entered " .. now) or ("left " .. tostring(was)))
+        end
+    end)
 end
 
 -- The finished generated guide plans the next segment (Engine:OnGuideFinished calls this).

@@ -19,6 +19,7 @@ local VALID_STEP = {
     accept = true, turnin = true, complete = true, ["goto"] = true, note = true, train = true,
     fp = true, fly = true, hs = true, bind = true, level = true, travel = true, guide = true,
     talk = true, buy = true, use = true, collect = true, grind = true,
+    dungeon = true, -- generated only (Completionist's run step, Core/DungeonRun.lua); guide sources have no such step
 }
 
 -- Guide text may say {name} and {slash} (docs/GUIDE_FORMAT.md) so it never spells the add-on's name.
@@ -42,6 +43,7 @@ function Guides:Register(g)
         if type(s) ~= "table" or not VALID_STEP[s[1]] then return reject(g.id, "bad step " .. i) end
         -- A grind step without a target level would count as done at once.
         if s[1] == "grind" and type(s.level) ~= "number" then return reject(g.id, "grind step " .. i .. " needs a level") end
+        if s[1] == "dungeon" and type(s.dungeon) ~= "string" then return reject(g.id, "dungeon step " .. i .. " needs a dungeon") end
         s.index = i
         s.text = expand(s.text)
     end

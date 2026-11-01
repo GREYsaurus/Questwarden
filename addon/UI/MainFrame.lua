@@ -24,6 +24,7 @@ local function stepIcon(s, status)
     local k = s[1]
     if k == "accept" then return "Interface\\GossipFrame\\AvailableQuestIcon" end
     if k == "turnin" then return "Interface\\GossipFrame\\ActiveQuestIcon" end
+    if k == "dungeon" or (k == "complete" and ns.DungeonRun:RunPhase(s)) then return "Interface\\Icons\\INV_Misc_Map_01" end
     if k == "complete" then return "Interface\\Icons\\INV_Sword_04" end
     if k == "fp" or k == "fly" then return "Interface\\GossipFrame\\TaxiGossipIcon" end
     if k == "train" then return "Interface\\GossipFrame\\TrainerGossipIcon" end
