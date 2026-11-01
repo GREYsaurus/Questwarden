@@ -241,6 +241,70 @@ namespace GuideTools
             return outT.Pairs().Any() ? outT : null;
         }
 
+        const double PatrolMinExtent = 2.0;   // map percent: shorter paths are not worth drawing
+        const double PatrolSimplify = 0.3;    // map percent: largest allowed gap between path and simplified path
+
+        // One upstream path {{x, y}, ...} -> a flat {x1, y1, x2, y2, ...}, or null when it is too small.
+        static LTable PatrolPath(LTable path)
+        {
+            if (path == null) return null;
+            var pts = new List<double[]>();
+            for (int k = 1; k <= path.Count; k++)
+            {
+                var pt = path.Get(k) as LTable;
+                if (pt == null) continue;
+                object x = pt.Get(1), y = pt.Get(2);
+                if (!(x is double) || !(y is double)) continue;
+                double dx = (double)x, dy = (double)y;
+                if (dx < 0 || dy < 0) continue;
+                if (pts.Count > 0 && pts[pts.Count - 1][0] == dx && pts[pts.Count - 1][1] == dy) continue;
+                pts.Add(new[] { dx, dy });
+            }
+            if (pts.Count < 2) return null;
+            double minX = pts.Min(q => q[0]), maxX = pts.Max(q => q[0]);
+            double minY = pts.Min(q => q[1]), maxY = pts.Max(q => q[1]);
+            if (Math.Max(maxX - minX, maxY - minY) < PatrolMinExtent) return null;
+            var keep = new bool[pts.Count];
+            keep[0] = keep[pts.Count - 1] = true;
+            Simplify(pts, 0, pts.Count - 1, keep);
+            var flat = new LTable();
+            double lx = -1, ly = -1;
+            for (int k = 0; k < pts.Count; k++)
+            {
+                if (!keep[k]) continue;
+                double rx = Math.Round(pts[k][0], 1), ry = Math.Round(pts[k][1], 1);
+                if (rx == lx && ry == ly) continue;
+                flat.Append(rx); flat.Append(ry);
+                lx = rx; ly = ry;
+            }
+            return flat.Count >= 4 ? flat : null;
+        }
+
+        // Ramer-Douglas-Peucker: keep the point farthest from the chord while it is farther than PatrolSimplify.
+        static void Simplify(List<double[]> pts, int a, int b, bool[] keep)
+        {
+            if (b <= a + 1) return;
+            double ax = pts[a][0], ay = pts[a][1], bx = pts[b][0], by = pts[b][1];
+            double vx = bx - ax, vy = by - ay, len2 = vx * vx + vy * vy;
+            int far = -1; double best = PatrolSimplify;
+            for (int k = a + 1; k < b; k++)
+            {
+                double px = pts[k][0] - ax, py = pts[k][1] - ay, dist;
+                if (len2 == 0) dist = Math.Sqrt(px * px + py * py);
+                else
+                {
+                    double t = Math.Max(0, Math.Min(1, (px * vx + py * vy) / len2));
+                    double ex = px - t * vx, ey = py - t * vy;
+                    dist = Math.Sqrt(ex * ex + ey * ey);
+                }
+                if (dist > best) { best = dist; far = k; }
+            }
+            if (far < 0) return;
+            keep[far] = true;
+            Simplify(pts, a, far, keep);
+            Simplify(pts, far, b, keep);
+        }
+
         static LTable IdTable(IEnumerable<int> ids, int max)
         {
             var t = new LTable();
@@ -428,6 +492,42 @@ namespace GuideTools
             }
             File.WriteAllText(Path.Combine(outDir, "Npcs.lua"), sb.ToString(), new UTF8Encoding(false));
             stats["npcs"] = npcCount;
+
+            // ---------------- Patrol paths ----------------
+            // The waypoints of the bundled NPCs that walk a path. Paths that stay within a small area (a vendor
+            // stepping around their stall) are left out; the rest are simplified to keep the file small.
+            sb = new StringBuilder(Hdr("patrol paths of the bundled NPCs", provenance));
+            sb.Append("-- [npcId] = { [zoneId] = { {x1, y1, x2, y2, ...}, ... } } in zone map percent, in walking order.\n");
+            sb.Append("ns.QDB.patrols = {}\nlocal P = ns.QDB.patrols\n");
+            int patrolNpcs = 0, patrolPoints = 0;
+            foreach (var id in needNpc.OrderBy(k => k))
+            {
+                LTable n;
+                if (!d.Npcs.TryGetValue(id, out n)) continue;
+                var wp = QuestieData.T(n, QuestieData.N_WAYPOINTS);
+                if (wp == null) continue;
+                var outZ = new LTable();
+                foreach (var z in wp.Pairs())
+                {
+                    var paths = z.Value as LTable;
+                    if (!(z.Key is double) || paths == null) continue;
+                    var outP = new LTable();
+                    foreach (var pk in paths.Pairs())
+                    {
+                        var flat = PatrolPath(pk.Value as LTable);
+                        if (flat == null) continue;
+                        outP.Append(flat);
+                        patrolPoints += flat.Count / 2;
+                    }
+                    if (outP.Count > 0) outZ.Set(z.Key, outP);
+                }
+                if (!outZ.Pairs().Any()) continue;
+                sb.Append("P[").Append(id).Append("]=").Append(LuaWriter.Table(outZ)).Append('\n');
+                patrolNpcs++;
+            }
+            File.WriteAllText(Path.Combine(outDir, "Patrols.lua"), sb.ToString(), new UTF8Encoding(false));
+            stats["patrolNpcs"] = patrolNpcs;
+            stats["patrolPoints"] = patrolPoints;
 
             // ---------------- Spirit healers (target.json "questie.spiritHealers") ----------------
             // Every spawn of every NPC named "Spirit Healer": one per graveyard. Kept apart from Npcs.lua because

@@ -43,6 +43,8 @@ pages.general = { title = "General", items = function() return {
       func = function() ns.Roam:Next() end },
     { type = "button", label = "Normal objective waypoint", tip = "Turns the hunting route off for the current step and shows the normal objective waypoint. /" .. ns.slash .. " route on brings it back.",
       func = function() ns.Roam:Suspend() end },
+    T("patrolPaths", "Follow Patrolling NPCs", { tip = "When a step needs an NPC that walks a known path (a quest giver, a turn-in NPC or a named mob), the arrow goes to the nearer end of the path and then along it until the step is done. The path is dotted on the world map and minimap. Path data from QuestieDB; it shows where the NPC walks, not where it is now.",
+      after = function() ns.Patrol:Refresh() end }),
     T("activeItems", "Hide Active Item window", { invert = true, tip = "Buttons for usable quest items in your bags; click one to use the item (Shift-click links it, Alt-drag moves the window). The buttons change only out of combat." }),
     T("vendorTreasures", "Enable Vendor Treasures", { tip = "When a merchant opens, lists and marks the items it sells that are upgrades for your spec profile." }),
     T("flightTimers", "Show Flight Timers", { tip = "A bar with the time left on a flight. Each route is timed the first time you fly it." }),

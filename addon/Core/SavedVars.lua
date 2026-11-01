@@ -105,6 +105,7 @@ local profileDefaults = {
         flightAuto = true,          -- fly to the current fly step's destination when the taxi map opens
         corpseNav = true,           -- arrow to your corpse while you are a ghost (Core/Corpse.lua)
         roamRoutes = true,          -- roaming hunting-area waypoints on kill steps with a verified route (Core/Roam.lua)
+        patrolPaths = true,         -- follow and draw the path of a patrolling quest NPC (Core/Patrol.lua)
         bindAuto = true,            -- confirm the hearthstone bind on the guide's bind step
         skipGossip = true,          -- pick the only gossip option when an NPC offers nothing else
         inventoryManager = true,    -- master switch for junk selling, junk list and junk deletion

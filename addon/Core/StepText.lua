@@ -125,6 +125,10 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(DIM, string.format("Level %d, %d%% through", UnitLevel("player"), math.floor(xp / maxXp * 100)))
         end
     end
+    -- A quest NPC that walks a path (Core/Patrol.lua).
+    if ns.Patrol then
+        for i, l in ipairs(ns.Patrol:Lines(s)) do lines[#lines + 1] = string.format(i == 1 and WARN or DIM, l) end
+    end
     if s.text and s[1] ~= "goto" and s[1] ~= "note" and s[1] ~= "travel" then
         lines[#lines + 1] = s.text
     end

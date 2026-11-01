@@ -12,7 +12,7 @@
 -- step text still shows plain coordinates - navigation is an aid, never a requirement.
 --
 -- Ownership (Nav.owner): "step" (the current guide step, FromStep), "route" (a roaming hunting route,
--- Core/Roam.lua), "manual" (a waypoint the player asked for, such as /cg train waypoint) or
+-- Core/Roam.lua), "patrol" (the path of a patrolling NPC, Core/Patrol.lua), "manual" (a waypoint the player asked for, such as /cg train waypoint) or
 -- "corpse" (Core/Corpse.lua, while you run back as a ghost). Routes and the periodic retargeting never
 -- replace a manual waypoint; a new guide step does. While the corpse owns the arrow, steps and routes
 -- cannot replace it (Nav:Held); a manual waypoint can, and that dismisses the corpse arrow.
@@ -67,7 +67,9 @@ end
 function Nav:FromStep(step)
     if self:Held("step") then return end
     if not step then return self:Clear() end
-    local z, x, y, label = ns.Roam:TargetFor(step)
+    local z, x, y, label = ns.Patrol:TargetFor(step)
+    if z then return self:SetTarget(z, x, y, label, "patrol") end
+    z, x, y, label = ns.Roam:TargetFor(step)
     if z then return self:SetTarget(z, x, y, label, "route") end
     z, x, y, label = ns.StepText:Target(step)
     if z and x and y then self:SetTarget(z, x, y, label, "step") else self:Clear() end
@@ -100,29 +102,45 @@ local MINIMAP_YARDS = {
     indoor = { [0] = 300, 240, 180, 120, 80, 50 },
 }
 
--- Pixel offset of the target from the minimap centre (right, up) and whether it is on the edge; nil when
--- either position is unknown or the target is on another continent.
-function Nav:MinimapOffset()
-    local t = self.target
-    if not t or not Minimap then return nil end
+-- A function from a world position (continent, x, y) to its pixel offset from the minimap centre (right, up),
+-- whether that is past the edge and how far out it is; nil for another continent. Nil without a player position.
+-- Also returns the minimap radius in pixels.
+function Nav:MinimapProjection()
+    if not Minimap then return nil end
     local pMap, px, py = C.GetPlayerMapPosition()
     if not px then return nil end
     local c1, x1, y1 = C.MapToWorld(pMap, px, py)
-    local c2, x2, y2 = C.MapToWorld(t.mapId, t.x, t.y)
-    if not c1 or not c2 or c1 ~= c2 then return nil end
-    local north, east = x2 - x1, -(y2 - y1) -- world X = north, world Y = west
+    if not c1 then return nil end
+    local f
     if GetCVar and GetCVar("rotateMinimap") == "1" then
-        local f = C.GetPlayerFacing()
+        f = C.GetPlayerFacing()
         if not f then return nil end
-        north, east = -east * math.sin(f) + north * math.cos(f), east * math.cos(f) + north * math.sin(f)
     end
     local sizes = (IsIndoors and IsIndoors()) and MINIMAP_YARDS.indoor or MINIMAP_YARDS.outdoor
     local zoom = Minimap.GetZoom and Minimap:GetZoom() or 0
     local radius = (Minimap:GetWidth() or 140) / 2
     local scale = radius * 2 / (sizes[zoom] or sizes[0])
-    local rx, ry = east * scale, north * scale
-    local d = math.sqrt(rx * rx + ry * ry)
-    local edge = d > radius - 6
+    return function(c2, x2, y2)
+        if not c2 or c2 ~= c1 then return nil end
+        local north, east = x2 - x1, -(y2 - y1) -- world X = north, world Y = west
+        if f then
+            north, east = -east * math.sin(f) + north * math.cos(f), east * math.cos(f) + north * math.sin(f)
+        end
+        local rx, ry = east * scale, north * scale
+        local d = math.sqrt(rx * rx + ry * ry)
+        return rx, ry, d > radius - 6, d
+    end, radius
+end
+
+-- Pixel offset of the target from the minimap centre (right, up) and whether it is on the edge; nil when
+-- either position is unknown or the target is on another continent.
+function Nav:MinimapOffset()
+    local t = self.target
+    if not t then return nil end
+    local proj, radius = self:MinimapProjection()
+    if not proj then return nil end
+    local rx, ry, edge, d = proj(C.MapToWorld(t.mapId, t.x, t.y))
+    if not rx then return nil end
     if edge and d > 0 then rx, ry = rx / d * (radius - 6), ry / d * (radius - 6) end
     return rx, ry, edge
 end
@@ -358,7 +376,7 @@ function Nav:Init()
         if t < 3 then return end
         t = 0
         local s = ns.Engine:CurrentStep()
-        if s and s[1] == "complete" and not s.x and Nav.owner ~= "manual" and not ns.Roam.active then Nav:FromStep(s) end
+        if s and s[1] == "complete" and not s.x and Nav.owner ~= "manual" and not ns.Roam.active and not ns.Patrol.active then Nav:FromStep(s) end
     end)
 end
 

@@ -32,6 +32,7 @@ Database\Questie\Npcs.lua
 Database\Questie\Objects.lua
 Database\Questie\Items.lua
 Database\Questie\SpiritHealers.lua
+Database\Questie\Patrols.lua
 Database\RaceClass.lua
 Database\Flights.lua
 Database\ZoneGeo.lua
@@ -78,6 +79,7 @@ Core\StepText.lua
 Core\Navigation.lua
 Core\NavHints.lua
 Core\Roam.lua
+Core\Patrol.lua
 Core\Corpse.lua
 Core\Vendor.lua
 Core\QuestAuto.lua

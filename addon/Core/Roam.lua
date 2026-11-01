@@ -89,6 +89,7 @@ function R:Pick(s)
     if not e then return nil, "quest not in the log" end
     if e.complete then return nil, "quest complete" end
     if inInstance() then return nil, "in an instance" end
+    if ns.Patrol and ns.Patrol:Pick(s) then return nil, "a patrolling NPC leads" end
     local cands = {}
     for _, route in ipairs(list) do
         if not s.obj or serves(route, s.obj) then

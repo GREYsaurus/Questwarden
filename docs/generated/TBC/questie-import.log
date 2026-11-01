@@ -4,6 +4,8 @@ dangerAdded: 887
 items: 3919
 npcs: 8189
 objects: 1325
+patrolNpcs: 332
+patrolPoints: 6100
 quests: 6648
 spiritHealers: 154
 subzones: 121
