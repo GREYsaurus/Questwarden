@@ -154,6 +154,11 @@ None of this has been tested in the game client yet.
 
 ### Advanced Settings
 - *Enable Debug*.
+- **Navigation hints** (`Core/NavHints.lua`). The arrow points in a straight line, and Questwarden has no paths through cities or buildings. Instead, the step text (and a short line under the arrow) says when the straight line will mislead you:
+  - the target is in a capital city: follow the streets;
+  - you are in a capital and the target is outside it: leave the city first;
+  - you are indoors (the game's indoor flag) and the target is more than 40 yards away: find the way out first;
+  - the target is inside a building, cave or mine: look for the entrance. This comes from the step's own text (words such as *cave*, *mine*, *inside*, *upstairs*, or *in the inn*, *top of the tower*), or from a spot you arrived at indoors before (remembered for all characters).
 - *Update Frequency (ms)*: how often the arrow redraws. Under the arrow: the distance and, while you are closing on the waypoint, an estimated time to arrival (from your speed toward it, smoothed).
 - *Low Quality Settings*: the arrow redraws at most every 150 ms, and the map shows fewer pins.
 - *Pre load all data*: at login, and when you change guide, asks the game for the item data your guide's quests and your bags use, so tooltips and scoring don't wait.

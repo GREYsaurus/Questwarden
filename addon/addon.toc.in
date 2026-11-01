@@ -75,6 +75,7 @@ Core\Setup.lua
 Core\DungeonRun.lua
 Core\StepText.lua
 Core\Navigation.lua
+Core\NavHints.lua
 Core\Roam.lua
 Core\Corpse.lua
 Core\Vendor.lua

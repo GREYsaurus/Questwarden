@@ -72,6 +72,49 @@ check(Nav:Eta(100, 9) == nil, "a new target starts a new estimate")
 check(Nav.FormatEta(42) == "0:42" and Nav.FormatEta(725) == "12:05" and Nav.FormatEta(3723) == "1:02:03", "times read m:ss, or h:mm:ss over an hour")
 Nav.target, Nav.eta = nil, nil
 
+-- City, building and cave hints (Core/NavHints.lua) --------------------------------------------------------------
+local NH, E = ns.NavHints, ns.Engine
+check(NH:CapitalOf(1519) == "Stormwind City" and NH:CapitalOf(1637) == "Orgrimmar" and NH:CapitalOf(12) == nil, "capitals come from the zone data")
+local function says(text) return NH:TextSaysIndoors({ text = text }) end
+check(says("Den Mother in the bear cave north-east.") and says("Syndicate inside Stromgarde Keep (west).") and says("First Mate Fitzsimmons in the inn.")
+    and says("Brother Neals is at the top of the abbey bell tower.") and says("Tunnel Rat Kobolds at the Silver Stream Mine."), "step text that puts the target indoors is recognised")
+check(not says("Only if you are short of level 10: keep killing the bounty gnolls.") and not says("The hoofprints are beside the inn.")
+    and not says("Mountaineer Barleybrew guards the tunnel to Loch Modan."), "outdoor text with building words is not a false alarm")
+local keepHere, keepIndoors, keepCur = ns.Completionist.Here, IsIndoors, E.CurrentStep
+local here = { 12, 50, 50 }
+ns.Completionist.Here = function() return here[1], here[2], here[3] end
+IsIndoors = function() return false end
+local cityStep = { "turnin", z = 1519, x = 40, y = 60, npc = "Some Trainer" }
+local lines = table.concat(NH:Lines(cityStep, false), " | ")
+check(string.find(lines, "is in Stormwind City: follow the streets", 1, true), "a target in a capital says to follow the streets (" .. lines .. ")")
+here = { 1519, 50, 50 }
+local outStep = { "turnin", z = 12, x = 40, y = 60, npc = "Farmer" }
+lines = table.concat(NH:Lines(outStep, true, nil, 500), " | ")
+check(string.find(lines, "Leave Stormwind City first", 1, true), "in a capital with the target outside: leave the city first")
+check(not string.find(table.concat(NH:Lines(outStep, false, nil, 500), " "), "Leave", 1, true), "where you are only matters for the current step")
+here = { 12, 50, 50 }
+IsIndoors = function() return true end
+lines = table.concat(NH:Lines(outStep, true, nil, 300), " | ")
+check(string.find(lines, "You are indoors", 1, true), "indoors with a distant target: find the way out first")
+check(not string.find(table.concat(NH:Lines(outStep, true, nil, 20), " "), "You are indoors", 1, true), "indoors right next to the target: no exit hint")
+-- learned indoor spots
+ns.db.indoorSpots = {}
+NH:OnArrived({ area = 12, x = 40.2, y = 59.8 })
+check(NH:IsLearnedIndoor(12, 40, 60) and NH:IsLearnedIndoor(12, 40.9, 60.4) and not NH:IsLearnedIndoor(12, 45, 60), "arriving indoors remembers the spot (and its neighbours)")
+lines = table.concat(NH:Lines(outStep, true, nil, 20), " | ")
+check(string.find(lines, "is inside a building, cave or mine", 1, true), "a remembered indoor target says to find the entrance")
+IsIndoors = function() return false end
+NH:OnArrived({ area = 12, x = 70, y = 70 })
+check(not NH:IsLearnedIndoor(12, 70, 70), "arriving outdoors remembers nothing")
+-- the arrow line
+E.CurrentStep = function() return outStep end
+Nav.target = { area = 12, mapId = 1, x = 40, y = 60 }
+check(NH:ArrowLine() == "Target is inside: find the entrance", "the arrow names the most pressing hint")
+here = { 1519, 50, 50 }
+check(NH:ArrowLine() == "Leave Stormwind City first", "leaving the city comes first")
+ns.Completionist.Here, IsIndoors, E.CurrentStep = keepHere, keepIndoors, keepCur
+ns.db.indoorSpots, Nav.target = {}, nil
+
 -- TomTom is gone
 check(Nav.UpdateTomTom == nil and ns.db.profile.useTomTom == nil and ns.Target.integrations.TomTom == nil, "no TomTom code, setting or integration flag is left")
 local old = { useTomTom = true }

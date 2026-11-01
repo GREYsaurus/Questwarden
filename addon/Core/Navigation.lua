@@ -278,6 +278,7 @@ local function createArrow()
     f:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 
     local acc = 0
+    local hint, hintAt, hintFor -- the arrow's city/building hint, worked out once a second
     f:SetScript("OnUpdate", function(self, elapsed)
         acc = acc + elapsed
         local ms = ns.db.profile.arrowUpdateMs or 50
@@ -296,6 +297,10 @@ local function createArrow()
         if dist < ARRIVE_YARDS then
             self.tex:SetVertexColor(0.3, 1, 0.3)
             self.label:SetText(corpse and "Corpse" or "Arrived")
+            if not corpse and Nav.arrivedAt ~= Nav.target then
+                Nav.arrivedAt = Nav.target
+                ns.NavHints:OnArrived(Nav.target) -- remembers indoor spots for the next visit
+            end
             local s = ns.Engine:CurrentStep()
             if Nav.owner == "step" and s and s[1] == "goto" then ns.Engine:MarkDone() end
             return
@@ -309,6 +314,13 @@ local function createArrow()
         local text = string.format(corpse and "Corpse %d yd" or "%d yd", math.floor(dist + 0.5))
         local eta = Nav:Eta(dist, GetTime())
         if eta then text = text .. "  " .. Nav.FormatEta(eta) end
+        -- A hint about cities and buildings (Core/NavHints.lua), worked out once a second.
+        local t = GetTime()
+        if not hintAt or t - hintAt > 1 or hintFor ~= Nav.target then
+            hintAt, hintFor = t, Nav.target
+            hint = not corpse and ns.NavHints:ArrowLine() or nil
+        end
+        if hint then text = text .. "\n|cffff9944" .. hint .. "|r" end
         self.label:SetText(text)
     end)
     f:Hide()
@@ -325,6 +337,15 @@ function Nav:Init()
             hooksecurefunc(WorldMapFrame, "OnMapChanged", function() Nav:UpdateMapPin() end)
         end
         WorldMapFrame:HookScript("OnHide", function() if Nav.pin then Nav.pin:Hide() end end)
+        -- The map can change zone or zoom without OnMapChanged reaching us (or open before its map id is set),
+        -- so the pin is placed again a few times a second while the map is open.
+        local macc = 0
+        WorldMapFrame:HookScript("OnUpdate", function(_, elapsed)
+            macc = macc + elapsed
+            if macc < 0.2 then return end
+            macc = 0
+            Nav:UpdateMapPin()
+        end)
     end
     ns:Listen("STEP_CHANGED", function() Nav:FromStep(ns.Engine:CurrentStep()) end)
     ns:Listen("GUIDE_CHANGED", function() Nav:FromStep(ns.Engine:CurrentStep()) end)
@@ -337,15 +358,6 @@ function Nav:Init()
         t = 0
         local s = ns.Engine:CurrentStep()
         if s and s[1] == "complete" and not s.x and Nav.owner ~= "manual" and not ns.Roam.active then Nav:FromStep(s) end
-        -- The map can change zone or zoom without OnMapChanged reaching us (or open before its map id is set),
-        -- so the pin is placed again a few times a second while the map is open.
-        local macc = 0
-        WorldMapFrame:HookScript("OnUpdate", function(_, elapsed)
-            macc = macc + elapsed
-            if macc < 0.2 then return end
-            macc = 0
-            Nav:UpdateMapPin()
-        end)
     end)
 end
 

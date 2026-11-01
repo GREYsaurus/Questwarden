@@ -125,6 +125,10 @@ function StepText:Details(s)
     if s.optional then tags[#tags + 1] = "Optional" end
     if s.v == 0 then tags[#tags + 1] = "unverified" end
     if #tags > 0 then lines[#lines + 1] = string.format(WARN, table.concat(tags, " - ")) end
+    -- Cities, buildings and caves the straight-line arrow does not know about (Core/NavHints.lua).
+    if ns.NavHints then
+        for _, h in ipairs(ns.NavHints:Lines(s, ns.Engine:CurrentStep() == s)) do lines[#lines + 1] = string.format(WARN, h) end
+    end
     local c = fmtCoords(s)
     if c and s[1] ~= "goto" then lines[#lines + 1] = string.format(DIM, c) end
     return lines
