@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.23 (2026-11-01)
 
 - **Timed quests.** Questwarden now knows the 29 timed quests of Classic Era and the 40 of TBC, with their time limits (from the CMaNGOS quest tables).
   - **Warning before you accept.** The pickup step says how long you will have, and when the quest's window opens a warning shows on screen and in chat. Timed quests are never accepted automatically: you choose when the clock starts. Turn the warning off with *Warn Before Timed Quests* (General, Features).
@@ -10,6 +10,8 @@
 - **Fixed: the arrow stayed on an objective you already finished.** On quests with several objectives in different places, the arrow now leaves out what your log shows done and goes to the nearest objective still open, as soon as you loot or kill. Example: A Refugee's Quandary, where Felix's Box, Chest and Bucket of Bolts lie in three places. This works in every guide (226 such quests in Classic Era, 352 in TBC).
 - **Fixed: innkeepers were not marked.** The innkeeper of a "Set your Hearthstone" step now gets a raid marker and is in the target list, like quest NPCs. So does the NPC a flight-path, vendor or talk step names.
 - **Vendor treasures: arrows instead of a chat list.** Merchant items that are upgrades for your spec now get the same large green arrow as quest rewards, and nothing is printed in chat.
+
+**Tested:** offline only (TBC suite 5,150/5,150, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.22 (2026-11-01)
 
