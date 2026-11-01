@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fix: "find the way out" for a target in the same building** (William Pestle in the Lion's Pride Inn). Indoors, the arrow now says to find the way out only when the target is known to be outside, because you stood at it outdoors before. Otherwise it says the arrow shows only the direction, since the target may be outside or in another room.
+
 ## 0.1.0-alpha.14 (2026-11-01)
 
 - **Weapon upgrades by DPS:** a weapon with the same secondary stats as your equipped one (or none on either), the same kind (two-hander, one-hander, ranged) and more DPS is equipped automatically. The notification says how much DPS it adds.

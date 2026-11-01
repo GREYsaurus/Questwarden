@@ -10,8 +10,9 @@
 -- in its sources), so instead of guessing a route it says when the straight line will mislead you:
 --   * the target is in a capital city: follow the streets;
 --   * you are in a capital and the target is outside it: leave the city first;
---   * you are indoors (the game's IsIndoors) and the target is not right here (and not known to be inside): find the
---     way out first, if the arrow points through a wall;
+--   * you are indoors (the game's IsIndoors) and the target is not right here: "find the way out" when the target is
+--     known to be outside (you stood at it outdoors before); otherwise only that the arrow shows the direction, since
+--     the target may be outside or in another room;
 --   * the target is inside a building, cave or mine: look for the entrance. Known from the guide's own step text
 --     (words like "cave", "inside", "upstairs", or "in the inn"), or learned: standing within OBSERVE_YARDS of a
 --     target records whether you are indoors there (QuestwardenDB.indoorSpots, all characters). A spot ever seen
@@ -122,6 +123,19 @@ function NH:IsLearnedIndoor(area, x, y)
     return indoor
 end
 
+-- Whether a spot (or a neighbour) was seen outdoors while standing at it: the target is outside.
+function NH:IsLearnedOutdoor(area, x, y)
+    if not (area and x and y) then return false end
+    local s = spots()
+    local cx, cy = math.floor(x + 0.5), math.floor(y + 0.5)
+    for dx = -1, 1 do
+        for dy = -1, 1 do
+            if s[string.format("%d:%d:%d", area, cx + dx, cy + dy)] == false then return true end
+        end
+    end
+    return false
+end
+
 -- Called while the arrow is at the target: within OBSERVE_YARDS, records indoors or outdoors for the spot.
 -- Outdoors is kept for good: a target reachable outdoors is never "inside".
 function NH:Observe(target, dist)
@@ -160,10 +174,14 @@ function NH:Lines(s, current, here, dist)
     end
     local learned = self:IsLearnedIndoor(area, x, y)
     local inside = learned or self:TextSaysIndoors(s)
+    -- You indoors: "find the way out" only when the target is known to be outside (seen there before); otherwise it
+    -- may be outside or in another room of the same building, so the hint stays neutral.
     if current and IsIndoors and IsIndoors() and not inside then
         if dist == nil then dist = ns.Nav.target and ns.Nav:Vector() end
         if not dist or dist > NEAR_YARDS then
-            out[#out + 1] = "You are indoors and the target may be outside: if the arrow points through a wall, find the way out of the building or cave first."
+            out[#out + 1] = self:IsLearnedOutdoor(area, x, y)
+                and "You are indoors and the target is outside: find the way out of the building or cave first."
+                or "You are indoors: the arrow shows only the direction. If it points through a wall, the target may be outside or in another room."
         end
     end
     if inside then
@@ -185,7 +203,9 @@ function NH:ArrowLine()
     local inside = t.area and self:TargetIndoors(s, t.area, t.x, t.y)
     if IsIndoors and IsIndoors() and not inside then
         local dist = ns.Nav:Vector()
-        if not dist or dist > NEAR_YARDS then return "Indoors: find the way out first" end
+        if not dist or dist > NEAR_YARDS then
+            return self:IsLearnedOutdoor(t.area, t.x, t.y) and "Indoors: find the way out first" or "Indoors: arrow shows direction only"
+        end
     end
     if inside then
         return self:IsLearnedIndoor(t.area, t.x, t.y) and "Target is inside: find the entrance" or "Target may be inside: find the entrance"

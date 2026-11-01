@@ -98,8 +98,21 @@ check(not string.find(table.concat(NH:Lines(outStep, false, nil, 500), " "), "Le
 here = { 12, 50, 50 }
 IsIndoors = function() return true end
 lines = table.concat(NH:Lines(outStep, true, nil, 300), " | ")
-check(string.find(lines, "You are indoors", 1, true), "indoors with a distant target: find the way out first")
-check(string.find(table.concat(NH:Lines(outStep, true, nil, 37), " "), "You are indoors", 1, true), "indoors 37 yards from an outdoor target (Northshire Abbey to Deputy Willem): find the way out")
+check(string.find(lines, "You are indoors", 1, true) and string.find(lines, "may be outside or in another room", 1, true) and not string.find(lines, "find the way out", 1, true),
+    "indoors with a target not known to be outside: a neutral hint, no 'find the way out' (Lion's Pride Inn)")
+-- A target seen outdoors before (Deputy Willem by the Northshire Abbey door): now "find the way out" is certain
+ns.db.indoorSpots = { ["12:40:60"] = false }
+check(string.find(table.concat(NH:Lines(outStep, true, nil, 37), " "), "the target is outside: find the way out", 1, true),
+    "indoors 37 yards from a target known to be outside: find the way out")
+local keepCurA, keepTarget = E.CurrentStep, Nav.target
+E.CurrentStep = function() return outStep end
+Nav.target = { area = 12, mapId = 1, x = 40, y = 60 }
+local keepVec = Nav.Vector
+Nav.Vector = function() return 37 end
+check(NH:ArrowLine() == "Indoors: find the way out first", "arrow: 'find the way out' only for a target known to be outside")
+ns.db.indoorSpots = {}
+check(NH:ArrowLine() == "Indoors: arrow shows direction only", "arrow: a target not known either way gets the neutral line (Lion's Pride Inn)")
+Nav.Vector, E.CurrentStep, Nav.target = keepVec, keepCurA, keepTarget
 check(not string.find(table.concat(NH:Lines(outStep, true, nil, 10), " "), "You are indoors", 1, true), "indoors right next to the target: no exit hint")
 -- learned indoor spots
 ns.db.indoorSpots = {}
