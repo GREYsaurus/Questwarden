@@ -303,10 +303,13 @@ function M:RefreshMerchant()
 end
 
 -- Quest reward choices ---------------------------------------------------------------------------------------
--- On the reward panel (quest details and turn-in): a green arrow on each choice that is an upgrade for your spec
--- profile (the same evaluation as the bags and merchants). When none is, a coin on the choice worth the most at a
--- vendor (with two or more choices). Items the client has not loaded yet are retried, never guessed.
+-- On the reward panel (quest details and turn-in): a large green arrow, pointing up, on the choice that is the
+-- biggest upgrade for your spec profile (the same evaluation as the bags and merchants). When no choice is an
+-- upgrade, a large coin on the one worth the most at a vendor (with two or more choices). Nothing is marked while
+-- a choice is not loaded yet; the panel is checked again, never guessed.
 M.REWARD_BUTTONS = 10
+M.REWARD_ICON_SIZE = 26
+M.rewardArrows, M.rewardCoins = setmetatable({}, { __mode = "k" }), setmetatable({}, { __mode = "k" })
 
 -- The default UI's button for reward choice i (choices come first on the panel), or nil.
 function M:RewardButton(i)
@@ -316,14 +319,29 @@ function M:RewardButton(i)
     return b
 end
 
--- Fills self.reward[i] = "upgrade" | "coin". Returns true while some choice is not loaded yet.
+-- A large marker over the item icon of a reward button (kept outside the button, which belongs to Blizzard's UI).
+local function rewardMark(store, button, texture, up)
+    local t = store[button]
+    if not t and button.CreateTexture then
+        t = button:CreateTexture(nil, "OVERLAY")
+        t:SetTexture(texture)
+        if up and t.SetTexCoord then t:SetTexCoord(0, 1, 1, 0) end -- the arrow texture points down: flip it
+        t:SetSize(M.REWARD_ICON_SIZE, M.REWARD_ICON_SIZE)
+        local icon = button.Icon or (button.GetName and button:GetName() and _G[button:GetName() .. "IconTexture"])
+        t:SetPoint("TOPLEFT", icon or button, "TOPLEFT", -6, 6)
+        store[button] = t
+    end
+    return t
+end
+
+-- Fills self.reward[i] = "upgrade" | "coin" (at most one). Returns true while some choice is not loaded yet.
 function M:ScanRewards()
     self.reward = {}
     local p = prof()
     local n = GetNumQuestChoices and GetNumQuestChoices() or 0
     if not (p.gearEnabled and p.rewardMarkers) or type(n) ~= "number" or n < 1 or not GetQuestItemLink then return false end
     local ctx = ns.Upgrade:Context()
-    local any, pending, best, bestPrice = false, false, nil, 0
+    local pending, up, upDelta, rich, richPrice = false, nil, nil, nil, 0
     for i = 1, n do
         local link = GetQuestItemLink("choice", i)
         local d = link and ns.Gear:ItemData(link)
@@ -335,16 +353,21 @@ function M:ScanRewards()
                 d.tip = ns.Upgrade:Classify(ns.Upgrade.ScanLines("link", link), d)
                 local e = ns.Upgrade:Evaluate(d, ctx)
                 if e.ok and (e.kind == "empty" or (e.kind == "upgrade" and not e.uncertain)) then
-                    self.reward[i] = "upgrade"
-                    any = true
+                    local delta = e.delta or 0
+                    if not up or delta > upDelta then up, upDelta = i, delta end
                 end
             end
             local v = info.sellPrice or 0
-            if v > bestPrice then best, bestPrice = i, v end
+            if v > richPrice then rich, richPrice = i, v end
         end
     end
-    if not any and not pending and best and n >= 2 then self.reward[best] = "coin" end
-    return pending
+    if pending then return true end
+    if up then
+        self.reward[up] = "upgrade"
+    elseif rich and n >= 2 then
+        self.reward[rich] = "coin"
+    end
+    return false
 end
 
 function M:RefreshRewards()
@@ -353,16 +376,16 @@ function M:RefreshRewards()
         if b then
             local mark = self.reward[i]
             if mark == "upgrade" then
-                local t = overlay(b)
+                local t = rewardMark(self.rewardArrows, b, M.ICON, true)
                 if t then t:Show() end
-            elseif self.overlays[b] then
-                self.overlays[b]:Hide()
+            elseif self.rewardArrows[b] then
+                self.rewardArrows[b]:Hide()
             end
             if mark == "coin" then
-                local c = coin(b)
+                local c = rewardMark(self.rewardCoins, b, M.COIN)
                 if c then c:Show() end
-            elseif self.coins[b] then
-                self.coins[b]:Hide()
+            elseif self.rewardCoins[b] then
+                self.rewardCoins[b]:Hide()
             end
         end
     end

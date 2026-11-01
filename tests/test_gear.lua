@@ -244,19 +244,35 @@ MOCK.questChoices = { 90002, 90001 }
 MOCK.dialog = { questID = 77002, title = "Marker Quest", choices = 2, completable = true }
 MOCK.fire("QUEST_COMPLETE")
 MOCK.tick(1)
-check(shown(GM.overlays[rb2]) and not shown(GM.overlays[rb1]), "the upgrade choice gets the green arrow, the other none")
-check(not shown(GM.coins[rb1]) and not shown(GM.coins[rb2]), "with an upgrade there is no coin")
+check(shown(GM.rewardArrows[rb2]) and not shown(GM.rewardArrows[rb1]), "the upgrade choice gets the green arrow, the other none")
+check(not shown(GM.rewardCoins[rb1]) and not shown(GM.rewardCoins[rb2]), "with an upgrade there is no coin")
+-- Two upgrades: only the bigger one gets the arrow.
+I[90021] = { name = "Plain Boots", classID = 4, subclassID = 2, equipLoc = "INVTYPE_FEET", reqLevel = 60, sellPrice = 10,
+             stats = { ITEM_MOD_AGILITY_SHORT = 12 } }
+local rb3 = CreateFrame("Button", "QuestInfoRewardsFrameQuestInfoItem3")
+_G.QuestInfoRewardsFrameQuestInfoItem3 = rb3
+MOCK.questChoices = { 90021, 90001, 90002 }
+MOCK.dialog = { questID = 77003, title = "Two Upgrades", choices = 3, completable = true }
+MOCK.fire("QUEST_COMPLETE")
+MOCK.tick(1)
+check(shown(GM.rewardArrows[rb2]) and not shown(GM.rewardArrows[rb1]) and not shown(GM.rewardArrows[rb3]),
+    "two upgrades: the arrow is only on the best one")
+local arrow = GM.rewardArrows[rb2]
+check(arrow and GM.REWARD_ICON_SIZE >= 24, "the reward arrow is larger than the bag marker (14)")
+_G.QuestInfoRewardsFrameQuestInfoItem3 = nil
+MOCK.questChoices = { 90002, 90001 }
+MOCK.dialog = { questID = 77002, title = "Marker Quest", choices = 2, completable = true }
 MOCK.equipped[8] = 90001 -- now neither choice is an upgrade
 MOCK.fire("QUEST_DETAIL")
 MOCK.tick(1)
-check(not shown(GM.overlays[rb1]) and not shown(GM.overlays[rb2]), "no upgrades: no arrows")
-check(shown(GM.coins[rb1]) and not shown(GM.coins[rb2]), "no upgrades: a coin on the choice that sells for the most")
+check(not shown(GM.rewardArrows[rb1]) and not shown(GM.rewardArrows[rb2]), "no upgrades: no arrows")
+check(shown(GM.rewardCoins[rb1]) and not shown(GM.rewardCoins[rb2]), "no upgrades: a coin on the choice that sells for the most")
 MOCK.fire("QUEST_FINISHED")
-check(not shown(GM.coins[rb1]), "closing the panel clears the markers")
+check(not shown(GM.rewardCoins[rb1]), "closing the panel clears the markers")
 ns.db.profile.rewardMarkers = false
 MOCK.fire("QUEST_COMPLETE")
 MOCK.tick(1)
-check(not shown(GM.coins[rb1]) and not shown(GM.overlays[rb2]), "setting off: no reward markers")
+check(not shown(GM.rewardCoins[rb1]) and not shown(GM.rewardArrows[rb2]), "setting off: no reward markers")
 ns.db.profile.rewardMarkers = true
 I[90001].sellPrice, I[90002].sellPrice = keepSell1, keepSell2
 _G.QuestInfoRewardsFrameQuestInfoItem1, _G.QuestInfoRewardsFrameQuestInfoItem2 = nil, nil
