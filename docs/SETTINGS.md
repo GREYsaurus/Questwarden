@@ -54,7 +54,7 @@ None of this has been tested in the game client yet.
   - Junk means grey items plus your junk list. Quest, quest-starting, guide-needed and protected items are never sold or deleted, and nothing is deleted in combat.
 - **Features:**
   - *Hide Active Item window* (off by default): buttons for usable quest items in your bags. Click one to use the item. They update after combat, because secure buttons can't change in combat.
-  - *Enable Vendor Treasures* (on): when a merchant opens, lists and marks items it sells that are upgrades for your spec profile, the same estimate as automatic upgrades. Needs a spec profile.
+  - *Enable Vendor Treasures* (on): when a merchant opens, a large green arrow pointing up marks each item it sells that is an upgrade for your spec profile, as on quest rewards (the same estimate as automatic upgrades). Nothing is printed in chat. Needs a spec profile.
   - *Show Flight Timers* (on): a bar with the time left on a flight. Questwarden ships no flight data, so each route is timed the first time you fly it and counts down after that.
   - *Warn Before Timed Quests* (on): when a timed quest's window opens, says on screen and in chat how long you will have once you accept it. The guide's pickup step says it either way.
   - *Show Timed Quest Timers* (on): a movable bar with the time left on each timed quest in your log, red under a minute.

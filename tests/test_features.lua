@@ -258,10 +258,18 @@ ns.char.gearProfile = "warrior_fury_raid"
 ns.Upgrade:Reset()
 prof().vendorTreasures, prof().gearEnabled = true, true
 before = #MOCK.printed
+local mb1, mb2 = CreateFrame("Button", "MerchantItem1ItemButton"), CreateFrame("Button", "MerchantItem2ItemButton")
+_G.MerchantItem1ItemButton, _G.MerchantItem2ItemButton = mb1, mb2
+local madeMF = MerchantFrame == nil
+MerchantFrame = MerchantFrame or CreateFrame("Frame", "MerchantFrame")
+MerchantFrame.page, MerchantFrame.selectedTab = 1, 1
 ns.GearMarkers:OnMerchantShow()
 check(ns.GearMarkers.vendor[1] and not ns.GearMarkers.vendor[2], "only the merchant upgrade is a treasure")
-local said = table.concat(MOCK.printed, "\n", before + 1)
-check(string.find(said, "Vendor Helm", 1, true) and string.find(said, "+400.0% estimated spec score", 1, true), "treasure listed with its estimate")
+check(#MOCK.printed == before, "vendor treasures print nothing")
+local va = ns.GearMarkers.vendorArrows
+check(va[mb1] and va[mb1]:IsShown() and not (va[mb2] and va[mb2]:IsShown()), "the upgrade's merchant button gets the arrow")
+_G.MerchantItem1ItemButton, _G.MerchantItem2ItemButton = nil, nil
+if madeMF then MerchantFrame = nil end
 prof().vendorTreasures = false
 check(#ns.GearMarkers:ScanMerchant() == 0, "Vendor Treasures off: nothing listed")
 ns.char.gearProfile = nil

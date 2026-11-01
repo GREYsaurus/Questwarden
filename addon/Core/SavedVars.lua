@@ -75,7 +75,7 @@ local profileDefaults = {
         -- Features from the settings window (docs/SETTINGS.md)
         activeItems = true,         -- active item window (usable quest items)
         activeItemScale = 1,
-        vendorTreasures = true,     -- list/mark merchant items that are upgrades for your spec
+        vendorTreasures = true,     -- arrow on merchant items that are upgrades for your spec
         flightTimers = true,        -- flight timer bar (learned per route)
         timedQuestWarn = true,      -- warn on screen and in chat when a timed quest's details open
         timedQuestBar = true,       -- bar with the time left on timed quests in your log

@@ -248,7 +248,10 @@ end
 
 -- Vendor treasures ---------------------------------------------------------------------------------------
 -- Items a merchant sells that are upgrades for your spec profile (same evaluation as everywhere
--- else), marked on the merchant buttons and listed once in chat when the merchant opens.
+-- else): a large green arrow, pointing up, on each such item's button, as on quest rewards. Nothing is printed.
+-- Items the client has not loaded yet are checked again when the merchant window updates.
+M.vendorArrows = setmetatable({}, { __mode = "k" })
+local rewardMark -- defined with the quest reward markers below
 
 function M:ScanMerchant()
     self.vendor = {}
@@ -273,15 +276,7 @@ function M:ScanMerchant()
 end
 
 function M:OnMerchantShow()
-    local found = self:ScanMerchant()
-    if #found > 0 then
-        ns:Print("Vendor treasures (upgrades for " .. ns.Upgrade:ProfileName(ns.Upgrade:ActiveProfile()) .. "):")
-        for _, f in ipairs(found) do
-            local price = GetMerchantItemInfo and select(3, GetMerchantItemInfo(f.index))
-            DEFAULT_CHAT_FRAME:AddMessage("  " .. tostring(f.e.item.link) .. " - " .. ns.Upgrade.PctText(f.e)
-                .. (type(price) == "number" and price > 0 and (" (" .. ns.Compat.FormatMoney(price) .. ")") or ""))
-        end
-    end
+    self:ScanMerchant()
     self:RefreshMerchant()
 end
 
@@ -293,10 +288,10 @@ function M:RefreshMerchant()
         if b then
             local e = self.vendor[(page - 1) * per + j]
             if e and MerchantFrame and MerchantFrame.selectedTab ~= 2 then
-                local t = overlay(b)
+                local t = rewardMark(self.vendorArrows, b, M.ICON, true)
                 if t then t:Show() end
-            elseif self.overlays[b] then
-                self.overlays[b]:Hide()
+            elseif self.vendorArrows[b] then
+                self.vendorArrows[b]:Hide()
             end
         end
     end
@@ -320,7 +315,7 @@ function M:RewardButton(i)
 end
 
 -- A large marker over the item icon of a reward button (kept outside the button, which belongs to Blizzard's UI).
-local function rewardMark(store, button, texture, up)
+function rewardMark(store, button, texture, up)
     local t = store[button]
     if not t and button.CreateTexture then
         t = button:CreateTexture(nil, "OVERLAY")
@@ -406,7 +401,11 @@ function M:Init()
     ns:On("MERCHANT_SHOW", function() C_Timer.After(0.2, function() M:OnMerchantShow() end) end)
     ns:On("MERCHANT_CLOSED", function() M.vendor = {} M:RefreshMerchant() end)
     if hooksecurefunc and MerchantFrame_UpdateMerchantInfo then
-        hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function() M:RefreshMerchant() end)
+        hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function()
+            -- Pages and late-loading items: scan again while the merchant is open.
+            if MerchantFrame and MerchantFrame.IsShown and MerchantFrame:IsShown() then M:ScanMerchant() end
+            M:RefreshMerchant()
+        end)
     end
     if hooksecurefunc and ContainerFrame_Update then
         hooksecurefunc("ContainerFrame_Update", function(frame) M:RefreshFrame(frame) end)

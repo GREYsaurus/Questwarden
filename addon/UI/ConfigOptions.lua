@@ -46,7 +46,7 @@ pages.general = { title = "General", items = function() return {
     T("patrolPaths", "Follow Patrolling NPCs", { tip = "When a step needs an NPC that walks a known path (a quest giver, a turn-in NPC or a named mob), the arrow goes to the nearer end of the path and then along it until the step is done. The path is dotted on the world map and minimap. Path data from QuestieDB; it shows where the NPC walks, not where it is now.",
       after = function() ns.Patrol:Refresh() end }),
     T("activeItems", "Hide Active Item window", { invert = true, tip = "Buttons for usable quest items in your bags; click one to use the item (Shift-click links it, Alt-drag moves the window). The buttons change only out of combat." }),
-    T("vendorTreasures", "Enable Vendor Treasures", { tip = "When a merchant opens, lists and marks the items it sells that are upgrades for your spec profile." }),
+    T("vendorTreasures", "Enable Vendor Treasures", { tip = "When a merchant opens, a green arrow marks the items it sells that are upgrades for your spec profile, as on quest rewards." }),
     T("flightTimers", "Show Flight Timers", { tip = "A bar with the time left on a flight. Each route is timed the first time you fly it." }),
     T("timedQuestWarn", "Warn Before Timed Quests", { tip = "When a timed quest's details open, says on screen and in chat how long you will have once you accept it. Timed quests are never accepted automatically." }),
     T("timedQuestBar", "Show Timed Quest Timers", { tip = "A bar with the time left on each timed quest in your log.", after = function() ns.QuestTimer:Update() end }),

@@ -9,6 +9,7 @@
   - If you take a timed quest out of the guide's order, the guide puts its next step first anyway, unless only turn-ins and travel lie before it.
 - **Fixed: the arrow stayed on an objective you already finished.** On quests with several objectives in different places, the arrow now leaves out what your log shows done and goes to the nearest objective still open, as soon as you loot or kill. Example: A Refugee's Quandary, where Felix's Box, Chest and Bucket of Bolts lie in three places. This works in every guide (226 such quests in Classic Era, 352 in TBC).
 - **Fixed: innkeepers were not marked.** The innkeeper of a "Set your Hearthstone" step now gets a raid marker and is in the target list, like quest NPCs. So does the NPC a flight-path, vendor or talk step names.
+- **Vendor treasures: arrows instead of a chat list.** Merchant items that are upgrades for your spec now get the same large green arrow as quest rewards, and nothing is printed in chat.
 
 ## 0.1.0-alpha.22 (2026-11-01)
 
