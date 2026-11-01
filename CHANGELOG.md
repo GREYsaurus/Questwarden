@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.25 (2026-11-01)
 
 - **Fixed: the arrow for a kill pack led away from where its mobs meet.** While two or more steps of a kill pack are open, the arrow now points at the spot where all their mobs spawn, instead of following the first step's hunting route. Example: Stocking Jetsteam and The Grizzled Den in Dun Morogh now lead to the wendigo cave (about 43, 56.5), where boars and wendigos meet, not to the boars about 1,000 yards west. A hunting route of a pack step that never comes within 8 map percent of the pack's spot is no longer used for it, even after the other steps are done; the arrow then shows the nearest spawn. The new `tools/research/pack_spots.py` checks every guide: 30 such routes in Classic Era and 25 in TBC were affected.
+
+**Tested:** offline only (TBC suite 5,168/5,168, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.24 (2026-11-01)
 
