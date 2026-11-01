@@ -1,4 +1,4 @@
--- Questwarden - automatic junk selling at vendors
+-- Questwarden - automatic junk selling and repairs at vendors
 -- Copyright (C) 2026 GREYsaurus (https://github.com/GREYsaurus)
 -- This program is free software: you can redistribute it and/or modify it under the terms of the
 -- GNU General Public License as published by the Free Software Foundation, version 3.
@@ -15,10 +15,15 @@
 -- Selling = using the item while the merchant window is open (not a protected action in
 -- Classic). Items go one at a time with a short gap so the server keeps up; each slot is tried
 -- once per visit. Gold is counted only for sales confirmed by the slot actually emptying.
+--
+-- Repairs: off by default (profile.autoRepair). When on, a merchant who can repair repairs all your
+-- gear with your own money (never guild funds), after the junk is sold so its money counts. Only
+-- when you can pay the whole bill; otherwise one chat line says what it would cost. The repair is
+-- reported once the money has gone. Shift skips it, like junk selling.
 
 local _, ns = ...
 
-local Vendor = { session = nil }
+local Vendor = { session = nil, visit = nil }
 ns.Vendor = Vendor
 
 local POOR = 0
@@ -129,16 +134,56 @@ function Vendor:Scan()
 end
 
 function Vendor:OnMerchantShow()
-    if not (ns.db.profile.autoSellJunk and ns.db.profile.inventoryManager) then return end
+    local p = ns.db.profile
+    local selling = p.autoSellJunk and p.inventoryManager
+    if not (selling or p.autoRepair) then return end
     if ns.Compat.IsModifierHeld() then
-        if ns.db.profile.sellNotify then ns:Print("Shift held: junk not sold this time.") end
+        if selling and p.sellNotify then ns:Print("Shift held: junk not sold this time.") end
+        if p.autoRepair and self:RepairCost() then ns:Print("Shift held: no automatic repair this time.") end
         return
     end
-    if ns.Compat.CursorHasItem() then return end
-    local queue = self:Scan()
-    if #queue == 0 then return end
-    self.session = { queue = queue, pos = 1, tried = {}, sold = 0, earned = 0, failed = {}, pending = 0, open = true }
-    self:Step()
+    self.visit = { open = true }
+    if selling and not ns.Compat.CursorHasItem() then
+        local queue = self:Scan()
+        if #queue > 0 then
+            self.session = { queue = queue, pos = 1, tried = {}, sold = 0, earned = 0, failed = {}, pending = 0, open = true }
+            return self:Step() -- repairs follow the sales (Report)
+        end
+    end
+    self:Repair()
+end
+
+-- Repairs ----------------------------------------------------------------------------------------------
+
+-- What repairing everything costs at this merchant, or nil when it cannot repair or nothing needs it.
+function Vendor:RepairCost()
+    if not (CanMerchantRepair and CanMerchantRepair() and GetRepairAllCost) then return nil end
+    local cost, needed = GetRepairAllCost()
+    if not needed or not cost or cost <= 0 then return nil end
+    return cost
+end
+
+-- Repairs everything once per visit when the setting is on and you can pay for all of it.
+function Vendor:Repair()
+    local v = self.visit
+    if not (v and v.open) or v.repaired or not ns.db.profile.autoRepair then return end
+    v.repaired = true
+    local cost = self:RepairCost()
+    if not cost or not RepairAllItems then return end
+    local money = GetMoney and GetMoney() or 0
+    if money < cost then
+        ns:Print("Not enough money to repair everything: it costs " .. ns.Compat.FormatMoney(cost) .. ".")
+        return
+    end
+    RepairAllItems() -- no argument: your own money, never the guild bank
+    C_Timer.After(CONFIRM_DELAY, function()
+        local spent = money - (GetMoney and GetMoney() or money)
+        if spent > 0 then
+            ns:Print("Repaired all items for " .. ns.Compat.FormatMoney(spent) .. ".")
+        else
+            ns:Print("Automatic repair did not go through; repair at the merchant yourself.")
+        end
+    end)
 end
 
 local function slotKey(e) return e.bag .. ":" .. e.slot end
@@ -202,9 +247,11 @@ function Vendor:Report(s)
     if #s.failed > 0 and ns.db.profile.sellNotify then
         ns:Print(#s.failed .. " junk item(s) could not be sold this visit and were left in your bags.")
     end
+    self:Repair()
 end
 
 function Vendor:Finish()
+    if self.visit then self.visit.open = false self.visit = nil end
     local s = self.session
     if not s then return end
     s.open = false

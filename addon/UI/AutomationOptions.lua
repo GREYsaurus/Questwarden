@@ -23,6 +23,7 @@ local QUEST_CHECKS = {
 
 local JUNK_CHECKS = {
     { "autoSellJunk", "Sell junk (grey items) at vendors" },
+    { "autoRepair", "Repair all gear at vendors (your own money)" },
     { "sellNotify", "Show a summary of what was sold" },
     { "sellNotifyItems", "List every item sold" },
 }

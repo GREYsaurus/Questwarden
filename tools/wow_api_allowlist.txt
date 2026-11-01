@@ -94,6 +94,9 @@ C_Container                       # classic namespace on 2.5.x Anniversary; guar
 C_Container.GetContainerItemInfo  # guarded
 GetContainerItemInfo              # guarded legacy fallback
 GetMoney                          # core
+CanMerchantRepair                 # core; automatic repair (guarded)
+GetRepairAllCost                  # core; automatic repair (guarded)
+RepairAllItems                    # core; automatic repair, own money (guarded)
 CursorHasItem                     # core
 
 # --- automation: quest dialogs (added 0.2.0) ---

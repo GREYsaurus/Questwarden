@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Auto repair (opt-in).** A new *Auto Repair* setting next to *Auto Sell Junk*, off by default. At a merchant who can repair, it repairs all your gear with your own money (never guild funds), after any junk is sold, and only when you can pay the whole bill. One chat line says what it cost, or what it would cost when you cannot pay. Hold Shift to skip.
+
 ## 0.1.0-alpha.19 (2026-11-01)
 
 - **Hearthstone suggestions.** When your hearthstone is off cooldown and the next steps turn in quests in the town it is set to, the step says when hearthing beats walking: "Hearthstone ready: hearth to Goldshire for 3 turn-ins there; saves about 4 min over walking." The fewer the turn-ins, the more it has to save (5 minutes for one, 2.5 for two, never under a minute), because the hearthstone has a long cooldown. Walking time uses the straight line, a margin for roads and your run speed (mounted if you are); hearthing counts the cast, a loading screen and the walk from the inn. The inn is where you last set the hearthstone or landed after hearthing, else the innkeeper of the guide's bind step. Only a suggestion: it never uses the hearthstone. New setting *Hearthstone Suggestions* (on). Details: docs/HEARTHSTONE.md.

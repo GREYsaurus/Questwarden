@@ -151,6 +151,65 @@ ns.db.protectedItems[PROT] = nil
 table.remove(MOCK.questLog)
 ns.Tracker:Scan()
 
+-- Automatic repair: opt-in, own money, the whole bill only, after junk sales, once per visit.
+local repair = { can = true, cost = 0, calls = 0, fail = false }
+local realRepair = { can = CanMerchantRepair, cost = GetRepairAllCost, all = RepairAllItems }
+CanMerchantRepair = function() return MOCK.merchantOpen and repair.can end
+GetRepairAllCost = function() return repair.cost, repair.cost > 0 end
+RepairAllItems = function(guild)
+    repair.calls, repair.guild = repair.calls + 1, guild
+    if repair.fail then return end
+    MOCK.money = MOCK.money - repair.cost
+    repair.cost = 0
+end
+check(ns.PROFILE_DEFAULTS.autoRepair == false and prof.autoRepair == false, "auto repair is OFF by default")
+repair.cost, MOCK.money = 500, 10000
+MOCK.bags = { [0] = {} }
+visitMerchant()
+check(repair.calls == 0 and MOCK.money == 10000, "off: nothing repaired")
+closeMerchant()
+prof.autoRepair = true
+mark = #MOCK.printed
+visitMerchant()
+check(repair.calls == 1 and repair.guild == nil and MOCK.money == 9500, "on: repairs everything with your own money")
+check(printedSince(mark, "Repaired all items for 5s 0c."), "the chat line says what it cost")
+MOCK.fire("MERCHANT_SHOW")
+MOCK.tick(1)
+check(repair.calls == 1, "nothing left to repair: no second repair")
+closeMerchant()
+repair.cost, MOCK.money = 500, 100
+mark = #MOCK.printed
+visitMerchant()
+check(repair.calls == 1 and MOCK.money == 100, "cannot pay the whole bill: nothing repaired")
+check(printedSince(mark, "Not enough money to repair everything: it costs 5s 0c."), "and says what it would cost")
+closeMerchant()
+-- Junk is sold first, so its money counts.
+prof.autoSellJunk = true
+MOCK.bags = { [0] = { [1] = { itemID = JUNK } } }
+repair.cost, MOCK.money = 120, 100
+visitMerchant()
+check(MOCK.bags[0][1] == nil and repair.calls == 2 and MOCK.money == 100 + 25 - 120, "junk sold first, then the repair it pays for")
+closeMerchant()
+prof.autoSellJunk = false
+repair.cost, MOCK.money = 500, 10000
+MOCK.shift = true
+mark = #MOCK.printed
+visitMerchant()
+check(repair.calls == 2 and printedSince(mark, "Shift held: no automatic repair"), "Shift held: no repair, and it says so")
+closeMerchant()
+MOCK.shift = false
+repair.can = false
+visitMerchant()
+check(repair.calls == 2, "a merchant who cannot repair: nothing")
+closeMerchant()
+repair.can, repair.fail = true, true
+mark = #MOCK.printed
+visitMerchant()
+check(repair.calls == 3 and printedSince(mark, "did not go through"), "no money spent: reported as not done")
+closeMerchant()
+prof.autoRepair, repair.fail = false, false
+CanMerchantRepair, GetRepairAllCost, RepairAllItems = realRepair.can, realRepair.cost, realRepair.all
+
 -- Classification unit checks.
 local V = ns.Vendor
 check(not V:Classify({ itemID = JUNK, quality = 0 }, nil, {}, false), "classify: missing item info => keep")

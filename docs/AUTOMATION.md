@@ -15,6 +15,7 @@ Added in 0.2.0. Settings live under **Interface > AddOns > Questwarden > Automat
 | `turnInUnrelated` | off | Also turn in completed quests that are not in the guide (repeatable quests are never included) |
 | `questNotify` | on | Chat messages for accepted, turned-in and manual-only quests |
 | `autoSellJunk` | **off** | Sell junk when a vendor window opens |
+| `autoRepair` | **off** | Repair all gear when a merchant who repairs opens |
 | `sellNotify` | on | One-line summary of each junk sale |
 | `sellNotifyItems` | off | One chat line per item sold |
 | `speedRoute` | off | Maximum-speed route: hide `[optional]` side quests (guide and automation) |
@@ -57,6 +58,17 @@ When `autoSellJunk` is on and a vendor window opens, the add-on sells bag items 
 - not in a protected category. Consumable, Container, Reagent, Trade Goods and Recipe are protected by default and can be changed. Quest and Key are always protected.
 
 Items are sold one at a time, 0.2 s apart. Each slot is tried once per visit. Selling stops when the vendor closes. The summary reports **confirmed** sales and copper (sell price × stack, which is exactly what vendors pay). The settings page and `/qw protected` show the running total.
+
+## Repairs
+
+When `autoRepair` is on and you open a merchant who can repair (an armorer or blacksmith), the add-on repairs everything you wear and carry:
+
+- with **your own money**, never guild bank funds;
+- after the junk is sold, when junk selling is on, so that money counts;
+- only when you can pay the **whole** bill. Otherwise you get one chat line with the cost, and nothing is repaired;
+- once per visit. Holding **Shift** when the window opens skips it, like junk selling.
+
+It works without the Inventory Manager switch. The chat line "Repaired all items for ..." reports the money that actually left your bags; if none did, it says the repair did not go through.
 
 ## Orphaned quests
 

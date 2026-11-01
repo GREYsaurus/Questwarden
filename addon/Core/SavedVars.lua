@@ -44,6 +44,7 @@ local profileDefaults = {
         turnInUnrelated = false,    -- also turn in completed quests that are not in the guide
         questNotify = true,         -- chat messages for accepted / turned-in / manual quests
         autoSellJunk = false,       -- OFF by default: sell grey (Poor) items when a vendor opens
+        autoRepair = false,         -- OFF by default: repair all gear with your own money at a merchant who repairs
         sellNotify = true,          -- chat summary of junk sales
         sellNotifyItems = false,    -- one chat line per item sold
         -- Raid markers (docs/RAID_MARKERS.md)

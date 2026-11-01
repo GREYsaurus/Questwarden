@@ -42,6 +42,7 @@ None of this has been tested in the game client yet.
   - *Enable Inventory Manager* is the master switch for everything below it.
   - *Toggle junk with modified right click*: modifier + right-click a bag item adds it to, or removes it from, your junk list. You pick the modifier.
   - *Auto Sell Junk*.
+  - *Auto Repair* (off by default): at a merchant who can repair, repairs all your gear with your own money (never guild funds) after any junk is sold, if you can pay the whole bill. One chat line says what it cost. Works without the master switch; hold Shift to skip. Details: docs/AUTOMATION.md, "Repairs".
   - *Discard junk if bag is full* (off by default): when your bags are full, the junk item worth least at a vendor is destroyed (gone, not sold) on your next click in the game world, key press or loot-window click. One item per click or key press; there is no confirmation.
     - **Why it waits for your input:** WoW only lets add-ons destroy an item during a click or key press, one item each time (`DeleteCursorItem` needs a hardware event on every Classic-engine client, TBC 2.5 included). Questwarden listens to your own clicks and key presses (key presses still reach the game as normal); it never simulates input.
     - **Checks before each item:** each attempt re-reads the bag slot (same item, same stack, not locked) and re-checks the junk rules: grey or on your junk list; never quest, quest-starting, guide-needed or protected items; never items whose data is not loaded.

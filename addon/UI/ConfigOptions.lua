@@ -91,6 +91,7 @@ pages.general = { title = "General", items = function() return {
     T("junkModifierToggle", "Toggle junk with modified right click", { span = 2, tip = "Modifier + right-click an item in your bags to add it to (or remove it from) your junk list. Listed items are sold and deleted like grey items." }),
     { type = "select", key = "junkModifier", label = "Right Click Modifier", values = function() return MODIFIERS end },
     T("autoSellJunk", "Auto Sell Junk"),
+    T("autoRepair", "Auto Repair", { tip = "At a merchant who can repair: repairs all your gear with your own money (never guild funds), after any junk is sold. Only when you can pay the whole bill; one chat line says what it cost. Works without the Inventory Manager switch. Hold Shift to skip." }),
     { type = "newline" },
     { type = "keybind", label = "Delete Cheapest Junk Item Keybind",
       get = function() return ns.Assist:JunkKey() end, set = function(key) ns.Assist:SetJunkKey(key) end },
