@@ -154,7 +154,7 @@ None of this has been tested in the game client yet.
 
 ### Advanced Settings
 - *Enable Debug*.
-- *Update Frequency (ms)*: how often the arrow redraws.
+- *Update Frequency (ms)*: how often the arrow redraws. Under the arrow: the distance and, while you are closing on the waypoint, an estimated time to arrival (from your speed toward it, smoothed).
 - *Low Quality Settings*: the arrow redraws at most every 150 ms, and the map shows fewer pins.
 - *Pre load all data*: at login, and when you change guide, asks the game for the item data your guide's quests and your bags use, so tooltips and scoring don't wait.
 - *Check for Addon Incompatibility*: warns at login when another leveling guide add-on is loaded.

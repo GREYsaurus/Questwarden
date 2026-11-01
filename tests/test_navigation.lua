@@ -54,6 +54,24 @@ Nav.target = nil
 Nav:UpdateMinimapPin()
 check(not Nav.mpin:IsShown(), "no waypoint, no pin")
 
+-- Time to arrival from the closing speed
+Nav.target, Nav.eta = { mapId = 1, x = 1, y = 1 }, nil
+check(Nav:Eta(140, 0) == nil, "no estimate from a single sample")
+local eta = Nav:Eta(133, 1) -- 7 yards per second, like running
+check(eta and math.abs(eta - 19) < 0.01, "running at 7 yd/s with 133 yd to go: 19 s (" .. tostring(eta) .. ")")
+check(math.abs(Nav:Eta(133, 1.25) - 18.75) < 0.01, "between samples the countdown keeps running")
+Nav:Eta(126, 2)
+check(Nav:Eta(126, 3) == nil or Nav.eta.rate < 7, "standing still: the speed estimate drops")
+Nav:Eta(126, 4)
+Nav:Eta(126, 5)
+check(Nav:Eta(130, 6) == nil, "moving away: no estimate")
+Nav:Eta(130, 7)
+check(Nav:Eta(2000, 8) == nil and Nav.eta.rate == nil, "a jump (teleport, loading screen) resets the estimate")
+Nav.target = { mapId = 1, x = 2, y = 2 }
+check(Nav:Eta(100, 9) == nil, "a new target starts a new estimate")
+check(Nav.FormatEta(42) == "0:42" and Nav.FormatEta(725) == "12:05" and Nav.FormatEta(3723) == "1:02:03", "times read m:ss, or h:mm:ss over an hour")
+Nav.target, Nav.eta = nil, nil
+
 -- TomTom is gone
 check(Nav.UpdateTomTom == nil and ns.db.profile.useTomTom == nil and ns.Target.integrations.TomTom == nil, "no TomTom code, setting or integration flag is left")
 local old = { useTomTom = true }

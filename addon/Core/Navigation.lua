@@ -209,11 +209,43 @@ local function createPin()
     return pin
 end
 
+-- Time to arrival ------------------------------------------------------------------------------
+-- From how fast the distance to the target has been shrinking (your speed toward it, smoothed), so it follows
+-- running, mounts, flights and detours alike. Nothing while standing still or moving away, right after the
+-- target changes, or after a jump (teleport, loading screen).
+
+local ETA_SAMPLE, ETA_MIN_RATE, ETA_MAX_RATE = 0.5, 1, 80 -- seconds between samples; yards per second
+
+-- Seconds to arrival for distance `dist` (yards) at time `now`, or nil.
+function Nav:Eta(dist, now)
+    local e = self.eta
+    if not e or e.target ~= self.target then
+        self.eta = { target = self.target, d = dist, t = now }
+        return nil
+    end
+    local dt = now - e.t
+    if dt < ETA_SAMPLE then return e.secs and math.max(0, e.secs - dt) end
+    local rate = (e.d - dist) / dt
+    e.d, e.t = dist, now
+    if math.abs(rate) > ETA_MAX_RATE then e.rate, e.secs = nil, nil return nil end
+    e.rate = e.rate and (e.rate * 0.6 + rate * 0.4) or rate
+    e.secs = e.rate >= ETA_MIN_RATE and dist / e.rate or nil
+    return e.secs
+end
+
+-- "0:42", "12:05", "1:02:03".
+function Nav.FormatEta(secs)
+    secs = math.floor(secs + 0.5)
+    local h, m, sec = math.floor(secs / 3600), math.floor(secs / 60) % 60, secs % 60
+    if h > 0 then return string.format("%d:%02d:%02d", h, m, sec) end
+    return string.format("%d:%02d", m, sec)
+end
+
 -- Arrow ---------------------------------------------------------------------------------------
 
 local function createArrow()
     local f = CreateFrame("Button", ns.name .. "Arrow", UIParent)
-    f:SetSize(56, 70)
+    f:SetSize(72, 92)
     f:SetMovable(true)
     f:EnableMouse(true)
     f:RegisterForDrag("LeftButton")
@@ -228,13 +260,13 @@ local function createArrow()
     f:SetPoint(pos.point or "TOP", UIParent, pos.point or "TOP", pos.x or 0, pos.y or -120)
 
     local tex = f:CreateTexture(nil, "ARTWORK")
-    tex:SetSize(42, 42)
+    tex:SetSize(56, 56)
     tex:SetPoint("TOP")
     -- Stock client texture (no custom art shipped). Rotated with SetRotation.
     tex:SetTexture("Interface\\Minimap\\MinimapArrow")
     f.tex = tex
 
-    local label = f:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    local label = f:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     label:SetPoint("TOP", tex, "BOTTOM", 0, -2)
     f.label = label
 
@@ -272,7 +304,10 @@ local function createArrow()
             local g = 1 - math.min(a / math.pi, 1)
             self.tex:SetVertexColor(1 - g * 0.7, 0.4 + g * 0.6, 0.2)
         end
-        self.label:SetText(string.format(corpse and "Corpse %d yd" or "%d yd", math.floor(dist + 0.5)))
+        local text = string.format(corpse and "Corpse %d yd" or "%d yd", math.floor(dist + 0.5))
+        local eta = Nav:Eta(dist, GetTime())
+        if eta then text = text .. "  " .. Nav.FormatEta(eta) end
+        self.label:SetText(text)
     end)
     f:Hide()
     return f
