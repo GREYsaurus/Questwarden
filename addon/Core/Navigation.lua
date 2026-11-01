@@ -148,6 +148,9 @@ local function waypointPin(name, parent, size)
     glow:SetPoint("CENTER")
     glow:SetSize(size * 1.9, size * 1.9)
     glow:SetTexture("Interface\\WorldMap\\UI-QuestPoi-IconGlow")
+    -- The glow texture is made for additive blending (its background is black): drawn normally it shows as a
+    -- black square over the map.
+    glow:SetBlendMode("ADD")
     glow:SetVertexColor(0.8, 0.5, 1)
     local tex = pin:CreateTexture(nil, "OVERLAY")
     tex:SetAllPoints()
