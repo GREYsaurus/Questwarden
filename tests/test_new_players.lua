@@ -107,12 +107,30 @@ MOCK.tick(1.5)
 check(printed("Fireball", before) and not printed("not on your action bars", before), "no bar hint for a spell already on a bar")
 local tips = ns.ClassAdvice and ns.ClassAdvice:For(ns.Compat.PlayerInfo().class)
 if tips and tips.tips and #tips.tips > 0 then
-    ns.char.coachTip = nil
+    ns.char.coachTip, ns.char.coachTipsShown = nil, nil
     before = #MOCK.printed
     SC:OnLevel(5)
     check(#MOCK.printed == before, "no class tip between tip levels")
     SC:OnLevel(8)
-    check(printed("Class tip 1 of", before) and ns.char.coachTip == 1, "class tips come in order every few levels")
+    check(printed("Class tip 1 of", before) and ns.char.coachTipsShown[1], "class tips come every few levels")
+    check(SC.TipLevel("Use Overpower (12) every time a target dodges.") == 12, "a tip's level is the first level it names")
+    check(SC.TipLevel("Learn Whirlwind at 36 for groups. Mortal Strike (from 40) later.") == 36, "...also written as 'at N'")
+    check(SC.TipLevel("Keep First Aid trained.") == 0, "a tip naming no level can come any time")
+    -- A tip whose level is not reached waits; the next one that fits comes instead.
+    local keep = tips.tips
+    tips.tips = { "Charge first.", "Use Overpower (12) when it dodges.", "Bandages help." }
+    ns.char.coachTipsShown = { [1] = true }
+    before = #MOCK.printed
+    SC:OnLevel(8)
+    check(printed("Class tip 3 of 3", before) and not printed("Overpower", before), "a tip for a spell you cannot learn yet waits")
+    before = #MOCK.printed
+    SC:OnLevel(12)
+    check(printed("Class tip 2 of 3", before), "...and comes once you reach its level")
+    ns.char.coachTip, ns.char.coachTipsShown = 2, nil
+    before = #MOCK.printed
+    SC:OnLevel(16)
+    check(printed("Class tip 3 of 3", before), "old saves keep the tips they already showed")
+    tips.tips = keep
 end
 prof().spellCoach = false
 GetSpellInfo, GetSpellDescription, HasAction, GetActionInfo = realSpellInfo, nil, nil, nil

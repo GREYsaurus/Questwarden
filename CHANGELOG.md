@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Class tips wait for their level.** A tip that names a spell or quest level ("Overpower (12)", "at 10") is held until you reach it; the next tip that fits comes instead. Tips already shown are kept.
 - The quest log's **Orphaned** button sits under *Abandon Quest* instead of at the top right.
 
 ## 0.1.0-alpha.33 (2026-11-01)

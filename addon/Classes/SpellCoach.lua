@@ -11,7 +11,9 @@
 --     description (GetSpellDescription), then, a moment later, whether any rank of it is on your action bars
 --     (HasAction / GetActionInfo over the 120 action slots). If not: how to put it there. The client does not
 --     say which spells are passive, so the hint says "unless it is passive".
---   * Every TIP_EVERY levels from 4: the next of your class's leveling tips (Classes/ClassAdvice.lua), in order.
+--   * Every TIP_EVERY levels from 4: the first of your class's leveling tips (Classes/ClassAdvice.lua) not shown yet
+--     whose level you have reached. A tip's level is the first one it names: "Overpower (12)", "at 10" or
+--     "from 40"; a tip naming none can come any time. So no tip talks about a spell you cannot learn yet.
 -- All three client functions are guarded: without them the line is shorter, never an error.
 
 local _, ns = ...
@@ -68,17 +70,33 @@ function SC:OnLearned(spellId)
     end)
 end
 
--- The next class tip on level-up, every TIP_EVERY levels from 4.
+-- The first level a tip names ("Overpower (12)", "at 10", "from 40"), or 0.
+function SC.TipLevel(text)
+    local at, lvl
+    for _, pat in ipairs({ "%((%d+)%)", "[Aa]t (%d+)", "from (%d+)" }) do
+        local s, _, n = string.find(text, pat)
+        if s and (not at or s < at) then at, lvl = s, tonumber(n) end
+    end
+    return lvl or 0
+end
+
+-- A class tip on level-up, every TIP_EVERY levels from 4: the first one not shown yet whose level you have.
 function SC:OnLevel(level)
     if not prof().spellCoach or not ns.ClassAdvice then return end
     level = level or 0
     if level < 4 or level % TIP_EVERY ~= 0 then return end
     local a = ns.ClassAdvice:For(ns.Compat.PlayerInfo().class)
     if not (a and a.tips and #a.tips > 0) then return end
-    local i = (tonumber(ns.char.coachTip) or 0) + 1
-    if i > #a.tips then return end
-    ns.char.coachTip = i
-    ns.TipWindow:Say("Class tip " .. i .. " of " .. #a.tips, a.tips[i])
+    local shown = type(ns.char.coachTipsShown) == "table" and ns.char.coachTipsShown or {}
+    -- Saves from before 0.1.0-alpha.34 kept a count: those tips were shown in order.
+    for k = 1, math.min(tonumber(ns.char.coachTip) or 0, #a.tips) do shown[k] = true end
+    ns.char.coachTip, ns.char.coachTipsShown = nil, shown
+    for i, text in ipairs(a.tips) do
+        if not shown[i] and SC.TipLevel(text) <= level then
+            shown[i] = true
+            return ns.TipWindow:Say("Class tip " .. i .. " of " .. #a.tips, text)
+        end
+    end
 end
 
 function SC:Init()
