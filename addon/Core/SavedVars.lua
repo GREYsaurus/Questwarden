@@ -66,6 +66,7 @@ local profileDefaults = {
         -- Automatic upgrades (Gear/AutoEquip.lua, docs/AUTO_EQUIP.md). Opt-in; never equips unbound BoE items.
         autoEquip = false,          -- equip upgrades for the chosen spec profile
         autoEquipEmpty = true,      -- fill empty gear slots with any usable non-BoE item
+        autoEquipBags = true,       -- with automatic upgrades: equip bigger non-BoE bags (Gear/AutoBag.lua)
         autoEquipMinPct = 0,        -- minimum estimated upgrade (%) for occupied slots; must also be > 0
         equipNotify = true,         -- on-screen message after a confirmed equip
         equipChat = true,           -- the same message in your chat frame (only you see it)

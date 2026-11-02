@@ -13,6 +13,7 @@
 --      window is open, another equip is in progress, or the binding state is unknown.
 --   4. An empty slot is filled with any usable non-BoE item (setting "Fill empty slots").
 --   5. An occupied slot only gets a positive, certain upgrade under the chosen spec profile.
+--   6. Then bigger bags (Gear/AutoBag.lua, setting autoEquipBags).
 -- One change at a time: equip, wait for the server to confirm, then look again. Nothing is ever
 -- sold, deleted or taken from anywhere but the four bags and the backpack. Bind confirmations are
 -- never accepted: if one appears, the item goes back to its bag slot and is not tried again.
@@ -55,7 +56,7 @@ function AE:Blocked()
     if C().InCombat() then return "in combat" end
     if C().CursorHasItem() then return "the cursor holds an item" end
     for w in pairs(self.windows) do return "the " .. w .. " window is open" end
-    if self.busy then return "another equip is in progress" end
+    if self.busy or (ns.AutoBag and ns.AutoBag.busy) then return "another equip is in progress" end
     if UnitIsDeadOrGhost and UnitIsDeadOrGhost("player") then return "dead" end
     return nil
 end
@@ -82,12 +83,13 @@ function AE:Run()
     end
     self.retries = 0
     self.status = why
-    if not ctx or not prof().gearEnabled or not prof().autoEquip then return end
+    if not prof().gearEnabled or not prof().autoEquip then return end
     local blocked = self:Blocked()
     if blocked then self.deferred = blocked return end
     self.deferred = nil
-    local pick = self:Choose(list)
-    if pick then self:Execute(pick, ctx) end
+    local pick = ctx and self:Choose(list)
+    if pick then self:Execute(pick, ctx)
+    elseif ns.AutoBag then ns.AutoBag:Run() end -- bigger bags once no gear change is waiting (Gear/AutoBag.lua)
 end
 
 -- The action to take: empty slots first (best score), then the biggest certain upgrade.

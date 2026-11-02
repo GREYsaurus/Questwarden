@@ -70,6 +70,7 @@ Gear\Gear.lua
 Core\TooltipText.lua
 Gear\Upgrade.lua
 Gear\AutoEquip.lua
+Gear\AutoBag.lua
 
 # Engine
 Core\QuestTracker.lua

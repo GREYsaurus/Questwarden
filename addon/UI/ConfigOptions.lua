@@ -317,6 +317,7 @@ pages.tips = { title = "Tips", items = function() return {
               function() prof().autoEquip = true ns.AutoEquip:Schedule() end)
       end },
     T("autoEquipEmpty", "Fill empty gear slots", { tip = "Any usable non-BoE item goes into an empty slot, even if it is not ideal for your spec." }),
+    T("autoEquipBags", "Equip bigger bags", { tip = "A non-BoE bag from your bags goes into an empty bag slot. With all four slots full, it replaces your smallest bag if it has more slots; that bag's items are moved to your other bags first, and nothing happens without room for them." }),
     { more = true, type = "range", key = "autoEquipMinPct", label = "Minimum upgrade", min = 0, max = 20, step = 0.5, decimals = 1, suffix = "%",
       tip = "For occupied slots. 0 means any strictly higher score." },
     T("equipNotify", "On-screen equip messages"),

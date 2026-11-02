@@ -144,6 +144,17 @@ No guide text is copied into the add-on; only stat names, orders and numbers.
 - 0.86: SP; 0.5: AP; 0.4: RAP and Feral AP; 0.45: Healing;
 - 2.5: Mp5; 0.65: Block value; 0.14: ArP; 0.02: Armor.
 
+## Bags
+
+With automatic upgrades on and *Equip bigger bags* on (the default), Questwarden also equips bags from your bags (`addon/Gear/AutoBag.lua`). It runs after gear, when no gear change is waiting, and is blocked by the same things (combat, the cursor, open windows, another change in progress).
+
+- **Which bags:** plain bags only. Profession and soul bags, quivers and ammo pouches are never moved. The size is read from the tooltip (*14 Slot Bag*).
+- **Binding:** as for gear. An unbound Bind-on-Equip bag is never equipped, and a bag whose binding can't be read is skipped. Most crafted bags are BoE, so equip those yourself.
+- **Empty bag slot:** the biggest bag goes into the first empty slot.
+- **All four slots full:** a bag with more slots replaces your smallest plain bag. The game only swaps empty bags, so that bag's items are first moved, one at a time, to free slots in your other plain bags and the backpack. Without room for all of them, nothing is done. The old bag lands where the new one was; nothing is sold or deleted.
+- **One step at a time,** each confirmed from the bag API before the next. A bag that fails isn't tried again this session.
+- **Message:** one chat line per equipped bag, with *Copy equip messages to chat* on.
+
 ## BoE markers and tooltips
 
 **Marker:** a small green arrow at the top left of a bag button, on an unbound BoE item. It appears when the item:
@@ -190,6 +201,7 @@ All of these are under **Tips → Item Upgrade / Automatic Upgrades / Protected 
 | Spec profile | Automatic (tooltips only) | Per character; your class only |
 | Enable automatic upgrades | off | Needs a spec profile; asks for confirmation |
 | Fill empty gear slots | on | Non-BoE items only |
+| Equip bigger bags | on | Non-BoE plain bags; see Bags |
 | Minimum upgrade | 0% | Filled slots; 0 means any strictly higher score |
 | On-screen equip messages | on | |
 | Copy equip messages to chat | off | |
@@ -230,4 +242,5 @@ All of these are under **Tips → Item Upgrade / Automatic Upgrades / Protected 
 9. **Spec change:** switch spec in the dropdown. Markers and tooltips should update straight away.
 10. **Login:** log out and back in with several upgrades in your bags. Messages should be few and readable, and nothing should repeat.
 11. **Reload:** after `/reload`, the settings, profile, protected slots and exclusions should be unchanged.
-12. **Diagnostics:** run `/qw debug api` and report anything missing.
+12. **Bags:** with an empty bag slot, put a non-BoE bag in your backpack. It should be equipped. With all four slots full and a bigger non-BoE bag in your bags, your smallest bag's items should move to your other bags, then the bags swap.
+13. **Diagnostics:** run `/qw debug api` and report anything missing.

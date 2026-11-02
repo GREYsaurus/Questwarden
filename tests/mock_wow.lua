@@ -220,7 +220,7 @@ MOCK.shift = false
 local function bagItem(bag, slot) return MOCK.bags[bag] and MOCK.bags[bag][slot] end
 
 C_Container = {
-    GetContainerNumSlots = function(bag) return MOCK.bags[bag] and 16 or 0 end,
+    GetContainerNumSlots = function(bag) return MOCK.bags[bag] and (MOCK.bagSizes[bag] or 16) or 0 end,
     GetContainerItemInfo = function(bag, slot)
         local b = bagItem(bag, slot)
         if not b then return nil end
@@ -268,7 +268,21 @@ function C_Container.GetContainerNumFreeSlots(bag)
     if MOCK.freeOverride then return bag == 0 and MOCK.freeOverride or 0 end
     local used = 0
     for _ in pairs(MOCK.bags[bag]) do used = used + 1 end
-    return 16 - used
+    return (MOCK.bagSizes[bag] or 16) - used, MOCK.bagFamily[bag] or 0
+end
+-- Equipped bags (Gear/AutoBag.lua): bag slots 1-4 are inventory slots 20-23. MOCK.bagSizes[bag] overrides the
+-- 16 slots, MOCK.equippedBags[bag] = itemID of the bag in that slot; MOCK.items[id].bagSize its size.
+MOCK.bagSizes, MOCK.bagFamily, MOCK.equippedBags, MOCK.putCalls = {}, {}, {}, {}
+function C_Container.ContainerIDToInventoryID(bag) return bag >= 1 and bag <= 4 and bag + 19 or nil end
+function PutItemInBag(inv)
+    local bag, c = inv - 19, MOCK.cursorItem
+    table.insert(MOCK.putCalls, { bag = bag, itemID = c and c.itemID })
+    local size = c and MOCK.items[c.itemID] and MOCK.items[c.itemID].bagSize
+    if not size or MOCK.putFails then return end
+    if MOCK.bags[bag] and next(MOCK.bags[bag]) then return end -- the game only swaps empty bags
+    local old = MOCK.bags[bag] and MOCK.equippedBags[bag]
+    MOCK.bags[bag], MOCK.bagSizes[bag], MOCK.equippedBags[bag] = {}, size, c.itemID
+    setCursor(old and { itemID = old, bound = true } or nil)
 end
 function ClearCursor() setCursor(nil) end
 MOCK.pickupContainerItem = C_Container.PickupContainerItem

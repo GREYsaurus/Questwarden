@@ -160,6 +160,7 @@ None of this has been tested in the game client yet.
   - **Equipping:** *Enable automatic upgrades* asks first and needs a spec profile. Unbound Bind-on-Equip items are never equipped automatically, and no setting changes that.
   - **Other options:**
     - *Fill empty gear slots*;
+    - *Equip bigger bags* (on): non-BoE plain bags go into empty bag slots, or replace your smallest bag when they have more slots (its items are moved to your other bags first);
     - *Minimum upgrade* (%);
     - on-screen and chat equip messages;
     - *Mark Bind-on-Equip upgrades in bags*;
