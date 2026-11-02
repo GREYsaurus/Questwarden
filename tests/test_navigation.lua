@@ -75,14 +75,6 @@ Nav.target, Nav.eta = nil, nil
 -- City, building and cave hints (Core/NavHints.lua) --------------------------------------------------------------
 local NH, E = ns.NavHints, ns.Engine
 check(NH:CapitalOf(1519) == "Stormwind City" and NH:CapitalOf(1637) == "Orgrimmar" and NH:CapitalOf(12) == nil, "capitals come from the zone data")
-local function says(text) return NH:TextSaysIndoors({ text = text }) end
-check(says("Den Mother in the bear cave north-east.") and says("Syndicate inside Stromgarde Keep (west).") and says("First Mate Fitzsimmons in the inn.")
-    and says("Brother Neals is at the top of the abbey bell tower.") and says("Grik'nir the Cold is at the back of the troll cave."), "step text that puts the target indoors is recognised")
-check(not says("Gregor Greystone. Turned in at Light's Hope Chapel (Eastern Plaguelands)."), "'turned in at' a building is about the quest, not the target's place")
-check(not says("Echo Ridge Mine is north of the abbey.") and not says("Tunnel Rat Kobolds at the Silver Stream Mine.")
-    and not says("Kobolds near the mine, in the camp outside."), "a mine or building only named (mobs often outside it too) is not taken for indoors")
-check(not says("Only if you are short of level 10: keep killing the bounty gnolls.") and not says("The hoofprints are beside the inn.")
-    and not says("Mountaineer Barleybrew guards the tunnel to Loch Modan."), "outdoor text with building words is not a false alarm")
 local keepHere, keepIndoors, keepCur = ns.Completionist.Here, IsIndoors, E.CurrentStep
 local here = { 12, 50, 50 }
 ns.Completionist.Here = function() return here[1], here[2], here[3] end
@@ -95,60 +87,23 @@ local outStep = { "turnin", z = 12, x = 40, y = 60, npc = "Farmer" }
 lines = table.concat(NH:Lines(outStep, true, nil, 500), " | ")
 check(string.find(lines, "Leave Stormwind City first", 1, true), "in a capital with the target outside: leave the city first")
 check(not string.find(table.concat(NH:Lines(outStep, false, nil, 500), " "), "Leave", 1, true), "where you are only matters for the current step")
-here = { 12, 50, 50 }
-IsIndoors = function() return true end
-lines = table.concat(NH:Lines(outStep, true, nil, 300), " | ")
-check(string.find(lines, "You are indoors", 1, true) and string.find(lines, "may be outside or in another room", 1, true) and not string.find(lines, "find the way out", 1, true),
-    "indoors with a target not known to be outside: a neutral hint, no 'find the way out' (Lion's Pride Inn)")
--- A target seen outdoors before (Deputy Willem by the Northshire Abbey door): now "find the way out" is certain
-ns.db.indoorSpots = { ["12:40:60"] = false }
-check(string.find(table.concat(NH:Lines(outStep, true, nil, 37), " "), "the target is outside: find the way out", 1, true),
-    "indoors 37 yards from a target known to be outside: find the way out")
-local keepCurA, keepTarget = E.CurrentStep, Nav.target
-E.CurrentStep = function() return outStep end
-Nav.target = { area = 12, mapId = 1, x = 40, y = 60 }
-local keepVec = Nav.Vector
-Nav.Vector = function() return 37 end
-check(NH:ArrowLine() == "Indoors: find the way out first", "arrow: 'find the way out' only for a target known to be outside")
-ns.db.indoorSpots = {}
-check(NH:ArrowLine() == "Indoors: arrow shows direction only", "arrow: a target not known either way gets the neutral line (Lion's Pride Inn)")
-Nav.Vector, E.CurrentStep, Nav.target = keepVec, keepCurA, keepTarget
-check(not string.find(table.concat(NH:Lines(outStep, true, nil, 10), " "), "You are indoors", 1, true), "indoors right next to the target: no exit hint")
--- learned indoor spots
-ns.db.indoorSpots = {}
-NH:Observe({ area = 12, x = 40.2, y = 59.8 }, 10)
-check(not NH:IsLearnedIndoor(12, 40, 60), "indoors 10 yards from the target says nothing about the target (a doorway)")
-NH:Observe({ area = 12, x = 40.2, y = 59.8 }, 3)
-check(NH:IsLearnedIndoor(12, 40, 60) and NH:IsLearnedIndoor(12, 40.9, 60.4) and not NH:IsLearnedIndoor(12, 45, 60), "standing at the target indoors remembers the spot (and its neighbours)")
-lines = table.concat(NH:Lines(outStep, true, nil, 20), " | ")
-check(string.find(lines, "is inside a building, cave or mine", 1, true), "a remembered indoor target says to find the entrance")
-IsIndoors = function() return false end
-NH:Observe({ area = 12, x = 70, y = 70 }, 3)
-check(not NH:IsLearnedIndoor(12, 70, 70), "standing at a target outdoors: not inside")
--- An NPC by a door (Deputy Willem at Northshire Abbey): once seen outdoors it is never "inside" again
-NH:Observe({ area = 12, x = 48.2, y = 42.9 }, 4)
-IsIndoors = function() return true end
-NH:Observe({ area = 12, x = 48.2, y = 42.9 }, 4)
-check(not NH:IsLearnedIndoor(12, 48.2, 42.9), "a spot seen outdoors stays outdoors, even when seen from just inside later")
-IsIndoors = function() return false end
 -- the arrow line
 E.CurrentStep = function() return outStep end
 Nav.target = { area = 12, mapId = 1, x = 40, y = 60 }
-check(NH:ArrowLine() == "Target is inside: find the entrance", "the arrow names the most pressing hint")
 here = { 1519, 50, 50 }
-check(NH:ArrowLine() == "Leave Stormwind City first", "leaving the city comes first")
+check(NH:ArrowLine() == "Leave Stormwind City first", "the arrow line: leave the city first")
+IsIndoors = function() return true end
+here = { 12, 50, 50 }
+check(NH:ArrowLine() == nil and not string.find(table.concat(NH:Lines(outStep, true), " "), "indoors", 1, true),
+    "no indoors or outdoors hints, even indoors")
+check(NH.Observe == nil and NH.TextSaysIndoors == nil, "the indoor-spot learning is gone")
 ns.Completionist.Here, IsIndoors, E.CurrentStep = keepHere, keepIndoors, keepCur
-ns.db.indoorSpots, Nav.target = {}, nil
+Nav.target = nil
 
--- Spots learned by 0.1.0-alpha.8 (12-yard radius) are cleared once
+-- Indoor spots saved by older versions are dropped
 _G[ns.svAccount].indoorSpots = { ["12:48:43"] = true }
-_G[ns.svAccount].migrations.indoorSpots9 = nil
 ns:InitSavedVariables()
-check(ns.db.indoorSpots == nil and _G[ns.svAccount].migrations.indoorSpots9, "old indoor spots are cleared once")
-ns.db.indoorSpots = { ["12:1:1"] = true }
-ns:InitSavedVariables()
-check(ns.db.indoorSpots and ns.db.indoorSpots["12:1:1"], "spots learned afterwards are kept")
-ns.db.indoorSpots = {}
+check(_G[ns.svAccount].indoorSpots == nil, "old indoor spots are dropped")
 
 -- TomTom is gone
 check(Nav.UpdateTomTom == nil and ns.db.profile.useTomTom == nil and ns.Target.integrations.TomTom == nil, "no TomTom code, setting or integration flag is left")

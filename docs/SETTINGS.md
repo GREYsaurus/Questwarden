@@ -168,11 +168,11 @@ None of this has been tested in the game client yet.
 
 ### Advanced Settings
 - *Enable Debug*.
-- **Navigation hints** (`Core/NavHints.lua`). The arrow points in a straight line, and Questwarden has no paths through cities or buildings. Instead, the step text (and a short line under the arrow) says when the straight line will mislead you:
+- **Navigation hints** (`Core/NavHints.lua`). The arrow points in a straight line, and Questwarden has no paths through cities. Instead, the step text (and a short line under the arrow) says when the straight line will mislead you:
   - the target is in a capital city: follow the streets;
-  - you are in a capital and the target is outside it: leave the city first;
-  - you are indoors (the game's indoor flag) and the target is more than 15 yards away: "find the way out first" only when the target is known to be outside (you stood at it outdoors before); otherwise "the arrow shows only the direction", since the target may be outside or in another room of the same building;
-  - the target is inside a building, cave or mine: look for the entrance. This comes from the step's own text when it puts the target inside (*inside*, *upstairs*, or "in"/"into" a cave, mine, inn, tower and so on, or "top of the tower"; a place only named, such as "Echo Ridge Mine is north of the abbey", does not count), shown as "may be inside", or from standing within 5 yards of the target indoors before (remembered for all characters). A spot ever seen outdoors, such as an NPC by a door, never counts as inside.
+  - you are in a capital and the target is outside it: leave the city first.
+
+  The hints about being indoors and targets inside buildings were removed in 0.1.0-alpha.32: they did not work reliably in the game.
 - *Update Frequency (ms)*: how often the arrow redraws. Under the arrow: the distance and, while you are closing on the waypoint, an estimated time to arrival (from your speed toward it, smoothed).
 - *Low Quality Settings*: the arrow redraws at most every 150 ms, and the map shows fewer pins.
 - *Pre load all data*: at login, and when you change guide, asks the game for the item data your guide's quests and your bags use, so tooltips and scoring don't wait.

@@ -347,13 +347,8 @@ function ns:InitSavedVariables()
     if _G[ns.svChar].petDeferLevel ~= nil and type(_G[ns.svChar].petDeferLevel) ~= "number" then _G[ns.svChar].petDeferLevel = nil end
     if _G[ns.svChar].petSkills ~= nil and type(_G[ns.svChar].petSkills) ~= "table" then _G[ns.svChar].petSkills = nil end
     if type(_G[ns.svAccount].flightTimes) ~= "table" then _G[ns.svAccount].flightTimes = {} end
-    -- Indoor spots learned on arrival (Core/NavHints.lua): ["area:x:y"] = true.
-    if _G[ns.svAccount].indoorSpots ~= nil and type(_G[ns.svAccount].indoorSpots) ~= "table" then _G[ns.svAccount].indoorSpots = nil end
-    -- 0.1.0-alpha.8 learned spots within 12 yards, so NPCs by a door were taken for indoors: start over once.
-    if not _G[ns.svAccount].migrations.indoorSpots9 then
-        _G[ns.svAccount].migrations.indoorSpots9 = true
-        _G[ns.svAccount].indoorSpots = nil
-    end
+    -- Indoor spots were learned until 0.1.0-alpha.31 (Core/NavHints.lua); the hints are gone, so are the spots.
+    _G[ns.svAccount].indoorSpots = nil
     local gx = _G[ns.svChar].gearExclude
     if type(gx) ~= "table" then gx = {} _G[ns.svChar].gearExclude = gx end
     if type(gx.items) ~= "table" then gx.items = {} end
