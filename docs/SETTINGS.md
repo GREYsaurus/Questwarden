@@ -79,7 +79,7 @@ None of this has been tested in the game client yet.
 ### Guide Routing
 - **Leveling mode** (per character): *Speed* (the leveling guides, default) or *Completionist* (every eligible quest, lowest level first, zone by zone, with return visits; docs/COMPLETIONIST.md). Also chosen in first-time setup. *Completionist status* prints progress; *Plan next Completionist segment* replans now.
 - *Completionist: route dungeon / group and elite / raid / profession / reputation / event quests* (all off): these quests are always counted, and routed only when switched on.
-- *Skip overleveled steps* (on) skips picking up quests that are grey for your level, unless a later quest in the guide needs them.
+- *Skip overleveled steps* (off; off by default since 0.1.0-alpha.32) skips picking up quests that are grey for your level, unless a later quest in the guide needs them. A quest that is complete in your log is always turned in.
 - *Show Group Quests*, *Maximum-speed route*, *Advance steps automatically* and *Pick a guide on first login*.
 - **Include Dungeon Quests** (on by default). Off leaves out every step tagged as a dungeon quest: its pickup, objective and turn-in. After setup this, the dungeon switches and *Show Group Quests* are saved for the character (docs/SETUP.md).
   - **Follow-ups** that need an excluded dungeon quest are skipped too, with the reason shown, and the guide continues with the next step.

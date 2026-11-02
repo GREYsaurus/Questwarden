@@ -131,7 +131,7 @@ pages.guide = { title = "Guide Routing", items = function() local CM = ns.Comple
     { more = true, type = "toggle", label = "Completionist: route reputation quests", get = function() return not CM:State().exclude.reputation end, set = function(v) CM:SetIncluded("reputation", v) end },
     { more = true, type = "toggle", label = "Completionist: route event quests", get = function() return not CM:State().exclude.event end, set = function(v) CM:SetIncluded("event", v) end },
     { type = "newline" },
-    T("skipOverleveled", "Skip overleveled steps", { tip = "Skips picking up quests that are grey for your level, unless a later quest in the guide needs them." }),
+    T("skipOverleveled", "Skip overleveled steps", { tip = "Skips picking up quests that are grey for your level, unless a later quest in the guide needs them. Quests already in your log are always done and turned in. Off by default." }),
     { type = "toggle", label = "Show Group Quests", tip = "Elite and group quest steps. After setup this is saved for this character.",
       get = function() return ns.Engine:EliteOn() end, set = function(v) ns.Setup:SetElite(v) end },
     T("speedRoute", "Maximum-speed route", { tip = "Hides optional side quests." }),

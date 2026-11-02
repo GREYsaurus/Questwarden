@@ -118,7 +118,7 @@ local profileDefaults = {
         junkModifierToggle = false, -- mark/unmark items as junk with modifier + right-click in bags
         junkModifier = "CTRL",
         discardJunkFull = false,    -- bags full: delete the cheapest junk item on the next click or key press
-        skipOverleveled = true,     -- skip accept steps of quests that are grey for you
+        skipOverleveled = false,    -- skip accept steps of quests that are grey for you
         disableStepSkips = false,   -- never skip steps automatically (debug)
         maxNameplateDistance = false, -- raise the nameplate CVar to its maximum (41 yards)
         markFriendly = true,        -- also mark the quest giver/finisher of the current step
@@ -302,6 +302,11 @@ function ns:InitSavedVariables()
     if not mig.targetNotify31 then
         mig.targetNotify31 = true
         for _, p in pairs(profiles) do p.targetNotify = false end
+    end
+    -- 0.1.0-alpha.32: "Skip overleveled steps" is off by default; turn it off once.
+    if not mig.skipOverleveled32 then
+        mig.skipOverleveled32 = true
+        for _, p in pairs(profiles) do p.skipOverleveled = false end
     end
     -- Active profile for this character.
     local key = ns.CharKey()

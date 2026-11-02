@@ -147,6 +147,8 @@ function Engine:AutoSkipReason(s, ctx)
     if ns.db.profile.disableStepSkips then return nil end
     if s[1] == "train" and ns.Trainer then return ns.Trainer:SkipReason() end
     if not s.q then return nil end
+    -- A quest that is complete in your log is always turned in, whatever its level.
+    if s[1] == "turnin" and T:InLog(s.q) and T:IsComplete(s.q) then return nil end
     if s[1] == "accept" then
         if T:IsTurnedIn(s.q) then return nil end -- counts as done, not skipped
         -- Below the quest's required level: skip it instead of blocking the guide. It comes back if

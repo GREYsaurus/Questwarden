@@ -223,6 +223,7 @@ check(macros[ns.name] == nil and A.macroPending, "no macro changes in combat (do
 MOCK.combat = false
 MOCK.fire("PLAYER_REGEN_ENABLED")
 check(macros[ns.name] ~= nil and string.find(macros[ns.name], "Sarkoth", 1, true), "macro created after combat")
+check(ns.PROFILE_DEFAULTS.skipOverleveled == false, "skip overleveled steps is off by default")
 check(ns.PROFILE_DEFAULTS.targetNotify == false, "notify on new target is off by default")
 local function nearby(from)
     local count = 0
@@ -431,6 +432,7 @@ C_AddOns.IsAddOnLoaded = function() return false end
 
 -- Skip overleveled steps ------------------------------------------------------------------------------------
 MOCK.player.race, MOCK.player.class, MOCK.player.faction = "Human", "WARRIOR", "Alliance"
+prof().skipOverleveled = true
 ns.Engine:Load("A_Human_Elwynn", { reset = true })
 MOCK.player.level = 40
 ns.Engine:Refresh()
@@ -451,6 +453,17 @@ prof().skipOverleveled = false
 ns.Engine:Refresh()
 check(ns.Engine.status[greyIdx] ~= "skipped", "Skip overleveled steps off: grey quests stay")
 prof().skipOverleveled = true
+-- A grey quest complete in the log is still turned in.
+local greyQ, turnIdx = ns.Engine.guide.steps[greyIdx].q, nil
+for i, s in ipairs(ns.Engine.guide.steps) do if s[1] == "turnin" and s.q == greyQ then turnIdx = i end end
+if turnIdx then
+    local log0 = MOCK.questLog
+    MOCK.questLog = { { id = greyQ, title = "Q", complete = true, objectives = {} } } ns.Tracker:Scan()
+    ns.Engine:Refresh()
+    check(ns.Engine.status[turnIdx] ~= "skipped" and ns.Engine.status[turnIdx] ~= "na", "a grey quest complete in your log is turned in, not skipped")
+    MOCK.questLog = log0 ns.Tracker:Scan()
+end
+prof().skipOverleveled = false
 MOCK.player.level = 1
 ns.Engine:Load("A_Human_Elwynn", { reset = true })
 
