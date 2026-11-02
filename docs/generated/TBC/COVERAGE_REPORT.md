@@ -16,7 +16,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 148 (see docs/generated/TBC/guide-warnings.log) |
+| Compiler warnings | 147 (see docs/generated/TBC/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 70)
 
@@ -185,7 +185,7 @@ Each race/class combination is followed from its racial start guide through the 
 ## Data awaiting verification
 
 - Guide **routes, ordering and notes** are original and were written without in-game testing. Quest ids, names, faction/race/class limits and NPC coordinates come from the database, but the practical route (XP sufficiency, travel efficiency) needs play-testing.
-- **112 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
+- **111 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
 - **26 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
 - **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.
 - **Talent builds** are legal against the 2.5.6.70577 client tables, but how good they are is a judgement call, not something tested.

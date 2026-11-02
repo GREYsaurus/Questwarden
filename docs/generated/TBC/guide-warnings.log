@@ -57,7 +57,6 @@ horde/01_tauren_mulgore.guide:149: 'Body and Heart' has no objective locations i
 horde/01_tauren_mulgore.guide:152: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:155: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:158: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/02_undead_tirisfal.guide:84: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/03_bloodelf_eversong.guide:227: quest 9677 requires level 12 but guide ends at 11
 horde/03_bloodelf_eversong.guide:234: quest 9678 requires level 12 but guide ends at 11
 horde/04_bloodelf_ghostlands.guide:137: 'The Traitor's Shadow' has no objective locations in the database; add [at=x,y] or a goto

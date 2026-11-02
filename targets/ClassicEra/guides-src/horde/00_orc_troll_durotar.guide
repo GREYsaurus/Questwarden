@@ -15,12 +15,12 @@
 @next H_10_Barrens
 
 accept 790 Sarkoth | Hana'zua, wounded near the canyon to the south.
-complete 790 Sarkoth [mark=skull] | Sarkoth is a large scorpid north-west of Hana'zua.
 accept Cutting Teeth
 accept Your Place In The World | Kaltunk at the valley entrance.
+complete Cutting Teeth | Mottled Boars around the valley.
+complete 790 Sarkoth [mark=skull] | Sarkoth is a large scorpid north-west of Hana'zua.
 turnin 790 Sarkoth
 accept 804 Sarkoth
-complete Cutting Teeth | Mottled Boars around the valley.
 turnin Cutting Teeth
 accept 2383 Simple Parchment [class=Warrior; race=Orc] | Gornek gives your class letter now.
 accept 3087 Etched Parchment [class=Hunter; race=Orc]
@@ -66,15 +66,15 @@ turnin A Peon's Burden [optional] | Innkeeper Grosk, Razor Hill inn.
 accept 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional]
 accept 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional]
 complete Thazz'ril's Pick | Burning Blade Cave, north.
-note [hc=only] | Hardcore: in Tiragarde Keep the sailors and marines stand in tight groups, and Lieutenant Benedict (level 8) waits upstairs. Pull from the edges one at a time and keep an exit behind you.
-complete Vanquish the Betrayers [mark=cross:Lieutenant Benedict] | Kul Tiras Sailors and Marines at Tiragarde Keep; Lieutenant Benedict is upstairs in the keep.
-complete 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
-complete 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete Burning Blade Medallion | Yarrog Baneshadow, deep in the cave.
 turnin Thazz'ril's Pick
 turnin Burning Blade Medallion
 accept Report to Sen'jin Village
 grind 6 Felstalker, Vile Familiar, Razormane Quilboar [at=45.4,53.1] | The next steps expect level 6 and the quests here don't quite get you there: grind these until you reach it.
+note [hc=only] | Hardcore: in Tiragarde Keep the sailors and marines stand in tight groups, and Lieutenant Benedict (level 8) waits upstairs. Pull from the edges one at a time and keep an exit behind you.
+complete Vanquish the Betrayers [mark=cross:Lieutenant Benedict] | Kul Tiras Sailors and Marines at Tiragarde Keep; Lieutenant Benedict is upstairs in the keep.
+complete 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
+complete 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 turnin 3086 Glyphic Tablet [class=Mage; race=Troll]
 turnin 3090 Tainted Parchment [class=Warlock; race=Orc]
 turnin 3088 Encrypted Parchment [class=Rogue; race=Orc]
@@ -142,8 +142,6 @@ turnin Break a Few Eggs
 level 10 [class=Hunter] | The taming quests need level 10.
 accept 6062 Taming the Beast [class=Hunter] | Thotar, Razor Hill. Needs level 10. If you are lower, {name} skips it and moves on.
 complete 6062 Taming the Beast [class=Hunter] | Use the Taming Rod on a Dire Mottled Boar.
-note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
-complete Dark Storms | Burning Blade cultists at Thunder Ridge.
 turnin 6062 Taming the Beast [class=Hunter]
 accept 6083 Taming the Beast [class=Hunter] | Thotar again.
 complete 6083 Taming the Beast [class=Hunter] | Use the Taming Rod on a Surf Crawler on the coast.
@@ -153,13 +151,28 @@ complete 6082 Taming the Beast [class=Hunter] | Use the Taming Rod on an Armored
 turnin 6082 Taming the Beast [class=Hunter]
 accept 6081 Training the Beast [class=Hunter] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin Encroachment
-turnin Dark Storms
-accept Margoz
 turnin 5648 Garments of Spirituality [class=Priest; race=Troll]
 grind 10 Armored Scorpid, Makrura Elder | Call of Fire needs level 10: kill these nearby until you reach it.
 accept 2983 Call of Fire [class=Shaman; optional] | Needs level 10. If you are lower, {name} skips it and moves on.
 accept 1506 Gan'rul's Summons [class=Warlock; race=Orc] | Needs level 10. If you are lower, {name} skips it and moves on.
 turnin 6081 Training the Beast [class=Hunter] | Turned in at Orgrimmar.
+accept Need for a Cure | Rhinag.
+complete Need for a Cure | Venomtail Scorpids.
+turnin Need for a Cure
+accept Winds in the Desert | Rezlak at the eastern caravan.
+accept Lost But Not Forgotten | Misha Tor'kren, north Durotar.
+complete Lost But Not Forgotten | Durotar Tigers near Misha.
+complete Winds in the Desert | Supply sacks scattered in Drygulch Ravine.
+turnin Lost But Not Forgotten
+turnin Winds in the Desert
+accept Securing the Lines
+complete Securing the Lines | Dustwind harpies in Drygulch Ravine.
+turnin Securing the Lines
+grind 11.5 Dustwind Savage, Dustwind Storm Witch, Burning Blade Cultist [at=52.4,24.0] | The next steps expect level 12: grind these to 50% through level 11, and the quests left here bring you the rest of the way.
+note [hc=only] | Hardcore: Fizzle Darkstorm is level 12. Clear the cultists around him, then fight him alone at full health and mana.
+complete Dark Storms | Burning Blade cultists at Thunder Ridge.
+turnin Dark Storms | Orgnil Soulscar, Razor Hill.
+accept Margoz
 turnin Margoz | Margoz, Skull Rock.
 accept Skull Rock
 complete Skull Rock | Burning Blade inside Skull Rock.
@@ -171,20 +184,7 @@ accept Neeru Fireblade
 accept 5726 Hidden Enemies [class=Warlock; race=Orc; optional]
 accept 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Needs level 9. If you are lower, {name} skips it and moves on.
 accept 5726 Hidden Enemies [race=Troll; optional]
-accept Need for a Cure | Rhinag.
-complete Need for a Cure | Venomtail Scorpids.
-turnin Need for a Cure
-accept Winds in the Desert | Rezlak at the eastern caravan.
-accept Lost But Not Forgotten | Misha Tor'kren, north Durotar.
-complete Lost But Not Forgotten | Durotar Tigers near Misha.
 complete 5726 Hidden Enemies [optional] | Lieutenant's Insignia drops from Burning Blade Apprentice and Burning Blade Fanatic.
-complete Winds in the Desert | Supply sacks scattered in Drygulch Ravine.
-turnin Lost But Not Forgotten
-turnin Winds in the Desert
-accept Securing the Lines
-complete Securing the Lines | Dustwind harpies in Drygulch Ravine.
-turnin Securing the Lines
-grind 11.5 Dustwind Savage, Dustwind Storm Witch, Burning Blade Cultist [at=52.4,24.0] | The next steps expect level 12: grind these to 50% through level 11, and the quests left here bring you the rest of the way.
 turnin 5726 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [race=Troll; optional] | Turned in at Orgrimmar.

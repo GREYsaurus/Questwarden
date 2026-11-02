@@ -15,6 +15,13 @@
 fly Ratchet | Take the flight from Sun Rock Retreat.
 travel The Barrens
 train
+accept 891 The Guns of Northwatch
+note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
+accept 898 Free From the Hold
+complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.
+turnin 898 Free From the Hold
+complete 891 The Guns of Northwatch | Captain Fairmount and the cannoneers in Northwatch Hold, south of Ratchet. Captain Fairmount is level 20.
+turnin 891 The Guns of Northwatch
 accept 883 Lakota'mani [optional]
 turnin 883 Lakota'mani [optional]
 accept 1487 Deviate Eradication [dungeon=Wailing Caverns]

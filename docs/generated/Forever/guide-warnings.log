@@ -22,7 +22,6 @@ horde/01_tauren_mulgore.guide:68: 'The Ravaged Caravan' has no objective locatio
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
-horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
 horde/10_barrens.guide:129: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/20_thousandneedles.guide:21: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
@@ -42,7 +41,7 @@ alliance/02_nightelf_teldrassil.guide:122 (Teldrassil): prerequisite 98398 'The 
 alliance/02_nightelf_teldrassil.guide:129 (Destiny Calls): prerequisite 2241 'The Apple Falls' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/12_darkshore.guide:19 (The Absent Minded Prospector): prerequisite 729 'The Absent Minded Prospector' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/18_duskwood.guide:41 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/19_wetlands.guide:38 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/19_wetlands.guide:41 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/21_wetlands.guide:20 (The Thandol Span): prerequisite 632 'The Thandol Span' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_hillsbradfoothills.guide:64 (Blessed Arm): prerequisite 324 'The Lost Ingots' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:33 (A Noble Brew): prerequisite 335 'A Noble Brew' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -51,8 +50,8 @@ alliance/24_stranglethornvale.guide:43 (Worgen in the Woods): prerequisite 222 '
 alliance/24_stranglethornvale.guide:48 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:88 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 horde/10_barrens.guide:49 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_barrens.guide:31 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_barrens.guide:94 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_barrens.guide:24 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_barrens.guide:87 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:22 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/13_stonetalonmountains.guide:30 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/17_thousandneedles.guide:23 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)

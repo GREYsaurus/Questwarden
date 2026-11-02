@@ -100,7 +100,7 @@ ns.Guides:Register({
     {"accept",q=764,title="The Venture Co.",npc="Morin Cloudstalker",z=215,x=54.8,y=64.3,v=1},
     {"accept",q=765,title="Supervisor Fizsprocket",npc="Morin Cloudstalker",z=215,x=54.8,y=64.3,v=1},
     {"complete",q=764,title="The Venture Co.",text="Venture Co. workers at the Venture Co. Mine.",pack=92,v=1},
-    {"complete",q=765,title="Supervisor Fizsprocket",text="Inside the mine.",pack=92,v=1},
+    {"complete",q=765,title="Supervisor Fizsprocket",text="Inside the mine. Supervisor Fizsprocket is level 12: clear the workers near the supervisor first.",pack=92,v=1},
     {"turnin",q=765,title="Supervisor Fizsprocket",npc="Morin Cloudstalker",z=215,x=54.8,y=64.3,v=1},
     {"turnin",q=764,title="The Venture Co.",npc="Morin Cloudstalker",z=215,x=54.8,y=64.3,v=1},
     {"complete",q=772,title="Rite of Vision",text="Drink the potion and follow the spirit to Red Rocks.",v=1},

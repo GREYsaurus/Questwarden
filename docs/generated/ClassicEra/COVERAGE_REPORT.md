@@ -8,15 +8,15 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5245 |
+| Guide steps | 5244 |
 | Quest steps (accept/complete/turn-in) | 4276 |
 | Distinct quests referenced | 1336 |
-| Steps with database-derived coordinates | 3355 |
+| Steps with database-derived coordinates | 3354 |
 | Steps with hand-written coordinates (unverified) | 24 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 54 (see docs/generated/ClassicEra/guide-warnings.log) |
+| Compiler warnings | 53 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)
 
@@ -74,21 +74,21 @@ Each race/class combination is followed from its racial start guide through the 
 | Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 193 | 68 | 14 |
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 225 | 71 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 136 | 46 | 3 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 135 | 46 | 3 |
 | Darkshore (12-17) | Alliance | 12-17 | Darkshore | 139 | 40 | 48 |
 | The Barrens (12-15) | Horde | 12-15 | The Barrens | 177 | 59 | 47 |
 | Stonetalon Mountains (15-16) | Horde | 15-16 | Stonetalon Mountains | 5 | 1 | 0 |
-| The Barrens (16-20) | Horde | 16-20 | The Barrens | 122 | 40 | 25 |
+| The Barrens (16-20) | Horde | 16-20 | The Barrens | 115 | 38 | 25 |
 | Loch Modan (17-18) | Alliance | 17-18 | Loch Modan | 90 | 28 | 8 |
 | Darkshore (20-21) | Alliance | 20-21 | Darkshore | 82 | 19 | 35 |
 | Stonetalon Mountains (20-21) | Horde | 20-21 | Stonetalon Mountains | 43 | 19 | 3 |
 | Ashenvale (21-22) | Alliance | 21-22 | Ashenvale | 40 | 17 | 9 |
 | Stonetalon Mountains (22-23) | Alliance | 22-23 | Stonetalon Mountains | 29 | 8 | 0 |
-| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 47 | 12 | 5 |
+| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 54 | 14 | 5 |
 | Darkshore (23-24) | Alliance | 23-24 | Darkshore | 3 | 0 | 0 |
 | Stonetalon Mountains (23-25) | Horde | 23-25 | Stonetalon Mountains | 18 | 6 | 1 |
 | Ashenvale (24) | Alliance | 24-24 | Ashenvale | 40 | 8 | 10 |
-| Wetlands (24-27) | Alliance | 24-27 | Wetlands | 76 | 24 | 12 |
+| Wetlands (24-27) | Alliance | 24-27 | Wetlands | 73 | 23 | 12 |
 | Southern Barrens (25) | Horde | 25-25 | The Barrens | 12 | 7 | 5 |
 | Thousand Needles (25-26) | Horde | 25-26 | Thousand Needles | 43 | 15 | 21 |
 | Ashenvale (26-27) | Horde | 26-27 | Ashenvale | 63 | 19 | 10 |
@@ -96,7 +96,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Duskwood (28-29) | Alliance | 28-29 | Duskwood | 183 | 64 | 50 |
 | Thousand Needles (28-29) | Horde | 28-29 | Thousand Needles | 68 | 19 | 29 |
 | Hillsbrad Foothills (29-30) | Horde | 29-30 | Hillsbrad Foothills | 59 | 20 | 7 |
-| Wetlands (30) | Alliance | 30-30 | Wetlands | 36 | 12 | 6 |
+| Wetlands (30) | Alliance | 30-30 | Wetlands | 39 | 13 | 6 |
 | Ashenvale (30) | Alliance | 30-30 | Ashenvale | 40 | 10 | 0 |
 | Wetlands (30-31) | Alliance | 30-31 | Wetlands | 21 | 4 | 0 |
 | Arathi Highlands (30) | Horde | 30-30 | Arathi Highlands | 16 | 2 | 2 |
@@ -217,7 +217,7 @@ Each race/class combination is followed from its racial start guide through the 
 ## Data awaiting verification
 
 - Guide **routes, ordering and notes** are original and were written without in-game testing. Quest ids, names, faction/race/class limits and NPC coordinates come from the database, but the practical route (XP sufficiency, travel efficiency) needs play-testing.
-- **26 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
+- **25 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
 - **26 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
 - **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.
 - **Talent builds** are legal against the 1.15.9.70576 client tables, but how good they are is a judgement call, not something tested.

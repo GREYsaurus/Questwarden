@@ -117,6 +117,7 @@ guide,source,quest,title,requiredLevel,modelLevel,questsOnlyLevel,route
 "A_NightElf_Teldrassil","alliance/02_nightelf_teldrassil.guide:52","5622","In Favor of Elune","5","4.8","4","NightElf/PRIEST"
 "H_Undead_Tirisfal","horde/02_undead_tirisfal.guide:59","5481","Gordo's Task","5","4.7","4","Scourge/WARRIOR"
 "H_Undead_Tirisfal","horde/02_undead_tirisfal.guide:62","427","At War With The Scarlet Crusade","5","4.9","4","Scourge/WARRIOR"
+"H_Undead_Tirisfal","horde/02_undead_tirisfal.guide:81","367","A New Plague","6","5.8","4","Scourge/WARRIOR"
 "H_Silverpine","horde/05_silverpine.guide:96","516","Beren's Peril","16","14.3","13","Scourge/WARRIOR"
 "H_Undead_Tirisfal","horde/02_undead_tirisfal.guide:44","5651","In Favor of Darkness","5","3.5","3","Scourge/PRIEST"
 "H_Undead_Tirisfal","horde/02_undead_tirisfal.guide:64","5650","Garments of Darkness","5","5.0","4","Scourge/PRIEST"

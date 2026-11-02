@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 | Reduced-XP pickups (6+ levels below estimate) | 39 |
 | Level-gated pickups | 7 |
 | Accepted, never turned in | 12 |
-| Hub revisits (all guides) | 511 |
+| Hub revisits (all guides) | 514 |
 
 ## Per guide
 
@@ -30,9 +30,9 @@ No baseline file found.
 | A_14_StonetalonMountains | 29 | 8 | 176 | 176 | 5 | 0 | 0 | 0 | 1 | 0 |
 | A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_16_Ashenvale | 40 | 8 | 213 | 169 | 3 | 0 | 0 | 1 | 1 | 1 |
-| A_17_Wetlands | 76 | 24 | 247 | 296 | 6 | 0 | 0 | 2 | 0 | 0 |
+| A_17_Wetlands | 73 | 23 | 247 | 296 | 6 | 0 | 0 | 2 | 0 | 0 |
 | A_18_Duskwood | 183 | 64 | 549 | 987 | 25 | 7 | 0 | 0 | 1 | 9 |
-| A_19_Wetlands | 36 | 12 | 204 | 204 | 2 | 0 | 0 | 0 | 0 | 3 |
+| A_19_Wetlands | 39 | 13 | 260 | 260 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_20_Ashenvale | 40 | 10 | 461 | 442 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_21_Wetlands | 21 | 4 | 10 | 60 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_22_HillsbradFoothills | 65 | 29 | 264 | 489 | 6 | 0 | 0 | 1 | 0 | 9 |
@@ -80,9 +80,9 @@ No baseline file found.
 | A_NightElf_Teldrassil | 193 | 68 | 491 | 642 | 21 | 0 | 0 | 0 | 4 | 0 |
 | H_10_Barrens | 177 | 59 | 343 | 450 | 21 | 0 | 0 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_12_Barrens | 122 | 40 | 406 | 474 | 16 | 0 | 2 | 1 | 3 | 4 |
+| H_12_Barrens | 115 | 38 | 373 | 440 | 15 | 0 | 2 | 1 | 2 | 4 |
 | H_13_StonetalonMountains | 43 | 19 | 174 | 196 | 2 | 0 | 0 | 0 | 1 | 0 |
-| H_14_SouthernBarrens | 47 | 12 | 148 | 198 | 4 | 0 | 0 | 1 | 0 | 3 |
+| H_14_SouthernBarrens | 54 | 14 | 207 | 257 | 6 | 0 | 0 | 1 | 1 | 3 |
 | H_15_StonetalonMountains | 18 | 6 | 23 | 43 | 3 | 0 | 0 | 0 | 1 | 0 |
 | H_16_SouthernBarrens | 12 | 7 | 100 | 150 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_17_ThousandNeedles | 43 | 15 | 194 | 269 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -127,9 +127,9 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 50 | 14 | 323 | 283 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 225 | 71 | 503 | 551 | 18 | 0 | 0 | 1 | 1 | 6 |
+| H_OrcTroll_Durotar | 225 | 71 | 545 | 551 | 18 | 0 | 0 | 1 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 206 | 411 | 10 | 0 | 5 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 136 | 46 | 164 | 235 | 13 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 135 | 46 | 145 | 216 | 14 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -155,8 +155,8 @@ No baseline file found.
 
 - Orc/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 - Orc/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
-- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:180]: complete step before the quest is accepted
-- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:180]: complete step before the quest is accepted
+- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:187]: complete step before the quest is accepted
+- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:187]: complete step before the quest is accepted
 - Troll/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 - Troll/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 
@@ -231,8 +231,8 @@ No baseline file found.
 - A_Human_Elwynn: reduced-XP quest: Package for Thurman (334, level 2) at estimated level 10.4
 - A_Human_Elwynn: reduced-XP quest: Wine Shop Advert (332, level 2) at estimated level 10.3
 - H_12_Barrens: accepted but never turned in on the route: 1069 Deepmoss Spider Eggs
-- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.9 [horde/12_barrens.guide:94, Orc/WARLOCK]
-- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.8 [horde/12_barrens.guide:92, Troll/PRIEST]
+- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.8 [horde/12_barrens.guide:87, Orc/WARLOCK]
+- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.7 [horde/12_barrens.guide:85, Troll/PRIEST]
 - H_14_SouthernBarrens: accepted but never turned in on the route: 878 Tribes at War
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.0
 - H_21_HillsbradFoothills: reduced-XP quest: The Rescue (498, level 22) at estimated level 29.1

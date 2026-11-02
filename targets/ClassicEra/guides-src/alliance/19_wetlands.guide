@@ -17,7 +17,7 @@ train
 turnin 270 The Doomed Fleet [optional]
 accept 321 Lightforge Iron [optional]
 accept 637 Sully Balloo's Letter
-accept 290 Lifting the Curse
+accept 289 The Cursed Crew
 accept 465 Nek'rosh's Gambit [optional]
 turnin 465 Nek'rosh's Gambit [optional]
 accept 474 Defeat Nek'rosh [optional]
@@ -28,6 +28,9 @@ accept 378 The Fury Runs Deep [dungeon=The Stockade]
 complete 474 Defeat Nek'rosh [optional] | Nek'rosh's Head drops from Chieftain Nek'rosh.
 complete 378 The Fury Runs Deep [dungeon=The Stockade]
 turnin 378 The Fury Runs Deep [dungeon=The Stockade]
+complete 289 The Cursed Crew | Undead crew on the sunken ships north-west of Menethil. First Mate Snellig is level 29.
+turnin 289 The Cursed Crew
+accept 290 Lifting the Curse
 complete 290 Lifting the Curse | Intrepid Strongbox Key drops from Captain Halyndor.
 turnin 290 Lifting the Curse
 accept 292 The Eye of Paleth

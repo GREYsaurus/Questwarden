@@ -17,15 +17,8 @@ train
 accept 3281 Stolen Silver
 accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
 accept 865 Raptor Horns | Mebok Mizzyrix.
-accept 891 The Guns of Northwatch
-note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
-accept 898 Free From the Hold
-complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.
-turnin 898 Free From the Hold
-complete 891 The Guns of Northwatch
 complete 865 Raptor Horns | Sunscale Scytheclaws.
 complete 3281 Stolen Silver | Stolen Silver: loot Stolen Silver.
-turnin 891 The Guns of Northwatch
 accept 896 Miner's Fortune [optional]
 accept 959 Trouble at the Docks [elite; group; hc=skip]
 accept 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll] | Needs level 16. If you are lower, {name} skips it and moves on.

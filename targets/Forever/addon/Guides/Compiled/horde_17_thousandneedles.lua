@@ -35,7 +35,7 @@ ns.Guides:Register({
     {"accept",q=1149,title="Test of Faith",npc="Dorn Plainstalker",z=400,x=54,y=41.5,v=1},
     {"complete",q=1149,title="Test of Faith",v=1},
     {"turnin",q=1149,title="Test of Faith",npc="Dorn Plainstalker",z=400,x=54,y=41.5,v=1},
-    {"complete",q=1131,title="Steelsnap",text="Steelsnap's Rib drops from Steelsnap.",v=1},
+    {"complete",q=1131,title="Steelsnap",text="Steelsnap's Rib drops from Steelsnap. Steelsnap is level 30: fight it alone at full health.",v=1},
     {"complete",q=4865,title="Serpent Wild",text="Wind serpents.",v=1},
     {"turnin",q=4865,title="Serpent Wild",npc="Motega Firemane",z=400,x=21.5,y=32.4,v=1},
     {"accept",q=5062,title="Sacred Fire",npc="Motega Firemane",z=400,x=21.5,y=32.4,text="Motega Firemane.",v=1},

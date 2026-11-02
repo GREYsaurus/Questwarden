@@ -13,9 +13,9 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Warnings | 88 |
 | Peak quest log (worst route) | 22 / 25 |
 | Reduced-XP pickups (6+ levels below estimate) | 50 |
-| Level-gated pickups | 144 |
+| Level-gated pickups | 145 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 627 |
+| Hub revisits (all guides) | 629 |
 
 ## Per guide
 
@@ -82,7 +82,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Tauren_Mulgore | 162 (90) | 60 (30) | 249 (258) | 453 | 15 (9) | 0 | 1 | 0 (2) | 8 (3) | 0 |
 | H_Terokkar | 122 (96) | 42 (34) | 355 (351) | 430 | 11 (13) | 0 | 0 | 0 (1) | 2 (0) | 1 (2) |
 | H_ThousandNeedles | 136 (56) | 43 (16) | 146 (246) | 473 | 8 | 0 | 0 | 0 (2) | 4 (1) | 0 |
-| H_Undead_Tirisfal | 132 (97) | 45 (30) | 128 (216) | 211 | 9 (5) | 0 | 4 (0) | 0 | 0 | 0 |
+| H_Undead_Tirisfal | 132 (97) | 45 (30) | 130 (216) | 213 | 11 (5) | 0 | 5 (0) | 0 | 0 | 0 |
 | H_WesternPlaguelands | 64 (47) | 21 (14) | 31 (10) | 256 | 4 (7) | 0 | 0 | 0 | 1 | 0 |
 | H_Zangarmarsh | 112 (108) | 38 | 379 (397) | 379 | 9 (10) | 0 | 0 | 0 (3) | 1 | 0 |
 
@@ -393,6 +393,7 @@ None.
 - H_Stranglethorn: reduced-XP quest: Welcome to the Jungle (583, level 30) at estimated level 38.0
 - H_SwampOfSorrows: level-gated pickup: Continued Threat (1428) needs 41, model level 40.8 (quests only: 39) [horde/16b_swampofsorrows.guide:40, Orc/WARRIOR]
 - H_Tauren_Mulgore: level-gated pickup: Call of Earth (1519) needs 4, model level 1.0 (quests only: 1) [horde/01_tauren_mulgore.guide:17, Tauren/SHAMAN]
+- H_Undead_Tirisfal: level-gated pickup: A New Plague (367) needs 6, model level 5.8 (quests only: 4) [horde/02_undead_tirisfal.guide:81, Scourge/WARRIOR]
 - H_Undead_Tirisfal: level-gated pickup: At War With The Scarlet Crusade (427) needs 5, model level 4.9 (quests only: 4) [horde/02_undead_tirisfal.guide:62, Scourge/WARRIOR]
 - H_Undead_Tirisfal: level-gated pickup: Garments of Darkness (5650) needs 5, model level 5.0 (quests only: 4) [horde/02_undead_tirisfal.guide:64, Scourge/PRIEST]
 - H_Undead_Tirisfal: level-gated pickup: Gordo's Task (5481) needs 5, model level 4.7 (quests only: 4) [horde/02_undead_tirisfal.guide:59, Scourge/WARRIOR]

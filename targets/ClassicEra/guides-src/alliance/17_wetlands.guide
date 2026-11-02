@@ -63,9 +63,6 @@ turnin 470 Digging Through the Ooze
 turnin 968 The Powers Below [optional] | Turned in at Ironforge.
 turnin 472 Fall of Dun Modr
 turnin 288 The Third Fleet
-accept 289 The Cursed Crew
-complete 289 The Cursed Crew | Undead crew on the sunken ships north-west of Menethil.
-turnin 289 The Cursed Crew
 turnin 943 The Absent Minded Prospector [class=Paladin; race=Dwarf; optional]
 turnin 943 The Absent Minded Prospector [class=Warrior,Hunter,Rogue,Priest; race=Dwarf; optional]
 turnin 943 The Absent Minded Prospector [race=Human,Night Elf,Gnome; optional]

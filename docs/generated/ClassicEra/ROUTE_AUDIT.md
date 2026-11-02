@@ -15,7 +15,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Reduced-XP pickups (6+ levels below estimate) | 40 |
 | Level-gated pickups | 14 |
 | Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 512 |
+| Hub revisits (all guides) | 515 |
 
 ## Per guide
 
@@ -30,9 +30,9 @@ No baseline file found.
 | A_14_StonetalonMountains | 29 | 8 | 176 | 176 | 5 | 0 | 0 | 0 | 1 | 0 |
 | A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_16_Ashenvale | 40 | 8 | 213 | 167 | 3 | 0 | 0 | 0 | 1 | 1 |
-| A_17_Wetlands | 76 | 24 | 247 | 297 | 6 | 0 | 1 | 0 | 0 | 0 |
+| A_17_Wetlands | 73 | 23 | 247 | 297 | 6 | 0 | 1 | 0 | 0 | 0 |
 | A_18_Duskwood | 183 | 64 | 592 | 1030 | 25 | 7 | 0 | 0 | 1 | 9 |
-| A_19_Wetlands | 36 | 12 | 204 | 204 | 2 | 0 | 0 | 0 | 0 | 3 |
+| A_19_Wetlands | 39 | 13 | 260 | 260 | 3 | 0 | 0 | 0 | 0 | 3 |
 | A_20_Ashenvale | 40 | 10 | 461 | 442 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_21_Wetlands | 21 | 4 | 10 | 60 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_22_HillsbradFoothills | 65 | 29 | 264 | 489 | 6 | 0 | 0 | 0 | 0 | 9 |
@@ -80,9 +80,9 @@ No baseline file found.
 | A_NightElf_Teldrassil | 193 | 68 | 491 | 642 | 21 | 0 | 0 | 0 | 4 | 0 |
 | H_10_Barrens | 177 | 59 | 344 | 458 | 21 | 0 | 1 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_12_Barrens | 122 | 40 | 406 | 475 | 16 | 0 | 2 | 0 | 3 | 4 |
+| H_12_Barrens | 115 | 38 | 373 | 442 | 15 | 0 | 2 | 0 | 2 | 4 |
 | H_13_StonetalonMountains | 43 | 19 | 174 | 199 | 2 | 0 | 0 | 0 | 1 | 0 |
-| H_14_SouthernBarrens | 47 | 12 | 148 | 198 | 4 | 0 | 0 | 0 | 0 | 3 |
+| H_14_SouthernBarrens | 54 | 14 | 207 | 257 | 6 | 0 | 0 | 0 | 1 | 3 |
 | H_15_StonetalonMountains | 18 | 6 | 23 | 44 | 3 | 0 | 0 | 0 | 1 | 0 |
 | H_16_SouthernBarrens | 12 | 7 | 100 | 150 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_17_ThousandNeedles | 43 | 15 | 194 | 269 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -127,9 +127,9 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 50 | 14 | 323 | 283 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 225 | 71 | 503 | 560 | 18 | 0 | 0 | 0 | 1 | 6 |
+| H_OrcTroll_Durotar | 225 | 71 | 545 | 557 | 18 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 235 | 435 | 13 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 136 | 46 | 164 | 246 | 13 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 135 | 46 | 145 | 226 | 14 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -226,8 +226,8 @@ None.
 - A_Human_Elwynn: reduced-XP quest: Package for Thurman (334, level 2) at estimated level 10.6
 - A_Human_Elwynn: reduced-XP quest: Wine Shop Advert (332, level 2) at estimated level 10.6
 - H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:56, Scourge/WARRIOR]
-- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.5 (quests only: 17) [horde/12_barrens.guide:94, Orc/WARLOCK]
-- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.3 (quests only: 17) [horde/12_barrens.guide:92, Troll/PRIEST]
+- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.3 (quests only: 17) [horde/12_barrens.guide:87, Orc/WARLOCK]
+- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.2 (quests only: 17) [horde/12_barrens.guide:85, Troll/PRIEST]
 - H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 30.0 (quests only: 29) [horde/21_hillsbradfoothills.guide:38, Orc/WARRIOR]
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8

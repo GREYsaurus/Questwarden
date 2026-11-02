@@ -101,7 +101,7 @@ turnin 751 The Ravaged Caravan
 accept The Venture Co.
 accept Supervisor Fizsprocket
 complete The Venture Co. | Venture Co. workers at the Venture Co. Mine.
-complete Supervisor Fizsprocket | Inside the mine.
+complete Supervisor Fizsprocket | Inside the mine. Supervisor Fizsprocket is level 12: clear the workers near the supervisor first.
 turnin Supervisor Fizsprocket
 turnin The Venture Co.
 complete 772 Rite of Vision | Drink the potion and follow the spirit to Red Rocks.

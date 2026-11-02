@@ -41,7 +41,7 @@ ns.Guides:Register({
     {"complete",q=651,title="Stones of Binding",text="Collect the three Cresting, Thundering and Burning keys at the stones.",v=1},
     {"turnin",q=651,title="Stones of Binding",npc="Stone of Inner Binding",z=45,x=36.2,y=57.4,v=1},
     {"accept",q=652,title="Breaking the Keystone",npc="Stone of Inner Binding",z=45,x=36.2,y=57.4,v=1},
-    {"complete",q=652,title="Breaking the Keystone",text="Rod of Order drops from Fozruk.",v=1},
+    {"complete",q=652,title="Breaking the Keystone",text="Rod of Order drops from Fozruk. Fozruk is level 42: leave it if that is too high for you.",v=1},
     {"accept",q=693,title="Wand over Fist",npc="Skuerto",z=45,x=46.6,y=47,v=1},
     {"turnin",q=652,title="Breaking the Keystone",npc="Keystone",z=45,x=36.1,y=58.1,v=1},
     {"accept",q=663,title="Land Ho!",npc="Lolo the Lookout",z=45,x=31.8,y=82.7,v=1},

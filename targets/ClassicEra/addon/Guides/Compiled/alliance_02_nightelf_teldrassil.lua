@@ -111,7 +111,7 @@ ns.Guides:Register({
     {"complete",q=483,title="The Relics of Wakening",text="Ban'ethil Barrow Den, north of Dolanaar.",v=1},
     {"turnin",q=483,title="The Relics of Wakening",npc="Athridas Bearmantle",z=141,x=56,y=57.3,v=1},
     {"accept",q=486,title="Ursal the Mauler",npc="Athridas Bearmantle",z=141,x=56,y=57.3,v=1},
-    {"complete",q=486,title="Ursal the Mauler",text="Gnarlpine camp south-east of Lake Al'Ameth.",v=1},
+    {"complete",q=486,title="Ursal the Mauler",text="Gnarlpine camp south-east of Lake Al'Ameth. Ursal is level 12: clear the camp first and fight Ursal alone.",v=1},
     {"turnin",q=486,title="Ursal the Mauler",npc="Athridas Bearmantle",z=141,x=56,y=57.3,v=1},
     {"turnin",q=932,title="Twisted Hatred",npc="Tallonkai Swiftroot",z=141,x=55.6,y=57,v=1},
     {"turnin",q=2459,title="Ferocitas the Dream Eater",npc="Tallonkai Swiftroot",z=141,x=55.6,y=57,v=1},

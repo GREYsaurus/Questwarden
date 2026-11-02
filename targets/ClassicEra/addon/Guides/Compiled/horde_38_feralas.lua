@@ -47,7 +47,7 @@ ns.Guides:Register({
     {"turnin",q=7003,title="Zapped Giants",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,v=1},
     {"turnin",q=7721,title="Fuel for the Zapping",npc="Zorbin Fandazzle",z=357,x=44.8,y=43.4,v=1},
     {"complete",q=3063,title="Vengeance on the Northspring",text="Northspring harpies in the north-west.",v=1},
-    {"complete",q=3062,title="Dark Heart",text="Harpy chieftain at the Northspring nest.",v=1},
+    {"complete",q=3062,title="Dark Heart",text="Harpy chieftain at the Northspring nest. Edana Hatetalon is level 50: clear the harpies around the chieftain first.",v=1},
     {"turnin",q=3063,title="Vengeance on the Northspring",npc="Talo Thornhoof",z=357,x=76.2,y=43.8,text="Camp Mojache.",v=1},
     {"turnin",q=3062,title="Dark Heart",npc="Talo Thornhoof",z=357,x=76.2,y=43.8,v=1},
     {"turnin",q=2980,title="The Ogres of Feralas",npc="Rok Orhan",z=357,x=75.8,y=43.6,text="Rok Orhan.",v=1},
