@@ -38,4 +38,4 @@ The followed path is drawn as purple dots on the world map (when the map shows t
 | Classic Era | 215 | 3,857 |
 | TBC | 332 | 6,100 |
 
-QuestieDB records where an NPC walks, not where it is now, and its paths have not been checked in the game for Questwarden. If a path is wrong, please report it on the issue tracker.
+QuestieDB records where an NPC walks, not where it is now. The author checked in the game (2026-11-01) that the patrol path is drawn on the minimap and the arrow follows it; most individual paths have not been checked. If a path is wrong, please report it on the issue tracker.

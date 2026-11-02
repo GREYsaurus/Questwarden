@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.32 (2026-11-01)
+
+- **Quests from objects:** when a quest is picked up from, or handed in at, an object instead of an NPC (a wanted poster, a notice board, a grave), the step says so and what to do: for example, "Wanted! is not an NPC but a wanted poster, on a post or board. Right-click it to read the quest, then press Accept."
+- **Tirisfal Glades (Undead start):** the 10 pumpkins for *Fields of Grief* are now collected at Solliden Farmstead together with the Scarlet Warriors for *At War With The Scarlet Crusade*. Before, the guide had no step for them, and the later step that named the pumpkins was the delivery quest. *Wanted: Maggot Eye* (a level 11 mob) moves from about level 6 to the end of the zone, at about level 10, after the Agamand Mills quests.
+- **Hard quests come later (Classic Era and Forever).** Quests whose targets are well above your level at that point now come after easier ones:
+  - Durotar: *Sarkoth* after *Cutting Teeth*; *Vanquish the Betrayers* after the level 6 grind; *Dark Storms*, with Skull Rock after it, at the end of Durotar near level 12.
+  - The Barrens: *The Guns of Northwatch* and *Free From the Hold* (level 20) moved from visit 2 (about level 16) to the start of visit 3 (level 22, from Ratchet).
+  - Wetlands: *The Cursed Crew* (level 29) moved to visit 2, just before *Lifting the Curse*, which follows it.
+  - Where a quest cannot move without an extra trip, the step now names the target's level: *Supervisor Fizsprocket*, *Ursal the Mauler*, *Steelsnap*, *Breaking the Keystone* (Fozruk, 42) and *Dark Heart*.
+  - The report `tools/research/quest_level_report.py` lists such steps per target.
+- ***Skip overleveled steps* is off by default.** Saved profiles are switched off once. A quest that is complete in your log is always turned in, whatever its level.
+- **Removed:** the indoors and outdoors hints ("You are indoors: the arrow shows only the direction", "find the way out", "may be inside"), which did not work reliably in the game, and the indoor spots they learned. The capital city hints stay.
+- **Removed:** the chat line "Arrow points to your corpse".
+
+**Tested:** offline only (TBC suite 5,628/5,628, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). The guide changes were not played through in the live game. The author checked in the game that patrol paths are drawn and followed (docs/PATROLS.md).
+
 ## 0.1.0-alpha.31 (2026-11-01)
 
 - **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables, and the Forever talent trees (27 trees, 466 talents) taken from the wowforevertalents.com calculator, which reads the launch client's talent hotfixes. The client's own tables still hold Classic Era's trees, so they are no longer imported for Forever. Talents with no known spell show their icon in the talent window. All unverified until checked in the game.
@@ -9,7 +25,7 @@
 - **Fixed:** collect quests sent you to a named NPC that the next quest in the chain needs. For example, *The Scarlet Crusade* counted Meven Korgal as an armband target, though *The Red Messenger* is to kill him. Such NPCs are now left out of the arrow, the target lists and the hunting routes while other mobs drop the item (Meven Korgal in Tirisfal Glades, Lord Shalzaru in Feralas).
 - **Death skip suggestions:** when the next step is in town and the graveyard you would land at is much nearer it than you are, the step suggests dying to a mob and taking the spirit healer's resurrection. Below level 10, where there is no resurrection sickness, when it saves a minute or more; from level 10 only when it saves 5 minutes or more. Never on Hardcore characters, and never while a hearthstone suggestion shows. *Death Skip Suggestions* (General → Automation, on by default).
 
-**Tested:** offline only (TBC suite 5,636/5,636, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
+**Tested:** offline only (TBC suite 5,636/5,636, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). In the live game, the author checked several times that settings are kept after /reload, and that the new-player tip windows work; the other new features are not checked in game yet.
 
 ## 0.1.0-alpha.30 (2026-11-01)
 
