@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Fixed:** automatic raid markers could stop for the rest of a kill step. A mark was checked 0.4 seconds after it was set, so a slow server or a mob killed in that moment counted as a failure, and two failures paused marking without a word. The icon now gets a second look, a dead mob is no failure, and when marking does pause, chat says why.
 - **Fixed:** the waypoint diamond on the world map was drawn away from the waypoint (further right and down the more the map was zoomed out), so it did not match the minimap pin and the arrow. Its position now ignores its own size scaling.
 
 ## 0.1.0-alpha.34 (2026-11-01)

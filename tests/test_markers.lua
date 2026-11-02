@@ -429,10 +429,27 @@ prof = ns.db.profile
 -- 10) Client denies / blocks marking ------------------------------------------------------------
 reset()
 loadStepWith("H_OrcTroll_Durotar", function(s) return s[1] == "complete" and s.q == 790 end)
+-- A slow server: the icon shows up after the first check. Not a failure.
 MOCK.markDenied = true
+local late = MOCK.creature(3281, 39, "Sarkoth")
+target(late)
+MOCK.markDenied = false
+MOCK.icons[late.guid] = 8
+MOCK.tick(2)
+check(M.failures == 0 and not M.stopped and M.marked[late.guid] == 8, "an icon that shows up late is no failure")
+-- A mob that dies before the check lost its icon by dying. Not a failure.
+MOCK.markDenied = true
+local quick = MOCK.creature(3281, 40, "Sarkoth")
+target(quick)
+quick.dead = true
+MOCK.tick(2)
+check(M.failures == 0 and not M.stopped, "a mob killed before the check is no failure")
+quick.dead = nil
 mark = #MOCK.printed
 target(MOCK.creature(3281, 41, "Sarkoth"))
+MOCK.tick(2)
 target(MOCK.creature(3281, 42, "Sarkoth"))
+MOCK.tick(2)
 check(printedSince(mark, "Could not mark") and not printedSince(mark, "Marked Sarkoth"), "denied marking reported, never claimed")
 check(M.stopped and printedSince(mark, "paused"), "automatic marking pauses after repeated failures")
 calls = MOCK.markCalls

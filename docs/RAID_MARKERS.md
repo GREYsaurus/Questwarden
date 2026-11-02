@@ -49,7 +49,7 @@ With no target you get a short message, never an error. Marking an icon the targ
 | `autoMarkObjectives` | on (changed after 0.4.0) | Also marks the kill objectives of the current `complete` steps, one icon per step (see below). Settings saved by older versions are switched on once, with a chat note |
 | `markReplace` | off | Lets automatic marking replace an icon that is already on the unit |
 | `markClearOnAdvance` | on | Removes Questwarden's own automatic icons when the step changes or another guide is loaded |
-| `markNotify` | on | Chat messages when marking fails or pauses, and for `/qw mark`. Automatic marks that work are not announced |
+| `markNotify` | on | Chat messages when marking fails, and for `/qw mark`. A pause is always said in chat. Automatic marks that work are not announced |
 | Default marker | skull | Dropdown on the settings page, or `/qw marker <icon>` |
 
 ## Guide data: `[mark=...]`
@@ -103,8 +103,8 @@ Units are matched **only by NPC ID** from their GUID, so a mob with the same nam
 
 After each attempt, Questwarden checks `GetRaidTargetIndex` and reports **"Marked ..."** only if the icon is really there.
 
-- If marking fails twice in a step, automatic marking pauses for that step and tells you to use `/qw mark` or the bar.
-- If you, another add-on or a group member **changes or removes** an icon Questwarden placed on a living unit, that unit is never marked again, and automatic marking pauses for the rest of the step. A unit that lost its icon by dying does not count.
+- If marking fails twice in a step, automatic marking pauses for that step and tells you to use `/qw mark` or the bar. An icon is looked for twice (after 0.4 and 2 seconds), so a slow server is not a failure, and neither is a mob that died before the check.
+- If you, another add-on or a group member **changes or removes** an icon Questwarden placed on a living unit, that unit is never marked again, and automatic marking pauses for the rest of the step (chat says so). A unit that lost its icon by dying does not count.
 - On a step change, icons the new rule still wants (same NPC, same icon) stay. Other icons Questwarden placed are removed, but only if they are still Questwarden's and the unit is visible. Icons set by anyone else are never cleared.
 - Marking is not limited in combat; the client does not restrict it there.
 

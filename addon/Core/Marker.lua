@@ -21,7 +21,8 @@
 --    UNIT_DIED, since the game removes the icon without RAID_TARGET_UPDATE) or one that goes out of sight
 --    frees it, and the next visible mob of the step gets it at once. Priority decides who holds an icon:
 --    your living target, then your mouseover, then a mob in view (M:Priority); it moves only to a higher one;
---  * success is reported only when GetRaidTargetIndex shows the icon afterwards;
+--  * success is reported only when GetRaidTargetIndex shows the icon afterwards (looked at twice, so a slow server
+--    is not taken for a refusal; a mob that died before the check is no failure);
 --  * if the client blocks or rejects marking, automatic marking stops and says how to mark by click.
 
 local _, ns = ...
@@ -31,6 +32,7 @@ ns.Marker = M
 
 M.NAMES = { "star", "circle", "diamond", "triangle", "moon", "square", "cross", "skull" }
 local VERIFY_DELAY = 0.4
+local VERIFY_LATE = 1.6 -- a second look for a slow server, before a missing icon counts as a failure
 local MAX_FAILURES = 2
 
 local C -- ns.Compat
@@ -305,12 +307,12 @@ function M:Priority(guid)
     return 1
 end
 
--- The claim of the unit holding `icon` (0 when it no longer wears it).
+-- The claim of the unit holding `icon` (0 when it no longer wears it; a mark still on its way counts as worn).
 function M:HolderPriority(icon)
     local h = self.holder[icon]
     if not h then return 0 end
     local u = self:UnitFor(h)
-    if u and C.GetRaidTargetIndex(u) ~= icon then return 0 end
+    if u and C.GetRaidTargetIndex(u) ~= icon and not (self.pending and self.pending[h]) then return 0 end
     return self:Priority(h)
 end
 
@@ -403,7 +405,7 @@ function M:Consider(unit)
     C_Timer.After(VERIFY_DELAY, function() M:Verify(guid, gen, icon, id, name) end)
 end
 
-function M:Verify(guid, gen, icon, id, name)
+function M:Verify(guid, gen, icon, id, name, late)
     if self.pending then self.pending[guid] = nil end
     if self.gen ~= gen then return end
     -- We moved the icon on to another mob before this check (quick retargeting): not a failure.
@@ -413,6 +415,12 @@ function M:Verify(guid, gen, icon, id, name)
     if C.GetRaidTargetIndex(u) == icon then
         self.marked[guid], self.markedNpc[guid], self.holder[icon] = icon, id, guid
         self:Note("marked", name, true) -- automatic marks that work are not announced
+    elseif UnitIsDead and UnitIsDead(u) then
+        self:Release(guid) -- died before the check (the game takes the icon off): not a failure
+        self:Note("marked mob died before the check", name, true)
+    elseif not late then
+        self.pending[guid] = true
+        C_Timer.After(VERIFY_LATE, function() M:Verify(guid, gen, icon, id, name, true) end)
     else
         if self.marked[guid] == icon then
             self.marked[guid], self.markedNpc[guid] = nil, nil
@@ -427,7 +435,7 @@ function M:Failed(name, why)
     self.failures = self.failures + 1
     if self.failures >= MAX_FAILURES then
         self.stopped = true
-        say("Could not mark " .. tostring(name) .. " (" .. why .. "). Automatic marking is paused for this step; use /" .. ns.slash .. " mark or the marker bar (/" .. ns.slash .. " markbar).")
+        ns:Print("Could not mark " .. tostring(name) .. " (" .. why .. "). Automatic marking is paused for this step; use /" .. ns.slash .. " mark or the marker bar (/" .. ns.slash .. " markbar).")
     else
         say("Could not mark " .. tostring(name) .. " (" .. why .. ").")
     end
@@ -451,6 +459,9 @@ function M:OnRaidTargetUpdate()
             local movedByUs = onOther[icon] and onOther[icon] ~= guid
             if not movedByUs and not (UnitIsDead and UnitIsDead(u)) then
                 self.handsOff[guid] = true
+                if not self.stopped then
+                    ns:Print("A raid icon set by the guide was changed or removed, so automatic marking is paused until the next step.")
+                end
                 self.stopped = true
                 self:Note("an icon we set was changed by someone else; paused for this step", nil, true)
             end
