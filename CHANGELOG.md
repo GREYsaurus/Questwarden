@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables (1,451 ranks). The client's own talent tables still hold Classic Era's trees, so they are no longer imported for Forever. Unverified until checked in the game.
+
 ## 0.1.0-alpha.30 (2026-11-01)
 
 - **Fixed:** an upgrade over an equipped item that scores 0 for your spec profile (for example boots with no armor, against boots with armor under Protection) was not equipped when *Minimum upgrade* was above 0%, because no percentage can be worked out from 0. Any gain over 0 now clears the minimum. The auction house Upgrades tab's *Min upgrade %* filter keeps these items too.

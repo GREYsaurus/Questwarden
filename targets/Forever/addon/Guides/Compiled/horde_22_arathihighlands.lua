@@ -19,8 +19,10 @@ ns.Guides:Register({
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=677,title="Call to Arms",npc="Drum Fel",z=45,x=74.2,y=33.9,text="Drum Fel.",v=1},
+    {"complete",q=676,title="The Hammer May Fall",optional=true,v=1},
     {"complete",q=677,title="Call to Arms",text="Syndicate at Northfold Manor.",v=1},
     {"turnin",q=677,title="Call to Arms",npc="Drum Fel",z=45,x=74.2,y=33.9,v=1},
+    {"turnin",q=676,title="The Hammer May Fall",npc="Drum Fel",z=45,x=74.2,y=33.9,optional=true,v=1},
     {"level",text="Stranglethorn Vale starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=30,v=1},
   },
 })

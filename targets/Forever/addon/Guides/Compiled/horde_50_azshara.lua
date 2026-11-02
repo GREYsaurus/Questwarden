@@ -19,6 +19,6 @@ ns.Guides:Register({
     {"turnin",q=3561,title="Delivery to Archmage Xylem",npc="Archmage Xylem",z=16,x=29.2,y=40.2,v=1},
     {"accept",q=3565,title="Xylem's Payment to Jediga",npc="Archmage Xylem",z=16,x=29.2,y=40.2,v=1},
     {"turnin",q=3565,title="Xylem's Payment to Jediga",npc="Jediga",z=16,x=22.6,y=51.4,v=1},
-    {"level",text="Felwood starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=54,v=1},
+    {"grind",z=16,x=58.7,y=27,text="Felwood starts at 54 and the quests here don't quite get you there: grind these until you reach it.",level=54,mobs={"Blood Elf Reclaimer","Blood Elf Surveyor","Legashi Satyr"},v=0},
   },
 })

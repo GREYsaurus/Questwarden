@@ -60,7 +60,7 @@ namespace GuideTools
                 if (!File.Exists(P(t))) return "training: skipped (" + t + ".csv missing; run fetch)";
 
             var lines = new HashSet<int>(Csv.Read(P("SkillLine"))
-                .Where(r => Csv.I(r, "CategoryID") == 7 && (Csv.I(r, "Flags") == 16 || Csv.I(r, "ID") == 40))
+                .Where(r => Csv.I(r, "CategoryID") == 7 && ((Csv.I(r, "Flags") & ~1024) == 16 || Csv.I(r, "ID") == 40)) // Forever adds bit 1024
                 .Select(r => Csv.I(r, "ID")));
             var name = new Dictionary<int, string>();
             foreach (var r in Csv.Read(P("SpellName"))) name[Csv.I(r, "ID")] = r["Name_lang"];
@@ -71,9 +71,19 @@ namespace GuideTools
                 if (Csv.I(r, "DifficultyID") == 0) level[Csv.I(r, "SpellID")] = SpellLevel(r);
             var talent = new HashSet<int>();
             var talentClass = new Dictionary<int, string>(); // spell -> class of the talent
+            // Forever's talents carry ClassID 0: the class then comes from the talent's tab (TalentTab.ClassMask).
+            var tabClass = new Dictionary<int, int>();
+            if (File.Exists(P("TalentTab")))
+                foreach (var r in Csv.Read(P("TalentTab")))
+                {
+                    int cm = Csv.I(r, "ClassMask");
+                    for (int c = 1; c <= 11; c++) if (cm == 1 << (c - 1)) tabClass[Csv.I(r, "ID")] = c;
+                }
             foreach (var r in Csv.Read(P("Talent")))
             {
-                string tc; ClientTables.ClassFile.TryGetValue(Csv.I(r, "ClassID"), out tc);
+                int classId = Csv.I(r, "ClassID");
+                if (classId == 0) tabClass.TryGetValue(Csv.I(r, "TabID"), out classId);
+                string tc; ClientTables.ClassFile.TryGetValue(classId, out tc);
                 for (int k = 0; k < 9; k++) { int s = Csv.I(r, "SpellRank_" + k); if (s > 0) { talent.Add(s); if (tc != null) talentClass[s] = tc; } }
             }
 
@@ -98,6 +108,7 @@ namespace GuideTools
                 bool marked = mask != 0;
                 if (!marked && !lineClass.TryGetValue(Csv.I(r, "SkillLine"), out mask)) continue;
                 string n; if (!name.TryGetValue(sp, out n) || string.IsNullOrEmpty(n)) continue;
+                int race = Csv.I(r, "RaceMask_0") != 0 ? Csv.I(r, "RaceMask_0") : Csv.I(r, "RaceMasks_0"); // renamed on Forever
                 if (Ctx.Excluded(sp, n, "training")) continue; // seasonal spells (target.json clientTables.excludeSpellIdsFrom)
                 int lv; level.TryGetValue(sp, out lv);
                 string st; sub.TryGetValue(sp, out st);
@@ -115,7 +126,7 @@ namespace GuideTools
                 foreach (var cb in ClassBit)
                 {
                     if ((mask & cb.Key) == 0) continue;
-                    string key = n + "#" + rank + "#" + Csv.I(r, "RaceMask_0");
+                    string key = n + "#" + rank + "#" + race;
                     Entry e;
                     // One spell per name and rank: the talent's own spell, then a row that names
                     // the class, then the lowest id (proc and effect copies share names).
@@ -125,7 +136,7 @@ namespace GuideTools
                         if (skip != "talent" && (e.Marked && !marked)) continue;
                         if (skip != "talent" && e.Marked == marked && e.Id < sp) continue;
                     }
-                    perClass[cb.Value][key] = new Entry { Id = sp, Level = lv, Rank = rank, Name = n, Race = Csv.I(r, "RaceMask_0"), Skip = skip, Marked = marked };
+                    perClass[cb.Value][key] = new Entry { Id = sp, Level = lv, Rank = rank, Name = n, Race = race, Skip = skip, Marked = marked };
                 }
             }
 

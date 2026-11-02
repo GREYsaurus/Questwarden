@@ -1,37 +1,37 @@
-﻿alliance/12_darkshore.guide:73: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
-alliance/12_darkshore.guide:79: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+﻿alliance/12_darkshore.guide:74: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
+alliance/12_darkshore.guide:80: 'The Tower of Althalaxx' has no objective locations in the database; add [at=x,y] or a goto
 alliance/13_ashenvale.guide:33: 'Raene's Cleansing' has no objective locations in the database; add [at=x,y] or a goto
 alliance/18_duskwood.guide:32: turn-in of 'The Tome of Valor' (1650) with no earlier accept on this faction's routes
 alliance/18_duskwood.guide:50: 'Sven's Revenge' has no objective locations in the database; add [at=x,y] or a goto
 alliance/18_duskwood.guide:110: turn-in of 'Mathias and the Defias' (2360) with no earlier accept on this faction's routes
 alliance/22_hillsbradfoothills.guide:74: 'Hints of a New Plague?' has no objective locations in the database; add [at=x,y] or a goto
 alliance/24_stranglethornvale.guide:67: 'Bookie Herod' has no objective locations in the database; add [at=x,y] or a goto
-alliance/28_arathihighlands.guide:22: quest 684 is 'WANTED: Marez Cowl', not 'Wanted!  Marez Cowl'
-alliance/28_arathihighlands.guide:28: quest 685 is 'WANTED: Otto and Falconcrest', not 'Wanted!  Otto and Falconcrest'
-alliance/28_arathihighlands.guide:39: quest 684 is 'WANTED: Marez Cowl', not 'Wanted!  Marez Cowl'
-alliance/28_arathihighlands.guide:40: quest 685 is 'WANTED: Otto and Falconcrest', not 'Wanted!  Otto and Falconcrest'
+alliance/28_arathihighlands.guide:26: quest 684 is 'WANTED: Marez Cowl', not 'Wanted!  Marez Cowl'
+alliance/28_arathihighlands.guide:35: quest 685 is 'WANTED: Otto and Falconcrest', not 'Wanted!  Otto and Falconcrest'
 alliance/28_arathihighlands.guide:41: quest 684 is 'WANTED: Marez Cowl', not 'Wanted!  Marez Cowl'
 alliance/28_arathihighlands.guide:42: quest 685 is 'WANTED: Otto and Falconcrest', not 'Wanted!  Otto and Falconcrest'
+alliance/28_arathihighlands.guide:43: quest 684 is 'WANTED: Marez Cowl', not 'Wanted!  Marez Cowl'
+alliance/28_arathihighlands.guide:44: quest 685 is 'WANTED: Otto and Falconcrest', not 'Wanted!  Otto and Falconcrest'
 alliance/29_dustwallowmarsh.guide:57: 'The Deserters' has no objective locations in the database; add [at=x,y] or a goto
 alliance/36_feralas.guide:24: 'Against the Hatecrest' has no objective locations in the database; add [at=x,y] or a goto
-alliance/36_feralas.guide:44: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
-alliance/36_feralas.guide:48: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
+alliance/36_feralas.guide:46: 'The Woodpaw Gnolls' has no objective locations in the database; add [at=x,y] or a goto
+alliance/36_feralas.guide:51: 'The Writhing Deep' has no objective locations in the database; add [at=x,y] or a goto
 alliance/52_westernplaguelands.guide:29: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
-alliance/52_westernplaguelands.guide:72: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
-horde/01_tauren_mulgore.guide:67: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
+alliance/52_westernplaguelands.guide:73: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+horde/01_tauren_mulgore.guide:68: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
 horde/02_undead_tirisfal.guide:86: 'Fields of Grief' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:131: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:129: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/20_thousandneedles.guide:21: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
 horde/20_thousandneedles.guide:25: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
 horde/20_thousandneedles.guide:49: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
-horde/27_arathihighlands.guide:28: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:37: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:46: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
-horde/27_arathihighlands.guide:49: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:31: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:39: 'Raising Spirits' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:48: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
+horde/27_arathihighlands.guide:51: 'Guile of the Raptor' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:24: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/30_dustwallowmarsh.guide:29: 'The Black Shield' has no objective locations in the database; add [at=x,y] or a goto
 horde/46_hinterlands.guide:30: 'Kidnapped Elder Torntusk!' has no objective locations in the database; add [at=x,y] or a goto
@@ -42,7 +42,7 @@ alliance/02_nightelf_teldrassil.guide:122 (Teldrassil): prerequisite 98398 'The 
 alliance/02_nightelf_teldrassil.guide:129 (Destiny Calls): prerequisite 2241 'The Apple Falls' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/12_darkshore.guide:19 (The Absent Minded Prospector): prerequisite 729 'The Absent Minded Prospector' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/18_duskwood.guide:41 (Aquatic Form): prerequisite 272 'Trial of the Sea Lion' is not turned in anywhere on Alliance routes (one of several alternatives)
-alliance/19_wetlands.guide:37 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
+alliance/19_wetlands.guide:38 (Report to Captain Stoutfist): prerequisite 455 'The Algaz Gauntlet' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/21_wetlands.guide:20 (The Thandol Span): prerequisite 632 'The Thandol Span' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_hillsbradfoothills.guide:64 (Blessed Arm): prerequisite 324 'The Lost Ingots' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:33 (A Noble Brew): prerequisite 335 'A Noble Brew' is not turned in anywhere on Alliance routes (one of several alternatives)
@@ -51,10 +51,10 @@ alliance/24_stranglethornvale.guide:43 (Worgen in the Woods): prerequisite 222 '
 alliance/24_stranglethornvale.guide:48 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/24_stranglethornvale.guide:88 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 horde/10_barrens.guide:49 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/12_barrens.guide:30 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/12_barrens.guide:31 (Plundering the Plunderers): prerequisite 2382 'Wrenix of Ratchet' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/12_barrens.guide:94 (News of Dogran): prerequisite 1509 'News of Dogran' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/13_stonetalonmountains.guide:21 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
-horde/13_stonetalonmountains.guide:29 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/13_stonetalonmountains.guide:22 (Call of Water): prerequisite 1530 'Call of Water' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/13_stonetalonmountains.guide:30 (Deep Cover): prerequisite 2460 'The Shattered Salute' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/17_thousandneedles.guide:23 (Revenge of Gann): prerequisite 843 'Gann's Reclamation' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/18_ashenvale.guide:30 (Ursangous's Paw): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/18_ashenvale.guide:43 (Shadumbra's Head): prerequisite 6383 'The Ashenvale Hunt' is not turned in anywhere on Horde routes (one of several alternatives)

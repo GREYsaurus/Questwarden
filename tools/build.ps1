@@ -101,6 +101,7 @@ function Load-Tools {
         [GuideTools.Ctx]::ClientProduct = $TargetInfo.clientTables.product
         [GuideTools.Ctx]::ClientTablesBuild = $TargetInfo.clientTables.build
         [GuideTools.Ctx]::ClientFlights = [bool]$TargetInfo.clientTables.flights
+        [GuideTools.Ctx]::ClientTalents = -not ($TargetInfo.clientTables.talents -eq $false)
         if ($TargetInfo.clientTables.excludeSpellIdsFrom) { [GuideTools.Ctx]::ExcludeSpellIdsFrom = [int]$TargetInfo.clientTables.excludeSpellIdsFrom }
         [GuideTools.Ctx]::ExcludeSpellIds.Clear()
         foreach ($s in @($TargetInfo.clientTables.excludeSpellIds)) { if ($s) { [void][GuideTools.Ctx]::ExcludeSpellIds.Add([int]$s) } }

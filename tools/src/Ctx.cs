@@ -50,6 +50,8 @@ namespace GuideTools
         public static string ClientProduct = "", ClientTablesBuild = "";
         // Build Database/Flights.lua from the taxi tables (target.json clientTables.flights).
         public static bool ClientFlights = false;
+        // false: the base tables' talents are not the game's (Forever's trees come from server hotfixes); keep the file as it is.
+        public static bool ClientTalents = true;
         // Spells with an id at or above this are left out of the trainer and pet tables (0 = keep all).
         // Classic Era: 400000, because the 1.15 client tables also carry Season of Discovery and seasonal
         // spells (all 400000+), with no other marker. Every spell left out is listed in a report.

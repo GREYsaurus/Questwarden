@@ -100,10 +100,12 @@ namespace GuideTools
             sb.Append("local T = ns.TalentTrees\n");
             int total = 0;
             var summary = new List<string>();
+            // Classic Era and TBC mark live tabs in an unnamed column; Forever leaves it 0 on every tab.
+            bool marksLive = tabs.Any(r => Csv.I(r, "Field_4_4_0_53627_004") != 0);
             foreach (var cls in ClassFile.OrderBy(c => c.Value))
             {
                 int mask = 1 << (cls.Key - 1);
-                var classTabs = tabs.Where(r => (Csv.I(r, "ClassMask") & mask) != 0 && Csv.I(r, "Field_4_4_0_53627_004") != 0)
+                var classTabs = tabs.Where(r => (Csv.I(r, "ClassMask") & mask) != 0 && (!marksLive || Csv.I(r, "Field_4_4_0_53627_004") != 0))
                                     .OrderBy(r => Csv.I(r, "OrderIndex")).ToList();
                 // Pet talent tabs have ClassMask 0; class tabs must number exactly 3.
                 classTabs = classTabs.Where(r => Csv.I(r, "ClassMask") == mask).ToList();
@@ -130,9 +132,15 @@ namespace GuideTools
                 sb.Append("}\n");
                 if (tabNo != 3) summary.Add("WARNING: " + cls.Value + " has " + tabNo + " talent tabs");
             }
+            if (!Ctx.ClientTalents)
+            {
+                summary.Clear();
+                summary.Add("talents: skipped (target.json clientTables.talents = false: the trees are not in the base tables)");
+                total = 0;
+            }
             string outDir = Path.Combine(addOnDir, "Talents", "Data");
             Directory.CreateDirectory(outDir);
-            File.WriteAllText(Path.Combine(outDir, "TalentTrees.lua"), sb.ToString(), new UTF8Encoding(false));
+            if (Ctx.ClientTalents) File.WriteAllText(Path.Combine(outDir, "TalentTrees.lua"), sb.ToString(), new UTF8Encoding(false));
 
             // ---- race/class legality ----
             var combos = Csv.Read(Path.Combine(db2Dir, "CharBaseInfo.csv"));

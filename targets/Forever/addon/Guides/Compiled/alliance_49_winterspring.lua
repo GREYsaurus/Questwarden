@@ -35,6 +35,7 @@ ns.Guides:Register({
     {"turnin",q=5083,title="Winterfall Firewater",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"accept",q=5084,title="Falling to Corruption",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"accept",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
+    {"accept",q=8471,title="Winterfall Ritual Totem",text="Turned in later in the route, in Felwood.",starter=20742,drops={7438,7439,7440,7441,7442,10916},via={29},v=1},
     {"complete",q=5082,title="Threat of the Winterfall",text="Winterfall Pathfinders, Den Watchers and Totemics in the two furbolg camps around Donova.",v=1},
     {"turnin",q=5082,title="Threat of the Winterfall",npc="Donova Snowden",z=618,x=31.3,y=45.2,v=1},
     {"level",text="Felwood starts at 54. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=54,v=1},

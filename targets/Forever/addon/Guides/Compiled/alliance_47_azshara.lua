@@ -24,6 +24,6 @@ ns.Guides:Register({
     {"accept",q=5534,title="Kim'jael's \"Missing\" Equipment",npc="Kim'jael",z=16,x=53.4,y=21.8,v=1},
     {"complete",q=5534,title="Kim'jael's \"Missing\" Equipment",v=1},
     {"turnin",q=5534,title="Kim'jael's \"Missing\" Equipment",npc="Kim'jael",z=16,x=53.4,y=21.8,v=1},
-    {"level",text="Felwood starts at 53. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=53,v=1},
+    {"grind",z=16,x=58.1,y=27,text="Felwood starts at 53 and the quests here don't quite get you there: grind these until you reach it.",level=53,mobs={"Blood Elf Reclaimer","Blood Elf Surveyor","Legashi Satyr"},v=0},
   },
 })

@@ -40,7 +40,9 @@
     "source": "https://wago.tools",
     "product": "wowf",
     "build": "1.60.1.70685",
-    "flights": true
+    "flights": true,
+    "_talents": "Forever's talent trees are not in the base DB2 tables: those still hold Classic Era's 433 talents (builds 70685 and 70707), while the game's trees (about 466 talents, 116 new) come from server hotfixes (docs/FOREVER_PLAN.md). Off until a hotfix source exists.",
+    "talents": false
   },
   "tocExtra": [],
   "install": "UNVERIFIED - confirm the Forever AddOns path after launch (2026-11-04)",

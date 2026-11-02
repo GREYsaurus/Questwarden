@@ -12,10 +12,10 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 | Order errors (prerequisite later, complete before accept, log over cap) | 6 |
 | Warnings | 26 |
 | Peak quest log (worst route) | 17 / 40 |
-| Reduced-XP pickups (6+ levels below estimate) | 38 |
+| Reduced-XP pickups (6+ levels below estimate) | 39 |
 | Level-gated pickups | 7 |
 | Accepted, never turned in | 12 |
-| Hub revisits (all guides) | 504 |
+| Hub revisits (all guides) | 511 |
 
 ## Per guide
 
@@ -23,113 +23,113 @@ No baseline file found.
 
 | Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A_10_Darkshore | 138 | 40 | 337 | 362 | 9 | 0 | 0 | 0 | 0 | 0 |
-| A_11_LochModan | 89 | 28 | 167 | 405 | 4 | 5 | 0 | 1 | 0 | 0 |
-| A_12_Darkshore | 82 | 19 | 513 | 547 | 7 | 0 | 0 | 0 | 6 | 3 |
+| A_10_Darkshore | 139 | 40 | 344 | 370 | 11 | 0 | 0 | 0 | 0 | 0 |
+| A_11_LochModan | 90 | 28 | 173 | 411 | 4 | 5 | 0 | 1 | 0 | 0 |
+| A_12_Darkshore | 82 | 19 | 474 | 559 | 8 | 0 | 0 | 0 | 6 | 3 |
 | A_13_Ashenvale | 40 | 17 | 86 | 183 | 2 | 0 | 0 | 0 | 0 | 0 |
-| A_14_StonetalonMountains | 29 | 8 | 307 | 307 | 8 | 0 | 0 | 0 | 1 | 0 |
+| A_14_StonetalonMountains | 29 | 8 | 176 | 176 | 5 | 0 | 0 | 0 | 1 | 0 |
 | A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_16_Ashenvale | 40 | 8 | 213 | 169 | 3 | 0 | 0 | 1 | 1 | 1 |
-| A_17_Wetlands | 76 | 24 | 216 | 266 | 5 | 0 | 0 | 2 | 0 | 0 |
-| A_18_Duskwood | 183 | 64 | 557 | 997 | 27 | 7 | 0 | 0 | 1 | 9 |
-| A_19_Wetlands | 36 | 12 | 202 | 202 | 2 | 0 | 0 | 0 | 0 | 3 |
-| A_20_Ashenvale | 40 | 10 | 347 | 328 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_17_Wetlands | 76 | 24 | 247 | 296 | 6 | 0 | 0 | 2 | 0 | 0 |
+| A_18_Duskwood | 183 | 64 | 549 | 987 | 25 | 7 | 0 | 0 | 1 | 9 |
+| A_19_Wetlands | 36 | 12 | 204 | 204 | 2 | 0 | 0 | 0 | 0 | 3 |
+| A_20_Ashenvale | 40 | 10 | 461 | 442 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_21_Wetlands | 21 | 4 | 10 | 60 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_22_HillsbradFoothills | 65 | 29 | 264 | 489 | 6 | 0 | 0 | 1 | 0 | 9 |
 | A_23_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_24_StranglethornVale | 95 | 35 | 311 | 564 | 5 | 0 | 0 | 0 | 0 | 0 |
-| A_25_ShimmeringFlats | 18 | 6 | 16 | 16 | 2 | 0 | 0 | 0 | 0 | 0 |
-| A_26_StranglethornVale | 65 | 21 | 997 | 1006 | 14 | 0 | 0 | 0 | 0 | 3 |
+| A_24_StranglethornVale | 95 | 35 | 386 | 639 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_25_ShimmeringFlats | 18 | 6 | 32 | 32 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_26_StranglethornVale | 65 | 21 | 923 | 932 | 12 | 0 | 0 | 0 | 0 | 3 |
 | A_27_AlteracMountains | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_28_ArathiHighlands | 55 | 19 | 384 | 384 | 11 | 0 | 0 | 0 | 2 | 4 |
-| A_29_DustwallowMarsh | 53 | 16 | 209 | 206 | 3 | 0 | 0 | 0 | 1 | 0 |
-| A_30_StranglethornVale | 38 | 15 | 171 | 171 | 4 | 0 | 0 | 0 | 0 | 6 |
+| A_28_ArathiHighlands | 57 | 20 | 307 | 307 | 8 | 0 | 0 | 0 | 2 | 4 |
+| A_29_DustwallowMarsh | 53 | 16 | 245 | 241 | 4 | 0 | 0 | 0 | 1 | 0 |
+| A_30_StranglethornVale | 38 | 15 | 162 | 161 | 2 | 0 | 0 | 0 | 0 | 6 |
 | A_31_Badlands | 63 | 19 | 239 | 339 | 8 | 0 | 0 | 0 | 0 | 0 |
-| A_32_SwampofSorrows | 9 | 2 | 114 | 114 | 1 | 0 | 0 | 0 | 1 | 0 |
-| A_33_StranglethornVale | 48 | 14 | 87 | 86 | 3 | 0 | 0 | 0 | 0 | 3 |
-| A_34_Desolace | 77 | 25 | 508 | 533 | 9 | 16 | 0 | 0 | 4 | 0 |
-| A_35_Tanaris | 38 | 13 | 84 | 84 | 3 | 0 | 0 | 0 | 0 | 8 |
-| A_36_Feralas | 53 | 17 | 236 | 236 | 6 | 0 | 0 | 0 | 1 | 1 |
+| A_32_SwampofSorrows | 11 | 3 | 137 | 137 | 1 | 0 | 0 | 0 | 1 | 0 |
+| A_33_StranglethornVale | 48 | 14 | 82 | 82 | 1 | 0 | 0 | 0 | 0 | 3 |
+| A_34_Desolace | 77 | 25 | 628 | 653 | 13 | 16 | 0 | 0 | 4 | 0 |
+| A_35_Tanaris | 38 | 13 | 80 | 80 | 3 | 0 | 0 | 0 | 0 | 8 |
+| A_36_Feralas | 56 | 18 | 249 | 237 | 4 | 0 | 0 | 0 | 1 | 1 |
 | A_37_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_38_Hinterlands | 24 | 4 | 14 | 14 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_38_Hinterlands | 26 | 5 | 94 | 14 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_39_StranglethornVale | 17 | 2 | 7 | 2 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_40_SearingGorge | 55 | 18 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
-| A_41_Feralas | 29 | 6 | 96 | 96 | 0 | 0 | 0 | 0 | 1 | 1 |
+| A_40_SearingGorge | 57 | 19 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
+| A_41_Feralas | 29 | 6 | 185 | 185 | 2 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_43_Tanaris | 34 | 11 | 151 | 151 | 3 | 0 | 0 | 0 | 1 | 3 |
+| A_43_Tanaris | 36 | 12 | 205 | 169 | 2 | 0 | 0 | 0 | 1 | 3 |
 | A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
-| A_46_UnGoroCrater | 42 | 14 | 421 | 421 | 7 | 0 | 0 | 0 | 3 | 0 |
-| A_47_Azshara | 17 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_48_Felwood | 26 | 10 | 197 | 197 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_49_Winterspring | 30 | 10 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
-| A_50_Felwood | 21 | 4 | 152 | 98 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_46_UnGoroCrater | 42 | 14 | 490 | 490 | 8 | 0 | 0 | 0 | 3 | 0 |
+| A_47_Azshara | 17 | 2 | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_48_Felwood | 31 | 12 | 208 | 208 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_49_Winterspring | 31 | 11 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_50_Felwood | 22 | 5 | 157 | 103 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_51_BurningSteppes | 70 | 26 | 243 | 368 | 7 | 0 | 0 | 0 | 4 | 29 |
-| A_52_WesternPlaguelands | 78 | 26 | 521 | 596 | 13 | 1 | 0 | 0 | 0 | 0 |
-| A_53_EasternPlaguelands | 41 | 10 | 315 | 340 | 4 | 0 | 0 | 0 | 1 | 0 |
-| A_54_WesternPlaguelands | 22 | 7 | 237 | 237 | 3 | 0 | 0 | 0 | 0 | 6 |
+| A_52_WesternPlaguelands | 78 | 26 | 532 | 607 | 14 | 1 | 0 | 0 | 0 | 0 |
+| A_53_EasternPlaguelands | 42 | 11 | 244 | 269 | 3 | 0 | 0 | 0 | 1 | 0 |
+| A_54_WesternPlaguelands | 26 | 9 | 270 | 270 | 5 | 0 | 0 | 0 | 0 | 6 |
 | A_55_Felwood | 12 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_56_Azshara | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_57_Tanaris | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_58_UnGoroCrater | 32 | 7 | 432 | 432 | 6 | 0 | 0 | 0 | 1 | 1 |
-| A_59_Silithus | 48 | 13 | 320 | 320 | 9 | 0 | 0 | 0 | 0 | 0 |
-| A_60_EasternPlaguelands | 19 | 6 | 281 | 281 | 3 | 0 | 0 | 0 | 0 | 12 |
-| A_61_Winterspring | 29 | 11 | 198 | 198 | 6 | 0 | 0 | 0 | 0 | 0 |
-| A_DwarfGnome_DunMorogh | 133 | 46 | 402 | 430 | 17 | 0 | 0 | 0 | 0 | 0 |
-| A_Human_Elwynn | 200 | 69 | 810 | 676 | 21 | 3 | 0 | 2 | 1 | 2 |
-| A_NightElf_Teldrassil | 193 | 68 | 479 | 635 | 20 | 0 | 0 | 0 | 4 | 0 |
-| H_10_Barrens | 177 | 59 | 388 | 441 | 20 | 0 | 0 | 0 | 0 | 0 |
-| H_11_StonetalonMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_58_UnGoroCrater | 32 | 7 | 345 | 345 | 4 | 0 | 0 | 0 | 1 | 1 |
+| A_59_Silithus | 51 | 15 | 297 | 249 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_60_EasternPlaguelands | 20 | 7 | 281 | 281 | 3 | 0 | 0 | 0 | 0 | 12 |
+| A_61_Winterspring | 29 | 11 | 201 | 201 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_DwarfGnome_DunMorogh | 133 | 46 | 376 | 404 | 18 | 0 | 0 | 0 | 0 | 0 |
+| A_Human_Elwynn | 200 | 69 | 828 | 689 | 23 | 3 | 0 | 2 | 1 | 2 |
+| A_NightElf_Teldrassil | 193 | 68 | 491 | 642 | 21 | 0 | 0 | 0 | 4 | 0 |
+| H_10_Barrens | 177 | 59 | 343 | 450 | 21 | 0 | 0 | 0 | 0 | 0 |
+| H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_12_Barrens | 122 | 40 | 406 | 474 | 16 | 0 | 2 | 1 | 3 | 4 |
-| H_13_StonetalonMountains | 42 | 18 | 159 | 179 | 2 | 0 | 0 | 0 | 1 | 0 |
-| H_14_SouthernBarrens | 39 | 7 | 76 | 126 | 3 | 0 | 0 | 1 | 0 | 3 |
-| H_15_StonetalonMountains | 17 | 5 | 23 | 26 | 3 | 0 | 0 | 0 | 1 | 0 |
-| H_16_SouthernBarrens | 10 | 5 | 30 | 80 | 1 | 0 | 0 | 0 | 0 | 0 |
+| H_13_StonetalonMountains | 43 | 19 | 174 | 196 | 2 | 0 | 0 | 0 | 1 | 0 |
+| H_14_SouthernBarrens | 47 | 12 | 148 | 198 | 4 | 0 | 0 | 1 | 0 | 3 |
+| H_15_StonetalonMountains | 18 | 6 | 23 | 43 | 3 | 0 | 0 | 0 | 1 | 0 |
+| H_16_SouthernBarrens | 12 | 7 | 100 | 150 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_17_ThousandNeedles | 43 | 15 | 194 | 269 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_18_Ashenvale | 63 | 19 | 326 | 326 | 6 | 0 | 0 | 0 | 2 | 8 |
-| H_19_StonetalonMountains | 22 | 7 | 238 | 238 | 3 | 0 | 0 | 0 | 0 | 0 |
+| H_19_StonetalonMountains | 22 | 7 | 330 | 330 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_20_ThousandNeedles | 68 | 19 | 268 | 468 | 8 | 0 | 0 | 0 | 4 | 1 |
-| H_21_HillsbradFoothills | 55 | 18 | 249 | 249 | 3 | 2 | 0 | 0 | 0 | 0 |
-| H_22_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_21_HillsbradFoothills | 59 | 20 | 250 | 250 | 3 | 3 | 0 | 0 | 0 | 0 |
+| H_22_ArathiHighlands | 16 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_23_StranglethornVale | 27 | 6 | 185 | 80 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_24_ShimmeringFlats | 23 | 7 | 71 | 92 | 0 | 0 | 0 | 1 | 0 | 3 |
-| H_25_Desolace | 50 | 13 | 282 | 282 | 6 | 0 | 0 | 0 | 1 | 0 |
-| H_26_StranglethornVale | 63 | 18 | 333 | 243 | 5 | 0 | 0 | 0 | 0 | 0 |
-| H_27_ArathiHighlands | 70 | 21 | 387 | 345 | 7 | 0 | 0 | 0 | 1 | 3 |
+| H_25_Desolace | 53 | 14 | 312 | 312 | 8 | 0 | 0 | 0 | 1 | 0 |
+| H_26_StranglethornVale | 63 | 18 | 344 | 253 | 5 | 0 | 0 | 0 | 0 | 0 |
+| H_27_ArathiHighlands | 77 | 24 | 693 | 651 | 12 | 0 | 0 | 0 | 1 | 3 |
 | H_28_AlteracMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_29_ThousandNeedles | 8 | 3 | 0 | 75 | 0 | 0 | 0 | 0 | 0 | 3 |
 | H_30_DustwallowMarsh | 40 | 12 | 100 | 150 | 4 | 0 | 0 | 0 | 0 | 0 |
-| H_31_StranglethornVale | 49 | 14 | 678 | 574 | 16 | 0 | 0 | 0 | 0 | 0 |
-| H_32_Badlands | 46 | 11 | 170 | 170 | 6 | 0 | 0 | 0 | 0 | 0 |
-| H_33_SwampofSorrows | 24 | 7 | 269 | 269 | 4 | 1 | 0 | 0 | 1 | 0 |
-| H_34_StranglethornVale | 50 | 13 | 330 | 287 | 6 | 0 | 0 | 0 | 0 | 0 |
+| H_31_StranglethornVale | 49 | 14 | 413 | 308 | 8 | 0 | 0 | 0 | 0 | 0 |
+| H_32_Badlands | 46 | 11 | 132 | 132 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_33_SwampofSorrows | 24 | 7 | 248 | 248 | 3 | 1 | 0 | 0 | 1 | 0 |
+| H_34_StranglethornVale | 50 | 13 | 417 | 374 | 6 | 0 | 0 | 0 | 0 | 0 |
 | H_35_DustwallowMarsh | 20 | 6 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_36_Desolace | 27 | 5 | 89 | 89 | 0 | 1 | 0 | 0 | 2 | 0 |
 | H_37_Tanaris | 51 | 13 | 82 | 82 | 3 | 0 | 0 | 0 | 0 | 11 |
-| H_38_Feralas | 49 | 16 | 105 | 105 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_39_Hinterlands | 30 | 9 | 127 | 127 | 0 | 0 | 0 | 0 | 1 | 0 |
+| H_38_Feralas | 51 | 17 | 155 | 125 | 3 | 0 | 0 | 0 | 0 | 0 |
+| H_39_Hinterlands | 32 | 10 | 133 | 127 | 0 | 0 | 0 | 0 | 1 | 0 |
 | H_40_StranglethornVale | 13 | 4 | 50 | 50 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_41_SearingGorge | 51 | 17 | 185 | 184 | 4 | 0 | 0 | 0 | 2 | 3 |
+| H_41_SearingGorge | 51 | 17 | 149 | 147 | 3 | 0 | 0 | 0 | 2 | 3 |
 | H_42_SwampofSorrows | 35 | 9 | 149 | 118 | 1 | 0 | 0 | 0 | 2 | 0 |
 | H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_44_Tanaris | 27 | 9 | 142 | 142 | 3 | 0 | 0 | 0 | 1 | 0 |
+| H_44_Tanaris | 29 | 10 | 196 | 161 | 2 | 0 | 0 | 0 | 1 | 0 |
 | H_45_Azshara | 20 | 3 | 58 | 58 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_46_Hinterlands | 39 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_47_BlastedLands | 24 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_48_UnGoroCrater | 65 | 22 | 685 | 685 | 14 | 0 | 0 | 0 | 4 | 1 |
+| H_48_UnGoroCrater | 65 | 22 | 840 | 840 | 16 | 0 | 0 | 0 | 4 | 1 |
 | H_49_BurningSteppes | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_50_Azshara | 12 | 4 | 69 | 69 | 1 | 0 | 0 | 0 | 0 | 0 |
-| H_51_Felwood | 42 | 12 | 155 | 155 | 1 | 1 | 0 | 0 | 2 | 0 |
-| H_52_Winterspring | 30 | 9 | 70 | 70 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_53_Felwood | 12 | 4 | 170 | 170 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_50_Azshara | 12 | 4 | 112 | 112 | 1 | 0 | 0 | 0 | 0 | 0 |
+| H_51_Felwood | 42 | 12 | 222 | 222 | 3 | 1 | 0 | 0 | 2 | 0 |
+| H_52_Winterspring | 31 | 10 | 70 | 70 | 0 | 0 | 0 | 0 | 0 | 0 |
+| H_53_Felwood | 18 | 7 | 290 | 290 | 4 | 0 | 0 | 0 | 0 | 0 |
 | H_54_WesternPlaguelands | 78 | 28 | 209 | 409 | 7 | 1 | 0 | 0 | 1 | 0 |
-| H_55_EasternPlaguelands | 68 | 20 | 543 | 568 | 11 | 0 | 0 | 0 | 1 | 12 |
-| H_56_WesternPlaguelands | 15 | 6 | 4 | 79 | 1 | 0 | 0 | 0 | 0 | 3 |
-| H_57_Silithus | 48 | 13 | 407 | 407 | 10 | 0 | 0 | 0 | 0 | 0 |
-| H_58_Winterspring | 19 | 6 | 106 | 106 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 224 | 71 | 458 | 529 | 16 | 0 | 0 | 1 | 1 | 6 |
-| H_Tauren_Mulgore | 154 | 57 | 208 | 413 | 10 | 0 | 5 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 134 | 45 | 169 | 214 | 13 | 0 | 0 | 1 | 0 | 0 |
+| H_55_EasternPlaguelands | 69 | 21 | 514 | 539 | 10 | 0 | 0 | 0 | 1 | 12 |
+| H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
+| H_57_Silithus | 50 | 14 | 323 | 283 | 7 | 0 | 0 | 0 | 0 | 0 |
+| H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_OrcTroll_Durotar | 225 | 71 | 503 | 551 | 18 | 0 | 0 | 1 | 1 | 6 |
+| H_Tauren_Mulgore | 154 | 57 | 206 | 411 | 10 | 0 | 5 | 0 | 5 | 0 |
+| H_Undead_Tirisfal | 136 | 46 | 164 | 235 | 13 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -137,14 +137,14 @@ No baseline file found.
 |---|---|---|
 | Human/HUNTER | 17 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Human/HUNTER (Hardcore) | 17 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Orc/MAGE | 17 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:45] |
+| Orc/MAGE (Hardcore) | 17 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:45] |
+| Troll/WARLOCK | 17 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:45] |
+| Troll/WARLOCK (Hardcore) | 17 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:45] |
 | Dwarf/SHAMAN | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Dwarf/SHAMAN (Hardcore) | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Gnome/PRIEST | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Gnome/PRIEST (Hardcore) | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Orc/MAGE | 16 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:44] |
-| Orc/MAGE (Hardcore) | 16 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:44] |
-| Troll/WARLOCK | 16 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:44] |
-| Troll/WARLOCK (Hardcore) | 16 | H_55_EasternPlaguelands (Un-Life's Little Annoyances) [horde/55_easternplaguelands.guide:44] |
 | Human/MAGE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Human/MAGE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
 | Human/PALADIN | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
@@ -155,8 +155,8 @@ No baseline file found.
 
 - Orc/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 - Orc/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
-- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:178]: complete step before the quest is accepted
-- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:178]: complete step before the quest is accepted
+- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:180]: complete step before the quest is accepted
+- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:180]: complete step before the quest is accepted
 - Troll/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 - Troll/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
 
@@ -192,7 +192,7 @@ No baseline file found.
 ## Findings (per guide)
 
 - A_11_LochModan: accepted but never turned in on the route: 6388 Gryth Thurden
-- A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 18.4
+- A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 18.5
 - A_11_LochModan: reduced-XP quest: Honor Students (6387, level 10) at estimated level 17.8
 - A_11_LochModan: reduced-XP quest: Rat Catching (416, level 11) at estimated level 17.7
 - A_11_LochModan: reduced-XP quest: Ride to Ironforge (6391, level 10) at estimated level 18.1
@@ -235,6 +235,7 @@ No baseline file found.
 - H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.8 [horde/12_barrens.guide:92, Troll/PRIEST]
 - H_14_SouthernBarrens: accepted but never turned in on the route: 878 Tribes at War
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.0
+- H_21_HillsbradFoothills: reduced-XP quest: The Rescue (498, level 22) at estimated level 29.1
 - H_21_HillsbradFoothills: reduced-XP quest: WANTED: Syndicate Personnel (549, level 22) at estimated level 29.1
 - H_24_ShimmeringFlats: accepted but never turned in on the route: 1145 The Swarm Grows
 - H_33_SwampofSorrows: reduced-XP quest: Draenethyst Crystals (1389, level 35) at estimated level 41.1
@@ -245,6 +246,6 @@ No baseline file found.
 - H_Tauren_Mulgore: level-gated pickup: Call of Fire (2984) needs 10, model level 8.8 [horde/01_tauren_mulgore.guide:131, Tauren/SHAMAN]
 - H_Tauren_Mulgore: level-gated pickup: Heeding the Call (5928) needs 10, model level 8.9 [horde/01_tauren_mulgore.guide:132, Tauren/DRUID]
 - H_Tauren_Mulgore: level-gated pickup: Hidden Enemies (5726) needs 9, model level 7.6 [horde/01_tauren_mulgore.guide:112, Tauren/WARRIOR]
-- H_Tauren_Mulgore: level-gated pickup: Mazzranache (766) needs 5, model level 3.9 [horde/01_tauren_mulgore.guide:56, Tauren/WARRIOR]
+- H_Tauren_Mulgore: level-gated pickup: Mazzranache (766) needs 5, model level 4.0 [horde/01_tauren_mulgore.guide:57, Tauren/WARRIOR]
 - H_Tauren_Mulgore: level-gated pickup: The Hunter's Way (861) needs 10, model level 8.7 [horde/01_tauren_mulgore.guide:129, Tauren/SHAMAN]
 - H_Undead_Tirisfal: accepted but never turned in on the route: 445 Delivery to Silverpine Forest

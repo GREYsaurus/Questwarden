@@ -15,6 +15,8 @@ ns.Guides:Register({
     {"complete",q=1393,title="Galen's Escape",text="Escort: stay close; it fails if the NPC dies.",v=1},
     {"complete",q=1396,title="Encroaching Wildlife",v=1},
     {"turnin",q=1393,title="Galen's Escape",npc="Galen's Strongbox",z=8,x=47.8,y=39.8,v=1},
+    {"accept",q=1392,title="Noboru the Cudgel",text="Starts from the item Noboru's Cudgel.",starter=6196,drops={5477},v=1},
+    {"turnin",q=1392,title="Noboru the Cudgel",npc="Magtoor",z=8,x=26,y=31.4,v=1},
     {"turnin",q=1396,title="Encroaching Wildlife",npc="Watcher Biggs",z=8,x=26.7,y=59.8,v=1},
     {"level",text="Stranglethorn Vale starts at 42. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=42,v=1},
   },
