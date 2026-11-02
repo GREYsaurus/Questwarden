@@ -230,7 +230,7 @@ function AU:Upgrades()
             if ok and e.uncertain and not f.uncertain then ok = false end
             if ok and f.slot ~= "all" and tostring(e.target) ~= tostring(f.slot) then ok = false end
             if ok and f.maxGold and entry.unit > f.maxGold * 10000 then ok = false end
-            if ok and e.kind == "upgrade" and (f.minPct or 0) > 0 and not (e.pct and e.pct >= f.minPct) then ok = false end
+            if ok and e.kind == "upgrade" and (f.minPct or 0) > 0 and e.pct and e.pct < f.minPct then ok = false end
             if ok then out[#out + 1] = { e = e, entry = entry, slot = e.target } end
         end
     end

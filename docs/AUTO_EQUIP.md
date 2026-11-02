@@ -71,7 +71,7 @@ It ranks below every real score upgrade. A weapon with fewer or different stats 
 
 **Upgrade %:** (new − current) / current × 100, shown to one decimal as *estimated spec score*. It's not a promise of more DPS, healing or survival.
 - **Empty slot:** shows *Empty slot filled*.
-- **Current score of 0:** shows *Upgrade - percentage unavailable*.
+- **Current score of 0:** shows *Upgrade - percentage unavailable*. Any gain over 0 counts as more than the *Minimum upgrade*, so it is still equipped.
 - **Never shown:** infinity or NaN.
 
 **Equal scores, and items just replaced,** are never swapped in. That stops loops.

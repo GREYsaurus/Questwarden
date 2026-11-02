@@ -350,10 +350,9 @@ function U:Evaluate(d, ctx)
         local minPct = tonumber(ctx.minPct or prof().autoEquipMinPct) or 0
         if best.pct then
             if best.pct >= minPct and best.pct > EPS then e.kind = "upgrade" else e.reason = "below your minimum upgrade" end
-        elseif minPct <= 0 then
-            e.kind = "upgrade" -- baseline 0: an improvement, but no percentage
         else
-            e.reason = "percentage unavailable, minimum upgrade not checked"
+            -- Baseline 0 (the equipped item scores nothing for this profile): any gain clears any minimum.
+            e.kind = "upgrade"
         end
     else
         local gain = self:ArmorOnlyGain(d, best.replaced)

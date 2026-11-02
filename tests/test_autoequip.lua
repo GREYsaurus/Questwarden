@@ -201,6 +201,11 @@ settle()
 local z = U.last["0:15"]
 check(z and z.kind == "upgrade" and z.pct == nil and U.PctText(z) == "Upgrade - percentage unavailable", "zero baseline: upgrade without a percentage")
 check(equipped(95031) == nil, "...and it is a BoE, so it is only marked")
+prof().autoEquipMinPct = 1
+MOCK.fire("BAG_UPDATE", 0)
+settle()
+check(U.last["0:15"] and U.last["0:15"].kind == "upgrade", "zero baseline: still an upgrade with a minimum upgrade set (any gain over 0 clears it)")
+prof().autoEquipMinPct = 0
 MOCK.bags[0][15] = nil
 
 -- Combat defers, then revalidates --------------------------------------------------------------------------------------------
