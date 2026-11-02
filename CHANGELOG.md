@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.33 (2026-11-01)
+
+- **Quests done in the same place are done together (Classic Era and Forever):**
+  - Tirisfal Glades (also TBC): *Doom Weed* is picked up in Brill and gathered among the Rot Hide gnolls while you do *Graverobbers*.
+  - Teldrassil: *Timberling Sprouts* with *Timberling Seeds* at Lake Al'Ameth.
+  - Tanaris (both factions): *The Dunemaul Compound* while you dig for *Gahz'ridian* at the compound, and *Thistleshrub Valley* with *The Thirsty Goblin*'s dew collectors.
+  - Feralas: *Stinglasher* in the Zukk'ash hive with *Zukk'ash Infestation*.
+  - The new report `tools/research/pack_misses.py` lists such pairs, including quests you can pick up before the earlier step.
+- **Fixed:** Hillsbrad Foothills (Horde) turned in *Souvenirs of Death* before the skulls were collected; the turn-in now comes after.
+- **Bigger bags are equipped automatically** (part of automatic upgrades; *Equip bigger bags*, on). A plain bag that isn't unbound Bind-on-Equip goes into an empty bag slot. When all four slots are full, it replaces your smallest bag if it has more slots: that bag's items are moved to your other bags first, and nothing happens if they don't fit. Profession and soul bags are left alone.
+
+**Tested:** offline only (TBC suite 5,659/5,659, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
+
 ## 0.1.0-alpha.32 (2026-11-01)
 
 - **Quests from objects:** when a quest is picked up from, or handed in at, an object instead of an NPC (a wanted poster, a notice board, a grave), the step says so and what to do: for example, "Wanted! is not an NPC but a wanted poster, on a post or board. Right-click it to read the quest, then press Accept."
