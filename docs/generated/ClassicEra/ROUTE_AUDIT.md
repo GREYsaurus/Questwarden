@@ -12,7 +12,7 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
 | Warnings | 22 |
 | Peak quest log (worst route) | 15 / 20 |
-| Reduced-XP pickups (6+ levels below estimate) | 40 |
+| Reduced-XP pickups (6+ levels below estimate) | 39 |
 | Level-gated pickups | 14 |
 | Accepted, never turned in | 2 |
 | Hub revisits (all guides) | 515 |
@@ -56,7 +56,7 @@ No baseline file found.
 | A_40_SearingGorge | 57 | 19 | 232 | 231 | 8 | 0 | 0 | 0 | 3 | 3 |
 | A_41_Feralas | 29 | 6 | 185 | 185 | 2 | 0 | 0 | 0 | 1 | 1 |
 | A_42_DustwallowMarsh | 6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
-| A_43_Tanaris | 36 | 12 | 205 | 169 | 2 | 0 | 0 | 0 | 1 | 3 |
+| A_43_Tanaris | 36 | 12 | 208 | 173 | 2 | 0 | 0 | 0 | 1 | 3 |
 | A_44_Hinterlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 490 | 490 | 8 | 0 | 0 | 0 | 3 | 0 |
@@ -89,7 +89,7 @@ No baseline file found.
 | H_18_Ashenvale | 63 | 19 | 326 | 326 | 6 | 0 | 0 | 0 | 2 | 8 |
 | H_19_StonetalonMountains | 22 | 7 | 330 | 330 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_20_ThousandNeedles | 68 | 19 | 268 | 468 | 8 | 0 | 0 | 0 | 4 | 1 |
-| H_21_HillsbradFoothills | 59 | 20 | 250 | 250 | 3 | 4 | 1 | 0 | 0 | 0 |
+| H_21_HillsbradFoothills | 59 | 20 | 250 | 250 | 3 | 3 | 1 | 0 | 0 | 0 |
 | H_22_ArathiHighlands | 16 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_23_StranglethornVale | 27 | 6 | 185 | 82 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_24_ShimmeringFlats | 23 | 7 | 71 | 97 | 0 | 0 | 0 | 0 | 0 | 3 |
@@ -106,13 +106,13 @@ No baseline file found.
 | H_35_DustwallowMarsh | 20 | 6 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_36_Desolace | 27 | 5 | 89 | 89 | 0 | 1 | 0 | 0 | 2 | 0 |
 | H_37_Tanaris | 51 | 13 | 82 | 82 | 3 | 0 | 0 | 0 | 0 | 11 |
-| H_38_Feralas | 51 | 17 | 155 | 125 | 3 | 0 | 0 | 0 | 0 | 0 |
+| H_38_Feralas | 51 | 17 | 154 | 124 | 3 | 0 | 0 | 0 | 0 | 0 |
 | H_39_Hinterlands | 32 | 10 | 133 | 127 | 0 | 0 | 0 | 0 | 1 | 0 |
 | H_40_StranglethornVale | 13 | 4 | 50 | 50 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_41_SearingGorge | 51 | 17 | 149 | 147 | 3 | 0 | 0 | 0 | 2 | 3 |
 | H_42_SwampofSorrows | 35 | 9 | 149 | 120 | 1 | 0 | 0 | 0 | 2 | 0 |
 | H_43_DustwallowMarsh | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_44_Tanaris | 29 | 10 | 196 | 161 | 2 | 0 | 0 | 0 | 1 | 0 |
+| H_44_Tanaris | 29 | 10 | 202 | 167 | 2 | 0 | 0 | 0 | 1 | 0 |
 | H_45_Azshara | 20 | 3 | 58 | 58 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_46_Hinterlands | 39 | 9 | 60 | 60 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_47_BlastedLands | 24 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
@@ -228,8 +228,7 @@ None.
 - H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:56, Scourge/WARRIOR]
 - H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.3 (quests only: 17) [horde/12_barrens.guide:87, Orc/WARLOCK]
 - H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.2 (quests only: 17) [horde/12_barrens.guide:85, Troll/PRIEST]
-- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 30.0 (quests only: 29) [horde/21_hillsbradfoothills.guide:38, Orc/WARRIOR]
-- H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
+- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 29.9 (quests only: 29) [horde/21_hillsbradfoothills.guide:37, Orc/WARRIOR]
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8
 - H_21_HillsbradFoothills: reduced-XP quest: The Rescue (498, level 22) at estimated level 29.8
 - H_21_HillsbradFoothills: reduced-XP quest: WANTED: Syndicate Personnel (549, level 22) at estimated level 29.8

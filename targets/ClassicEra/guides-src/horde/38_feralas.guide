@@ -31,7 +31,9 @@ turnin 2902 Woodpaw Investigation | The Woodpaw Battle Map on a table in the sou
 accept 2903 The Battle Plans
 turnin 2903 The Battle Plans | Hadoken Swiftstrider.
 accept 7730 Zukk'ash Infestation
+accept 7731 Stinglasher | Hadoken Swiftstrider.
 complete 7730 Zukk'ash Infestation | Zukk'ash Carapaces from Zukk'ash Stingers at the hive south-east of the camp.
+complete 7731 Stinglasher | Stinglasher roams the same Zukk'ash hive.
 turnin 7730 Zukk'ash Infestation
 complete 2974 A Grim Discovery | Grimtotem Horns from Grimtotem Raiders north of Camp Mojache.
 complete 2975 The Ogres of Feralas | Gordunni Ogres, Ogre Mages and Brutes at the northern ogre camp.
@@ -57,8 +59,6 @@ turnin 3062 Dark Heart
 turnin 2980 The Ogres of Feralas | Rok Orhan.
 turnin 2822 The Mark of Quality | Jangdor Swiftstrider.
 accept 7734 Improved Quality
-accept 7731 Stinglasher
-complete 7731 Stinglasher
 complete 7734 Improved Quality
 turnin 7734 Improved Quality
 turnin 7731 Stinglasher

@@ -70,12 +70,14 @@ accept Graverobbers | Magistrate Sevren.
 bind Brill [area=159,2119]
 complete Gordo's Task | Gloom Weed around Brill.
 turnin Gordo's Task
+accept 5482 Doom Weed | Junior Apothecary Holland, Brill.
 complete 365 Fields of Grief | Pumpkins in the Solliden Farmstead fields, among the Scarlet Warriors.
 complete 427 At War With The Scarlet Crusade | Scarlet Warriors at Solliden Farmstead.
 turnin 427 At War With The Scarlet Crusade
 accept 370 At War With The Scarlet Crusade
 accept 374 Proof of Demise
 complete Graverobbers
+complete 5482 Doom Weed | Doom Weed grows among the Rot Hide gnolls.
 turnin 365 Fields of Grief | Apothecary Johaan.
 accept 407 Fields of Grief
 accept 367 A New Plague
@@ -84,8 +86,6 @@ turnin 367 A New Plague
 accept 368 A New Plague
 turnin A Putrid Task
 accept The Mills Overrun
-accept 5482 Doom Weed
-complete 5482 Doom Weed
 accept 361 A Letter Undelivered
 complete The Mills Overrun | Agamand Mills, north.
 complete 374 Proof of Demise

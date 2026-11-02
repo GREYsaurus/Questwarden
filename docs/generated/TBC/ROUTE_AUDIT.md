@@ -393,7 +393,7 @@ None.
 - H_Stranglethorn: reduced-XP quest: Welcome to the Jungle (583, level 30) at estimated level 38.0
 - H_SwampOfSorrows: level-gated pickup: Continued Threat (1428) needs 41, model level 40.8 (quests only: 39) [horde/16b_swampofsorrows.guide:40, Orc/WARRIOR]
 - H_Tauren_Mulgore: level-gated pickup: Call of Earth (1519) needs 4, model level 1.0 (quests only: 1) [horde/01_tauren_mulgore.guide:17, Tauren/SHAMAN]
-- H_Undead_Tirisfal: level-gated pickup: A New Plague (367) needs 6, model level 5.8 (quests only: 4) [horde/02_undead_tirisfal.guide:81, Scourge/WARRIOR]
+- H_Undead_Tirisfal: level-gated pickup: A New Plague (367) needs 6, model level 5.8 (quests only: 4) [horde/02_undead_tirisfal.guide:83, Scourge/WARRIOR]
 - H_Undead_Tirisfal: level-gated pickup: At War With The Scarlet Crusade (427) needs 5, model level 4.9 (quests only: 4) [horde/02_undead_tirisfal.guide:62, Scourge/WARRIOR]
 - H_Undead_Tirisfal: level-gated pickup: Garments of Darkness (5650) needs 5, model level 5.0 (quests only: 4) [horde/02_undead_tirisfal.guide:64, Scourge/PRIEST]
 - H_Undead_Tirisfal: level-gated pickup: Gordo's Task (5481) needs 5, model level 4.7 (quests only: 4) [horde/02_undead_tirisfal.guide:59, Scourge/WARRIOR]
