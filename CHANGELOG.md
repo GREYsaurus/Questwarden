@@ -1,10 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.34 (2026-11-01)
 
 - **Low durability warning** (on; Settings → Low Durability Warning): when equipped gear drops below 30% durability, a red on-screen message says how many pieces are below 30%, with the raid warning sound. It repeats only when another piece drops below.
 - **Class tips wait for their level.** A tip that names a spell or quest level ("Overpower (12)", "at 10") is held until you reach it; the next tip that fits comes instead. Tips already shown are kept.
 - The quest log's **Orphaned** button sits under *Abandon Quest* instead of at the top right.
+
+**Tested:** offline only (TBC suite 5,686/5,686, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
 
 ## 0.1.0-alpha.33 (2026-11-01)
 
