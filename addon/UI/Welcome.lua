@@ -252,6 +252,13 @@ function render.build(d)
         WL:Option("No talent plan", "Choose talents yourself. You still get a reminder when you have points to spend.",
             d.plan == "none", true, function() S():SetPlan(d, "none") end)
         WL:Text("Gear advice (which quest reward to take, which items are better) follows this plan.", nil, T.muted)
+        WL:Section("Put on better gear automatically?")
+        local gp = d.gear and ns.Gear:ProfileById(d.gear)
+        WL:Option("Yes, equip upgrades from my bags",
+            gp and ("When an item in your bags is better for " .. ns.Upgrade:ProfileName(gp) .. ", it is put on for you. Never in combat, and never items that would become soulbound when worn.")
+            or "Not available for this talent plan: there is no gear profile for its tree. You can still see which items are better in their tooltips.",
+            d.autoEquip and d.gear, d.gear and true or false, function() d.autoEquip = not d.autoEquip end)
+        WL:Text("Off unless you tick it. You choose quest rewards yourself either way.", nil, T.muted)
         return
     end
     WL:Text("A talent plan is a recommendation for this character. " .. ns.name .. " never spends talent points or changes gear: the plan drives the level-up reminder, the markers in the talent window and the calculator (/" .. ns.slash .. " talents). Plans start with the first talent point at level 10; you can pick one now.")

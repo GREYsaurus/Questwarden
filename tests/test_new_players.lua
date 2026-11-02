@@ -20,7 +20,10 @@ local KEYS = { "newPlayerTips", "spellCoach", "playTogether", "playFollowLeader"
 for _, k in ipairs(KEYS) do check(ns.PROFILE_DEFAULTS[k] == false, "new-player setting " .. k .. " is off by default") end
 local saved = {}
 for _, k in ipairs(KEYS) do saved[k] = prof()[k] end
-saved.groupFeatures = prof().groupFeatures
+saved.groupFeatures, saved.autoEquip = prof().groupFeatures, prof().autoEquip
+local gearProfile0 = ns.char.gearProfile
+check(ns.PROFILE_DEFAULTS.gearQuestRewards == true and ns.PROFILE_DEFAULTS.rewardMarkers == true and ns.PROFILE_DEFAULTS.autoReward == false,
+    "quest reward upgrades are on by default; choosing the reward stays with the player")
 
 -- Explainers -------------------------------------------------------------------------------------------
 local NP = ns.NewPlayer
@@ -243,6 +246,34 @@ for _, r in ipairs(S.ROLES) do
 end
 S:SetRole(d, "unsure")
 check(d.plan == default.id, "I don't know yet: the usual leveling plan")
+check(d.gear == S:GearForPlan(d.plan, d.role), "the gear profile follows the suggested plan")
+check(d.autoEquip == false, "automatic upgrades start off")
+
+-- Gear profile for a plan: a spec profile of the plan's tree whenever the class has one (every class here).
+local class1 = MOCK.player.class
+for class, specs in pairs(ns.TalentProfileBuilds.specs) do
+    MOCK.player.class = class
+    for spec, e in pairs(specs) do
+        local have, tank, other = false, false, false
+        for _, p in ipairs(ns.Gear:ProfilesForClass(class)) do
+            if S.SameTree(p.spec, spec) then
+                have = true
+                if p.role == "Tank" then tank = true else other = true end
+            end
+        end
+        local id = S:GearForPlan(e.plan)
+        local p = id and ns.Gear:ProfileById(id)
+        check((p ~= nil) == have, class .. " " .. spec .. ": a gear profile exactly when the tree has one (" .. tostring(id) .. ")")
+        if p then
+            check(S.SameTree(p.spec, spec) and p.class == class, class .. " " .. spec .. ": " .. p.id .. " is for that tree")
+            check(p.role ~= "Tank" or not other, class .. " " .. spec .. ": no tank profile unless asked")
+            local tp = ns.Gear:ProfileById(S:GearForPlan(e.plan, "tank"))
+            if tank then check(tp.role == "Tank", class .. " " .. spec .. ": the tank role gets the tank profile") end
+        end
+    end
+end
+MOCK.player.class = class1
+check(S.SameTree("Feral", "Feral Combat") and S.SameTree("Arms", "Arms") and not S.SameTree("Fire", "Frost") and not S.SameTree("Fer", "Feral Combat"), "tree names match whole words")
 for i = 4, 6 do check(WL:Go(1) and d.step == i, "Next to " .. S:Steps(d)[i].id) end
 WL:Render()
 WL:Go(-1)
@@ -261,8 +292,12 @@ E.Load = load
 if not ok then check(prof().newPlayerTips == false and prof().groupFeatures == false and ns.char.newPlayer == nil, "a failed finish leaves the helpers as they were") end
 d.guide = guide0 or d.guide
 d.step = #S:Steps(d)
+local wantGear = d.gear
+if wantGear then d.autoEquip = true end
 local finished, why = S:Finish(d)
 check(finished, "Finish Setup succeeds on the new-player path: " .. tostring(why))
+check(ns.char.gearProfile == (wantGear or nil), "the spec profile is saved for automatic upgrades (" .. tostring(wantGear) .. ")")
+check(prof().autoEquip == (wantGear and true or false), "automatic upgrades follow the new player's answer")
 check(ns.char.newPlayer == true and prof().newPlayerTips and prof().spellCoach and prof().playTogether and prof().sessionRecap, "the helpers are saved")
 check(prof().groupFeatures == true, "play together turns on group settings")
 WL:Open(true)
@@ -274,5 +309,6 @@ WL:Later()
 -- Put everything back for later tests.
 for k, v in pairs(saved) do prof()[k] = v end
 ns.char.newPlayer, ns.char.setup, ns.char.routing = newPlayer0, setup0, routing0
+ns.char.gearProfile = gearProfile0
 if guide0 and E.guide and E.guide.id ~= guide0 then E:Load(guide0) end
 CF:Rebuild()

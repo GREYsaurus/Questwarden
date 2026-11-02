@@ -39,7 +39,7 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
   - Items that dozens of kinds of mob drop, such as the OOX distress beacons, get steps that appear only if you find the item.
 - **Completionist mode** ([docs/COMPLETIONIST.md](docs/COMPLETIONIST.md)): in place of the Speed route, every quest the bundled data knows for your character. It goes lowest level first, zone by zone, comes back to zones as more quests open up, and includes dungeons.
 - **Setup wizard** ([docs/SETUP.md](docs/SETUP.md)): it first asks whether you are new to World of Warcraft.
-  - **New players** get six pages in plain words: where to start, whether they want to tank, heal or deal damage (with a suggested talent plan for it), the recommended dungeons (picked, so they learn to run them), and the helpers below.
+  - **New players** get six pages in plain words: where to start, whether they want to tank, heal or deal damage (with a suggested talent plan for it, and the choice to equip gear upgrades automatically), the recommended dungeons (picked, so they learn to run them), and the helpers below.
   - **Experienced players** choose route and mode, talent plan and gear profile, dungeons, training and upgrades, and helpers.
   - Nothing changes until *Finish Setup*, and you can run it again any time with `/qw setup`.
 - **Dungeon runs** ([docs/DUNGEONS.md](docs/DUNGEONS.md)): pick the dungeons you want in your route.

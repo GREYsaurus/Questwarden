@@ -23,7 +23,7 @@ The window has a progress line, *Back*, *Next*, *Set Up Later* and, on the last 
 ### Welcome
 
 "Is this your first time playing World of Warcraft?" *Next* needs an answer. Saved as `ns.char.newPlayer` at *Finish Setup*.
-- **Yes:** Welcome, Route, Talents, Dungeons, Helpers, Review. Route has no mode choice (Speed, the recommended guide) and plain wording. Talents first asks whether they want to tank, heal or deal damage (or don't know) and suggests a plan for it; no gear profile (it follows the plan). Dungeons explains them and suggests the dungeons the guides have quests for, all picked on a first setup. Options keep their defaults. Details: docs/NEW_PLAYERS.md.
+- **Yes:** Welcome, Route, Talents, Dungeons, Helpers, Review. Route has no mode choice (Speed, the recommended guide) and plain wording. Talents first asks whether they want to tank, heal or deal damage (or don't know) and suggests a plan for it; no gear profile (it follows the plan), and the question whether to equip upgrades automatically (off unless ticked; not offered when the plan's tree has no gear profile). Dungeons explains them and suggests the dungeons the guides have quests for, all picked on a first setup. Options keep their defaults. Details: docs/NEW_PLAYERS.md.
 - **No:** every page below, then Helpers and Review.
 
 ### 1. Route
@@ -57,7 +57,7 @@ The window has a progress line, *Back*, *Next*, *Set Up Later* and, on the last 
 - **No talent guidance** (`ns.char.noTalentPlan`) turns off plan picks in reminders and the talent window. The unspent-points reminder stays.
 
 **Gear profile:** gear scoring for tooltips, quest rewards and bag markers.
-- By default it follows the plan's talent tree: the leveling spec profile for that tree, or *Automatic*.
+- By default it follows the plan's talent tree: the spec profile for that tree (leveling first, then pre-raid, then raid; a tank profile only when a new player chose to tank), or *Automatic* when the class has no profile for that tree. A spec profile is what automatic upgrades need.
 - Choosing a profile yourself keeps it.
 - The review warns when the profile and the plan are for different trees.
 

@@ -17,7 +17,8 @@
 -- to tank, heal or deal damage (or do not know), and the suggested plan follows (Setup:SuggestedPlan: the class
 -- default, the spec its leveling advice names, when it fits the role); the recommended dungeons (those the leveling guides have quests
 -- for) picked on a first setup so they learn to run them, no training or options page (defaults kept), the gear
--- profile following the talent plan. Both paths end with the helpers page (Setup.HELPERS),
+-- profile following the talent plan, and the automatic-upgrades question on the talents page (off until ticked).
+-- Both paths end with the helpers page (Setup.HELPERS),
 -- whose switches are settings in the profile and start off.
 --
 -- ns.char.setup = { version, done, legacy, draft, at, lastError }
@@ -312,14 +313,27 @@ function Setup:PlanSpec(planId)
     end
 end
 
--- The gear profile that goes with a plan: the leveling spec profile of the same tree, else automatic.
-function Setup:GearForPlan(planId)
+-- Gear profiles name a tree by its short name ("Feral" for the talent tree "Feral Combat").
+local function sameTree(gearSpec, spec)
+    return gearSpec ~= nil and spec ~= nil and (gearSpec == spec or string.sub(spec, 1, #gearSpec + 1) == gearSpec .. " ")
+end
+Setup.SameTree = sameTree
+
+local CONTEXT_PICK = { leveling = 1, ["pve-preraid"] = 2, ["pve-raid"] = 3 }
+
+-- The gear profile that goes with a plan: a spec profile of the same tree (automatic upgrades need one),
+-- leveling before pre-raid before raid, and a tank profile only for the tank role. Else automatic.
+function Setup:GearForPlan(planId, role)
     local spec = planId and planId ~= "none" and self:PlanSpec(planId)
     if not spec then return false end
+    local best, bestRank
     for _, p in ipairs(ns.Gear:ProfilesForClass(ns.Compat.PlayerInfo().class)) do
-        if p.spec == spec and p.context == "leveling" then return p.id end
+        if sameTree(p.spec, spec) then
+            local rank = (CONTEXT_PICK[p.context] or 4) + (((p.role == "Tank") ~= (role == "tank")) and 10 or 0)
+            if not bestRank or rank < bestRank then best, bestRank = p, rank end
+        end
     end
-    return false
+    return best and best.id or false
 end
 
 local speedDungeonCache = {}
@@ -485,7 +499,7 @@ end
 -- Draft edits that keep related choices consistent.
 function Setup:SetPlan(d, planId)
     d.plan = planId
-    if not d.gearTouched then d.gear = self:GearForPlan(planId) end
+    if not d.gearTouched then d.gear = self:GearForPlan(planId, d.role) end
     if not d.gear then d.autoEquip = false end
 end
 
@@ -540,7 +554,7 @@ function Setup:Warnings(d)
     end
     local spec = self:PlanSpec(d.plan)
     local gp = d.gear and ns.Gear:ProfileById(d.gear)
-    if gp and spec and gp.spec ~= spec then
+    if gp and spec and gp.spec and not sameTree(gp.spec, spec) then
         out[#out + 1] = "Your gear profile (" .. gp.spec .. ") is for a different tree than your talent plan (" .. spec .. "); talent-window suggestions follow the gear profile."
     end
     return out
