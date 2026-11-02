@@ -195,8 +195,8 @@ fire(tt)
 check(#tt.lines == 0, "unknown item adds nothing")
 
 -- Quest rewards -------------------------------------------------------------------------------------------------
--- Off by default: the reward tooltips compare the choices, no chat lines.
-check(ns.PROFILE_DEFAULTS.gearQuestRewards == false and ns.GearUI.DEFAULTS.gearQuestRewards == false, "reward ranking in chat is off by default")
+-- On by default (the player still picks the reward); off: no chat lines.
+check(ns.PROFILE_DEFAULTS.gearQuestRewards == true and ns.GearUI.DEFAULTS.gearQuestRewards == true, "reward ranking in chat is on by default")
 MOCK.calls, MOCK.printed = {}, {}
 MOCK.dialog = { questID = 77000, title = "Quiet Quest", choices = 2, completable = true }
 MOCK.questChoices = { 90002, 90001 }
@@ -212,6 +212,13 @@ check(ns.db.profile.gearQuestRewards == false and mig.rewardChat19, "a saved 'on
 ns.db.profile.gearQuestRewards = true
 ns:InitSavedVariables()
 check(ns.db.profile.gearQuestRewards == true, "turning it on afterwards sticks")
+ns.db.profile.gearQuestRewards, ns.db.profile.rewardMarkers, mig.rewardAdvice29 = false, false, nil
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == true and ns.db.profile.rewardMarkers == true and mig.rewardAdvice29, "alpha.29 turns reward ranking and markers on once")
+ns.db.profile.gearQuestRewards = false
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == false, "turning it off afterwards sticks")
+ns.db.profile.gearQuestRewards = true
 MOCK.calls, MOCK.printed = {}, {}
 MOCK.dialog = { questID = 77001, title = "Boot Quest", choices = 2, completable = true }
 MOCK.fire("QUEST_COMPLETE")

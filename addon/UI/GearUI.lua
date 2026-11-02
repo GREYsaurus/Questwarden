@@ -273,7 +273,7 @@ local CHECKS = {
     { "gearShowPercent", "Show relative score change (%)" },
     { "gearShowConfidence", "Show profile confidence" },
 }
-GUI.DEFAULTS = { gearEnabled = true, gearTooltip = true, gearQuestRewards = false, gearShowPercent = true, gearShowConfidence = true }
+GUI.DEFAULTS = { gearEnabled = true, gearTooltip = true, gearQuestRewards = true, gearShowPercent = true, gearShowConfidence = true }
 
 function GUI:Create()
     self:HookTooltip(GameTooltip)
