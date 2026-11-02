@@ -75,7 +75,7 @@ It works without the Inventory Manager switch. The chat line "Repaired all items
 
 **"Orphaned"** means the quest is in your log, but no open step of the active guide and no step of any **later guide on your route** (the `@next` chain to 70) accepts, completes or turns it in. For example, Westfall's *The Killing Fields* picked up while still in Elwynn is **not** orphaned, because the Westfall guide turns it in later.
 
-- Open with the **Orphaned (N)** button on the quest log window, or `/qw orphans`.
+- Open with the **Orphaned (N)** button on the quest log window (under *Abandon Quest*), or `/qw orphans`.
 - Orphaned quests are ticked by default. Class, profession and seasonal quests are listed but **not** ticked.
 - **Abandon N** asks for confirmation in a standard dialog ("This cannot be undone"). Quests are then abandoned one at a time using the default UI's own sequence. Before each one, the quest ID at that log position is re-checked, so a shifted log can never drop the wrong quest. Only removals the game confirms are reported.
 - With no guide loaded, nothing is called orphaned.

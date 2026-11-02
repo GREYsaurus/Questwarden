@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- The quest log's **Orphaned** button sits under *Abandon Quest* instead of at the top right.
+
 ## 0.1.0-alpha.33 (2026-11-01)
 
 - **Quests done in the same place are done together (Classic Era and Forever):**

@@ -68,7 +68,17 @@ function OF:AttachToQuestLog()
     local log = _G.QuestLogFrame
     if not log or self.logButton then return end
     local b = W.Button(log, "Orphaned", 80, 20, function() OF:Toggle() end)
-    b:SetPoint("TOPRIGHT", log, "TOPRIGHT", -40, -44)
+    -- Under the client's Abandon Quest button, found among the log's children by name; top right without it.
+    local abandon
+    for _, c in ipairs({ log:GetChildren() }) do
+        if c.GetName and c:GetName() == "QuestLogFrameAbandonButton" then abandon = c break end
+    end
+    if abandon then
+        b:SetPoint("TOPLEFT", abandon, "BOTTOMLEFT", 0, -2)
+        b:SetPoint("TOPRIGHT", abandon, "BOTTOMRIGHT", 0, -2)
+    else
+        b:SetPoint("TOPRIGHT", log, "TOPRIGHT", -40, -44)
+    end
     b:SetFrameLevel((log:GetFrameLevel() or 1) + 5)
     b:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
