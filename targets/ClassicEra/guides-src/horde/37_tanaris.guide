@@ -16,6 +16,7 @@ travel Tanaris
 train
 fp Gadgetzan
 accept 992 Gadgetzan Water Survey | Senior Surveyor Fizzledowser.
+bind Gadgetzan [area=976]
 accept 2781 WANTED: Caliph Scorpidsting [elite; group=3; optional]
 accept 2865 Scarab Shells [dungeon=Zul'Farrak]
 complete 2781 WANTED: Caliph Scorpidsting [elite; group=3; optional] | Caliph Scorpidsting's Head drops from Caliph Scorpidsting.

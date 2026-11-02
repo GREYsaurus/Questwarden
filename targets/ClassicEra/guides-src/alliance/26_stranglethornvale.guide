@@ -24,6 +24,7 @@ accept 574 Special Forces
 complete 574 Special Forces | Kurzen Commandos and Headshrinkers.
 turnin 574 Special Forces
 accept 213 Hostile Takeover
+bind Booty Bay [area=35]
 accept 616 The Haunted Isle
 turnin 210 Krazek's Cookery
 accept 627 Favor for Krazek

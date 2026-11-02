@@ -15,6 +15,7 @@
 travel Hillsbrad Foothills
 fp Tarren Mill
 accept 496 Elixir of Suffering | Apothecary Lydon.
+bind Tarren Mill [area=272]
 accept 1066 Blood of Innocents [optional]
 accept 494 Time To Strike [optional] | Deathguard Lesh.
 accept 527 Battle of Hillsbrad | High Executor Darthalia.

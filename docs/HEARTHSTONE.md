@@ -36,6 +36,10 @@ Flight paths aren't compared. A flight may still be quicker than walking; the su
 
 If neither is known (the hearthstone is set at an inn no guide uses, and you haven't hearthed there yet), there's no suggestion until you hearth once.
 
+## Where the guides set the hearthstone
+
+Each starting zone sets it at its first town. Later guides set it at the town they keep coming back to, on the first visit, if that town has an inn. `python -I tools/research/hearth_spots.py ClassicEra` lists every walk back to town from a kill step and whether a hearth or death-skip suggestion would show there; `--inns` lists the towns with an inn where those walks gather.
+
 ## Death skips
 
 When dying on purpose would get you to the next town step faster, the step suggests it, for example: "Death skip: the graveyard is near this step. Dying to a mob and taking the spirit healer's resurrection saves about 3 min of walking." It's only a suggestion.

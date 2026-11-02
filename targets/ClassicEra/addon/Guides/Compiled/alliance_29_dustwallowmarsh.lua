@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",npc="Captain Evencane",z=15,x=67.9,y=48.4,classes={"WARRIOR"},v=1},
     {"fp",npc="Baldruc",z=15,x=67.5,y=51.3,place="Theramore",node=32,v=1},
     {"accept",q=1282,title="They Call Him Smiling Jim",npc="Guard Byron",z=15,x=66.2,y=46.1,text="Guard Byron, at the Theramore gate.",v=1},
+    {"bind",npc="Innkeeper Janene",z=15,x=66.6,y=45.2,place="Theramore Isle",npcId=6272,areas={513,514},v=1},
     {"turnin",q=1282,title="They Call Him Smiling Jim",npc="Captain Garran Vimes",z=15,x=68.2,y=48.6,text="Captain Garran Vimes, Foothold Citadel.",v=1},
     {"accept",q=1204,title="Mudrock Soup and Bugs",npc="Morgan Stern",z=15,x=66.3,y=45.5,text="Morgan Stern, by the Theramore docks.",v=1},
     {"complete",q=1204,title="Mudrock Soup and Bugs",text="Mudrock tortoises along the Theramore coast.",v=1},

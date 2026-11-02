@@ -16,6 +16,7 @@ travel Dustwallow Marsh
 train
 fp Theramore
 accept 1282 They Call Him Smiling Jim | Guard Byron, at the Theramore gate.
+bind Theramore Isle [area=513,514]
 turnin 1282 They Call Him Smiling Jim | Captain Garran Vimes, Foothold Citadel.
 accept 1204 Mudrock Soup and Bugs | Morgan Stern, by the Theramore docks.
 complete 1204 Mudrock Soup and Bugs | Mudrock tortoises along the Theramore coast.

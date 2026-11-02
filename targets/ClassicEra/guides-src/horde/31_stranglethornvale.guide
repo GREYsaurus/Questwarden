@@ -19,6 +19,7 @@ accept 340 Chapter II
 accept 341 Chapter III
 accept 342 Chapter IV
 accept 584 Bloodscalp Clan Heads
+bind Grom'gol Base Camp [area=117]
 complete 339 Chapter I
 complete 340 Chapter II
 complete 341 Chapter III

@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=621,title="Zanzil's Secret",npc="Crank Fizzlebub",z=33,x=27.1,y=77.2,v=1},
+    {"bind",npc="Innkeeper Skindle",z=33,x=27,y=77.3,place="Booty Bay",npcId=6807,areas={35},v=1},
     {"accept",q=617,title="Akiris by the Bundle",npc="Privateer Bloads",z=33,x=26.8,y=76.4,v=1},
     {"accept",q=8552,title="The Monogrammed Sash",text="Starts from the item Monogrammed Sash.",starter=3985,drops={1493},v=1},
     {"complete",q=621,title="Zanzil's Secret",v=1},

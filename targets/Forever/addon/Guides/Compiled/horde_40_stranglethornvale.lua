@@ -10,6 +10,7 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Stranglethorn Vale",dest="Stranglethorn Vale",v=1},
     {"accept",q=586,title="Speaking with Gan'zulah",npc="Bubbling Cauldron",z=33,x=32.2,y=27.6,v=1},
+    {"bind",npc="Innkeeper Thulbek",z=33,x=31.5,y=29.8,place="Grom'gol Base Camp",npcId=5814,areas={117},v=1},
     {"complete",q=586,title="Speaking with Gan'zulah",v=1},
     {"turnin",q=586,title="Speaking with Gan'zulah",npc="Bubbling Cauldron",z=33,x=32.2,y=27.6,v=1},
     {"accept",q=588,title="The Fate of Yenniku",npc="Bubbling Cauldron",z=33,x=32.2,y=27.6,v=1},

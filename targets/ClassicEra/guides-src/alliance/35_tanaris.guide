@@ -15,6 +15,7 @@
 travel Tanaris
 fp Gadgetzan
 accept 992 Gadgetzan Water Survey | Senior Surveyor Fizzledowser.
+bind Gadgetzan [area=976]
 turnin 2864 Tran'rek
 accept 2781 WANTED: Caliph Scorpidsting [elite; group=3; optional]
 accept 2865 Scarab Shells [dungeon=Zul'Farrak]

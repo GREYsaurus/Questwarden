@@ -15,6 +15,7 @@
 travel Silithus
 train
 accept 8277 Deadly Desert Venom
+bind Cenarion Hold [area=3425]
 accept 8280 Securing the Supply Lines
 accept 8284 The Twilight Mystery
 accept 8318 Secret Communication

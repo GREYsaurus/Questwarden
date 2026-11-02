@@ -20,6 +20,7 @@ ns.Guides:Register({
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"fp",npc="Urda",z=45,x=73,y=32.7,place="Hammerfall",node=17,v=1},
     {"accept",q=655,title="Hammerfall",npc="Gor'mul",z=45,x=72.6,y=33.9,text="Gor'mul.",v=1},
+    {"bind",npc="Innkeeper Adegwa",z=45,x=73.8,y=32.5,place="Hammerfall",npcId=9501,areas={321},v=1},
     {"turnin",q=638,title="Trollbane",npc="Zengu",z=45,x=73.8,y=34,v=1},
     {"accept",q=642,title="The Princess Trapped",npc="Shards of Myzrael",z=45,x=62.5,y=33.7,text="The Shards of Myzrael, south-east.",v=1},
     {"accept",q=635,title="Crystal in the Mountains",text="Shown only if you find Pendant of Myzrael.",starter=4614,drops={587,588,595,597,660,667,671,674},ifFound=true,v=1},

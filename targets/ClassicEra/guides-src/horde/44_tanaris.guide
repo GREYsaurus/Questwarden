@@ -14,6 +14,7 @@
 
 travel Tanaris
 accept 10 The Scrimshank Redemption
+bind Gadgetzan [area=976]
 complete 10 The Scrimshank Redemption | Inside the Noxious Lair tunnels.
 turnin 10 The Scrimshank Redemption
 accept 110 Insect Part Analysis

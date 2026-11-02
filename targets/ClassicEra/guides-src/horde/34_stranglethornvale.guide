@@ -16,6 +16,7 @@ fly Grom'gol | Take the flight from Stonard.
 travel Stranglethorn Vale
 train
 accept 621 Zanzil's Secret
+bind Booty Bay [area=35]
 accept 617 Akiris by the Bundle
 accept 8552 The Monogrammed Sash
 complete 621 Zanzil's Secret

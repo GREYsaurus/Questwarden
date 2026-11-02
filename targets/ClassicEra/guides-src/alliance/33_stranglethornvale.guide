@@ -15,6 +15,7 @@
 travel Stranglethorn Vale
 train
 accept 621 Zanzil's Secret
+bind Booty Bay [area=35]
 accept 2864 Tran'rek
 accept 2872 Stoley's Debt
 complete 621 Zanzil's Secret

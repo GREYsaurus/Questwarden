@@ -10,6 +10,7 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Tanaris",dest="Tanaris",v=1},
     {"accept",q=10,title="The Scrimshank Redemption",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},
+    {"bind",npc="Innkeeper Fizzgrimble",z=440,x=52.5,y=27.9,place="Gadgetzan",npcId=7733,areas={976},v=1},
     {"complete",q=10,title="The Scrimshank Redemption",text="Inside the Noxious Lair tunnels.",v=1},
     {"turnin",q=10,title="The Scrimshank Redemption",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},
     {"accept",q=110,title="Insect Part Analysis",npc="Senior Surveyor Fizzledowser",z=440,x=50.2,y=27.5,v=1},
@@ -29,8 +30,8 @@ ns.Guides:Register({
     {"turnin",q=3161,title="Gahz'ridian",npc="Marvon Rivetseeker",z=440,x=52.7,y=45.9,optional=true,v=1},
     {"accept",q=2605,title="The Thirsty Goblin",npc="Marin Noggenfogger",z=440,x=51.8,y=28.7,text="Marin Noggenfogger, Gadgetzan. Needs level 44.",optional=true,v=1},
     {"accept",q=3362,title="Thistleshrub Valley",npc="Tran'rek",z=440,x=51.6,y=26.8,text="Tran'rek, Gadgetzan.",v=1},
-    {"complete",q=2605,title="The Thirsty Goblin",text="Laden Dew Glands from Thistleshrub Dew Collectors in the south-west of Tanaris.",optional=true,pack=22,v=1},
-    {"complete",q=3362,title="Thistleshrub Valley",text="Thistleshrubs in the same valley as the dew collectors.",pack=22,v=1},
+    {"complete",q=2605,title="The Thirsty Goblin",text="Laden Dew Glands from Thistleshrub Dew Collectors in the south-west of Tanaris.",optional=true,pack=23,v=1},
+    {"complete",q=3362,title="Thistleshrub Valley",text="Thistleshrubs in the same valley as the dew collectors.",pack=23,v=1},
     {"turnin",q=2605,title="The Thirsty Goblin",npc="Marin Noggenfogger",z=440,x=51.8,y=28.7,optional=true,v=1},
     {"accept",q=2606,title="In Good Taste",npc="Marin Noggenfogger",z=440,x=51.8,y=28.7,v=1},
     {"turnin",q=2606,title="In Good Taste",npc="Sprinkle",z=440,x=51.1,y=26.9,v=1},

@@ -50,6 +50,7 @@ accept 1503 Forged Steel [class=Warrior; race=Undead,Tauren]
 complete 1503 Forged Steel [class=Warrior; race=Undead,Tauren] | Forged Steel Bars: loot Stolen Iron Chest.
 turnin 1503 Forged Steel [class=Warrior; race=Undead,Tauren]
 accept 870 The Forgotten Pools | Tonga Runetotem.
+bind The Crossroads [area=380]
 turnin 860 Sergra Darkthorn [optional]
 turnin 842 Crossroads Conscription [optional; race=Orc,Troll] | Sergra Darkthorn, Crossroads.
 accept 844 Plainstrider Menace | Sergra Darkthorn.

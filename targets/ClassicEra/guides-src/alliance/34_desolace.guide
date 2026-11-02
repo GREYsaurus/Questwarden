@@ -17,6 +17,7 @@ accept 1453 Reclaimers' Business in Desolace [zone=Ironforge] | Roetten Stoneham
 note From Ironforge fly to Menethil Harbor and take the boat to Auberdine. Fly to Stonetalon Peak if you have it (otherwise Astranaar, then ride west through Stonetalon) and follow the road south into Desolace. Nijel's Point is in the north-east.
 fp Nijel's Point
 accept 1387 Centaur Bounty | Corporal Melkins.
+bind Nijel's Point [area=608]
 accept 1382 Strange Alliance
 complete 1382 Strange Alliance
 accept 1437 Vahlarriel's Search | Vahlarriel Demonslayer.

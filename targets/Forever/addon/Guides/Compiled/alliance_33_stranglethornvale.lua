@@ -19,6 +19,7 @@ ns.Guides:Register({
     {"train",text="No warlock trainer in this zone - train at the next town or capital.",classes={"WARLOCK"},v=1},
     {"train",text="No warrior trainer in this zone - train at the next town or capital.",classes={"WARRIOR"},v=1},
     {"accept",q=621,title="Zanzil's Secret",npc="Crank Fizzlebub",z=33,x=27.1,y=77.2,v=1},
+    {"bind",npc="Innkeeper Skindle",z=33,x=27,y=77.3,place="Booty Bay",npcId=6807,areas={35},v=1},
     {"accept",q=2864,title="Tran'rek",npc="Krazek",z=33,x=26.9,y=77.2,v=1},
     {"accept",q=2872,title="Stoley's Debt",npc="\"Sea Wolf\" MacKinley",z=33,x=27.8,y=77.1,v=1},
     {"complete",q=621,title="Zanzil's Secret",v=1},

@@ -25,6 +25,7 @@ complete 970 The Tower of Althalaxx [optional] | Dark Strand cultists at Ordil'A
 turnin 970 The Tower of Althalaxx [optional]
 fp Astranaar
 accept 991 Raene's Cleansing | Raene Wolfrunner, Astranaar.
+bind Astranaar [area=415]
 accept 1070 On Guard in Stonetalon
 accept 1008 The Zoram Strand | Shindrell Swiftfire.
 complete 1008 The Zoram Strand | Wrathtail naga at the strand.

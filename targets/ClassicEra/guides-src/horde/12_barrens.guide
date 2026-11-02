@@ -16,6 +16,7 @@ travel The Barrens
 train
 accept 3281 Stolen Silver
 accept 1069 Deepmoss Spider Eggs | Needs level 15. If you are lower, {name} skips it and moves on.
+bind Ratchet [area=392]
 accept 865 Raptor Horns | Mebok Mizzyrix.
 complete 865 Raptor Horns | Sunscale Scytheclaws.
 complete 3281 Stolen Silver | Stolen Silver: loot Stolen Silver.

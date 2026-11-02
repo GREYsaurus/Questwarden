@@ -15,6 +15,7 @@
 travel Wetlands
 train
 accept 305 In Search of The Excavation Team | Tarrel Rockweaver.
+bind Menethil Harbor [area=150,2104]
 accept 484 Young Crocolisk Skins | James Halloran, Menethil Harbor.
 accept 472 Fall of Dun Modr | Needs level 25. If you are lower, {name} skips it and moves on.
 accept 470 Digging Through the Ooze | Sida, west Menethil.

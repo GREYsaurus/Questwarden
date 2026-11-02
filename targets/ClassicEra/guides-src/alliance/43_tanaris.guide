@@ -15,6 +15,7 @@
 fly Gadgetzan | Take the flight from Theramore.
 travel Tanaris
 accept 2768 Divino-matic Rod [dungeon=Zul'Farrak]
+bind Gadgetzan [area=976]
 accept 82 Noxious Lair Investigation
 complete 82 Noxious Lair Investigation | Centipaar insects at the Noxious Lair.
 turnin 82 Noxious Lair Investigation

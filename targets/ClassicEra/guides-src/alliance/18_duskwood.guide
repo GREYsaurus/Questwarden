@@ -15,6 +15,7 @@
 travel Duskwood
 train
 accept 174 Look To The Stars [optional]
+bind Darkshire [area=42]
 turnin 174 Look To The Stars [optional]
 accept 175 Look To The Stars [optional]
 turnin 175 Look To The Stars [optional]

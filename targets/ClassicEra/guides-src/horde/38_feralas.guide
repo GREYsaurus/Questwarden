@@ -15,6 +15,7 @@
 travel Feralas
 fp Camp Mojache
 accept 2862 War on the Woodpaw | Hadoken Swiftstrider, Camp Mojache.
+bind Camp Mojache [area=1099]
 accept 2973 A New Cloak's Sheen | Krueg Skullsplitter.
 accept 2975 The Ogres of Feralas | Rok Orhan.
 accept 2822 The Mark of Quality | Jangdor Swiftstrider.

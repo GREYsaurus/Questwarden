@@ -16,6 +16,7 @@ travel Arathi Highlands
 train
 fp Hammerfall
 accept 655 Hammerfall | Gor'mul.
+bind Hammerfall [area=321]
 turnin 638 Trollbane
 accept 642 The Princess Trapped | The Shards of Myzrael, south-east.
 accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.

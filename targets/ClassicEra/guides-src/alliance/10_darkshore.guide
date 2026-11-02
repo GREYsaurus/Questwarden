@@ -16,6 +16,7 @@ travel Darkshore
 train
 fp Auberdine
 accept 947 Cave Mushrooms | Barithras Moonshade.
+bind Auberdine [area=442]
 complete 947 Cave Mushrooms | The Mist's Edge cave.
 turnin 947 Cave Mushrooms
 accept 948 Onu

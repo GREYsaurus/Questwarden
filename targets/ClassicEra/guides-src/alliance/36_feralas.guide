@@ -16,6 +16,7 @@ travel Feralas
 train
 fp Feathermoon Stronghold
 accept 2866 The Ruins of Solarsal | Shandris Feathermoon.
+bind Feathermoon Stronghold [area=1116]
 turnin 2866 The Ruins of Solarsal | The gazebo on the island south.
 accept 2867 Return to Feathermoon Stronghold
 turnin 2867 Return to Feathermoon Stronghold

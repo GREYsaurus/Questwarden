@@ -14,6 +14,7 @@
 
 travel Stranglethorn Vale
 accept 586 Speaking with Gan'zulah
+bind Grom'gol Base Camp [area=117]
 complete 586 Speaking with Gan'zulah
 turnin 586 Speaking with Gan'zulah
 accept 588 The Fate of Yenniku
