@@ -4,7 +4,8 @@
 
 Setting: **Show Talent Suggestions** (General → Talents, on by default). In the default talent window (N):
 
-- **Markers:** numbered markers (1, 2, 3) on the plan's next picks in the tree you're viewing; pick 1 glows.
+- **Markers:** numbered markers (1, 2, 3) on the plan's next picks in the tree you're viewing. Under each one are the levels at which to put its points, for example "12, 13, 14". Levels you have already reached read "now" ("now x2" for two points). Pick 1 is green with a gold glow, which pulses while you have a point to spend.
+- **Tree tab:** the bottom tab of the tree that pick 1 is in gets a gold highlight and a green "1", so you can find it from any tab.
 - **A panel beside the window:**
   - the plan and its next three picks (tree, rank, level);
   - what blocks the next pick, if anything (tier points or a prerequisite);

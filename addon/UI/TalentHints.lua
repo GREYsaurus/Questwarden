@@ -8,7 +8,9 @@
 --
 -- Setting "Show Talent Suggestions". In the default talent window (Blizzard_TalentUI, loaded on
 -- demand) this adds, for the build of your spec profile (Talents/ProfileBuilds.lua):
---   - numbered markers on the next picks (1 = next point) on the tab you are looking at,
+--   - numbered markers on the next picks (1 = next point) on the tab you are looking at; pick 1 is green with a gold
+--     glow, which pulses while you have a point to spend,
+--   - a gold highlight and a "1" on the bottom tab of the tree pick 1 is in, so it can be found from any tab,
 --   - a small panel: the build, the next picks, deviations, and the source,
 --   - a tooltip line on every talent the build uses.
 -- Talents are matched by tier and column, never by name, so any client language works.
@@ -17,7 +19,7 @@
 
 local _, ns = ...
 
-local TH = { markers = {} }
+local TH = { markers = {}, tabMarks = {} }
 ns.TalentHints = TH
 
 local MAX_MARKS = 3
@@ -82,13 +84,38 @@ function TH:State()
         local s = seq[i]
         if (live[s.talent.id] or 0) < s.rank and not seen[s.talent.id] then
             seen[s.talent.id] = true
-            st.next[#st.next + 1] = { talent = s.talent, rank = s.rank, level = s.level, index = i }
+            st.next[#st.next + 1] = { talent = s.talent, rank = s.rank, level = s.level, index = i, levels = {} }
             if #st.next >= MAX_MARKS then break end
         end
     end
+    -- The levels of every point the plan still puts into each of those talents.
+    for _, pk in ipairs(st.next) do
+        for i = idx, #seq do
+            local s = seq[i]
+            if s.talent.id == pk.talent.id and (live[s.talent.id] or 0) < s.rank then pk.levels[#pk.levels + 1] = s.level end
+        end
+    end
+    st.playerLevel = ns.Compat.PlayerInfo().level
     if st.next[1] and ci then st.blocked = self:Blocked(st.next[1].talent, live, ci) end
     st.live, st.ci = live, ci
     return st
+end
+
+-- "level 12", or "now" for a level you have reached (its point is due).
+function TH.LevelText(level, playerLevel)
+    if playerLevel and level <= playerLevel then return "now" end
+    return "level " .. level
+end
+
+-- The levels to put points into a talent: "now" for the ones you have reached ("now x2" for two), then the later
+-- levels, e.g. "now, 12, 13, 14".
+function TH.LevelsText(levels, playerLevel)
+    local due, later = 0, {}
+    for _, l in ipairs(levels or {}) do
+        if playerLevel and l <= playerLevel then due = due + 1 else later[#later + 1] = tostring(l) end
+    end
+    if due > 0 then table.insert(later, 1, due > 1 and ("now x" .. due) or "now") end
+    return table.concat(later, ", ")
 end
 
 -- Blizzard talent window --------------------------------------------------------------------------
@@ -104,22 +131,70 @@ end
 
 local function talentButton(i) return _G["PlayerTalentFrameTalent" .. i] end
 
+-- A looping fade (bright to dim and back) on a texture; nil when the client has no animation groups.
+local function pulse(tex)
+    local g = tex.CreateAnimationGroup and tex:CreateAnimationGroup()
+    local a = g and g.CreateAnimation and g:CreateAnimation("Alpha")
+    if not a then return nil end
+    if a.SetFromAlpha then a:SetFromAlpha(1) a:SetToAlpha(0.25) end
+    a:SetDuration(0.6)
+    g:SetLooping("BOUNCE")
+    return g
+end
+
 local function marker(b)
     local m = TH.markers[b]
     if not m and b.CreateFontString then
         m = { text = b:CreateFontString(nil, "OVERLAY", "NumberFontNormalLarge"), glow = b:CreateTexture(nil, "OVERLAY") }
         m.text:SetPoint("TOPLEFT", b, "TOPLEFT", -4, 4)
+        -- The levels to spend its points at, under the button.
+        m.levels = b:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+        m.levels:SetPoint("TOP", b, "BOTTOM", 0, -2)
         m.glow:SetTexture("Interface\\Buttons\\UI-ActionButton-Border")
         m.glow:SetBlendMode("ADD")
-        m.glow:SetSize(64, 64)
+        m.glow:SetVertexColor(1, 0.82, 0)
+        m.glow:SetSize(80, 80)
         m.glow:SetPoint("CENTER", b, "CENTER", 0, 0)
+        m.pulse = pulse(m.glow)
         TH.markers[b] = m
     end
     return m
 end
 
+-- The highlight on a tree's bottom tab (PlayerTalentFrameTab1-3).
+local function tabMark(tab)
+    local m = TH.tabMarks[tab]
+    if not m and tab.CreateTexture then
+        m = { glow = tab:CreateTexture(nil, "OVERLAY"), text = tab:CreateFontString(nil, "OVERLAY", "NumberFontNormalLarge") }
+        m.glow:SetTexture("Interface\\PaperDollInfoFrame\\UI-Character-Tab-Highlight")
+        m.glow:SetBlendMode("ADD")
+        m.glow:SetVertexColor(1, 0.82, 0)
+        m.glow:SetPoint("TOPLEFT", tab, "TOPLEFT", 4, 2)
+        m.glow:SetPoint("BOTTOMRIGHT", tab, "BOTTOMRIGHT", -4, 2)
+        m.text:SetPoint("TOPRIGHT", tab, "TOPRIGHT", -2, 6)
+        m.text:SetTextColor(0.3, 1, 0.3)
+        m.text:SetText("1")
+        m.pulse = pulse(m.glow)
+        TH.tabMarks[tab] = m
+    end
+    return m
+end
+
+local function hideMark(m)
+    m.glow:Hide()
+    m.text:Hide()
+    if m.levels then m.levels:Hide() end
+    if m.pulse then m.pulse:Stop() end
+end
+
+local function showGlow(m, pulsing)
+    m.glow:Show()
+    if m.pulse then if pulsing then m.pulse:Play() else m.pulse:Stop() end end
+end
+
 function TH:HideMarkers()
-    for _, m in pairs(self.markers) do m.text:Hide() m.glow:Hide() end
+    for _, m in pairs(self.markers) do hideMark(m) end
+    for _, m in pairs(self.tabMarks) do hideMark(m) end
 end
 
 function TH:Panel()
@@ -161,7 +236,7 @@ function TH:PanelText(st)
     else
         for i, p in ipairs(st.next) do
             local tree = st.ci and st.ci.tabs[p.talent.tab] and st.ci.tabs[p.talent.tab].name or ""
-            L[#L + 1] = string.format("%d. %s %d/%d |cff999999(%s, level %d)|r", i, p.talent.name, p.rank, p.talent.ranks, tree, p.level)
+            L[#L + 1] = string.format("%d. %s %d/%d |cff999999(%s, %s)|r", i, p.talent.name, p.rank, p.talent.ranks, tree, TH.LevelText(p.level, st.playerLevel))
         end
         if st.blocked then L[#L + 1] = "|cffff7777Next pick " .. st.blocked .. ".|r" end
     end
@@ -180,8 +255,14 @@ function TH:Refresh()
     if not self:Enabled() then if panel then panel:Hide() end return end
     local st = self:State()
     if panel then panel.text:SetText(self:PanelText(st)) panel:SetHeight((tonumber(panel.text:GetStringHeight()) or 120) + 20) panel:Show() end
+    if not st.ci then return end
+    local pulsing = (st.unspent or 0) > 0
+    local first = st.next[1]
+    local tb = first and _G["PlayerTalentFrameTab" .. first.talent.tab]
+    local tm = tb and tabMark(tb)
+    if tm then showGlow(tm, pulsing) tm.text:Show() end
     local tab = selectedTab()
-    if not tab or not st.ci then return end
+    if not tab then return end
     for n, p in ipairs(st.next) do
         if p.talent.tab == tab and p.talent.liveIndex then
             for i = 1, (MAX_NUM_TALENTS or 40) do
@@ -191,8 +272,12 @@ function TH:Refresh()
                     local m = marker(b)
                     if m then
                         m.text:SetText(tostring(n))
+                        if n == 1 then m.text:SetTextColor(0.3, 1, 0.3) else m.text:SetTextColor(1, 1, 1) end
                         m.text:Show()
-                        if n == 1 then m.glow:Show() end
+                        m.levels:SetText(TH.LevelsText(p.levels, st.playerLevel))
+                        if n == 1 then m.levels:SetTextColor(0.3, 1, 0.3) else m.levels:SetTextColor(1, 1, 1) end
+                        m.levels:Show()
+                        if n == 1 then showGlow(m, pulsing) end
                     end
                 end
             end
@@ -210,7 +295,7 @@ function TH:TooltipLine(tab, index)
     if not t then return nil end
     for n, p in ipairs(st.next) do
         if p.talent.id == t.id then
-            return string.format(ns.name .. ": pick %d of your plan (rank %d at level %d)", n, p.rank, p.level), n == 1
+            return string.format(ns.name .. ": pick %d of your plan (points: %s)", n, TH.LevelsText(p.levels, st.playerLevel)), n == 1
         end
     end
     local want = 0

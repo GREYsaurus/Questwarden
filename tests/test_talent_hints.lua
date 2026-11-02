@@ -133,6 +133,7 @@ check(string.find(TH:TooltipLine(iw.tab, iw.liveIndex) or "", "not in your plan"
 local function stub()
     local o = { shown = false }
     function o:SetPoint() end function o:SetTexture() end function o:SetBlendMode() end function o:SetSize() end
+    function o:SetVertexColor() end function o:SetTextColor() end
     function o:SetText(t) self.text = t end function o:Show() self.shown = true end function o:Hide() self.shown = false end
     return o
 end
@@ -149,10 +150,26 @@ end
 local realSel = PanelTemplates_GetSelectedTab
 PanelTemplates_GetSelectedTab = function() return 1 end
 PlayerTalentFrame = CreateFrame("Frame", "PlayerTalentFrame")
-TH.panel, TH.markers = nil, {}
+for i = 1, 3 do _G["PlayerTalentFrameTab" .. i] = CreateFrame("Button", "PlayerTalentFrameTab" .. i) end
+TH.panel, TH.markers, TH.tabMarks = nil, {}, {}
 TH:Refresh()
 local m = TH.markers[buttons[ihs.liveIndex]]
 check(m and m.text.shown and m.text.text == "1" and m.glow.shown, "marker 1 with a glow on Improved Heroic Strike")
+check(m.levels.shown and m.levels.text ~= "" and not string.find(m.levels.text, "1%d") and string.find(m.levels.text, "now", 1, true),
+    "levels under pick 1: at level 20 its planned points are all due, so no 1x level is shown: " .. tostring(m.levels.text))
+check(not string.find(TH:PanelText(TH:State()), "level 1%d"), "panel shows no level you have already passed")
+check(TH.LevelsText({ 10, 11, 12, 13, 14 }, 9) == "10, 11, 12, 13, 14" and TH.LevelsText({ 10, 11, 12, 13, 14 }, 11) == "now x2, 12, 13, 14"
+    and TH.LevelsText({ 10 }, 11) == "now" and TH.LevelText(12, 11) == "level 12", "levels to spend at: passed levels read 'now'")
+local armsTab = TH.tabMarks[PlayerTalentFrameTab1]
+check(armsTab and armsTab.glow.shown and armsTab.text.shown and not TH.tabMarks[PlayerTalentFrameTab2], "the tab of pick 1's tree (Arms) is marked")
+-- Looking at another tree: no talent markers there, the Arms tab stays marked.
+PanelTemplates_GetSelectedTab = function() return 2 end
+TH:Refresh()
+local onOther = false
+for _, mk in pairs(TH.markers) do if mk.text.shown then onOther = true end end
+check(not onOther and armsTab.glow.shown, "on the Fury tab: Arms tab still marked, no talent markers")
+PanelTemplates_GetSelectedTab = function() return 1 end
+TH:Refresh()
 local marked = 0
 for _, mk in pairs(TH.markers) do if mk.text.shown then marked = marked + 1 end end
 check(marked >= 1 and marked <= 3, "at most three markers on the tab")
@@ -161,13 +178,14 @@ prof.showTalentSuggestions = false
 TH:Refresh()
 local any = false
 for _, mk in pairs(TH.markers) do if mk.text.shown then any = true end end
-check(not any and TH:TooltipLine(ihs.tab, ihs.liveIndex) == nil, "setting off: no markers, no tooltip line")
+check(not any and not armsTab.glow.shown and TH:TooltipLine(ihs.tab, ihs.liveIndex) == nil, "setting off: no markers, no tab mark, no tooltip line")
 prof.showTalentSuggestions = true
 
 check(learned == 0, "no talent point is ever spent")
 
 -- cleanup
 for i = 1, 25 do _G["PlayerTalentFrameTalent" .. i] = nil end
+for i = 1, 3 do _G["PlayerTalentFrameTab" .. i] = nil end
 PlayerTalentFrame, PanelTemplates_GetSelectedTab, LearnTalent = nil, realSel, realLearn
-TH.panel, TH.markers = nil, {}
+TH.panel, TH.markers, TH.tabMarks = nil, {}, {}
 MOCK.player.class, MOCK.player.level, ns.char.gearProfile, MOCK.talents, prof.showTalentSuggestions = save[1], save[2], save[3], save[4], save[5]
