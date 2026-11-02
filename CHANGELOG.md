@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fixed:** the waypoint diamond on the world map was drawn away from the waypoint (further right and down the more the map was zoomed out), so it did not match the minimap pin and the arrow. Its position now ignores its own size scaling.
+
 ## 0.1.0-alpha.34 (2026-11-01)
 
 - **Low durability warning** (on; Settings → Low Durability Warning): when equipped gear drops below 30% durability, a red on-screen message says how many pieces are below 30%, with the raid warning sound. It repeats only when another piece drops below.

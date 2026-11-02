@@ -149,4 +149,22 @@ if routes then
     check(not hasMeven, "the hunting route for The Scarlet Crusade leaves Meven Korgal out")
 end
 
+-- World map pin: the canvas is zoomed out (pin scale 2), so the offset is halved to land on the waypoint.
+do
+    local canvas = CreateFrame("Frame")
+    canvas.GetWidth, canvas.GetHeight = function() return 1000 end, function() return 600 end
+    canvas.GetEffectiveScale = function() return 0.5 end
+    local saved = { WorldMapFrame.IsShown, WorldMapFrame.GetMapID, WorldMapFrame.GetCanvas, Nav.target, ns.db.profile.showMapPins }
+    WorldMapFrame.IsShown = function() return true end
+    WorldMapFrame.GetMapID = function() return 1420 end
+    WorldMapFrame.GetCanvas = function() return canvas end
+    ns.db.profile.showMapPins = true
+    Nav.target = { mapId = 1420, x = 40, y = 30, label = "test" }
+    Nav:UpdateMapPin()
+    local p, s = Nav.pin.point, Nav.pin.scale
+    check(s == 2 and p and p[4] * s == 400 and p[5] * s == -180, "the world map pin sits on the waypoint at any map zoom")
+    WorldMapFrame.IsShown, WorldMapFrame.GetMapID, WorldMapFrame.GetCanvas, Nav.target, ns.db.profile.showMapPins = saved[1], saved[2], saved[3], saved[4], saved[5]
+    Nav.pin:Hide()
+end
+
 check(#ns.errors == 0, "no captured errors after navigation tests: " .. table.concat(ns.errors, " | "))

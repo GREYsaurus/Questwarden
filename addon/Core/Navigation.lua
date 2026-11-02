@@ -221,10 +221,11 @@ function Nav:UpdateMapPin()
     pin:SetFrameStrata(canvas:GetFrameStrata())
     pin:SetFrameLevel((canvas:GetFrameLevel() or 1) + 2000)
     local w, h = canvas:GetWidth(), canvas:GetHeight()
+    local scale = math.max(1 / (canvas:GetEffectiveScale() / UIParent:GetEffectiveScale()), 0.6)
+    pin:SetScale(scale)
+    -- Offsets are in the pin's own (scaled) units: divided by its scale they land on the canvas point.
     pin:ClearAllPoints()
-    pin:SetPoint("CENTER", canvas, "TOPLEFT", w * t.x / 100, -h * t.y / 100)
-    local scale = 1 / (canvas:GetEffectiveScale() / UIParent:GetEffectiveScale())
-    pin:SetScale(math.max(scale, 0.6))
+    pin:SetPoint("CENTER", canvas, "TOPLEFT", w * t.x / 100 / scale, -h * t.y / 100 / scale)
     pin:Show()
 end
 
