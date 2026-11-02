@@ -69,10 +69,6 @@ end
 function CP:Point(map, x, y)
     self.active, self.map, self.x, self.y = true, map, x, y
     ns.Nav:SetMapTarget(map, x, y, "Corpse", "corpse")
-    if not self.told then
-        self.told = true
-        ns:Print("Arrow points to your corpse. /" .. ns.slash .. " corpse off returns to the guide.")
-    end
 end
 
 -- The arrow on a dungeon entrance for a ghost who died inside (zone area id, x, y).
@@ -138,7 +134,7 @@ function CP:Reset(why)
     self:Release(why)
     self.dismissed, self.deathMap, self.instanceDeath, self.deathDungeon, self.area = false, nil, nil, nil, nil
     if ns.char then ns.char.deathDungeon = nil end
-    self.told, self.toldMissing, self.toldInstance = nil, nil, nil
+    self.toldMissing, self.toldInstance = nil, nil
 end
 
 function CP:OnDead()
