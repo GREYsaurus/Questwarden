@@ -126,7 +126,7 @@ A single loop through both Balance of Nature targets was rejected: it had to cro
 The tool applies the same standard to every candidate objective. It makes no decision a person has to make; it proposes, measures and records.
 
 **Steps for each candidate objective:**
-1. **Targets:** the quest's kill target, or the item's non-elite NPC droppers that spawn in the guide's zone.
+1. **Targets:** the quest's kill target, or the item's non-elite NPC droppers that spawn in the guide's zone. A named NPC (at most 2 spawn points) that the quest's follow-up needs alive is left out while other NPCs drop the item: its kill target, or the only dropper of its item. For example, Meven Korgal drops Scarlet Armbands, but *The Red Messenger* is to kill him, so *The Scarlet Crusade*'s route leaves him out. The add-on applies the same rule to the arrow and target lists (`DB.FollowUpNpcs`, `DB.QuestItemDroppers`).
 2. **Spawn area:** spawns closer than 45 yards are joined into areas. The area chosen is the largest one, weighted towards the guide's previous step (where you arrive from).
 3. **Too small:** fewer than 8 spawns or under 70 yards across means a static waypoint is preferred.
 4. **Points:** 3 to 8 cluster centres, at 20-yard or 15-yard radius. Every pair is at least the two radii + 10 yards apart.

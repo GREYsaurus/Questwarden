@@ -54,14 +54,14 @@ point 53.7,66.4
 point 52.5,68.2
 end
 
-# 65 spawns, 204 yd across, worst leg gap 21 yd
+# 64 spawns, 204 yd across, worst leg gap 20 yd
 route The Scarlet Crusade: Scarlet Armband
 quest 381
-drop 1 3266 1506,1507,1667
+drop 1 3266 1506,1507
 radius 20
 loop
 point 37.7,65.8
-point 36.5,68.3
+point 36.5,68.2
 point 37.5,70.4
 point 38.0,68.2
 end

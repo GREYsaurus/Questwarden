@@ -164,8 +164,8 @@ ns.RoamRoutes = {
   },
   [381] = {
     { name="The Scarlet Crusade: Scarlet Armband", zone=85, r=20, loop=true,
-      objs={{i=1,kind="drop",item=3266,name="Scarlet Armband",npcs={1506,1507,1667}}},
-      pts={{37.7,65.8},{36.5,68.3},{37.5,70.4},{38,68.2}} },
+      objs={{i=1,kind="drop",item=3266,name="Scarlet Armband",npcs={1506,1507}}},
+      pts={{37.7,65.8},{36.5,68.2},{37.5,70.4},{38,68.2}} },
   },
   [418] = {
     { name="Thelsamar Blood Sausages: Boar Intestines", zone=38, r=15, loop=true,
@@ -445,7 +445,7 @@ ns.RoamRoutes = {
   },
   [2869] = {
     { name="Against the Hatecrest: Hatecrest Naga Scale", zone=357, r=20, loop=true,
-      objs={{i=1,kind="drop",item=9247,name="Hatecrest Naga Scale",npcs={5331,5332,5333,5334,5335,5336,5337,8136}}},
+      objs={{i=1,kind="drop",item=9247,name="Hatecrest Naga Scale",npcs={5331,5332,5333,5334,5335,5336,5337}}},
       pts={{27.3,68.5},{25.5,66.4},{26.4,68.3},{27.3,69.8},{28.2,70.3},{28.1,68.2}} },
   },
   [2877] = {

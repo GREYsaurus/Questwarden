@@ -202,6 +202,21 @@ def main():
     for fn in os.listdir(ROUTES):
         if fn.endswith(".routes") and not fn.startswith("auto_"):
             handmade |= {int(x) for x in re.findall(r"^quest (\d+)", open(os.path.join(ROUTES, fn), encoding="utf-8").read(), re.M)}
+    def spared(q):
+        # Named NPCs (at most 2 spawn points) the quest's follow-up (nextQuestInChain) needs alive: its kill targets
+        # and the only dropper of one of its items. Common mobs a follow-up also kills are not spared. Example: Meven Korgal drops Scarlet Armbands (The Scarlet Crusade), but The Red Messenger is
+        # to kill him for his documents, so the armband route leaves him out.
+        rec = quests.get(q)
+        nxt = rec[0][16] if rec and len(rec[0]) > 16 and rec[0][16] else None
+        nrec = quests.get(int(nxt)) if nxt else None
+        obj = nrec[0][11] if nrec and len(nrec[0]) > 11 and isinstance(nrec[0][11], tuple) else None
+        h = obj[1] if obj else {}
+        out = {int(x) for k in ("c", "k") if k in h for x in h[k][0]}
+        for it in (h["i"][0] if "i" in h else []):
+            rec_i = items.get(int(it))
+            drops = [int(x) for x in (rec_i[0][1] or ([], {}))[0]] if rec_i else []
+            if len(drops) == 1: out.add(drops[0])
+        return {n for n in out if sum(len(p) for p in npcs.get(n, {}).get("spawns", {}).values()) <= 2}
     def items_name(i):
         it = items.get(i)
         return it[0][0] if it and isinstance(it[0][0], str) else "item %d" % i
@@ -242,6 +257,8 @@ def main():
             if kind == "drop":
                 elite = [n for n in tgt if npcs.get(n, {}).get("rank", 0) > 0]
                 tgt = [n for n in tgt if n not in elite and npcs.get(n, {}).get("spawns", {}).get(zone)]
+                keep = [n for n in tgt if n not in spared(q)]
+                if keep: tgt = keep
                 if not tgt:
                     done("Excluded — reason documented" if elite else "Blocked — missing evidence",
                          limits="only elite/rare droppers here" if elite else "no dropping NPC spawns in this zone"); continue

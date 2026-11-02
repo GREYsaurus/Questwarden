@@ -6,7 +6,7 @@ zone Feralas 6950.0x4633.3
 # 42 spawns, 318 yd across, worst leg gap 27 yd
 route Against the Hatecrest: Hatecrest Naga Scale
 quest 2869
-drop 1 9247 5331,5332,5333,5334,5335,5336,5337,8136
+drop 1 9247 5331,5332,5333,5334,5335,5336,5337
 radius 20
 loop
 point 27.3,68.5

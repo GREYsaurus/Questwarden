@@ -175,4 +175,23 @@ local items = {}
 for _, id in ipairs(DB.GetQuestItems(6395)) do items[id] = true end
 check(items[16333], "items a quest's objectives need count as its quest items")
 
+-- A named NPC the follow-up quest needs is not a target: Meven Korgal (1667) drops Scarlet Armbands (The Scarlet
+-- Crusade, 381), but The Red Messenger (382) is to kill him; common mobs a follow-up kills stay targets.
+local spared = DB.FollowUpNpcs(381)
+check(spared[1667], "Meven Korgal is spared for The Red Messenger")
+local d = {}
+for _, id in ipairs(DB.QuestItemDroppers(3266, 4, 381)) do d[id] = true end
+check(d[1506] and d[1507] and not d[1667], "Scarlet Armband targets: Converts and Initiates, not Meven Korgal")
+d = {}
+for _, id in ipairs(DB.QuestItemDroppers(3266, 4)) do d[id] = true end
+check(d[1667], "without the quest, every dropper as before")
+local ids = DB.ObjectiveNpcIds(381, 85) or {}
+check(ids[1506] and not ids[1667], "the quest's target NPCs leave Meven Korgal out")
+local routes = ns.RoamRoutes and ns.RoamRoutes[381]
+if routes then
+    local hasMeven = false
+    for _, o in ipairs(routes[1].objs) do for _, n in ipairs(o.npcs) do if n == 1667 then hasMeven = true end end end
+    check(not hasMeven, "the hunting route for The Scarlet Crusade leaves Meven Korgal out")
+end
+
 check(#ns.errors == 0, "no captured errors after navigation tests: " .. table.concat(ns.errors, " | "))

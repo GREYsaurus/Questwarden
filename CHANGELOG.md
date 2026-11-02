@@ -6,6 +6,7 @@
 - **New-player tips open in a window** you close with **OK**, instead of chat: step explanations, the useful keys, full bags, first death, talent points, new spells, class tips and profession advice. They come one at a time (OK says how many more are waiting) and wait until a fight is over. *Show tips in a window* (Tips → New Players, on by default) switches back to chat.
 - ***Notify on new target* is off by default:** the "<NPC> from your current step is nearby" chat line no longer shows unless you turn it on (Settings → Targeting). Saved profiles are switched off once.
 - **Fixed:** the arrow went to the place an objective is done before you had the item it needs. For example, *Marla's Last Wish* pointed at Marla's Grave before you had Samuel's Remains from Samuel Fipps. The arrow now goes to where the item drops first, then to the objective once it is in your bags. This affects every quest whose objective needs an item that is not an objective itself (about 120 to 150 quests per game version).
+- **Fixed:** collect quests sent you to a named NPC that the next quest in the chain needs. For example, *The Scarlet Crusade* counted Meven Korgal as an armband target, though *The Red Messenger* is to kill him. Such NPCs are now left out of the arrow, the target lists and the hunting routes while other mobs drop the item (Meven Korgal in Tirisfal Glades, Lord Shalzaru in Feralas).
 
 ## 0.1.0-alpha.30 (2026-11-01)
 

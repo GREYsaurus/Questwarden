@@ -242,19 +242,56 @@ end
 -- level drops the item too. Example: Wendigo Mane (The Grizzled Den, level 7) drops from Young Wendigo and
 -- Wendigo, and also from Edan the Howler (rare, 9), Old Icebeard and Vagash (elites, 11): only the first two count.
 -- With no ordinary dropper near the level, all of them count.
+-- `questId`, when given: NPCs the quest's follow-up needs alive (DB.FollowUpNpcs) are left out too, while another
+-- NPC drops the item. Example: Meven Korgal drops Scarlet Armbands, but The Red Messenger is to kill him.
 local DROPPER_LEVEL_GAP = 3
-function DB.QuestItemDroppers(itemId, questLevel)
+function DB.QuestItemDroppers(itemId, questLevel, questId)
     local it = itemId and QDB.items[itemId]
     local drops = it and it[I.NPC_DROPS] or EMPTY
-    local fit = {}
+    local spared = questId and DB.FollowUpNpcs(questId) or EMPTY
+    local fit, kept = {}, {}
     for _, id in ipairs(drops) do
         local r = QDB.npcs[id]
         if r and (r[N.RANK] or 0) == 0
             and (not questLevel or questLevel <= 0 or (r[N.MIN_LEVEL] or 0) <= questLevel + DROPPER_LEVEL_GAP) then
             fit[#fit + 1] = id
         end
+        if not spared[id] then kept[#kept + 1] = id end
     end
-    return #fit > 0 and fit or drops
+    if #fit > 0 then
+        local f = {}
+        for _, id in ipairs(fit) do if not spared[id] then f[#f + 1] = id end end
+        if #f > 0 then return f end
+        return fit
+    end
+    return #kept > 0 and kept or drops
+end
+
+-- Named NPCs (at most 2 spawn points) a quest's follow-up (nextQuestInChain) needs: its kill targets and kill credit,
+-- and the only NPC that drops one of its items. Common mobs the follow-up also kills are not included. As a set;
+-- empty without a follow-up.
+local followUp = {}
+function DB.FollowUpNpcs(questId)
+    if followUp[questId] then return followUp[questId] end
+    local out = {}
+    local r = rawQuest(questId)
+    local nr = r and r[Q.NEXT] and rawQuest(r[Q.NEXT])
+    local obj = nr and nr[Q.OBJECTIVES] or EMPTY
+    for _, id in ipairs(obj.c or EMPTY) do out[id] = true end
+    for _, id in ipairs(obj.k or EMPTY) do out[id] = true end
+    for _, itemId in ipairs(obj.i or EMPTY) do
+        local it = QDB.items[itemId]
+        local drops = it and it[I.NPC_DROPS] or EMPTY
+        if #drops == 1 then out[drops[1]] = true end
+    end
+    for id in pairs(out) do
+        local rec = QDB.npcs[id]
+        local n = 0
+        for _, pts in pairs(rec and rec[N.SPAWNS] or EMPTY) do n = n + #pts end
+        if n > 2 then out[id] = nil end
+    end
+    followUp[questId] = out
+    return out
 end
 
 -- NPC ids a quest's objectives are about: kill objectives, kill-credit NPCs and the NPCs that drop its quest
@@ -269,7 +306,7 @@ function DB.ObjectiveNpcIds(questId, zone)
     for _, id in ipairs(q.objectives.killCredit) do ids[id] = true end
     local parent = zone and DB.ParentZone(zone)
     for _, itemId in ipairs(q.objectives.items) do
-        local drops = DB.QuestItemDroppers(itemId, q.level)
+        local drops = DB.QuestItemDroppers(itemId, q.level, questId)
         if #drops <= DROPPER_MAX then
             for _, id in ipairs(drops) do ids[id] = true end
         elseif zone then
@@ -303,7 +340,7 @@ function DB.ObjectiveSpawns(questId, zone, isDone)
     for _, itemId in ipairs(obj.i or EMPTY) do
         local it = QDB.items[itemId]
         if it and open(it[I.NAME]) then
-            for _, id in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do npc(id) end
+            for _, id in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL], questId)) do npc(id) end
             for _, id in ipairs(it[I.OBJECT_DROPS] or EMPTY) do object(id) end
         end
     end
@@ -330,7 +367,7 @@ function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone, hasI
     local function drops(itemId)
         local it = QDB.items[itemId]
         if not it then return end
-        for _, npcId in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do
+        for _, npcId in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL], questId)) do
             local z, x, y = DB.GetNPCPosition(npcId, preferZone, nearX, nearY)
             consider(z, x, y, DB.GetNPCName(npcId))
         end
