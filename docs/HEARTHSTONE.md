@@ -37,3 +37,18 @@ Flight paths aren't compared. A flight may still be quicker than walking; the su
 - Before either has happened, the innkeeper of the guide's "set your hearthstone" step for that town.
 
 If neither is known (the hearthstone is set at an inn no guide uses, and you haven't hearthed there yet), there's no suggestion until you hearth once.
+
+## Death skips
+
+When dying on purpose would get you to the next town step faster, the step suggests it, for example: "Death skip: the graveyard is near this step. Dying to a mob and taking the spirit healer's resurrection saves about 3 min of walking." It's only a suggestion.
+
+Setting: **Death Skip Suggestions** (Settings → General → Automation, on by default). Code: `Core/DeathSkip.lua`.
+
+It shows when all of these hold:
+- **Never on Hardcore:** the character doesn't play Hardcore, where a death is permanent.
+- **A town step:** the current step is a turn-in, pick-up, trainer, vendor, inn, flight path or talk step with a position.
+- **The graveyard is near it:** of the spirit healers in the zone you're in (QuestieDB's spirit healer list), the one nearest to you is nearer the step than you are. That's the graveyard the game sends your ghost to.
+- **It saves enough:** the walk to the step, minus 45 seconds for finding a mob, dying and the resurrection, minus the walk from the graveyard. Below level 10 it must save a minute: the spirit healer gives no resurrection sickness up to level 10 ([Warcraft Wiki](https://warcraft.wiki.gg/wiki/Resurrection_sickness), unverified in game). From level 10 it must save 5 minutes, and the line warns about resurrection sickness.
+- **Nothing better:** you're alive, not on a flight or in an instance, and no hearthstone suggestion is showing.
+
+Gear loses durability when you die and again at the spirit healer, at any level; the line says so. Walking is worked out as for the hearthstone. Not known: whether a graveyard is closed to your faction (the data doesn't say), so the suggestion may name a graveyard you can't use.

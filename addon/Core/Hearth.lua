@@ -108,6 +108,9 @@ local function runSpeed()
     return math.max(RUN_SPEED, tonumber(run) or 0)
 end
 
+-- Shared with the death-skip suggestion (Core/DeathSkip.lua).
+H.World, H.Yards, H.RunSpeed, H.PATH_FACTOR = world, yards, runSpeed, PATH_FACTOR
+
 -- Seconds hearthing must save for `turnIns` turn-ins to be worth it.
 function H.Needed(turnIns)
     if turnIns < 1 then return math.huge end

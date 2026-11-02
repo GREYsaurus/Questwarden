@@ -146,6 +146,9 @@ function StepText:Details(s)
     local current = ns.Engine:CurrentStep() == s
     local hearth = ns.Hearth and current and ns.Hearth:Line()
     if hearth then lines[#lines + 1] = string.format(WARN, hearth) end
+    -- Dying and the spirit healer beat walking (Core/DeathSkip.lua).
+    local skip = ns.DeathSkip and current and ns.DeathSkip:Line()
+    if skip then lines[#lines + 1] = string.format(WARN, skip) end
     -- Party members' steps (Core/PlayTogether.lua) and the mount savings goal (Core/MountGoal.lua).
     if current and ns.PlayTogether then
         for _, l in ipairs(ns.PlayTogether:Lines()) do lines[#lines + 1] = string.format(l.warn and WARN or DIM, l.text) end

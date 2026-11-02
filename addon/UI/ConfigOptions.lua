@@ -74,6 +74,8 @@ pages.general = { title = "General", items = function() return {
       after = function() if not ns.db.profile.bindAuto then ns.Bind:Cancel("setting off") end end }),
     T("hearthSuggest", "Hearthstone Suggestions", { tip = "When your hearthstone is ready and the next steps turn in quests in the town it is set to, the step says so if hearthing saves enough time over walking: 5 minutes for one turn-in, less for more (never under a minute). Only a suggestion: it never uses the hearthstone.",
       after = function() ns.Hearth:Check() end }),
+    T("deathSkip", "Death Skip Suggestions", { tip = "When the next step is in town (turn-ins, trainers, vendors ...) and the graveyard of the zone you are in is much nearer it than you are, the step suggests dying to a mob and taking the spirit healer's resurrection: below level 10 when it saves a minute or more (no resurrection sickness), from level 10 when it saves 5 minutes or more. Never on Hardcore characters. Only a suggestion.",
+      after = function() ns.DeathSkip:Check() end }),
     T("skipGossip", "Skip Gossip", { more = true, tip = "Picks the only option when an NPC has one option and no quests. Hold Shift to skip." }),
     H("Window"),
     { type = "range", key = "scale", label = "Guide Window Scale", min = 0.6, max = 1.6, step = 0.05, percent = true, decimals = 2 },

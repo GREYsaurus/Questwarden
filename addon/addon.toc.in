@@ -93,6 +93,7 @@ Core\Assist.lua
 Core\Junk.lua
 Core\Bind.lua
 Core\Hearth.lua
+Core\DeathSkip.lua
 Core\Group.lua
 Core\FlightTimer.lua
 Core\QuestTimer.lua
