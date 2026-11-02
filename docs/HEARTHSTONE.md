@@ -13,11 +13,9 @@ All of these must hold:
 
   | Turn-ins in town | Time hearthing must save |
   |---|---|
-  | 1 | 5 minutes |
-  | 2 | 2.5 minutes |
-  | 3 | 100 seconds |
-  | 4 | 75 seconds |
-  | 5 or more | 1 minute |
+  | 1 | 3 minutes |
+  | 2 | 90 seconds |
+  | 3 or more | 1 minute |
 
 - The current step isn't itself a guide step to hearth or to set the hearthstone.
 

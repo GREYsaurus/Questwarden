@@ -11,7 +11,7 @@
 --   * the current step and the steps right after it are in the town your hearthstone is set to (within
 --     TOWN_YARDS of the inn), and at least one of them turns in a quest that is in your log;
 --   * hearthing saves enough time for those turn-ins: WORTH_SECONDS divided by the number of turn-ins,
---     never under MIN_SAVED_SECONDS (one turn-in: 5 minutes saved; two: 2.5; three: 100 seconds; ...).
+--     never under MIN_SAVED_SECONDS (one turn-in: 3 minutes saved; two: 90 seconds; three or more: a minute).
 --     The hearthstone has a long cooldown, so a single turn-in has to save a lot to be worth it.
 -- Time to walk: the straight line to the first town step x PATH_FACTOR at your run speed (mounted if
 -- you are). Time to hearth: the cast and a loading screen, then the walk from the inn. On another
@@ -32,7 +32,7 @@ local CAST_SECONDS, LOAD_SECONDS = 10, 5
 local RUN_SPEED = 7          -- yards per second on foot
 local PATH_FACTOR = 1.25     -- roads and hills: walking is longer than the straight line
 local TOWN_YARDS = 250       -- a step this close to the inn is "in town"
-local WORTH_SECONDS = 300
+local WORTH_SECONDS = 180
 local MIN_SAVED_SECONDS = 60
 local LOOKAHEAD = 15         -- steps checked after the current one
 local CHECK = 5

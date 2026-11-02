@@ -33,8 +33,8 @@ end
 prof.hearthSuggest = true
 
 -- How much a hearth must save
-check(H.Needed(1) == 300 and H.Needed(2) == 150 and H.Needed(3) == 100 and H.Needed(5) == 60 and H.Needed(10) == 60,
-    "one turn-in needs 5 min saved, two 2.5 min, three 100 s, never under a minute")
+check(H.Needed(1) == 180 and H.Needed(2) == 90 and H.Needed(3) == 60 and H.Needed(5) == 60 and H.Needed(10) == 60,
+    "one turn-in needs 3 min saved, two 90 s, never under a minute")
 check(H.Needed(0) == math.huge, "no turn-ins: never worth it")
 
 -- A turn-in step in town, the hearthstone set there
