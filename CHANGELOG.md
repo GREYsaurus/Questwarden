@@ -1,10 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.29 (2026-11-01)
 
 - **Setup now sets your spec for gear.** The gear profile that follows the talent plan is the spec profile of the plan's tree (leveling first, then pre-raid, then raid), so *Spec profile* in the settings is filled in and automatic upgrades can work. Before, most classes got *Automatic*, because only a few trees have a leveling profile, and Druid's "Feral Combat" did not match the gear profiles' "Feral". New players who choose to tank get the tank profile where there is one. Classes with no spec profile for the tree still get *Automatic* (for example Classic Era Hunters, Rogues, Mages and Warlocks).
 - **The new-player setup asks about automatic upgrades** on the talents page: *Put on better gear automatically?*, off unless ticked.
 - **Quest reward upgrades are on for everyone:** the reward choices are ranked in chat (*Quest Reward Recommendation*) and marked on the reward panel. Saved profiles are switched on once. You still choose the reward yourself, unless *Quest Reward Automation* is on.
+
+**Tested:** offline only (TBC suite 5,573/5,573, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors). Not checked in the live game.
 
 ## 0.1.0-alpha.28 (2026-11-01)
 
