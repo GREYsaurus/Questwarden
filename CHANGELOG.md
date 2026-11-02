@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.30 (2026-11-01)
+
+- **Fixed:** an upgrade over an equipped item that scores 0 for your spec profile (for example boots with no armor, against boots with armor under Protection) was not equipped when *Minimum upgrade* was above 0%, because no percentage can be worked out from 0. Any gain over 0 now clears the minimum. The auction house Upgrades tab's *Min upgrade %* filter keeps these items too.
+
+**Tested:** the fix was checked in the live game by the author. Offline: TBC suite 5,574/5,574, Classic Era smoke 93/93, Forever 31/31, route audits 0 errors.
+
 ## 0.1.0-alpha.29 (2026-11-01)
 
 - **Setup now sets your spec for gear.** The gear profile that follows the talent plan is the spec profile of the plan's tree (leveling first, then pre-raid, then raid), so *Spec profile* in the settings is filled in and automatic upgrades can work. Before, most classes got *Automatic*, because only a few trees have a leveling profile, and Druid's "Feral Combat" did not match the gear profiles' "Feral". New players who choose to tank get the tank profile where there is one. Classes with no spec profile for the tree still get *Automatic* (for example Classic Era Hunters, Rogues, Mages and Warlocks).
