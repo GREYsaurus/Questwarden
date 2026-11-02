@@ -102,7 +102,7 @@ None of this has been tested in the game client yet.
 - **Targeting Macro:**
   - *Create Targeting Macro* keeps a "Questwarden" macro with `/tar` lines for the current step's NPCs. Drag it to an action bar from the Macros window, General tab. It's never edited in combat.
   - *Mark with the Targeting Macro* (off): each press of that macro also marks the nearest visible mob of each kind, instead of the automatic marking. Automatic marking (the default) moves icons to the mob you target or mouse over, and on to the next visible mob when one dies or leaves your view (docs/RAID_MARKERS.md).
-  - *Notify on new target* prints one chat line when a current-step NPC first comes into view.
+  - *Notify on new target* (off by default since 0.1.0-alpha.31) prints one chat line when a current-step NPC first comes into view.
 - **Raid Marker Bar:** shows or hides the marker bar.
 - **Active Target Frame:** click-to-target buttons (`/tar <name>`) for the current step's NPCs.
   - **Who:** enemies in red, quest givers and finishers in green.

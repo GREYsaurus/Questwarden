@@ -193,7 +193,7 @@ pages.targeting = { title = "Targeting", items = function() return {
       after = function() ns.Assist:UpdateMacro() if ns.Marker.OnStep then ns.Marker:OnStep() end end }),
     T("targetMacro", "Create Targeting Macro", { tip = "Keeps a '" .. ns.name .. "' macro that targets the current step's NPCs (/tar). Put it on an action bar.",
       after = function() ns.Assist:UpdateMacro() end }),
-    T("targetNotify", "Notify on new target", { tip = "A chat line when an NPC from the current step first comes into view." }),
+    T("targetNotify", "Notify on new target", { tip = "A chat line when an NPC from the current step first comes into view. Off by default." }),
     H("Raid Marker Bar"),
     { type = "toggle", label = "Show the raid marker bar",
       get = function() return prof().showMarkerBar end,

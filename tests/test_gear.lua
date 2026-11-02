@@ -218,6 +218,13 @@ check(ns.db.profile.gearQuestRewards == true and ns.db.profile.rewardMarkers == 
 ns.db.profile.gearQuestRewards = false
 ns:InitSavedVariables()
 check(ns.db.profile.gearQuestRewards == false, "turning it off afterwards sticks")
+ns.db.profile.targetNotify, mig.targetNotify31 = true, nil
+ns:InitSavedVariables()
+check(ns.db.profile.targetNotify == false and mig.targetNotify31, "alpha.31 turns the 'nearby' chat line off once")
+ns.db.profile.targetNotify = true
+ns:InitSavedVariables()
+check(ns.db.profile.targetNotify == true, "turning it on afterwards sticks")
+ns.db.profile.targetNotify = false
 ns.db.profile.gearQuestRewards = true
 MOCK.calls, MOCK.printed = {}, {}
 MOCK.dialog = { questID = 77001, title = "Boot Quest", choices = 2, completable = true }

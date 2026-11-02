@@ -124,7 +124,7 @@ local profileDefaults = {
         markInGroup = true,         -- allow automatic marking while in a group
         targetMacro = true,         -- keep a "Questwarden" macro targeting the current step's NPCs
         markWithMacro = false,      -- that macro also marks them (/tm) instead of the automatic marking (Core/Marker.lua)
-        targetNotify = true,        -- chat note when a current-step mob or NPC first comes into view
+        targetNotify = false,       -- chat note when a current-step mob or NPC first comes into view
         announceLevelEmote = false, announceLevelParty = false, announceLevelGuild = false,
         tipsEnabled = true,
         drownWarn = true, drownSound = true, drownFlash = true, drownThreshold = 20,
@@ -296,6 +296,11 @@ function ns:InitSavedVariables()
     if not mig.rewardAdvice29 then
         mig.rewardAdvice29 = true
         for _, p in pairs(profiles) do p.gearQuestRewards, p.rewardMarkers = true, true end
+    end
+    -- 0.1.0-alpha.31: the "<NPC> from your current step is nearby" chat line is off by default; turn it off once.
+    if not mig.targetNotify31 then
+        mig.targetNotify31 = true
+        for _, p in pairs(profiles) do p.targetNotify = false end
     end
     -- Active profile for this character.
     local key = ns.CharKey()

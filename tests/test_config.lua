@@ -223,14 +223,24 @@ check(macros[ns.name] == nil and A.macroPending, "no macro changes in combat (do
 MOCK.combat = false
 MOCK.fire("PLAYER_REGEN_ENABLED")
 check(macros[ns.name] ~= nil and string.find(macros[ns.name], "Sarkoth", 1, true), "macro created after combat")
+check(ns.PROFILE_DEFAULTS.targetNotify == false, "notify on new target is off by default")
+local function nearby(from)
+    local count = 0
+    for i = from + 1, #MOCK.printed do if string.find(MOCK.printed[i], "from your current step is nearby", 1, true) then count = count + 1 end end
+    return count
+end
+local notify0 = prof().targetNotify
 local before = #MOCK.printed
 MOCK.units.nameplate1 = MOCK.creature(3281, 501, "Sarkoth")
+prof().targetNotify = false
 A.notified = {}
 A:OnUnitSeen("nameplate1")
+check(nearby(before) == 0, "no 'nearby' chat line while the setting is off")
+prof().targetNotify = true
 A:OnUnitSeen("nameplate1")
-local count = 0
-for i = before + 1, #MOCK.printed do if string.find(MOCK.printed[i], "nearby", 1, true) then count = count + 1 end end
-check(count == 1, "notify on new target: once per NPC")
+A:OnUnitSeen("nameplate1")
+check(nearby(before) == 1, "notify on new target: once per NPC")
+prof().targetNotify = notify0
 MOCK.units.nameplate1 = nil
 -- rare mobs
 prof().trackRares = true

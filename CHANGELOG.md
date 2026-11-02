@@ -4,6 +4,7 @@
 
 - **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables, and the Forever talent trees (27 trees, 466 talents) taken from the wowforevertalents.com calculator, which reads the launch client's talent hotfixes. The client's own tables still hold Classic Era's trees, so they are no longer imported for Forever. Talents with no known spell show their icon in the talent window. All unverified until checked in the game.
 - **New-player tips open in a window** you close with **OK**, instead of chat: step explanations, the useful keys, full bags, first death, talent points, new spells, class tips and profession advice. They come one at a time (OK says how many more are waiting) and wait until a fight is over. *Show tips in a window* (Tips → New Players, on by default) switches back to chat.
+- ***Notify on new target* is off by default:** the "<NPC> from your current step is nearby" chat line no longer shows unless you turn it on (Settings → Targeting). Saved profiles are switched off once.
 
 ## 0.1.0-alpha.30 (2026-11-01)
 
