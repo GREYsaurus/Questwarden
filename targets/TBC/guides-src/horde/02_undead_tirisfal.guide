@@ -67,21 +67,18 @@ complete A Putrid Task | Rotting Dead and Ravaged Corpses.
 turnin 5650 Garments of Darkness [class=Priest]
 turnin 8 A Rogue's Deal
 accept Graverobbers | Magistrate Sevren.
-accept Wanted: Maggot Eye
 bind Brill [area=159,2119]
 complete Gordo's Task | Gloom Weed around Brill.
 turnin Gordo's Task
+complete 365 Fields of Grief | Pumpkins in the Solliden Farmstead fields, among the Scarlet Warriors.
 complete 427 At War With The Scarlet Crusade | Scarlet Warriors at Solliden Farmstead.
 turnin 427 At War With The Scarlet Crusade
 accept 370 At War With The Scarlet Crusade
 accept 374 Proof of Demise
-complete Wanted: Maggot Eye | Maggot Eye at the Garren's Haunt farm.
 complete Graverobbers
-turnin Wanted: Maggot Eye
 turnin 365 Fields of Grief | Apothecary Johaan.
 accept 407 Fields of Grief
 accept 367 A New Plague
-complete 407 Fields of Grief | Pumpkins in the Solliden Farmstead fields.
 complete 367 A New Plague
 turnin 367 A New Plague
 accept 368 A New Plague
@@ -113,10 +110,13 @@ accept The Haunted Mills
 turnin 361 A Letter Undelivered
 turnin 374 Proof of Demise
 turnin 372 At War With The Scarlet Crusade [optional]
+accept Wanted: Maggot Eye | The Wanted! poster in Brill. Maggot Eye is level 11, so it waits until you are close to that.
 complete Deaths in the Family | Agamand relatives in the mills crypt.
 complete The Haunted Mills | Devlin Agamand in the mills.
+complete Wanted: Maggot Eye | Maggot Eye at the Garren's Haunt farm, north of Brill. Level 11: pull him on his own.
 turnin Deaths in the Family
 turnin The Haunted Mills
+turnin Wanted: Maggot Eye
 accept 355 Speak with Sevren
 accept The Chill of Death | Gretchen Dedmar.
 complete The Chill of Death | Duskbats and Vile Fin murlocs.
