@@ -22,6 +22,7 @@ ns.QDB.QUEST = {
     TRIGGER = 21,                                -- { text, { [zoneId] = { {x,y}, ... } } } exploration objective
     REQ_SKILL = 22, REQ_MIN_REP = 23, SOURCE_ITEM = 24, PARENT = 25,
     FLAGS = 26,                                  -- questFlags bitmask (cmangos): 2 = PARTY_ACCEPT (escort/event)
+    REQ_SOURCE = 27,                             -- requiredSourceItems: items the objectives need that are not objectives
 }
 
 ns.QDB.NPC = {

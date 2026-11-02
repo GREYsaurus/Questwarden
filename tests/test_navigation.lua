@@ -160,4 +160,19 @@ C.GetPlayerMapPosition, C.MapToWorld, C.GetPlayerFacing = keep.pos, keep.world, 
 GetCVar, IsIndoors = keep.cvar, keep.indoors
 Nav.target, Nav.owner, ns.db.profile.showMinimapPin = keep.target, keep.owner, keep.pinSetting
 Nav:UpdateMinimapPin()
+-- An item the objectives need comes first: Marla's Last Wish (6395) buries Samuel's Remains (16333, dropped by
+-- Samuel Fipps) at Marla's Grave, so the arrow goes to Samuel Fipps until the remains are in the bags.
+local DB = ns.DB
+local z, x, y, label = DB.GetObjectiveLocation(6395, 85, 31, 65, nil, function() return false end)
+check(label == "Samuel Fipps" and z == 85 and math.abs(x - 36.7) < 0.1, "without the remains, the arrow points at Samuel Fipps (" .. tostring(label) .. ")")
+z, x, y, label = DB.GetObjectiveLocation(6395, 85, 31, 65, nil, function(id) return id == 16333 end)
+check(label == "Marla's Grave", "with the remains in the bags, the arrow points at the grave (" .. tostring(label) .. ")")
+z, x, y, label = DB.GetObjectiveLocation(6395, 85, 31, 65)
+check(label == "Marla's Grave", "without a bag check, the objective itself as before")
+z, x, y, label = DB.GetObjectiveLocation(6395, 85, 31, 65, function() return true end, function() return false end)
+check(label == nil, "with the objective done, no detour for the item")
+local items = {}
+for _, id in ipairs(DB.GetQuestItems(6395)) do items[id] = true end
+check(items[16333], "items a quest's objectives need count as its quest items")
+
 check(#ns.errors == 0, "no captured errors after navigation tests: " .. table.concat(ns.errors, " | "))

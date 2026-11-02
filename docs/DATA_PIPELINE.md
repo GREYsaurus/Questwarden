@@ -83,3 +83,5 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 ## Quest flags (0.2.0)
 
 The importer now also exports QuestieDB `questFlags` as quest field 26 (`ns.QDB.QUEST.FLAGS`). Bit 2 (`PARTY_ACCEPT`) is one of the escort signals used by the quest automation (`DB.GetEscortStatus`, docs/AUTOMATION.md). Re-importing at the pinned commit changes only `Quests.lua`, and only by appending that field.
+
+Quest field 27 (`ns.QDB.QUEST.REQ_SOURCE`) is QuestieDB's `requiredSourceItems`: items the objectives need that are not objectives themselves (117 Classic Era quests, 154 TBC, 124 Forever). While such an item is not in the bags, a quest's complete step points the arrow at where it drops before the objective (`DB.GetObjectiveLocation`); for example *Marla's Last Wish* sends you to Samuel Fipps for his remains before Marla's Grave. Items the quest giver hands out are left out. Those items also count as quest items (`DB.GetQuestItems`). Re-importing at the pinned commit changes only `Quests.lua`, by appending that field.

@@ -234,6 +234,18 @@ function C.GetContainerItem(bag, slot)
     return nil
 end
 
+-- How many of an item the bags hold (backpack and bags 1-4).
+function C.BagItemCount(itemId)
+    local n = 0
+    for bag = 0, C.NUM_BAGS do
+        for slot = 1, C.GetContainerNumSlots(bag) do
+            local it = C.GetContainerItem(bag, slot)
+            if it and it.itemID == itemId then n = n + (it.count or 1) end
+        end
+    end
+    return n
+end
+
 -- Selling is "use item while a merchant window is open". Not a protected action in Classic.
 function C.UseContainerItem(bag, slot)
     local f = has("C_Container.UseContainerItem") or has("UseContainerItem")

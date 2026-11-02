@@ -386,6 +386,7 @@ namespace GuideTools
                 r.Append((double)srcItem);                                              // 24 sourceItemId
                 r.Append((double)QuestieData.N(q, QuestieData.Q_PARENT));                 // 25 parentQuest
                 r.Append((double)QuestieData.N(q, QuestieData.Q_FLAGS));                  // 26 questFlags (escort/event detection)
+                r.Append(QuestieData.T(q, QuestieData.Q_REQSOURCE));                    // 27 requiredSourceItems
 
                 // normalise trailing zeros to nil for compactness
                 for (int k = 1; k <= r.Count; k++)

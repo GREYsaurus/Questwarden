@@ -240,7 +240,9 @@ function StepText:Target(s)
         local area = mapId and ns.DB.AreaForUiMap(mapId)
         if mx then px, py = mx, my end
         -- Objectives your log shows done are left out: the arrow moves on to the next one.
-        local z, x, y, label = ns.DB.GetObjectiveLocation(s.q, area, px, py, function(name) return ns.Tracker:ObjectiveNameDone(s.q, name) end)
+        -- An item the objectives need that is not in the bags: where it drops first (Marla's Last Wish).
+        local z, x, y, label = ns.DB.GetObjectiveLocation(s.q, area, px, py, function(name) return ns.Tracker:ObjectiveNameDone(s.q, name) end,
+            function(itemId) return ns.Compat.BagItemCount(itemId) > 0 end)
         if z then return z, x, y, label end
     end
 end

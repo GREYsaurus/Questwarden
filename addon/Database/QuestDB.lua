@@ -314,7 +314,10 @@ end
 -- when given, says whether the objective of that creature, object or item name is finished (the quest log); those
 -- are left out, so the target moves on to the next one. Of the open objectives, the one nearest to (nearX, nearY)
 -- in preferZone wins; without a position, the first in that order.
-function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone)
+-- `hasItem(itemId)`, when given: while an objective is open and an item the objectives need (requiredSourceItems,
+-- not handed out by the giver) is not in the bags, the target is where that item drops instead. Example: Marla's
+-- Last Wish buries Samuel's Remains at Marla's Grave, so the arrow goes to Samuel Fipps first.
+function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone, hasItem)
     local q = rawQuest(questId)
     if not q then return nil end
     local obj = q[Q.OBJECTIVES] or EMPTY
@@ -323,6 +326,25 @@ function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone)
         if not z then return end
         local d = (nearX and z == preferZone) and ((x - nearX) ^ 2 + (y - nearY) ^ 2) or math.huge
         if not best or d < bestD then best, bestD = { z, x, y, label }, d end
+    end
+    local function drops(itemId)
+        local it = QDB.items[itemId]
+        if not it then return end
+        for _, npcId in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do
+            local z, x, y = DB.GetNPCPosition(npcId, preferZone, nearX, nearY)
+            consider(z, x, y, DB.GetNPCName(npcId))
+        end
+        for _, objId in ipairs(it[I.OBJECT_DROPS] or EMPTY) do
+            local z, x, y = DB.GetObjectPosition(objId, preferZone, nearX, nearY)
+            consider(z, x, y, DB.GetObjectName(objId))
+        end
+    end
+    local need
+    if hasItem then
+        for _, itemId in ipairs(q[Q.REQ_SOURCE] or EMPTY) do
+            if itemId ~= q[Q.SOURCE_ITEM] and not hasItem(itemId) then drops(itemId) end
+        end
+        need, best, bestD = best, nil, nil
     end
     local function open(name) return not (isDone and name and isDone(name)) end
     for _, id in ipairs(obj.c or EMPTY) do
@@ -345,17 +367,9 @@ function DB.GetObjectiveLocation(questId, preferZone, nearX, nearY, isDone)
     end
     for _, itemId in ipairs(obj.i or EMPTY) do
         local it = QDB.items[itemId]
-        if it and open(it[I.NAME]) then
-            for _, npcId in ipairs(DB.QuestItemDroppers(itemId, q[Q.LEVEL])) do
-                local z, x, y = DB.GetNPCPosition(npcId, preferZone, nearX, nearY)
-                consider(z, x, y, DB.GetNPCName(npcId))
-            end
-            for _, objId in ipairs(it[I.OBJECT_DROPS] or EMPTY) do
-                local z, x, y = DB.GetObjectPosition(objId, preferZone, nearX, nearY)
-                consider(z, x, y, DB.GetObjectName(objId))
-            end
-        end
+        if it and open(it[I.NAME]) then drops(itemId) end
     end
+    if best and need then best = need end
     if best then return best[1], best[2], best[3], best[4] end
     local trig = q[Q.TRIGGER]
     if trig and trig[2] then
@@ -443,7 +457,7 @@ function DB.IsRepeatable(questId)
     return r and ns.HasBit(r[Q.SPECIAL_FLAGS] or 0, QDB.SPECIAL_FLAG_REPEATABLE) or false
 end
 
--- Item ids a quest needs: collect objectives plus the item the giver hands out.
+-- Item ids a quest needs: collect objectives, the item the giver hands out and the items its objectives need.
 function DB.GetQuestItems(questId)
     local r = rawQuest(questId)
     if not r then return EMPTY end
@@ -452,6 +466,7 @@ function DB.GetQuestItems(questId)
     for _, id in ipairs(obj and obj.i or EMPTY) do out[#out + 1] = id end
     local src = r[Q.SOURCE_ITEM]
     if src and src > 0 then out[#out + 1] = src end
+    for _, id in ipairs(r[Q.REQ_SOURCE] or EMPTY) do if id ~= src then out[#out + 1] = id end end
     return out
 end
 
