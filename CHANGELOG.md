@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Low durability warning** (on; Settings → Low Durability Warning): when equipped gear drops below 30% durability, a red on-screen message says how many pieces are below 30%, with the raid warning sound. It repeats only when another piece drops below.
 - **Class tips wait for their level.** A tip that names a spell or quest level ("Overpower (12)", "at 10") is held until you reach it; the next tip that fits comes instead. Tips already shown are kept.
 - The quest log's **Orphaned** button sits under *Abandon Quest* instead of at the top right.
 

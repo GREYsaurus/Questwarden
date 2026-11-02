@@ -95,6 +95,7 @@ Core\Junk.lua
 Core\Bind.lua
 Core\Hearth.lua
 Core\DeathSkip.lua
+Core\Durability.lua
 Core\Group.lua
 Core\FlightTimer.lua
 Core\QuestTimer.lua

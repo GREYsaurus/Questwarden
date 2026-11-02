@@ -341,6 +341,7 @@ GetItemIcon                       # core; fallback
 GetCombatRating                   # TBC+; gear scoring on TBC (guarded: not on Classic Era)
 GetInventoryItemLink              # core; equipped item links (guarded)
 GetInventoryItemID                # core; equipped item ids (guarded)
+GetInventoryItemDurability        # core; low durability warning (guarded; approved 2026-11-01)
 IsEquippableItem                  # core; upgrade checks (guarded)
 EquipCursorItem                   # core; auto-equip (guarded)
 PutItemInBag                      # core; automatic bags put the bag on the cursor into a bag slot (guarded; approved 2026-11-01)
