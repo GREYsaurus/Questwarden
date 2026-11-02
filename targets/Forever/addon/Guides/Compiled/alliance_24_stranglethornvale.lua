@@ -97,7 +97,7 @@ ns.Guides:Register({
     {"accept",q=201,title="Investigate the Camp",npc="Krazek",z=33,x=26.9,y=77.2,v=1},
     {"turnin",q=201,title="Investigate the Camp",npc="Krazek",z=33,x=26.9,y=77.2,v=1},
     {"accept",q=575,title="Supply and Demand",npc="Drizzlik",z=33,x=28.3,y=77.6,text="Drizzlik, Booty Bay.",v=1},
-    {"complete",q=575,title="Supply and Demand",text="Elder Saltwater Crocolisks and Snapjaws.",pack=90,v=1},
+    {"complete",q=575,title="Supply and Demand",text="River Crocolisks.",pack=90,v=1},
     {"complete",q=187,title="Tiger Mastery",text="Elder Stranglethorn Tigers.",pack=90,v=1},
     {"turnin",q=187,title="Tiger Mastery",npc="Ajeck Rouack",z=33,x=35.6,y=10.6,v=1},
     {"turnin",q=198,title="Supplies to Private Thorsen",npc="Private Thorsen",z=33,x=38,y=3.4,v=1},

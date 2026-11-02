@@ -161,7 +161,7 @@ ns.Guides:Register({
     {"turnin",q=812,title="Need for a Cure",npc="Rhinag",z=14,x=41.5,y=18.6,v=1},
     {"accept",q=834,title="Winds in the Desert",npc="Rezlak",z=14,x=46.4,y=22.9,text="Rezlak at the eastern caravan.",v=1},
     {"accept",q=816,title="Lost But Not Forgotten",npc="Misha Tor'kren",z=14,x=43.1,y=30.2,text="Misha Tor'kren, north Durotar.",v=1},
-    {"complete",q=816,title="Lost But Not Forgotten",text="Durotar Tigers near Misha.",v=1},
+    {"complete",q=816,title="Lost But Not Forgotten",text="Dreadmaw Crocolisks: Kron's Amulet drops from them.",v=1},
     {"complete",q=834,title="Winds in the Desert",text="Supply sacks scattered in Drygulch Ravine.",v=1},
     {"turnin",q=816,title="Lost But Not Forgotten",npc="Misha Tor'kren",z=14,x=43.1,y=30.2,v=1},
     {"turnin",q=834,title="Winds in the Desert",npc="Rezlak",z=14,x=46.4,y=22.9,v=1},

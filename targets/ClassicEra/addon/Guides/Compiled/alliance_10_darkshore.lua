@@ -76,7 +76,7 @@ ns.Guides:Register({
     {"complete",q=4812,title="As Water Cascades",text="Fill the bottle at the moonwell in Auberdine.",v=1},
     {"turnin",q=4812,title="As Water Cascades",npc="Mysterious Red Crystal",z=148,x=47.3,y=48.7,v=1},
     {"accept",q=4813,title="The Fragments Within",npc="Mysterious Red Crystal",z=148,x=47.3,y=48.7,v=1},
-    {"complete",q=955,title="Bashal'Aran",text="Deth'ryll Satyrs.",v=1},
+    {"complete",q=955,title="Bashal'Aran",text="Vile Sprites and Wild Grells.",v=1},
     {"accept",q=953,title="The Fall of Ameth'Aran",npc="Sentinel Tysha Moonblade",z=148,x=40.3,y=59.7,optional=true,v=1},
     {"complete",q=953,title="The Fall of Ameth'Aran",text="Click The Fall of Ameth'Aran and The Lay of Ameth'Aran.",optional=true,v=1},
     {"turnin",q=953,title="The Fall of Ameth'Aran",npc="Sentinel Tysha Moonblade",z=148,x=40.3,y=59.7,optional=true,v=1},

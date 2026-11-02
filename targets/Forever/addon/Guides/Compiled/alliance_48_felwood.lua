@@ -22,7 +22,7 @@ ns.Guides:Register({
     {"turnin",q=4421,title="The Corruption of the Jadefire",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,v=1},
     {"accept",q=4906,title="Further Corruption",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,v=1},
     {"accept",q=939,title="Flute of Xavaric",text="Starts from the item Flute of Xavaric.",starter=11668,drops={10648},via={15},v=1},
-    {"complete",q=4906,title="Further Corruption",text="Xavathras, Jadefire Glen.",pack=15,v=1},
+    {"complete",q=4906,title="Further Corruption",text="Jadefire satyrs and Xavaric, Jadefire Glen.",pack=15,v=1},
     {"complete",q=939,title="Flute of Xavaric",pack=15,v=1},
     {"turnin",q=4906,title="Further Corruption",npc="Eridan Bluewind",z=361,x=51.4,y=81.5,v=1},
     {"accept",q=5156,title="Verifying the Corruption",npc="Taronn Redfeather",z=361,x=50.9,y=81.6,text="Taronn Redfeather.",v=1},

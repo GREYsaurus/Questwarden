@@ -36,7 +36,7 @@ complete 1651 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Defend Daphn
 turnin 1651 The Tome of Valor [class=Paladin; race=Human,Dwarf] | Turned in at Westfall.
 accept 1652 The Tome of Valor [class=Paladin; race=Human,Dwarf]
 accept 245 Eight-Legged Menaces | Watcher Dodds on the bridge on the road to Westfall.
-complete 90 Seasoned Wolf Kabobs | Nightbane Shadow Weavers and wolves.
+complete 90 Seasoned Wolf Kabobs | Black Ravagers, Bleak Worgs and other wolves.
 complete 245 Eight-Legged Menaces | Pygmy Venom Web Spiders around the road.
 turnin 245 Eight-Legged Menaces
 accept 5061 Aquatic Form [class=Druid; race=Night Elf]
@@ -145,7 +145,7 @@ accept 453 Finding the Shadowy Figure [class=Rogue,Priest,Mage,Warlock; race=Hum
 accept 453 Finding the Shadowy Figure [class=Hunter,Rogue,Priest; race=Dwarf; optional]
 accept 453 Finding the Shadowy Figure [class=Hunter,Rogue,Priest,Druid; race=Night Elf; optional]
 turnin 69 The Legend of Stalvan | Turned in at Elwynn Forest.
-complete 101 The Totem of Infliction | Ogres, worgen and spiders throughout Duskwood.
+complete 101 The Totem of Infliction | Ghouls, skeletons and spiders throughout Duskwood.
 accept 70 The Legend of Stalvan
 complete 70 The Legend of Stalvan | An Undelivered Letter: loot Gizmorium Shipping Crate and Storage Chest.
 turnin 70 The Legend of Stalvan | Turned in at Stormwind City.

@@ -148,7 +148,7 @@ ns.Guides:Register({
     {"accept",q=606,title="Scaring Shaky",npc="\"Sea Wolf\" MacKinley",z=33,x=27.8,y=77.1,text="\"Sea Wolf\" MacKinley.",v=1},
     {"accept",q=595,title="The Bloodsail Buccaneers",npc="First Mate Crazz",z=33,x=28.1,y=76.2,v=1},
     {"accept",q=575,title="Supply and Demand",npc="Drizzlik",z=33,x=28.3,y=77.6,text="Drizzlik, Booty Bay.",v=1},
-    {"complete",q=575,title="Supply and Demand",text="Elder Saltwater Crocolisks and Snapjaws.",pack=141,v=1},
+    {"complete",q=575,title="Supply and Demand",text="River Crocolisks.",pack=141,v=1},
     {"complete",q=213,title="Hostile Takeover",pack=141,v=1},
     {"complete",q=189,title="Bloodscalp Ears",pack=141,v=1},
     {"complete",q=605,title="Singing Blue Shards",text="Crystal Spine Basilisks.",pack=141,v=1},
