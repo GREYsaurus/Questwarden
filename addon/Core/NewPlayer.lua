@@ -6,7 +6,8 @@
 -- even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
--- Setting newPlayerTips (off by default; the setup wizard offers it). Chat only, written for this project:
+-- Setting newPlayerTips (off by default; the setup wizard offers it). Shown in the tip window (UI/TipWindow.lua) or
+-- chat, written for this project:
 --   * the first time each kind of step becomes current, one or two sentences on what it means and how to do it;
 --   * once, the keys for bags, quest log, spellbook, talents, map and character (read from your key bindings);
 --   * your bags almost full (at most every 10 minutes), your first death, the first talent point at level 10.
@@ -56,7 +57,7 @@ NP.STEPS = {
     dungeon = function() return "Dungeons are instances for a group of five players. You can skip this step to keep questing alone; the guide only shows dungeon steps if you chose them in setup." end,
 }
 
-function NP:Say(text) ns:Print("|cffffd100New player tip:|r " .. text) end
+function NP:Say(text) ns.TipWindow:Say("New player tip", text) end
 
 -- Once per character: id is "step:<kind>", "keys", "death", "talents".
 function NP:Once(id, text)

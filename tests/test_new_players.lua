@@ -27,6 +27,9 @@ check(ns.PROFILE_DEFAULTS.gearQuestRewards == true and ns.PROFILE_DEFAULTS.rewar
 
 -- Explainers -------------------------------------------------------------------------------------------
 local NP = ns.NewPlayer
+check(ns.PROFILE_DEFAULTS.tipWindows == true, "tips open in a window by default")
+local tipWindows0 = prof().tipWindows
+prof().tipWindows = false -- chat first; the window is tested below
 NP:Reset()
 local before = #MOCK.printed
 NP:OnStep()
@@ -47,6 +50,34 @@ NP:OnLevel(10)
 check(printed("talent point", n), "level 10 explains talent points")
 NP:Reset()
 check(next(ns.char.explained) == nil, "/qw newplayer reset forgets what was shown")
+
+-- Tip window ------------------------------------------------------------------------------------------
+local TW = ns.TipWindow
+local function ok() TW.ok.scripts.OnClick(TW.ok) TW.frame.scripts.OnHide(TW.frame) end -- the mock's Hide fires no OnHide
+prof().tipWindows = true
+before = #MOCK.printed
+NP:OnDead()
+check(#MOCK.printed == before and TW.frame and TW.frame:IsShown(), "with tip windows on, a tip opens a window instead of chat")
+check(TW.title:GetText() == "New player tip" and TW.text:GetText():find("Release Spirit", 1, true), "...titled, with the tip's text")
+NP:OnLevel(10)
+check(TW.text:GetText():find("Release Spirit", 1, true) and TW.ok:GetText():find("1 more", 1, true), "a second tip waits behind the first; OK says how many")
+ok()
+check(TW.frame:IsShown() and TW.text:GetText():find("talent point", 1, true), "OK shows the next tip")
+ok()
+check(not TW.frame:IsShown() and #TW.queue == 0, "OK on the last tip closes the window")
+MOCK.combat = true
+TW:Say("Class tip 1 of 3", "Fight in combat")
+check(not TW.frame:IsShown() and #TW.queue == 1, "tips that come in combat wait")
+MOCK.combat = false
+MOCK.fire("PLAYER_REGEN_ENABLED")
+check(TW.frame:IsShown() and TW.title:GetText() == "Class tip 1 of 3", "...and open when combat ends")
+TW:Say("Professions", "First line", { "- a", "- b" })
+check(TW.ok:GetText():find("1 more", 1, true), "a tip with extra lines queues too")
+prof().tipWindows = false
+TW:Flush()
+check(#TW.queue == 0 and printed("Professions:|r First line", before), "turning the window off sends waiting tips to chat")
+ok()
+NP:Reset()
 prof().newPlayerTips = false
 
 -- New-spell coaching -----------------------------------------------------------------------------------
@@ -184,6 +215,7 @@ check(PT:Follow(nil, false) == false and printed("No party leader", before), "/q
 C_ChatInfo, IsInGroup, GetNumGroupMembers = oldChat, oldGroup, oldNum
 PT.members = {}
 prof().groupFeatures, prof().playTogether = saved.groupFeatures, false
+prof().tipWindows = tipWindows0
 
 -- Simple settings view --------------------------------------------------------------------------------
 CF:Show("advanced")

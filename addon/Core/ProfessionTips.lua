@@ -99,14 +99,15 @@ function PF:Check()
     if not prof().professionTips or ns.char.professionTipsShown then return end
     if (UnitLevel("player") or 1) < START then return end
     ns.char.professionTipsShown = true
-    ns:Print("|cffffd100Professions:|r " .. self.ADVICE[1])
-    for i = 2, #self.ADVICE do DEFAULT_CHAT_FRAME:AddMessage("  - " .. self.ADVICE[i]) end
+    local more = {}
+    for i = 2, #self.ADVICE do more[#more + 1] = "- " .. self.ADVICE[i] end
     local here = self:Lines(true)
     if #here > 0 then
-        DEFAULT_CHAT_FRAME:AddMessage("  Trainers in this zone:")
-        for _, l in ipairs(here) do DEFAULT_CHAT_FRAME:AddMessage("    " .. l) end
+        more[#more + 1] = "Trainers in this zone:"
+        for _, l in ipairs(here) do more[#more + 1] = "  " .. l end
     end
-    DEFAULT_CHAT_FRAME:AddMessage("  /" .. ns.slash .. " professions lists every trainer; /" .. ns.slash .. " professions mining (for example) points the arrow there.")
+    more[#more + 1] = "/" .. ns.slash .. " professions lists every trainer; /" .. ns.slash .. " professions mining (for example) points the arrow there."
+    ns.TipWindow:Say("Professions", self.ADVICE[1], more)
 end
 
 function PF:Init()

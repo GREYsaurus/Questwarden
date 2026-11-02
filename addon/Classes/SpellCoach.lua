@@ -59,11 +59,12 @@ function SC:OnLearned(spellId)
     C_Timer.After(1, function()
         SC.pending[name] = nil
         local desc = SC.Description(spellId)
-        ns:Print("|cffffd100New spell:|r " .. name .. (desc and (" - " .. desc) or ""))
+        local more
         if SC.OnBars(name) == false then
             local key = ns.NewPlayer and ns.NewPlayer.Key("spellbook") or "P"
-            ns:Print("  It is not on your action bars yet. Unless it is passive, open your spellbook (" .. key .. ") and drag it onto a bar, so you can press it.")
+            more = { "It is not on your action bars yet. Unless it is passive, open your spellbook (" .. key .. ") and drag it onto a bar, so you can press it." }
         end
+        ns.TipWindow:Say("New spell", name .. (desc and (" - " .. desc) or ""), more)
     end)
 end
 
@@ -77,7 +78,7 @@ function SC:OnLevel(level)
     local i = (tonumber(ns.char.coachTip) or 0) + 1
     if i > #a.tips then return end
     ns.char.coachTip = i
-    ns:Print("|cffffd100Class tip " .. i .. " of " .. #a.tips .. ":|r " .. a.tips[i])
+    ns.TipWindow:Say("Class tip " .. i .. " of " .. #a.tips, a.tips[i])
 end
 
 function SC:Init()

@@ -1,6 +1,6 @@
 # Help for new players
 
-Questwarden can help players who have never played World of Warcraft. Every helper below is **off by default**. The setup wizard asks on its first page whether the player is new and offers the helpers on its *Helpers* page; they are also in the settings window. None of them does anything for you: they add chat lines and hints.
+Questwarden can help players who have never played World of Warcraft. Every helper below is **off by default**. The setup wizard asks on its first page whether the player is new and offers the helpers on its *Helpers* page; they are also in the settings window. None of them does anything for you: they add tips and hints. The tips of the first three helpers below open in a small window (see *Tip window*).
 
 None of this has been tested in the game client yet.
 
@@ -26,13 +26,14 @@ Experienced players get the same Helpers page at the end. Running setup again st
 
 | Setting | Where in the settings | What it does |
 |---|---|---|
-| `newPlayerTips` | Tips → New Players | The first time each kind of step comes up (pick up, kill, turn in, fly, train, hearth...), one chat line says what to do and which key opens what. Also: the useful keys (read from your key bindings), full bags (2 free slots or fewer, at most every 10 minutes), your first death, and talent points at level 10. Each explanation shows once per character (`ns.char.explained`); `/qw newplayer reset` shows them again. |
+| `newPlayerTips` | Tips → New Players | The first time each kind of step comes up (pick up, kill, turn in, fly, train, hearth...), a tip says what to do and which key opens what. Also: the useful keys (read from your key bindings), full bags (2 free slots or fewer, at most every 10 minutes), your first death, and talent points at level 10. Each explanation shows once per character (`ns.char.explained`); `/qw newplayer reset` shows them again. |
 | `spellCoach` | Tips → New Players | When you learn a spell: its name and the first sentence of the game's own description, then whether it is on your action bars. If not: open the spellbook and drag it there ("unless it is passive", since the game does not say which spells are passive). Every 4 levels from 4: the next leveling tip for your class (`Classes/ClassAdvice.lua`). |
 | `professionTips` | Tips → New Players | Once per character, at level 5: which professions suit a new character and the profession trainers in your zone. `/qw professions` lists the nearest trainers; `/qw professions mining` points the arrow at one. |
 | `mountGoal` | Tips → New Players | From 10 levels before the riding level until you can ride (or 5 levels after it on Classic Era): the price of your first mount against your gold, under the current step, and a chat line at each level-up. Paladins and Warlocks are told to see their class trainer. `/qw mount` shows it any time. Not on Forever (no prices). |
 | `sessionRecap` | Tips → New Players | At login, one chat line about your last session (if it lasted 2 minutes or more): play time, levels, experience, quests turned in, zones, deaths and gold. `/qw recap` shows this session so far. The counts are kept for every session. |
 | `playTogether` | Communications → Play Together | Needs *Enable Group Settings* (the wizard turns it on with this). Party members running Questwarden with this switch on send their guide and step to the party (hidden add-on messages, about once a minute and when the step changes). Under your current step: where each one is ("on this step too", "2 steps ahead", "on another guide"), and **Wait for <name>** when they are behind on a pick-up, turn-in, flight or hearth step. Never in raids. |
 | `playFollowLeader` | Communications → Play Together | Your guide goes to the party leader's guide and step whenever theirs changes. Going back keeps your progress; going forward marks the steps in between *skipped* (not completed; `/qw prev` reopens them). `/qw follow` does it once. |
+| `tipWindows` | Tips → New Players | **On by default.** The tips of `newPlayerTips`, `spellCoach` and `professionTips` open in a small window (`addon/UI/TipWindow.lua`) with an **OK** button, one at a time; OK (or Escape) shows the next, and the button says how many more are waiting. Tips that come during a fight wait until it ends. The window can be dragged and keeps its place. Off: the tips go to chat, and any still waiting are printed there. The other helpers stay in chat or the guide window. |
 | `simpleSettings` | General | The settings window hides the Advanced Settings and Profiles tabs and options flagged as rarely needed (`more = true` in `addon/UI/ConfigOptions.lua`). Hidden options keep working as they are set. |
 
 ## Data and game functions
@@ -43,6 +44,6 @@ Experienced players get the same Helpers page at the end. Running setup again st
 
 ## Code
 
-- `addon/Core/NewPlayer.lua`, `addon/Classes/SpellCoach.lua`, `addon/Core/ProfessionTips.lua`, `addon/Core/MountGoal.lua`, `addon/Core/SessionRecap.lua`, `addon/Core/PlayTogether.lua` (messages through `ns.Group:Handle` / `ns.Group:Send`, tag `P`).
+- `addon/Core/NewPlayer.lua`, `addon/UI/TipWindow.lua`, `addon/Classes/SpellCoach.lua`, `addon/Core/ProfessionTips.lua`, `addon/Core/MountGoal.lua`, `addon/Core/SessionRecap.lua`, `addon/Core/PlayTogether.lua` (messages through `ns.Group:Handle` / `ns.Group:Send`, tag `P`).
 - The simple view: `CF:Simple`, `CF:VisibleTabs`, `CF:LayoutTabs` and `CF:Rebuild` in `addon/UI/Config.lua`.
-- Tests: `tests/test_new_players.lua` (every helper on and off, the simple view, both wizard paths) and `tests/test_setup.lua`.
+- Tests: `tests/test_new_players.lua` (every helper on and off, the tip window and its queue, the simple view, both wizard paths) and `tests/test_setup.lua`.

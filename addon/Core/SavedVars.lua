@@ -147,6 +147,7 @@ local profileDefaults = {
         mountGoal = false,          -- first mount savings goal in the guide window (Core/MountGoal.lua)
         sessionRecap = false,       -- recap of the last session at login (Core/SessionRecap.lua)
         professionTips = false,     -- profession advice and trainers from level 5 (Core/ProfessionTips.lua)
+        tipWindows = true,          -- ...their tips in a window with OK instead of chat (UI/TipWindow.lua)
         simpleSettings = false,     -- settings window: hide the Advanced and Profiles tabs and rarely used options
         accentColor = "blue",       -- the windows' accent colour (UI/Widgets.lua W.ACCENTS); applies after /reload
 }

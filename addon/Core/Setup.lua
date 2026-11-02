@@ -51,7 +51,7 @@ Setup.PATHS = {
 -- `riding`: only where the game version has mount prices (Database/Riding.lua).
 Setup.HELPERS = {
     { key = "newPlayerTips", name = "Explain steps and the basics",
-      text = "The first time you meet each kind of step, one chat line says what to do and which key opens what. Also full bags, your first death and talent points." },
+      text = "The first time you meet each kind of step, a short tip says what to do and which key opens what. Also full bags, your first death and talent points." },
     { key = "spellCoach", name = "Coach new spells",
       text = "When you learn a spell: what it does, and how to put it on your action bars if it is not there. Every few levels, a tip for your class." },
     { key = "playTogether", name = "Play together",
