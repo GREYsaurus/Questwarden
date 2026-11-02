@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.31 (2026-11-01)
 
 - **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables, and the Forever talent trees (27 trees, 466 talents) taken from the wowforevertalents.com calculator, which reads the launch client's talent hotfixes. The client's own tables still hold Classic Era's trees, so they are no longer imported for Forever. Talents with no known spell show their icon in the talent window. All unverified until checked in the game.
 - **New-player tips open in a window** you close with **OK**, instead of chat: step explanations, the useful keys, full bags, first death, talent points, new spells, class tips and profession advice. They come one at a time (OK says how many more are waiting) and wait until a fight is over. *Show tips in a window* (Tips → New Players, on by default) switches back to chat.
@@ -8,6 +8,8 @@
 - **Fixed:** the arrow went to the place an objective is done before you had the item it needs. For example, *Marla's Last Wish* pointed at Marla's Grave before you had Samuel's Remains from Samuel Fipps. The arrow now goes to where the item drops first, then to the objective once it is in your bags. This affects every quest whose objective needs an item that is not an objective itself (about 120 to 150 quests per game version).
 - **Fixed:** collect quests sent you to a named NPC that the next quest in the chain needs. For example, *The Scarlet Crusade* counted Meven Korgal as an armband target, though *The Red Messenger* is to kill him. Such NPCs are now left out of the arrow, the target lists and the hunting routes while other mobs drop the item (Meven Korgal in Tirisfal Glades, Lord Shalzaru in Feralas).
 - **Death skip suggestions:** when the next step is in town and the graveyard you would land at is much nearer it than you are, the step suggests dying to a mob and taking the spirit healer's resurrection. Below level 10, where there is no resurrection sickness, when it saves a minute or more; from level 10 only when it saves 5 minutes or more. Never on Hardcore characters, and never while a hearthstone suggestion shows. *Death Skip Suggestions* (General → Automation, on by default).
+
+**Tested:** offline only (TBC suite 5,636/5,636, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
 
 ## 0.1.0-alpha.30 (2026-11-01)
 
