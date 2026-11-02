@@ -195,6 +195,20 @@ SecureActionButtonMixin = nil
 ns.ActiveItems.RegisterClicks(fake)
 check(reg and #reg == 1 and reg[1] == "AnyUp", "older client: up clicks only (no double use)")
 SecureActionButtonMixin = realMixin
+-- An item that starts a quest you have not taken comes first, even without a "Use:" spell; a click opens the quest
+MOCK.items[96004] = { name = "Sealed Letter", quality = 1, classID = 12, sellPrice = 0 }
+MOCK.bags = { [0] = { { itemID = 96001 }, { itemID = 96004, startsQuest = 99901 } } }
+ns.ActiveItems:Update()
+check(AIb[1]:IsShown() and AIb[1].attributes.item == "item:96004" and AIb[1].starts and AIb[2].attributes.item == "item:96001" and not AIb[2].starts,
+    "a quest-starting item gets the first button")
+MOCK.bags = { [0] = { { itemID = 96004, startsQuest = 99901, questActive = true } } }
+ns.ActiveItems:Update()
+check(not AIb[1]:IsShown(), "once its quest is in your log the starter item has no button")
+MOCK.completed[99901] = true
+MOCK.bags = { [0] = { { itemID = 96004, startsQuest = 99901 } } }
+ns.ActiveItems:Update()
+check(not AIb[1]:IsShown(), "a starter item of a quest you turned in has no button")
+MOCK.completed[99901] = nil
 -- Stack count is the total across stacks; moving the item keeps the same action
 MOCK.bags = { [0] = { { itemID = 96001, count = 2 }, nil, { itemID = 96001, count = 3 } } }
 ns.ActiveItems:Update()

@@ -270,6 +270,22 @@ function C.ContainerItemIsQuestItem(bag, slot)
     return nil
 end
 
+-- The quest an item in your bags starts, while that quest is not in your log (isActive false); nil otherwise.
+function C.ContainerItemStartsQuest(bag, slot)
+    local f = has("C_Container.GetContainerItemQuestInfo")
+    if f then
+        local ok, info = pcall(f, bag, slot)
+        if ok and type(info) == "table" and info.questID and info.questID > 0 and not info.isActive then return info.questID end
+        return nil
+    end
+    f = has("GetContainerItemQuestInfo")
+    if f then
+        local ok, _, questId, isActive = pcall(f, bag, slot)
+        if ok and questId and questId > 0 and not isActive then return questId end
+    end
+    return nil
+end
+
 -- { name=, quality=, sellPrice=, classID=, subclassID=, bindType= } or nil while the item is not cached.
 function C.GetItemInfo(item)
     local f = has("C_Item.GetItemInfo") or has("GetItemInfo")

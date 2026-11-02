@@ -136,7 +136,8 @@ function IS:Lines(s, i, current)
     local out = {}
     local st = self:State(s, i)
     if st == "have" then
-        out[#out + 1] = { warn = true, text = itemName(s.starter) .. " is in your bags: right-click it, then click Accept." }
+        local where = ns.db.profile.activeItems and "click it in the item window (or right-click it in your bags)" or "right-click it"
+        out[#out + 1] = { warn = true, text = itemName(s.starter) .. " is in your bags: " .. where .. ", then click Accept." }
         if s.ifFound then out[#out + 1] = { text = "This step shows only because you found the item." } end
     elseif st == "farm" or st == "waiting" then
         local who = dropperNames(s, 6)

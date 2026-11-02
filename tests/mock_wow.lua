@@ -231,7 +231,7 @@ C_Container = {
     end,
     GetContainerItemQuestInfo = function(bag, slot)
         local b = bagItem(bag, slot)
-        return { isQuestItem = b and b.questItem or false, questID = nil, isActive = false }
+        return { isQuestItem = b and b.questItem or false, questID = b and b.startsQuest or nil, isActive = b and b.questActive or false }
     end,
     UseContainerItem = function(bag, slot)
         table.insert(MOCK.useCalls, { bag = bag, slot = slot })

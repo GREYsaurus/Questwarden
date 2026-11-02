@@ -19,7 +19,7 @@ Each such step is in one state, read from your quest log and your bags only:
 |---|---|---|
 | Done | the quest is turned in | done |
 | Accepted | the quest is in your log | done |
-| Have | the item is in your bags, the quest is not taken | "Use [item] to accept ...": right-click it, then click Accept. No arrow. |
+| Have | the item is in your bags, the quest is not taken | "Use [item] to accept ...": click it in the active item window (it gets the first button there) or right-click it in your bags, then click Accept. No arrow. |
 | Waiting | no item, and a `via` step is still ahead | not current: the kill steps go first, and they say their mobs can drop the item |
 | Farm | no item, no kill step left | "Get [item] from ... to accept ...", the droppers, the arrow on the nearest one, and that you can skip |
 | Not available | race, class, level, another branch | auto-skipped with the reason, like any pickup |

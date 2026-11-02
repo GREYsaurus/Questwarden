@@ -7,7 +7,8 @@
 -- See the GNU General Public License for more details. The complete license text is in LICENSE.
 --
 -- Shows the usable items ("Use:" on the item) that belong to quests: quest items in your bags and
--- items the current guide's quests need. Each button is a secure item button (type "item", item
+-- items the current guide's quests need; first, items that start a quest you have not taken (a click opens the
+-- quest, as right-clicking the item does). Each button is a secure item button (type "item", item
 -- "item:<id>"), so a click uses the item exactly like right-clicking it in your bags: targeting,
 -- range, cooldown and error messages are the client's own. Nothing is ever used without a click.
 --
@@ -60,28 +61,49 @@ local function bagCount(id)
     return n
 end
 
--- { {itemID, count, link} } in bag order, at most AI.max. count is the total across stacks.
+-- Starter items of the current guide's pickups that are in your bags while the quest is not taken yet.
+function AI:GuideStarters()
+    local ids = {}
+    local g = ns.Engine and ns.Engine.guide
+    if not (g and ns.ItemStarts) then return ids end
+    for i, s in ipairs(g.steps) do
+        if s.starter and ns.ItemStarts:State(s, i) == "have" then ids[s.starter] = true end
+    end
+    return ids
+end
+
+-- { {itemID, count, link, starts} } in bag order, at most AI.max. count is the total across stacks.
+-- Items that start a quest you have not taken (starts = true) come first: clicking one opens the quest, like
+-- right-clicking it in your bags. The guide's starter items count, and so does any item the client says starts
+-- a quest that is not in your log and not turned in.
 function AI:Collect()
-    local want, out, seen = self:GuideItems(), {}, {}
+    local want, starters, out, first, seen = self:GuideItems(), self:GuideStarters(), {}, {}, {}
     for bag = 0, C.NUM_BAGS do
         for slot = 1, C.GetContainerNumSlots(bag) do
             local it = C.GetContainerItem(bag, slot)
             local id = it and it.itemID
             if id and not seen[id] then
-                local quest = want[id] or C.ContainerItemIsQuestItem(bag, slot)
-                if not quest then
-                    local info = C.GetItemInfo(id)
-                    quest = info and info.classID == 12
-                end
-                if quest and itemSpell(id) then
+                local startsQ = C.ContainerItemStartsQuest(bag, slot)
+                if starters[id] or (startsQ and not ns.Tracker:IsTurnedIn(startsQ)) then
                     seen[id] = true
-                    out[#out + 1] = { itemID = id, link = it.link, count = bagCount(id) }
-                    if #out >= self.max then return out end
+                    first[#first + 1] = { itemID = id, link = it.link, count = bagCount(id), starts = true }
+                else
+                    local quest = want[id] or C.ContainerItemIsQuestItem(bag, slot)
+                    if not quest then
+                        local info = C.GetItemInfo(id)
+                        quest = info and info.classID == 12
+                    end
+                    if quest and itemSpell(id) then
+                        seen[id] = true
+                        out[#out + 1] = { itemID = id, link = it.link, count = bagCount(id) }
+                    end
                 end
             end
         end
     end
-    return out
+    for _, e in ipairs(out) do first[#first + 1] = e end
+    while #first > self.max do table.remove(first) end
+    return first
 end
 
 function AI:Frame()
@@ -160,7 +182,8 @@ function AI:Button(i)
         GameTooltip:SetOwner(s, "ANCHOR_TOP")
         GameTooltip:SetHyperlink(s.link)
         if s.missing then GameTooltip:AddLine("Not in your bags any more.", 1, 0.3, 0.3) end
-        GameTooltip:AddLine("Click to use. Shift-click to link, Alt-drag to move.", 0.6, 0.6, 0.6)
+        GameTooltip:AddLine(s.starts and "Click to read it and accept its quest. Shift-click to link, Alt-drag to move."
+            or "Click to use. Shift-click to link, Alt-drag to move.", 0.6, 0.6, 0.6)
         GameTooltip:Show()
     end)
     b:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -206,12 +229,12 @@ function AI:Update()
                 b.itemID = e.itemID
                 b.icon:SetTexture(icon(e.itemID))
             end
-            b.link = e.link
+            b.link, b.starts = e.link, e.starts or false
             b:Show()
             self:Refresh(b)
         else
             b:SetAttribute("item", nil)
-            b.itemID, b.link, b.missing = nil, nil, nil
+            b.itemID, b.link, b.missing, b.starts = nil, nil, nil, false
             b:Hide()
         end
     end

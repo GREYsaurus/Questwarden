@@ -91,7 +91,7 @@ check(refreshes == 1, "an unrelated bag update does not refresh again")
 E.Refresh = real.refresh
 check(E.current == 1 and IS:State(S[1]) == "have", "item in bags: the pickup is current again")
 check(string.find(ns.StepText:Title(S[1]), "Use [Gold Pickup Schedule] to accept", 1, true), "title: use the item to accept the quest")
-check(string.find(table.concat(ns.StepText:Details(S[1]), "\n"), "right-click it, then click Accept", 1, true), "details: how to start it")
+check(string.find(table.concat(ns.StepText:Details(S[1]), "\n"), "then click Accept", 1, true), "details: how to start it")
 check(ns.StepText:Target(S[1]) == nil, "no waypoint while the item is in your bags")
 check(E.status[1] ~= "done", "having the item is not having the quest")
 E:Refresh() -- e.g. the quest window opened and closed without accepting: nothing in the log changed
@@ -183,7 +183,7 @@ check(E.current == 5, "the route goes past them: never waited for, never farmed"
 bags(ITEM)
 check(E.current == 2 and IS:State(E.guide.steps[2]) == "have", "the item in your bags: the pickup appears and is current")
 local d = table.concat(ns.StepText:Details(E.guide.steps[2]), " ")
-check(string.find(d, "right-click it, then click Accept", 1, true) and string.find(d, "only because you found the item", 1, true),
+check(string.find(d, "then click Accept", 1, true) and string.find(d, "only because you found the item", 1, true),
     "it says to use the item, and why the step appeared")
 check(E.status[3] == "na", "its objective stays hidden until the quest is taken")
 setLog({ IQ })
