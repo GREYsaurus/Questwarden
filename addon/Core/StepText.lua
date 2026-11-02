@@ -130,6 +130,9 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(DIM, string.format("Level %d, %d%% through", UnitLevel("player"), math.floor(xp / maxXp * 100)))
         end
     end
+    -- A quest given or taken by an object (a wanted poster, a grave, a book), not an NPC.
+    local giver = StepText.ObjectGiverLine(s)
+    if giver then lines[#lines + 1] = giver end
     -- Quests that start from a dropped item (Core/ItemStarts.lua).
     if ns.ItemStarts then
         for _, l in ipairs(ns.ItemStarts:Lines(s, s.index, ns.Engine:CurrentStep() == s)) do
@@ -180,6 +183,27 @@ end
 
 -- Objective progress of a kill/collect step from 0 to 1, or nil when there is nothing to count. Each
 -- objective counts as its own share: "Wolf Meat: 3/8" as 3/8, a done objective as 1, others as 0.
+-- What an object quest giver is, from its name: a wanted poster, a notice board, else any object.
+local function objectKind(name)
+    local n = string.lower(name or "")
+    if n:find("wanted", 1, true) or n:find("bounty", 1, true) then return "a wanted poster, on a post or board" end
+    if n:find("board", 1, true) or n:find("notice", 1, true) then return "a notice board" end
+    return "an object in the world"
+end
+
+-- For an accept or turn-in step whose quest has no NPC giver (or taker) but an object: how to use it. Nil otherwise.
+function StepText.ObjectGiverLine(s)
+    if not (s and s.q and (s[1] == "accept" or s[1] == "turnin")) then return nil end
+    local npcs, objs
+    if s[1] == "accept" then npcs, objs = ns.DB.GetQuestStartNPCs(s.q) else npcs, objs = ns.DB.GetQuestEndNPCs(s.q) end
+    if (npcs and npcs[1]) or not (objs and objs[1]) then return nil end
+    local name = ns.DB.GetObjectName(objs[1]) or s.npc or "It"
+    if s[1] == "accept" then
+        return string.format("%s is not an NPC but %s. Right-click it to read the quest, then press Accept.", name, objectKind(name))
+    end
+    return string.format("%s is not an NPC but %s. Right-click it to hand in the quest.", name, objectKind(name))
+end
+
 function StepText:Progress(s)
     if not (s and s[1] == "complete" and s.q) then return nil end
     local e = ns.Tracker:GetEntry(s.q)

@@ -59,3 +59,13 @@ local obj = DB.ObjectiveNpcIds(313, 1) or {}
 check(obj[1134] and not obj[1137] and not obj[1271], "The Grizzled Den: targets and marks leave out Edan the Howler and the elites")
 local _, _, _, wl = DB.GetObjectiveLocation(313, 1, 39, 47.5)
 check(wl == "Young Wendigo" or wl == "Wendigo", "The Grizzled Den: the arrow goes to a wendigo, not Edan the Howler")
+
+-- Quests from an object, not an NPC: the step says what to right-click (Core/StepText.lua)
+local ST = ns.StepText
+local poster = ST.ObjectGiverLine({ "accept", q = 398, npc = "Wanted!" })
+check(poster and poster:find("is not an NPC but a wanted poster", 1, true) and poster:find("Right-click it to read the quest", 1, true),
+    "Wanted: Maggot Eye: the pick-up says it is a wanted poster to right-click (" .. tostring(poster) .. ")")
+check(ST.ObjectGiverLine({ "accept", q = 6395, npc = "Novice Elreth" }) == nil, "an NPC giver: no note")
+check(ST.ObjectGiverLine({ "turnin", q = 398 }) == nil, "turned in to an NPC: no note")
+local details = table.concat(ST:Details({ "accept", q = 398, npc = "Wanted!" }), "\n")
+check(details:find("wanted poster", 1, true), "the note is in the step's details")
