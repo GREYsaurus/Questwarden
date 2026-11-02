@@ -24,6 +24,8 @@ Questwarden is GPL-3.0-only. Everything it ships must be either our own work or 
 
 **Zone order.** Since 2026-10-30 the Classic Era routes follow a zone order the maintainer supplied: a 1-60 chart in the style of Joana's guides, with zones and level ranges per visit, transcribed in `targets/ClassicEra/zone-order.json`. Only the zone sequence and level ranges come from it. Which quests each visit holds, their step order and every note come from our earlier routes and QuestieDB data, re-cut by `tools/research/zone_order.py` and filled by `tools/research/zone_guide.py`.
 
+**Forever research.** For WoW: Forever, approved by the maintainer on 2026-11-01: Blizzard's blue posts and patch notes, Wowhead and Icy Veins articles and guides, and published datamining (client data reported on those sites or on wago.tools). They may be read for **facts** (level cap, zones and their levels, new race/class combinations, talent and spell changes, dungeon levels, IDs), each cited where it is used (`research:<url>`) and kept `v=0` until checked in the game. Not allowed: copying their text, and bulk-copying or scraping Wowhead's database (quest, NPC, item or coordinate pages); single facts may be looked up by hand to fill a gap listed in DATA_GAPS.md.
+
 Our own reasoning on top of these (which mobs count as dangerous, which steps a Hardcore route leaves out, stat priorities where nobody publishes numbers) is our own work, and says so.
 
 **Verification.** `v=1` means the value came straight from source 1, 2 or 3 for the target build. Anything typed by hand, estimated, or carried over from another game version is `v=0` until checked in the game. Nothing from Classic Era is assumed to hold on WoW: Forever without a source or an in-game check.

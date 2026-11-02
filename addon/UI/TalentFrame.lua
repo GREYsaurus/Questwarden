@@ -22,7 +22,12 @@ local CLASSES = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "
 
 local function className(c) return (LOCALIZED_CLASS_NAMES_MALE and LOCALIZED_CLASS_NAMES_MALE[c]) or c end
 
-local function spellIcon(spellId)
+-- A talent's icon: its first rank's spell, else its icon file (talents researched without a spell id).
+local function talentIcon(t)
+    local spellId = t.spells[1]
+    if not spellId then
+        return t.iconFile and ("Interface\\Icons\\" .. t.iconFile) or "Interface\\Icons\\INV_Misc_QuestionMark"
+    end
     if GetSpellTexture then
         local tex = GetSpellTexture(spellId)
         if tex then return tex end
@@ -140,7 +145,7 @@ function TF:ShowTooltip(btn)
     GameTooltip:SetOwner(btn, "ANCHOR_RIGHT")
     local cur = btn.curRank or 0
     local spell = t.spells[math.max(1, math.min(cur > 0 and cur or 1, #t.spells))]
-    ns.Compat.SetSpellTooltip(GameTooltip, spell)
+    if spell then ns.Compat.SetSpellTooltip(GameTooltip, spell) else GameTooltip:AddLine(t.name, 1, 1, 1) end
     GameTooltip:AddLine(" ")
     GameTooltip:AddLine(string.format("Rank %d/%d  (tier %d)", cur, t.ranks, t.tier), 1, 1, 1)
     if t.prereq then
@@ -293,7 +298,7 @@ function TF:Render()
                 b.talent = t
                 b:ClearAllPoints()
                 b:SetPoint("TOPLEFT", 8 + (t.column - 1) * CELL, -24 - (t.tier - 1) * CELL)
-                b.icon:SetTexture(spellIcon(t.spells[1]))
+                b.icon:SetTexture(talentIcon(t))
                 local r = alloc[t.id] or 0
                 b.curRank = r
                 b.rank:SetText(r > 0 and (r .. "/" .. t.ranks) or "")

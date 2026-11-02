@@ -1,0 +1,4424 @@
+{
+ "_source": "https://wowforevertalents.com (reads the WoW: Forever client's hotfix cache, build 1.60.1.70707; see https://wowforevertalents.com/about/)",
+ "_read": "2026-11-01",
+ "_policy": "research facts, v=0 (docs/DATA_POLICY.md, Forever research); no tooltip text",
+ "classes": {
+  "WARRIOR": [
+   {
+    "name": "Arms",
+    "talents": [
+     {
+      "name": "Improved Heroic Strike",
+      "ranks": 3,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_rogue_ambush",
+      "page": "/warrior/talents/improved-heroic-strike/"
+     },
+     {
+      "name": "Deflection",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_parry",
+      "page": "/warrior/talents/deflection/"
+     },
+     {
+      "name": "Improved Rend",
+      "ranks": 3,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_gouge",
+      "page": "/warrior/talents/improved-rend/"
+     },
+     {
+      "name": "Improved Charge",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_warrior_charge",
+      "page": "/warrior/talents/improved-charge/"
+     },
+     {
+      "name": "Improved Tactical Mastery",
+      "ranks": 5,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_enchantarmor",
+      "page": "/warrior/talents/improved-tactical-mastery/"
+     },
+     {
+      "name": "Improved Overpower",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "same",
+      "icon": "inv_sword_05",
+      "page": "/warrior/talents/improved-overpower/"
+     },
+     {
+      "name": "Anger Management",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofstamina",
+      "page": "/warrior/talents/anger-management/",
+      "requires": "Improved Tactical Mastery"
+     },
+     {
+      "name": "Deep Wounds",
+      "ranks": 3,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_backstab",
+      "page": "/warrior/talents/deep-wounds/",
+      "requires": "Improved Rend"
+     },
+     {
+      "name": "Spearing Strike",
+      "ranks": 1,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "inv_spear_01",
+      "page": "/warrior/talents/spearing-strike/"
+     },
+     {
+      "name": "Two-Handed Weapon Specialization",
+      "ranks": 3,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_axe_09",
+      "page": "/warrior/talents/two-handed-weapon-specialization/"
+     },
+     {
+      "name": "Impale",
+      "ranks": 2,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_searingarrow",
+      "page": "/warrior/talents/impale/",
+      "requires": "Deep Wounds"
+     },
+     {
+      "name": "Bloodthrill",
+      "ranks": 5,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "inv_sword_01",
+      "page": "/warrior/talents/bloodthrill/"
+     },
+     {
+      "name": "Sweeping Strikes",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_rogue_slicedice",
+      "page": "/warrior/talents/sweeping-strikes/"
+     },
+     {
+      "name": "Weaponmaster",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "garrison_weaponupgrade",
+      "page": "/warrior/talents/weaponmaster/"
+     },
+     {
+      "name": "Improved Slam",
+      "ranks": 2,
+      "tier": 6,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_warrior_decisivestrike",
+      "page": "/warrior/talents/improved-slam/"
+     },
+     {
+      "name": "Improved Hamstring",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "ability_shockwave",
+      "page": "/warrior/talents/improved-hamstring/"
+     },
+     {
+      "name": "Mortal Strike",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_warrior_savageblow",
+      "page": "/warrior/talents/mortal-strike/",
+      "requires": "Sweeping Strikes"
+     }
+    ]
+   },
+   {
+    "name": "Fury",
+    "talents": [
+     {
+      "name": "Booming Voice",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_purge",
+      "page": "/warrior/talents/booming-voice/"
+     },
+     {
+      "name": "Cruelty",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_rogue_eviscerate",
+      "page": "/warrior/talents/cruelty/"
+     },
+     {
+      "name": "Lingering Rage",
+      "ranks": 5,
+      "tier": 2,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_warrior_secondwind",
+      "page": "/warrior/talents/lingering-rage/"
+     },
+     {
+      "name": "Unbridled Wrath",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_stoneclawtotem",
+      "page": "/warrior/talents/unbridled-wrath/"
+     },
+     {
+      "name": "Furious Precision",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_warrior_incite",
+      "page": "/warrior/talents/furious-precision/"
+     },
+     {
+      "name": "Piercing Howl",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_deathscream",
+      "page": "/warrior/talents/piercing-howl/"
+     },
+     {
+      "name": "Blood Craze",
+      "ranks": 3,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_summonimp",
+      "page": "/warrior/talents/blood-craze/"
+     },
+     {
+      "name": "Dual Wield Specialization",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_dualwield",
+      "page": "/warrior/talents/dual-wield-specialization/"
+     },
+     {
+      "name": "Raging Blows",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_whirlwind",
+      "page": "/warrior/talents/raging-blows/"
+     },
+     {
+      "name": "Enrage",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_unholyfrenzy",
+      "page": "/warrior/talents/enrage/"
+     },
+     {
+      "name": "Improved Execute",
+      "ranks": 2,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "inv_sword_48",
+      "page": "/warrior/talents/improved-execute/"
+     },
+     {
+      "name": "Improved Berserker Rage",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_ancestralguardian",
+      "page": "/warrior/talents/improved-berserker-rage/"
+     },
+     {
+      "name": "Death Wish",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_deathpact",
+      "page": "/warrior/talents/death-wish/"
+     },
+     {
+      "name": "Improved Intercept",
+      "ranks": 2,
+      "tier": 5,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_rogue_sprint",
+      "page": "/warrior/talents/improved-intercept/"
+     },
+     {
+      "name": "Flurry",
+      "ranks": 5,
+      "tier": 6,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_ghoulfrenzy",
+      "page": "/warrior/talents/flurry/",
+      "requires": "Death Wish"
+     },
+     {
+      "name": "Gore Drinker",
+      "ranks": 2,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "racial_troll_berserk",
+      "page": "/warrior/talents/gore-drinker/",
+      "requires": "Enrage"
+     },
+     {
+      "name": "Bloodthirst",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_bloodlust",
+      "page": "/warrior/talents/bloodthirst/"
+     }
+    ]
+   },
+   {
+    "name": "Protection",
+    "talents": [
+     {
+      "name": "Improved Bloodrage",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_racial_bloodrage",
+      "page": "/warrior/talents/improved-bloodrage/"
+     },
+     {
+      "name": "Shield Specialization",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_shield_06",
+      "page": "/warrior/talents/shield-specialization/"
+     },
+     {
+      "name": "Iron Will",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_magic_magearmor",
+      "page": "/warrior/talents/iron-will/"
+     },
+     {
+      "name": "Anticipation",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_mirrorimage",
+      "page": "/warrior/talents/anticipation/"
+     },
+     {
+      "name": "Improved Revenge",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_revenge",
+      "page": "/warrior/talents/improved-revenge/"
+     },
+     {
+      "name": "Improved Thunder Clap",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "ability_thunderclap",
+      "page": "/warrior/talents/improved-thunder-clap/"
+     },
+     {
+      "name": "Last Stand",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_ashestoashes",
+      "page": "/warrior/talents/last-stand/"
+     },
+     {
+      "name": "Master of Defense",
+      "ranks": 2,
+      "tier": 3,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_warrior_shieldguard",
+      "page": "/warrior/talents/master-of-defense/",
+      "requires": "Shield Specialization"
+     },
+     {
+      "name": "Improved Disarm",
+      "ranks": 3,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_disarm",
+      "page": "/warrior/talents/improved-disarm/"
+     },
+     {
+      "name": "Defiance",
+      "ranks": 3,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "ability_warrior_innerrage",
+      "page": "/warrior/talents/defiance/"
+     },
+     {
+      "name": "Improved Sunder Armor",
+      "ranks": 3,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_warrior_sunder",
+      "page": "/warrior/talents/improved-sunder-armor/"
+     },
+     {
+      "name": "Vanguard",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_warrior_shieldcharge",
+      "page": "/warrior/talents/vanguard/"
+     },
+     {
+      "name": "Improved Shield Bash",
+      "ranks": 2,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_shieldbash",
+      "page": "/warrior/talents/improved-shield-bash/"
+     },
+     {
+      "name": "Improved Shield Wall",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_warrior_shieldwall",
+      "page": "/warrior/talents/improved-shield-wall/"
+     },
+     {
+      "name": "Concussion Blow",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_thunderbolt",
+      "page": "/warrior/talents/concussion-blow/"
+     },
+     {
+      "name": "Focused Rage",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_warrior_focusedrage",
+      "page": "/warrior/talents/focused-rage/"
+     },
+     {
+      "name": "Bastion",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "inv_shield_04",
+      "page": "/warrior/talents/bastion/"
+     },
+     {
+      "name": "Shield Slam",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_shield_05",
+      "page": "/warrior/talents/shield-slam/",
+      "requires": "Concussion Blow"
+     }
+    ]
+   }
+  ],
+  "PALADIN": [
+   {
+    "name": "Holy",
+    "talents": [
+     {
+      "name": "Spiritual Focus",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_arcane_blink",
+      "page": "/paladin/talents/spiritual-focus/"
+     },
+     {
+      "name": "Divine Strength",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "same",
+      "icon": "ability_golemthunderclap",
+      "page": "/paladin/talents/divine-strength/"
+     },
+     {
+      "name": "Healing Light",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_holybolt",
+      "page": "/paladin/talents/healing-light/"
+     },
+     {
+      "name": "Reverence",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_divineillumination",
+      "page": "/paladin/talents/reverence/"
+     },
+     {
+      "name": "Improved Seals",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_thunderbolt",
+      "page": "/paladin/talents/improved-seals/"
+     },
+     {
+      "name": "Purifying Power",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_holy_purifyingpower",
+      "page": "/paladin/talents/purifying-power/"
+     },
+     {
+      "name": "Divine Favor",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_holy_heal",
+      "page": "/paladin/talents/divine-favor/"
+     },
+     {
+      "name": "Illumination",
+      "ranks": 5,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_greaterheal",
+      "page": "/paladin/talents/illumination/",
+      "requires": "Reverence"
+     },
+     {
+      "name": "Holy Conduit",
+      "ranks": 2,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_devineaegis",
+      "page": "/paladin/talents/holy-conduit/"
+     },
+     {
+      "name": "Divine Precision",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_holy_mindsooth",
+      "page": "/paladin/talents/divine-precision/"
+     },
+     {
+      "name": "Infusion of Light",
+      "ranks": 2,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_paladin_infusionoflight",
+      "page": "/paladin/talents/infusion-of-light/"
+     },
+     {
+      "name": "Oath of Light",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_greaterblessingoflight",
+      "page": "/paladin/talents/oath-of-light/"
+     },
+     {
+      "name": "Consecrated Ground",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_holy_innerfire",
+      "page": "/paladin/talents/consecrated-ground/"
+     },
+     {
+      "name": "Holy Shock",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_searinglight",
+      "page": "/paladin/talents/holy-shock/"
+     },
+     {
+      "name": "Boundless Light",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_paladin_sacredcleansing",
+      "page": "/paladin/talents/boundless-light/"
+     },
+     {
+      "name": "Holy Power",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_power",
+      "page": "/paladin/talents/holy-power/"
+     },
+     {
+      "name": "Light's Vigil",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_paladin_judgementofthepure",
+      "page": "/paladin/talents/light-s-vigil/",
+      "requires": "Holy Shock"
+     }
+    ]
+   },
+   {
+    "name": "Protection",
+    "talents": [
+     {
+      "name": "Divine Intellect",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_nature_sleep",
+      "page": "/paladin/talents/divine-intellect/"
+     },
+     {
+      "name": "Redoubt",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_defend",
+      "page": "/paladin/talents/redoubt/"
+     },
+     {
+      "name": "Precision",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_rogue_ambush",
+      "page": "/paladin/talents/precision/"
+     },
+     {
+      "name": "Guardian's Favor",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_sealofprotection",
+      "page": "/paladin/talents/guardian-s-favor/"
+     },
+     {
+      "name": "Sacred Duty",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_holy_divineintervention",
+      "page": "/paladin/talents/sacred-duty/"
+     },
+     {
+      "name": "Templar's Bulwark",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_paladin_shieldofthetemplar",
+      "page": "/paladin/talents/templar-s-bulwark/"
+     },
+     {
+      "name": "Improved Hammer of Justice",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_holy_sealofmight",
+      "page": "/paladin/talents/improved-hammer-of-justice/"
+     },
+     {
+      "name": "Shield Specialization",
+      "ranks": 2,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "inv_shield_06",
+      "page": "/paladin/talents/shield-specialization/",
+      "requires": "Redoubt"
+     },
+     {
+      "name": "Toughness",
+      "ranks": 5,
+      "tier": 3,
+      "column": 4,
+      "flag": "same",
+      "icon": "spell_holy_devotion",
+      "page": "/paladin/talents/toughness/"
+     },
+     {
+      "name": "Swift Judgement",
+      "ranks": 1,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_paladin_judgementred",
+      "page": "/paladin/talents/swift-judgement/",
+      "requires": "Templar's Bulwark"
+     },
+     {
+      "name": "Improved Righteous Fury",
+      "ranks": 3,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_sealoffury",
+      "page": "/paladin/talents/improved-righteous-fury/"
+     },
+     {
+      "name": "Anticipation",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_magic_lesserinvisibilty",
+      "page": "/paladin/talents/anticipation/"
+     },
+     {
+      "name": "Stoicism",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_holy_stoicism",
+      "page": "/paladin/talents/stoicism/"
+     },
+     {
+      "name": "Holy Shield",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofprotection",
+      "page": "/paladin/talents/holy-shield/"
+     },
+     {
+      "name": "Reckoning",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofstrength",
+      "page": "/paladin/talents/reckoning/"
+     },
+     {
+      "name": "Iron Creed",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_improvedresistanceauras",
+      "page": "/paladin/talents/iron-creed/"
+     },
+     {
+      "name": "Shieldsworn",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_greaterblessingofsanctuary",
+      "page": "/paladin/talents/shieldsworn/",
+      "requires": "Holy Shield"
+     }
+    ]
+   },
+   {
+    "name": "Retribution",
+    "talents": [
+     {
+      "name": "Deflection",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_parry",
+      "page": "/paladin/talents/deflection/"
+     },
+     {
+      "name": "Benediction",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_frost_windwalkon",
+      "page": "/paladin/talents/benediction/"
+     },
+     {
+      "name": "Improved Judgement",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_righteousfury",
+      "page": "/paladin/talents/improved-judgement/"
+     },
+     {
+      "name": "Conviction",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_retributionaura",
+      "page": "/paladin/talents/conviction/"
+     },
+     {
+      "name": "Sanctified Judgement",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_paladin_judgementblue",
+      "page": "/paladin/talents/sanctified-judgement/"
+     },
+     {
+      "name": "Vindication",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_vindication",
+      "page": "/paladin/talents/vindication/"
+     },
+     {
+      "name": "Unyielding Faith",
+      "ranks": 2,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_unyieldingfaith",
+      "page": "/paladin/talents/unyielding-faith/"
+     },
+     {
+      "name": "Seal of Command",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_innerrage",
+      "page": "/paladin/talents/seal-of-command/"
+     },
+     {
+      "name": "Pursuit of Justice",
+      "ranks": 2,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_holy_persuitofjustice",
+      "page": "/paladin/talents/pursuit-of-justice/"
+     },
+     {
+      "name": "Eye for an Eye",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_eyeforaneye",
+      "page": "/paladin/talents/eye-for-an-eye/"
+     },
+     {
+      "name": "Sacred Arbiter",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "inv_sword_08",
+      "page": "/paladin/talents/sacred-arbiter/"
+     },
+     {
+      "name": "Two-Handed Weapon Specialization",
+      "ranks": 3,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "inv_hammer_04",
+      "page": "/paladin/talents/two-handed-weapon-specialization/"
+     },
+     {
+      "name": "Turn Evil",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_holy_turnundead",
+      "page": "/paladin/talents/turn-evil/"
+     },
+     {
+      "name": "Repentance",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_holy_prayerofhealing",
+      "page": "/paladin/talents/repentance/"
+     },
+     {
+      "name": "Vengeance",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_racial_avatar",
+      "page": "/paladin/talents/vengeance/",
+      "requires": "Seal of Command"
+     },
+     {
+      "name": "Champion of the Light",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_paladin_enlightenedjudgements",
+      "page": "/paladin/talents/champion-of-the-light/"
+     },
+     {
+      "name": "Unsealed Wrath",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_blessedresillience",
+      "page": "/paladin/talents/unsealed-wrath/",
+      "requires": "Repentance"
+     }
+    ]
+   }
+  ],
+  "HUNTER": [
+   {
+    "name": "Beast Mastery",
+    "talents": [
+     {
+      "name": "Deadly Aspects",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_ravenform",
+      "page": "/hunter/talents/deadly-aspects/"
+     },
+     {
+      "name": "Endurance Training",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_reincarnation",
+      "page": "/hunter/talents/endurance-training/"
+     },
+     {
+      "name": "Focused Fire",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "inv_weapon_crossbow_10",
+      "page": "/hunter/talents/focused-fire/"
+     },
+     {
+      "name": "Improved Aspect of the Monkey",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_hunter_aspectofthemonkey",
+      "page": "/hunter/talents/improved-aspect-of-the-monkey/"
+     },
+     {
+      "name": "Improved Revive Pet",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "same",
+      "icon": "ability_hunter_beastsoothe",
+      "page": "/hunter/talents/improved-revive-pet/"
+     },
+     {
+      "name": "Pathfinding",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "ability_mount_jungletiger",
+      "page": "/hunter/talents/pathfinding/"
+     },
+     {
+      "name": "Bestial Swiftness",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_druid_dash",
+      "page": "/hunter/talents/bestial-swiftness/"
+     },
+     {
+      "name": "Unleashed Fury",
+      "ranks": 5,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_bullrush",
+      "page": "/hunter/talents/unleashed-fury/"
+     },
+     {
+      "name": "Improved Mend Pet",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_hunter_mendpet",
+      "page": "/hunter/talents/improved-mend-pet/"
+     },
+     {
+      "name": "Ferocity",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "inv_misc_monsterclaw_04",
+      "page": "/hunter/talents/ferocity/"
+     },
+     {
+      "name": "Summon Hawk",
+      "ranks": 1,
+      "tier": 4,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_hunter_animalhandler",
+      "page": "/hunter/talents/summon-hawk/"
+     },
+     {
+      "name": "Spirit Bond",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_druid_demoralizingroar",
+      "page": "/hunter/talents/spirit-bond/"
+     },
+     {
+      "name": "Intimidation",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_devour",
+      "page": "/hunter/talents/intimidation/",
+      "requires": "Bestial Swiftness"
+     },
+     {
+      "name": "Bestial Discipline",
+      "ranks": 2,
+      "tier": 5,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_abolishmagic",
+      "page": "/hunter/talents/bestial-discipline/"
+     },
+     {
+      "name": "Frenzy",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "inv_misc_monsterclaw_03",
+      "page": "/hunter/talents/frenzy/",
+      "requires": "Ferocity"
+     },
+     {
+      "name": "Bestial Wrath",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_druid_ferociousbite",
+      "page": "/hunter/talents/bestial-wrath/",
+      "requires": "Intimidation"
+     }
+    ]
+   },
+   {
+    "name": "Marksmanship",
+    "talents": [
+     {
+      "name": "Hawk Eye",
+      "ranks": 3,
+      "tier": 1,
+      "column": 1,
+      "flag": "same",
+      "icon": "ability_townwatch",
+      "page": "/hunter/talents/hawk-eye/"
+     },
+     {
+      "name": "Improved Concussive Shot",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_frost_stun",
+      "page": "/hunter/talents/improved-concussive-shot/"
+     },
+     {
+      "name": "Lethal Attacks",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_searingarrow",
+      "page": "/hunter/talents/lethal-attacks/"
+     },
+     {
+      "name": "Improved Stings",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_hunter_quickshot",
+      "page": "/hunter/talents/improved-stings/"
+     },
+     {
+      "name": "Efficiency",
+      "ranks": 5,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_wizardmark",
+      "page": "/hunter/talents/efficiency/"
+     },
+     {
+      "name": "Careful Aim",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_hunter_zenarchery",
+      "page": "/hunter/talents/careful-aim/"
+     },
+     {
+      "name": "Rapid Killing",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_hunter_rapidkilling",
+      "page": "/hunter/talents/rapid-killing/"
+     },
+     {
+      "name": "Improved Arcane Shot",
+      "ranks": 5,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_impalingbolt",
+      "page": "/hunter/talents/improved-arcane-shot/"
+     },
+     {
+      "name": "Lone Wolf",
+      "ranks": 1,
+      "tier": 3,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_mount_whitedirewolf",
+      "page": "/hunter/talents/lone-wolf/"
+     },
+     {
+      "name": "Trueshot Aura",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_trueshot",
+      "page": "/hunter/talents/trueshot-aura/"
+     },
+     {
+      "name": "Mortal Shots",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_piercedamage",
+      "page": "/hunter/talents/mortal-shots/",
+      "requires": "Careful Aim"
+     },
+     {
+      "name": "Improved Serpent Sting",
+      "ranks": 5,
+      "tier": 4,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_hunter_quickshot",
+      "page": "/hunter/talents/improved-serpent-sting/"
+     },
+     {
+      "name": "Rapid Recuperation",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_hunter_rapidregeneration",
+      "page": "/hunter/talents/rapid-recuperation/",
+      "requires": "Rapid Killing"
+     },
+     {
+      "name": "Barrage",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_upgrademoonglaive",
+      "page": "/hunter/talents/barrage/"
+     },
+     {
+      "name": "Scatter Shot",
+      "ranks": 1,
+      "tier": 5,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_golemstormbolt",
+      "page": "/hunter/talents/scatter-shot/"
+     },
+     {
+      "name": "Ranged Weapon Specialization",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "inv_weapon_rifle_06",
+      "page": "/hunter/talents/ranged-weapon-specialization/"
+     },
+     {
+      "name": "Sniper Shot",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "hunter_pvp_snipershot",
+      "page": "/hunter/talents/sniper-shot/",
+      "requires": "Trueshot Aura"
+     }
+    ]
+   },
+   {
+    "name": "Survival",
+    "talents": [
+     {
+      "name": "Improved Tracking",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_misc_head_dragon_black",
+      "page": "/hunter/talents/improved-tracking/"
+     },
+     {
+      "name": "Deflection",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "same",
+      "icon": "ability_parry",
+      "page": "/hunter/talents/deflection/"
+     },
+     {
+      "name": "Entrapment",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_stranglevines",
+      "page": "/hunter/talents/entrapment/"
+     },
+     {
+      "name": "Savage Strikes",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_racial_bloodrage",
+      "page": "/hunter/talents/savage-strikes/"
+     },
+     {
+      "name": "Survivalist",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_twilight",
+      "page": "/hunter/talents/survivalist/"
+     },
+     {
+      "name": "Improved Wing Clip",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "ability_rogue_trip",
+      "page": "/hunter/talents/improved-wing-clip/"
+     },
+     {
+      "name": "Clever Traps",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_nature_timestop",
+      "page": "/hunter/talents/clever-traps/"
+     },
+     {
+      "name": "Surefooted",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_kick",
+      "page": "/hunter/talents/surefooted/"
+     },
+     {
+      "name": "Deterrence",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "same",
+      "icon": "ability_whirlwind",
+      "page": "/hunter/talents/deterrence/"
+     },
+     {
+      "name": "Survival Tactics",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_ensnare",
+      "page": "/hunter/talents/survival-tactics/"
+     },
+     {
+      "name": "Predator's Edge",
+      "ranks": 5,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_dualwield",
+      "page": "/hunter/talents/predator-s-edge/"
+     },
+     {
+      "name": "Counterattack",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_challange",
+      "page": "/hunter/talents/counterattack/",
+      "requires": "Deterrence"
+     },
+     {
+      "name": "Resourcefulness",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_hunter_resourcefulness",
+      "page": "/hunter/talents/resourcefulness/"
+     },
+     {
+      "name": "Expose Prey",
+      "ranks": 2,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_hunter_swiftstrike",
+      "page": "/hunter/talents/expose-prey/"
+     },
+     {
+      "name": "Survivalist's Discipline",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_hunter_mastertactitian",
+      "page": "/hunter/talents/survivalist-s-discipline/"
+     },
+     {
+      "name": "Strider Kick",
+      "ranks": 1,
+      "tier": 5,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_hunter_pet_tallstrider",
+      "page": "/hunter/talents/strider-kick/"
+     },
+     {
+      "name": "Lightning Reflexes",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_invisibilty",
+      "page": "/hunter/talents/lightning-reflexes/"
+     },
+     {
+      "name": "Lacerating Strikes",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_gouge",
+      "page": "/hunter/talents/lacerating-strikes/",
+      "requires": "Expose Prey"
+     }
+    ]
+   }
+  ],
+  "ROGUE": [
+   {
+    "name": "Assassination",
+    "talents": [
+     {
+      "name": "Improved Gouge",
+      "ranks": 3,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_gouge",
+      "page": "/rogue/talents/improved-gouge/"
+     },
+     {
+      "name": "Remorseless Attacks",
+      "ranks": 2,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_fiegndead",
+      "page": "/rogue/talents/remorseless-attacks/"
+     },
+     {
+      "name": "Malice",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_racial_bloodrage",
+      "page": "/rogue/talents/malice/"
+     },
+     {
+      "name": "Ruthlessness",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_druid_disembowel",
+      "page": "/rogue/talents/ruthlessness/"
+     },
+     {
+      "name": "Murder",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_deathscream",
+      "page": "/rogue/talents/murder/"
+     },
+     {
+      "name": "Improved Slice and Dice",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_rogue_slicedice",
+      "page": "/rogue/talents/improved-slice-and-dice/"
+     },
+     {
+      "name": "Relentless Strikes",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_warrior_decisivestrike",
+      "page": "/rogue/talents/relentless-strikes/"
+     },
+     {
+      "name": "Improved Expose Armor",
+      "ranks": 2,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_warrior_riposte",
+      "page": "/rogue/talents/improved-expose-armor/"
+     },
+     {
+      "name": "Lethality",
+      "ranks": 5,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_criticalstrike",
+      "page": "/rogue/talents/lethality/",
+      "requires": "Malice"
+     },
+     {
+      "name": "Vile Poisons",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "same",
+      "icon": "ability_rogue_feigndeath",
+      "page": "/rogue/talents/vile-poisons/"
+     },
+     {
+      "name": "Cold Blood",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_ice_lament",
+      "page": "/rogue/talents/cold-blood/"
+     },
+     {
+      "name": "Improved Poisons",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_poisons",
+      "page": "/rogue/talents/improved-poisons/"
+     },
+     {
+      "name": "Vigor",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_earthbindtotem",
+      "page": "/rogue/talents/vigor/"
+     },
+     {
+      "name": "Mutilate",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_rogue_deadlybrew",
+      "page": "/rogue/talents/mutilate/"
+     },
+     {
+      "name": "Improved Kidney Shot",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_rogue_kidneyshot",
+      "page": "/rogue/talents/improved-kidney-shot/"
+     },
+     {
+      "name": "Seal Fate",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_chilltouch",
+      "page": "/rogue/talents/seal-fate/"
+     },
+     {
+      "name": "Venom",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "inv_sword_31",
+      "page": "/rogue/talents/venom/",
+      "requires": "Mutilate"
+     }
+    ]
+   },
+   {
+    "name": "Combat",
+    "talents": [
+     {
+      "name": "Improved Eviscerate",
+      "ranks": 3,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_rogue_eviscerate",
+      "page": "/rogue/talents/improved-eviscerate/"
+     },
+     {
+      "name": "Improved Sinister Strike",
+      "ranks": 2,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_ritualofsacrifice",
+      "page": "/rogue/talents/improved-sinister-strike/"
+     },
+     {
+      "name": "Lightning Reflexes",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_invisibilty",
+      "page": "/rogue/talents/lightning-reflexes/"
+     },
+     {
+      "name": "Puncturing Wounds",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_backstab",
+      "page": "/rogue/talents/puncturing-wounds/"
+     },
+     {
+      "name": "Deflection",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_parry",
+      "page": "/rogue/talents/deflection/"
+     },
+     {
+      "name": "Precision",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_marksmanship",
+      "page": "/rogue/talents/precision/"
+     },
+     {
+      "name": "Endurance",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowward",
+      "page": "/rogue/talents/endurance/"
+     },
+     {
+      "name": "Riposte",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "same",
+      "icon": "ability_warrior_challange",
+      "page": "/rogue/talents/riposte/",
+      "requires": "Deflection"
+     },
+     {
+      "name": "Improved Sprint",
+      "ranks": 2,
+      "tier": 3,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_rogue_sprint",
+      "page": "/rogue/talents/improved-sprint/"
+     },
+     {
+      "name": "Improved Kick",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_kick",
+      "page": "/rogue/talents/improved-kick/"
+     },
+     {
+      "name": "Flawless Execution",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "inv_sword_35",
+      "page": "/rogue/talents/flawless-execution/"
+     },
+     {
+      "name": "Dual Wield Specialization",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_dualwield",
+      "page": "/rogue/talents/dual-wield-specialization/",
+      "requires": "Precision"
+     },
+     {
+      "name": "Blade Flurry",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_warrior_punishingblow",
+      "page": "/rogue/talents/blade-flurry/"
+     },
+     {
+      "name": "Hack and Slash",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "inv_sword_27",
+      "page": "/rogue/talents/hack-and-slash/"
+     },
+     {
+      "name": "Weapon Expertise",
+      "ranks": 2,
+      "tier": 6,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofstrength",
+      "page": "/rogue/talents/weapon-expertise/",
+      "requires": "Blade Flurry"
+     },
+     {
+      "name": "Aggression",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_racial_avatar",
+      "page": "/rogue/talents/aggression/"
+     },
+     {
+      "name": "Adrenaline Rush",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_shadowworddominate",
+      "page": "/rogue/talents/adrenaline-rush/"
+     }
+    ]
+   },
+   {
+    "name": "Subtlety",
+    "talents": [
+     {
+      "name": "Camouflage",
+      "ranks": 5,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_stealth",
+      "page": "/rogue/talents/camouflage/"
+     },
+     {
+      "name": "Master of Deception",
+      "ranks": 3,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_charm",
+      "page": "/rogue/talents/master-of-deception/"
+     },
+     {
+      "name": "Opportunity",
+      "ranks": 2,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_warrior_warcry",
+      "page": "/rogue/talents/opportunity/"
+     },
+     {
+      "name": "Setup",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_mirrorimage",
+      "page": "/rogue/talents/setup/"
+     },
+     {
+      "name": "Elusiveness",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_magic_lesserinvisibilty",
+      "page": "/rogue/talents/elusiveness/"
+     },
+     {
+      "name": "Dirty Tricks",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_sap",
+      "page": "/rogue/talents/dirty-tricks/"
+     },
+     {
+      "name": "Improved Ambush",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "same",
+      "icon": "ability_rogue_ambush",
+      "page": "/rogue/talents/improved-ambush/"
+     },
+     {
+      "name": "Initiative",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_fumble",
+      "page": "/rogue/talents/initiative/"
+     },
+     {
+      "name": "Ghostly Strike",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_curse",
+      "page": "/rogue/talents/ghostly-strike/"
+     },
+     {
+      "name": "Improved Distract",
+      "ranks": 2,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_rogue_distract",
+      "page": "/rogue/talents/improved-distract/"
+     },
+     {
+      "name": "Heightened Senses",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_ambush",
+      "page": "/rogue/talents/heightened-senses/"
+     },
+     {
+      "name": "Premeditation",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_possession",
+      "page": "/rogue/talents/premeditation/"
+     },
+     {
+      "name": "Serrated Blades",
+      "ranks": 3,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "inv_sword_17",
+      "page": "/rogue/talents/serrated-blades/"
+     },
+     {
+      "name": "Dirty Deeds",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_summonsuccubus",
+      "page": "/rogue/talents/dirty-deeds/"
+     },
+     {
+      "name": "Preparation",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_antishadow",
+      "page": "/rogue/talents/preparation/"
+     },
+     {
+      "name": "Hemorrhage",
+      "ranks": 1,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_lifedrain",
+      "page": "/rogue/talents/hemorrhage/",
+      "requires": "Serrated Blades"
+     },
+     {
+      "name": "Quietus",
+      "ranks": 5,
+      "tier": 6,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_rogue_garrote",
+      "page": "/rogue/talents/quietus/",
+      "requires": "Dirty Deeds"
+     },
+     {
+      "name": "Cutthroat",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "classicon_rogue",
+      "page": "/rogue/talents/cutthroat/"
+     },
+     {
+      "name": "Thousand Cuts",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_rogue_rupture",
+      "page": "/rogue/talents/thousand-cuts/",
+      "requires": "Preparation"
+     }
+    ]
+   }
+  ],
+  "PRIEST": [
+   {
+    "name": "Discipline",
+    "talents": [
+     {
+      "name": "Power in Light",
+      "ranks": 5,
+      "tier": 1,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_holy_searinglight",
+      "page": "/priest/talents/power-in-light/"
+     },
+     {
+      "name": "Wand Specialization",
+      "ranks": 2,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_wand_01",
+      "page": "/priest/talents/wand-specialization/"
+     },
+     {
+      "name": "Twin Disciplines",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_sealofvengeance",
+      "page": "/priest/talents/twin-disciplines/"
+     },
+     {
+      "name": "Silent Resolve",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_manaregentotem",
+      "page": "/priest/talents/silent-resolve/"
+     },
+     {
+      "name": "Holy Precision",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_divineillumination",
+      "page": "/priest/talents/holy-precision/"
+     },
+     {
+      "name": "Mental Strength",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_enchantarmor",
+      "page": "/priest/talents/mental-strength/"
+     },
+     {
+      "name": "Martyrdom",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_tranquility",
+      "page": "/priest/talents/martyrdom/"
+     },
+     {
+      "name": "Mental Agility",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_hibernation",
+      "page": "/priest/talents/mental-agility/"
+     },
+     {
+      "name": "Inner Focus",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_windwalkon",
+      "page": "/priest/talents/inner-focus/"
+     },
+     {
+      "name": "Improved Power Word: Shield",
+      "ranks": 3,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_powerwordshield",
+      "page": "/priest/talents/improved-power-word-shield/"
+     },
+     {
+      "name": "Meditation",
+      "ranks": 3,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_sleep",
+      "page": "/priest/talents/meditation/"
+     },
+     {
+      "name": "Improved Inner Fire",
+      "ranks": 3,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_innerfire",
+      "page": "/priest/talents/improved-inner-fire/"
+     },
+     {
+      "name": "Improved Mana Burn",
+      "ranks": 2,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_manaburn",
+      "page": "/priest/talents/improved-mana-burn/"
+     },
+     {
+      "name": "Soul Warding",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_pureofheart",
+      "page": "/priest/talents/soul-warding/",
+      "requires": "Improved Power Word: Shield"
+     },
+     {
+      "name": "Penance",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_penance",
+      "page": "/priest/talents/penance/"
+     },
+     {
+      "name": "Renewed Hope",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_holyprotection",
+      "page": "/priest/talents/renewed-hope/",
+      "requires": "Soul Warding"
+     },
+     {
+      "name": "Divine Aegis",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_holy_devineaegis",
+      "page": "/priest/talents/divine-aegis/"
+     },
+     {
+      "name": "Power Infusion",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_powerinfusion",
+      "page": "/priest/talents/power-infusion/",
+      "requires": "Penance"
+     }
+    ]
+   },
+   {
+    "name": "Holy",
+    "talents": [
+     {
+      "name": "Twilight Focus",
+      "ranks": 3,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_healingfocus",
+      "page": "/priest/talents/twilight-focus/"
+     },
+     {
+      "name": "Improved Renew",
+      "ranks": 3,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_holy_renew",
+      "page": "/priest/talents/improved-renew/"
+     },
+     {
+      "name": "Holy Specialization",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_holy_sealofsalvation",
+      "page": "/priest/talents/holy-specialization/"
+     },
+     {
+      "name": "Spell Warding",
+      "ranks": 5,
+      "tier": 2,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_holy_spellwarding",
+      "page": "/priest/talents/spell-warding/"
+     },
+     {
+      "name": "Divine Fury",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_sealofwrath",
+      "page": "/priest/talents/divine-fury/"
+     },
+     {
+      "name": "Holy Nova",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_holynova",
+      "page": "/priest/talents/holy-nova/"
+     },
+     {
+      "name": "Blessed Recovery",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_blessedrecovery",
+      "page": "/priest/talents/blessed-recovery/"
+     },
+     {
+      "name": "Inspiration",
+      "ranks": 3,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_holy_layonhands",
+      "page": "/priest/talents/inspiration/"
+     },
+     {
+      "name": "Holy Reach",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_holy_purify",
+      "page": "/priest/talents/holy-reach/"
+     },
+     {
+      "name": "Improved Healing",
+      "ranks": 3,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_holy_heal02",
+      "page": "/priest/talents/improved-healing/"
+     },
+     {
+      "name": "Searing Light",
+      "ranks": 2,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_searinglightpriest",
+      "page": "/priest/talents/searing-light/",
+      "requires": "Divine Fury"
+     },
+     {
+      "name": "Holy Binding",
+      "ranks": 1,
+      "tier": 4,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_holy_blindingheal",
+      "page": "/priest/talents/holy-binding/"
+     },
+     {
+      "name": "Litany of Light",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "inv_scroll_07",
+      "page": "/priest/talents/litany-of-light/"
+     },
+     {
+      "name": "Spirit of Redemption",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "inv_enchant_essenceeternallarge",
+      "page": "/priest/talents/spirit-of-redemption/"
+     },
+     {
+      "name": "Spiritual Guidance",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_spiritualguidence",
+      "page": "/priest/talents/spiritual-guidance/"
+     },
+     {
+      "name": "Spiritual Healing",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_moonglow",
+      "page": "/priest/talents/spiritual-healing/"
+     },
+     {
+      "name": "Prayer of Mending",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_holy_prayerofmendingtga",
+      "page": "/priest/talents/prayer-of-mending/",
+      "requires": "Spirit of Redemption"
+     }
+    ]
+   },
+   {
+    "name": "Shadow Magic",
+    "talents": [
+     {
+      "name": "Shadow Focus",
+      "ranks": 5,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_burningspirit",
+      "page": "/priest/talents/shadow-focus/"
+     },
+     {
+      "name": "Blackout",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_gathershadows",
+      "page": "/priest/talents/blackout/"
+     },
+     {
+      "name": "Spirit Tap",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_requiem",
+      "page": "/priest/talents/spirit-tap/"
+     },
+     {
+      "name": "Improved Mind Blast",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_shadow_unholyfrenzy",
+      "page": "/priest/talents/improved-mind-blast/"
+     },
+     {
+      "name": "Improved Shadow Word: Pain",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_shadow_shadowwordpain",
+      "page": "/priest/talents/improved-shadow-word-pain/"
+     },
+     {
+      "name": "Shadow Reach",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_shadow_chilltouch",
+      "page": "/priest/talents/shadow-reach/"
+     },
+     {
+      "name": "Improved Psychic Scream",
+      "ranks": 2,
+      "tier": 3,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_shadow_psychicscream",
+      "page": "/priest/talents/improved-psychic-scream/",
+      "requires": "Blackout"
+     },
+     {
+      "name": "Mind Flay",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_siphonmana",
+      "page": "/priest/talents/mind-flay/"
+     },
+     {
+      "name": "Improved Mind Flay",
+      "ranks": 2,
+      "tier": 3,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_shadow_soulleech_2",
+      "page": "/priest/talents/improved-mind-flay/",
+      "requires": "Mind Flay"
+     },
+     {
+      "name": "Dark Inspiration",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_warlock_demonsoul",
+      "page": "/priest/talents/dark-inspiration/"
+     },
+     {
+      "name": "Vampiric Embrace",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_unsummonbuilding",
+      "page": "/priest/talents/vampiric-embrace/"
+     },
+     {
+      "name": "Shadow Weaving",
+      "ranks": 3,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_blackplague",
+      "page": "/priest/talents/shadow-weaving/"
+     },
+     {
+      "name": "Silence",
+      "ranks": 1,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_impphaseshift",
+      "page": "/priest/talents/silence/"
+     },
+     {
+      "name": "Devouring Contagion",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_shadow_devouringplague.",
+      "page": "/priest/talents/devouring-contagion/"
+     },
+     {
+      "name": "Early Demise",
+      "ranks": 2,
+      "tier": 6,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_shadow_demonicfortitude",
+      "page": "/priest/talents/early-demise/"
+     },
+     {
+      "name": "Darkness",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_twilight",
+      "page": "/priest/talents/darkness/"
+     },
+     {
+      "name": "Shadowform",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowform",
+      "page": "/priest/talents/shadowform/",
+      "requires": "Vampiric Embrace"
+     }
+    ]
+   }
+  ],
+  "SHAMAN": [
+   {
+    "name": "Elemental Combat",
+    "talents": [
+     {
+      "name": "Convection",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_wispsplode",
+      "page": "/shaman/talents/convection/"
+     },
+     {
+      "name": "Concussion",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_earthshock",
+      "page": "/shaman/talents/concussion/"
+     },
+     {
+      "name": "Elemental Devastation",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_elementaldevastation",
+      "page": "/shaman/talents/elemental-devastation/"
+     },
+     {
+      "name": "Reverberation",
+      "ranks": 5,
+      "tier": 2,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_frost_frostward",
+      "page": "/shaman/talents/reverberation/"
+     },
+     {
+      "name": "Elemental Alacrity",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_lightning_lightningbolt01",
+      "page": "/shaman/talents/elemental-alacrity/"
+     },
+     {
+      "name": "Call of Flame",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_fire_immolation",
+      "page": "/shaman/talents/call-of-flame/"
+     },
+     {
+      "name": "Elemental Focus",
+      "ranks": 1,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_shadow_manaburn",
+      "page": "/shaman/talents/elemental-focus/"
+     },
+     {
+      "name": "Elemental Warding",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_spiritarmor",
+      "page": "/shaman/talents/elemental-warding/"
+     },
+     {
+      "name": "Trial by Fire",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_sealoffire",
+      "page": "/shaman/talents/trial-by-fire/"
+     },
+     {
+      "name": "Eye of the Storm",
+      "ranks": 3,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_eyeofthestorm",
+      "page": "/shaman/talents/eye-of-the-storm/"
+     },
+     {
+      "name": "Earthbound",
+      "ranks": 1,
+      "tier": 4,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_nature_stranglevines",
+      "page": "/shaman/talents/earthbound/"
+     },
+     {
+      "name": "Elemental Reach",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_stormreach",
+      "page": "/shaman/talents/elemental-reach/"
+     },
+     {
+      "name": "Lava Burst",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_shaman_lavaburst",
+      "page": "/shaman/talents/lava-burst/"
+     },
+     {
+      "name": "Lightning Overload",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_nature_lightningoverload",
+      "page": "/shaman/talents/lightning-overload/",
+      "requires": "Elemental Alacrity"
+     },
+     {
+      "name": "Elemental Fury",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_volcano",
+      "page": "/shaman/talents/elemental-fury/",
+      "requires": "Lightning Overload"
+     },
+     {
+      "name": "Elemental Mastery",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_wispheal",
+      "page": "/shaman/talents/elemental-mastery/",
+      "requires": "Lava Burst"
+     }
+    ]
+   },
+   {
+    "name": "Enhancement",
+    "talents": [
+     {
+      "name": "Earth's Grasp",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_nature_stoneclawtotem",
+      "page": "/shaman/talents/earth-s-grasp/"
+     },
+     {
+      "name": "Thundering Strikes",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_thunderbolt",
+      "page": "/shaman/talents/thundering-strikes/"
+     },
+     {
+      "name": "Ancestral Knowledge",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_grimward",
+      "page": "/shaman/talents/ancestral-knowledge/"
+     },
+     {
+      "name": "Guardian Totems",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_nature_stoneskintotem",
+      "page": "/shaman/talents/guardian-totems/"
+     },
+     {
+      "name": "Mental Dexterity",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_nature_mentalquickness",
+      "page": "/shaman/talents/mental-dexterity/"
+     },
+     {
+      "name": "Improved Ghost Wolf",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_spiritwolf",
+      "page": "/shaman/talents/improved-ghost-wolf/"
+     },
+     {
+      "name": "Improved Lightning Shield",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "same",
+      "icon": "spell_nature_lightningshield",
+      "page": "/shaman/talents/improved-lightning-shield/"
+     },
+     {
+      "name": "Elemental Weapons",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_flametounge",
+      "page": "/shaman/talents/elemental-weapons/"
+     },
+     {
+      "name": "Shamanistic Focus",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_nature_elementalabsorption",
+      "page": "/shaman/talents/shamanistic-focus/"
+     },
+     {
+      "name": "Anticipation",
+      "ranks": 3,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_mirrorimage",
+      "page": "/shaman/talents/anticipation/"
+     },
+     {
+      "name": "Toughness",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_devotion",
+      "page": "/shaman/talents/toughness/"
+     },
+     {
+      "name": "Flurry",
+      "ranks": 5,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_ghoulfrenzy",
+      "page": "/shaman/talents/flurry/",
+      "requires": "Mental Dexterity"
+     },
+     {
+      "name": "Stormstrike",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_shaman_stormstrike",
+      "page": "/shaman/talents/stormstrike/"
+     },
+     {
+      "name": "Spirit Weapons",
+      "ranks": 1,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_parry",
+      "page": "/shaman/talents/spirit-weapons/"
+     },
+     {
+      "name": "Mental Quickness",
+      "ranks": 2,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_nature_sleep",
+      "page": "/shaman/talents/mental-quickness/"
+     },
+     {
+      "name": "Improved Stormstrike",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_shaman_improvedstormstrike",
+      "page": "/shaman/talents/improved-stormstrike/",
+      "requires": "Stormstrike"
+     },
+     {
+      "name": "Maelstrom Weapon",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_shaman_maelstromweapon",
+      "page": "/shaman/talents/maelstrom-weapon/"
+     },
+     {
+      "name": "Rage of the Farseer",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_nature_bloodlust",
+      "page": "/shaman/talents/rage-of-the-farseer/",
+      "requires": "Mental Quickness"
+     }
+    ]
+   },
+   {
+    "name": "Restoration",
+    "talents": [
+     {
+      "name": "Improved Healing Wave",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_nature_magicimmunity",
+      "page": "/shaman/talents/improved-healing-wave/"
+     },
+     {
+      "name": "Tidal Focus",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_frost_manarecharge",
+      "page": "/shaman/talents/tidal-focus/"
+     },
+     {
+      "name": "Mindfulness",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_nature_sleep",
+      "page": "/shaman/talents/mindfulness/"
+     },
+     {
+      "name": "Natural Grace",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_healingtouch",
+      "page": "/shaman/talents/natural-grace/"
+     },
+     {
+      "name": "Totemic Focus",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_moonglow",
+      "page": "/shaman/talents/totemic-focus/"
+     },
+     {
+      "name": "Improved Reincarnation",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_reincarnation",
+      "page": "/shaman/talents/improved-reincarnation/"
+     },
+     {
+      "name": "Ancestral Healing",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_undyingstrength",
+      "page": "/shaman/talents/ancestral-healing/"
+     },
+     {
+      "name": "Healing Focus",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_healingwavelesser",
+      "page": "/shaman/talents/healing-focus/"
+     },
+     {
+      "name": "Water Shield",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_shaman_watershield",
+      "page": "/shaman/talents/water-shield/"
+     },
+     {
+      "name": "Tidal Mastery",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_tranquility",
+      "page": "/shaman/talents/tidal-mastery/"
+     },
+     {
+      "name": "Restorative Totems",
+      "ranks": 5,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_manaregentotem",
+      "page": "/shaman/talents/restorative-totems/"
+     },
+     {
+      "name": "Mana Tide Totem",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_frost_summonwaterelemental",
+      "page": "/shaman/talents/mana-tide-totem/"
+     },
+     {
+      "name": "Healing Way",
+      "ranks": 3,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_healingway",
+      "page": "/shaman/talents/healing-way/"
+     },
+     {
+      "name": "Nature's Swiftness",
+      "ranks": 1,
+      "tier": 5,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_ravenform",
+      "page": "/shaman/talents/nature-s-swiftness/"
+     },
+     {
+      "name": "Purification",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_frost_wizardmark",
+      "page": "/shaman/talents/purification/"
+     },
+     {
+      "name": "Riptide",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_nature_riptide",
+      "page": "/shaman/talents/riptide/",
+      "requires": "Healing Way"
+     }
+    ]
+   }
+  ],
+  "MAGE": [
+   {
+    "name": "Arcane",
+    "talents": [
+     {
+      "name": "Wand Specialization",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "same",
+      "icon": "inv_wand_01",
+      "page": "/mage/talents/wand-specialization/"
+     },
+     {
+      "name": "Improved Channeling",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_starfall",
+      "page": "/mage/talents/improved-channeling/"
+     },
+     {
+      "name": "Arcane Resilience",
+      "ranks": 3,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_arcane_arcaneresilience",
+      "page": "/mage/talents/arcane-resilience/"
+     },
+     {
+      "name": "Arcane Subtlety",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_holy_dispelmagic",
+      "page": "/mage/talents/arcane-subtlety/"
+     },
+     {
+      "name": "Magic Absorption",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_astralrecalgroup",
+      "page": "/mage/talents/magic-absorption/"
+     },
+     {
+      "name": "Arcane Concentration",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_shadow_manaburn",
+      "page": "/mage/talents/arcane-concentration/"
+     },
+     {
+      "name": "Missile Barrage",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_mage_missilebarrage",
+      "page": "/mage/talents/missile-barrage/"
+     },
+     {
+      "name": "Arcane Geometry",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "inv_ability_mage_radiantspark",
+      "page": "/mage/talents/arcane-geometry/"
+     },
+     {
+      "name": "Arcane Impact",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_wispsplode",
+      "page": "/mage/talents/arcane-impact/"
+     },
+     {
+      "name": "Arcane Blast",
+      "ranks": 1,
+      "tier": 3,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_arcane_blast",
+      "page": "/mage/talents/arcane-blast/"
+     },
+     {
+      "name": "Arcane Shielding",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_detectlesserinvisibility",
+      "page": "/mage/talents/arcane-shielding/"
+     },
+     {
+      "name": "Improved Counterspell",
+      "ranks": 2,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_iceshock",
+      "page": "/mage/talents/improved-counterspell/"
+     },
+     {
+      "name": "Arcane Meditation",
+      "ranks": 3,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_siphonmana",
+      "page": "/mage/talents/arcane-meditation/",
+      "requires": "Arcane Concentration"
+     },
+     {
+      "name": "Arcane Wrath",
+      "ranks": 1,
+      "tier": 4,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_mage_netherwindpresence",
+      "page": "/mage/talents/arcane-wrath/",
+      "requires": "Arcane Blast"
+     },
+     {
+      "name": "Presence of Mind",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_nature_enchantarmor",
+      "page": "/mage/talents/presence-of-mind/"
+     },
+     {
+      "name": "Arcane Mind",
+      "ranks": 5,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_charm",
+      "page": "/mage/talents/arcane-mind/"
+     },
+     {
+      "name": "Arcane Instability",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_teleport",
+      "page": "/mage/talents/arcane-instability/"
+     },
+     {
+      "name": "Arcane Power",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_lightning",
+      "page": "/mage/talents/arcane-power/",
+      "requires": "Presence of Mind"
+     }
+    ]
+   },
+   {
+    "name": "Fire",
+    "talents": [
+     {
+      "name": "Incineration",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_fire_flameshock",
+      "page": "/mage/talents/incineration/"
+     },
+     {
+      "name": "Accelerant",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_flamebolt",
+      "page": "/mage/talents/accelerant/"
+     },
+     {
+      "name": "Ignite",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_fire_incinerate",
+      "page": "/mage/talents/ignite/"
+     },
+     {
+      "name": "Flame Throwing",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_fire_flare",
+      "page": "/mage/talents/flame-throwing/"
+     },
+     {
+      "name": "Impact",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_meteorstorm",
+      "page": "/mage/talents/impact/"
+     },
+     {
+      "name": "Burning Soul",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_fire",
+      "page": "/mage/talents/burning-soul/"
+     },
+     {
+      "name": "Improved Flamestrike",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_fire_selfdestruct",
+      "page": "/mage/talents/improved-flamestrike/"
+     },
+     {
+      "name": "Pyroblast",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_fireball02",
+      "page": "/mage/talents/pyroblast/"
+     },
+     {
+      "name": "Improved Fire Blast",
+      "ranks": 2,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_fire_lavaspawn",
+      "page": "/mage/talents/improved-fire-blast/"
+     },
+     {
+      "name": "Improved Scorch",
+      "ranks": 3,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_soulburn",
+      "page": "/mage/talents/improved-scorch/"
+     },
+     {
+      "name": "Improved Fire Ward",
+      "ranks": 2,
+      "tier": 4,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_fire_firearmor",
+      "page": "/mage/talents/improved-fire-ward/"
+     },
+     {
+      "name": "Heating Up",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_fire_firebolt",
+      "page": "/mage/talents/heating-up/",
+      "requires": "Pyroblast"
+     },
+     {
+      "name": "Master of Elements",
+      "ranks": 3,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_fire_masterofelements",
+      "page": "/mage/talents/master-of-elements/"
+     },
+     {
+      "name": "Critical Mass",
+      "ranks": 3,
+      "tier": 5,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_nature_wispheal",
+      "page": "/mage/talents/critical-mass/"
+     },
+     {
+      "name": "Blast Wave",
+      "ranks": 1,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_excorcism_02",
+      "page": "/mage/talents/blast-wave/"
+     },
+     {
+      "name": "Fire Power",
+      "ranks": 3,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_immolation",
+      "page": "/mage/talents/fire-power/"
+     },
+     {
+      "name": "Combustion",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_fire_sealoffire",
+      "page": "/mage/talents/combustion/",
+      "requires": "Critical Mass"
+     }
+    ]
+   },
+   {
+    "name": "Frost",
+    "talents": [
+     {
+      "name": "Frost Warding",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_frost_frostward",
+      "page": "/mage/talents/frost-warding/"
+     },
+     {
+      "name": "Improved Frostbolt",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_frostbolt02",
+      "page": "/mage/talents/improved-frostbolt/"
+     },
+     {
+      "name": "Precision",
+      "ranks": 3,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_ice_magicdamage",
+      "page": "/mage/talents/precision/"
+     },
+     {
+      "name": "Ice Shards",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_frost_iceshard",
+      "page": "/mage/talents/ice-shards/"
+     },
+     {
+      "name": "Frostbite",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_frostarmor",
+      "page": "/mage/talents/frostbite/"
+     },
+     {
+      "name": "Improved Frost Nova",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_frost_freezingbreath",
+      "page": "/mage/talents/improved-frost-nova/"
+     },
+     {
+      "name": "Permafrost",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_frost_wisp",
+      "page": "/mage/talents/permafrost/"
+     },
+     {
+      "name": "Frost Channeling",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_frost_stun",
+      "page": "/mage/talents/frost-channeling/"
+     },
+     {
+      "name": "Improved Blizzard",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_icestorm",
+      "page": "/mage/talents/improved-blizzard/"
+     },
+     {
+      "name": "Ice Lance",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_frost_frostblast",
+      "page": "/mage/talents/ice-lance/"
+     },
+     {
+      "name": "Arctic Reach",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_darkritual",
+      "page": "/mage/talents/arctic-reach/"
+     },
+     {
+      "name": "Ice Block",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_frost",
+      "page": "/mage/talents/ice-block/"
+     },
+     {
+      "name": "Shatter",
+      "ranks": 3,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_frost_frostshock",
+      "page": "/mage/talents/shatter/"
+     },
+     {
+      "name": "Improved Cone of Cold",
+      "ranks": 3,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_frost_glacier",
+      "page": "/mage/talents/improved-cone-of-cold/"
+     },
+     {
+      "name": "Cold Snap",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_wizardmark",
+      "page": "/mage/talents/cold-snap/"
+     },
+     {
+      "name": "Fingers of Frost",
+      "ranks": 2,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_mage_wintersgrasp",
+      "page": "/mage/talents/fingers-of-frost/",
+      "requires": "Ice Lance"
+     },
+     {
+      "name": "Winter's Chill",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_frost_chillingblast",
+      "page": "/mage/talents/winter-s-chill/"
+     },
+     {
+      "name": "Ice Barrier",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_ice_lament",
+      "page": "/mage/talents/ice-barrier/",
+      "requires": "Cold Snap"
+     }
+    ]
+   }
+  ],
+  "WARLOCK": [
+   {
+    "name": "Affliction",
+    "talents": [
+     {
+      "name": "Improved Life Tap",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_shadow_burningspirit",
+      "page": "/warlock/talents/improved-life-tap/"
+     },
+     {
+      "name": "Suppression",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_unsummonbuilding",
+      "page": "/warlock/talents/suppression/"
+     },
+     {
+      "name": "Improved Corruption",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_abominationexplosion",
+      "page": "/warlock/talents/improved-corruption/"
+     },
+     {
+      "name": "Grim Reach",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_shadow_callofbone",
+      "page": "/warlock/talents/grim-reach/"
+     },
+     {
+      "name": "Soul Harvest",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "new",
+      "icon": "inv_elemental_primal_shadow",
+      "page": "/warlock/talents/soul-harvest/"
+     },
+     {
+      "name": "Improved Drains",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_shadow_haunting",
+      "page": "/warlock/talents/improved-drains/"
+     },
+     {
+      "name": "Improved Bane of Agony",
+      "ranks": 2,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_curseofsargeras",
+      "page": "/warlock/talents/improved-bane-of-agony/"
+     },
+     {
+      "name": "Fel Concentration",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_fingerofdeath",
+      "page": "/warlock/talents/fel-concentration/"
+     },
+     {
+      "name": "Amplify Curse",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_contagion",
+      "page": "/warlock/talents/amplify-curse/"
+     },
+     {
+      "name": "Pandemic",
+      "ranks": 3,
+      "tier": 3,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_shadow_unstableaffliction_2",
+      "page": "/warlock/talents/pandemic/"
+     },
+     {
+      "name": "Malevolence",
+      "ranks": 5,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_shadow_focusedpower",
+      "page": "/warlock/talents/malevolence/"
+     },
+     {
+      "name": "Nightfall",
+      "ranks": 2,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_twilight",
+      "page": "/warlock/talents/nightfall/"
+     },
+     {
+      "name": "Curse of Exhaustion",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_grimward",
+      "page": "/warlock/talents/curse-of-exhaustion/",
+      "requires": "Amplify Curse"
+     },
+     {
+      "name": "Siphon Life",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_requiem",
+      "page": "/warlock/talents/siphon-life/"
+     },
+     {
+      "name": "Soul Siphon",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_lifedrain02",
+      "page": "/warlock/talents/soul-siphon/"
+     },
+     {
+      "name": "Shadow Mastery",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_shadow_shadetruesight",
+      "page": "/warlock/talents/shadow-mastery/"
+     },
+     {
+      "name": "Wrack",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_deathknight_hemorrhagicfever",
+      "page": "/warlock/talents/wrack/",
+      "requires": "Siphon Life"
+     }
+    ]
+   },
+   {
+    "name": "Demonology",
+    "talents": [
+     {
+      "name": "Improved Health Funnel",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_lifedrain",
+      "page": "/warlock/talents/improved-health-funnel/"
+     },
+     {
+      "name": "Improved Imp",
+      "ranks": 3,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_summonimp",
+      "page": "/warlock/talents/improved-imp/"
+     },
+     {
+      "name": "Demonic Embrace",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_metamorphosis",
+      "page": "/warlock/talents/demonic-embrace/"
+     },
+     {
+      "name": "Unholy Power",
+      "ranks": 5,
+      "tier": 1,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowworddominate",
+      "page": "/warlock/talents/unholy-power/"
+     },
+     {
+      "name": "Demonic Aegis",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_shadow_ragingscream",
+      "page": "/warlock/talents/demonic-aegis/"
+     },
+     {
+      "name": "Improved Voidwalker",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_summonvoidwalker",
+      "page": "/warlock/talents/improved-voidwalker/"
+     },
+     {
+      "name": "Fel Vitality",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_demonictactics",
+      "page": "/warlock/talents/fel-vitality/"
+     },
+     {
+      "name": "Demonic Energies",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "new",
+      "icon": "spell_shadow_felmending",
+      "page": "/warlock/talents/demonic-energies/"
+     },
+     {
+      "name": "Improved Sayaad",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "same",
+      "icon": "ability_warlock_randomizesuccubusincubus",
+      "page": "/warlock/talents/improved-sayaad/"
+     },
+     {
+      "name": "Demonic Sacrifice",
+      "ranks": 1,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_psychicscream",
+      "page": "/warlock/talents/demonic-sacrifice/"
+     },
+     {
+      "name": "Master Summoner",
+      "ranks": 2,
+      "tier": 3,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_shadow_impphaseshift",
+      "page": "/warlock/talents/master-summoner/"
+     },
+     {
+      "name": "Decimation",
+      "ranks": 2,
+      "tier": 4,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_fire_fireball02",
+      "page": "/warlock/talents/decimation/"
+     },
+     {
+      "name": "Fel Domination",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_removecurse",
+      "page": "/warlock/talents/fel-domination/",
+      "requires": "Master Summoner"
+     },
+     {
+      "name": "Demonic Brand",
+      "ranks": 3,
+      "tier": 4,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_demonhunter_chaoticimprint_fire",
+      "page": "/warlock/talents/demonic-brand/"
+     },
+     {
+      "name": "Improved Felhunter",
+      "ranks": 3,
+      "tier": 5,
+      "column": 1,
+      "flag": "new",
+      "icon": "spell_shadow_summonfelhunter",
+      "page": "/warlock/talents/improved-felhunter/"
+     },
+     {
+      "name": "Soul Link",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_gathershadows",
+      "page": "/warlock/talents/soul-link/",
+      "requires": "Demonic Sacrifice"
+     },
+     {
+      "name": "Demonic Knowledge",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_shadow_improvedvampiricembrace",
+      "page": "/warlock/talents/demonic-knowledge/"
+     },
+     {
+      "name": "Master Demonologist",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowpact",
+      "page": "/warlock/talents/master-demonologist/"
+     },
+     {
+      "name": "Demonic Pact",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "inv_ability_soulharvesterwarlock_demonicsoul",
+      "page": "/warlock/talents/demonic-pact/",
+      "requires": "Soul Link"
+     }
+    ]
+   },
+   {
+    "name": "Destruction",
+    "talents": [
+     {
+      "name": "Destructive Reach",
+      "ranks": 2,
+      "tier": 1,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_shadow_corpseexplode",
+      "page": "/warlock/talents/destructive-reach/"
+     },
+     {
+      "name": "Improved Shadow Bolt",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowbolt",
+      "page": "/warlock/talents/improved-shadow-bolt/"
+     },
+     {
+      "name": "Bane",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_deathpact",
+      "page": "/warlock/talents/bane/"
+     },
+     {
+      "name": "Molten Skin",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_mage_moltenarmor",
+      "page": "/warlock/talents/molten-skin/"
+     },
+     {
+      "name": "Cataclysm",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_fire_windsofwoe",
+      "page": "/warlock/talents/cataclysm/"
+     },
+     {
+      "name": "Aftermath",
+      "ranks": 5,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_fire",
+      "page": "/warlock/talents/aftermath/"
+     },
+     {
+      "name": "Ruin",
+      "ranks": 5,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_shadow_shadowwordpain",
+      "page": "/warlock/talents/ruin/"
+     },
+     {
+      "name": "Shadowburn",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_shadow_scourgebuild",
+      "page": "/warlock/talents/shadowburn/"
+     },
+     {
+      "name": "Intensity",
+      "ranks": 3,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_lavaspawn",
+      "page": "/warlock/talents/intensity/"
+     },
+     {
+      "name": "Agonizing Flames",
+      "ranks": 3,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_fire_soulburn",
+      "page": "/warlock/talents/agonizing-flames/"
+     },
+     {
+      "name": "Conflagrate",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_fire_fireball",
+      "page": "/warlock/talents/conflagrate/"
+     },
+     {
+      "name": "Pyroclasm",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_fire_volcano",
+      "page": "/warlock/talents/pyroclasm/",
+      "requires": "Intensity"
+     },
+     {
+      "name": "Bane of Havoc",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_warlock_baneofhavoc",
+      "page": "/warlock/talents/bane-of-havoc/"
+     },
+     {
+      "name": "Fire and Brimstone",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_fire_meteorstorm",
+      "page": "/warlock/talents/fire-and-brimstone/",
+      "requires": "Conflagrate"
+     },
+     {
+      "name": "Shadow and Flame",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_fire_playingwithfire",
+      "page": "/warlock/talents/shadow-and-flame/"
+     },
+     {
+      "name": "Incinerate",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_fire_burnout",
+      "page": "/warlock/talents/incinerate/",
+      "requires": "Bane of Havoc"
+     }
+    ]
+   }
+  ],
+  "DRUID": [
+   {
+    "name": "Balance",
+    "talents": [
+     {
+      "name": "Improved Wrath",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_abolishmagic",
+      "page": "/druid/talents/improved-wrath/"
+     },
+     {
+      "name": "Genesis",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_arcane_arcane03",
+      "page": "/druid/talents/genesis/"
+     },
+     {
+      "name": "Moonglow",
+      "ranks": 3,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_sentinal",
+      "page": "/druid/talents/moonglow/"
+     },
+     {
+      "name": "Improved Moonfire",
+      "ranks": 2,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_starfall",
+      "page": "/druid/talents/improved-moonfire/"
+     },
+     {
+      "name": "Nature's Majesty",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "new",
+      "icon": "inv_staff_01",
+      "page": "/druid/talents/nature-s-majesty/"
+     },
+     {
+      "name": "Nature's Reach",
+      "ranks": 2,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_naturetouchgrow",
+      "page": "/druid/talents/nature-s-reach/"
+     },
+     {
+      "name": "Improved Entangling Roots",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_stranglevines",
+      "page": "/druid/talents/improved-entangling-roots/"
+     },
+     {
+      "name": "Nature's Splendor",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_nature_natureresistancetotem",
+      "page": "/druid/talents/nature-s-splendor/"
+     },
+     {
+      "name": "Insect Swarm",
+      "ranks": 1,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_insectswarm",
+      "page": "/druid/talents/insect-swarm/"
+     },
+     {
+      "name": "Vengeance",
+      "ranks": 5,
+      "tier": 4,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_purge",
+      "page": "/druid/talents/vengeance/",
+      "requires": "Improved Moonfire"
+     },
+     {
+      "name": "Improved Starfire",
+      "ranks": 5,
+      "tier": 4,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_arcane_starfire",
+      "page": "/druid/talents/improved-starfire/"
+     },
+     {
+      "name": "Overgrowth",
+      "ranks": 2,
+      "tier": 5,
+      "column": 1,
+      "flag": "changed",
+      "icon": "inv_misc_herb_15",
+      "page": "/druid/talents/overgrowth/"
+     },
+     {
+      "name": "Nature's Grace",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_naturesblessing",
+      "page": "/druid/talents/nature-s-grace/"
+     },
+     {
+      "name": "Eclipse",
+      "ranks": 3,
+      "tier": 5,
+      "column": 3,
+      "flag": "new",
+      "icon": "ability_druid_eclipse",
+      "page": "/druid/talents/eclipse/"
+     },
+     {
+      "name": "Moonfury",
+      "ranks": 5,
+      "tier": 6,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_moonglow",
+      "page": "/druid/talents/moonfury/"
+     },
+     {
+      "name": "Moonkin Form",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_forceofnature",
+      "page": "/druid/talents/moonkin-form/"
+     }
+    ]
+   },
+   {
+    "name": "Feral Combat",
+    "talents": [
+     {
+      "name": "Ferocity",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_hunter_pet_hyena",
+      "page": "/druid/talents/ferocity/"
+     },
+     {
+      "name": "Furor",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofstamina",
+      "page": "/druid/talents/furor/"
+     },
+     {
+      "name": "Feral Swiftness",
+      "ranks": 2,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_spiritwolf",
+      "page": "/druid/talents/feral-swiftness/"
+     },
+     {
+      "name": "Feral Instinct",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_ambush",
+      "page": "/druid/talents/feral-instinct/"
+     },
+     {
+      "name": "Brutal Impact",
+      "ranks": 2,
+      "tier": 2,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_druid_bash",
+      "page": "/druid/talents/brutal-impact/"
+     },
+     {
+      "name": "Thick Hide",
+      "ranks": 3,
+      "tier": 2,
+      "column": 4,
+      "flag": "changed",
+      "icon": "inv_misc_pelt_bear_03",
+      "page": "/druid/talents/thick-hide/"
+     },
+     {
+      "name": "Shredding Attacks",
+      "ranks": 3,
+      "tier": 3,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_shadow_vampiricaura",
+      "page": "/druid/talents/shredding-attacks/"
+     },
+     {
+      "name": "Savage Fury",
+      "ranks": 2,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_druid_ravage",
+      "page": "/druid/talents/savage-fury/"
+     },
+     {
+      "name": "Feral Charge",
+      "ranks": 1,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "ability_hunter_pet_bear",
+      "page": "/druid/talents/feral-charge/"
+     },
+     {
+      "name": "Sharpened Claws",
+      "ranks": 2,
+      "tier": 3,
+      "column": 4,
+      "flag": "changed",
+      "icon": "inv_misc_monsterclaw_04",
+      "page": "/druid/talents/sharpened-claws/"
+     },
+     {
+      "name": "Predatory Strikes",
+      "ranks": 3,
+      "tier": 4,
+      "column": 1,
+      "flag": "changed",
+      "icon": "ability_hunter_pet_cat",
+      "page": "/druid/talents/predatory-strikes/"
+     },
+     {
+      "name": "Lacerate",
+      "ranks": 1,
+      "tier": 4,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_druid_lacerate",
+      "page": "/druid/talents/lacerate/",
+      "requires": "Savage Fury"
+     },
+     {
+      "name": "Predatory Discipline",
+      "ranks": 1,
+      "tier": 4,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_druid_savagery",
+      "page": "/druid/talents/predatory-discipline/"
+     },
+     {
+      "name": "Blood Frenzy",
+      "ranks": 2,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "ability_ghoulfrenzy",
+      "page": "/druid/talents/blood-frenzy/",
+      "requires": "Sharpened Claws"
+     },
+     {
+      "name": "Leader of the Pack",
+      "ranks": 1,
+      "tier": 5,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_unyeildingstamina",
+      "page": "/druid/talents/leader-of-the-pack/"
+     },
+     {
+      "name": "Natural Instinct",
+      "ranks": 2,
+      "tier": 5,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_druid_predatoryinstincts",
+      "page": "/druid/talents/natural-instinct/"
+     },
+     {
+      "name": "Rend and Tear",
+      "ranks": 5,
+      "tier": 6,
+      "column": 1,
+      "flag": "new",
+      "icon": "ability_druid_primalagression",
+      "page": "/druid/talents/rend-and-tear/",
+      "requires": "Predatory Strikes"
+     },
+     {
+      "name": "Natural Reaction",
+      "ranks": 5,
+      "tier": 6,
+      "column": 4,
+      "flag": "new",
+      "icon": "ability_bullrush",
+      "page": "/druid/talents/natural-reaction/"
+     },
+     {
+      "name": "Primal Bite",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_racial_cannibalize",
+      "page": "/druid/talents/primal-bite/",
+      "requires": "Leader of the Pack"
+     },
+     {
+      "name": "Shifting Power",
+      "ranks": 1,
+      "tier": 7,
+      "column": 3,
+      "flag": "new",
+      "icon": "spell_druid_displacement",
+      "page": "/druid/talents/shifting-power/",
+      "requires": "Predatory Discipline"
+     }
+    ]
+   },
+   {
+    "name": "Restoration",
+    "talents": [
+     {
+      "name": "Nature's Focus",
+      "ranks": 5,
+      "tier": 1,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_nature_healingwavegreater",
+      "page": "/druid/talents/nature-s-focus/"
+     },
+     {
+      "name": "Heart of the Wild",
+      "ranks": 5,
+      "tier": 1,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_holy_blessingofagility",
+      "page": "/druid/talents/heart-of-the-wild/"
+     },
+     {
+      "name": "Naturalist",
+      "ranks": 5,
+      "tier": 2,
+      "column": 1,
+      "flag": "changed",
+      "icon": "spell_nature_healingtouch",
+      "page": "/druid/talents/naturalist/"
+     },
+     {
+      "name": "Reflection",
+      "ranks": 3,
+      "tier": 2,
+      "column": 2,
+      "flag": "changed",
+      "icon": "spell_frost_windwalkon",
+      "page": "/druid/talents/reflection/"
+     },
+     {
+      "name": "Natural Shapeshifter",
+      "ranks": 3,
+      "tier": 2,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_wispsplode",
+      "page": "/druid/talents/natural-shapeshifter/"
+     },
+     {
+      "name": "Subtlety",
+      "ranks": 3,
+      "tier": 3,
+      "column": 2,
+      "flag": "changed",
+      "icon": "ability_eyeoftheowl",
+      "page": "/druid/talents/subtlety/"
+     },
+     {
+      "name": "Gift of Nature",
+      "ranks": 5,
+      "tier": 3,
+      "column": 3,
+      "flag": "changed",
+      "icon": "spell_nature_protectionformnature",
+      "page": "/druid/talents/gift-of-nature/"
+     },
+     {
+      "name": "Bloom",
+      "ranks": 1,
+      "tier": 3,
+      "column": 4,
+      "flag": "new",
+      "icon": "inv_misc_herb_felblossom",
+      "page": "/druid/talents/bloom/"
+     },
+     {
+      "name": "Tranquil Spirit",
+      "ranks": 5,
+      "tier": 4,
+      "column": 2,
+      "flag": "same",
+      "icon": "spell_holy_elunesgrace",
+      "page": "/druid/talents/tranquil-spirit/"
+     },
+     {
+      "name": "Improved Rejuvenation",
+      "ranks": 3,
+      "tier": 4,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_rejuvenation",
+      "page": "/druid/talents/improved-rejuvenation/"
+     },
+     {
+      "name": "Swiftmend",
+      "ranks": 1,
+      "tier": 4,
+      "column": 4,
+      "flag": "changed",
+      "icon": "inv_relics_idolofrejuvenation",
+      "page": "/druid/talents/swiftmend/"
+     },
+     {
+      "name": "Nature's Swiftness",
+      "ranks": 1,
+      "tier": 5,
+      "column": 1,
+      "flag": "same",
+      "icon": "spell_nature_ravenform",
+      "page": "/druid/talents/nature-s-swiftness/",
+      "requires": "Naturalist"
+     },
+     {
+      "name": "Living Spirit",
+      "ranks": 3,
+      "tier": 5,
+      "column": 2,
+      "flag": "new",
+      "icon": "spell_nature_giftofthewaterspirit",
+      "page": "/druid/talents/living-spirit/"
+     },
+     {
+      "name": "Improved Tranquility",
+      "ranks": 2,
+      "tier": 5,
+      "column": 4,
+      "flag": "changed",
+      "icon": "spell_nature_tranquility",
+      "page": "/druid/talents/improved-tranquility/"
+     },
+     {
+      "name": "Improved Regrowth",
+      "ranks": 5,
+      "tier": 6,
+      "column": 3,
+      "flag": "same",
+      "icon": "spell_nature_resistnature",
+      "page": "/druid/talents/improved-regrowth/",
+      "requires": "Improved Rejuvenation"
+     },
+     {
+      "name": "Wild Growth",
+      "ranks": 1,
+      "tier": 7,
+      "column": 2,
+      "flag": "new",
+      "icon": "ability_druid_flourish",
+      "page": "/druid/talents/wild-growth/",
+      "requires": "Living Spirit"
+     }
+    ]
+   }
+  ]
+ }
+}

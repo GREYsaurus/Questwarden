@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables (1,451 ranks). The client's own talent tables still hold Classic Era's trees, so they are no longer imported for Forever. Unverified until checked in the game.
+- **Forever (not shipped yet):** trainer spell lists imported from the Forever client tables, and the Forever talent trees (27 trees, 466 talents) taken from the wowforevertalents.com calculator, which reads the launch client's talent hotfixes. The client's own tables still hold Classic Era's trees, so they are no longer imported for Forever. Talents with no known spell show their icon in the talent window. All unverified until checked in the game.
 
 ## 0.1.0-alpha.30 (2026-11-01)
 

@@ -84,6 +84,27 @@ if STAGE.target == "ClassicEra" then
     check(#ns.Target.chapters == 1 and ns.Target.chapters[1] == "Azeroth", "Classic Era: Azeroth only")
 end
 
+-- Forever's talent trees come from research (tools/research/forever_talent_trees.py), not Classic's tables.
+if STAGE.target == "Forever" then
+    local trees, talents, noSpell, badIcon, hasMage = 0, 0, 0, 0, {}
+    for _, cls in ipairs({ "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }) do
+        for _, tab in ipairs(ns.TalentTrees[cls] or {}) do
+            trees = trees + 1
+            for _, t in ipairs(tab.talents) do
+                talents = talents + 1
+                if #t.spells == 0 then
+                    noSpell = noSpell + 1
+                    if not t.iconFile then badIcon = badIcon + 1 end
+                end
+                if cls == "MAGE" then hasMage[t.name] = true end
+            end
+        end
+    end
+    check(trees == 27 and talents == 466, "Forever: 27 researched talent trees, 466 talents (" .. trees .. ", " .. talents .. ")")
+    check(noSpell > 0 and badIcon == 0, "Forever: every talent without a spell has an icon file (" .. badIcon .. " missing)")
+    check(hasMage["Accelerant"] and not hasMage["Arcane Focus"], "Forever: the trees are the launch client's (Mage has Accelerant, no Arcane Focus)")
+end
+
 -- Real data (Classic Era, Phase 2) --------------------------------------------------------------------
 if STAGE.target == "ClassicEra" then
     check(ns.DB.GetQuestByID(783) and ns.DB.GetQuestByID(783).name == "A Threat Within", "Classic quest 783 resolves")
