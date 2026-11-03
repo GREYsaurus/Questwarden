@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Optional steps** now say what optional means: the route works without the quest, so do it for the experience and reward, or right-click the step to skip it.
 - **Quest rewards:** the reward ranking no longer goes to chat. The green arrow or coin on the reward window still marks the pick. It is turned off once for everyone, and you can turn it back on with Quest Reward Recommendation (Item Upgrade settings).
 - **Setup wizard:** the first page has a note from the author: the routes are still being improved, thanks for trying the add-on, and please report problems and suggestions on the CurseForge page.
 - **Fixed:** seven kill-step notes named the wrong mobs, for example Greater Duskbats for A New Plague (it needs Vicious Night Web Spiders), Scarlet Zealots for At War With The Scarlet Crusade (Captain Vachon and Scarlet Friars), and Durotar Tigers for Lost But Not Forgotten (Dreadmaw Crocolisks). The others were in Darkshore, Duskwood, Stranglethorn Vale and Felwood. The notes now name the mobs the quest needs.

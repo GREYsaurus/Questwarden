@@ -93,6 +93,11 @@ check(E.current == 1 and IS:State(S[1]) == "have", "item in bags: the pickup is 
 check(string.find(ns.StepText:Title(S[1]), "Use [Gold Pickup Schedule] to accept", 1, true), "title: use the item to accept the quest")
 check(string.find(table.concat(ns.StepText:Details(S[1]), "\n"), "then click Accept", 1, true), "details: how to start it")
 check(ns.StepText:Target(S[1]) == nil, "no waypoint while the item is in your bags")
+for _, kind in ipairs({ "accept", "turnin", "complete" }) do
+    local d = table.concat(ns.StepText:Details({ kind, q = 783, title = "A Threat Within", optional = true }), " ")
+    check(string.find(d, "Optional: the route works without this quest", 1, true) and string.find(d, "right-click the step to skip it", 1, true),
+        "an optional " .. kind .. " step says what optional means and how to skip it")
+end
 check(E.status[1] ~= "done", "having the item is not having the quest")
 E:Refresh() -- e.g. the quest window opened and closed without accepting: nothing in the log changed
 check(E.current == 1 and E.status[1] == "active", "an opened quest window is not acceptance")
