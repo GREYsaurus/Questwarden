@@ -10,6 +10,11 @@ ns.Guides:Register({
   steps={
     {"travel",text="Travel to Felwood",dest="Felwood",v=1},
     {"accept",q=8462,title="Speak to Nafien",npc="Grazle",z=361,x=50.9,y=85,v=1},
+    {"complete",q=7602,title="Flawless Fel Essence",classes={"WARLOCK"},optional=true,v=1},
+    {"turnin",q=7602,title="Flawless Fel Essence",npc="Impsy",z=361,x=41.4,y=45,text="Impsy, west Felwood.",classes={"WARLOCK"},optional=true,v=1},
+    {"accept",q=7603,title="Kroshius' Infernal Core",npc="Impsy",z=361,x=41.4,y=45,classes={"WARLOCK"},optional=true,v=1},
+    {"complete",q=7603,title="Kroshius' Infernal Core",text="Shatter Scar Vale: use the Fel Fire by Kroshius' remains, then defeat him when he rises.",classes={"WARLOCK"},optional=true,v=1},
+    {"turnin",q=7603,title="Kroshius' Infernal Core",npc="Niby the Almighty",z=361,x=41.4,y=44.8,text="Niby the Almighty. Inferno.",classes={"WARLOCK"},optional=true,v=1},
     {"accept",q=5204,title="Retribution of the Light",npc="Jessir Moonbow",z=361,x=51.4,y=82,v=1},
     {"turnin",q=8462,title="Speak to Nafien",npc="Nafien",z=361,x=64.8,y=8.1,v=1},
     {"turnin",q=5084,title="Falling to Corruption",npc="Deadwood Cauldron",z=361,x=60.2,y=5.8,v=1},

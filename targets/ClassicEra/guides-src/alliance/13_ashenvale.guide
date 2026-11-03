@@ -46,7 +46,9 @@ accept 1033 Elune's Tear
 turnin 1024 Raene's Cleansing
 complete 1033 Elune's Tear | The tear lies on the isle in Lake Iris.
 turnin 1033 Elune's Tear
-turnin 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Turned in at The Barrens.
+turnin 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Takar the Seer, in the Barrens south of the Crossroads (Horde land).
+accept 1738 Heartswood [class=Warlock; race=Human,Gnome]
+complete 1738 Heartswood [class=Warlock; race=Human,Gnome] | The Heartswood: from the Dark Strand Excavators in north-west Ashenvale.
 accept 1016 Elemental Bracers | Sentinel Velene Starstrike, Silverwind Refuge.
 complete 1016 Elemental Bracers | Befouled Water Elementals at Mystral Lake; divine the bracers at the lake.
 turnin 1016 Elemental Bracers

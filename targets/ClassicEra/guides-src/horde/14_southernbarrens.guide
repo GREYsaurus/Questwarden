@@ -16,6 +16,13 @@ fly Ratchet | Take the flight from Sun Rock Retreat.
 travel The Barrens
 train
 accept 891 The Guns of Northwatch
+turnin 1528 Call of Water [class=Shaman] | Islen Waterseer, on the coast north of Ratchet.
+accept 1530 Call of Water [class=Shaman]
+turnin 1530 Call of Water [class=Shaman] | Brine, in her hut in the Southern Barrens.
+accept 1535 Call of Water [class=Shaman]
+complete 1535 Call of Water [class=Shaman] | Fill the Empty Brown Waterskin at the watering hole below Brine's hut.
+turnin 1535 Call of Water [class=Shaman]
+accept 1536 Call of Water [class=Shaman] | The red waterskin is filled at the well in Tarren Mill; the guide gets there at 29.
 note The next quest, Free From the Hold, is an escort: pick it up only when you are ready to follow the NPC.
 accept 898 Free From the Hold
 complete 898 Free From the Hold | Escort: stay close; it fails if the NPC dies.

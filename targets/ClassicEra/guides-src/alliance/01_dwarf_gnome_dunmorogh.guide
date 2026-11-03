@@ -5,7 +5,7 @@
 @name Coldridge Valley & Dun Morogh
 @faction Alliance
 @races Dwarf,Gnome
-@levels 1-11
+@levels 1-12
 @zone Dun Morogh
 @chapter Azeroth
 @start
@@ -132,4 +132,56 @@ accept A Pilot's Revenge
 complete A Pilot's Revenge | Mangeclaw prowls nearby.
 turnin A Pilot's Revenge
 level 11
+note [class=Warrior,Hunter,Priest,Warlock] | Level 10 class quests in Kharanos and Ironforge (priests and warlocks also ride the Deeprun Tram to Stormwind). They teach spells you want now.
+accept 6064 Taming the Beast [class=Hunter; race=Dwarf] | Grif Wildheart, Kharanos. Needs level 10.
+complete 6064 Taming the Beast [class=Hunter; race=Dwarf] | Use the Taming Rod on a Large Crag Boar.
+turnin 6064 Taming the Beast [class=Hunter; race=Dwarf]
+accept 6084 Taming the Beast [class=Hunter; race=Dwarf]
+complete 6084 Taming the Beast [class=Hunter; race=Dwarf] | Use the Taming Rod on a Snow Leopard.
+turnin 6084 Taming the Beast [class=Hunter; race=Dwarf]
+accept 6085 Taming the Beast [class=Hunter; race=Dwarf]
+complete 6085 Taming the Beast [class=Hunter; race=Dwarf] | Use the Taming Rod on an Ice Claw Bear.
+turnin 6085 Taming the Beast [class=Hunter; race=Dwarf] | Tame Beast.
+accept 6086 Training the Beast [class=Hunter; race=Dwarf]
+accept 1679 Muren Stormpike [class=Warrior] | Granis Swiftaxe, the warrior trainer in Kharanos. Needs level 10.
+accept 5637 Desperate Prayer [class=Priest; race=Dwarf] | Maxan Anvol, the priest trainer in Kharanos. Needs level 10.
+travel Ironforge [class=Warrior,Hunter,Priest,Warlock]
+turnin 6086 Training the Beast [class=Hunter; race=Dwarf] | Belia Thundergranite, Hall of Arms. Beast Training.
+turnin 1679 Muren Stormpike [class=Warrior] | Muren Stormpike, Hall of Arms.
+accept 1678 Vejrek [class=Warrior]
+accept 1715 The Slaughtered Lamb [class=Warlock] | Lago Blackwrench, Ironforge. Needs level 10.
+travel Stormwind City [class=Priest,Warlock] | Take the Deeprun Tram from Tinker Town in Ironforge.
+turnin 5637 Desperate Prayer [class=Priest; race=Dwarf] | High Priestess Laurena, Cathedral of Light. Desperate Prayer.
+turnin 1715 The Slaughtered Lamb [class=Warlock] | Gakin the Darkbinder, Mage Quarter.
+accept 1688 Surena Caledon [class=Warlock]
+complete 1688 Surena Caledon [class=Warlock] | Surena Caledon carries the choker; she is in Elwynn Forest.
+turnin 1688 Surena Caledon [class=Warlock] | Back to Gakin.
+accept 1689 The Binding [class=Warlock]
+complete 1689 The Binding [class=Warlock] | Use the Bloodstone Choker to summon the voidwalker, then defeat it.
+turnin 1689 The Binding [class=Warlock] | Summon Voidwalker.
+travel Ironforge [class=Priest,Warlock] | Tram back.
+complete 1678 Vejrek [class=Warrior] | Vejrek's Head: Vejrek is with the Frostmane trolls in western Dun Morogh.
+turnin 1678 Vejrek [class=Warrior] | Muren Stormpike, Ironforge. Defensive Stance.
+level 12 [class=Paladin; race=Dwarf] | The Redemption quests need level 12: kill what is around you until you reach it.
+accept 2997 Tome of Divinity [class=Paladin; race=Dwarf] | Azar Stronghammer, Kharanos.
+turnin 2997 Tome of Divinity [class=Paladin; race=Dwarf] | Tiza Battleforge, Mystic Ward, Ironforge.
+accept 1646 The Tome of Divinity [class=Paladin; race=Dwarf] | Read the Tome of Divinity she gives you.
+turnin 1646 The Tome of Divinity [class=Paladin; race=Dwarf]
+accept 1647 The Tome of Divinity [class=Paladin; race=Dwarf]
+turnin 1647 The Tome of Divinity [class=Paladin; race=Dwarf] | John Turner, on Ironforge's outer ring.
+accept 1648 The Tome of Divinity [class=Paladin; race=Dwarf]
+complete 1648 The Tome of Divinity [class=Paladin; race=Dwarf] | 10 Linen Cloth: humanoids drop it; you probably have some already.
+turnin 1648 The Tome of Divinity [class=Paladin; race=Dwarf]
+accept 1778 The Tome of Divinity [class=Paladin; race=Dwarf]
+turnin 1778 The Tome of Divinity [class=Paladin; race=Dwarf] | Tiza Battleforge.
+accept 1779 The Tome of Divinity [class=Paladin; race=Dwarf]
+turnin 1779 The Tome of Divinity [class=Paladin; race=Dwarf] | Muiredon Battleforge, Mystic Ward.
+accept 1783 The Tome of Divinity [class=Paladin; race=Dwarf]
+complete 1783 The Tome of Divinity [class=Paladin; race=Dwarf] | Use the Symbol of Life on Narm Faulk, by Helm's Bed Lake in eastern Dun Morogh.
+turnin 1783 The Tome of Divinity [class=Paladin; race=Dwarf] | Narm Faulk.
+accept 1784 The Tome of Divinity [class=Paladin; race=Dwarf]
+complete 1784 The Tome of Divinity [class=Paladin; race=Dwarf] | The Dark Iron Script drops from Dark Iron Spies close by.
+turnin 1784 The Tome of Divinity [class=Paladin; race=Dwarf] | Muiredon Battleforge, Ironforge.
+accept 1785 The Tome of Divinity [class=Paladin; race=Dwarf]
+turnin 1785 The Tome of Divinity [class=Paladin; race=Dwarf] | Tiza Battleforge. Redemption.
 note Go through the South Gate tunnel into Loch Modan.

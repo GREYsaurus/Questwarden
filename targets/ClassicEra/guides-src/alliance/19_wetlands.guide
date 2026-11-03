@@ -43,3 +43,5 @@ turnin 473 Report to Captain Stoutfist
 complete 299 Uncovering the Past | Relics are scattered in the excavation (raptors present).
 turnin 299 Uncovering the Past
 level 30 | Ashenvale starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+travel Ironforge [class=Warrior] | Berserker Stance starts here.
+accept 1718 The Islander [class=Warrior; zone=Ironforge; at=70.3,90.7] | Kelv Sternhammer, Hall of Arms. Needs level 30.

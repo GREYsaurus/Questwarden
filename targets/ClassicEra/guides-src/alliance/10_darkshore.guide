@@ -143,4 +143,28 @@ complete 1138 Fruit of the Sea [class=Warlock; race=Human,Gnome; optional] | Fin
 turnin 982 Deep Ocean, Vast Sea [optional]
 turnin 1138 Fruit of the Sea [optional]
 complete 4740 WANTED: Murkdeep! [class=Warlock; race=Human,Gnome; optional]
+note [class=Druid; race=Night Elf] | Cure Poison (level 14) and Aquatic Form (level 16): Darnassus, Moonglade and Darkshore. Teleport: Moonglade gets you there and back quickly.
+accept 6121 Lessons Anew [class=Druid; race=Night Elf] | Mathrengyl Bearwalker, Cenarion Enclave, Darnassus. Needs level 14.
+accept 26 A Lesson to Learn [class=Druid; race=Night Elf] | Same NPC. Needs level 16.
+turnin 6121 Lessons Anew [class=Druid; race=Night Elf] | Dendrite Starblaze, Nighthaven, Moonglade.
+accept 6122 The Principal Source [class=Druid; race=Night Elf]
+turnin 26 A Lesson to Learn [class=Druid; race=Night Elf]
+accept 29 Trial of the Lake [class=Druid; race=Night Elf]
+complete 29 Trial of the Lake [class=Druid; race=Night Elf] | Dive in Lake Elune'ara for a Shrine Bauble (in an urn by the bubbling fissures), then use it at the Shrine of Remulos in north-western Moonglade before its timer runs out.
+turnin 29 Trial of the Lake [class=Druid; race=Night Elf] | Tajarri, by the shrine.
+accept 272 Trial of the Sea Lion [class=Druid; race=Night Elf]
+complete 6122 The Principal Source [class=Druid; race=Night Elf] | Fill the Empty Cliffspring Falls Sampler at the mouth of the cave by Cliffspring Falls, Darkshore.
+turnin 6122 The Principal Source [class=Druid; race=Night Elf] | Alanndarian Nightsong, Auberdine.
+accept 6123 Gathering the Cure [class=Druid; race=Night Elf]
+complete 6123 Gathering the Cure [class=Druid; race=Night Elf] | Earthroot is a herb; Lunar Fungus comes from Lunar Fungal Blooms in Darkshore.
+turnin 6123 Gathering the Cure [class=Druid; race=Night Elf]
+accept 6124 Curing the Sick [class=Druid; race=Night Elf]
+complete 6124 Curing the Sick [class=Druid; race=Night Elf] | Use the Curative Animal Salve on Sickly Deer across Darkshore.
+complete 272 Trial of the Sea Lion [class=Druid; race=Night Elf] | Half Pendant of Aquatic Agility: a Strange Lockbox under the water off northern Darkshore. Half Pendant of Aquatic Endurance: a Strange Lockbox deep under the sea far from Moonglade; Moonglade's residents give the clue. Combine them at the Shrine of Remulos.
+turnin 6124 Curing the Sick [class=Druid; race=Night Elf] | Teleport to Moonglade; Dendrite Starblaze.
+accept 6125 Power over Poison [class=Druid; race=Night Elf]
+turnin 272 Trial of the Sea Lion [class=Druid; race=Night Elf]
+accept 5061 Aquatic Form [class=Druid; race=Night Elf]
+turnin 6125 Power over Poison [class=Druid; race=Night Elf] | Mathrengyl Bearwalker, Darnassus. Cure Poison.
+turnin 5061 Aquatic Form [class=Druid; race=Night Elf] | Aquatic Form.
 level 17 | Loch Modan starts at 17. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

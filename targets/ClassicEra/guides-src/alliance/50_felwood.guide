@@ -16,6 +16,11 @@ fly Talonbranch Glade | Take the flight from Everlook.
 travel Felwood
 train
 accept 4101 Cleansing Felwood | Arathandris Silversky.
+complete 7602 Flawless Fel Essence [class=Warlock; optional]
+turnin 7602 Flawless Fel Essence [class=Warlock; optional] | Impsy, west Felwood.
+accept 7603 Kroshius' Infernal Core [class=Warlock; optional]
+complete 7603 Kroshius' Infernal Core [class=Warlock; optional] | Shatter Scar Vale: use the Fel Fire by Kroshius' remains, then defeat him when he rises.
+turnin 7603 Kroshius' Infernal Core [class=Warlock; optional] | Niby the Almighty. Inferno.
 complete 4101 Cleansing Felwood | Cenarion Plant Salve - gather from Felwood.
 turnin 4101 Cleansing Felwood
 accept 5882 Salve via Hunting | Arathandris Silversky. Needs Cleansing Felwood turned in.

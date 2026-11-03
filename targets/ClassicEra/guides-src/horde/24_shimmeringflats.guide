@@ -12,15 +12,26 @@
 @desc Shimmering Flats, visit 3 of 4 on the Horde route, levels 31-32.
 @next H_25_Desolace
 
+note [class=Warrior,Shaman,Warlock] | Level 30 class quests. The zeppelin from Grom'gol lands outside Orgrimmar: stop in the city first.
+travel Orgrimmar [class=Warrior,Shaman]
+accept 1718 The Islander [class=Warrior; race=Orc,Undead,Tauren,Troll] | Sorek, Valley of Honor, Orgrimmar. Needs level 30.
+accept 1531 Call of Air [class=Shaman] | Searn Firewarder, Valley of Wisdom. Needs level 30.
 travel Thousand Needles
-accept 1718 The Islander [class=Warrior; race=Orc,Undead,Tauren,Troll; optional]
+turnin 1531 Call of Air [class=Shaman] | Prate Cloudseer, Thousand Needles.
+turnin 1536 Call of Water [class=Shaman] | Brine, Southern Barrens, north of the Great Lift.
+accept 1534 Call of Water [class=Shaman]
+complete 1534 Call of Water [class=Shaman] | Fill the Empty Blue Waterskin at the Ruins of Stardust in Ashenvale (fly to Splintertree Post).
+turnin 1534 Call of Water [class=Shaman] | Back to Brine.
+accept 220 Call of Water [class=Shaman]
+turnin 220 Call of Water [class=Shaman] | Islen Waterseer, north of Ratchet.
+accept 63 Call of Water [class=Shaman] | The last part is in Silverpine Forest; the guide gets there at 37.
 accept 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
 complete 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
 turnin 1102 A Vengeful Fate [dungeon=Razorfen Kraul]
-turnin 1718 The Islander [class=Warrior; race=Orc,Undead,Tauren,Troll; optional] | Turned in at The Barrens.
+turnin 1718 The Islander [class=Warrior; race=Orc,Undead,Tauren,Troll] | Klannoc Macleod, Fray Island, off the Barrens coast.
 accept 1719 The Affray [class=Warrior; race=Orc,Undead,Tauren,Troll]
 complete 1719 The Affray [class=Warrior; race=Orc,Undead,Tauren,Troll]
-turnin 1719 The Affray [class=Warrior; race=Orc,Undead,Tauren,Troll] | Turned in at The Barrens.
+turnin 1719 The Affray [class=Warrior; race=Orc,Undead,Tauren,Troll] | Berserker Stance.
 accept 1145 The Swarm Grows
 accept 1362 The Kolkar of Desolace
 turnin 1145 The Swarm Grows [class=Warrior; race=Orc,Undead,Tauren,Troll] | Turned in at Orgrimmar.
@@ -28,6 +39,14 @@ turnin 1145 The Swarm Grows [class=Rogue,Priest,Mage,Warlock; race=Undead] | Tur
 turnin 1145 The Swarm Grows [class=Hunter,Rogue,Shaman,Warlock; race=Orc] | Turned in at Orgrimmar.
 turnin 1145 The Swarm Grows [class=Hunter,Rogue,Priest,Shaman,Mage; race=Troll] | Turned in at Orgrimmar.
 turnin 1145 The Swarm Grows [class=Hunter,Shaman,Druid; race=Tauren] | Turned in at Orgrimmar.
+note [class=Warlock] | Felhunter chain: Ratchet, the Undercity, Hillsbrad and back. It is long; the guide finishes it at 37.
+accept 1801 Tome of the Cabal [class=Warlock] | Strahad Farsan, Ratchet. Needs level 30.
+travel Undercity [class=Warlock] | Zeppelin from outside Orgrimmar.
+turnin 1801 Tome of the Cabal [class=Warlock] | Jorah Annison, Undercity.
+accept 1803 Tome of the Cabal [class=Warlock]
+complete 1803 Tome of the Cabal [class=Warlock; obj=1] | Moldy Tome: in Hillsbrad Foothills (fly to Tarren Mill).
+travel Thousand Needles [class=Warlock] | Zeppelin back to Durotar, then fly to Freewind Post.
+complete 1803 Tome of the Cabal [class=Warlock] | Tattered Manuscript: a Damaged Chest in Thousand Needles.
 accept 1175 A Bump in the Road | Trackmaster Zherin.
 complete 1175 A Bump in the Road | Saltstone basilisks.
 turnin 1175 A Bump in the Road

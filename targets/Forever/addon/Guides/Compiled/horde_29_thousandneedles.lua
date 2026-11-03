@@ -9,6 +9,11 @@ ns.Guides:Register({
   next={{id="H_30_DustwallowMarsh"},},
   steps={
     {"travel",text="Travel to Thousand Needles",dest="Thousand Needles",v=1},
+    {"turnin",q=96,title="Call of Water",npc="Islen Waterseer",z=17,x=65.8,y=43.8,text="Islen Waterseer, on the Barrens coast north of Ratchet. Healing Stream Totem.",classes={"SHAMAN"},v=1},
+    {"turnin",q=1805,title="Tome of the Cabal",npc="Strahad Farsan",z=17,x=62.6,y=35.5,text="Strahad Farsan, Ratchet.",classes={"WARLOCK"},v=1},
+    {"accept",q=1795,title="The Binding",npc="Strahad Farsan",z=17,x=62.6,y=35.5,classes={"WARLOCK"},v=1},
+    {"complete",q=1795,title="The Binding",text="Use the Tome of the Cabal at the Summoning Circle beside Strahad and defeat the felhunter.",classes={"WARLOCK"},v=1},
+    {"turnin",q=1795,title="The Binding",npc="Strahad Farsan",z=17,x=62.6,y=35.5,text="Summon Felhunter.",classes={"WARLOCK"},v=1},
     {"accept",q=1049,title="Compendium of the Fallen",npc="Sage Truthseeker",z=1638,x=34.4,y=46.9,dungeon="Scarlet Monastery",v=1},
     {"complete",q=1049,title="Compendium of the Fallen",dungeon="Scarlet Monastery",v=1},
     {"turnin",q=1049,title="Compendium of the Fallen",npc="Sage Truthseeker",z=1638,x=34.4,y=46.9,dungeon="Scarlet Monastery",v=1},

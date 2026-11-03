@@ -50,3 +50,11 @@ turnin 622 Return to Corporal Kaleb
 complete 205 Troll Witchery
 turnin 205 Troll Witchery
 level 40 | Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.
+note [class=Paladin,Warlock] | Level 40: your class mount. Fly to Stormwind from Booty Bay.
+travel Stormwind City [class=Paladin,Warlock]
+accept 1661 The Tome of Nobility [class=Paladin; race=Human,Dwarf] | Duthorian Rall, Cathedral of Light. Needs level 40.
+turnin 1661 The Tome of Nobility [class=Paladin; race=Human,Dwarf] | Summon Warhorse.
+accept 4488 Summon Felsteed [class=Warlock; race=Human,Gnome] | Demisette Cloyce, the Slaughtered Lamb, Mage Quarter. Needs level 40.
+turnin 4488 Summon Felsteed [class=Warlock; race=Human,Gnome] | Strahad Farsan, Ratchet: fly back to Booty Bay and take the boat.
+accept 4490 Summon Felsteed [class=Warlock; race=Human,Gnome]
+turnin 4490 Summon Felsteed [class=Warlock; race=Human,Gnome] | Summon Felsteed.

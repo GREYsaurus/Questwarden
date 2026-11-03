@@ -14,6 +14,13 @@
 
 travel Ashenvale
 train
+note [class=Warrior,Warlock] | Level 30 class quests in the Barrens: ride south from Astranaar, or fly to Ratchet if you know the flight path.
+turnin 1718 The Islander [class=Warrior] | Klannoc Macleod, Fray Island, off the Barrens coast.
+accept 1719 The Affray [class=Warrior]
+complete 1719 The Affray [class=Warrior] | Kill Big Will, then speak to Klannoc Macleod.
+turnin 1719 The Affray [class=Warrior] | Berserker Stance.
+accept 1758 Tome of the Cabal [class=Warlock; race=Human,Gnome] | Strahad Farsan, Ratchet. Needs level 30. Starts the Felhunter chain; the guide finishes it at 38.
+travel Ashenvale [class=Warrior,Warlock]
 accept 1026 Raene's Cleansing
 complete 1026 Raene's Cleansing
 turnin 1026 Raene's Cleansing

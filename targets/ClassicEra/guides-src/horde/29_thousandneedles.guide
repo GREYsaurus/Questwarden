@@ -13,6 +13,11 @@
 @next H_30_DustwallowMarsh
 
 travel Thousand Needles
+turnin 96 Call of Water [class=Shaman] | Islen Waterseer, on the Barrens coast north of Ratchet. Healing Stream Totem.
+turnin 1805 Tome of the Cabal [class=Warlock] | Strahad Farsan, Ratchet.
+accept 1795 The Binding [class=Warlock]
+complete 1795 The Binding [class=Warlock] | Use the Tome of the Cabal at the Summoning Circle beside Strahad and defeat the felhunter.
+turnin 1795 The Binding [class=Warlock] | Summon Felhunter.
 accept 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
 complete 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]
 turnin 1049 Compendium of the Fallen [dungeon=Scarlet Monastery]

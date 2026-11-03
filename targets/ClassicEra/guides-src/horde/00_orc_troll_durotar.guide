@@ -214,6 +214,8 @@ complete 5761 Slaying the Beast [dungeon=Ragefire Chasm]
 turnin 5728 Hidden Enemies [dungeon=Ragefire Chasm]
 turnin 5761 Slaying the Beast [dungeon=Ragefire Chasm]
 train | Orgrimmar trainers.
+accept 5652 Hex of Weakness [class=Priest; race=Troll] | Ur'kyo, the priest trainer in the Valley of Spirits. Needs level 10.
+turnin 5652 Hex of Weakness [class=Priest; race=Troll] | Hex of Weakness, the troll priest spell.
 accept 1505 Veteran Uzzek [class=Warrior]
 accept Conscript of the Horde | Takrin Pathseeker, outside the western gate.
 fp Orgrimmar [zone=Orgrimmar]

@@ -46,5 +46,13 @@ ns.Guides:Register({
     {"complete",q=205,title="Troll Witchery",v=1},
     {"turnin",q=205,title="Troll Witchery",npc="Brother Nimetz",z=33,x=37.8,y=3.6,v=1},
     {"level",text="Badlands starts at 40. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=40,v=1},
+    {"note",text=" - Level 40: your class mount. Fly to Stormwind from Booty Bay.",classes={"PALADIN","WARLOCK"},v=1},
+    {"travel",text="Travel to Stormwind City",dest="Stormwind City",classes={"PALADIN","WARLOCK"},v=1},
+    {"accept",q=1661,title="The Tome of Nobility",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,text="Duthorian Rall, Cathedral of Light. Needs level 40.",classes={"PALADIN"},races={"Human","Dwarf"},v=1},
+    {"turnin",q=1661,title="The Tome of Nobility",npc="Duthorian Rall",z=1519,x=39.8,y=29.8,text="Summon Warhorse.",classes={"PALADIN"},races={"Human","Dwarf"},v=1},
+    {"accept",q=4488,title="Summon Felsteed",npc="Demisette Cloyce",z=1519,x=25.3,y=78.2,text="Demisette Cloyce, the Slaughtered Lamb, Mage Quarter. Needs level 40.",classes={"WARLOCK"},races={"Human","Gnome"},v=1},
+    {"turnin",q=4488,title="Summon Felsteed",npc="Strahad Farsan",z=17,x=62.6,y=35.5,text="Strahad Farsan, Ratchet: fly back to Booty Bay and take the boat.",classes={"WARLOCK"},races={"Human","Gnome"},v=1},
+    {"accept",q=4490,title="Summon Felsteed",npc="Strahad Farsan",z=17,x=62.6,y=35.5,classes={"WARLOCK"},races={"Human","Gnome"},v=1},
+    {"turnin",q=4490,title="Summon Felsteed",npc="Strahad Farsan",z=17,x=62.6,y=35.5,text="Summon Felsteed.",classes={"WARLOCK"},races={"Human","Gnome"},v=1},
   },
 })

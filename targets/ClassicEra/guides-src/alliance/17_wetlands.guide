@@ -22,6 +22,21 @@ accept 470 Digging Through the Ooze | Sida, west Menethil.
 accept 464 War Banners
 accept 279 Claws from the Deep | Karl Boran on the docks.
 fp Menethil Harbor
+note [class=Warlock,Rogue,Priest] | Level 20 class quests in Ironforge and Stormwind: fly to Ironforge (and take the Deeprun Tram to Stormwind), then fly back.
+travel Ironforge [class=Priest; race=Dwarf]
+accept 5641 A Lack of Fear [class=Priest; race=Dwarf] | High Priest Rohan, Mystic Ward. Needs level 20.
+turnin 5641 A Lack of Fear [class=Priest; race=Dwarf] | Fear Ward, the dwarf priest spell.
+travel Stormwind City [class=Warlock,Rogue]
+travel Stormwind City [class=Priest; race=Human]
+accept 5676 Arcane Feedback [class=Priest; race=Human] | High Priestess Laurena, Cathedral of Light. Needs level 20.
+turnin 5676 Arcane Feedback [class=Priest; race=Human] | Feedback, the human priest spell.
+turnin 1738 Heartswood [class=Warlock; race=Human,Gnome] | Gakin the Darkbinder, Mage Quarter.
+accept 1739 The Binding [class=Warlock; race=Human,Gnome]
+complete 1739 The Binding [class=Warlock; race=Human,Gnome] | Use the Heartswood Core and defeat the succubus that appears.
+turnin 1739 The Binding [class=Warlock; race=Human,Gnome] | Summon Succubus.
+accept 2360 Mathias and the Defias [class=Rogue] | Master Mathias Shaw, SI:7, Old Town. Needs level 20. Agent Kearnen is in Westfall; the guide gets there at 28.
+travel Wetlands [class=Warlock,Rogue]
+travel Wetlands [class=Priest; race=Human,Dwarf]
 accept 288 The Third Fleet | First Mate Fitzsimmons in the inn.
 accept 463 The Greenwarden
 complete 288 The Third Fleet | Crocolisk meat from crocolisks around Menethil; buy the Flagon of Mead from the innkeeper.

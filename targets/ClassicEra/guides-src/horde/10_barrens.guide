@@ -18,7 +18,7 @@ accept 770 The Demon Scarred Cloak [race=Orc,Undead,Troll; optional]
 turnin 770 The Demon Scarred Cloak [race=Orc,Undead,Troll; optional] | Turned in at Mulgore.
 accept 861 The Hunter's Way [class=Shaman; race=Orc,Troll; optional]
 accept 2984 Call of Fire [class=Shaman; race=Orc,Troll]
-accept 1505 Veteran Uzzek [class=Warrior; race=Undead,Tauren]
+accept 1505 Veteran Uzzek [class=Warrior; race=Tauren]
 accept 744 Preparation for Ceremony [class=Warrior,Hunter,Rogue,Warlock; race=Orc]
 accept 744 Preparation for Ceremony [class=Warrior,Hunter,Rogue,Priest,Mage; race=Troll]
 accept 744 Preparation for Ceremony [race=Undead]
@@ -44,11 +44,8 @@ complete 833 A Sacred Burial [race=Orc,Undead,Troll]
 turnin 833 A Sacred Burial [race=Orc,Undead,Troll] | Turned in at Mulgore.
 turnin 861 The Hunter's Way [class=Shaman; race=Orc,Troll; optional] | Turned in at Thunder Bluff.
 accept 860 Sergra Darkthorn [race=Orc,Undead,Troll; optional]
-turnin 1505 Veteran Uzzek [class=Warrior; race=Undead,Tauren]
-accept 1498 Path of Defense [class=Warrior; race=Undead,Tauren]
-accept 1503 Forged Steel [class=Warrior; race=Undead,Tauren]
-complete 1503 Forged Steel [class=Warrior; race=Undead,Tauren] | Forged Steel Bars: loot Stolen Iron Chest.
-turnin 1503 Forged Steel [class=Warrior; race=Undead,Tauren]
+turnin 1505 Veteran Uzzek [class=Warrior; race=Tauren]
+accept 1498 Path of Defense [class=Warrior; race=Tauren]
 accept 870 The Forgotten Pools | Tonga Runetotem.
 bind The Crossroads [area=380]
 turnin 860 Sergra Darkthorn [optional]
@@ -73,8 +70,13 @@ accept 819 Chen's Empty Keg [optional]
 turnin 2984 Call of Fire [class=Shaman; race=Orc,Tauren,Troll]
 accept 1524 Call of Fire [class=Shaman; race=Tauren]
 accept 924 The Demon Seed [race=Undead; optional]
-complete 1498 Path of Defense [class=Warrior; race=Orc,Undead,Tauren,Troll] | Singed Scale drops from Lightning Hide and Thunder Lizard.
-turnin 1498 Path of Defense [class=Warrior; race=Orc,Undead,Tauren,Troll]
+complete 1498 Path of Defense [class=Warrior; race=Orc,Tauren,Troll] | Singed Scale drops from Lightning Hide and Thunder Lizard.
+turnin 1498 Path of Defense [class=Warrior; race=Orc,Tauren,Troll]
+accept 1502 Thun'grim Firegaze [class=Warrior; race=Orc,Tauren,Troll; optional] | Uzzek. Leads to a weapon reward.
+turnin 1502 Thun'grim Firegaze [class=Warrior; race=Orc,Tauren,Troll; optional] | Thun'grim Firegaze, east of the Crossroads.
+accept 1503 Forged Steel [class=Warrior; race=Orc,Tauren,Troll; optional]
+complete 1503 Forged Steel [class=Warrior; race=Orc,Tauren,Troll; optional] | Forged Steel Bars: loot the Stolen Iron Chest.
+turnin 1503 Forged Steel [class=Warrior; race=Orc,Tauren,Troll; optional]
 accept 887 Southsea Freebooters | Gazlowe, Ratchet.
 complete 887 Southsea Freebooters | Pirates at the camp north of Ratchet.
 turnin 887 Southsea Freebooters
@@ -167,10 +169,6 @@ accept 853 Apothecary Zamah [race=Orc,Undead,Troll]
 accept 853 Apothecary Zamah [race=Tauren]
 turnin 853 Apothecary Zamah [race=Orc,Undead,Troll] | Turned in at Thunder Bluff.
 turnin 853 Apothecary Zamah [race=Tauren] | Turned in at Thunder Bluff.
-accept 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional]
-turnin 1818 Speak with Dillinger [class=Warrior; race=Orc,Undead,Troll; optional] | Turned in at Tirisfal Glades.
-accept 1820 Speak with Coleman [class=Warrior; race=Orc,Undead,Tauren,Troll; optional]
-turnin 1820 Speak with Coleman [class=Warrior; race=Orc,Undead,Tauren,Troll; optional] | Turned in at Tirisfal Glades.
 turnin 6002 Body and Heart [class=Druid; race=Tauren] | Turned in at Thunder Bluff.
 turnin 892 The Missing Shipment
 turnin 6386 Return to the Crossroads. [race=Orc,Troll; optional]

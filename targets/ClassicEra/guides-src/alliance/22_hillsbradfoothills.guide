@@ -14,6 +14,7 @@
 
 travel Hillsbrad Foothills
 fp Southshore
+complete 1802 Tome of the Cabal [class=Warlock; race=Human,Gnome; obj=1] | Moldy Tome: in Hillsbrad Foothills.
 accept 536 Down the Coast | Lieutenant Farren Orinelle, Southshore.
 complete 536 Down the Coast | Murlocs on the coast south of Southshore.
 turnin 536 Down the Coast

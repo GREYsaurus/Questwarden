@@ -8,15 +8,15 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5269 |
-| Quest steps (accept/complete/turn-in) | 4276 |
-| Distinct quests referenced | 1336 |
-| Steps with database-derived coordinates | 3379 |
-| Steps with hand-written coordinates (unverified) | 24 |
+| Guide steps | 5554 |
+| Quest steps (accept/complete/turn-in) | 4523 |
+| Distinct quests referenced | 1427 |
+| Steps with database-derived coordinates | 3573 |
+| Steps with hand-written coordinates (unverified) | 26 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
-| Compiler warnings | 53 (see docs/generated/ClassicEra/guide-warnings.log) |
+| Compiler warnings | 47 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)
 
@@ -69,57 +69,57 @@ Each race/class combination is followed from its racial start guide through the 
 
 | Guide | Faction | Levels | Zone | Steps | Quests | Optional/elite/group steps |
 |---|---|---|---|---|---|---|
-| Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 200 | 69 | 12 |
-| Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 133 | 46 | 3 |
-| Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 193 | 68 | 14 |
-| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 225 | 71 | 33 |
-| Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 22 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 135 | 46 | 3 |
-| Darkshore (12-17) | Alliance | 12-17 | Darkshore | 140 | 40 | 48 |
-| The Barrens (12-15) | Horde | 12-15 | The Barrens | 178 | 59 | 47 |
+| Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 225 | 78 | 12 |
+| Coldridge Valley & Dun Morogh | Alliance | 1-12 | Dun Morogh | 185 | 65 | 3 |
+| Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 195 | 69 | 14 |
+| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 227 | 72 | 33 |
+| Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 20 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 157 | 55 | 10 |
+| Darkshore (12-17) | Alliance | 12-17 | Darkshore | 164 | 49 | 48 |
+| The Barrens (12-15) | Horde | 12-15 | The Barrens | 176 | 58 | 48 |
 | Stonetalon Mountains (15-16) | Horde | 15-16 | Stonetalon Mountains | 5 | 1 | 0 |
-| The Barrens (16-20) | Horde | 16-20 | The Barrens | 116 | 38 | 25 |
+| The Barrens (16-20) | Horde | 16-20 | The Barrens | 156 | 53 | 25 |
 | Loch Modan (17-18) | Alliance | 17-18 | Loch Modan | 90 | 28 | 8 |
-| Darkshore (20-21) | Alliance | 20-21 | Darkshore | 82 | 19 | 35 |
-| Stonetalon Mountains (20-21) | Horde | 20-21 | Stonetalon Mountains | 43 | 19 | 3 |
-| Ashenvale (21-22) | Alliance | 21-22 | Ashenvale | 41 | 17 | 9 |
+| Darkshore (20-21) | Alliance | 20-21 | Darkshore | 84 | 20 | 35 |
+| Stonetalon Mountains (20-21) | Horde | 20-21 | Stonetalon Mountains | 42 | 19 | 3 |
+| Ashenvale (21-22) | Alliance | 21-22 | Ashenvale | 43 | 18 | 9 |
 | Stonetalon Mountains (22-23) | Alliance | 22-23 | Stonetalon Mountains | 29 | 8 | 0 |
-| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 54 | 14 | 5 |
+| Southern Barrens (22-23) | Horde | 22-23 | The Barrens | 61 | 18 | 5 |
 | Darkshore (23-24) | Alliance | 23-24 | Darkshore | 3 | 0 | 0 |
 | Stonetalon Mountains (23-25) | Horde | 23-25 | Stonetalon Mountains | 19 | 6 | 1 |
 | Ashenvale (24) | Alliance | 24-24 | Ashenvale | 40 | 8 | 10 |
-| Wetlands (24-27) | Alliance | 24-27 | Wetlands | 74 | 23 | 12 |
-| Southern Barrens (25) | Horde | 25-25 | The Barrens | 12 | 7 | 5 |
+| Wetlands (24-27) | Alliance | 24-27 | Wetlands | 89 | 28 | 12 |
+| Southern Barrens (25) | Horde | 25-25 | The Barrens | 15 | 9 | 5 |
 | Thousand Needles (25-26) | Horde | 25-26 | Thousand Needles | 43 | 15 | 21 |
 | Ashenvale (26-27) | Horde | 26-27 | Ashenvale | 63 | 19 | 10 |
 | Stonetalon Mountains (27-28) | Horde | 27-28 | Stonetalon Mountains | 22 | 7 | 0 |
-| Duskwood (28-29) | Alliance | 28-29 | Duskwood | 184 | 64 | 50 |
+| Duskwood (28-29) | Alliance | 28-29 | Duskwood | 185 | 64 | 50 |
 | Thousand Needles (28-29) | Horde | 28-29 | Thousand Needles | 68 | 19 | 29 |
-| Hillsbrad Foothills (29-30) | Horde | 29-30 | Hillsbrad Foothills | 60 | 20 | 7 |
-| Wetlands (30) | Alliance | 30-30 | Wetlands | 39 | 13 | 6 |
-| Ashenvale (30) | Alliance | 30-30 | Ashenvale | 40 | 10 | 0 |
-| Wetlands (30-31) | Alliance | 30-31 | Wetlands | 21 | 4 | 0 |
+| Hillsbrad Foothills (29-30) | Horde | 29-30 | Hillsbrad Foothills | 64 | 23 | 7 |
+| Wetlands (30) | Alliance | 30-30 | Wetlands | 41 | 14 | 6 |
+| Ashenvale (30) | Alliance | 30-30 | Ashenvale | 47 | 13 | 0 |
+| Wetlands (30-31) | Alliance | 30-31 | Wetlands | 25 | 6 | 0 |
 | Arathi Highlands (30) | Horde | 30-30 | Arathi Highlands | 16 | 2 | 2 |
 | Stranglethorn Vale (30-31) | Horde | 30-31 | Stranglethorn Vale | 27 | 6 | 0 |
-| Hillsbrad Foothills (31-32) | Alliance | 31-32 | Hillsbrad Foothills | 65 | 29 | 7 |
-| Shimmering Flats (31-32) | Horde | 31-32 | Thousand Needles | 23 | 7 | 2 |
+| Hillsbrad Foothills (31-32) | Alliance | 31-32 | Hillsbrad Foothills | 66 | 30 | 7 |
+| Shimmering Flats (31-32) | Horde | 31-32 | Thousand Needles | 42 | 14 | 0 |
 | Arathi Highlands (32) | Alliance | 32-32 | Arathi Highlands | 14 | 1 | 0 |
 | Stranglethorn Vale (32-33) | Alliance | 32-33 | Stranglethorn Vale | 95 | 35 | 13 |
 | Desolace (32-34) | Horde | 32-34 | Desolace | 53 | 14 | 0 |
-| Shimmering Flats (33-34) | Alliance | 33-34 | Thousand Needles | 18 | 6 | 0 |
-| Stranglethorn Vale (34-36) | Horde | 34-36 | Stranglethorn Vale | 64 | 18 | 1 |
+| Shimmering Flats (33-34) | Alliance | 33-34 | Thousand Needles | 19 | 7 | 0 |
+| Stranglethorn Vale (34-36) | Horde | 34-36 | Stranglethorn Vale | 67 | 20 | 1 |
 | Stranglethorn Vale (36-37) | Alliance | 36-37 | Stranglethorn Vale | 66 | 21 | 4 |
-| Arathi Highlands (36-37) | Horde | 36-37 | Arathi Highlands | 78 | 24 | 3 |
+| Arathi Highlands (36-37) | Horde | 36-37 | Arathi Highlands | 79 | 25 | 3 |
 | Alterac Mountains (37) | Alliance | 37-37 | Alterac Mountains | 3 | 0 | 0 |
-| Arathi Highlands (37-38) | Alliance | 37-38 | Arathi Highlands | 57 | 20 | 6 |
-| Alterac Mountains (37) | Horde | 37-37 | Alterac Mountains | 5 | 1 | 0 |
-| Thousand Needles (37-38) | Horde | 37-38 | Thousand Needles | 8 | 3 | 0 |
-| Dustwallow Marsh (38-39) | Alliance | 38-39 | Dustwallow Marsh | 54 | 16 | 4 |
+| Arathi Highlands (37-38) | Alliance | 37-38 | Arathi Highlands | 62 | 22 | 6 |
+| Alterac Mountains (37) | Horde | 37-37 | Alterac Mountains | 10 | 4 | 0 |
+| Thousand Needles (37-38) | Horde | 37-38 | Thousand Needles | 13 | 6 | 0 |
+| Dustwallow Marsh (38-39) | Alliance | 38-39 | Dustwallow Marsh | 58 | 18 | 4 |
 | Dustwallow Marsh (38) | Horde | 38-38 | Dustwallow Marsh | 40 | 12 | 2 |
 | Stranglethorn Vale (38-40) | Horde | 38-40 | Stranglethorn Vale | 50 | 14 | 0 |
-| Stranglethorn Vale (39-40) | Alliance | 39-40 | Stranglethorn Vale | 38 | 15 | 6 |
+| Stranglethorn Vale (39-40) | Alliance | 39-40 | Stranglethorn Vale | 46 | 18 | 6 |
 | Badlands (40-41) | Alliance | 40-41 | Badlands | 63 | 19 | 3 |
-| Badlands (40-41) | Horde | 40-41 | Badlands | 46 | 11 | 0 |
+| Badlands (40-41) | Horde | 40-41 | Badlands | 52 | 13 | 0 |
 | Swamp of Sorrows (41-42) | Alliance | 41-42 | Swamp of Sorrows | 11 | 3 | 0 |
 | Swamp of Sorrows (41-42) | Horde | 41-42 | Swamp of Sorrows | 24 | 7 | 0 |
 | Stranglethorn Vale (42) | Alliance | 42-42 | Stranglethorn Vale | 49 | 14 | 3 |
@@ -152,15 +152,15 @@ Each race/class combination is followed from its racial start guide through the 
 | Blasted Lands (51-52) | Horde | 51-52 | Blasted Lands | 24 | 7 | 0 |
 | Un'Goro Crater (51-53) | Horde | 51-53 | Un'Goro Crater | 65 | 22 | 1 |
 | Azshara (52-53) | Alliance | 52-53 | Azshara | 17 | 2 | 0 |
-| Felwood (53-54) | Alliance | 53-54 | Felwood | 31 | 12 | 0 |
+| Felwood (53-54) | Alliance | 53-54 | Felwood | 34 | 14 | 3 |
 | Burning Steppes (53) | Horde | 53-53 | Burning Steppes | 3 | 0 | 0 |
 | Azshara (53-54) | Horde | 53-54 | Azshara | 12 | 4 | 0 |
 | Winterspring (54) | Alliance | 54-54 | Winterspring | 31 | 11 | 0 |
-| Felwood (54-55) | Alliance | 54-55 | Felwood | 22 | 5 | 0 |
-| Felwood (54) | Horde | 54-54 | Felwood | 42 | 12 | 0 |
+| Felwood (54-55) | Alliance | 54-55 | Felwood | 27 | 7 | 5 |
+| Felwood (54) | Horde | 54-54 | Felwood | 45 | 14 | 3 |
 | Winterspring (54-55) | Horde | 54-55 | Winterspring | 31 | 10 | 0 |
 | Burning Steppes (55-56) | Alliance | 55-56 | Burning Steppes | 70 | 26 | 1 |
-| Felwood (55-56) | Horde | 55-56 | Felwood | 18 | 7 | 1 |
+| Felwood (55-56) | Horde | 55-56 | Felwood | 23 | 9 | 6 |
 | Western Plaguelands (56) | Alliance | 56-56 | Western Plaguelands | 78 | 26 | 3 |
 | Eastern Plaguelands (56-57) | Alliance | 56-57 | Eastern Plaguelands | 42 | 11 | 1 |
 | Western Plaguelands (56) | Horde | 56-56 | Western Plaguelands | 78 | 28 | 3 |
@@ -218,7 +218,7 @@ Each race/class combination is followed from its racial start guide through the 
 
 - Guide **routes, ordering and notes** are original and were written without in-game testing. Quest ids, names, faction/race/class limits and NPC coordinates come from the database, but the practical route (XP sufficiency, travel efficiency) needs play-testing.
 - **25 complete-steps** have no objective location in the data (escort, talk or event quests). The arrow cannot target them; the step text still shows the objective.
-- **26 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
+- **21 prerequisite warnings**: a quest's prerequisite is not turned in on the route (usually an alternative chain). The engine auto-skips unavailable quests at runtime.
 - **Class advice** text (Classes/ClassAdvice.lua) is marked unverified. Ability training levels are from developer knowledge.
 - **Talent builds** are legal against the 1.15.9.70576 client tables, but how good they are is a judgement call, not something tested.
 

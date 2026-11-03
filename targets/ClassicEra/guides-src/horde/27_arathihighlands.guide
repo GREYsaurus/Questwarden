@@ -17,6 +17,7 @@ train
 fp Hammerfall
 accept 655 Hammerfall | Gor'mul.
 bind Hammerfall [area=321]
+complete 1805 Tome of the Cabal [class=Warlock] | Rods of Channeling drop from Dragonmaw Shadowwarders and Bonewarders in the Wetlands, across Thandol Span west of Hammerfall (Alliance zone).
 turnin 638 Trollbane
 accept 642 The Princess Trapped | The Shards of Myzrael, south-east.
 accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.

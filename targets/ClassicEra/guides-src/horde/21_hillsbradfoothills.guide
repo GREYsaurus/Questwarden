@@ -16,6 +16,10 @@ travel Hillsbrad Foothills
 fp Tarren Mill
 accept 496 Elixir of Suffering | Apothecary Lydon.
 bind Tarren Mill [area=272]
+complete 1536 Call of Water [class=Shaman] | Fill the Empty Red Waterskin at the well in Tarren Mill.
+turnin 2479 Hinott's Assistance [class=Rogue] | Serge Hinott, Tarren Mill.
+accept 2480 Hinott's Assistance [class=Rogue]
+turnin 2480 Hinott's Assistance [class=Rogue] | Wait for the cure, then talk to him again. Poisons.
 accept 1066 Blood of Innocents [optional]
 accept 494 Time To Strike [optional] | Deathguard Lesh.
 accept 527 Battle of Hillsbrad | High Executor Darthalia.

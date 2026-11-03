@@ -14,6 +14,11 @@
 
 travel Felwood
 accept 8462 Speak to Nafien
+complete 7602 Flawless Fel Essence [class=Warlock; optional]
+turnin 7602 Flawless Fel Essence [class=Warlock; optional] | Impsy, west Felwood.
+accept 7603 Kroshius' Infernal Core [class=Warlock; optional]
+complete 7603 Kroshius' Infernal Core [class=Warlock; optional] | Shatter Scar Vale: use the Fel Fire by Kroshius' remains, then defeat him when he rises.
+turnin 7603 Kroshius' Infernal Core [class=Warlock; optional] | Niby the Almighty. Inferno.
 accept 5204 Retribution of the Light
 turnin 8462 Speak to Nafien
 turnin 5084 Falling to Corruption

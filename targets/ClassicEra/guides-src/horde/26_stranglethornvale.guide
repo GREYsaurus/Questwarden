@@ -12,6 +12,9 @@
 @desc Stranglethorn Vale, visit 2 of 5 on the Horde route, levels 34-36.
 @next H_27_ArathiHighlands
 
+travel Undercity [class=Warlock] | Take the zeppelin from Orgrimmar to Tirisfal; a zeppelin from Tirisfal goes on to Grom'gol.
+turnin 1803 Tome of the Cabal [class=Warlock] | Jorah Annison, Undercity.
+accept 1805 Tome of the Cabal [class=Warlock] | The Rods of Channeling come later, in Arathi.
 travel Stranglethorn Vale
 train
 fp Grom'gol

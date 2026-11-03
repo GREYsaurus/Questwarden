@@ -168,6 +168,7 @@ complete 5929 Great Bear Spirit [class=Druid]
 turnin 5929 Great Bear Spirit [class=Druid] | Turned in at Moonglade.
 accept 5931 Back to Darnassus [class=Druid]
 accept 1684 Elanaria [class=Warrior]
+accept 5629 Returning Home [class=Priest] | Laurna Morninglight, the priest trainer in Dolanaar. Needs level 10.
 accept 6063 Taming the Beast [class=Hunter]
 complete 6063 Taming the Beast [class=Hunter]
 turnin 6063 Taming the Beast [class=Hunter]
@@ -194,6 +195,7 @@ accept 6341 The Bounty of Teldrassil
 turnin 6341 The Bounty of Teldrassil
 accept 6342 Flight to Auberdine [optional]
 train | Darnassus trainers (Warrior's Terrace, Cenarion Enclave).
+turnin 5629 Returning Home [class=Priest] | Priestess Alathea, Temple of the Moon. Starshards, the night elf priest spell.
 fp Rut'theran Village
 note Take the portal in Darnassus down to Rut'theran Village, then fly to Auberdine (Darkshore).
 fly Auberdine [unverified] | Flight to Auberdine says Vesprystus flies you there before you have the Auberdine flight path; if he does not, take the boat from Rut'theran Village.

@@ -39,8 +39,6 @@ accept 245 Eight-Legged Menaces | Watcher Dodds on the bridge on the road to Wes
 complete 90 Seasoned Wolf Kabobs | Black Ravagers, Bleak Worgs and other wolves.
 complete 245 Eight-Legged Menaces | Pygmy Venom Web Spiders around the road.
 turnin 245 Eight-Legged Menaces
-accept 5061 Aquatic Form [class=Druid; race=Night Elf]
-turnin 5061 Aquatic Form [class=Druid; race=Night Elf] | Turned in at Darnassus.
 turnin 163 Raven Hill | Jitters, north of the Raven Hill houses.
 accept 5 Jitters' Growling Gut
 turnin 164 Deliveries to Sven | Sven Yorgen's camp, far west.
@@ -108,7 +106,10 @@ complete 134 Ogre Thieves | Splinter Fist ogres at Vul'Gol Ogre Mound.
 complete 181 Look To The Stars [optional] | Ogre's Monocle drops from Zzarc' Vul.
 turnin 134 Ogre Thieves
 accept 160 Note to the Mayor
-turnin 2360 Mathias and the Defias [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | Turned in at Westfall.
+turnin 2360 Mathias and the Defias [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | Agent Kearnen, eastern Westfall, just over the Duskwood border.
+accept 2359 Klaven's Tower [class=Rogue; race=Human,Dwarf,Night Elf,Gnome]
+complete 2359 Klaven's Tower [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | The Defias Tower Key drops from Malformed Defias Drones; open the Duskwood Chest in the tower for Klaven Mortwake's Journal.
+turnin 2359 Klaven's Tower [class=Rogue; race=Human,Dwarf,Night Elf,Gnome] | Master Mathias Shaw, SI:7, Stormwind. Poisons.
 turnin 160 Note to the Mayor
 accept 251 Translate Abercrombie's Note
 turnin 68 The Legend of Stalvan

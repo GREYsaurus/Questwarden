@@ -47,5 +47,7 @@ ns.Guides:Register({
     {"complete",q=299,title="Uncovering the Past",text="Relics are scattered in the excavation (raptors present).",v=1},
     {"turnin",q=299,title="Uncovering the Past",npc="Prospector Whelgar",z=11,x=38.8,y=52.4,v=1},
     {"level",text="Ashenvale starts at 30. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=30,v=1},
+    {"travel",text="Berserker Stance starts here.",dest="Ironforge",classes={"WARRIOR"},v=1},
+    {"accept",q=1718,title="The Islander",npc="Kelv Sternhammer",z=1537,x=70.3,y=90.7,text="Kelv Sternhammer, Hall of Arms. Needs level 30.",classes={"WARRIOR"},v=0},
   },
 })

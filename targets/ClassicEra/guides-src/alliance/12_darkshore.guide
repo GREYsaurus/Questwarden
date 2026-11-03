@@ -14,7 +14,9 @@
 
 travel Darkshore
 train
-accept 1716 Devourer of Souls [class=Warlock; race=Human,Gnome]
+accept 5672 Elune's Grace [class=Priest; race=Night Elf] | Priestess Alathea, Temple of the Moon, Darnassus. Needs level 20.
+turnin 5672 Elune's Grace [class=Priest; race=Night Elf] | Elune's Grace, the night elf priest spell.
+accept 1716 Devourer of Souls [class=Warlock; race=Human,Gnome] | Gakin the Darkbinder, Stormwind Mage Quarter. Needs level 20. Starts the Succubus chain.
 note  [group=2] | The next quest, The Absent Minded Prospector, is an escort: pick it up only when you are ready to follow the NPC.
 accept 731 The Absent Minded Prospector [group=2] | Escort quest.
 accept 951 Mathystra Relics

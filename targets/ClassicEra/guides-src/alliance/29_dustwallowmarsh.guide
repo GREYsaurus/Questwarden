@@ -17,6 +17,10 @@ train
 fp Theramore
 accept 1282 They Call Him Smiling Jim | Guard Byron, at the Theramore gate.
 bind Theramore Isle [area=513,514]
+turnin 1804 Tome of the Cabal [class=Warlock; race=Human,Gnome] | Strahad Farsan, Ratchet (fly from Theramore).
+accept 1795 The Binding [class=Warlock; race=Human,Gnome]
+complete 1795 The Binding [class=Warlock; race=Human,Gnome] | Use the Tome of the Cabal at the Summoning Circle beside Strahad and defeat the felhunter.
+turnin 1795 The Binding [class=Warlock; race=Human,Gnome] | Summon Felhunter.
 turnin 1282 They Call Him Smiling Jim | Captain Garran Vimes, Foothold Citadel.
 accept 1204 Mudrock Soup and Bugs | Morgan Stern, by the Theramore docks.
 complete 1204 Mudrock Soup and Bugs | Mudrock tortoises along the Theramore coast.

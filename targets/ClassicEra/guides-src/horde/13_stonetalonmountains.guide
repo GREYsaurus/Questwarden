@@ -16,24 +16,23 @@ travel Stonetalon Mountains
 train
 turnin 1060 Letter to Jin'Zil [optional] | Witch Doctor Jin'Zil, if you took the letter in the Barrens.
 accept 6542 Report to Kadrak
-turnin 1510 News of Dogran [class=Warlock; race=Orc,Undead]
+turnin 1510 News of Dogran [class=Warlock; race=Orc,Undead] | Ken'zigla, Malaka'jin (south Stonetalon).
 accept 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead]
 turnin 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
-accept 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll]
-complete 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll]
-turnin 1535 Call of Water [class=Shaman; race=Orc,Tauren,Troll] | Turned in at The Barrens.
-turnin 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead] | Turned in at The Barrens.
+turnin 1511 Ken'zigla's Draught [class=Warlock; race=Orc,Undead] | Grunt Logmar, Camp Taurajo (Barrens).
 accept 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead]
-turnin 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead] | Turned in at The Barrens.
+turnin 1515 Dogran's Captivity [class=Warlock; race=Orc,Undead] | Grunt Dogran, north of Camp Taurajo.
 accept 1512 Love's Gift [class=Warlock; race=Orc,Undead]
-turnin 1512 Love's Gift [class=Warlock; race=Orc,Undead] | Turned in at Orgrimmar.
-accept 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll]
+turnin 1512 Love's Gift [class=Warlock; race=Orc,Undead] | Gan'rul Bloodeye, Orgrimmar.
+accept 1513 The Binding [class=Warlock; race=Orc,Undead]
+complete 1513 The Binding [class=Warlock; race=Orc,Undead] | Use Dogran's Pendant and defeat the succubus that appears.
+turnin 1513 The Binding [class=Warlock; race=Orc,Undead] | Summon Succubus.
 turnin 1063 The Elder Crone | Turned in at Thunder Bluff.
 turnin 1489 Hamuul Runetotem
 accept 1064 Forsaken Aid [optional]
 turnin 1064 Forsaken Aid [optional] | Turned in at Thunder Bluff.
-turnin 5642 Shadowguard [class=Priest; race=Troll] | Turned in at Orgrimmar.
-turnin 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll] | Turned in at The Barrens.
+turnin 2458 Deep Cover [class=Rogue; race=Orc,Undead,Troll] | Taskmaster Fizzule, by the Venture Co. tower north of the Sludge Fen (north Barrens); the quest text says what to do when the tower is in sight.
+accept 2478 Mission: Possible But Not Probable [class=Rogue] | A level 24 quest: the guide comes back for it at 25.
 accept 6562 Trouble in the Deeps | Tsunaman. Turned in at Zoram'gar Outpost in Ashenvale (next guide).
 fp Sun Rock Retreat
 turnin 6401 Kaya's Alive

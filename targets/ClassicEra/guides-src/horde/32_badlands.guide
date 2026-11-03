@@ -12,6 +12,12 @@
 @desc Badlands, visit 1 of 1 on the Horde route, levels 40-41.
 @next H_33_SwampofSorrows
 
+note [class=Warlock] | Level 40: your Felsteed. Take the zeppelin from Grom'gol to Orgrimmar first.
+travel Orgrimmar [class=Warlock]
+accept 3631 Summon Felsteed [class=Warlock] | Zevrost, Cleft of Shadow. Needs level 40.
+turnin 3631 Summon Felsteed [class=Warlock] | Strahad Farsan, Ratchet.
+accept 4490 Summon Felsteed [class=Warlock]
+turnin 4490 Summon Felsteed [class=Warlock] | Summon Felsteed. Then zeppelin back east.
 travel Badlands
 train
 note Kargath has no flight path until you reach it. From Hammerfall cross Thandol Span into the Wetlands and ride east through Loch Modan into the Badlands (Alliance zones: keep off the roads). Kargath is on the west edge of the Badlands.

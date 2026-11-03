@@ -220,6 +220,8 @@ ns.Guides:Register({
     {"train",npc="Swart",z=14,x=54.4,y=42.6,text="Orgrimmar trainers.",classes={"SHAMAN"},v=1},
     {"train",npc="Dhugru Gorelust",z=14,x=54.4,y=41.2,text="Orgrimmar trainers.",classes={"WARLOCK"},v=1},
     {"train",npc="Tarshaw Jaggedscar",z=14,x=54.2,y=42.5,text="Orgrimmar trainers.",classes={"WARRIOR"},v=1},
+    {"accept",q=5652,title="Hex of Weakness",npc="Ur'kyo",z=1637,x=35.6,y=87.8,text="Ur'kyo, the priest trainer in the Valley of Spirits. Needs level 10.",classes={"PRIEST"},races={"Troll"},v=1},
+    {"turnin",q=5652,title="Hex of Weakness",npc="Ur'kyo",z=1637,x=35.6,y=87.8,text="Hex of Weakness, the troll priest spell.",classes={"PRIEST"},races={"Troll"},v=1},
     {"accept",q=1505,title="Veteran Uzzek",npc="Sorek",z=1637,x=80.4,y=32.4,classes={"WARRIOR"},v=1},
     {"accept",q=840,title="Conscript of the Horde",npc="Takrin Pathseeker",z=14,x=50.8,y=43.6,text="Takrin Pathseeker, outside the western gate.",v=1},
     {"fp",npc="Doras",z=1637,x=45.1,y=63.9,place="Orgrimmar",node=23,v=1},

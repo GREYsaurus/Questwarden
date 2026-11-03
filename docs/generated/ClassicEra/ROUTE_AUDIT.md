@@ -10,12 +10,12 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 |---|---|
 | Routes walked | 80 |
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
-| Warnings | 22 |
-| Peak quest log (worst route) | 15 / 20 |
-| Reduced-XP pickups (6+ levels below estimate) | 39 |
-| Level-gated pickups | 14 |
+| Warnings | 14 |
+| Peak quest log (worst route) | 16 / 20 |
+| Reduced-XP pickups (6+ levels below estimate) | 48 |
+| Level-gated pickups | 12 |
 | Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 537 |
+| Hub revisits (all guides) | 567 |
 
 ## Per guide
 
@@ -23,27 +23,27 @@ No baseline file found.
 
 | Guide | Steps | Quests | Distance | Per-character travel | Hub revisits | Reduced-XP | Level-gated | Never turned in | Escort/event | Group |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A_10_Darkshore | 140 | 40 | 345 | 375 | 12 | 0 | 7 | 0 | 0 | 0 |
+| A_10_Darkshore | 164 | 49 | 367 | 382 | 16 | 0 | 7 | 0 | 1 | 0 |
 | A_11_LochModan | 90 | 28 | 173 | 412 | 4 | 5 | 0 | 0 | 0 | 0 |
-| A_12_Darkshore | 82 | 19 | 474 | 566 | 8 | 0 | 0 | 0 | 6 | 3 |
-| A_13_Ashenvale | 41 | 17 | 87 | 184 | 3 | 0 | 0 | 0 | 0 | 0 |
+| A_12_Darkshore | 84 | 20 | 474 | 567 | 8 | 0 | 0 | 0 | 6 | 3 |
+| A_13_Ashenvale | 43 | 18 | 87 | 184 | 3 | 0 | 0 | 0 | 0 | 0 |
 | A_14_StonetalonMountains | 29 | 8 | 176 | 176 | 5 | 0 | 0 | 0 | 1 | 0 |
 | A_15_Darkshore | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_16_Ashenvale | 40 | 8 | 213 | 167 | 3 | 0 | 0 | 0 | 1 | 1 |
-| A_17_Wetlands | 74 | 23 | 257 | 307 | 6 | 0 | 1 | 0 | 0 | 0 |
-| A_18_Duskwood | 184 | 64 | 606 | 1044 | 26 | 7 | 0 | 0 | 1 | 9 |
-| A_19_Wetlands | 39 | 13 | 260 | 260 | 3 | 0 | 0 | 0 | 0 | 3 |
-| A_20_Ashenvale | 40 | 10 | 461 | 442 | 6 | 0 | 0 | 0 | 0 | 0 |
-| A_21_Wetlands | 21 | 4 | 10 | 60 | 1 | 0 | 0 | 0 | 0 | 0 |
-| A_22_HillsbradFoothills | 65 | 29 | 264 | 489 | 6 | 0 | 0 | 0 | 0 | 9 |
+| A_17_Wetlands | 89 | 28 | 363 | 326 | 6 | 0 | 1 | 0 | 0 | 0 |
+| A_18_Duskwood | 185 | 64 | 634 | 1046 | 26 | 6 | 0 | 0 | 1 | 9 |
+| A_19_Wetlands | 41 | 14 | 260 | 265 | 3 | 0 | 0 | 0 | 0 | 3 |
+| A_20_Ashenvale | 47 | 13 | 454 | 449 | 6 | 0 | 0 | 0 | 0 | 0 |
+| A_21_Wetlands | 25 | 6 | 10 | 63 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_22_HillsbradFoothills | 66 | 30 | 264 | 489 | 6 | 0 | 0 | 0 | 0 | 9 |
 | A_23_ArathiHighlands | 14 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | A_24_StranglethornVale | 95 | 35 | 405 | 660 | 6 | 0 | 0 | 0 | 0 | 0 |
-| A_25_ShimmeringFlats | 18 | 6 | 32 | 32 | 2 | 0 | 0 | 0 | 0 | 0 |
+| A_25_ShimmeringFlats | 19 | 7 | 32 | 32 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_26_StranglethornVale | 66 | 21 | 923 | 937 | 13 | 0 | 0 | 0 | 0 | 3 |
 | A_27_AlteracMountains | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_28_ArathiHighlands | 57 | 20 | 307 | 307 | 8 | 0 | 0 | 0 | 2 | 4 |
-| A_29_DustwallowMarsh | 54 | 16 | 246 | 243 | 5 | 0 | 0 | 0 | 1 | 0 |
-| A_30_StranglethornVale | 38 | 15 | 162 | 161 | 2 | 0 | 0 | 0 | 0 | 6 |
+| A_28_ArathiHighlands | 62 | 22 | 307 | 309 | 8 | 1 | 0 | 0 | 2 | 4 |
+| A_29_DustwallowMarsh | 58 | 18 | 242 | 248 | 5 | 1 | 0 | 0 | 1 | 0 |
+| A_30_StranglethornVale | 46 | 18 | 212 | 169 | 2 | 0 | 0 | 0 | 0 | 6 |
 | A_31_Badlands | 63 | 19 | 239 | 339 | 8 | 0 | 0 | 0 | 0 | 0 |
 | A_32_SwampofSorrows | 11 | 3 | 137 | 137 | 1 | 0 | 0 | 0 | 1 | 0 |
 | A_33_StranglethornVale | 49 | 14 | 83 | 82 | 2 | 0 | 0 | 0 | 0 | 3 |
@@ -61,9 +61,9 @@ No baseline file found.
 | A_45_BlastedLands | 34 | 7 | 64 | 64 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_46_UnGoroCrater | 42 | 14 | 490 | 490 | 8 | 0 | 0 | 0 | 3 | 0 |
 | A_47_Azshara | 17 | 2 | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 |
-| A_48_Felwood | 31 | 12 | 208 | 208 | 1 | 0 | 0 | 0 | 0 | 0 |
+| A_48_Felwood | 34 | 14 | 295 | 216 | 2 | 0 | 0 | 0 | 0 | 0 |
 | A_49_Winterspring | 31 | 11 | 93 | 93 | 1 | 0 | 0 | 0 | 0 | 0 |
-| A_50_Felwood | 22 | 5 | 157 | 102 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A_50_Felwood | 27 | 7 | 245 | 111 | 1 | 0 | 0 | 0 | 0 | 0 |
 | A_51_BurningSteppes | 70 | 26 | 244 | 369 | 7 | 0 | 0 | 0 | 4 | 29 |
 | A_52_WesternPlaguelands | 78 | 26 | 532 | 607 | 14 | 1 | 0 | 0 | 0 | 0 |
 | A_53_EasternPlaguelands | 42 | 11 | 271 | 296 | 3 | 0 | 0 | 0 | 1 | 0 |
@@ -75,32 +75,32 @@ No baseline file found.
 | A_59_Silithus | 51 | 15 | 297 | 249 | 6 | 0 | 0 | 0 | 0 | 0 |
 | A_60_EasternPlaguelands | 20 | 7 | 313 | 313 | 3 | 0 | 0 | 0 | 0 | 12 |
 | A_61_Winterspring | 29 | 11 | 201 | 201 | 6 | 0 | 0 | 0 | 0 | 0 |
-| A_DwarfGnome_DunMorogh | 133 | 46 | 376 | 407 | 18 | 0 | 2 | 0 | 0 | 0 |
-| A_Human_Elwynn | 200 | 69 | 913 | 741 | 21 | 3 | 0 | 1 | 1 | 2 |
-| A_NightElf_Teldrassil | 193 | 68 | 491 | 642 | 21 | 0 | 0 | 0 | 4 | 0 |
-| H_10_Barrens | 178 | 59 | 346 | 460 | 22 | 0 | 1 | 0 | 0 | 0 |
+| A_DwarfGnome_DunMorogh | 185 | 65 | 673 | 466 | 24 | 0 | 2 | 0 | 0 | 0 |
+| A_Human_Elwynn | 225 | 78 | 1012 | 770 | 27 | 3 | 0 | 1 | 1 | 2 |
+| A_NightElf_Teldrassil | 195 | 69 | 459 | 647 | 21 | 0 | 0 | 0 | 4 | 0 |
+| H_10_Barrens | 176 | 58 | 395 | 453 | 21 | 0 | 1 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_12_Barrens | 116 | 38 | 376 | 446 | 16 | 0 | 2 | 0 | 2 | 4 |
-| H_13_StonetalonMountains | 43 | 19 | 174 | 199 | 2 | 0 | 0 | 0 | 1 | 0 |
-| H_14_SouthernBarrens | 54 | 14 | 207 | 257 | 6 | 0 | 0 | 0 | 1 | 3 |
+| H_12_Barrens | 156 | 53 | 517 | 467 | 20 | 0 | 0 | 0 | 4 | 4 |
+| H_13_StonetalonMountains | 42 | 19 | 146 | 190 | 2 | 0 | 0 | 0 | 1 | 0 |
+| H_14_SouthernBarrens | 61 | 18 | 266 | 265 | 6 | 0 | 0 | 0 | 1 | 3 |
 | H_15_StonetalonMountains | 19 | 6 | 25 | 46 | 4 | 0 | 0 | 0 | 1 | 0 |
-| H_16_SouthernBarrens | 12 | 7 | 100 | 150 | 2 | 0 | 0 | 0 | 0 | 0 |
+| H_16_SouthernBarrens | 15 | 9 | 100 | 154 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_17_ThousandNeedles | 43 | 15 | 194 | 269 | 1 | 0 | 0 | 0 | 0 | 0 |
 | H_18_Ashenvale | 63 | 19 | 326 | 326 | 6 | 0 | 0 | 0 | 2 | 8 |
 | H_19_StonetalonMountains | 22 | 7 | 330 | 330 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_20_ThousandNeedles | 68 | 19 | 268 | 468 | 8 | 0 | 0 | 0 | 4 | 1 |
-| H_21_HillsbradFoothills | 60 | 20 | 253 | 253 | 4 | 3 | 1 | 0 | 0 | 0 |
+| H_21_HillsbradFoothills | 64 | 23 | 253 | 253 | 4 | 5 | 1 | 0 | 1 | 0 |
 | H_22_ArathiHighlands | 16 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_23_StranglethornVale | 27 | 6 | 185 | 82 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_24_ShimmeringFlats | 23 | 7 | 71 | 97 | 0 | 0 | 0 | 0 | 0 | 3 |
+| H_24_ShimmeringFlats | 42 | 14 | 76 | 119 | 0 | 3 | 0 | 0 | 0 | 3 |
 | H_25_Desolace | 53 | 14 | 312 | 312 | 8 | 0 | 0 | 0 | 1 | 0 |
-| H_26_StranglethornVale | 64 | 18 | 344 | 254 | 6 | 0 | 0 | 0 | 0 | 0 |
-| H_27_ArathiHighlands | 78 | 24 | 695 | 653 | 13 | 0 | 0 | 0 | 1 | 3 |
-| H_28_AlteracMountains | 5 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_29_ThousandNeedles | 8 | 3 | 0 | 75 | 0 | 0 | 0 | 0 | 0 | 3 |
+| H_26_StranglethornVale | 67 | 20 | 344 | 257 | 6 | 0 | 0 | 0 | 0 | 0 |
+| H_27_ArathiHighlands | 79 | 25 | 695 | 653 | 13 | 0 | 0 | 0 | 1 | 3 |
+| H_28_AlteracMountains | 10 | 4 | 0 | 4 | 0 | 2 | 0 | 0 | 0 | 0 |
+| H_29_ThousandNeedles | 13 | 6 | 9 | 81 | 1 | 1 | 0 | 0 | 0 | 3 |
 | H_30_DustwallowMarsh | 40 | 12 | 100 | 150 | 4 | 0 | 0 | 0 | 0 | 0 |
 | H_31_StranglethornVale | 50 | 14 | 417 | 314 | 8 | 0 | 0 | 0 | 0 | 0 |
-| H_32_Badlands | 46 | 11 | 132 | 132 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_32_Badlands | 52 | 13 | 132 | 137 | 4 | 0 | 0 | 0 | 0 | 0 |
 | H_33_SwampofSorrows | 24 | 7 | 248 | 248 | 3 | 1 | 0 | 0 | 1 | 0 |
 | H_34_StranglethornVale | 51 | 13 | 417 | 375 | 7 | 0 | 0 | 0 | 0 | 0 |
 | H_35_DustwallowMarsh | 20 | 6 | 12 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -119,37 +119,37 @@ No baseline file found.
 | H_48_UnGoroCrater | 65 | 22 | 840 | 840 | 16 | 0 | 0 | 0 | 4 | 1 |
 | H_49_BurningSteppes | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_50_Azshara | 12 | 4 | 112 | 112 | 1 | 0 | 0 | 0 | 0 | 0 |
-| H_51_Felwood | 42 | 12 | 222 | 222 | 3 | 1 | 0 | 0 | 2 | 0 |
+| H_51_Felwood | 45 | 14 | 242 | 224 | 4 | 1 | 0 | 0 | 2 | 0 |
 | H_52_Winterspring | 31 | 10 | 70 | 70 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H_53_Felwood | 18 | 7 | 290 | 290 | 4 | 0 | 0 | 0 | 0 | 0 |
+| H_53_Felwood | 23 | 9 | 367 | 298 | 5 | 0 | 0 | 0 | 0 | 0 |
 | H_54_WesternPlaguelands | 78 | 28 | 209 | 409 | 7 | 1 | 0 | 0 | 1 | 0 |
 | H_55_EasternPlaguelands | 69 | 21 | 572 | 597 | 10 | 0 | 0 | 0 | 1 | 12 |
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 51 | 14 | 324 | 284 | 8 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 225 | 71 | 545 | 557 | 18 | 0 | 0 | 0 | 1 | 6 |
-| H_Tauren_Mulgore | 154 | 57 | 235 | 435 | 13 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 135 | 46 | 145 | 226 | 14 | 0 | 0 | 1 | 0 | 0 |
+| H_OrcTroll_Durotar | 227 | 72 | 617 | 561 | 18 | 0 | 0 | 0 | 1 | 6 |
+| H_Tauren_Mulgore | 154 | 57 | 224 | 434 | 13 | 0 | 0 | 0 | 5 | 0 |
+| H_Undead_Tirisfal | 157 | 55 | 225 | 255 | 20 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
 | Route | Peak | At |
 |---|---|---|
-| Human/MAGE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/MAGE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/PALADIN | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/PALADIN (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/PRIEST | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/PRIEST (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/ROGUE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/ROGUE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/WARLOCK | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/WARLOCK (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/WARRIOR | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Human/WARRIOR (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Dwarf/HUNTER | 14 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Dwarf/HUNTER (Hardcore) | 14 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
-| Dwarf/PALADIN | 14 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:39] |
+| Human/WARLOCK | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/WARLOCK (Hardcore) | 16 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Gnome/WARLOCK | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Gnome/WARLOCK (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/MAGE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/MAGE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/PALADIN | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/PALADIN (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/PRIEST | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/PRIEST (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/ROGUE | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/ROGUE (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/WARRIOR | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Human/WARRIOR (Hardcore) | 15 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
+| Dwarf/HUNTER | 14 | A_22_HillsbradFoothills (Syndicate Assassins) [alliance/22_hillsbradfoothills.guide:40] |
 
 ## Errors
 
@@ -159,35 +159,27 @@ None.
 
 - Human/PALADIN: A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:33]: turn-in of a quest never accepted on this route
 - Human/PALADIN (Hardcore): A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:33]: turn-in of a quest never accepted on this route
-- Human/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- Human/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN: A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:33]: turn-in of a quest never accepted on this route
 - Dwarf/PALADIN (Hardcore): A_18_Duskwood (The Tome of Valor) [alliance/18_duskwood.guide:33]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- Dwarf/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- NightElf/WARRIOR: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/WARRIOR (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/HUNTER: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/HUNTER (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/ROGUE: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- NightElf/ROGUE (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- NightElf/PRIEST: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/PRIEST (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/DRUID: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- NightElf/DRUID (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:199]: the flight path is not learned on this route yet (no fp step before it)
-- Gnome/ROGUE: A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
-- Gnome/ROGUE (Hardcore): A_18_Duskwood (Mathias and the Defias) [alliance/18_duskwood.guide:111]: turn-in of a quest never accepted on this route
+- NightElf/WARRIOR: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/WARRIOR (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/HUNTER: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/HUNTER (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/ROGUE: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/ROGUE (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/PRIEST: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/PRIEST (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/DRUID: A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
+- NightElf/DRUID (Hardcore): A_NightElf_Teldrassil (fly Auberdine) [alliance/02_nightelf_teldrassil.guide:201]: the flight path is not learned on this route yet (no fp step before it)
 
 ## Findings (per guide)
 
-- A_10_Darkshore: level-gated pickup: Beached Sea Creature (4730) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:36, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: Cave Mushrooms (947) needs 12, model level 11.0 (quests only: 11) [alliance/10_darkshore.guide:18, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Beached Sea Creature (4730) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:36, Dwarf/ROGUE]
+- A_10_Darkshore: level-gated pickup: Cave Mushrooms (947) needs 12, model level 11.2 (quests only: 11) [alliance/10_darkshore.guide:18, Dwarf/WARRIOR]
 - A_10_Darkshore: level-gated pickup: Fruit of the Sea (1138) needs 15, model level 14.1 (quests only: 13) [alliance/10_darkshore.guide:81, Human/WARRIOR]
-- A_10_Darkshore: level-gated pickup: Onu (948) needs 12, model level 11.2 (quests only: 11) [alliance/10_darkshore.guide:22, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: The Master's Glaive (944) needs 12, model level 11.8 (quests only: 11) [alliance/10_darkshore.guide:33, Dwarf/WARRIOR]
-- A_10_Darkshore: level-gated pickup: The Twilight Camp (949) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:37, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: Onu (948) needs 12, model level 11.4 (quests only: 11) [alliance/10_darkshore.guide:22, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Master's Glaive (944) needs 12, model level 12.0 (quests only: 11) [alliance/10_darkshore.guide:33, Dwarf/WARRIOR]
+- A_10_Darkshore: level-gated pickup: The Twilight Camp (949) needs 12, model level 11.9 (quests only: 11) [alliance/10_darkshore.guide:37, Dwarf/ROGUE]
 - A_10_Darkshore: level-gated pickup: WANTED: Murkdeep! (4740) needs 15, model level 14.3 (quests only: 13) [alliance/10_darkshore.guide:90, Human/WARRIOR]
 - A_11_LochModan: reduced-XP quest: Gryth Thurden (6388, level 10) at estimated level 17.7
 - A_11_LochModan: reduced-XP quest: Honor Students (6387, level 10) at estimated level 17.2
@@ -195,13 +187,14 @@ None.
 - A_11_LochModan: reduced-XP quest: Ride to Ironforge (6391, level 10) at estimated level 17.3
 - A_11_LochModan: reduced-XP quest: Thelsamar Blood Sausages (418, level 11) at estimated level 17.2
 - A_17_Wetlands: level-gated pickup: Fall of Dun Modr (472) needs 25, model level 24.8 (quests only: 24) [alliance/17_wetlands.guide:20, Human/WARRIOR]
-- A_18_Duskwood: reduced-XP quest: Aquatic Form (5061, level 16) at estimated level 28.1
 - A_18_Duskwood: reduced-XP quest: Dusky Crab Cakes (93, level 20) at estimated level 28.3
 - A_18_Duskwood: reduced-XP quest: Eight-Legged Menaces (245, level 21) at estimated level 28.1
 - A_18_Duskwood: reduced-XP quest: Jitters' Growling Gut (5, level 20) at estimated level 28.1
 - A_18_Duskwood: reduced-XP quest: Raven Hill (163, level 20) at estimated level 28.1
 - A_18_Duskwood: reduced-XP quest: Return to Jitters (240, level 20) at estimated level 28.8
 - A_18_Duskwood: reduced-XP quest: Wolves at Our Heels (226, level 21) at estimated level 28.2
+- A_28_ArathiHighlands: reduced-XP quest: Tome of the Cabal (1804, level 30) at estimated level 37.0
+- A_29_DustwallowMarsh: reduced-XP quest: The Binding (1795, level 30) at estimated level 38.0
 - A_34_Desolace: reduced-XP quest: Assault on the Kolkar (1386, level 32) at estimated level 43.3
 - A_34_Desolace: reduced-XP quest: Bodyguard for Hire (5821, level 35) at estimated level 43.2
 - A_34_Desolace: reduced-XP quest: Brutal Politics (1385, level 35) at estimated level 43.0
@@ -225,13 +218,19 @@ None.
 - A_Human_Elwynn: reduced-XP quest: Harlan Needs a Resupply (333, level 2) at estimated level 10.6
 - A_Human_Elwynn: reduced-XP quest: Package for Thurman (334, level 2) at estimated level 10.6
 - A_Human_Elwynn: reduced-XP quest: Wine Shop Advert (332, level 2) at estimated level 10.6
-- H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.8 (quests only: 11) [horde/10_barrens.guide:57, Scourge/WARRIOR]
-- H_12_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 18.3 (quests only: 17) [horde/12_barrens.guide:88, Orc/WARLOCK]
-- H_12_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 18.2 (quests only: 17) [horde/12_barrens.guide:86, Troll/PRIEST]
-- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 29.9 (quests only: 29) [horde/21_hillsbradfoothills.guide:38, Orc/WARRIOR]
+- H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.6 (quests only: 11) [horde/10_barrens.guide:54, Scourge/WARRIOR]
+- H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 29.9 (quests only: 29) [horde/21_hillsbradfoothills.guide:42, Orc/WARRIOR]
+- H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8
+- H_21_HillsbradFoothills: reduced-XP quest: Hinott's Assistance (2480, level 20) at estimated level 29.9
 - H_21_HillsbradFoothills: reduced-XP quest: The Rescue (498, level 22) at estimated level 29.8
 - H_21_HillsbradFoothills: reduced-XP quest: WANTED: Syndicate Personnel (549, level 22) at estimated level 29.8
+- H_24_ShimmeringFlats: reduced-XP quest: Call of Water (1534, level 23) at estimated level 31.3
+- H_24_ShimmeringFlats: reduced-XP quest: Call of Water (220, level 23) at estimated level 31.3
+- H_24_ShimmeringFlats: reduced-XP quest: Call of Water (63, level 23) at estimated level 31.3
+- H_28_AlteracMountains: reduced-XP quest: Call of Water (100, level 23) at estimated level 37.0
+- H_28_AlteracMountains: reduced-XP quest: Call of Water (96, level 23) at estimated level 37.0
+- H_29_ThousandNeedles: reduced-XP quest: The Binding (1795, level 30) at estimated level 37.0
 - H_33_SwampofSorrows: reduced-XP quest: Draenethyst Crystals (1389, level 35) at estimated level 41.0
 - H_36_Desolace: reduced-XP quest: Gizelton Caravan (5943, level 38) at estimated level 44.0
 - H_51_Felwood: reduced-XP quest: Timbermaw Ally (8460, level 48) at estimated level 54.0

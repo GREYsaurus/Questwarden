@@ -71,6 +71,7 @@ accept 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll]
 complete 6284 Arachnophobia [class=Shaman; race=Orc,Tauren,Troll] | Besseleth's Fang drops from Besseleth.
 complete 1062 Goblin Invaders [class=Shaman; race=Orc,Tauren,Troll]
 accept 27 A Lesson to Learn [class=Druid; race=Tauren]
+accept 6126 Lessons Anew [class=Druid; race=Tauren] | Turak Runetotem, Elder Rise, Thunder Bluff (same NPC). Cure Poison and Aquatic Form chains.
 complete 6461 Blood Feeders [class=Shaman; race=Orc,Tauren,Troll]
 turnin 3261 Jorn Skyseer | Camp Taurajo.
 accept 882 Ishamuhale
@@ -83,9 +84,7 @@ turnin 907 Enraged Thunder Lizards
 accept 913 Cry of the Thunderhawk
 complete 913 Cry of the Thunderhawk
 turnin 913 Cry of the Thunderhawk
-accept 5642 Shadowguard [class=Priest; race=Troll] | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin 2381 Plundering the Plunderers [class=Rogue; race=Orc,Undead,Troll]
-accept 1510 News of Dogran [class=Warlock; race=Orc,Undead] | Needs level 20. If you are lower, {name} skips it and moves on.
 turnin 852 Hezrul Bloodmark
 accept 6541 Report to Kadrak
 turnin 6541 Report to Kadrak
@@ -103,6 +102,26 @@ turnin 6629 Kill Grundig Darkcloud [class=Shaman; race=Orc,Tauren,Troll; optiona
 turnin 6523 Protect Kaya [class=Shaman; race=Orc,Tauren,Troll; optional]
 accept 6401 Kaya's Alive
 turnin 27 A Lesson to Learn [class=Druid; race=Tauren] | Turned in at Moonglade.
+turnin 6126 Lessons Anew [class=Druid; race=Tauren] | Dendrite Starblaze, Nighthaven.
+accept 6127 The Principal Source [class=Druid; race=Tauren]
+accept 28 Trial of the Lake [class=Druid; race=Tauren]
+complete 28 Trial of the Lake [class=Druid; race=Tauren] | Dive in Lake Elune'ara for a Shrine Bauble (in an urn by the bubbling fissures), then use it at the Shrine of Remulos in north-western Moonglade before its timer runs out.
+turnin 28 Trial of the Lake [class=Druid; race=Tauren] | Tajarri, by the shrine.
+accept 30 Trial of the Sea Lion [class=Druid; race=Tauren]
+complete 6127 The Principal Source [class=Druid; race=Tauren] | Fill the Empty Dreadmist Peak Sampler at the pool on top of Dreadmist Peak, north of the Crossroads.
+turnin 6127 The Principal Source [class=Druid; race=Tauren] | Tonga Runetotem, Crossroads.
+accept 6128 Gathering the Cure [class=Druid; race=Tauren]
+complete 6128 Gathering the Cure [class=Druid; race=Tauren] | Earthroot is a herb; Kodo Horns drop from Lost Barrens Kodos.
+turnin 6128 Gathering the Cure [class=Druid; race=Tauren]
+accept 6129 Curing the Sick [class=Druid; race=Tauren]
+complete 6129 Curing the Sick [class=Druid; race=Tauren] | Use the Curative Animal Salve on Sickly Gazelles in the northern Barrens.
+complete 30 Trial of the Sea Lion [class=Druid; race=Tauren] | Half Pendant of Aquatic Agility: a Strange Lockbox under the water of the Sludge Fen, north-east Barrens. Half Pendant of Aquatic Endurance: a Strange Lockbox deep under the sea far from Moonglade; Moonglade's residents give the clue. Combine them at the Shrine of Remulos.
+turnin 6129 Curing the Sick [class=Druid; race=Tauren] | Teleport to Moonglade; Dendrite Starblaze.
+accept 6130 Power over Poison [class=Druid; race=Tauren]
+turnin 30 Trial of the Sea Lion [class=Druid; race=Tauren]
+accept 31 Aquatic Form [class=Druid; race=Tauren]
+turnin 6130 Power over Poison [class=Druid; race=Tauren] | Turak Runetotem, Thunder Bluff. Cure Poison.
+turnin 31 Aquatic Form [class=Druid; race=Tauren] | Aquatic Form.
 accept 1061 The Spirits of Stonetalon
 turnin 3923 Rilli Greasygob
 turnin 1061 The Spirits of Stonetalon
@@ -120,3 +139,24 @@ accept 888 Stolen Booty
 complete 888 Stolen Booty | Back to the pirate camp north of Ratchet for Tazan.
 turnin 888 Stolen Booty
 grind 20 Savannah Matriarch, Slimeshell Makrura [at=62.5,34.1] | Stonetalon Mountains starts at 20 and the quests here don't quite get you there: grind these until you reach it.
+note [class=Warlock,Shaman,Priest,Rogue] | Level 20 class quests start in Orgrimmar. Fly there from the Crossroads; the next steps are only for your class.
+travel Orgrimmar [class=Warlock,Shaman,Priest,Rogue]
+accept 1507 Devourer of Souls [class=Warlock] | Gan'rul Bloodeye, Cleft of Shadow. Needs level 20.
+turnin 1507 Devourer of Souls [class=Warlock] | Cazul, Cleft of Shadow.
+accept 1508 Blind Cazul [class=Warlock]
+turnin 1508 Blind Cazul [class=Warlock] | Zankaja, Orgrimmar.
+accept 1509 News of Dogran [class=Warlock]
+accept 1528 Call of Water [class=Shaman] | Searn Firewarder, Valley of Wisdom. Needs level 20.
+accept 5680 Shadowguard [class=Priest; race=Troll] | Ur'kyo, Valley of Spirits. Needs level 20.
+turnin 5680 Shadowguard [class=Priest; race=Troll] | Shadowguard, the troll priest spell.
+accept 5646 Devouring Plague [class=Priest; race=Undead] | Ur'kyo, Valley of Spirits. Needs level 20.
+travel Undercity [class=Priest; race=Undead] | Take the zeppelin from the tower outside Orgrimmar to Tirisfal.
+turnin 5646 Devouring Plague [class=Priest; race=Undead] | Aelthalyste, Undercity. Devouring Plague, the undead priest spell.
+travel Orgrimmar [class=Priest; race=Undead] | Zeppelin back to Durotar.
+accept 2460 The Shattered Salute [class=Rogue] | Shenthul, Cleft of Shadow. Needs level 20.
+complete 2460 The Shattered Salute [class=Rogue] | Target Shenthul and /salute him.
+turnin 2460 The Shattered Salute [class=Rogue]
+accept 2458 Deep Cover [class=Rogue]
+travel The Barrens [class=Warlock,Shaman,Priest,Rogue]
+turnin 1509 News of Dogran [class=Warlock] | Gazrog, Crossroads.
+accept 1510 News of Dogran [class=Warlock]

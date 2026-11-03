@@ -16,6 +16,9 @@ travel Felwood
 accept 8461 Deadwood of the North | Nafien.
 accept 5083 Winterfall Firewater
 accept 8470 Deadwood Ritual Totem
+accept 7601 What Niby Commands [class=Warlock; optional] | Niby the Almighty, west Felwood. Needs level 50. Starts the Inferno chain.
+turnin 7601 What Niby Commands [class=Warlock; optional] | Impsy, next to him.
+accept 7602 Flawless Fel Essence [class=Warlock; optional] | One essence each from Jaedenar Legionnaires (Felwood), Legashi satyrs (Azshara) and Felguard Sentries (Blasted Lands, by the Dark Portal). The route does not go back to Azshara or the Blasted Lands, so those two are extra trips.
 complete 8461 Deadwood of the North | Deadwood furbolgs in northern Felwood.
 turnin 8461 Deadwood of the North
 turnin 8470 Deadwood Ritual Totem

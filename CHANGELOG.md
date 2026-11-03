@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **Class quests that teach spells are now in the Classic Era and Forever guides,** at the level they open and at places the route already visits. Each step shows only for the classes and races that can take it. The list comes from the quests that reward a spell in the CMaNGOS quest data.
+  - Level 10–12: Undead warriors get Defensive Stance in Brill (Ulag the Cleaver), and dwarf and gnome warriors get it in Ironforge (Vejrek). Undead and gnome warlocks get Summon Voidwalker. Dwarf hunters get the Kharanos taming quests, and dwarf and tauren hunters get Beast Training. Paladins get Redemption (human in Stormwind and Elwynn, dwarf in Ironforge and Dun Morogh). The level-10 priest racial spells (Touch of Weakness, Hex of Weakness, Desperate Prayer for dwarves, Starshards) are in too.
+  - Level 14–20: druids get Cure Poison and Aquatic Form, and level 20 brings Summon Succubus, rogue Poisons and the priest racial spells (Devouring Plague, Shadowguard, Feedback, Fear Ward, Elune's Grace). The Horde gets a level-20 class stop in Orgrimmar for these.
+  - Level 30–50: Berserker Stance (Alliance warriors too), shaman Call of Water and Call of Air, Summon Felhunter, the level-40 Felsteed and paladin Warhorse, and an optional Inferno chain in Felwood.
+  - Removed or fixed broken class steps: Speak with Dillinger in the Mulgore and Barrens guides, Call of Water in Stonetalon without the quests before it, News of Dogran before its prerequisite, and Forged Steel before Thun'grim Firegaze.
+  - `tools/research/class_quests.py` lists the class quests no guide has.
 - **Optional steps** now say what optional means: the route works without the quest, so do it for the experience and reward, or right-click the step to skip it.
 - **Quest rewards:** the reward ranking no longer goes to chat. The green arrow or coin on the reward window still marks the pick. It is turned off once for everyone, and you can turn it back on with Quest Reward Recommendation (Item Upgrade settings).
 - **Setup wizard:** the first page has a note from the author: the routes are still being improved, thanks for trying the add-on, and please report problems and suggestions on the CurseForge page.

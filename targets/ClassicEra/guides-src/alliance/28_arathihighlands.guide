@@ -13,6 +13,11 @@
 @next A_29_DustwallowMarsh
 
 travel Arathi Highlands
+travel Ironforge [class=Warlock; race=Human,Gnome] | Fly from Refuge Pointe.
+turnin 1802 Tome of the Cabal [class=Warlock; race=Human,Gnome] | Krom Stoutarm.
+accept 1804 Tome of the Cabal [class=Warlock; race=Human,Gnome]
+complete 1804 Tome of the Cabal [class=Warlock; race=Human,Gnome] | Rods of Channeling drop from Dragonmaw Shadowwarders and Bonewarders in the Wetlands.
+travel Arathi Highlands [class=Warlock; race=Human,Gnome]
 accept 642 The Princess Trapped | The Shards of Myzrael object, south-east of Refuge Pointe.
 accept 635 Crystal in the Mountains [iffound] | Shown only if you find Pendant of Myzrael.
 turnin 635 Crystal in the Mountains [iffound]

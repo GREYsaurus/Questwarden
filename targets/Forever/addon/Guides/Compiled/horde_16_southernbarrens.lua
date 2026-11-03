@@ -19,6 +19,9 @@ ns.Guides:Register({
     {"turnin",q=893,title="Weapons of Choice",npc="Tatternack Steelforge",z=17,x=45.1,y=57.7,v=1},
     {"accept",q=884,title="Owatanka",text="Starts from the item Owatanka's Tailspike.",optional=true,starter=5102,drops={3473},v=1},
     {"turnin",q=884,title="Owatanka",npc="Jorn Skyseer",z=17,x=44.9,y=59.1,optional=true,v=1},
+    {"complete",q=2478,title="Mission: Possible But Not Probable",text="At the Venture Co. tower north of the Sludge Fen: steal Silixiz's Tower Key from Foreman Silixiz, kill two each of the drones, patrollers and lookouts, and kill Grand Foreman Puzik Gallywix.",classes={"ROGUE"},v=1},
+    {"turnin",q=2478,title="Mission: Possible But Not Probable",npc="Shenthul",z=1637,x=43,y=53.7,text="Shenthul, Cleft of Shadow, Orgrimmar.",classes={"ROGUE"},v=1},
+    {"accept",q=2479,title="Hinott's Assistance",npc="Shenthul",z=1637,x=43,y=53.7,text="Serge Hinott is in Tarren Mill; the guide gets there at 29.",classes={"ROGUE"},v=1},
     {"level",text="Thousand Needles starts at 25. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=25,v=1},
   },
 })

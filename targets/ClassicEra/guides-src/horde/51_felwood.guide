@@ -20,6 +20,9 @@ accept 5155 Forces of Jaedenar | Greta Mosshoof, Emerald Sanctuary.
 accept 5156 Verifying the Corruption | Taronn Redfeather.
 accept 4505 Well of Corruption | Winna Hazzard, Bloodvenom Post.
 accept 5202 A Strange Red Key
+accept 7601 What Niby Commands [class=Warlock; optional] | Niby the Almighty, west Felwood. Needs level 50. Starts the Inferno chain.
+turnin 7601 What Niby Commands [class=Warlock; optional] | Impsy, next to him.
+accept 7602 Flawless Fel Essence [class=Warlock; optional] | One essence each from Jaedenar Legionnaires (Felwood), Legashi satyrs (Azshara) and Felguard Sentries (Blasted Lands, by the Dark Portal). The route does not go back to Azshara or the Blasted Lands, so those two are extra trips.
 accept 6162 A Husband's Last Battle
 turnin 5202 A Strange Red Key
 note The next quest, Rescue From Jaedenar, is an escort: pick it up only when you are ready to follow the NPC.

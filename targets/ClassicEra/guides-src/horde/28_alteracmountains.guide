@@ -16,4 +16,9 @@ travel Alterac Mountains
 accept 535 Valik
 complete 535 Valik
 turnin 535 Valik
+complete 63 Call of Water [class=Shaman] | Silverpine Forest: kill the Corrupt Minor Manifestation of Water for its bracers.
+turnin 63 Call of Water [class=Shaman] | Place the bracers and the Remaining Drops of Purest Water on the Brazier of Everfount, right beside it.
+accept 100 Call of Water [class=Shaman] | From the Brazier of Everfount.
+turnin 100 Call of Water [class=Shaman] | Talk to the Minor Manifestation of Water.
+accept 96 Call of Water [class=Shaman] | Islen Waterseer is in the Barrens; the guide gets there next.
 level 37 | Thousand Needles starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.

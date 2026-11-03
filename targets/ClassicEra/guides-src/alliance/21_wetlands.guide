@@ -14,6 +14,10 @@
 
 travel Wetlands
 train
+travel Ironforge [class=Warlock; race=Human,Gnome]
+turnin 1758 Tome of the Cabal [class=Warlock; race=Human,Gnome] | Krom Stoutarm, Hall of Explorers, Ironforge.
+accept 1802 Tome of the Cabal [class=Warlock; race=Human,Gnome]
+travel Wetlands [class=Warlock; race=Human,Gnome]
 accept 304 A Grim Task | Longbraid the Grim, Dun Modr.
 complete 304 A Grim Task | Balgaras the Foul, at the Dark Iron camp east of Dun Modr.
 turnin 304 A Grim Task

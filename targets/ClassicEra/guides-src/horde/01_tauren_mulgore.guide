@@ -151,11 +151,11 @@ turnin 6087 Taming the Beast [class=Hunter]
 accept 6088 Taming the Beast [class=Hunter]
 complete 6088 Taming the Beast [class=Hunter]
 turnin 6088 Taming the Beast [class=Hunter]
+accept 6089 Training the Beast [class=Hunter]
 turnin 861 The Hunter's Way [class=Shaman; optional] | Turned in at Thunder Bluff.
 accept 860 Sergra Darkthorn [optional]
-accept 1818 Speak with Dillinger [class=Warrior; optional]
-turnin 1818 Speak with Dillinger [class=Warrior; optional] | Turned in at Tirisfal Glades.
 train | Thunder Bluff trainers.
+turnin 6089 Training the Beast [class=Hunter] | Holt Thunderhorn, Hunter Rise. Beast Training, so you can teach your pet skills.
 accept Journey to the Crossroads [race=Tauren]
 turnin 886 The Barrens Oases [class=Druid] | Turned in at The Barrens.
 level 11

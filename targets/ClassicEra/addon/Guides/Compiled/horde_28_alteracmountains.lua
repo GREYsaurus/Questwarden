@@ -12,6 +12,11 @@ ns.Guides:Register({
     {"accept",q=535,title="Valik",npc="Henchman Valik",z=36,x=57.2,y=69.5,v=1},
     {"complete",q=535,title="Valik",v=1},
     {"turnin",q=535,title="Valik",npc="Henchman Valik",z=36,x=57.2,y=69.5,v=1},
+    {"complete",q=63,title="Call of Water",text="Silverpine Forest: kill the Corrupt Minor Manifestation of Water for its bracers.",classes={"SHAMAN"},v=1},
+    {"turnin",q=63,title="Call of Water",npc="Brazier of Everfount",z=130,x=38.3,y=44.6,text="Place the bracers and the Remaining Drops of Purest Water on the Brazier of Everfount, right beside it.",classes={"SHAMAN"},v=1},
+    {"accept",q=100,title="Call of Water",npc="Brazier of Everfount",z=130,x=38.3,y=44.6,text="From the Brazier of Everfount.",classes={"SHAMAN"},v=1},
+    {"turnin",q=100,title="Call of Water",npc="Minor Manifestation of Water",text="Talk to the Minor Manifestation of Water.",classes={"SHAMAN"},v=1},
+    {"accept",q=96,title="Call of Water",npc="Minor Manifestation of Water",text="Islen Waterseer is in the Barrens; the guide gets there next.",classes={"SHAMAN"},v=1},
     {"level",text="Thousand Needles starts at 37. If you are lower, kill what is around you here (or run a dungeon) until you reach it.",level=37,v=1},
   },
 })
