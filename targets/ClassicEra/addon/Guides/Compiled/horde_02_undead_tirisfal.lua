@@ -132,8 +132,6 @@ ns.Guides:Register({
     {"turnin",q=407,title="Fields of Grief",npc="Captured Scarlet Zealot",z=85,x=62,y=51.3,v=1},
     {"turnin",q=360,title="Return to the Magistrate",npc="Magistrate Sevren",z=85,x=61.3,y=50.8,v=1},
     {"turnin",q=355,title="Speak with Sevren",npc="Magistrate Sevren",z=85,x=61.3,y=50.8,v=1},
-    {"accept",q=830,title="The Admiral's Orders",text="Starts from the item Aged Envelope.",classes={"WARRIOR","ROGUE","PRIEST","MAGE"},starter=4881,v=1},
-    {"turnin",q=830,title="The Admiral's Orders",npc="Gar'Thok",z=14,x=52,y=43.5,text="Turned in at Durotar.",classes={"WARRIOR","ROGUE","PRIEST","MAGE"},v=1},
     {"accept",q=1818,title="Speak with Dillinger",npc="Austil de Mon",z=85,x=61.8,y=52.5,text="Austil de Mon, the warrior trainer in Brill. Needs level 10.",classes={"WARRIOR"},v=1},
     {"turnin",q=1818,title="Speak with Dillinger",npc="Deathguard Dillinger",z=85,x=58.2,y=51.4,text="Deathguard Dillinger, Brill.",classes={"WARRIOR"},v=1},
     {"accept",q=1819,title="Ulag the Cleaver",npc="Deathguard Dillinger",z=85,x=58.2,y=51.4,classes={"WARRIOR"},v=1},

@@ -41,10 +41,10 @@ alliance/29_burningsteppes.guide:45: 'The True Masters' has no objective locatio
 alliance/30_westernplaguelands.guide:16: turn-in of 'The Everlook Report' (6028) with no earlier accept on this faction's routes
 alliance/30_westernplaguelands.guide:25: 'Better Late Than Never' has no objective locations in the database; add [at=x,y] or a goto
 alliance/30_westernplaguelands.guide:70: 'A Plague Upon Thee' has no objective locations in the database; add [at=x,y] or a goto
+horde/00_orc_troll_durotar.guide:132: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
+horde/00_orc_troll_durotar.guide:135: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/00_orc_troll_durotar.guide:138: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/00_orc_troll_durotar.guide:141: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/00_orc_troll_durotar.guide:144: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/00_orc_troll_durotar.guide:183: 'Hidden Enemies' has no objective locations in the database; add [at=x,y] or a goto
+horde/00_orc_troll_durotar.guide:177: 'Hidden Enemies' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:69: 'Winterhoof Cleansing' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:73: 'The Ravaged Caravan' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:85: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
@@ -57,8 +57,8 @@ horde/01_tauren_mulgore.guide:149: 'Body and Heart' has no objective locations i
 horde/01_tauren_mulgore.guide:152: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:155: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:158: 'Taming the Beast' has no objective locations in the database; add [at=x,y] or a goto
-horde/03_bloodelf_eversong.guide:227: quest 9677 requires level 12 but guide ends at 11
-horde/03_bloodelf_eversong.guide:234: quest 9678 requires level 12 but guide ends at 11
+horde/03_bloodelf_eversong.guide:225: quest 9677 requires level 12 but guide ends at 11
+horde/03_bloodelf_eversong.guide:232: quest 9678 requires level 12 but guide ends at 11
 horde/04_bloodelf_ghostlands.guide:137: 'The Traitor's Shadow' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:35: 'Escorting Erland' has no objective locations in the database; add [at=x,y] or a goto
 horde/05_silverpine.guide:39: 'Border Crossings' has no objective locations in the database; add [at=x,y] or a goto
@@ -132,7 +132,7 @@ alliance/22_stranglethorn.guide:38 (The Missing Diplomat): prerequisite 1244 'Th
 alliance/22_stranglethorn.guide:61 (Worgen in the Woods): prerequisite 222 'Worgen in the Woods' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:67 (The Missing Diplomat): prerequisite 1447 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
 alliance/22_stranglethorn.guide:134 (The Missing Diplomat): prerequisite 1249 'The Missing Diplomat' is not turned in anywhere on Alliance routes (one of several alternatives)
-horde/00_orc_troll_durotar.guide:214 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
+horde/00_orc_troll_durotar.guide:208 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/01_tauren_mulgore.guide:164 (Speak with Coleman): prerequisite 1819 'Ulag the Cleaver' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/04_bloodelf_ghostlands.guide:17 (Return to Quartermaster Lymel): prerequisite 9134 'Skymistress Gloaming' is not turned in anywhere on Horde routes (one of several alternatives)
 horde/10_barrens.guide:45 (Forged Steel): prerequisite 1502 'Thun'grim Firegaze' is not turned in anywhere on Horde routes (one of several alternatives)

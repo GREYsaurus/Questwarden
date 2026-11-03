@@ -8,11 +8,11 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5554 |
-| Quest steps (accept/complete/turn-in) | 4523 |
+| Guide steps | 5546 |
+| Quest steps (accept/complete/turn-in) | 4515 |
 | Distinct quests referenced | 1427 |
-| Steps with database-derived coordinates | 3572 |
-| Steps with hand-written coordinates (unverified) | 26 |
+| Steps with database-derived coordinates | 3568 |
+| Steps with hand-written coordinates (unverified) | 27 |
 | Race/class combinations | 46 |
 | Talent builds | 0 (0 pass validation) |
 | Validation | validate: 0 error(s), 1 warning(s) |
@@ -78,9 +78,9 @@ Each race/class combination is followed from its racial start guide through the 
 | Northshire & Elwynn Forest | Alliance | 1-12 | Elwynn Forest | 225 | 78 | 12 |
 | Coldridge Valley & Dun Morogh | Alliance | 1-12 | Dun Morogh | 185 | 65 | 3 |
 | Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 195 | 69 | 14 |
-| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 227 | 72 | 33 |
+| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 221 | 72 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 20 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 157 | 55 | 10 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 155 | 54 | 10 |
 | Darkshore (12-17) | Alliance | 12-17 | Darkshore | 164 | 49 | 48 |
 | The Barrens (12-15) | Horde | 12-15 | The Barrens | 176 | 58 | 48 |
 | Stonetalon Mountains (15-16) | Horde | 15-16 | Stonetalon Mountains | 5 | 1 | 0 |

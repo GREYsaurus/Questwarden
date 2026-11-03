@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **The Admiral's Orders step now says where the Aged Envelope comes from.** It points to Benedict's Chest in Tiragarde Keep and says to open it with the key Lieutenant Benedict drops. The step no longer appears in the Tirisfal Glades or Eversong Forest guides, because the envelope can't be found there.
 - **Class quests that teach spells are now in the Classic Era and Forever guides,** at the level they open and at places the route already visits. Each step shows only for the classes and races that can take it. The list comes from the quests that reward a spell in the CMaNGOS quest data.
   - Level 10–12: Undead warriors get Defensive Stance in Brill (Ulag the Cleaver), and dwarf and gnome warriors get it in Ironforge (Vejrek). Undead and gnome warlocks get Summon Voidwalker. Dwarf hunters get the Kharanos taming quests, and dwarf and tauren hunters get Beast Training. Paladins get Redemption (human in Stormwind and Elwynn, dwarf in Ironforge and Dun Morogh). The level-10 priest racial spells (Touch of Weakness, Hex of Weakness, Desperate Prayer for dwarves, Starshards) are in too.
   - Level 14–20: druids get Cure Poison and Aquatic Form, and level 20 brings Summon Succubus, rogue Poisons and the priest racial spells (Devouring Plague, Shadowguard, Feedback, Fear Ward, Elune's Grace). The Horde gets a level-20 class stop in Orgrimmar for these.

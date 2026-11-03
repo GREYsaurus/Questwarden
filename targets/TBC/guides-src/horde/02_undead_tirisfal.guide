@@ -129,8 +129,6 @@ accept Return to the Magistrate
 turnin 407 Fields of Grief
 turnin Return to the Magistrate
 turnin 355 Speak with Sevren
-accept 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage]
-turnin 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage] | Turned in at Durotar.
 train | Undercity trainers (west of Brill).
 accept Delivery to Silverpine Forest | Apothecary Johaan.
 fp Undercity [zone=Undercity]

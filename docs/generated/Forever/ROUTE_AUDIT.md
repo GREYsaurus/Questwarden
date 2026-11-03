@@ -127,9 +127,9 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 51 | 14 | 324 | 284 | 8 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 227 | 72 | 617 | 554 | 18 | 0 | 0 | 1 | 1 | 6 |
+| H_OrcTroll_Durotar | 221 | 72 | 635 | 573 | 18 | 0 | 0 | 1 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 197 | 410 | 10 | 0 | 5 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 157 | 55 | 225 | 239 | 20 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 155 | 54 | 227 | 207 | 20 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -153,12 +153,12 @@ No baseline file found.
 
 ## Errors
 
-- Orc/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
-- Orc/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
-- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:187]: complete step before the quest is accepted
-- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:187]: complete step before the quest is accepted
-- Troll/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
-- Troll/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:100)
+- Orc/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
+- Orc/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
+- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:181]: complete step before the quest is accepted
+- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:181]: complete step before the quest is accepted
+- Troll/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
+- Troll/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
 
 ## Warnings
 

@@ -127,9 +127,9 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 51 | 14 | 324 | 284 | 8 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 227 | 72 | 617 | 561 | 18 | 0 | 0 | 0 | 1 | 6 |
+| H_OrcTroll_Durotar | 221 | 72 | 635 | 581 | 18 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 224 | 434 | 13 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 157 | 55 | 225 | 255 | 20 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 155 | 54 | 227 | 216 | 20 | 0 | 0 | 1 | 0 | 0 |
 
 ## Peak quest log per route
 

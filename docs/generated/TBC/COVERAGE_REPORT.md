@@ -8,11 +8,11 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 62 (49 Azeroth, 13 Outland) |
-| Guide steps | 7066 |
-| Quest steps (accept/complete/turn-in) | 6292 |
+| Guide steps | 7056 |
+| Quest steps (accept/complete/turn-in) | 6282 |
 | Distinct quests referenced | 2118 |
-| Steps with database-derived coordinates | 4924 |
-| Steps with hand-written coordinates (unverified) | 24 |
+| Steps with database-derived coordinates | 4919 |
+| Steps with hand-written coordinates (unverified) | 25 |
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
@@ -85,10 +85,10 @@ Each race/class combination is followed from its racial start guide through the 
 | Coldridge Valley & Dun Morogh | Alliance | 1-11 | Dun Morogh | 150 | 52 | 3 |
 | Shadowglen & Teldrassil | Alliance | 1-11 | Teldrassil | 189 | 67 | 14 |
 | Ammen Vale & Azuremyst Isle | Alliance | 1-11 | Azuremyst Isle | 206 | 78 | 17 |
-| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 215 | 70 | 33 |
+| Valley of Trials & Durotar | Horde | 1-12 | Durotar | 209 | 70 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 162 | 60 | 24 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 132 | 45 | 3 |
-| Sunstrider Isle & Eversong Woods | Horde | 1-11 | Eversong Woods | 245 | 94 | 30 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 130 | 44 | 3 |
+| Sunstrider Isle & Eversong Woods | Horde | 1-11 | Eversong Woods | 243 | 93 | 30 |
 | Bloodmyst Isle | Alliance | 10-20 | Bloodmyst Isle | 211 | 80 | 14 |
 | Westfall | Alliance | 10-16 | Westfall | 87 | 31 | 17 |
 | Ghostlands (Tranquillien) | Horde | 10-20 | Ghostlands | 193 | 70 | 49 |

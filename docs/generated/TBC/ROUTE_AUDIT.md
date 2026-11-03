@@ -12,10 +12,10 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Order errors (prerequisite later, complete before accept, log over cap) | 0 |
 | Warnings | 88 |
 | Peak quest log (worst route) | 22 / 25 |
-| Reduced-XP pickups (6+ levels below estimate) | 50 |
-| Level-gated pickups | 145 |
+| Reduced-XP pickups (6+ levels below estimate) | 49 |
+| Level-gated pickups | 146 |
 | Accepted, never turned in | 0 |
-| Hub revisits (all guides) | 629 |
+| Hub revisits (all guides) | 630 |
 
 ## Per guide
 
@@ -61,9 +61,9 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Arathi | 54 (52) | 15 (14) | 103 (163) | 103 | 2 (3) | 0 | 0 | 0 | 0 | 0 |
 | H_Ashenvale | 66 (42) | 21 (10) | 275 (492) | 274 | 6 (13) | 0 | 0 (1) | 0 (1) | 2 | 5 (3) |
 | H_Badlands | 40 | 8 | 113 | 113 | 2 | 0 | 2 | 0 | 0 | 0 |
-| H_Barrens | 349 (117) | 120 (41) | 675 (299) | 961 | 35 (13) | 18 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
+| H_Barrens | 349 (117) | 120 (41) | 675 (299) | 961 | 35 (13) | 17 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
 | H_BladesEdge | 90 (51) | 29 (16) | 197 (245) | 197 | 4 (8) | 0 | 0 | 0 (1) | 1 | 0 |
-| H_BloodElf_Eversong | 245 (118) | 94 (41) | 446 (583) | 519 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
+| H_BloodElf_Eversong | 243 (118) | 93 (41) | 479 (583) | 507 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
 | H_BloodElf_Ghostlands | 193 (103) | 70 (35) | 416 (440) | 518 | 21 (16) | 0 | 4 (1) | 0 (1) | 1 (0) | 1 |
 | H_Desolace | 58 | 15 | 460 | 460 | 9 | 0 | 0 | 0 | 2 | 0 |
 | H_Dustwallow | 134 (90) | 45 (29) | 451 (301) | 501 | 18 (12) | 10 (0) | 0 | 0 (1) | 0 | 0 |
@@ -73,7 +73,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Hillsbrad | 69 (48) | 20 (15) | 272 (122) | 272 | 3 (1) | 0 | 5 (0) | 0 (4) | 0 | 0 |
 | H_Hinterlands | 65 (52) | 18 (14) | 163 (70) | 80 | 2 (1) | 0 | 0 | 0 (1) | 0 | 0 |
 | H_Nagrand | 136 (114) | 47 (39) | 380 (336) | 430 | 7 (9) | 0 | 1 (0) | 0 | 4 (3) | 1 |
-| H_OrcTroll_Durotar | 215 (105) | 70 (33) | 368 (371) | 448 | 12 (14) | 0 | 7 (0) | 0 (2) | 4 (0) | 0 |
+| H_OrcTroll_Durotar | 209 (105) | 70 (33) | 408 (371) | 484 | 13 (14) | 0 | 8 (0) | 0 (2) | 4 (0) | 0 |
 | H_Shadowmoon | 68 (57) | 22 (18) | 125 (89) | 125 | 5 | 0 | 0 | 0 | 1 (0) | 0 |
 | H_Silverpine | 92 (76) | 34 (28) | 323 (191) | 473 | 10 (8) | 0 | 1 (0) | 0 (1) | 1 | 2 (3) |
 | H_Stonetalon | 70 (37) | 27 (8) | 215 (222) | 293 | 14 (5) | 0 | 0 | 0 | 2 (1) | 0 |
@@ -82,7 +82,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Tauren_Mulgore | 162 (90) | 60 (30) | 249 (258) | 453 | 15 (9) | 0 | 1 | 0 (2) | 8 (3) | 0 |
 | H_Terokkar | 122 (96) | 42 (34) | 355 (351) | 430 | 11 (13) | 0 | 0 | 0 (1) | 2 (0) | 1 (2) |
 | H_ThousandNeedles | 136 (56) | 43 (16) | 146 (246) | 473 | 8 | 0 | 0 | 0 (2) | 4 (1) | 0 |
-| H_Undead_Tirisfal | 132 (97) | 45 (30) | 130 (216) | 213 | 11 (5) | 0 | 5 (0) | 0 | 0 | 0 |
+| H_Undead_Tirisfal | 130 (97) | 44 (30) | 131 (216) | 174 | 11 (5) | 0 | 5 (0) | 0 | 0 | 0 |
 | H_WesternPlaguelands | 64 (47) | 21 (14) | 31 (10) | 256 | 4 (7) | 0 | 0 | 0 | 1 | 0 |
 | H_Zangarmarsh | 112 (108) | 38 | 379 (397) | 379 | 9 (10) | 0 | 0 | 0 (3) | 1 | 0 |
 
@@ -347,7 +347,6 @@ None.
 - H_Barrens: reduced-XP quest: Samophlange (900, level 14) at estimated level 20.6
 - H_Barrens: reduced-XP quest: Samophlange (901, level 14) at estimated level 20.6
 - H_Barrens: reduced-XP quest: Stolen Booty (888, level 16) at estimated level 22.4
-- H_Barrens: reduced-XP quest: Supplies for the Crossroads (5041, level 14) at estimated level 20.0
 - H_Barrens: reduced-XP quest: The Elder Crone (1063, level 18) at estimated level 24.0
 - H_Barrens: reduced-XP quest: The Forgotten Pools (870, level 13) at estimated level 19.2
 - H_Barrens: reduced-XP quest: The Missing Shipment (892, level 14) at estimated level 20.4
@@ -356,11 +355,11 @@ None.
 - H_BloodElf_Eversong: level-gated pickup: Solanian's Belongings (8330) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:17, BloodElf/PALADIN]
 - H_BloodElf_Eversong: level-gated pickup: The Shrine of Dath'Remar (8345) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:18, BloodElf/PALADIN]
 - H_BloodElf_Eversong: level-gated pickup: Thirst Unending (8346) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:20, BloodElf/PALADIN]
-- H_BloodElf_Eversong: reduced-XP quest: A Rogue's Deal (8, level 5) at estimated level 12.2
-- H_BloodElf_Ghostlands: level-gated pickup: A Discreet Inquiry (10372) needs 16, model level 12.6 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:14, BloodElf/ROGUE]
-- H_BloodElf_Ghostlands: level-gated pickup: Greed (9491) needs 16, model level 13.6 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:72, BloodElf/ROGUE]
-- H_BloodElf_Ghostlands: level-gated pickup: Retaking Windrunner Spire (9173) needs 15, model level 12.9 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:56, BloodElf/PALADIN]
-- H_BloodElf_Ghostlands: level-gated pickup: Rogues of the Shattered Hand (10794) needs 20, model level 13.2 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:52, BloodElf/ROGUE]
+- H_BloodElf_Eversong: reduced-XP quest: A Rogue's Deal (8, level 5) at estimated level 12.1
+- H_BloodElf_Ghostlands: level-gated pickup: A Discreet Inquiry (10372) needs 16, model level 12.5 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:14, BloodElf/ROGUE]
+- H_BloodElf_Ghostlands: level-gated pickup: Greed (9491) needs 16, model level 13.5 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:72, BloodElf/ROGUE]
+- H_BloodElf_Ghostlands: level-gated pickup: Retaking Windrunner Spire (9173) needs 15, model level 12.8 (quests only: 10) [horde/04_bloodelf_ghostlands.guide:56, BloodElf/PALADIN]
+- H_BloodElf_Ghostlands: level-gated pickup: Rogues of the Shattered Hand (10794) needs 20, model level 13.1 (quests only: 11) [horde/04_bloodelf_ghostlands.guide:52, BloodElf/ROGUE]
 - H_Dustwallow: reduced-XP quest: Cleansing Witch Hill (11183, level 36) at estimated level 42.5
 - H_Dustwallow: reduced-XP quest: Inspecting the Ruins (11124, level 35) at estimated level 41.4
 - H_Dustwallow: reduced-XP quest: Jarl Needs Eyes (1206, level 35) at estimated level 42.5
@@ -379,13 +378,14 @@ None.
 - H_Hillsbrad: level-gated pickup: Prison Break In (544) needs 30, model level 27.0 (quests only: 27) [horde/13_hillsbrad.guide:25, Orc/WARRIOR]
 - H_Hillsbrad: level-gated pickup: The Hammer May Fall (676) needs 30, model level 27.0 (quests only: 27) [horde/13_hillsbrad.guide:17, Orc/WARRIOR]
 - H_Nagrand: level-gated pickup: Survey the Land (9991) needs 66, model level 65.8 (quests only: 65) [outland/h66_nagrand.guide:128, Orc/WARRIOR]
-- H_OrcTroll_Durotar: level-gated pickup: Call of Fire (2983) needs 10, model level 8.9 (quests only: 7) [horde/00_orc_troll_durotar.guide:152, Orc/SHAMAN]
-- H_OrcTroll_Durotar: level-gated pickup: Gan'rul's Summons (1506) needs 10, model level 8.5 (quests only: 7) [horde/00_orc_troll_durotar.guide:153, Orc/WARLOCK]
-- H_OrcTroll_Durotar: level-gated pickup: Hidden Enemies (5726) needs 9, model level 8.9 (quests only: 7) [horde/00_orc_troll_durotar.guide:164, Orc/WARRIOR]
-- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6062) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:137, Orc/HUNTER]
-- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6082) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:143, Orc/HUNTER]
-- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6083) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:140, Orc/HUNTER]
-- H_OrcTroll_Durotar: level-gated pickup: Training the Beast (6081) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:146, Orc/HUNTER]
+- H_OrcTroll_Durotar: level-gated pickup: Call of Fire (2983) needs 10, model level 8.9 (quests only: 7) [horde/00_orc_troll_durotar.guide:146, Orc/SHAMAN]
+- H_OrcTroll_Durotar: level-gated pickup: Gan'rul's Summons (1506) needs 10, model level 8.5 (quests only: 7) [horde/00_orc_troll_durotar.guide:147, Orc/WARLOCK]
+- H_OrcTroll_Durotar: level-gated pickup: Hidden Enemies (5726) needs 9, model level 8.9 (quests only: 7) [horde/00_orc_troll_durotar.guide:158, Orc/WARRIOR]
+- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6062) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:131, Orc/HUNTER]
+- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6082) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:137, Orc/HUNTER]
+- H_OrcTroll_Durotar: level-gated pickup: Taming the Beast (6083) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:134, Orc/HUNTER]
+- H_OrcTroll_Durotar: level-gated pickup: The Admiral's Orders (830) needs 5, model level 4.5 (quests only: 3) [horde/00_orc_troll_durotar.guide:68, Orc/WARRIOR]
+- H_OrcTroll_Durotar: level-gated pickup: Training the Beast (6081) needs 10, model level 8.2 (quests only: 6) [horde/00_orc_troll_durotar.guide:140, Orc/HUNTER]
 - H_Silverpine: level-gated pickup: Beren's Peril (516) needs 16, model level 14.3 (quests only: 13) [horde/05_silverpine.guide:96, Scourge/WARRIOR]
 - H_Stranglethorn: reduced-XP quest: Panther Mastery (190, level 31) at estimated level 38.0
 - H_Stranglethorn: reduced-XP quest: Supply and Demand (575, level 31) at estimated level 39.0

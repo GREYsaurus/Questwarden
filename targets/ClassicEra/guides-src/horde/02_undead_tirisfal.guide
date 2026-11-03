@@ -132,8 +132,6 @@ accept Return to the Magistrate
 turnin 407 Fields of Grief
 turnin Return to the Magistrate
 turnin 355 Speak with Sevren
-accept 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage]
-turnin 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage] | Turned in at Durotar.
 accept 1818 Speak with Dillinger [class=Warrior] | Austil de Mon, the warrior trainer in Brill. Needs level 10.
 turnin 1818 Speak with Dillinger [class=Warrior] | Deathguard Dillinger, Brill.
 accept 1819 Ulag the Cleaver [class=Warrior]

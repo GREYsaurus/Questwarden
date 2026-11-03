@@ -65,6 +65,7 @@ accept 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional]
 accept 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional]
 complete Thazz'ril's Pick | Burning Blade Cave, north.
 complete Vanquish the Betrayers [mark=cross:Lieutenant Benedict] | Kul Tiras Sailors and Marines at Tiragarde Keep; Lieutenant Benedict is upstairs in the keep.
+accept 830 The Admiral's Orders [at=59.3,57.7] | Lieutenant Benedict drops Benedict's Key; use it on Benedict's Chest in the keep to get the Aged Envelope, then read the envelope to start this quest.
 complete 791 Carry Your Weight [class=Warrior,Rogue; race=Orc; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete 791 Carry Your Weight [class=Warrior,Rogue,Priest,Mage; race=Troll; optional] | Canvas Scraps drops from Kolkar Drudge, Kolkar Outrunner and Kul Tiras Sailor and others.
 complete Burning Blade Medallion | Yarrog Baneshadow, deep in the cave.
@@ -78,14 +79,7 @@ turnin 3086 Glyphic Tablet [class=Mage; race=Troll]
 turnin 3088 Encrypted Parchment [class=Rogue; race=Orc]
 turnin 3083 Encrypted Tablet [class=Rogue; race=Troll]
 turnin 3090 Tainted Parchment [class=Warlock; race=Orc]
-accept 830 The Admiral's Orders [class=Warrior,Rogue; race=Orc]
-accept 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage; race=Troll]
-accept 830 The Admiral's Orders [class=Hunter,Shaman; race=Troll]
-accept 830 The Admiral's Orders [class=Hunter,Shaman,Warlock; race=Orc]
-turnin 830 The Admiral's Orders [class=Warrior,Rogue; race=Orc]
-turnin 830 The Admiral's Orders [class=Warrior,Rogue,Priest,Mage; race=Troll]
-turnin 830 The Admiral's Orders [class=Hunter,Shaman; race=Troll]
-turnin 830 The Admiral's Orders [class=Hunter,Shaman,Warlock; race=Orc]
+turnin 830 The Admiral's Orders | Gar'Thok, Razor Hill.
 accept 825 From The Wreckage....
 accept 831 The Admiral's Orders
 turnin 3085 Hallowed Tablet [class=Priest; race=Troll]
