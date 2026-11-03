@@ -89,5 +89,15 @@ do
     ns.char.knownFlights[node] = true
     text = table.concat(ns.StepText:Details(fly), "\n")
     check(not string.find(text, "run there", 1, true), "flight path known: no hint")
+    -- Your race's capital city: known from the start.
+    ns.char.knownFlights = {}
+    local savedRace = MOCK.player.race
+    MOCK.player.race = "Scourge"
+    local uc = { "fly", dest = "Undercity", node = 11, z = 85, x = 61.9, y = 65.0 }
+    check(ns.StepText.FlightUnknown(uc) == false and ns.FlightPaths:Has(11), "Undead: the Undercity flight path counts as known with no flight map seen")
+    check(ns.StepText.FlightUnknown(fly) == nil, "...other flight paths are still unknown")
+    MOCK.player.race = "Orc"
+    check(ns.FlightPaths:Capital() == 23 and not ns.FlightPaths:Has(11), "Orc: Orgrimmar, not Undercity")
+    MOCK.player.race = savedRace
     ns.char.knownFlights = savedKnown
 end

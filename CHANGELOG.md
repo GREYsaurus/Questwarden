@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Your capital city's flight path counts as known from the start** (Undercity for Undead, Orgrimmar for orcs and trolls, Thunder Bluff, Stormwind, Ironforge for dwarves and gnomes, Rut'theran Village for night elves; Silvermoon and The Exodar on TBC), so a fly step there no longer says to run, and flight plans can start or end there before you have opened a flight map.
+
 ## 0.1.0-alpha.37 (2026-11-02)
 
 - **Auction house Upgrades tab: top 4 per slot.** Each slot lists its 4 best upgrades by upgrade % (empty slots: the 4 cheapest), so a long scan no longer buries the list. Sorting by price orders those 4.

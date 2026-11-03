@@ -11,15 +11,41 @@
 -- this character (prices differ with reputation). Nodes are matched to the flight graph (Database/Flights.lua)
 -- by the client's full name ("Sentinel Hill, Westfall"). No price ships with Questwarden: a flight you have not
 -- seen on a flight map has no price, and the plan says so.
+-- Your race's capital city flight path (CAPITAL) is taken as known even before a flight map has shown it.
 
 local _, ns = ...
 
 local FP = {}
 ns.FlightPaths = FP
 
+-- Race (UnitRace file name) -> the flight node of its capital city (Database/Flights.lua ids).
+FP.CAPITAL = { Human = 2, Dwarf = 6, Gnome = 6, NightElf = 27, Draenei = 94,
+    Orc = 23, Troll = 23, Tauren = 22, Scourge = 11, BloodElf = 82 }
+
+-- The flight paths seen on a flight map (saved per character).
 function FP:Known()
     if type(ns.char.knownFlights) ~= "table" then ns.char.knownFlights = {} end
     return ns.char.knownFlights
+end
+
+-- Your race's capital city flight node, or nil.
+function FP:Capital()
+    local id = self.CAPITAL[ns.Compat.PlayerInfo().race or ""]
+    return id and ns.Flights and ns.Flights.nodes[id] and id or nil
+end
+
+-- Whether you know the flight path to `id`: seen on a flight map, or your capital's.
+function FP:Has(id)
+    return self:Known()[id] == true or (id ~= nil and id == self:Capital())
+end
+
+-- The flight paths you know, your capital's included (a new table).
+function FP:KnownWithCapital()
+    local out = {}
+    for id, v in pairs(self:Known()) do out[id] = v end
+    local cap = self:Capital()
+    if cap then out[cap] = true end
+    return out
 end
 
 function FP:Costs()
@@ -64,7 +90,7 @@ end
 -- Fewest flights from one known node to another, over known nodes only (you cannot fly through a flight path you
 -- do not know); nil when there is no such route.
 function FP:Hops(from, to)
-    local F, known = ns.Flights, self:Known()
+    local F, known = ns.Flights, self:KnownWithCapital()
     if not (F and known[from] and known[to]) then return nil end
     local dist, queue, head = { [from] = 0 }, { from }, 1
     while queue[head] do
@@ -90,7 +116,7 @@ function FP:CheapestTo(ok)
     local mapId, px, py = ns.Compat.GetPlayerMapPosition()
     local here = mapId and ns.DB.AreaForUiMap(mapId)
     if not here then return nil end
-    local known, origin, bestD = self:Known(), nil, nil
+    local known, origin, bestD = self:KnownWithCapital(), nil, nil
     for id in pairs(known) do
         local n = F.nodes[id]
         if n and n.zone == here then

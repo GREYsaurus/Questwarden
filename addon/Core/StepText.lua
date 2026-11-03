@@ -235,14 +235,14 @@ end
 
 -- Navigation target for a step: zoneAreaId, x, y, label. Uses compiled coordinates first and
 -- falls back to live database lookups for quest steps.
--- Whether a fly step's flight path is one you do not have: true or false once a flight map has shown the paths you
--- know (Core/FlightPaths.lua), nil before that.
+-- Whether a fly step's flight path is one you do not have: false for your race's capital city; otherwise true or
+-- false once a flight map has shown the paths you know (Core/FlightPaths.lua), nil before that.
 function StepText.FlightUnknown(s)
     local n = s.node and ns.Flights and ns.Flights.nodes[s.node]
     if not (n and ns.FlightPaths and ns.char) then return nil end
-    local known = ns.FlightPaths:Known()
-    if next(known) == nil then return nil end
-    return not known[s.node]
+    if ns.FlightPaths:Has(s.node) then return false end
+    if next(ns.FlightPaths:Known()) == nil then return nil end
+    return true
 end
 
 function StepText:Target(s)
