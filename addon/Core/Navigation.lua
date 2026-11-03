@@ -164,7 +164,7 @@ local function waypointPin(name, parent, size)
     pin:SetSize(size, size)
     local glow = pin:CreateTexture(nil, "BACKGROUND")
     glow:SetPoint("CENTER")
-    glow:SetSize(size * 1.9, size * 1.9)
+    glow:SetSize(size * 1.6, size * 1.6)
     glow:SetTexture("Interface\\WorldMap\\UI-QuestPoi-IconGlow")
     -- The glow texture is made for additive blending (its background is black): drawn normally it shows as a
     -- black square over the map.
@@ -230,7 +230,7 @@ function Nav:UpdateMapPin()
 end
 
 local function createPin()
-    return waypointPin(ns.name .. "MapPin", UIParent, 22)
+    return waypointPin(ns.name .. "MapPin", UIParent, 16)
 end
 
 -- Time to arrival ------------------------------------------------------------------------------
