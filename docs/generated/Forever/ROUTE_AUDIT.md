@@ -78,7 +78,7 @@ No baseline file found.
 | A_DwarfGnome_DunMorogh | 185 | 65 | 661 | 452 | 24 | 0 | 0 | 0 | 0 | 0 |
 | A_Human_Elwynn | 225 | 78 | 910 | 712 | 28 | 3 | 0 | 2 | 1 | 2 |
 | A_NightElf_Teldrassil | 195 | 69 | 459 | 647 | 21 | 0 | 0 | 0 | 4 | 0 |
-| H_10_Barrens | 176 | 58 | 394 | 446 | 21 | 0 | 0 | 0 | 0 | 0 |
+| H_10_Barrens | 174 | 57 | 394 | 427 | 21 | 0 | 0 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_12_Barrens | 156 | 53 | 517 | 465 | 20 | 0 | 0 | 2 | 4 | 4 |
 | H_13_StonetalonMountains | 42 | 19 | 146 | 189 | 2 | 0 | 0 | 0 | 1 | 0 |
@@ -129,7 +129,7 @@ No baseline file found.
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 221 | 72 | 635 | 573 | 18 | 0 | 0 | 1 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 197 | 410 | 10 | 0 | 5 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 154 | 53 | 275 | 216 | 19 | 0 | 0 | 0 | 0 | 0 |
+| H_Undead_Tirisfal | 155 | 53 | 275 | 241 | 19 | 0 | 0 | 0 | 0 | 0 |
 
 ## Peak quest log per route
 

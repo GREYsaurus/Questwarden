@@ -78,7 +78,7 @@ No baseline file found.
 | A_DwarfGnome_DunMorogh | 185 | 65 | 673 | 466 | 24 | 0 | 2 | 0 | 0 | 0 |
 | A_Human_Elwynn | 225 | 78 | 1012 | 770 | 27 | 3 | 0 | 1 | 1 | 2 |
 | A_NightElf_Teldrassil | 195 | 69 | 459 | 647 | 21 | 0 | 0 | 0 | 4 | 0 |
-| H_10_Barrens | 176 | 58 | 395 | 453 | 21 | 0 | 1 | 0 | 0 | 0 |
+| H_10_Barrens | 174 | 57 | 395 | 436 | 21 | 0 | 1 | 0 | 0 | 0 |
 | H_11_StonetalonMountains | 5 | 1 | 15 | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
 | H_12_Barrens | 156 | 53 | 517 | 467 | 20 | 0 | 0 | 0 | 4 | 4 |
 | H_13_StonetalonMountains | 42 | 19 | 146 | 190 | 2 | 0 | 0 | 0 | 1 | 0 |
@@ -129,7 +129,7 @@ No baseline file found.
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 221 | 72 | 635 | 581 | 18 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 224 | 434 | 13 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 154 | 53 | 275 | 224 | 19 | 0 | 0 | 0 | 0 | 0 |
+| H_Undead_Tirisfal | 155 | 53 | 275 | 249 | 19 | 0 | 0 | 0 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -218,7 +218,7 @@ None.
 - A_Human_Elwynn: reduced-XP quest: Harlan Needs a Resupply (333, level 2) at estimated level 10.6
 - A_Human_Elwynn: reduced-XP quest: Package for Thurman (334, level 2) at estimated level 10.6
 - A_Human_Elwynn: reduced-XP quest: Wine Shop Advert (332, level 2) at estimated level 10.6
-- H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.6 (quests only: 11) [horde/10_barrens.guide:54, Scourge/WARRIOR]
+- H_10_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 11.5 (quests only: 11) [horde/10_barrens.guide:52, Scourge/WARRIOR]
 - H_21_HillsbradFoothills: level-gated pickup: The Hammer May Fall (676) needs 30, model level 29.9 (quests only: 29) [horde/21_hillsbradfoothills.guide:42, Orc/WARRIOR]
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Pain (501, level 24) at estimated level 30.0
 - H_21_HillsbradFoothills: reduced-XP quest: Elixir of Suffering (496, level 22) at estimated level 29.8

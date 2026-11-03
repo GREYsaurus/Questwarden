@@ -161,6 +161,7 @@ ns.Guides:Register({
     {"complete",q=1471,title="The Binding",text="Use the Runes of Summoning and defeat the voidwalker that appears.",classes={"WARLOCK"},v=1},
     {"turnin",q=1471,title="The Binding",npc="Carendin Halgar",z=1497,x=85.1,y=26,text="Summon Voidwalker.",classes={"WARLOCK"},v=1},
     {"grind",z=85,x=76.8,y=59.7,text="The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.",level=11,mobs={"Bleeding Horror","Wandering Spirit","Scarlet Friar"},v=0},
-    {"travel",z=85,x=60.7,y=58.9,text="Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands outside Orgrimmar in Durotar; from there run south and west into the Barrens, to the Crossroads.",dest="Durotar",v=0},
+    {"travel",z=85,x=60.7,y=58.9,text="Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands just outside Orgrimmar in Durotar.",dest="Durotar",v=0},
+    {"fp",npc="Doras",z=1637,x=45.1,y=63.9,text="The zeppelin lands next to Orgrimmar's gate: go in and get the flight path while you are this close, then head for the Barrens.",place="Orgrimmar",node=23,v=1},
   },
 })

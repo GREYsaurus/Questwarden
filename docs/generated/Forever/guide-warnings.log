@@ -21,7 +21,7 @@ horde/01_tauren_mulgore.guide:68: 'The Ravaged Caravan' has no objective locatio
 horde/01_tauren_mulgore.guide:79: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:107: 'Rite of Vision' has no objective locations in the database; add [at=x,y] or a goto
 horde/01_tauren_mulgore.guide:111: 'Rite of Wisdom' has no objective locations in the database; add [at=x,y] or a goto
-horde/10_barrens.guide:132: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
+horde/10_barrens.guide:130: 'Samophlange' has no objective locations in the database; add [at=x,y] or a goto
 horde/17_thousandneedles.guide:43: 'Serpent Wild' has no objective locations in the database; add [at=x,y] or a goto
 horde/20_thousandneedles.guide:21: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'
 horde/20_thousandneedles.guide:25: quest 5147 is 'WANTED: Arnak Grimtotem', not 'Wanted - Arnak Grimtotem'

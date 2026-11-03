@@ -157,4 +157,5 @@ accept 1471 The Binding [class=Warlock]
 complete 1471 The Binding [class=Warlock] | Use the Runes of Summoning and defeat the voidwalker that appears.
 turnin 1471 The Binding [class=Warlock] | Summon Voidwalker.
 grind 11 Bleeding Horror, Wandering Spirit, Scarlet Friar [at=76.8,59.7] | The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.
-travel Durotar [at=60.7,58.9] | Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands outside Orgrimmar in Durotar; from there run south and west into the Barrens, to the Crossroads.
+travel Durotar [at=60.7,58.9] | Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands just outside Orgrimmar in Durotar.
+fp Orgrimmar [zone=Orgrimmar] | The zeppelin lands next to Orgrimmar's gate: go in and get the flight path while you are this close, then head for the Barrens.

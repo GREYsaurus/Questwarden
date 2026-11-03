@@ -8,10 +8,10 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 62 (49 Azeroth, 13 Outland) |
-| Guide steps | 7056 |
-| Quest steps (accept/complete/turn-in) | 6282 |
+| Guide steps | 7054 |
+| Quest steps (accept/complete/turn-in) | 6280 |
 | Distinct quests referenced | 2118 |
-| Steps with database-derived coordinates | 4919 |
+| Steps with database-derived coordinates | 4918 |
 | Steps with hand-written coordinates (unverified) | 25 |
 | Race/class combinations | 52 |
 | Talent builds | 28 (28 pass validation) |
@@ -95,7 +95,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Silverpine Forest (The Sepulcher) | Horde | 10-18 | Silverpine Forest | 92 | 34 | 2 |
 | Darkshore | Alliance | 11-20 | Darkshore | 205 | 61 | 80 |
 | Loch Modan | Alliance | 11-18 | Loch Modan | 111 | 31 | 9 |
-| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 349 | 120 | 91 |
+| The Barrens (Crossroads) | Horde | 11-22 | The Barrens | 347 | 119 | 89 |
 | Redridge Mountains | Alliance | 15-21 | Redridge Mountains | 118 | 41 | 34 |
 | Ashenvale | Alliance | 19-25 | Ashenvale | 114 | 37 | 24 |
 | Duskwood | Alliance | 20-25 | Duskwood | 191 | 65 | 65 |

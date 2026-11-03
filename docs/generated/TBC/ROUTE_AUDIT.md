@@ -61,7 +61,7 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 | H_Arathi | 54 (52) | 15 (14) | 103 (163) | 103 | 2 (3) | 0 | 0 | 0 | 0 | 0 |
 | H_Ashenvale | 66 (42) | 21 (10) | 275 (492) | 274 | 6 (13) | 0 | 0 (1) | 0 (1) | 2 | 5 (3) |
 | H_Badlands | 40 | 8 | 113 | 113 | 2 | 0 | 2 | 0 | 0 | 0 |
-| H_Barrens | 349 (117) | 120 (41) | 675 (299) | 961 | 35 (13) | 17 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
+| H_Barrens | 347 (117) | 119 (41) | 675 (299) | 943 | 35 (13) | 17 (0) | 13 (0) | 0 (7) | 3 (1) | 1 |
 | H_BladesEdge | 90 (51) | 29 (16) | 197 (245) | 197 | 4 (8) | 0 | 0 | 0 (1) | 1 | 0 |
 | H_BloodElf_Eversong | 243 (118) | 93 (41) | 479 (583) | 507 | 14 (16) | 1 (0) | 4 (0) | 0 (4) | 4 (1) | 0 |
 | H_BloodElf_Ghostlands | 193 (103) | 70 (35) | 416 (440) | 518 | 21 (16) | 0 | 4 (1) | 0 (1) | 1 (0) | 1 |
@@ -90,21 +90,21 @@ Values in brackets are the baseline (`docs/generated/TBC/route-metrics-baseline.
 
 | Route | Peak | At |
 |---|---|---|
-| BloodElf/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| BloodElf/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Orc/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Orc/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Troll/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| BloodElf/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| BloodElf/MAGE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| BloodElf/PALADIN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| BloodElf/PRIEST | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Orc/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Orc/SHAMAN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Orc/WARRIOR | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Scourge/ROGUE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Scourge/WARLOCK | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
-| Tauren/DRUID | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:219] |
+| BloodElf/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| BloodElf/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Orc/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Orc/WARLOCK | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Troll/ROGUE | 22 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| BloodElf/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| BloodElf/MAGE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| BloodElf/PALADIN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| BloodElf/PRIEST | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Orc/HUNTER | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Orc/SHAMAN | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Orc/WARRIOR | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Scourge/ROGUE | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Scourge/WARLOCK | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
+| Tauren/DRUID | 21 | H_Barrens (The Harvester) [horde/10_barrens.guide:217] |
 
 ## Errors
 
@@ -321,36 +321,36 @@ None.
 - Both_Tanaris: level-gated pickup: The Thirsty Goblin (2605) needs 44, model level 43.3 (quests only: 42) [shared/24_tanaris.guide:62, Human/WARRIOR]
 - H_Badlands: level-gated pickup: Badlands Reagent Run (2258) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:15, Orc/WARRIOR]
 - H_Badlands: level-gated pickup: Unclaimed Baggage (9439) needs 36, model level 36.0 (quests only: 35) [horde/15b_badlands.guide:17, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: Blind Cazul (1508) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:93, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: Calling in the Reserves (5881) needs 23, model level 17.8 (quests only: 16) [horde/10_barrens.guide:278, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: Deepmoss Spider Eggs (1069) needs 15, model level 13.9 (quests only: 13) [horde/10_barrens.guide:147, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: Devourer of Souls (1507) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:91, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 12.0 (quests only: 11) [horde/10_barrens.guide:52, Orc/HUNTER]
-- H_Barrens: level-gated pickup: News of Dogran (1509) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:105, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 12.6 (quests only: 12) [horde/10_barrens.guide:119, Orc/WARLOCK]
-- H_Barrens: level-gated pickup: Plundering the Plunderers (2381) needs 16, model level 14.5 (quests only: 13) [horde/10_barrens.guide:164, Orc/ROGUE]
-- H_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 19.2 (quests only: 17) [horde/10_barrens.guide:321, Troll/PRIEST]
-- H_Barrens: level-gated pickup: The Ashenvale Hunt (742) needs 20, model level 12.4 (quests only: 11) [horde/10_barrens.guide:81, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: The Sacred Flame (1195) needs 20, model level 12.4 (quests only: 11) [horde/10_barrens.guide:90, Orc/WARRIOR]
-- H_Barrens: level-gated pickup: Wrenix of Ratchet (2382) needs 16, model level 12.3 (quests only: 11) [horde/10_barrens.guide:103, Orc/ROGUE]
-- H_Barrens: level-gated pickup: Zando'zan (2379) needs 16, model level 12.3 (quests only: 11) [horde/10_barrens.guide:101, Orc/ROGUE]
-- H_Barrens: reduced-XP quest: A Sacred Burial (833, level 10) at estimated level 17.3
-- H_Barrens: reduced-XP quest: Apothecary Zamah (853, level 15) at estimated level 21.2
-- H_Barrens: reduced-XP quest: Disrupt the Attacks (871, level 12) at estimated level 19.2
-- H_Barrens: reduced-XP quest: Forged Steel (1503, level 10) at estimated level 17.3
-- H_Barrens: reduced-XP quest: Kaya's Alive (6401, level 18) at estimated level 24.0
-- H_Barrens: reduced-XP quest: Kyle's Gone Missing! (11129, level 7) at estimated level 17.6
-- H_Barrens: reduced-XP quest: Plainstrider Menace (844, level 12) at estimated level 19.2
-- H_Barrens: reduced-XP quest: Preparation for Ceremony (744, level 11) at estimated level 17.1
-- H_Barrens: reduced-XP quest: Raptor Thieves (869, level 13) at estimated level 19.2
+- H_Barrens: level-gated pickup: Blind Cazul (1508) needs 20, model level 12.2 (quests only: 11) [horde/10_barrens.guide:91, Orc/WARLOCK]
+- H_Barrens: level-gated pickup: Calling in the Reserves (5881) needs 23, model level 17.8 (quests only: 15) [horde/10_barrens.guide:276, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: Deepmoss Spider Eggs (1069) needs 15, model level 13.8 (quests only: 12) [horde/10_barrens.guide:145, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: Devourer of Souls (1507) needs 20, model level 12.2 (quests only: 11) [horde/10_barrens.guide:89, Orc/WARLOCK]
+- H_Barrens: level-gated pickup: Harpy Raiders (867) needs 12, model level 12.0 (quests only: 11) [horde/10_barrens.guide:50, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: News of Dogran (1509) needs 20, model level 12.2 (quests only: 11) [horde/10_barrens.guide:103, Orc/WARLOCK]
+- H_Barrens: level-gated pickup: News of Dogran (1510) needs 20, model level 12.5 (quests only: 12) [horde/10_barrens.guide:117, Orc/WARLOCK]
+- H_Barrens: level-gated pickup: Plundering the Plunderers (2381) needs 16, model level 14.4 (quests only: 13) [horde/10_barrens.guide:162, Orc/ROGUE]
+- H_Barrens: level-gated pickup: Shadowguard (5642) needs 20, model level 19.1 (quests only: 17) [horde/10_barrens.guide:319, Troll/PRIEST]
+- H_Barrens: level-gated pickup: The Ashenvale Hunt (742) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:79, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: The Sacred Flame (1195) needs 20, model level 12.3 (quests only: 11) [horde/10_barrens.guide:88, Orc/WARRIOR]
+- H_Barrens: level-gated pickup: Wrenix of Ratchet (2382) needs 16, model level 12.2 (quests only: 11) [horde/10_barrens.guide:101, Orc/ROGUE]
+- H_Barrens: level-gated pickup: Zando'zan (2379) needs 16, model level 12.2 (quests only: 11) [horde/10_barrens.guide:99, Orc/ROGUE]
+- H_Barrens: reduced-XP quest: A Sacred Burial (833, level 10) at estimated level 17.2
+- H_Barrens: reduced-XP quest: Apothecary Zamah (853, level 15) at estimated level 21.1
+- H_Barrens: reduced-XP quest: Disrupt the Attacks (871, level 12) at estimated level 19.1
+- H_Barrens: reduced-XP quest: Forged Steel (1503, level 10) at estimated level 17.2
+- H_Barrens: reduced-XP quest: Kaya's Alive (6401, level 18) at estimated level 24.2
+- H_Barrens: reduced-XP quest: Kyle's Gone Missing! (11129, level 7) at estimated level 17.5
+- H_Barrens: reduced-XP quest: Plainstrider Menace (844, level 12) at estimated level 19.1
+- H_Barrens: reduced-XP quest: Preparation for Ceremony (744, level 11) at estimated level 17.0
+- H_Barrens: reduced-XP quest: Raptor Thieves (869, level 13) at estimated level 19.1
 - H_Barrens: reduced-XP quest: Samophlange (894, level 14) at estimated level 20.4
 - H_Barrens: reduced-XP quest: Samophlange (900, level 14) at estimated level 20.6
 - H_Barrens: reduced-XP quest: Samophlange (901, level 14) at estimated level 20.6
 - H_Barrens: reduced-XP quest: Stolen Booty (888, level 16) at estimated level 22.4
-- H_Barrens: reduced-XP quest: The Elder Crone (1063, level 18) at estimated level 24.0
-- H_Barrens: reduced-XP quest: The Forgotten Pools (870, level 13) at estimated level 19.2
+- H_Barrens: reduced-XP quest: The Elder Crone (1063, level 18) at estimated level 24.2
+- H_Barrens: reduced-XP quest: The Forgotten Pools (870, level 13) at estimated level 19.1
 - H_Barrens: reduced-XP quest: The Missing Shipment (892, level 14) at estimated level 20.4
-- H_Barrens: reduced-XP quest: The Zhevra (845, level 13) at estimated level 19.6
+- H_Barrens: reduced-XP quest: The Zhevra (845, level 13) at estimated level 19.5
 - H_BloodElf_Eversong: level-gated pickup: A Fistful of Slivers (8336) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:19, BloodElf/PALADIN]
 - H_BloodElf_Eversong: level-gated pickup: Solanian's Belongings (8330) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:17, BloodElf/PALADIN]
 - H_BloodElf_Eversong: level-gated pickup: The Shrine of Dath'Remar (8345) needs 2, model level 1.0 (quests only: 1) [horde/03_bloodelf_eversong.guide:18, BloodElf/PALADIN]
