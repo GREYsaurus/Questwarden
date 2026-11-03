@@ -14,8 +14,6 @@
 
 travel The Barrens
 train
-accept 770 The Demon Scarred Cloak [race=Orc,Undead,Troll; optional]
-turnin 770 The Demon Scarred Cloak [race=Orc,Undead,Troll; optional] | Turned in at Mulgore.
 accept 861 The Hunter's Way [class=Shaman; race=Orc,Troll; optional]
 accept 2984 Call of Fire [class=Shaman; race=Orc,Troll]
 accept 1505 Veteran Uzzek [class=Warrior; race=Tauren]

@@ -175,7 +175,7 @@ local midSV = newCharacter("Mid", "Orc", "WARRIOR", "Horde", 22)
 local g = ns.Guides:Get(S:RecommendedGuide())
 check(g ~= nil, "a level-22 character gets a recommended guide (" .. tostring(g and g.id) .. ")")
 local firstQ
-for _, s in ipairs(g.steps) do if s[1] == "accept" and s.q then firstQ = s.q break end end
+for _, s in ipairs(g.steps) do if s[1] == "accept" and s.q and not s.classes and not s.races then firstQ = s.q break end end
 MOCK.completed[firstQ] = true
 T:Scan()
 d = S:Draft()
