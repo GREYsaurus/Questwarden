@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Optional guide quests are accepted automatically,** like the other quests on the route. Before, they were left for you to accept by hand without saying why (for example Speak with Coleman from Deathguard Dillinger in Brill). Saved settings are switched on once; to skip an optional quest, right-click its step, or turn off *...including optional guide quests* in the automation settings.
 - **Steps no longer say "unverified".** Steps with hand-placed coordinates, such as Ulag the Cleaver at the Brill crypt, showed it in orange under the step text. It only meant the spot came from the guide rather than the quest database, so the label is gone from the game; the audit tools still track it.
 - **Setup wizard:** the author's note now opens with a warning, in the warning colour, that the routes are not perfect and are constantly being improved.
 

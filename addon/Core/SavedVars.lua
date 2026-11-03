@@ -38,7 +38,7 @@ local profileDefaults = {
         -- Automation (docs/AUTOMATION.md). Quest automation only ever touches quests that have an
         -- open step in the active guide; escort quests and reward choices are always manual.
         autoAccept = true,          -- accept guide quests when their offer panel opens
-        autoAcceptOptional = false, -- ...including steps marked [optional]
+        autoAcceptOptional = true,  -- ...including steps marked [optional]
         autoAcceptGroup = false,    -- ...including [elite]/[group]/[dungeon] steps
         autoTurnIn = true,          -- turn in guide quests that need no reward choice
         turnInUnrelated = false,    -- also turn in completed quests that are not in the guide
@@ -314,6 +314,11 @@ function ns:InitSavedVariables()
     if not mig.rewardChat35 then
         mig.rewardChat35 = true
         for _, p in pairs(profiles) do p.gearQuestRewards = false end
+    end
+    -- 0.1.0-alpha.36: optional guide quests are accepted automatically by default (right-click the step to skip one); turn it on once.
+    if not mig.autoAcceptOptional36 then
+        mig.autoAcceptOptional36 = true
+        for _, p in pairs(profiles) do p.autoAcceptOptional = true end
     end
     -- Active profile for this character.
     local key = ns.CharKey()

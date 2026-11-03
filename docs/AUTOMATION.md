@@ -9,7 +9,7 @@ Added in 0.2.0. Settings live under **Interface > AddOns > Questwarden > Automat
 | Setting (`/qw set ...`) | Default | What it does |
 |---|---|---|
 | `autoAccept` | **on** | Accept quests that have an open accept step in the **active guide** |
-| `autoAcceptOptional` | off | ...also guide steps marked `[optional]` |
+| `autoAcceptOptional` | on | ...also guide steps marked `[optional]` |
 | `autoAcceptGroup` | off | ...also `[elite]`, `[group]` and `[dungeon]` steps |
 | `autoTurnIn` | **on** | Turn in guide quests that need no reward choice |
 | `turnInUnrelated` | off | Also turn in completed quests that are not in the guide (repeatable quests are never included) |

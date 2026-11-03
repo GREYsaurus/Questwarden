@@ -218,6 +218,13 @@ check(ns.db.profile.gearQuestRewards == true and ns.db.profile.rewardMarkers == 
 ns.db.profile.gearQuestRewards = false
 ns:InitSavedVariables()
 check(ns.db.profile.gearQuestRewards == false, "turning it off afterwards sticks")
+ns.db.profile.autoAcceptOptional, mig.autoAcceptOptional36 = false, nil
+ns:InitSavedVariables()
+check(ns.db.profile.autoAcceptOptional == true and mig.autoAcceptOptional36, "alpha.36 turns automatic acceptance of optional quests on once")
+ns.db.profile.autoAcceptOptional = false
+ns:InitSavedVariables()
+check(ns.db.profile.autoAcceptOptional == false, "turning optional acceptance off afterwards sticks")
+ns.db.profile.autoAcceptOptional = true
 ns.db.profile.gearQuestRewards, mig.rewardChat35 = true, nil
 ns:InitSavedVariables()
 check(ns.db.profile.gearQuestRewards == false and mig.rewardChat35, "alpha.35 turns the reward ranking in chat off once")

@@ -227,7 +227,7 @@ ns.Tracker.turnedIn = {}
 ns.Tracker:Scan()
 MOCK.tick(0.5)
 
-check(prof.autoAccept == true and prof.autoTurnIn == true, "quest automation on by default (guide quests only)")
+check(prof.autoAccept == true and prof.autoTurnIn == true and prof.autoAcceptOptional == true, "quest automation on by default (guide quests only, optional ones included)")
 
 -- A normal (non-escort) quest the guide still wants to accept.
 local guideQ
@@ -317,7 +317,19 @@ QA.acceptOpen[309] = nil
 resetCalls()
 MOCK.fire("QUEST_ACCEPT_CONFIRM", "Player", "Protecting the Shipment")
 check(#MOCK.calls == 0, "party escort confirmation left to the player")
-prof.autoAcceptOptional, prof.autoAcceptGroup = false, false
+prof.autoAcceptOptional, prof.autoAcceptGroup = true, false
+
+-- Optional guide quests: accepted by default, left alone with the setting off.
+local savedStep = QA.acceptOpen[guideQ2]
+QA.acceptOpen[guideQ2] = { "accept", q = guideQ2, optional = true }
+prof.autoAcceptOptional, QA.attempts = false, {}
+resetCalls()
+offer(guideQ2)
+check(not called("accept:" .. guideQ2), "optional quest left alone with the setting off")
+prof.autoAcceptOptional, QA.attempts = true, {}
+offer(guideQ2)
+check(called("accept:" .. guideQ2), "optional quest accepted with the setting on")
+QA.acceptOpen[guideQ2], QA.attempts, QA.pending = savedStep, {}, {}
 
 -- Shift, player shares, disabled setting, full log.
 QA.attempts = {}
