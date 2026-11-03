@@ -91,7 +91,7 @@ If a name is ambiguous (e.g. the three "Rite of Vision" quests), the compiler st
 
 ### Flags
 
-`[optional]`, `[elite]`, `[group]` or `[group=3]`, `[dungeon=Shadowfang Keep]`, `[class=Warrior,Paladin]`, `[race=Human]`, `[faction=Horde]` (in a `Both` guide: the step is for that faction only, and quest names resolve as in that faction's guides), `[zone=Orgrimmar]`, `[at=x,y]` (explicit coordinates; marked unverified), `[obj=2]`, `[unverified]`, `[mark=skull]` / `[mark=cross:Lieutenant Benedict]` / `[mark=star:1234]` (raid marker; see docs/RAID_MARKERS.md). Separate several flags with `;` inside one bracket: `[elite; group=3; optional]`.
+`[optional]`, `[elite]`, `[group]` or `[group=3]`, `[dungeon=Shadowfang Keep]`, `[class=Warrior,Paladin]`, `[race=Human]`, `[faction=Horde]` (in a `Both` guide: the step is for that faction only, and quest names resolve as in that faction's guides), `[zone=Orgrimmar]`, `[at=x,y]` (explicit coordinates; compiled as `v=0` for the audits, not shown in game), `[obj=2]`, `[unverified]`, `[mark=skull]` / `[mark=cross:Lieutenant Benedict]` / `[mark=star:1234]` (raid marker; see docs/RAID_MARKERS.md). Separate several flags with `;` inside one bracket: `[elite; group=3; optional]`.
 
 `[iffound]` (accept, complete and turnin steps of a quest that starts from an item): the steps stay hidden, and out of the progress count and the route audit's model, until the item is in your bags or the quest is in your log. Use it for items many kinds of mob drop, which a guide can't send you to farm (docs/ITEM_STARTS.md).
 

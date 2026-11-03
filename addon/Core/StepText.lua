@@ -169,7 +169,6 @@ function StepText:Details(s)
     if s.elite then tags[#tags + 1] = "Elite" end
     if s.group then tags[#tags + 1] = "Group quest" .. (type(s.group) == "number" and (" (" .. s.group .. ")") or "") end
     if s.dungeon then tags[#tags + 1] = "Dungeon: " .. tostring(s.dungeon) end
-    if s.v == 0 then tags[#tags + 1] = "unverified" end
     if #tags > 0 then lines[#lines + 1] = string.format(WARN, table.concat(tags, " - ")) end
     if s.optional then
         lines[#lines + 1] = string.format(WARN, "Optional: the route works without this quest. Do it for the extra experience and reward, or right-click the step to skip it.")
