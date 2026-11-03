@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.36 (2026-11-02)
 
 - **Supply reminders** (on; Settings → Supply Reminders): on a town step, when your bags are low and a vendor there sells it, the step says to stock up and who sells it: food (under 10), drinks for classes with mana (under 10), and arrows or bullets for hunters (under 400, by the ranged weapon). Warlocks from level 10 are reminded when they carry fewer than 3 Soul Shards. From level 5. The vendors and their goods come from the CMaNGOS vendor lists; `tools/research/supply_data.py` builds `Database/Supplies.lua`.
 - **Weapon skill tips** (on; Settings → Weapon Skill Tips): passing a weapon master who teaches weapon types your class can learn and you haven't, a tip says which ones and what they cost (once per weapon master). When a weapon you can't equip yet lands in your bags, a tip names the weapon masters who teach that type (once per weapon type).
@@ -8,6 +8,8 @@
 - **Optional guide quests are accepted automatically,** like the other quests on the route. Before, they were left for you to accept by hand without saying why (for example Speak with Coleman from Deathguard Dillinger in Brill). Saved settings are switched on once; to skip an optional quest, right-click its step, or turn off *...including optional guide quests* in the automation settings.
 - **Steps no longer say "unverified".** Steps with hand-placed coordinates, such as Ulag the Cleaver at the Brill crypt, showed it in orange under the step text. It only meant the spot came from the guide rather than the quest database, so the label is gone from the game; the audit tools still track it.
 - **Setup wizard:** the author's note now opens with a warning, in the warning colour, that the routes are not perfect and are constantly being improved.
+
+**Tested:** offline only (TBC suite 5,758/5,758, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
 
 ## 0.1.0-alpha.35 (2026-11-02)
 
