@@ -8,7 +8,7 @@ It's built to also target **World of Warcraft: Forever** once that game is live 
 
 Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It forks TBCGuide's engine, interface, compatibility layer, tests and build tools, and ships TBCGuide's TBC data and 1-70 routes. The Classic Era data and routes are its own.
 
-> **Status: alpha (0.1.0-alpha.36).** Routes and data are built and checked offline:
+> **Status: alpha (0.1.0-alpha.37).** Routes and data are built and checked offline:
 > - Classic Era 1-60 routes for all 40 race/class combinations (Speed and Hardcore), and TBC 1-70 routes;
 > - the route audit walks every route, and the engine tests and smoke tests pass.
 >

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.37 (2026-11-02)
 
 - **Auction house Upgrades tab: top 4 per slot.** Each slot lists its 4 best upgrades by upgrade % (empty slots: the 4 cheapest), so a long scan no longer buries the list. Sorting by price orders those 4.
 - **Fly steps when you don't have the flight path:** the step says to run there instead, and the step completes when you arrive. Once a flight map has shown which flight paths you know, a missing one is named and the arrow points to the destination.
