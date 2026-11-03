@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha.35 (2026-11-02)
 
 - **The Admiral's Orders step now says where the Aged Envelope comes from.** It points to Benedict's Chest in Tiragarde Keep and says to open it with the key Lieutenant Benedict drops. The step no longer appears in the Tirisfal Glades or Eversong Forest guides, because the envelope can't be found there.
 - **Class quests that teach spells are now in the Classic Era and Forever guides,** at the level they open and at places the route already visits. Each step shows only for the classes and races that can take it. The list comes from the quests that reward a spell in the CMaNGOS quest data.
@@ -19,6 +19,8 @@
 - **Talent window:** the next talent to take is easier to spot. It has a larger gold glow that pulses while you have a point to spend, and the bottom tab of its tree is highlighted with a "1". Each suggested talent shows the levels at which to put its points, with levels you have already reached shown as "now". The panel and tooltips also no longer name a level you have passed.
 - **Fixed:** automatic raid markers could stop for the rest of a kill step. A mark was checked 0.4 seconds after it was set, so a slow server or a mob killed in that moment counted as a failure, and two failures paused marking without a word. The icon now gets a second look, a dead mob is no failure, and when marking does pause, chat says why.
 - **Fixed:** the waypoint diamond on the world map was drawn away from the waypoint (further right and down the more the map was zoomed out), so it did not match the minimap pin and the arrow. Its position now ignores its own size scaling.
+
+**Tested:** offline only (TBC suite 5,702/5,702, Classic Era smoke 93/93, Forever 34/34, route audits 0 errors; Forever's 6 known data errors are reported only). Not checked in the live game.
 
 ## 0.1.0-alpha.34 (2026-11-01)
 
