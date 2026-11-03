@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Travel steps show the way to the next zone.** A step such as *Travel to The Barrens* now works out a route from the zone you are in: which zones to run through, which zeppelin or boat to take and from where, and flights you already have. The arrow points to the first stop (a zeppelin tower, a dock, a flight master) or, on foot, to where the guide picks up in the new zone. It names flight paths of your faction you don't have yet that you pass right by, such as Orgrimmar's next to the zeppelin tower. Zeppelin and boat stops come from the game client's transport paths; which zones border each other is a hand-written list. The guide's own directions still win where a step has them (the Deeprun Tram, for example, isn't in the data).
 - **Undead route:** after the zeppelin to Durotar, a step to pick up the Orgrimmar flight path next to where it lands.
 - **Fixed (Barrens 12-15):** removed *The Demon Scarred Cloak* for orcs, trolls and Undead. Its item drops from Ghost Howl in Mulgore, which this route doesn't visit.
 - **Your capital city's flight path counts as known from the start** (Undercity for Undead, Orgrimmar for orcs and trolls, Thunder Bluff, Stormwind, Ironforge for dwarves and gnomes, Rut'theran Village for night elves; Silvermoon and The Exodar on TBC), so a fly step there no longer says to run, and flight plans can start or end there before you have opened a flight map.

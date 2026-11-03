@@ -75,6 +75,7 @@ If quests changed upstream, the guide compiler reports any guide step whose ques
 | `Classes/TrainingData.lua` | client DB2 `SkillLine`, `SkillRaceClassInfo`, `SkillLineAbility`, `SpellLevels`, `Spell`, `SpellName`, `Talent` | `TrainingTables.cs` (rules: docs/TRAINER.md) |
 | `Database/RaceClass.lua` | client DB2 `CharBaseInfo`, `ChrRaces` | `ClientTables.cs` |
 | `Database/Flights.lua` | client DB2 `TaxiNodes`, `TaxiPath`, `UiMapAssignment` + bundled `Npcs.lua`, `Zones.lua` | `FlightTables.cs` |
+| `Database/Travel.lua` | client DB2 `TaxiNodes`, `TaxiPath`, `TaxiPathNode` (zeppelin and boat stops) + the target's `ZoneGeo.lua`, `Flights.lua`, bundled `Npcs.lua` and `Zones.lua` (which zone a stop is in, its name); zone borders hand-written in `tools/research/zone_borders.json` | `tools/research/travel_data.py <Target>` |
 | `Guides/Compiled/*.lua` | `guides-src/*.guide` + the files above | `GuideCompiler.cs` |
 | `Classes/WhatsTrainingData.lua` | What's Training? `Classes/Vanilla` or `Classes/TBC` at commit `26caff2` (`tools/upstream.json` `whatstraining`), MIT | `tools/research/whatstraining_import.py <Target> <checkout> <commit>`; also writes `docs/generated/<Target>/whatstraining-crosscheck.md` |
 | `Database/QuestTimers.lua` | CMaNGOS `quest_template.LimitTime`: classic-db commit `603ece1` (Classic Era, Forever), tbc-db commit `1c54acd` (TBC) (`tools/upstream.json` `cmangos`), GPL-3.0 | `tools/research/quest_timers.py <Target> <Full_DB .sql.gz> <repository> <commit>` |

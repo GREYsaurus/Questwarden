@@ -36,6 +36,7 @@ Database\Questie\Patrols.lua
 Database\RaceClass.lua
 Database\Flights.lua
 Database\ZoneGeo.lua
+Database\Travel.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
 Database\QuestTimers.lua
@@ -103,6 +104,7 @@ Core\Group.lua
 Core\FlightTimer.lua
 Core\QuestTimer.lua
 Core\FlightPaths.lua
+Core\Travel.lua
 Core\PlayTogether.lua
 Core\NewPlayer.lua
 Core\MountGoal.lua

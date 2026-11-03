@@ -139,6 +139,17 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(DIM, "No flight path to " .. (s.dest or "?") .. " yet? Run there instead; the step completes when you arrive.")
         end
     end
+    -- A travel step without a position of its own: the way there from where you are (Core/Travel.lua).
+    if s[1] == "travel" and ns.Travel then
+        local r = ns.Travel:Route(s)
+        if r then
+            for _, l in ipairs(r.lines) do lines[#lines + 1] = string.format(DIM, l) end
+            if #r.flightPaths > 0 then
+                lines[#lines + 1] = string.format(WARN, "On the way, get the " .. table.concat(r.flightPaths, " and ")
+                    .. " flight path" .. (#r.flightPaths > 1 and "s" or "") .. ": you pass right by.")
+            end
+        end
+    end
     -- A quest given or taken by an object (a wanted poster, a grave, a book), not an NPC.
     local giver = StepText.ObjectGiverLine(s)
     if giver then lines[#lines + 1] = giver end
@@ -262,6 +273,11 @@ function StepText:Target(s)
     if s[1] == "fly" and StepText.FlightUnknown(s) == true then
         local n = ns.Flights.nodes[s.node]
         return n.zone, n.x, n.y, n.name
+    end
+    -- A travel step without a position: the first place on the way there (Core/Travel.lua).
+    if s[1] == "travel" and not s.x and ns.Travel then
+        local r = ns.Travel:Route(s)
+        if r then return r.target[1], r.target[2], r.target[3], r.target[4] end
     end
     if s.x and s.y and s.z then
         if s[1] == "grind" then return s.z, s.x, s.y, s.location or (s.mobs and s.mobs[1]) end
