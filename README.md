@@ -32,6 +32,9 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
   - **Speed** (the default).
   - **Hardcore/Survival:** avoids dangerous mobs and risky pulls, adds warnings, and never relies on a soulstone or Reincarnation.
 - **Speed routes tuned against an XP model** ([docs/ROUTE_OPTIMIZATION.md](docs/ROUTE_OPTIMIZATION.md)). Quests and quest chains are added where the model is short of the next zone's level. Where questing still falls short, a **grind step** sends you to the densest group of non-elite mobs near your level, near where you already are. The step stops at the level you need, or part of one ("until level 16 (20% through)") when the quests left in the zone will cover the rest.
+- **Class quests** that teach spells, such as Defensive Stance, the warlock pets, the druid's Aquatic Form and the shaman totems, are in the Classic Era routes at the level they open. Each shows only for the classes and races that can take it.
+- **Easier quests first:** quests whose targets are well above your level at that point come after easier ones.
+- **Quests from objects:** when a quest starts or ends at a wanted poster, a notice board or a grave instead of an NPC, the step says so and what to click.
 - **Quests started by dropped items** ([docs/ITEM_STARTS.md](docs/ITEM_STARTS.md)):
   - The step knows which item starts the quest and which mobs drop it.
   - It lets the guide's kill steps for those mobs go first, since the item may drop there.
@@ -46,8 +49,9 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
   - When a quest sends you into one, the step tells you to find a group and the arrow leads to the entrance. The step moves on when you enter.
   - Skip a run to keep questing; nothing is marked complete.
   - If you die inside, the arrow leads back to the entrance.
-- **Objectives before far turn-ins:** you finish the quests in one place before travelling back to turn them in. Reordered steps keep your saved progress.
-- **Hearthstone suggestions** ([docs/HEARTHSTONE.md](docs/HEARTHSTONE.md)): when hearthing to turn-ins in town beats walking, the step says so and how much time it saves. It never uses the hearthstone for you.
+- **Quests in one place are done together:** you finish the quests in one place before travelling back to turn them in. Reordered steps keep your saved progress.
+- **Hearthstone suggestions** ([docs/HEARTHSTONE.md](docs/HEARTHSTONE.md)): when hearthing to turn-ins in town beats walking, the step says so and how much time it saves. It never uses the hearthstone for you. The guides tell you where to set your hearthstone, at the towns they come back to.
+- **Death skip suggestions:** when the graveyard is much nearer your next step in town, the step suggests a quicker way back by dying and taking the spirit healer's resurrection. Never on Hardcore characters.
 - **Every step can be completed or skipped by hand**, so you never get stuck. Steps also complete on their own from the quest log, quest flags, your level, the hearthstone and flight paths.
 - **Bundled quest database** taken from QuestieDB, so you don't need Questie.
 
@@ -55,7 +59,7 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
 
 See [docs/NEW_PLAYERS.md](docs/NEW_PLAYERS.md). All off by default; the setup wizard offers them.
 
-- **Explanations:** the first time each kind of step comes up (pick up, kill, turn in, fly, train...), one chat line says what to do and which key opens what. Also full bags, your first death and talent points.
+- **Explanations:** the first time each kind of step comes up (pick up, kill, turn in, fly, train...), a small window you close with OK says what to do and which key opens what. Also full bags, your first death and talent points.
 - **New spells:** what a spell you just learned does, and how to put it on your action bars; every few levels, a leveling tip for your class.
 - **Play together:** party members running Questwarden see where each other are in the guide, with "Wait for <name>" when someone still has to pick up or turn in. Optionally, everyone follows the party leader's step (`/qw follow`).
 - **Mount savings goal**, **session recap** at login, and **profession starter tips** with the nearest trainers.
@@ -65,7 +69,7 @@ See [docs/NEW_PLAYERS.md](docs/NEW_PLAYERS.md). All off by default; the setup wi
 
 - **Built-in arrow** with the distance and time to arrival, plus a **world-map pin** and a **minimap pin**. No other add-on needed.
 - **Patrolling NPCs** ([docs/PATROLS.md](docs/PATROLS.md)): for a quest NPC or named mob that walks a path, the arrow follows the path and the path is dotted on the maps.
-- **City, building and cave hints:** the arrow points in a straight line, so the guide tells you when to follow a capital's streets, leave a building first, or look for the entrance of a cave or mine. It remembers where you've stood indoors and outdoors, so the hints get more precise as you play.
+- **Capital city hints:** the arrow points in a straight line, so in a capital the guide tells you to follow the streets, or to leave the city first when the target is outside it.
 
 ### Targets and raid markers
 
@@ -85,16 +89,18 @@ See [docs/TRAINER.md](docs/TRAINER.md).
 
 ### Talents and gear
 
-- **Talent guide and calculator** from client data, with leveling plans per spec. It reminds you and marks the talent window, but never spends points for you.
+- **Talent guide and calculator** from client data, with leveling plans per spec. It reminds you and highlights the next talent to take in the talent window, but never spends points for you.
 - **Gear scoring** with researched stat weights.
 - **Automatic upgrades** (opt-in, never Bind-on-Equip items):
   - includes armor-only upgrades, and weapons with more DPS and the same other stats;
-  - a chat line and the level-up sound when something is equipped.
+  - a chat line and the level-up sound when something is equipped;
+  - bigger bags go into empty bag slots or replace your smallest bag (profession and soul bags are left alone).
 
 ### Everything else
 
 - Quest automation that never auto-accepts escort quests or picks rewards for you.
 - Junk selling and auto repair, both off by default.
+- A low durability warning when equipped gear drops below 30%.
 - An orphaned-quest finder.
 - Bag-addon markers and an auction house Upgrades tab.
 - Flight, inn and gossip automation, and flight timers.
