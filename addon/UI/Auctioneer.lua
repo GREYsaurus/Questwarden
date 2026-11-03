@@ -32,6 +32,7 @@ AU.MAX_ITEMS = 4000         -- distinct variants kept per auction house
 AU.PAGE_TIMEOUT = 15        -- seconds to wait for one page before giving up
 AU.MIN_QUALITY = 2          -- uncommon and better
 AU.STALE_AFTER = 2 * 3600   -- a scan older than this is shown as stale
+AU.PER_SLOT = 4             -- upgrades listed per slot: the best by upgrade %
 
 -- Data ---------------------------------------------------------------------------------------------
 
@@ -234,18 +235,27 @@ function AU:Upgrades()
             if ok then out[#out + 1] = { e = e, entry = entry, slot = e.target } end
         end
     end
-    local byPct = f.sort == "pct"
-    table.sort(out, function(a, b)
-        if a.slot ~= b.slot then return a.slot < b.slot end
-        if byPct then
-            local pa = a.e.kind == "empty" and math.huge or (a.e.pct or -1)
-            local pb = b.e.kind == "empty" and math.huge or (b.e.pct or -1)
-            if pa ~= pb then return pa > pb end
+    local function order(byPct)
+        return function(a, b)
+            if a.slot ~= b.slot then return a.slot < b.slot end
+            if byPct then
+                local pa = a.e.kind == "empty" and math.huge or (a.e.pct or -1)
+                local pb = b.e.kind == "empty" and math.huge or (b.e.pct or -1)
+                if pa ~= pb then return pa > pb end
+            end
+            return a.entry.unit < b.entry.unit
         end
-        return a.entry.unit < b.entry.unit
-    end)
+    end
+    -- The best PER_SLOT upgrades of each slot, then the chosen sort among them.
+    table.sort(out, order(true))
+    local top, n = {}, {}
+    for _, r in ipairs(out) do
+        n[r.slot] = (n[r.slot] or 0) + 1
+        if n[r.slot] <= self.PER_SLOT then top[#top + 1] = r end
+    end
+    if f.sort ~= "pct" then table.sort(top, order(false)) end
     self.loading = loading
-    return out
+    return top
 end
 
 -- UI -----------------------------------------------------------------------------------------------------

@@ -144,6 +144,19 @@ for i = 2, #rows do if rows[i].slot == rows[i - 1].slot and rows[i].entry.unit <
 check(sorted, "price sort within each slot group")
 AU.filter.sort = "pct"
 for i = 2, #rows do check(rows[i].slot >= rows[i - 1].slot, "grouped by slot") end
+local perSlot = {}
+for _, r in ipairs(rows) do perSlot[r.slot] = (perSlot[r.slot] or 0) + 1 end
+for slot, c in pairs(perSlot) do check(c <= AU.PER_SLOT, "at most " .. AU.PER_SLOT .. " per slot (slot " .. slot .. ": " .. c .. ")") end
+local all = AU:Upgrades()
+AU.PER_SLOT = 1
+local one = AU:Upgrades()
+AU.PER_SLOT = 4
+local best = {}
+for _, r in ipairs(all) do if not best[r.slot] then best[r.slot] = r end end
+local same = #one > 0
+for _, r in ipairs(one) do if best[r.slot] ~= nil and best[r.slot].entry ~= r.entry then same = false end end
+check(same and #one == (function() local k = 0 for _ in pairs(best) do k = k + 1 end return k end)(),
+    "the cap keeps each slot's best upgrade")
 
 -- Changing equipment or spec re-scores without rescanning.
 local queriesBefore = #MOCK.ah.queries

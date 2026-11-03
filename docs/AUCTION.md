@@ -89,6 +89,8 @@ The two can't disagree.
 - **Max price (g)**;
 - **Min upgrade %**.
 
+**Top 4 per slot:** each slot lists at most its 4 best upgrades by upgrade % (empty slots: the 4 cheapest), after the filters.
+
 **Sorting:** sort by upgrade % or by price within each slot group.
 
 **Updating:** changing your equipment or spec profile re-scores the stored items straight away, **without rescanning**.
