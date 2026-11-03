@@ -8,11 +8,11 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Item | Count |
 |---|---|
 | Guides | 107 (107 Azeroth) |
-| Guide steps | 5546 |
-| Quest steps (accept/complete/turn-in) | 4515 |
-| Distinct quests referenced | 1427 |
-| Steps with database-derived coordinates | 3569 |
-| Steps with hand-written coordinates (unverified) | 27 |
+| Guide steps | 5545 |
+| Quest steps (accept/complete/turn-in) | 4514 |
+| Distinct quests referenced | 1426 |
+| Steps with database-derived coordinates | 3568 |
+| Steps with hand-written coordinates (unverified) | 28 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
 | Validation | validate: 0 error(s), 0 warning(s) |
@@ -74,7 +74,7 @@ Each race/class combination is followed from its racial start guide through the 
 | Shadowglen & Teldrassil | Alliance | 1-12 | Teldrassil | 195 | 69 | 14 |
 | Valley of Trials & Durotar | Horde | 1-12 | Durotar | 221 | 72 | 33 |
 | Camp Narache & Mulgore | Horde | 1-11 | Mulgore | 154 | 57 | 20 |
-| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 155 | 54 | 10 |
+| Deathknell & Tirisfal Glades | Horde | 1-11 | Tirisfal Glades | 154 | 53 | 10 |
 | Darkshore (12-17) | Alliance | 12-17 | Darkshore | 164 | 49 | 48 |
 | The Barrens (12-15) | Horde | 12-15 | The Barrens | 176 | 58 | 48 |
 | Stonetalon Mountains (15-16) | Horde | 15-16 | Stonetalon Mountains | 5 | 1 | 0 |

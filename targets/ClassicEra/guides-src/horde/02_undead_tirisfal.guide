@@ -9,7 +9,7 @@
 @zone Tirisfal Glades
 @chapter Azeroth
 @start
-@desc Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11, heading to Silverpine Forest.
+@desc Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11 with the zeppelin to Orgrimmar, heading to the Barrens.
 @next H_10_Barrens
 
 accept Rude Awakening | Undertaker Mordo.
@@ -150,7 +150,6 @@ accept 5658 Touch of Weakness [class=Priest] | Aelthalyste, the priest trainer i
 turnin 5658 Touch of Weakness [class=Priest] | Touch of Weakness, the undead priest spell.
 turnin 1478 Halgar's Summons [class=Warlock] | Carendin Halgar, Magic Quarter.
 accept 1473 Creature of the Void [class=Warlock]
-accept Delivery to Silverpine Forest | Apothecary Johaan.
 fp Undercity [zone=Undercity]
 complete 1473 Creature of the Void [class=Warlock] | Egalin's Grimoire is in a chest at Captain Perrine's Scarlet camp, south-west of Brill.
 turnin 1473 Creature of the Void [class=Warlock] | Back to Carendin Halgar in the Undercity.
@@ -158,4 +157,4 @@ accept 1471 The Binding [class=Warlock]
 complete 1471 The Binding [class=Warlock] | Use the Runes of Summoning and defeat the voidwalker that appears.
 turnin 1471 The Binding [class=Warlock] | Summon Voidwalker.
 grind 11 Bleeding Horror, Wandering Spirit, Scarlet Friar [at=76.8,59.7] | The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.
-note Ride south into Silverpine Forest; The Sepulcher is the Horde town.
+travel Durotar [at=60.7,58.9] | Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands outside Orgrimmar in Durotar; from there run south and west into the Barrens, to the Crossroads.

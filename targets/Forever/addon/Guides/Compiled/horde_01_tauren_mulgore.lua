@@ -161,6 +161,6 @@ ns.Guides:Register({
     {"accept",q=854,title="Journey to the Crossroads",npc="Kirge Sternhorn",z=17,x=44.9,y=58.6,races={"Tauren"},v=1},
     {"turnin",q=886,title="The Barrens Oases",npc="Tonga Runetotem",z=17,x=52.3,y=31.9,text="Turned in at The Barrens.",classes={"DRUID"},v=1},
     {"level",level=11,v=1},
-    {"note",text="Ride east to the Barrens and north to the Crossroads (or complete Rites of the Earthmother at the Barrens border later).",v=1},
+    {"note",text="Run east to the Barrens and north to the Crossroads (or complete Rites of the Earthmother at the Barrens border later).",v=1},
   },
 })

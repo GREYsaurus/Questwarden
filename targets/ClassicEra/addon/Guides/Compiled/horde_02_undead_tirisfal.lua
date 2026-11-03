@@ -5,7 +5,7 @@ local _, ns = ...
 ns.Guides:Register({
   id="H_Undead_Tirisfal", name="Deathknell & Tirisfal Glades", faction="Horde", chapter="Azeroth",
   minLevel=1, maxLevel=11, zone=85, zoneName="Tirisfal Glades", start=true, races={"Scourge"},
-  desc="Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11, heading to Silverpine Forest.",
+  desc="Undead starting route. Deathknell to about 5, then Brill, the Agamand Mills, the Scarlet Crusade camps and the Undercity. Ends at about 11 with the zeppelin to Orgrimmar, heading to the Barrens.",
   next={{id="H_10_Barrens"},},
   steps={
     {"accept",q=363,title="Rude Awakening",npc="Undertaker Mordo",z=85,x=30.2,y=71.6,text="Undertaker Mordo.",v=1},
@@ -154,7 +154,6 @@ ns.Guides:Register({
     {"turnin",q=5658,title="Touch of Weakness",npc="Aelthalyste",z=1497,x=49.3,y=17.1,text="Touch of Weakness, the undead priest spell.",classes={"PRIEST"},v=1},
     {"turnin",q=1478,title="Halgar's Summons",npc="Carendin Halgar",z=1497,x=85.1,y=26,text="Carendin Halgar, Magic Quarter.",classes={"WARLOCK"},v=1},
     {"accept",q=1473,title="Creature of the Void",npc="Carendin Halgar",z=1497,x=85.1,y=26,classes={"WARLOCK"},v=1},
-    {"accept",q=445,title="Delivery to Silverpine Forest",npc="Apothecary Johaan",z=85,x=59.4,y=52.4,text="Apothecary Johaan.",v=1},
     {"fp",npc="Michael Garrett",z=1497,x=63.2,y=48.6,place="Undercity",node=11,v=1},
     {"complete",q=1473,title="Creature of the Void",text="Egalin's Grimoire is in a chest at Captain Perrine's Scarlet camp, south-west of Brill.",classes={"WARLOCK"},v=1},
     {"turnin",q=1473,title="Creature of the Void",npc="Carendin Halgar",z=1497,x=85.1,y=26,text="Back to Carendin Halgar in the Undercity.",classes={"WARLOCK"},v=1},
@@ -162,6 +161,6 @@ ns.Guides:Register({
     {"complete",q=1471,title="The Binding",text="Use the Runes of Summoning and defeat the voidwalker that appears.",classes={"WARLOCK"},v=1},
     {"turnin",q=1471,title="The Binding",npc="Carendin Halgar",z=1497,x=85.1,y=26,text="Summon Voidwalker.",classes={"WARLOCK"},v=1},
     {"grind",z=85,x=76.8,y=59.7,text="The next steps expect level 11 and the quests here don't quite get you there: grind these until you reach it.",level=11,mobs={"Bleeding Horror","Wandering Spirit","Scarlet Friar"},v=0},
-    {"note",text="Ride south into Silverpine Forest; The Sepulcher is the Horde town.",v=1},
+    {"travel",z=85,x=60.7,y=58.9,text="Run to the zeppelin tower between Brill and the Undercity and take the zeppelin to Orgrimmar (the other one goes to Grom'gol). It lands outside Orgrimmar in Durotar; from there run south and west into the Barrens, to the Crossroads.",dest="Durotar",v=0},
   },
 })

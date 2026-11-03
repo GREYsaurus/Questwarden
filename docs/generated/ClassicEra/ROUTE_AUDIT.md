@@ -14,8 +14,8 @@ Every race/class route is walked step by step. **Model level** comes from the XP
 | Peak quest log (worst route) | 16 / 20 |
 | Reduced-XP pickups (6+ levels below estimate) | 48 |
 | Level-gated pickups | 12 |
-| Accepted, never turned in | 2 |
-| Hub revisits (all guides) | 567 |
+| Accepted, never turned in | 1 |
+| Hub revisits (all guides) | 566 |
 
 ## Per guide
 
@@ -129,7 +129,7 @@ No baseline file found.
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 221 | 72 | 635 | 581 | 18 | 0 | 0 | 0 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 224 | 434 | 13 | 0 | 0 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 155 | 54 | 227 | 216 | 20 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 154 | 53 | 275 | 224 | 19 | 0 | 0 | 0 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -235,4 +235,3 @@ None.
 - H_36_Desolace: reduced-XP quest: Gizelton Caravan (5943, level 38) at estimated level 44.0
 - H_51_Felwood: reduced-XP quest: Timbermaw Ally (8460, level 48) at estimated level 54.0
 - H_54_WesternPlaguelands: reduced-XP quest: A Call to Arms: The Plaguelands! (5094, level 50) at estimated level 56.0
-- H_Undead_Tirisfal: accepted but never turned in on the route: 445 Delivery to Silverpine Forest

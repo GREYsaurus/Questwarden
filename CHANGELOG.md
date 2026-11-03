@@ -3,6 +3,7 @@
 ## Unreleased
 
 - **Fly steps when you don't have the flight path:** the step says to run there instead, and the step completes when you arrive. Once a flight map has shown which flight paths you know, a missing one is named and the arrow points to the destination.
+- **Fixed (Undead start):** the end of the Tirisfal Glades guide sent you to The Sepulcher in Silverpine Forest, which the Classic Era route doesn't visit, and picked up Delivery to Silverpine Forest, which no guide turns in. It now sends you to the zeppelin tower between Brill and the Undercity, with the zeppelin to Orgrimmar and the way to the Barrens. The Mulgore guide's last step says run instead of ride.
 
 ## 0.1.0-alpha.36 (2026-11-02)
 

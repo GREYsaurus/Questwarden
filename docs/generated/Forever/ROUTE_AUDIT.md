@@ -14,8 +14,8 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 | Peak quest log (worst route) | 18 / 40 |
 | Reduced-XP pickups (6+ levels below estimate) | 47 |
 | Level-gated pickups | 5 |
-| Accepted, never turned in | 13 |
-| Hub revisits (all guides) | 565 |
+| Accepted, never turned in | 12 |
+| Hub revisits (all guides) | 564 |
 
 ## Per guide
 
@@ -129,7 +129,7 @@ No baseline file found.
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
 | H_OrcTroll_Durotar | 221 | 72 | 635 | 573 | 18 | 0 | 0 | 1 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 197 | 410 | 10 | 0 | 5 | 0 | 5 | 0 |
-| H_Undead_Tirisfal | 155 | 54 | 227 | 207 | 20 | 0 | 0 | 1 | 0 | 0 |
+| H_Undead_Tirisfal | 154 | 53 | 275 | 216 | 19 | 0 | 0 | 0 | 0 | 0 |
 
 ## Peak quest log per route
 
@@ -247,4 +247,3 @@ No baseline file found.
 - H_Tauren_Mulgore: level-gated pickup: Hidden Enemies (5726) needs 9, model level 7.6 [horde/01_tauren_mulgore.guide:112, Tauren/WARRIOR]
 - H_Tauren_Mulgore: level-gated pickup: Mazzranache (766) needs 5, model level 4.0 [horde/01_tauren_mulgore.guide:57, Tauren/WARRIOR]
 - H_Tauren_Mulgore: level-gated pickup: The Hunter's Way (861) needs 10, model level 8.7 [horde/01_tauren_mulgore.guide:129, Tauren/SHAMAN]
-- H_Undead_Tirisfal: accepted but never turned in on the route: 445 Delivery to Silverpine Forest
