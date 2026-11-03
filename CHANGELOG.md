@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Setup wizard:** the author's note now opens with a warning, in the warning colour, that the routes are not perfect and are constantly being improved.
+
 ## 0.1.0-alpha.35 (2026-11-02)
 
 - **The Admiral's Orders step now says where the Aged Envelope comes from.** It points to Benedict's Chest in Tiragarde Keep and says to open it with the key Lieutenant Benedict drops. The step no longer appears in the Tirisfal Glades or Eversong Forest guides, because the envelope can't be found there.

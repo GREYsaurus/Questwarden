@@ -156,9 +156,9 @@ function render.welcome(d)
     WL:Text(ns.name .. " is a leveling guide: it tells you, one step at a time, which quests to do and where to go, and an arrow on screen points the way.")
     WL:Text(string.format("This is %s, a level %d %s %s (%s).", tostring(ch.name), ch.level, tostring(ch.raceName), tostring(ch.className), tostring(ch.faction)), nil, T.muted)
     WL:Section("A note from the author")
-    WL:Text("The routes are not perfect yet, and they are being improved all the time. I made " .. ns.name
-        .. " for my wife and friends first, so thank you for downloading it and trying it out. Please leave a comment on the CurseForge page"
-        .. " with any problems you run into or suggestions you have.")
+    WL:Text("Warning: the routes are not perfect, and they are constantly being improved.", nil, T.warn)
+    WL:Text("I made " .. ns.name .. " for my wife and friends first. Thank you for downloading it and trying it out, though!"
+        .. " Please leave comments on the CurseForge page with any issues you run into or suggestions you have.")
     WL:Section("Is this your first time playing World of Warcraft?")
     WL:Option("Yes, I am new to World of Warcraft",
         "The next pages use plain words and choose sensible defaults for you. At the end you can turn on helpers that explain the game while you play.",

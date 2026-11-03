@@ -4,6 +4,8 @@
 
 > **Alpha.** Questwarden is new and updated often. Its routes and data are built and checked offline. Testing in the live game is under way on Classic Era: the raid markers and the map and minimap waypoint pins are confirmed working, and newer features are checked offline only so far. Please report anything wrong on the issue tracker.
 
+> **A note from the author:** the routes are not perfect, and they are constantly being improved. I made Questwarden for my wife and friends first. Thank you for downloading it and trying it out, though! Please leave comments on this page with any issues you run into or suggestions you have.
+
 ## What it does
 
 **Guides and routes**

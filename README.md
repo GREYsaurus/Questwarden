@@ -18,6 +18,8 @@ Questwarden grew out of [TBCGuide](https://github.com/GREYsaurus/TBCGuide). It f
 >
 > Expect rough edges, and please report problems on the [issue tracker](https://github.com/GREYsaurus/Questwarden/issues). Forever support is in progress ([docs/FOREVER_PLAN.md](docs/FOREVER_PLAN.md)). Changes per release are in [CHANGELOG.md](CHANGELOG.md), and open questions in [docs/DATA_GAPS.md](docs/DATA_GAPS.md).
 
+> **A note from the author:** the routes are not perfect, and they are constantly being improved. I made Questwarden for my wife and friends first. Thank you for downloading it and trying it out, though! Please leave comments on the [CurseForge page](https://www.curseforge.com/wow/addons/questwarden) with any issues you run into or suggestions you have.
+
 ## Download
 
 - **CurseForge:** https://www.curseforge.com/wow/addons/questwarden. Alpha files appear once CurseForge has approved them.
