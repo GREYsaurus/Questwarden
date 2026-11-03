@@ -56,6 +56,8 @@
 **Quality of life**
 - Quest automation that never auto-accepts escorts or picks rewards for you.
 - Junk selling and auto repair, both off by default.
+- **Supply reminders** before you leave town: food, drinks, arrows and bullets, and who sells them there.
+- **Weapon skill tips:** which weapon types a weapon master can teach you, and where to learn the type of a weapon you can't equip yet.
 - A low durability warning when your gear drops below 30%.
 - Flight and inn automation, and flight timers.
 - Optional map pins for rares, elites and spirit healers.

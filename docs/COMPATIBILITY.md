@@ -67,6 +67,7 @@ None of these has been done yet. Tick them off on a real 1.15.9 client:
 - [ ] `/qw`, `/questwarden` and `/qwgear` open the right windows; key bindings show under *Questwarden*.
 - [ ] Settings → Guide Routing shows *Hardcore character*, and the choice survives `/reload` on that character only.
 - [ ] The talent calculator shows 51 points at 60 (simulated mode works without talent data).
+- [ ] `IsSpellKnown` reports weapon skills (for example 227 Staves, 1180 Daggers) as known once learned, so the weapon skill tips (`Core/WeaponSkills.lua`) do not suggest skills you have.
 - [ ] `/reload` and logout/login keep settings (SavedVariables `QuestwardenDB` / `QuestwardenCharDB`).
 
 The TBCGuide 2.5.6 checklist (automation, markers, binding, hunting routes, active items, corpse arrow) is in [tbcguide/COMPATIBILITY_2.5.6.md](tbcguide/COMPATIBILITY_2.5.6.md). It applies again once Classic Era guides exist (Phase 2).

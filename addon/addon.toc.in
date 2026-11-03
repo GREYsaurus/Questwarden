@@ -39,6 +39,7 @@ Database\ZoneGeo.lua
 Database\Overrides.lua
 Database\EscortQuests.lua
 Database\QuestTimers.lua
+Database\Supplies.lua
 Database\Riding.lua
 Database\Dungeons.lua
 Database\DungeonEntrances.lua
@@ -96,6 +97,8 @@ Core\Bind.lua
 Core\Hearth.lua
 Core\DeathSkip.lua
 Core\Durability.lua
+Core\Supplies.lua
+Core\WeaponSkills.lua
 Core\Group.lua
 Core\FlightTimer.lua
 Core\QuestTimer.lua

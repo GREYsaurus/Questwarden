@@ -102,6 +102,8 @@ See [docs/TRAINER.md](docs/TRAINER.md).
 
 - Quest automation that never auto-accepts escort quests or picks rewards for you.
 - Junk selling and auto repair, both off by default.
+- **Supply reminders:** on a town step, when you're low on food, drinks (classes with mana) or arrows and bullets (hunters), the step says who sells them there. Warlocks hear when they're low on Soul Shards.
+- **Weapon skill tips:** when you pass a weapon master who teaches weapon types your class can learn, and when a weapon you can't equip yet lands in your bags.
 - A low durability warning when equipped gear drops below 30%.
 - An orphaned-quest finder.
 - Bag-addon markers and an auction house Upgrades tab.

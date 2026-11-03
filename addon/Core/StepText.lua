@@ -152,6 +152,9 @@ function StepText:Details(s)
     -- Dying and the spirit healer beat walking (Core/DeathSkip.lua).
     local skip = ns.DeathSkip and current and ns.DeathSkip:Line()
     if skip then lines[#lines + 1] = string.format(WARN, skip) end
+    -- Food, drink and ammo before you leave town (Core/Supplies.lua).
+    local supplies = ns.Supplies and current and ns.Supplies:Line()
+    if supplies then lines[#lines + 1] = string.format(WARN, supplies) end
     -- Party members' steps (Core/PlayTogether.lua) and the mount savings goal (Core/MountGoal.lua).
     if current and ns.PlayTogether then
         for _, l in ipairs(ns.PlayTogether:Lines()) do lines[#lines + 1] = string.format(l.warn and WARN or DIM, l.text) end

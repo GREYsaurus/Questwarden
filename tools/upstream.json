@@ -97,7 +97,7 @@
     "cache": ".cache/upstream/whatstraining/26caff2fb3cb7d0bd5ed13c15b69be71a16dbafe"
   },
   "cmangos": {
-    "_comment": "Time limits of timed quests (quest_template.LimitTime), read by tools/research/quest_timers.py into targets/<Target>/addon/Database/QuestTimers.lua. classic-db for ClassicEra and Forever, tbc-db for TBC. GPL-3.0. Approved 2026-11-01. Never fetched by the normal build.",
+    "_comment": "Time limits of timed quests (quest_template.LimitTime), read by tools/research/quest_timers.py into targets/<Target>/addon/Database/QuestTimers.lua; food, drink and ammo vendors and weapon masters (item_template, npc_vendor, npc_trainer and their templates), read by tools/research/supply_data.py into Database/Supplies.lua. classic-db for ClassicEra and Forever, tbc-db for TBC. GPL-3.0. Approved 2026-11-01. Never fetched by the normal build.",
     "classic": {
       "repository": "https://github.com/cmangos/classic-db",
       "commit": "603ece109099ce44a5447a1b1cffd65c7272d71c",

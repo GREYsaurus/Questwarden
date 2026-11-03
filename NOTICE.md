@@ -25,10 +25,11 @@ Releases also include the class-trainer spell lists of **What's Training?** (htt
 
 Questwarden is not affiliated with What's Training? or its author.
 
-Releases also include the time limits of timed quests from the **CMaNGOS** world databases (https://github.com/cmangos/classic-db and https://github.com/cmangos/tbc-db), under the GPLv3:
+Releases also include the time limits of timed quests, and which NPCs sell food, drink and ammo and which weapon skills the weapon masters teach, from the **CMaNGOS** world databases (https://github.com/cmangos/classic-db and https://github.com/cmangos/tbc-db), under the GPLv3:
 
 - `quest_template.LimitTime` at classic-db commit `603ece109099ce44a5447a1b1cffd65c7272d71c` (Classic Era) and tbc-db commit `1c54acd200540076c3078d22a66fd417d0f6dd60` (TBC Classic Anniversary).
 - Transformed by `tools/research/quest_timers.py`: only the quest id and the limit in seconds are kept (the quest title is a comment), for quests in the bundled quest data. Written to `Database/QuestTimers.lua` in each target's data.
+- `item_template` (food, drink and ammo items and the level to use them), `npc_vendor`, `npc_vendor_template`, `npc_trainer`, `npc_trainer_template` and `creature_template` (the vendor and trainer template ids), at the same commits. Transformed by `tools/research/supply_data.py`: item ids with their level or ammo type, the vendors that sell those items, and the weapon skills each weapon master teaches with cost and level. Written to `Database/Supplies.lua` in each target's data.
 
 Questwarden is not affiliated with the CMaNGOS project.
 
