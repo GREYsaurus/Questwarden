@@ -22,8 +22,8 @@ local saved = {}
 for _, k in ipairs(KEYS) do saved[k] = prof()[k] end
 saved.groupFeatures, saved.autoEquip = prof().groupFeatures, prof().autoEquip
 local gearProfile0 = ns.char.gearProfile
-check(ns.PROFILE_DEFAULTS.gearQuestRewards == true and ns.PROFILE_DEFAULTS.rewardMarkers == true and ns.PROFILE_DEFAULTS.autoReward == false,
-    "quest reward upgrades are on by default; choosing the reward stays with the player")
+check(ns.PROFILE_DEFAULTS.gearQuestRewards == false and ns.PROFILE_DEFAULTS.rewardMarkers == true and ns.PROFILE_DEFAULTS.autoReward == false,
+    "quest reward markers are on by default, the chat ranking is off; choosing the reward stays with the player")
 
 -- Explainers -------------------------------------------------------------------------------------------
 local NP = ns.NewPlayer

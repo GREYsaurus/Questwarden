@@ -196,7 +196,7 @@ check(#tt.lines == 0, "unknown item adds nothing")
 
 -- Quest rewards -------------------------------------------------------------------------------------------------
 -- On by default (the player still picks the reward); off: no chat lines.
-check(ns.PROFILE_DEFAULTS.gearQuestRewards == true and ns.GearUI.DEFAULTS.gearQuestRewards == true, "reward ranking in chat is on by default")
+check(ns.PROFILE_DEFAULTS.gearQuestRewards == false and ns.GearUI.DEFAULTS.gearQuestRewards == false, "reward ranking in chat is off by default")
 MOCK.calls, MOCK.printed = {}, {}
 MOCK.dialog = { questID = 77000, title = "Quiet Quest", choices = 2, completable = true }
 MOCK.questChoices = { 90002, 90001 }
@@ -218,6 +218,12 @@ check(ns.db.profile.gearQuestRewards == true and ns.db.profile.rewardMarkers == 
 ns.db.profile.gearQuestRewards = false
 ns:InitSavedVariables()
 check(ns.db.profile.gearQuestRewards == false, "turning it off afterwards sticks")
+ns.db.profile.gearQuestRewards, mig.rewardChat35 = true, nil
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == false and mig.rewardChat35, "alpha.35 turns the reward ranking in chat off once")
+ns.db.profile.gearQuestRewards = true
+ns:InitSavedVariables()
+check(ns.db.profile.gearQuestRewards == true, "turning it on again afterwards sticks")
 ns.db.profile.targetNotify, mig.targetNotify31 = true, nil
 ns:InitSavedVariables()
 check(ns.db.profile.targetNotify == false and mig.targetNotify31, "alpha.31 turns the 'nearby' chat line off once")

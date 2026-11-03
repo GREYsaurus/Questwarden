@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Quest rewards:** the reward ranking no longer goes to chat. The green arrow or coin on the reward window still marks the pick. It is turned off once for everyone, and you can turn it back on with Quest Reward Recommendation (Item Upgrade settings).
 - **Setup wizard:** the first page has a note from the author: the routes are still being improved, thanks for trying the add-on, and please report problems and suggestions on the CurseForge page.
 - **Fixed:** seven kill-step notes named the wrong mobs, for example Greater Duskbats for A New Plague (it needs Vicious Night Web Spiders), Scarlet Zealots for At War With The Scarlet Crusade (Captain Vachon and Scarlet Friars), and Durotar Tigers for Lost But Not Forgotten (Dreadmaw Crocolisks). The others were in Darkshore, Duskwood, Stranglethorn Vale and Felwood. The notes now name the mobs the quest needs.
 - **Guides set your hearthstone after the starting zones.** Before, only the six starting-zone guides had a "set your hearthstone" step, so hearth suggestions stopped after level 10 or so. 25 guides now set it at the town you keep walking back to: Horde at the Crossroads, Ratchet, Sun Rock Retreat, Tarren Mill, Booty Bay, Hammerfall, Grom'gol, Gadgetzan, Camp Mojache, Revantusk Village and Cenarion Hold; Alliance at Auberdine, Astranaar, Menethil Harbor, Darkshire, Booty Bay, Theramore, Nijel's Point, Gadgetzan and Feathermoon Stronghold. `tools/research/hearth_spots.py` lists the long walks back to town and the towns with an inn that would cut them.
