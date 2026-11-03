@@ -130,6 +130,15 @@ function StepText:Details(s)
             lines[#lines + 1] = string.format(DIM, string.format("Level %d, %d%% through", UnitLevel("player"), math.floor(xp / maxXp * 100)))
         end
     end
+    -- A fly step: what to do without the flight path.
+    if s[1] == "fly" and s.node then
+        local unknown = StepText.FlightUnknown(s)
+        if unknown == true then
+            lines[#lines + 1] = string.format(WARN, "You don't have the flight path to " .. (s.dest or "?") .. " yet: run there instead. The arrow points to it.")
+        elseif unknown == nil then
+            lines[#lines + 1] = string.format(DIM, "No flight path to " .. (s.dest or "?") .. " yet? Run there instead; the step completes when you arrive.")
+        end
+    end
     -- A quest given or taken by an object (a wanted poster, a grave, a book), not an NPC.
     local giver = StepText.ObjectGiverLine(s)
     if giver then lines[#lines + 1] = giver end
@@ -226,6 +235,16 @@ end
 
 -- Navigation target for a step: zoneAreaId, x, y, label. Uses compiled coordinates first and
 -- falls back to live database lookups for quest steps.
+-- Whether a fly step's flight path is one you do not have: true or false once a flight map has shown the paths you
+-- know (Core/FlightPaths.lua), nil before that.
+function StepText.FlightUnknown(s)
+    local n = s.node and ns.Flights and ns.Flights.nodes[s.node]
+    if not (n and ns.FlightPaths and ns.char) then return nil end
+    local known = ns.FlightPaths:Known()
+    if next(known) == nil then return nil end
+    return not known[s.node]
+end
+
 function StepText:Target(s)
     -- Train steps: the class trainer nearest to you, else the one the guide names (Classes/Trainer.lua).
     if s[1] == "train" and ns.Trainer then
@@ -238,6 +257,11 @@ function StepText:Target(s)
         if st == "have" or st == "accepted" or st == "done" then return nil end
         local z, x, y, label = ns.ItemStarts:Target(s)
         if z then return z, x, y, label end
+    end
+    -- A flight you do not have yet: run to its destination instead.
+    if s[1] == "fly" and StepText.FlightUnknown(s) == true then
+        local n = ns.Flights.nodes[s.node]
+        return n.zone, n.x, n.y, n.name
     end
     if s.x and s.y and s.z then
         if s[1] == "grind" then return s.z, s.x, s.y, s.location or (s.mobs and s.mobs[1]) end

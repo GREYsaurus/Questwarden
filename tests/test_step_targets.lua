@@ -69,3 +69,25 @@ check(ST.ObjectGiverLine({ "accept", q = 6395, npc = "Novice Elreth" }) == nil, 
 check(ST.ObjectGiverLine({ "turnin", q = 398 }) == nil, "turned in to an NPC: no note")
 local details = table.concat(ST:Details({ "accept", q = 398, npc = "Wanted!" }), "\n")
 check(details:find("wanted poster", 1, true), "the note is in the step's details")
+
+-- A fly step without the flight path: run there instead.
+do
+    local node
+    for id, n in pairs(ns.Flights.nodes) do if n.name == "Ratchet" then node = id end end
+    local fly = { "fly", dest = "Ratchet", node = node, z = 17, x = 51.5, y = 30.3 }
+    local savedKnown = ns.char.knownFlights
+    ns.char.knownFlights = {}
+    local text = table.concat(ns.StepText:Details(fly), "\n")
+    check(node and string.find(text, "No flight path to Ratchet yet? Run there instead", 1, true), "fly step, flight map never seen: run-instead hint")
+    check(select(3, ns.StepText:Target(fly)) == 30.3, "...the arrow stays on the step")
+    ns.char.knownFlights = { [next(ns.Flights.nodes)] = true }
+    ns.char.knownFlights[node] = nil
+    text = table.concat(ns.StepText:Details(fly), "\n")
+    local z, x, y = ns.StepText:Target(fly)
+    check(string.find(text, "You don't have the flight path to Ratchet yet: run there instead", 1, true)
+        and z == ns.Flights.nodes[node].zone and x == ns.Flights.nodes[node].x, "flight path not known: run there, the arrow points to Ratchet")
+    ns.char.knownFlights[node] = true
+    text = table.concat(ns.StepText:Details(fly), "\n")
+    check(not string.find(text, "run there", 1, true), "flight path known: no hint")
+    ns.char.knownFlights = savedKnown
+end

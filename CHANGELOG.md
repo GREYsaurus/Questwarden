@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Fly steps when you don't have the flight path:** the step says to run there instead, and the step completes when you arrive. Once a flight map has shown which flight paths you know, a missing one is named and the arrow points to the destination.
+
 ## 0.1.0-alpha.36 (2026-11-02)
 
 - **Supply reminders** (on; Settings → Supply Reminders): on a town step, when your bags are low and a vendor there sells it, the step says to stock up and who sells it: food (under 10), drinks for classes with mana (under 10), and arrows or bullets for hunters (under 400, by the ranged weapon). Warlocks from level 10 are reminded when they carry fewer than 3 Soul Shards. From level 5. The vendors and their goods come from the CMaNGOS vendor lists; `tools/research/supply_data.py` builds `Database/Supplies.lua`.
