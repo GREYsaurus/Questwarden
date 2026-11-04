@@ -50,7 +50,7 @@ local HELP = {
     { "gear auto", "automatic upgrade status" },
     { "gear exclude|include <item>", "keep an item out of automatic upgrades (or allow it again)" },
     { "set <option> on|off", "change a setting from chat" },
-    { "debug [api|talents|quest <id>|escort <id>|marks|nav|errors]", "diagnostics" },
+    { "debug [api|launch|talents|quest <id>|escort <id>|marks|nav|errors]", "diagnostics (launch: check a new client, saved for the maintainer)" },
     { "help", "this list" },
 }
 

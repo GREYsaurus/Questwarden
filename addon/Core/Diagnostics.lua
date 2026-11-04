@@ -33,8 +33,7 @@ function D:Summary()
     line(string.format("errors captured: %d (/" .. ns.slash .. " debug errors)", #ns.errors))
 end
 
-function D:Api()
-    local apis = {
+D.APIS = {
         "C_QuestLog.IsQuestFlaggedCompleted", "IsQuestFlaggedCompleted", "GetQuestsCompleted",
         "GetQuestLogTitle", "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard",
         "C_Map.GetBestMapForUnit", "C_Map.GetPlayerMapPosition", "C_Map.GetWorldPosFromMapPos", "C_Map.GetMapInfo",
@@ -62,7 +61,21 @@ function D:Api()
         -- auction house (UI/Auctioneer.lua)
         "QueryAuctionItems", "CanSendAuctionQuery", "GetNumAuctionItems", "GetAuctionItemInfo", "GetAuctionItemLink",
         "AuctionFrameTab_OnClick", "PanelTemplates_SetNumTabs", "AuctionFrameBrowse_Search",
-    }
+        -- not found in Forever's UI source (docs/generated/Forever/api-audit.md): checked by the launch check
+        "WorldMapFrame.OnMapChanged", "InterfaceOptions_AddCategory", "InterfaceOptionsFrame_OpenToCategory",
+        "GetNumTalentTabs", "UnitCharacterPoints", "SelectGossipAvailableQuest", "SelectGossipActiveQuest",
+        "GetQuestTimers", "AbandonQuest", "GetNumRaidMembers", "IsRaidLeader", "IsRaidOfficer", "InterfaceOptionsFrame",
+        "GetGossipOptions", "GetNumGossipAvailableQuests", "GetNumGossipActiveQuests", "GetQuestGreenRange",
+        "GetMacroIndexByName", "ContainerFrameItemButton_OnModifiedClick", "IsAddOnLoaded", "RegisterAddonMessagePrefix",
+        "CharacterFrame.HookScript", "BrowseName", "GetCoinTextureString", "GetSpellName", "GetPetTrainingPoints",
+        "GetNumCrafts", "GetCraftInfo", "IsQuestFlaggedCompleted", "UseContainerItem", "GetItemCooldown", "GetItemSpell",
+        -- newer APIs Forever might have instead (only looked up by name here, never called)
+        "C_ClassTalents.GetActiveConfigID", "C_Traits.GetConfigInfo", "C_SpecializationInfo.GetTalentInfo",
+        "C_CreatureInfo.GetRaceInfo", "C_GameRules.IsHardcoreActive",
+}
+
+function D:Api()
+    local apis = D.APIS
     ns:Print("API availability:")
     for _, a in ipairs(apis) do
         line((ns.Compat.Has(a) and "|cff55ff55yes|r " or "|cffff5555no|r  ") .. a)
@@ -103,8 +116,46 @@ function D:Quest(id)
     end
 end
 
+-- Launch check for a new client (World of Warcraft: Forever, docs/FOREVER_PLAN.md step 7): what this client is and
+-- which APIs it has, saved in QuestwardenDB.launchCheck (written to WTF\Account\<account>\SavedVariables when you
+-- log out or /reload) so the maintainer can read it. Reads only; changes nothing in the game.
+function D:Launch()
+    local function call(f, ...) if type(f) == "function" then local ok, a, b, c, d = pcall(f, ...) if ok then return a, b, c, d end end end
+    local r = { version = ns.version, target = ns.Target.id, time = time and time() }
+    local version, build, _, iface = call(GetBuildInfo)
+    r.client = { version = version, build = build, interface = iface }
+    r.project = { id = WOW_PROJECT_ID, camelot = WOW_PROJECT_CAMELOT }
+    local meta = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+    r.tocFile = call(meta, ns.name, "X-TocFile")
+    r.questLog = { max = C_QuestLog and call(C_QuestLog.GetMaxNumQuestsCanAccept), constant = MAX_QUESTLOG_QUESTS }
+    local _, raceFile, raceId = call(UnitRace, "player")
+    local _, classFile, classId = call(UnitClass, "player")
+    r.player = { race = raceFile, raceId = raceId, class = classFile, classId = classId, level = call(UnitLevel, "player"),
+        faction = call(UnitFactionGroup, "player"), hardcore = C_GameRules and call(C_GameRules.IsHardcoreActive) }
+    r.talents = { tabs = call(GetNumTalentTabs), unspent = call(UnitCharacterPoints, "player"), names = {} }
+    for t = 1, r.talents.tabs or 0 do
+        local name = call(GetTalentTabInfo, t)
+        r.talents.names[t] = { name = name, talents = call(GetNumTalents, t) }
+    end
+    local map = C_Map and call(C_Map.GetBestMapForUnit, "player")
+    r.place = { map = map, zone = GetZoneText and GetZoneText(), sub = GetSubZoneText and GetSubZoneText() }
+    r.apis = {}
+    local missing = {}
+    for _, a in ipairs(D.APIS) do
+        r.apis[a] = ns.Compat.Has(a) and true or false
+        if not r.apis[a] then missing[#missing + 1] = a end
+    end
+    ns.db.launchCheck = r
+    ns:Print(string.format("launch check: client %s build %s (interface %s), project %s (Forever %s), TOC file %s",
+        tostring(version), tostring(build), tostring(iface), tostring(WOW_PROJECT_ID), tostring(WOW_PROJECT_CAMELOT), tostring(r.tocFile)))
+    line(string.format("quest log max %s, talent tabs %s, %s %s: %d of %d APIs missing",
+        tostring(r.questLog.max or r.questLog.constant), tostring(r.talents.tabs), tostring(raceFile), tostring(classFile), #missing, #D.APIS))
+    line("Saved. Type /reload (or log out) so it is written to SavedVariables\\" .. ns.name .. ".lua.")
+end
+
 function D:Run(arg)
     local cmd, rest = string.match(arg or "", "^(%S*)%s*(.-)$")
+    if cmd == "launch" then return self:Launch() end
     if cmd == "api" then return self:Api() end
     if cmd == "talents" then return self:TalentCheck() end
     if cmd == "quest" then return self:Quest(rest) end

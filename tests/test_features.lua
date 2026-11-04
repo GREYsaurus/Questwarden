@@ -343,3 +343,14 @@ MOCK.bags, MOCK.equipped = { [0] = {} }, {}
 MOCK.player.race, MOCK.player.class, MOCK.player.faction, MOCK.player.level = "Human", "WARRIOR", "Alliance", 1
 E:Load("A_Human_Elwynn", { reset = true })
 check(#ns.errors == 0, "no captured errors after feature tests: " .. table.concat(ns.errors, " | "))
+
+-- Launch check (/qw debug launch): what the client is, saved for the maintainer
+do
+    local keep = ns.db.launchCheck
+    ns.Diagnostics:Launch()
+    local r = ns.db.launchCheck
+    check(r and r.target == ns.Target.id and r.client and r.questLog and r.player and r.player.class, "launch check saves the client and player")
+    check(r and r.apis and r.apis["GetBuildInfo"] == nil and r.apis["C_Timer.After"] == true and r.apis["GetQuestTimers"] ~= nil,
+        "launch check records each API as present or missing")
+    ns.db.launchCheck = keep
+end

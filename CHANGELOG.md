@@ -3,6 +3,7 @@
 ## Unreleased
 
 - **QuestieDB v1.0.10** (the version shipped with Questie today): a few corrected quest records on every game version.
+- **Forever (not shipped yet):** client tables from build 1.60.1.70755, the route audit down from 6 errors to 0 (*Call of Earth* had itself as a prerequisite in the Forever data; Orc Mages now get *Hidden Enemies*), and `/qw debug launch`, which saves what a new game client reports (version, which TOC file it loaded, quest log size, talent API, missing APIs) for checking Forever at launch.
 
 ## 0.1.0-alpha.38 (2026-11-02)
 
