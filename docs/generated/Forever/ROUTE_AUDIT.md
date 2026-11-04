@@ -9,7 +9,7 @@ Every race/class route is walked step by step. **Estimated level** interpolates 
 | Check | Result |
 |---|---|
 | Routes walked | 92 |
-| Order errors (prerequisite later, complete before accept, log over cap) | 6 |
+| Order errors (prerequisite later, complete before accept, log over cap) | 0 |
 | Warnings | 18 |
 | Peak quest log (worst route) | 18 / 40 |
 | Reduced-XP pickups (6+ levels below estimate) | 47 |
@@ -127,7 +127,7 @@ No baseline file found.
 | H_56_WesternPlaguelands | 19 | 8 | 117 | 192 | 3 | 0 | 0 | 0 | 0 | 3 |
 | H_57_Silithus | 51 | 14 | 324 | 284 | 8 | 0 | 0 | 0 | 0 | 0 |
 | H_58_Winterspring | 19 | 6 | 115 | 115 | 2 | 0 | 0 | 0 | 0 | 0 |
-| H_OrcTroll_Durotar | 221 | 72 | 635 | 573 | 18 | 0 | 0 | 1 | 1 | 6 |
+| H_OrcTroll_Durotar | 221 | 72 | 635 | 575 | 18 | 0 | 0 | 1 | 1 | 6 |
 | H_Tauren_Mulgore | 154 | 57 | 197 | 410 | 10 | 0 | 5 | 0 | 5 | 0 |
 | H_Undead_Tirisfal | 155 | 53 | 275 | 241 | 19 | 0 | 0 | 0 | 0 | 0 |
 
@@ -153,12 +153,7 @@ No baseline file found.
 
 ## Errors
 
-- Orc/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
-- Orc/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
-- Orc/MAGE: H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:181]: complete step before the quest is accepted
-- Orc/MAGE (Hardcore): H_OrcTroll_Durotar (Hidden Enemies) [horde/00_orc_troll_durotar.guide:181]: complete step before the quest is accepted
-- Troll/SHAMAN: H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
-- Troll/SHAMAN (Hardcore): H_OrcTroll_Durotar (Call of Earth) [horde/00_orc_troll_durotar.guide:51]: all prerequisites (any of 1516/1519/92466) come LATER on this route (turned in at horde/00_orc_troll_durotar.guide:94)
+None.
 
 ## Warnings
 

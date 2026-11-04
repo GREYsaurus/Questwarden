@@ -176,11 +176,11 @@ accept 832 Burning Shadows [class=Warlock; race=Orc; optional; hc=skip]
 turnin Skull Rock
 accept Neeru Fireblade
 accept 5726 Hidden Enemies [class=Warlock; race=Orc; optional]
-accept 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Needs level 9. If you are lower, {name} skips it and moves on.
+accept 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman,Mage; race=Orc; optional] | Needs level 9. If you are lower, {name} skips it and moves on.
 accept 5726 Hidden Enemies [race=Troll; optional]
 complete 5726 Hidden Enemies [optional] | Lieutenant's Insignia drops from Burning Blade Apprentice and Burning Blade Fanatic.
 turnin 5726 Hidden Enemies [class=Warlock; race=Orc; optional] | Turned in at Orgrimmar.
-turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman; race=Orc; optional] | Turned in at Orgrimmar.
+turnin 5726 Hidden Enemies [class=Warrior,Hunter,Rogue,Shaman,Mage; race=Orc; optional] | Turned in at Orgrimmar.
 turnin 5726 Hidden Enemies [race=Troll; optional] | Turned in at Orgrimmar.
 accept 5727 Hidden Enemies [class=Warlock; race=Orc; optional]
 complete 5727 Hidden Enemies [class=Warlock; race=Orc; optional]

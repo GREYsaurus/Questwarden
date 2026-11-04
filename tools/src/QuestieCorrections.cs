@@ -22,6 +22,7 @@ namespace GuideTools
     {
         public int Applied;
         public List<string> Skipped = new List<string>();
+        public List<string> Repaired = new List<string>();
     }
 
     public sealed class QuestieCorrections
@@ -56,7 +57,30 @@ namespace GuideTools
                 c.t = LuaLexer.Lex(File.ReadAllText(fixes, Encoding.UTF8));
                 c.ApplyMainTable(d, res);
             }
+            DropSelfPrerequisites(d, res);
             return res;
+        }
+
+        // A quest can never be its own prerequisite. A preQuestSingle list that names the quest itself is an exclusive
+        // group recorded in the wrong field (Forever's Call of Earth: 1516 and 1519 list {1516, 1519, 92466}, which
+        // are also their exclusiveTo), so the list is dropped and logged.
+        static void DropSelfPrerequisites(QuestieData d, CorrectionResult res)
+        {
+            const int preQuestSingle = 13;
+            foreach (var kv in d.Quests)
+            {
+                var pre = kv.Value.Get(preQuestSingle) as LTable;
+                if (pre == null) continue;
+                for (int k = 1; k <= pre.Count; k++)
+                {
+                    if (pre.Get(k) is double && (int)(double)pre.Get(k) == kv.Key)
+                    {
+                        kv.Value.Set((double)preQuestSingle, null);
+                        res.Repaired.Add("quest " + kv.Key + ": preQuestSingle names the quest itself (an exclusive group); dropped");
+                        break;
+                    }
+                }
+            }
         }
 
         string module;

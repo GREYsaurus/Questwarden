@@ -1,8 +1,8 @@
-﻿QuestieDB import - QuestieDB commit 7901fee2753cecb577a72c2e4b7126198e05baec (QuestieDB v1.0.9 (shipped in Questie bundle/v12.3.1+v1.0.9, published 2026-10-26)), flavor Forever.
+﻿QuestieDB import - QuestieDB commit a37877c1490027ee48e5722bf602adf34f95a6dc (QuestieDB v1.0.10 (shipped in Questie bundle/v12.5.1+v1.0.10, published 2026-11-04)), flavor Forever.
 
 dangerAdded: 549
 items: 3007
-npcs: 5470
+npcs: 5471
 objects: 854
 patrolNpcs: 222
 patrolPoints: 3918
@@ -12,7 +12,7 @@ subzones: 121
 warnings: 1003
 zones: 1111
 
-Corrections applied: 16549
+Corrections applied: 16558
 Corrections skipped (could not be evaluated statically):
 quest 3526 field requiredSpecialization (line 2507): unknown symbol specKeys.ENGINEERING
 quest 3629 field requiredSpecialization (line 2538): unknown symbol specKeys.ENGINEERING
@@ -39,6 +39,10 @@ quest 5307 field requiredSpecialization (line 3396): unknown symbol specKeys.BLA
 quest 9233 field requiredRanks (line 6536): unary minus on non-number
 quest 97066: correction-only record without a name dropped
 quest 97067: correction-only record without a name dropped
+
+Repaired (impossible values in the upstream data):
+quest 1516: preQuestSingle names the quest itself (an exclusive group); dropped
+quest 1519: preQuestSingle names the quest itself (an exclusive group); dropped
 
 Warnings:
 item 20460 referenced by a quest is missing from upstream item data

@@ -15,7 +15,7 @@ It reports what the automated checks found. It is **not** evidence of in-game te
 | Steps with hand-written coordinates (unverified) | 28 |
 | Race/class combinations | 40 |
 | Talent builds | 28 (28 pass validation) |
-| Validation | validate: 0 error(s), 0 warning(s) |
+| Validation | validate: 0 error(s), 2 warning(s) |
 | Compiler warnings | 47 (see docs/generated/ClassicEra/guide-warnings.log) |
 
 ## Race/class routes (level 1 to 60)

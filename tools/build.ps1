@@ -28,6 +28,8 @@
 #   package          Build dist/<name>-<version>.zip: ONE add-on folder for every shipped target (shared code once,
 #                    each target's data under Targets/<Target>/, one <name>_<tocSuffix>.toc each), tested
 #                    through each TOC, plus dist/<name>-<version>-source.zip. -Target is ignored
+#   launch-check     Build dist/<name>-<version>-<target>-launch-check.zip: this target staged as is, with the TOC
+#                    under several file names, for checking a new client by hand (/<slash> debug launch)
 #   all              stage, guides, lint, validate, routes, report, test, then package if this target is shipped
 #   rename <Name> [<slash>]   Change the add-on's name (and slash command) in tools/addon.json
 #   zonequests "<Zone>" <Alliance|Horde>   Authoring aid: list a zone's quests from the bundled DB
@@ -237,6 +239,8 @@ function Invoke-ImportQuestie {
     $lines += $stats.GetEnumerator() | Sort-Object Key | ForEach-Object { "{0}: {1}" -f $_.Key, $_.Value }
     $lines += "", "Corrections applied: $($corr.Applied)", "Corrections skipped (could not be evaluated statically):"
     $lines += $corr.Skipped
+    $lines += "", "Repaired (impossible values in the upstream data):"
+    $lines += $corr.Repaired
     $lines += "", "Warnings:"
     $lines += $data.Warnings
     $lines | Set-Content $log -Encoding UTF8
@@ -467,6 +471,28 @@ function Invoke-Package {
     Write-Host "Packaged $srcZip"
 }
 
+# A test zip for checking a new client by hand (Forever at launch, docs/FOREVER_PLAN.md step 7): this target staged as
+# is (an unverified target loads no guides), with the TOC under every file name the client might look for, each
+# tagged "## X-TocFile: <file name>" so /<slash> debug launch reports which one the client loaded. Never published.
+function Invoke-LaunchCheck {
+    if (-not $script:Staged) { Invoke-Stage }
+    $dir = Join-Path $Root "build\LaunchCheck\$Target\$Name"
+    if (Test-Path $dir) { Remove-Item $dir -Recurse -Force -Confirm:$false }
+    New-Item -ItemType Directory -Force $dir | Out-Null
+    Copy-Tree $AddOn $dir
+    $toc = Get-Content (Join-Path $dir "$Name.toc")
+    foreach ($suffix in @("", "_Forever", "_Camelot", "_Classic", "_Vanilla")) {
+        $file = "$Name$suffix.toc"
+        $lines = @($toc[0], "## X-TocFile: $file") + $toc[1..($toc.Count - 1)]
+        Write-Text (Join-Path $dir $file) $lines
+    }
+    $dist = Join-Path $Root "dist"
+    New-Item -ItemType Directory -Force $dist | Out-Null
+    $zip = Join-Path $dist "$Name-$($Brand.version)-$($Target.ToLower())-launch-check.zip"
+    New-Zip $dir $zip
+    Write-Host "Launch-check zip: $zip (not for release)"
+}
+
 function Invoke-Rename([string]$newName, [string]$newSlash) {
     if (-not $newName) { throw "Usage: tools/build.ps1 rename <NewName> [<slash>]" }
     $j = Get-Content $BrandFile -Raw
@@ -491,6 +517,7 @@ switch ($Command) {
     "routes" { Invoke-Routes }
     "test" { Invoke-Test }
     "package" { Invoke-Package }
+    "launch-check" { Invoke-LaunchCheck }
     "rename" { Invoke-Rename $Arg1 $Arg2 }
     "zonequests" { Invoke-Stage; Load-Tools; [GuideTools.QuestLister]::List($AddOn, $Arg1, $Arg2) }
     "all" {
