@@ -7,7 +7,7 @@ Questwarden is built for one client at a time (`tools/build.ps1 -Target <name>`,
 | Target | Client | Interface | Shipped | Evidence (checked 2026-10-29) |
 |---|---|---|---|---|
 | **ClassicEra** | WoW Classic Era 1.15.9 (build 70576) | 11509 | yes | wago.tools lists `wow_classic_era` at 1.15.9.70576 (2026-10-26); Questie v12.3.1 release.json lists flavor `classic` at 11508 and 11509; Blizzard UI source branch `classic_era` is 1.15.9 (70576) |
-| **Forever** | World of Warcraft: Forever 1.60.1 | 16001 | **no** (skeleton) | **unverified**: Questie release.json flavor `forever` 16001; wago.tools product `wowf` 1.60.1.70685; Blizzard UI source branch `forever` 1.60.1 (70532) |
+| **Forever** | World of Warcraft: Forever 1.60.1 | 16001 | **no** (skeleton) | **unverified**: Questie release.json flavor `forever` 16001; wago.tools product `wowf` 1.60.1.70755; Blizzard UI source branch `forever` 1.60.1 (70532) |
 | TBC | TBC Anniversary 2.5.6 | 20506 | never | TBCGuide 0.9.5's data, kept only as a test fixture |
 
 Classic Era rules from these sources: level cap 60, 51 talent points (first at 10), quest log 20 (`MAX_QUESTLOG_QUESTS` in Blizzard's `Vanilla/Constants.lua`), no flying, Azeroth only. Mount at 40 is game knowledge, not machine-checked.

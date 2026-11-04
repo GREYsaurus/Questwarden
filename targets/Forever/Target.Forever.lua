@@ -16,7 +16,7 @@ ns.Target = {
     id = "Forever",
     name = "World of Warcraft: Forever",
     -- UNVERIFIED (checked 2026-10-29): Questie bundle v12.3.1 release.json lists flavor "forever" at
-    -- interface 16001; wago.tools lists a product "wowf" at 1.60.1.70685 (assumed to be Forever);
+    -- interface 16001; wago.tools lists a product "wowf" at 1.60.1.70755 (assumed to be Forever);
     -- Blizzard's UI source (Gethe/wow-ui-source, branch forever) is 1.60.1 (70532).
     interface = 16001,
     clientBuild = "1.60.1",

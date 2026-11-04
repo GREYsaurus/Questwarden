@@ -51,7 +51,7 @@ Everything below is **unverified** and stays `v=0` until checked in the live cli
 
 | Item | What we have | Source / why unverified |
 |---|---|---|
-| Interface 16001, build 1.60.1 | from Questie release.json (flavor `forever`), wago.tools product `wowf` 1.60.1.70685, Blizzard UI source branch `forever` 1.60.1 (70532) | beta-era sources; `wowf` = Forever is an assumption |
+| Interface 16001, build 1.60.1 | from Questie release.json (flavor `forever`), wago.tools product `wowf` 1.60.1.70755, Blizzard UI source branch `forever` 1.60.1 (70532) | beta-era sources; `wowf` = Forever is an assumption |
 | Quest log size | 40 in the Forever UI's generated API docs (`QuestLogConsts.MAXIMUM_NUM_QUESTS_LOG_CAN_ACCEPT`) | that is the modern client's constant; may not be what Forever enforces |
 | Client API | The Forever UI source is the modern client code with a Camelot (Forever) overlay. 49 allowlisted names are not found there (re-audited 2026-10-31), including `GetNumTalentTabs`, `UnitCharacterPoints`, `AbandonQuest`, `ConfirmBinder`, the old auction functions, some item functions, pet training points and the craft APIs (docs/generated/Forever/api-audit.md) | talents, orphan abandoning, hearth binding, the auction tab and pet skills need Forever adapters (Phase 3) |
 | Quest data and coordinates | **Imported** from QuestieDB's Forever data (approved 2026-10-31): 5,232 quests, Era data with 13,691 coordinate pairs converted to Forever's map frames, plus the delta base and traces; 16,549 corrections applied. 600 items, 308 NPCs and 78 objects that new quests refer to are missing | QuestieDB's conversion assumes no world positions moved; check in game |

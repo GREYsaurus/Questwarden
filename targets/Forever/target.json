@@ -39,7 +39,7 @@
     "_comment": "UNVERIFIED: wago.tools product wowf, assumed to be Forever (build 1.60.1 matches QuestieDB's Forever conversion target 1.60.1.69893 and Blizzard's forever UI source 1.60.1).",
     "source": "https://wago.tools",
     "product": "wowf",
-    "build": "1.60.1.70685",
+    "build": "1.60.1.70755",
     "flights": true,
     "_talents": "Forever's talent trees are not in the base DB2 tables: those still hold Classic Era's 433 talents (builds 70685 and 70707), while the game's trees (about 466 talents, 116 new) come from server hotfixes (docs/FOREVER_PLAN.md). Off until a hotfix source exists.",
     "talents": false
