@@ -15,7 +15,7 @@ The add-on also contains data derived from the third-party sources below. This f
 |---|---|
 | Upstream | https://github.com/Questie/QuestieDB |
 | Parent project | https://github.com/Questie/Questie (QuestieDB's data, schema and corrections were imported from Questie; see `UPSTREAM_PROVENANCE.md`) |
-| Exact version used | commit `7901fee2753cecb577a72c2e4b7126198e05baec` (QuestieDB **v1.0.9**, the database shipped in the Questie release bundle `bundle/v12.3.1+v1.0.9`, published 2026-10-26) |
+| Exact version used | commit `a37877c1490027ee48e5722bf602adf34f95a6dc` (QuestieDB **v1.0.10**, the database shipped in the Questie release bundle `bundle/v12.5.1+v1.0.10`, published 2026-11-04) |
 | Archive checksum | SHA-256 `CB2330486A9BA5E041C8ADEE1B1A185B12C6BEE8FE4D0D2C94BF5BECB1100437` (GitHub source zip of that commit) |
 | Files read | `data/TBC/tbcQuestDB.lua`, `tbcNpcDB.lua`, `tbcObjectDB.lua`, `tbcItemDB.lua`; `support/Zones/*.lua`; `src/corrections/Tbc/tbcQuestFixes.lua`; `src/corrections/enum/{zones,quests,factions,professions}.lua` |
 | Dungeon entrances | `support/Zones/dungeons.lua` from commit `8f55e69de02e8a67229c4a54575f899244359cb8` (SHA-256 of the file `f36a9ef784322ed7da9916670b46bf76698f1f9a3cfede0895a49c6cbec64f60`), base Classic/TBC table only, written by `tools/research/dungeon_entrances.py` to `targets/<Target>/addon/Database/DungeonEntrances.lua` |

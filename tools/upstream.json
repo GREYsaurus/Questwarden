@@ -2,10 +2,10 @@
   "_comment": "Pinned upstream inputs for the data pipeline. Change these deliberately, never to 'latest'. Which QuestieDB files and client build each target uses is in targets/<Target>/target.json (questie, clientTables). See docs/DATA_PIPELINE.md.",
   "questiedb": {
     "repository": "https://github.com/Questie/QuestieDB",
-    "commit": "7901fee2753cecb577a72c2e4b7126198e05baec",
-    "release": "QuestieDB v1.0.9 (shipped in Questie bundle/v12.3.1+v1.0.9, published 2026-10-26)",
-    "archiveUrl": "https://codeload.github.com/Questie/QuestieDB/zip/7901fee2753cecb577a72c2e4b7126198e05baec",
-    "archiveSha256": "CB2330486A9BA5E041C8ADEE1B1A185B12C6BEE8FE4D0D2C94BF5BECB1100437",
+    "commit": "a37877c1490027ee48e5722bf602adf34f95a6dc",
+    "release": "QuestieDB v1.0.10 (shipped in Questie bundle/v12.5.1+v1.0.10, published 2026-11-04)",
+    "archiveUrl": "https://codeload.github.com/Questie/QuestieDB/zip/a37877c1490027ee48e5722bf602adf34f95a6dc",
+    "archiveSha256": "3EE9468B99D49187C29AC44A08DA3FBCD16ECAC7361D6591D889A54EC9AC1C9F",
     "files": [
       "data/TBC/tbcQuestDB.lua",
       "data/TBC/tbcNpcDB.lua",

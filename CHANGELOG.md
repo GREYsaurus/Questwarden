@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **QuestieDB v1.0.10** (the version shipped with Questie today): a few corrected quest records on every game version.
+
 ## 0.1.0-alpha.38 (2026-11-02)
 
 - **Travel steps show the way to the next zone.** A step such as *Travel to The Barrens* now works out a route from the zone you are in: which zones to run through, which zeppelin or boat to take and from where, and flights you already have. The arrow points to the first stop (a zeppelin tower, a dock, a flight master) or, on foot, to where the guide picks up in the new zone. It names flight paths of your faction you don't have yet that you pass right by, such as Orgrimmar's next to the zeppelin tower. Zeppelin and boat stops come from the game client's transport paths; which zones border each other is a hand-written list. The guide's own directions still win where a step has them (the Deeprun Tram, for example, isn't in the data).
